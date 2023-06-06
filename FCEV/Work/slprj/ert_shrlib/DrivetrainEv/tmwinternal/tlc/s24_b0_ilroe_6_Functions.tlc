@@ -1,0 +1,194 @@
+%implements s24_b0_ilroe_6_Functions "C"
+
+%function DrivetrainEv_detectSlip_e_Fcn0(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+boolean_T b_yn;
+%assign _modelSS = ""
+
+%assign   Outputs_open_detectSlip_13_1 = ""
+%openfile Outputs_open_detectSlip_13_1
+
+/* Outputs for Function Call SubSystem: '<S199>/detectSlip' */
+%closefile Outputs_open_detectSlip_13_1
+
+%assign    Outputs_body_detectSlip_13_1 = ""
+%openfile  Outputs_body_detectSlip_13_1
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[4], "Output",0)
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_detectSlip",4,0)
+%<SLibCG_AccessArg(6 ,0, 2)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_detectSlip",4,1)
+%<SLibCG_AccessArg(6 ,0, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_detectSlip",4,2)
+%<SLibCG_AccessArg(6 ,0, 1)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_detectSlip",4,3)
+%<SLibCG_AccessArg(6 ,0, 3)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[898e7*/",SLibCGIRGenReusableSysCall("DrivetrainEv_detectSlip", ["/*@>89be1*/%<::tSimStruct>", "Tout", "Tfmaxs", "&/*@>89c01*/localB->/*@>89c00*/RelationalOperator"], 4, 1, 6, 0, 6, 13),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[4]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+%endif
+%closefile Outputs_body_detectSlip_13_1
+
+%assign    Outputs_close_detectSlip_13_1 = ""
+%openfile  Outputs_close_detectSlip_13_1
+
+/* End of Outputs for SubSystem: '<S199>/detectSlip' */
+%closefile Outputs_close_detectSlip_13_1
+%<SLibCG_DumpSSCode(Outputs_open_detectSlip_13_1, Outputs_body_detectSlip_13_1, Outputs_close_detectSlip_13_1)>
+
+b_yn = localB->RelationalOperator;
+return b_yn;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[6].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("DrivetrainEv_detectSlip_e", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "DrivetrainEv_detectSlip_e"))
+%<SLibCG_AccessArg(6, 0, 2)>
+%endif
+%if SLibCG_ArgAccessed(6, 0, 2)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "DrivetrainEv_detectSlip_e", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "DrivetrainEv_detectSlip_e"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(6, 0, 2)>
+%endif
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static boolean_T DrivetrainEv_detectSlip_e(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(6, 0, 0)
+%<comma>real_T Tout\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(6, 0, 1)
+%<comma>real_T Tfmaxs\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(6, 0, 2)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("DrivetrainEv_detectSlip_e", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%<comma>B_Clutch_DrivetrainEv_g_T *localB\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 0, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function DrivetrainEv_detectLockup_p_Fcn1(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+boolean_T b_yn;
+%assign _modelSS = ""
+
+%assign   Outputs_open_detectLockup_13_2 = ""
+%openfile Outputs_open_detectLockup_13_2
+
+/* Outputs for Function Call SubSystem: '<S199>/detectLockup' */
+%closefile Outputs_open_detectLockup_13_2
+
+%assign    Outputs_body_detectLockup_13_2 = ""
+%openfile  Outputs_body_detectLockup_13_2
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[5], "Output",0)
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_detectLockup",5,0)
+%<SLibCG_AccessArg(6 ,1, 3)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_detectLockup",5,1)
+%<SLibCG_AccessArg(6 ,1, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_detectLockup",5,2)
+%<SLibCG_AccessArg(6 ,1, 1)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_detectLockup",5,3)
+%<SLibCG_AccessArg(6 ,1, 4)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_detectLockup",5,4)
+%<SLibCG_AccessArg(6 ,1, 2)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_detectLockup",5,5)
+%<SLibCG_AccessArg(6 ,1, 5)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[89918*/",SLibCGIRGenReusableSysCall("DrivetrainEv_detectLockup", ["/*@>89c6b*/%<::tSimStruct>", "Tout", "Tfmaxs", "&/*@>89c8b*/localB->/*@>89c8a*/CombinatorialLogic", "/*@>89c96*/rtp_br", "&/*@>89ca2*/localDW->/*@>89ca1*/detectLockup"], 5, 1, 6, 0, 6, 13),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[5]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+%endif
+%closefile Outputs_body_detectLockup_13_2
+
+%assign    Outputs_close_detectLockup_13_2 = ""
+%openfile  Outputs_close_detectLockup_13_2
+
+/* End of Outputs for SubSystem: '<S199>/detectLockup' */
+%closefile Outputs_close_detectLockup_13_2
+%<SLibCG_DumpSSCode(Outputs_open_detectLockup_13_2, Outputs_body_detectLockup_13_2, Outputs_close_detectLockup_13_2)>
+
+b_yn = localB->CombinatorialLogic;
+return b_yn;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[6].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("DrivetrainEv_detectLockup_p", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "DrivetrainEv_detectLockup_p"))
+%<SLibCG_AccessArg(6, 1, 3)>
+%endif
+%if SLibCG_ArgAccessed(6, 1, 3)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "DrivetrainEv_detectLockup_p", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "DrivetrainEv_detectLockup_p"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(6, 1, 3)>
+%endif
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static boolean_T DrivetrainEv_detectLockup_p(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(6, 1, 0)
+%<comma>real_T Tout\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(6, 1, 1)
+%<comma>real_T Tfmaxs\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(6, 1, 2)
+%<comma>real_T rtp_br\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(6, 1, 3)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("DrivetrainEv_detectLockup_p", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%<comma>B_Clutch_DrivetrainEv_g_T *localB\
+%assign comma = ", "
+%if SLibCG_ArgAccessed(6, 1, 5)
+%<comma>DW_Clutch_DrivetrainEv_k_T *localDW\
+%assign comma = ", "
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 1, fcnProtoType)>
+%return fcnBuff
+%endfunction
+

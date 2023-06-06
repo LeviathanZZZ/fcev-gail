@@ -1,0 +1,77 @@
+%implements s24_b0_ilroe_6_Derivatives "C"
+
+%function Derivatives(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+%<SLibCG_DumpSSCode("/*@[89a4a*/",SLibCGIRZeroOutDerivativesForSystemAndModelRef(13, 13, 3),"/*@]*/")>\
+%<SLibCG_DumpSSCode("/*@[89a4b*/",SLibCGIRZeroOutDerivativesForSystemAndModelRef(13, 13, 4),"/*@]*/")>\
+/*@>4d961*/if (/*@>8935b*/localDW->/*@>8a327*/is_c8_autolibshared/*@>4d95d*/ == /*@>893b5*/DrivetrainEv_IN_Slipping_o) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[7], "Derivative",0)
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping_Deriv",7,0)
+%<SLibCG_AccessArg(6 ,4, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping_Deriv",7,1)
+%<SLibCG_AccessArg(6 ,4, 1)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping_Deriv",7,2)
+%<SLibCG_AccessArg(6 ,4, 3)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[89a4c*/",SLibCGIRGenReusableSysCall("DrivetrainEv_Slipping_Deriv", ["/*@>8a380*/%<::tSimStruct>", "&/*@>8a38c*/localB->/*@>8a38b*/Slipping", "&/*@>8a399*/localXdot->/*@>8a398*/Slipping"], 7, 1, 8, 0, 8, 13),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[7]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+}
+/*@>86b72*/if (/*@>89362*/localDW->/*@>8a32a*/is_c8_autolibshared/*@>86b71*/ == /*@>893b8*/DrivetrainEv_IN_Locked_j) {
+    /*@>4d971*/if (/*@>89369*/localDW->/*@>8a32d*/Locked_entered) {
+        /*@>89377*/localDW->/*@>8a333*/Locked_entered/*@>4d96e*/ = /*@>86f4a*/false;
+    }
+
+    /* case IN_Slipping: */
+} else /*@>4d979*/if (/*@>89370*/localDW->/*@>8a330*/Slipping_entered) {
+    /*@>8937e*/localDW->/*@>8a336*/Slipping_entered/*@>4d976*/ = /*@>86f4f*/false;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[6].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Derivative", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Derivative"))
+%<SLibCG_AccessArg(6, 4, 0)>
+%endif
+%if SLibCG_ArgAccessed(6, 4, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Derivative", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Derivative"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(6, 4, 0)>
+%endif
+%endfunction
+%function DerivativesFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void DrivetrainEv_Clutch_m_Deriv(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(6, 4, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("DrivetrainEv_Clutch_m_Deriv", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%if SLibCG_ArgAccessed(6, 4, 1)
+%<comma>B_Clutch_DrivetrainEv_g_T *localB\
+%assign comma = ", "
+%endif
+%<comma>DW_Clutch_DrivetrainEv_k_T *localDW\
+%assign comma = ", "
+%if SLibCG_ArgAccessed(6, 4, 3)
+%<comma>XDot_Clutch_DrivetrainEv_i_T *localXdot\
+%assign comma = ", "
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 4, fcnProtoType)>
+%endfunction

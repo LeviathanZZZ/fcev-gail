@@ -1,0 +1,681 @@
+%implements s24_b0_ilroe_0_Functions "C"
+
+%function DrivetrainEv_automltirediv0prot_Fcn0(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+real_T varargin_1;
+int32_T trueCount;
+boolean_T yneginds;
+boolean_T ytolinds;
+*/*@>77d50*/yabs/*@>3924b*/ = /*@>77e06*/fabs(/*@>6e501*/u);
+/*@>6e4e6*/ytolinds/*@>15fb7*/ = (*/*@<7b870*//*@>77d53*/yabs/*@>16006*/ < /*@>6e4e4*/tol);
+trueCount = 0;
+if (/*@>6e503*/ytolinds) {
+    trueCount = 1;
+}
+/*@>73bad*/if (/*@>73ba9*/trueCount/*@>73ba7*/ - /*@>73baa*/1/*@>73e7e*/ >= /*@>73bab*/0) {
+    /*@>71f1f*/varargin_1/*@>71f21*/ = */*@<7b861*//*@>77d56*/yabs/*@>696ef*/ / /*@>6e5ae*/tol;
+    /*@>767ad*/varargin_1/*@>69707*/ = /*@>6e5a7*/2.0/*@>6ec20*/ * /*@>6e5a8*/tol/*@>696e4*/ / (/*@>6e52b*/3.0/*@>696ec*/ - /*@>7287b*/varargin_1/*@>72879*/ * /*@>7287d*/varargin_1);
+}
+*/*@>77d59*/y/*@>2021f*/ = */*@<7b86b*//*@>77d5c*/yabs;
+/*@>6e4f5*/yneginds/*@>15fd7*/ = (/*@>6e4f2*/u/*@>20232*/ < /*@>6e4f4*/0.0);
+trueCount = /*@>7b835*/-1;
+if (/*@>6e5e8*/ytolinds) {
+    */*@>77d5f*/y/*@>6c76e*/ = /*@>767d4*/varargin_1;
+}
+if (/*@>6e5ec*/yneginds) {
+    trueCount = 0;
+}
+*/*@>77d62*/yabs/*@>20224*/ = */*@<7b857*//*@>77d65*/y;
+/*@>73b78*/if (/*@>73b75*/trueCount/*@>73e87*/ >= /*@>73b76*/0) {
+    /*@>76829*/varargin_1/*@>698ac*/ = -/*@<6ec22*/*/*@<7b856*//*@>77d68*/y;
+}
+if (/*@>6e505*/yneginds) {
+    */*@>77d6b*/y/*@>6c74c*/ = /*@>76849*/varargin_1;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[0].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("DrivetrainEv_automltirediv0prot", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "DrivetrainEv_automltirediv0prot"))
+%<SLibCG_AccessArg(0, 0, 4)>
+%endif
+%if SLibCG_ArgAccessed(0, 0, 4)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "DrivetrainEv_automltirediv0prot", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "DrivetrainEv_automltirediv0prot"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(0, 0, 4)>
+%endif
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void DrivetrainEv_automltirediv0prot(\
+%assign comma = ""
+%<comma>real_T u\
+%assign comma = ", "
+%<comma>real_T tol\
+%assign comma = ", "
+%<comma>real_T *y\
+%assign comma = ", "
+%<comma>real_T *yabs\
+%assign comma = ", "
+%if SLibCG_ArgAccessed(0, 0, 4)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("DrivetrainEv_automltirediv0prot", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 0, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function Drivetrain_automltirepurelongFx_Fcn1(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+real_T Cx;
+real_T CxDxp;
+real_T Dx;
+real_T Dx_tmp;
+real_T Ex;
+real_T Fxo;
+real_T a__1;
+real_T b_idx_0;
+real_T dfz;
+real_T dpi;
+real_T kappa_x;
+real_T lam_mux_star;
+%assign _modelSS = ""
+
+%if SLibCG_FcnCallArgAccessed(0,1,0,4)
+%<SLibCG_AccessArg(0 ,1, 39)>
+%endif
+
+/*@>6e789*/b_idx_0/*@>227e0*/ = /*@>6e682*/Fz;
+if (/*@>72957*/Fz/*@>72955*/ < /*@>72959*/b_FZMIN) {
+    /*@>6e7bb*/b_idx_0/*@>6c829*/ = /*@>6e784*/b_FZMIN;
+}
+if (/*@>7295d*/b_idx_0/*@>7295b*/ > /*@>7295f*/b_FZMAX) {
+    /*@>6e7b9*/b_idx_0/*@>6c819*/ = /*@>6e77d*/b_FZMAX;
+}
+/*@>6e78b*/Cx/*@>22916*/ = /*@>6e68e*/press;
+if (/*@>72963*/press/*@>72961*/ < /*@>72965*/PRESMIN) {
+    /*@>6e7b7*/Cx/*@>6c809*/ = /*@>6e776*/PRESMIN;
+}
+if (/*@>72969*/Cx/*@>72967*/ > /*@>7296b*/PRESMAX) {
+    /*@>6e7b5*/Cx/*@>6c7f9*/ = /*@>6e76f*/PRESMAX;
+}
+/*@>6e698*/dpi/*@>2259b*/ = (/*@>6e79b*/Cx/*@>229c5*/ - /*@>6e694*/NOMPRES)/*@>229c7*/ / /*@>6e696*/NOMPRES;
+/*@>6e6a2*/dfz/*@>225a9*/ = (/*@>6e79d*/b_idx_0/*@>229cc*/ - /*@>6e69a*/FNOMIN/*@>6ece2*/ * /*@>6e69c*/lam_Fzo)/*@>229ce*/ / /*@>6e69e*/FNOMIN/*@>6ecde*/ * /*@>6e6a0*/lam_Fzo;
+/*@>6e6a6*/kappa_x/*@>225b9*/ = (/*@>6e6e7*/PHX2/*@>6ecda*/ * /*@>6e6e9*/dfz/*@>3dac4*/ + /*@>6e6e5*/PHX1)/*@>6ecd6*/ * /*@>6e6eb*/lam_Hx/*@>229dc*/ + /*@>6e6a4*/kappa;
+/*@>6e6db*/lam_mux_star/*@>225c3*/ = -/*@<6ecd3*//*@>77e08*/fabs(/*@>6e6ed*/Vx)/*@>6ecd1*/ * /*@>6e6a8*/kappa;
+/*@>6e6b1*/lam_mux_star/*@>225de*/ = /*@>6e6aa*/lam_mux/*@>239be*/ / (/*@>77e0a*/sqrt(/*@>6e71c*/lam_mux_star/*@>6eccd*/ * /*@>6e71e*/lam_mux_star)/*@>6ecc9*/ * /*@>6e6ac*/lam_muV/*@>239bc*/ / /*@>6e6ae*/LONGVL/*@>239bd*/ + /*@>6e6b0*/1.0);
+/*@>6e6b7*/Cx/*@>2260a*/ = /*@>6e6b3*/PCX1/*@>6ecc5*/ * /*@>6e6b5*/lam_Cx;
+/*@>742b2*/Dx_tmp/*@>742b4*/ = /*@>6e720*/dpi/*@>6ecb9*/ * /*@>6e722*/dpi;
+/*@>6e6bb*/Dx/*@>2261c*/ = ((/*@>6e6f5*/PPX3/*@>6ecb1*/ * /*@>6e6f7*/dpi/*@>3dafe*/ + /*@>6e6f9*/1.0)/*@>3dafd*/ + /*@>742b6*/Dx_tmp/*@>6ecb5*/ * /*@>6e6fa*/PPX4)/*@>6eca9*/ * (/*@>6e6f1*/PDX2/*@>6ecad*/ * /*@>6e6f3*/dfz/*@>3daf5*/ + /*@>6e6ef*/PDX1)/*@>6eca5*/ * (/*@>6e6fc*/1.0/*@>3db0a*/ - /*@>6e724*/b_gamma/*@>6ecc1*/ * /*@>6e726*/b_gamma/*@>6ecbd*/ * /*@>6e6fd*/PDX3)/*@>6eca1*/ * /*@>6e6ff*/lam_mux_star/*@>6ec9d*/ * /*@>6e79f*/b_idx_0;
+/*@>6e6cc*/Ex/*@>22639*/ = ((/*@>6e6c1*/PEX2/*@>6ec89*/ * /*@>6e6c3*/dfz/*@>23ab3*/ + /*@>6e6bf*/PEX1)/*@>23ab9*/ + /*@>6e701*/dfz/*@>6ec91*/ * /*@>6e703*/dfz/*@>6ec8d*/ * /*@>6e6c5*/PEX3)/*@>6ec85*/ * (/*@>6e6c9*/1.0/*@>23fbb*/ - /*@>77e0c*/tanh(/*@>6e728*/10.0/*@>6ec99*/ * /*@>6e729*/kappa_x)/*@>6ec95*/ * /*@>6e6c7*/PEX4)/*@>6ec81*/ * /*@>6e6ca*/lam_Ex;
+if (/*@>6e758*/Cx/*@>6c7c3*/ < /*@>6e75a*/0.0) {
+    /*@>6e7af*/Cx/*@>6c7d1*/ = /*@>6e760*/0.0;
+}
+if (/*@>6e75d*/Dx/*@>6c7cc*/ < /*@>6e75f*/0.0) {
+    /*@>6e7b1*/Dx/*@>6c7e0*/ = /*@>6e766*/0.0;
+}
+if (/*@>6e763*/Ex/*@>6c7db*/ > /*@>6e765*/1.0) {
+    /*@>6e7b3*/Ex/*@>6c7ea*/ = /*@>6e769*/1.0;
+}
+%<SLibCG_DumpSSCode("/*@[7b64b*/",(SLibCGCallSubFcn("DrivetrainEv_automltirediv0prot", ["/*@>7b9d9*/Cx/*@>7b9d8*/ * /*@>7b9da*/Dx", "/*@>7b9e4*/0.1", "&/*@>7b9ef*/CxDxp", "&/*@>7b9fa*/a__1", "/*@>7ba04*/%<::tSimStruct>"], 0, 1, 0)),"/*@]*/")>;
+/*@>742c2*/dpi/*@>742c4*/ = (/*@>74949*/PKX2/*@>74947*/ * /*@>7494b*/dfz/*@>74946*/ + /*@>7494d*/PKX1)/*@>74945*/ * /*@>7494f*/b_idx_0/*@>74944*/ * /*@>77e12*/exp(/*@>74954*/PKX3/*@>74952*/ * /*@>74956*/dfz)/*@>74943*/ * ((/*@>7495b*/PPX1/*@>74959*/ * /*@>7495d*/dpi/*@>74958*/ + /*@>7495e*/1.0)/*@>74957*/ + Dx_tmp/*@>7495f*/ * /*@>74963*/PPX2)/*@>74942*/ * /*@>74965*/lam_Kxkappa/*@>74941*/ / /*@>74967*/CxDxp/*@>6ec3d*/ * /*@>6e744*/kappa_x;
+/*@>6e6d7*/Fxo/*@>2268d*/ = /*@>77e18*/sin(/*@>77e16*/atan(dpi/*@>3dd80*/ - (dpi/*@>3dd8b*/ - /*@>77e14*/atan(/*@>742c6*/dpi))/*@>6ec35*/ * /*@>6e7ab*/Ex)/*@>6ec2d*/ * /*@>6e7a9*/Cx)/*@>6ec29*/ * /*@>6e7a7*/Dx/*@>24743*/ + (/*@>6e716*/PVX2/*@>6ec4d*/ * /*@>6e718*/dfz/*@>3dbc7*/ + /*@>6e714*/PVX1)/*@>6ec49*/ * /*@>6e7ad*/b_idx_0/*@>6ec45*/ * (/*@>6e733*/lam_mux_star/*@>6ec51*/ * /*@>6e735*/10.0/*@>3dce8*/ / (/*@>6e736*/9.0/*@>6ec55*/ * /*@>6e737*/lam_mux_star/*@>3dced*/ + /*@>6e739*/1.0))/*@>6ec41*/ * /*@>6e71a*/lam_Vx;
+return Fxo;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[0].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Drivetrain_automltirepurelongFx", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Drivetrain_automltirepurelongFx"))
+%<SLibCG_AccessArg(0, 1, 39)>
+%endif
+%if SLibCG_ArgAccessed(0, 1, 39)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Drivetrain_automltirepurelongFx", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Drivetrain_automltirepurelongFx"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(0, 1, 39)>
+%endif
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static real_T Drivetrain_automltirepurelongFx(\
+%assign comma = ""
+%<comma>real_T kappa\
+%assign comma = ", "
+%<comma>real_T Vx\
+%assign comma = ", "
+%<comma>real_T Fz\
+%assign comma = ", "
+%<comma>real_T b_gamma\
+%assign comma = ", "
+%<comma>real_T LONGVL\
+%assign comma = ", "
+%<comma>real_T FNOMIN\
+%assign comma = ", "
+%<comma>real_T b_FZMIN\
+%assign comma = ", "
+%<comma>real_T b_FZMAX\
+%assign comma = ", "
+%<comma>real_T press\
+%assign comma = ", "
+%<comma>real_T NOMPRES\
+%assign comma = ", "
+%<comma>real_T PRESMIN\
+%assign comma = ", "
+%<comma>real_T PRESMAX\
+%assign comma = ", "
+%<comma>real_T PCX1\
+%assign comma = ", "
+%<comma>real_T PDX1\
+%assign comma = ", "
+%<comma>real_T PDX2\
+%assign comma = ", "
+%<comma>real_T PDX3\
+%assign comma = ", "
+%<comma>real_T PEX1\
+%assign comma = ", "
+%<comma>real_T PEX2\
+%assign comma = ", "
+%<comma>real_T PEX3\
+%assign comma = ", "
+%<comma>real_T PEX4\
+%assign comma = ", "
+%<comma>real_T PKX1\
+%assign comma = ", "
+%<comma>real_T PKX2\
+%assign comma = ", "
+%<comma>real_T PKX3\
+%assign comma = ", "
+%<comma>real_T PHX1\
+%assign comma = ", "
+%<comma>real_T PHX2\
+%assign comma = ", "
+%<comma>real_T PVX1\
+%assign comma = ", "
+%<comma>real_T PVX2\
+%assign comma = ", "
+%<comma>real_T PPX1\
+%assign comma = ", "
+%<comma>real_T PPX2\
+%assign comma = ", "
+%<comma>real_T PPX3\
+%assign comma = ", "
+%<comma>real_T PPX4\
+%assign comma = ", "
+%<comma>real_T lam_Fzo\
+%assign comma = ", "
+%<comma>real_T lam_muV\
+%assign comma = ", "
+%<comma>real_T lam_mux\
+%assign comma = ", "
+%<comma>real_T lam_Kxkappa\
+%assign comma = ", "
+%<comma>real_T lam_Cx\
+%assign comma = ", "
+%<comma>real_T lam_Ex\
+%assign comma = ", "
+%<comma>real_T lam_Hx\
+%assign comma = ", "
+%<comma>real_T lam_Vx\
+%assign comma = ", "
+%if SLibCG_ArgAccessed(0, 1, 39)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("Drivetrain_automltirepurelongFx", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 1, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function rt_powd_snf_Fcn2(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+real_T tmp;
+real_T tmp_0;
+real_T y;
+if (rtIsNaN(u0) || rtIsNaN(u1)) {
+    y = %<LibGetMathConstant(LibRealNonFinite("nan"), FcnGetDataTypeIdFromName("double"))>;
+} else {
+    tmp = fabs(u0);
+    tmp_0 = fabs(u1);
+    if (rtIsInf(u1)) {
+        if (tmp == 1.0) {
+            y = 1.0;
+        } else if (tmp > 1.0) {
+            if (u1 > 0.0) {
+                y = %<LibGetMathConstant(LibRealNonFinite("inf"), FcnGetDataTypeIdFromName("double"))>;
+            } else {
+                y = 0.0;
+            }
+        } else if (u1 > 0.0) {
+            y = 0.0;
+        } else {
+            y = %<LibGetMathConstant(LibRealNonFinite("inf"), FcnGetDataTypeIdFromName("double"))>;
+        }
+    } else if (tmp_0 == 0.0) {
+        y = 1.0;
+    } else if (tmp_0 == 1.0) {
+        if (u1 > 0.0) {
+            y = u0;
+        } else {
+            y = 1.0 / u0;
+        }
+    } else if (u1 == 2.0) {
+        y = u0 * u0;
+    } else if ((u1 == 0.5) && (u0 >= 0.0)) {
+        y = sqrt(u0);
+    } else if ((u0 < 0.0) && (u1 > floor(u1))) {
+        y = %<LibGetMathConstant(LibRealNonFinite("nan"), FcnGetDataTypeIdFromName("double"))>;
+    } else {
+        y = pow(u0, u1);
+    }
+}
+return y;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[0].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("rt_powd_snf", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "rt_powd_snf"))
+%<SLibCG_AccessArg(0, 2, 2)>
+%endif
+%if SLibCG_ArgAccessed(0, 2, 2)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "rt_powd_snf", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "rt_powd_snf"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(0, 2, 2)>
+%endif
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+extern real_T rt_powd_snf(\
+%assign comma = ""
+%<comma>real_T u0\
+%assign comma = ", "
+%<comma>real_T u1\
+%assign comma = ", "
+%if SLibCG_ArgAccessed(0, 2, 2)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("rt_powd_snf", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 2, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function DrivetrainE_automltirelongMySAE_Fcn3(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+real_T My;
+real_T b_idx_0;
+real_T d_idx_0;
+%assign _modelSS = ""
+
+%if SLibCG_FcnCallArgAccessed(0,3,1,1)
+%<SLibCG_AccessArg(0 ,3, 8)>
+%endif
+%if SLibCG_FcnCallArgAccessed(0,3,1,2)
+%<SLibCG_AccessArg(0 ,3, 14)>
+%endif
+
+%if SLibCG_FcnCallArgAccessed(0,3,0,1)
+%<SLibCG_AccessArg(0 ,3, 7)>
+%endif
+%if SLibCG_FcnCallArgAccessed(0,3,0,2)
+%<SLibCG_AccessArg(0 ,3, 14)>
+%endif
+
+/*@>6e9a0*/b_idx_0/*@>2c9eb*/ = /*@>6e94c*/press;
+if (/*@>72aeb*/press/*@>72ae9*/ < /*@>72aed*/PRESMIN) {
+    /*@>6e9b6*/b_idx_0/*@>6c891*/ = /*@>6e99b*/PRESMIN;
+}
+if (/*@>72af1*/b_idx_0/*@>72aef*/ > /*@>72af3*/PRESMAX) {
+    /*@>6e9b4*/b_idx_0/*@>6c881*/ = /*@>6e994*/PRESMAX;
+}
+/*@>6e9a2*/d_idx_0/*@>2cb21*/ = /*@>6e958*/Fz;
+if (/*@>72af7*/Fz/*@>72af5*/ < /*@>72af9*/b_FZMIN) {
+    /*@>6e9b2*/d_idx_0/*@>6c871*/ = /*@>6e98d*/b_FZMIN;
+}
+if (/*@>72afd*/d_idx_0/*@>72afb*/ > /*@>72aff*/b_FZMAX) {
+    /*@>6e9b0*/d_idx_0/*@>6c861*/ = /*@>6e986*/b_FZMAX;
+}
+/*@>6e966*/My/*@>2c92e*/ = ((/*@>6e962*/QSY2/*@>6ed34*/ * /*@>77e1a*/fabs(/*@>6e972*/Vx)/*@>2cbd9*/ + /*@>6e960*/QSY1)/*@>2cbdf*/ + /*@>6e974*/Vx/*@>6ed3c*/ * /*@>6e976*/Vx/*@>6ed38*/ * /*@>6e964*/QSY3)/*@>6ed2c*/ * (/*@>77e1c*/tanh(/*@>6e970*/omega)/*@>6ed30*/ * /*@>6e95e*/UNLOADED_RADIUS)/*@>6ed28*/ * (%<SLibCG_DumpSSCode("/*@[7b664*/",(SLibCGCallSubFcn("rt_powd_snf", ["/*@>7bafc*/d_idx_0", "/*@>7bb06*/QSY7", "/*@>7bb10*/%<::tSimStruct>"], 0, 3, 0)),"/*@]*/")>/*@>6ed40*/ * %<SLibCG_DumpSSCode("/*@[7b67d*/",(SLibCGCallSubFcn("rt_powd_snf", ["/*@>7bb1a*/b_idx_0", "/*@>7bb24*/QSY8", "/*@>7bb2e*/%<::tSimStruct>"], 0, 3, 1)),"/*@]*/")>);
+return My;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[0].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("DrivetrainE_automltirelongMySAE", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "DrivetrainE_automltirelongMySAE"))
+%<SLibCG_AccessArg(0, 3, 14)>
+%endif
+%if SLibCG_ArgAccessed(0, 3, 14)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "DrivetrainE_automltirelongMySAE", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "DrivetrainE_automltirelongMySAE"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(0, 3, 14)>
+%endif
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static real_T DrivetrainE_automltirelongMySAE(\
+%assign comma = ""
+%<comma>real_T Fz\
+%assign comma = ", "
+%<comma>real_T omega\
+%assign comma = ", "
+%<comma>real_T Vx\
+%assign comma = ", "
+%<comma>real_T press\
+%assign comma = ", "
+%<comma>real_T QSY1\
+%assign comma = ", "
+%<comma>real_T QSY2\
+%assign comma = ", "
+%<comma>real_T QSY3\
+%assign comma = ", "
+%<comma>real_T QSY7\
+%assign comma = ", "
+%<comma>real_T QSY8\
+%assign comma = ", "
+%<comma>real_T UNLOADED_RADIUS\
+%assign comma = ", "
+%<comma>real_T b_FZMIN\
+%assign comma = ", "
+%<comma>real_T b_FZMAX\
+%assign comma = ", "
+%<comma>real_T PRESMIN\
+%assign comma = ", "
+%<comma>real_T PRESMAX\
+%assign comma = ", "
+%if SLibCG_ArgAccessed(0, 3, 14)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("DrivetrainE_automltirelongMySAE", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 3, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function interp2_gQgEamix_Fcn4(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+real_T Vq;
+real_T qx1;
+real_T rx;
+real_T ry;
+int32_T ix;
+int32_T iy;
+int32_T tmp;
+/*@>397f1*/if (/*@>6e835*/varargin_4/*@>397e5*/ >= /*@>798a4*/varargin_1/*@>798a6*/[/*@>798a2*/0]) {
+    /*@>397f2*/if (/*@>6e837*/varargin_4/*@>397e6*/ <= /*@>798aa*/varargin_1/*@>798ac*/[/*@>798a8*/2]) {
+        /*@>397f3*/if (/*@>6e839*/varargin_5/*@>397e7*/ >= /*@>798b0*/varargin_2/*@>798b2*/[/*@>798ae*/0]) {
+            /*@>397f4*/if (/*@>6e83b*/varargin_5/*@>397e8*/ <= /*@>798b6*/varargin_2/*@>798b8*/[/*@>798b4*/2]) {
+                /*@>6e82f*/ix/*@>39934*/ = /*@>7bb34*/0;
+                /*@>39949*/if (/*@>6e84b*/varargin_4/*@>39942*/ >= /*@>798bc*/varargin_1/*@>798be*/[/*@>798ba*/1]) {
+                    /*@>6e82d*/ix/*@>3993c*/ = /*@>7bb37*/1;
+                }
+                /*@>6e833*/iy/*@>39984*/ = /*@>7bb3a*/0;
+                /*@>39999*/if (/*@>6e849*/varargin_5/*@>39992*/ >= /*@>798c2*/varargin_2/*@>798c4*/[/*@>798c0*/1]) {
+                    /*@>6e831*/iy/*@>3998c*/ = /*@>7bb3d*/1;
+                }
+                /*@>398b5*/if (/*@>6e83d*/varargin_4/*@>3989d*/ == /*@>798c9*/varargin_1/*@>798cb*/[/*@>798c7*/ix]) {
+                    /*@>742f3*/ix/*@>742f5*/ = /*@>6e90b*/3/*@>6ed23*/ * /*@>6e87f*/ix/*@>6c1fe*/ + /*@>6e87d*/iy;
+                    /*@>6e7de*/qx1/*@>39867*/ = /*@>798d9*/varargin_3/*@>798db*/[/*@>798d7*/ix];
+                    /*@>6e7e4*/Vq/*@>39869*/ = /*@>798f0*/varargin_3/*@>798f2*/[ix/*@>798eb*/ + /*@>798ee*/1];
+                } else {
+                    /*@>742e3*/ry/*@>742e5*/ = /*@>798d2*/varargin_1/*@>798d4*/[/*@>798cf*/ix/*@>798cd*/ + /*@>798d0*/1];
+                    /*@>398b8*/if (/*@>742e7*/ry/*@>3989e*/ == /*@>6e83f*/varargin_4) {
+                        /*@>74303*/ix/*@>74305*/ = (/*@>6e892*/ix/*@>69d4e*/ + /*@>6e894*/1)/*@>6ed1d*/ * /*@>6e909*/3/*@>6c1e2*/ + /*@>6e890*/iy;
+                        /*@>6e7e2*/qx1/*@>3986d*/ = /*@>79905*/varargin_3/*@>79907*/[/*@>79903*/ix];
+                        /*@>6e7e6*/Vq/*@>3986f*/ = /*@>7990e*/varargin_3/*@>79910*/[ix/*@>79909*/ + /*@>7990c*/1];
+                    } else {
+                        /*@>6e7e0*/rx/*@>39874*/ = (/*@>6e841*/varargin_4/*@>3989f*/ - /*@>798e0*/varargin_1/*@>798e2*/[/*@>798de*/ix])/*@>398a1*/ / (ry/*@>398a0*/ - /*@>798e7*/varargin_1/*@>798e9*/[/*@>798e5*/ix]);
+                        /*@>74323*/ry/*@>74325*/ = /*@>798fe*/varargin_3/*@>79900*/[(/*@>798f8*/ix/*@>798f6*/ + /*@>798f9*/1)/*@>798f5*/ * /*@>798fa*/3/*@>798f4*/ + /*@>798fc*/iy];
+                        /*@>74333*/tmp/*@>74335*/ = /*@>6e8ff*/3/*@>6ed14*/ * /*@>6e8a0*/ix/*@>6c15a*/ + /*@>6e89e*/iy;
+                        /*@>74343*/qx1/*@>74345*/ = /*@>7991c*/varargin_3/*@>7991e*/[/*@>7991a*/tmp];
+                        /*@>73376*/if (/*@>74327*/ry/*@>398a3*/ == /*@>74347*/qx1) {
+                            /*@>7337a*/qx1/*@>73379*/ = /*@>7992c*/varargin_3/*@>7992e*/[tmp];
+                        } else {
+                            /*@>6e90d*/qx1/*@>6c540*/ = (/*@>6e84d*/1.0/*@>3df06*/ - /*@>6e84e*/rx)/*@>6ed05*/ * qx1/*@>398a6*/ + ry/*@>6ed0c*/ * /*@>6e7e8*/rx;
+                        }
+                        /*@>7436b*/ry/*@>7436d*/ = /*@>7994a*/varargin_3/*@>7994c*/[((/*@>79943*/ix/*@>79941*/ + /*@>79944*/1)/*@>79940*/ * /*@>79945*/3/*@>7993f*/ + /*@>79947*/iy)/*@>7993e*/ + /*@>79948*/1];
+                        /*@>7437b*/tmp/*@>7437d*/ = (/*@>6e904*/3/*@>6ecfd*/ * /*@>6e8c9*/ix/*@>6cc7e*/ + /*@>6e8c6*/iy)/*@>6cc7f*/ + /*@>6e8c8*/1;
+                        /*@>7337b*/if (/*@>7436f*/ry/*@>398a7*/ == /*@>79951*/varargin_3/*@>79953*/[/*@>7994f*/tmp]) {
+                            /*@>7337f*/Vq/*@>7337e*/ = /*@>7995f*/varargin_3/*@>79961*/[tmp];
+                        } else {
+                            /*@>6e90f*/Vq/*@>6c545*/ = (/*@>6e850*/1.0/*@>3df3c*/ - /*@>6e851*/rx)/*@>6ecee*/ * /*@>79958*/varargin_3/*@>7995a*/[tmp]/*@>398aa*/ + ry/*@>6ecf5*/ * /*@>6e7fa*/rx;
+                        }
+                    }
+                }
+                /*@>398c7*/if (/*@>6e843*/varargin_5/*@>398ab*/ == /*@>79915*/varargin_2/*@>79917*/[/*@>79913*/iy]) {
+                    /*@>6e7f2*/Vq/*@>3988e*/ = /*@>6e7f0*/qx1;
+                } else /*@>398c8*/if (/*@>6e7ec*/qx1/*@>398ac*/ == /*@>6e7ee*/Vq) {
+                    /*@>6e85c*/Vq/*@>41a88*/ = /*@>6e85e*/qx1;
+                } else {
+                    /*@>74393*/ry/*@>74395*/ = /*@>79925*/varargin_2/*@>79927*/[/*@>79922*/iy/*@>79920*/ + /*@>79923*/1];
+                    /*@>398cb*/if (!/*@<75c9a*/(/*@>74397*/ry/*@>398ad*/ == /*@>6e845*/varargin_5)) {
+                        /*@>6e7f4*/ry/*@>39897*/ = (/*@>6e847*/varargin_5/*@>398ae*/ - /*@>79933*/varargin_2/*@>79935*/[/*@>79931*/iy])/*@>398b0*/ / (ry/*@>398af*/ - /*@>7993a*/varargin_2/*@>7993c*/[/*@>79938*/iy]);
+                        /*@>6e807*/Vq/*@>3989c*/ = (/*@>6e800*/1.0/*@>398b1*/ - /*@>6e7fe*/ry)/*@>6ece6*/ * /*@>6e801*/qx1/*@>398b4*/ + /*@>6e803*/ry/*@>6ecea*/ * /*@>6e805*/Vq;
+                    }
+                }
+            } else {
+                /*@>6e859*/Vq/*@>41a84*/ = /*@>6e85b*/0.0;
+            }
+        } else {
+            /*@>6e856*/Vq/*@>41a80*/ = /*@>6e858*/0.0;
+        }
+    } else {
+        /*@>6e853*/Vq/*@>41a7c*/ = /*@>6e855*/0.0;
+    }
+} else {
+    /*@>6e7db*/Vq/*@>397e4*/ = /*@>6e7dd*/0.0;
+}
+return Vq;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[0].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("interp2_gQgEamix", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "interp2_gQgEamix"))
+%<SLibCG_AccessArg(0, 4, 5)>
+%endif
+%if SLibCG_ArgAccessed(0, 4, 5)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "interp2_gQgEamix", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "interp2_gQgEamix"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(0, 4, 5)>
+%endif
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+extern real_T interp2_gQgEamix(\
+%assign comma = ""
+%<comma>const real_T varargin_1[3]\
+%assign comma = ", "
+%<comma>const real_T varargin_2[3]\
+%assign comma = ", "
+%<comma>const real_T varargin_3[9]\
+%assign comma = ", "
+%<comma>real_T varargin_4\
+%assign comma = ", "
+%<comma>real_T varargin_5\
+%assign comma = ", "
+%if SLibCG_ArgAccessed(0, 4, 5)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("interp2_gQgEamix", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 4, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function Drivetra_automltirelongMyMapped_Fcn5(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+real_T MyMap_0[9];
+real_T My;
+real_T b_idx_0;
+int32_T i;
+%assign _modelSS = ""
+
+%if SLibCG_FcnCallArgAccessed(0,5,0,0)
+%<SLibCG_AccessArg(0 ,5, 3)>
+%endif
+%if SLibCG_FcnCallArgAccessed(0,5,0,1)
+%<SLibCG_AccessArg(0 ,5, 4)>
+%endif
+%if SLibCG_FcnCallArgAccessed(0,5,0,3)
+%<SLibCG_AccessArg(0 ,5, 2)>
+%endif
+%if SLibCG_FcnCallArgAccessed(0,5,0,5)
+%<SLibCG_AccessArg(0 ,5, 7)>
+%endif
+
+/*@>6ea1e*/b_idx_0/*@>2e9f3*/ = /*@>6e9ce*/Fz;
+if (/*@>72b42*/Fz/*@>72b40*/ < /*@>72b43*/0.0) {
+    /*@>6ea28*/b_idx_0/*@>6c910*/ = /*@>6ea18*/0.0;
+}
+if (/*@>72b47*/b_idx_0/*@>72b45*/ > /*@>72b49*/b_FZMAX) {
+    /*@>6ea26*/b_idx_0/*@>6c900*/ = /*@>6ea11*/b_FZMAX;
+}
+/*@>6a128*/for (/*@>7bcb4*/i = /*@>7bcb3*/0; /*@>7bcbe*/i < /*@>7bcbc*/3; /*@>7bcba*/i/*@>7bcc2*/++) {
+    /*@>6e9ef*/MyMap_0/*@>6c8b1*/[/*@>6e9f1*/3/*@>6ed4c*/ * /*@>6e9f2*/i]/*@>6c8b0*/ = /*@>79966*/MyMap/*@>79968*/[/*@>79964*/i];
+    /*@>6e9f8*/MyMap_0/*@>6c8c9*/[/*@>6e9fa*/3/*@>6ed49*/ * /*@>6e9fb*/i/*@>6c8cb*/ + /*@>6ea01*/1]/*@>6c8c8*/ = /*@>7996f*/MyMap/*@>79971*/[/*@>7996c*/i/*@>7996a*/ + /*@>7996d*/3];
+    /*@>6ea02*/MyMap_0/*@>6c8e1*/[/*@>6ea04*/3/*@>6ed46*/ * /*@>6ea05*/i/*@>6c8e3*/ + /*@>6ea0b*/2]/*@>6c8e0*/ = /*@>79978*/MyMap/*@>7997a*/[/*@>79975*/i/*@>79973*/ + /*@>79976*/6];
+}
+/*@>6e9da*/My/*@>2e950*/ = /*@>77e22*/tanh(/*@>6e9e0*/omega)/*@>6ed44*/ * %<SLibCG_DumpSSCode("/*@[7b699*/",(SLibCGCallSubFcn("interp2_gQgEamix", ["/*@>7bd3e*/VxMy", "/*@>7bd48*/FzMy", "/*@>7bd52*/MyMap_0", "/*@>7bd5c*/Vx", "/*@>7bd66*/b_idx_0", "/*@>7bd70*/%<::tSimStruct>"], 0, 5, 0)),"/*@]*/")>;
+return My;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[0].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Drivetra_automltirelongMyMapped", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Drivetra_automltirelongMyMapped"))
+%<SLibCG_AccessArg(0, 5, 7)>
+%endif
+%if SLibCG_ArgAccessed(0, 5, 7)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Drivetra_automltirelongMyMapped", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Drivetra_automltirelongMyMapped"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(0, 5, 7)>
+%endif
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static real_T Drivetra_automltirelongMyMapped(\
+%assign comma = ""
+%<comma>real_T omega\
+%assign comma = ", "
+%<comma>real_T Fz\
+%assign comma = ", "
+%<comma>real_T Vx\
+%assign comma = ", "
+%<comma>const real_T VxMy[3]\
+%assign comma = ", "
+%<comma>const real_T FzMy[3]\
+%assign comma = ", "
+%<comma>const real_T MyMap[9]\
+%assign comma = ", "
+%<comma>real_T b_FZMAX\
+%assign comma = ", "
+%if SLibCG_ArgAccessed(0, 5, 7)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("Drivetra_automltirelongMyMapped", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 5, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function DrivetrainE_automltirelongMyISO_Fcn6(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+real_T b_idx_0;
+real_T d_idx_0;
+/*@>6ea95*/b_idx_0/*@>2edc0*/ = /*@>6ea4a*/Tamb;
+if (/*@>72b94*/Tamb/*@>72b92*/ < /*@>72b96*/TMIN) {
+    /*@>6eaab*/b_idx_0/*@>6c964*/ = /*@>6ea90*/TMIN;
+}
+if (/*@>72b9a*/b_idx_0/*@>72b98*/ > /*@>72b9c*/TMAX) {
+    /*@>6eaa9*/b_idx_0/*@>6c954*/ = /*@>6ea89*/TMAX;
+}
+/*@>6ea97*/d_idx_0/*@>2eef6*/ = /*@>6ea56*/Fz;
+if (/*@>72ba0*/Fz/*@>72b9e*/ < /*@>72ba2*/b_FZMIN) {
+    /*@>6eaa7*/d_idx_0/*@>6c944*/ = /*@>6ea82*/b_FZMIN;
+}
+if (/*@>72ba6*/d_idx_0/*@>72ba4*/ > /*@>72ba8*/b_FZMAX) {
+    /*@>6eaa5*/d_idx_0/*@>6c934*/ = /*@>6ea7b*/b_FZMAX;
+}
+return (/*@>6eaa1*/d_idx_0/*@>6ed5e*/ * /*@>6ea60*/Cr/*@>6ed5a*/ * /*@>6ea62*/0.001/*@>2efb4*/ / ((/*@>6eaa3*/b_idx_0/*@>2efb1*/ - /*@>6ea65*/Tmeas)/*@>6ed62*/ * /*@>6ea63*/Kt/*@>2efb3*/ + /*@>6ea67*/1.0)/*@>2efb5*/ + /*@>6ea5e*/Fpl)/*@>6ed51*/ * (-/*@<6ed57*//*@>77e2e*/tanh(/*@>6ea72*/omega)/*@>6ed55*/ * /*@>6ea5c*/Re);
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[0].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("DrivetrainE_automltirelongMyISO", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "DrivetrainE_automltirelongMyISO"))
+%<SLibCG_AccessArg(0, 6, 12)>
+%endif
+%if SLibCG_ArgAccessed(0, 6, 12)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "DrivetrainE_automltirelongMyISO", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "DrivetrainE_automltirelongMyISO"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(0, 6, 12)>
+%endif
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static real_T DrivetrainE_automltirelongMyISO(\
+%assign comma = ""
+%<comma>real_T Fz\
+%assign comma = ", "
+%<comma>real_T omega\
+%assign comma = ", "
+%<comma>real_T Tamb\
+%assign comma = ", "
+%<comma>real_T Fpl\
+%assign comma = ", "
+%<comma>real_T Cr\
+%assign comma = ", "
+%<comma>real_T Kt\
+%assign comma = ", "
+%<comma>real_T Tmeas\
+%assign comma = ", "
+%<comma>real_T Re\
+%assign comma = ", "
+%<comma>real_T b_FZMIN\
+%assign comma = ", "
+%<comma>real_T b_FZMAX\
+%assign comma = ", "
+%<comma>real_T TMIN\
+%assign comma = ", "
+%<comma>real_T TMAX\
+%assign comma = ", "
+%if SLibCG_ArgAccessed(0, 6, 12)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("DrivetrainE_automltirelongMyISO", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 6, fcnProtoType)>
+%return fcnBuff
+%endfunction
+

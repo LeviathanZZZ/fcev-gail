@@ -1,0 +1,10 @@
+        EXPORTS
+        DrivetrainEv_M
+        DrivetrainEv_U
+    DrivetrainEv_initialize
+            DrivetrainEv_step
+        DrivetrainEv_terminate
+
+
+        
+

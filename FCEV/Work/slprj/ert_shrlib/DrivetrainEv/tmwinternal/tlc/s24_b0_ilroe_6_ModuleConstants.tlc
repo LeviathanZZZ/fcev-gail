@@ -1,0 +1,9 @@
+%implements s24_b0_ilroe_6_ModuleConstants "C"
+
+%function ModuleConstants(block) Output
+
+
+/* Named constants for Chart: '<S194>/Clutch' */
+#define DrivetrainEv_IN_Locked_j ((uint8_T)1U)
+#define DrivetrainEv_IN_Slipping_o ((uint8_T)2U)
+%endfunction

@@ -1,0 +1,184 @@
+%implements s24_b0_ilroe_7_Derivatives "C"
+
+%function Derivatives(block, system) Output
+%<SLibCGIRAccessLocalDWork(23, 0)> %% ForEach_itr_h
+%<SLibCGIRAccessLocalDWork(22, 0)> %% ForEach_itr
+%<SLibCGIRAccessLocalVar(97, 0, "")> %% rtb_ImpSel_InsertedFor_Tout_a_f
+%<SLibCGIRAccessLocalVar(98, 0, "")> %% rtb_ImpSel_InsertedFor_Tfmaxs_p
+%<SLibCGIRAccessLocalVar(99, 0, "")> %% rtb_ImpSel_InsertedFor_Tfmaxk_j
+%<SLibCGIRAccessLocalVar(86, 0, "")> %% rtb_ImpSel_InsertedFor_Tout_at_
+%<SLibCGIRAccessLocalVar(87, 0, "")> %% rtb_ImpSel_InsertedFor_Tfmaxs_a
+%<SLibCGIRAccessLocalVar(88, 0, "")> %% rtb_ImpSel_InsertedFor_Tfmaxk_a
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+boolean_T lsat;
+boolean_T usat;
+%closefile localVarDecl
+%assign _modelSS = ""
+
+/* {S!d506}Derivatives for Integrator: '<S72>/Theta' */
+/*@>c6a58*/localXdot->/*@>cc39b*/Theta_CSTATE/*@>4fc1e*/ = /*@>c6469*/localB->/*@>cc32f*/q;
+/* {S!d508}Derivatives for Integrator: '<S72>/Position' */
+/*@>c6a5f*/localXdot->/*@>cc39e*/Position_CSTATE/*@>aa571*/[/*@>ae5aa*/0]/*@>aa570*/ = /*@>c6470*/localB->/*@>cc332*/TmpSignalConversionAtPositionIn/*@>c5101*/[/*@>c50fe*/0];
+/* {S!d510}Derivatives for Integrator: '<S4>/Integrator' */
+/*@>c6a66*/localXdot->/*@>cc3a1*/Integrator_CSTATE/*@>aa57c*/[/*@>ae5ac*/0]/*@>aa57b*/ = /*@>c6477*/localB->/*@>cc335*/TmpSignalConversionAtIntegrator/*@>c5106*/[/*@>c5103*/0];
+/* {S!d512}Derivatives for Integrator: '<S72>/U,w' */
+/*@>c6a6d*/localXdot->/*@>cc3a4*/Uw_CSTATE/*@>aa587*/[/*@>ae5ae*/0]/*@>aa586*/ = /*@>c647e*/localB->/*@>cc338*/Sum1/*@>c510b*/[/*@>c5108*/0];
+/* {S!d514}Derivatives for Integrator: '<S72>/Position' */
+/*@>c6a74*/localXdot->/*@>cc3a7*/Position_CSTATE/*@>aa599*/[/*@>ae5bc*/1]/*@>aa598*/ = /*@>c6485*/localB->/*@>cc33b*/TmpSignalConversionAtPositionIn/*@>c5110*/[/*@>c510d*/1];
+/* {S!d516}Derivatives for Integrator: '<S4>/Integrator' */
+/*@>c6a7b*/localXdot->/*@>cc3aa*/Integrator_CSTATE/*@>aa5a4*/[/*@>ae5be*/1]/*@>aa5a3*/ = /*@>c648c*/localB->/*@>cc33e*/TmpSignalConversionAtIntegrator/*@>c5115*/[/*@>c5112*/1];
+/* {S!d518}Derivatives for Integrator: '<S72>/U,w' */
+/*@>c6a82*/localXdot->/*@>cc3ad*/Uw_CSTATE/*@>aa5af*/[/*@>ae5c0*/1]/*@>aa5ae*/ = /*@>c6493*/localB->/*@>cc341*/Sum1/*@>c511a*/[/*@>c5117*/1];
+/* {S!d520}Derivatives for Integrator: '<S72>/q' */
+/*@>c6a89*/localXdot->/*@>cc3b0*/q_CSTATE/*@>4fc42*/ = /*@>c649a*/localB->/*@>cc344*/Product2;
+/* {S!d522}Derivatives for Integrator: '<S15>/Integrator' */
+/*@>c6a90*/localXdot->/*@>cc3b3*/Integrator_CSTATE_n/*@>4fc4e*/ = /*@>c64a1*/localB->/*@>cc347*/Product;
+/* {S!d524}Derivatives for Integrator: '<S14>/Integrator' */
+/*@>c6a97*/localXdot->/*@>cc3b6*/Integrator_CSTATE_f/*@>4fc5a*/ = /*@>c64a8*/localB->/*@>cc34a*/Subtract;
+/* {S!d526}Derivatives for Integrator: '<S170>/Integrator' */
+/*@>c6a9e*/localXdot->/*@>cc3b9*/Integrator_CSTATE_e/*@>4fc66*/ = /*@>c64af*/localB->/*@>cc34d*/Product_l;
+/* {S!d501}Derivatives for Iterator SubSystem: '<S141>/Clutch' */
+/*@>cc168*/for (/*@>cc164*/ForEach_itr_h/*@>cc163*/ = /*@>cc165*/0; /*@>cc15b*/ForEach_itr_h/*@>cc159*/ < /*@>cc15c*/1; /*@>cc15e*/ForEach_itr_h/*@>cc17b*/++) {
+    /* {S!d528}Derivatives for ForEachSliceSelector generated from: '<S152>/Tout' */
+    /*@>ae516*/rtb_ImpSel_InsertedFor_Tout_a_f/*@>4fc82*/ = /*@>c64bd*/localB->/*@>cc353*/Signconvention;
+    /* {S!d530}Derivatives for ForEachSliceSelector generated from: '<S152>/Tfmaxs' */
+    /*@>ae51a*/rtb_ImpSel_InsertedFor_Tfmaxs_p/*@>4fc8a*/ = /*@>c64c4*/localB->/*@>cc356*/Ratioofstatictokinetic;
+    /* {S!d532}Derivatives for ForEachSliceSelector generated from: '<S152>/Tfmaxk' */
+    /*@>ae51e*/rtb_ImpSel_InsertedFor_Tfmaxk_j/*@>4fc92*/ = /*@>c64cb*/localB->/*@>cc359*/TorqueConversion;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[8], "Derivative",0)
+    /* {S!d534}Derivatives for Chart: '<S152>/Clutch' */
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Clutch_Deriv",8,0)
+%<SLibCG_AccessArg(7 ,6, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Clutch_Deriv",8,1)
+%<SLibCG_AccessArg(7 ,6, 1)>
+%<SLibCGIRAccessLocalDWork(23, 0)> %% ForEach_itr_h
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Clutch_Deriv",8,2)
+%<SLibCG_AccessArg(7 ,6, 2)>
+%<SLibCGIRAccessLocalDWork(23, 0)> %% ForEach_itr_h
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Clutch_Deriv",8,3)
+%<SLibCG_AccessArg(7 ,6, 4)>
+%<SLibCGIRAccessLocalDWork(23, 0)> %% ForEach_itr_h
+%endif
+
+%<SLibCG_DumpSSCode("/*@[c95fd*/",SLibCGIRGenReusableSysCall("DrivetrainEv_Clutch_Deriv", ["/*@>cc43e*/%<::tSimStruct>", "&/*@>cc44c*/localB->/*@>cc44b*/CoreSubsys_c/*@>cc44a*/[/*@>cc44e*/ForEach_itr_h]./*@>cc449*/sf_Clutch", "&/*@>cc45d*/localDW->/*@>cc45c*/CoreSubsys_c/*@>cc45b*/[/*@>cc45f*/ForEach_itr_h]./*@>cc45a*/sf_Clutch", "&/*@>cc46e*/localXdot->/*@>cc46d*/CoreSubsys_c/*@>cc46c*/[/*@>cc470*/ForEach_itr_h]./*@>cc46b*/sf_Clutch"], 8, 0, 8, 0, 8, 18),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[8]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+}
+/* {E!d501}End of Derivatives for SubSystem: '<S141>/Clutch' */
+
+/* {S!d536}Derivatives for Integrator: '<S212>/Integrator' */
+/*@>c6aa5*/localXdot->/*@>cc3bc*/Integrator_CSTATE_b/*@>4fc72*/ = /*@>c64b6*/localB->/*@>cc350*/Product_o;
+/* {S!d503}Derivatives for Iterator SubSystem: '<S183>/Clutch' */
+/*@>cc146*/for (/*@>cc142*/ForEach_itr/*@>cc141*/ = /*@>cc143*/0; /*@>cc139*/ForEach_itr/*@>cc137*/ < /*@>cc13a*/1; /*@>cc13c*/ForEach_itr/*@>cc17c*/++) {
+    /* {S!d538}Derivatives for ForEachSliceSelector generated from: '<S194>/Tout' */
+    /*@>ae52a*/rtb_ImpSel_InsertedFor_Tout_at_/*@>4fd3a*/ = /*@>c64ea*/localB->/*@>cc365*/Signconvention_g;
+    /* {S!d540}Derivatives for ForEachSliceSelector generated from: '<S194>/Tfmaxs' */
+    /*@>ae52e*/rtb_ImpSel_InsertedFor_Tfmaxs_a/*@>4fd42*/ = /*@>c64f8*/localB->/*@>cc36b*/Ratioofstatictokinetic_l;
+    /* {S!d542}Derivatives for ForEachSliceSelector generated from: '<S194>/Tfmaxk' */
+    /*@>ae532*/rtb_ImpSel_InsertedFor_Tfmaxk_a/*@>4fd4a*/ = /*@>c64ff*/localB->/*@>cc36e*/TorqueConversion_b;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[13], "Derivative",0)
+    /* {S!d544}Derivatives for Chart: '<S194>/Clutch' */
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Clutch_m_Deriv",13,0)
+%<SLibCG_AccessArg(7 ,6, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Clutch_m_Deriv",13,1)
+%<SLibCG_AccessArg(7 ,6, 1)>
+%<SLibCGIRAccessLocalDWork(22, 0)> %% ForEach_itr
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Clutch_m_Deriv",13,2)
+%<SLibCG_AccessArg(7 ,6, 2)>
+%<SLibCGIRAccessLocalDWork(22, 0)> %% ForEach_itr
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Clutch_m_Deriv",13,3)
+%<SLibCG_AccessArg(7 ,6, 4)>
+%<SLibCGIRAccessLocalDWork(22, 0)> %% ForEach_itr
+%endif
+
+%<SLibCG_DumpSSCode("/*@[c95fe*/",SLibCGIRGenReusableSysCall("DrivetrainEv_Clutch_m_Deriv", ["/*@>cc4aa*/%<::tSimStruct>", "&/*@>cc4b8*/localB->/*@>cc4b7*/CoreSubsys_k/*@>cc4b6*/[/*@>cc4ba*/ForEach_itr]./*@>cc4b5*/sf_Clutch", "&/*@>cc4c9*/localDW->/*@>cc4c8*/CoreSubsys_k/*@>cc4c7*/[/*@>cc4cb*/ForEach_itr]./*@>cc4c6*/sf_Clutch", "&/*@>cc4da*/localXdot->/*@>cc4d9*/CoreSubsys_k/*@>cc4d8*/[/*@>cc4dc*/ForEach_itr]./*@>cc4d7*/sf_Clutch"], 13, 0, 8, 0, 8, 18),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[13]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+}
+/* {E!d503}End of Derivatives for SubSystem: '<S183>/Clutch' */
+
+/* {S!d546}Derivatives for Integrator: '<S51>/Integrator' */
+/*@>c6abd*/localXdot->/*@>cc3c5*/Integrator_CSTATE_g/*@>4fcbb*/ = /*@>c64e3*/localB->/*@>cc362*/Product_j;
+/* {S!d548}Derivatives for Integrator: '<S50>/Integrator' */
+/*@>c6ac4*/localXdot->/*@>cc3c8*/Integrator_CSTATE_bn/*@>4fcc7*/ = /*@>c64f1*/localB->/*@>cc368*/Subtract_l;
+/* {S!d550}Derivatives for Integrator: '<S26>/Integrator' */
+/*@>ae54f*/lsat/*@>aa4cf*/ = (/*@>c6a1e*/localX->/*@>cc38f*/Integrator_CSTATE_gx/*@>c511f*/[/*@>c511c*/0]/*@>aa4d1*/ <= /*@>ae553*/-5000.0);
+/*@>ae554*/usat/*@>aa4d9*/ = (/*@>c6a25*/localX->/*@>cc392*/Integrator_CSTATE_gx/*@>c5124*/[/*@>c5121*/0]/*@>aa4db*/ >= /*@>ae558*/5000.0);
+/*@>aa4e2*/if (((!/*@<aa4e6*//*@>ae559*/lsat)/*@>aa4e5*/ && (!/*@<aa4e9*//*@>ae55b*/usat))/*@>aa4e4*/ || (/*@>ae55d*/lsat/*@>aa4ec*/ && (/*@>c6517*/localB->/*@>cc377*/xdot/*@>c5129*/[/*@>c5126*/0]/*@>aa4ef*/ > /*@>ae561*/0.0))/*@>aa4e3*/ || (/*@>ae562*/usat/*@>aa4f6*/ && (/*@>c651e*/localB->/*@>cc37a*/xdot/*@>c512e*/[/*@>c512b*/0]/*@>aa4f9*/ < /*@>ae566*/0.0))) {
+    /*@>c6adc*/localXdot->/*@>cc3d1*/Integrator_CSTATE_gx/*@>aa503*/[/*@>ae572*/0]/*@>aa502*/ = /*@>c6525*/localB->/*@>cc37d*/xdot/*@>c5133*/[/*@>c5130*/0];
+} else {
+    /* in saturation */
+    /*@>c6ae3*/localXdot->/*@>cc3d4*/Integrator_CSTATE_gx/*@>aa50e*/[/*@>ae574*/0]/*@>aa50d*/ = /*@>ae56d*/0.0;
+}
+/*@>ae575*/lsat/*@>aa51d*/ = (/*@>c6a2c*/localX->/*@>cc395*/Integrator_CSTATE_gx/*@>c5138*/[/*@>c5135*/1]/*@>aa51f*/ <= /*@>ae579*/-5000.0);
+/*@>ae57a*/usat/*@>aa527*/ = (/*@>c6a33*/localX->/*@>cc398*/Integrator_CSTATE_gx/*@>c513d*/[/*@>c513a*/1]/*@>aa529*/ >= /*@>ae57e*/5000.0);
+/*@>aa530*/if (((!/*@<aa534*//*@>ae57f*/lsat)/*@>aa533*/ && (!/*@<aa537*//*@>ae581*/usat))/*@>aa532*/ || (/*@>ae583*/lsat/*@>aa53a*/ && (/*@>c652c*/localB->/*@>cc380*/xdot/*@>c5142*/[/*@>c513f*/1]/*@>aa53d*/ > /*@>ae587*/0.0))/*@>aa531*/ || (/*@>ae588*/usat/*@>aa544*/ && (/*@>c6533*/localB->/*@>cc383*/xdot/*@>c5147*/[/*@>c5144*/1]/*@>aa547*/ < /*@>ae58c*/0.0))) {
+    /*@>c6aea*/localXdot->/*@>cc3d7*/Integrator_CSTATE_gx/*@>aa551*/[/*@>ae598*/1]/*@>aa550*/ = /*@>c653a*/localB->/*@>cc386*/xdot/*@>c514c*/[/*@>c5149*/1];
+} else {
+    /* in saturation */
+    /*@>c6af1*/localXdot->/*@>cc3da*/Integrator_CSTATE_gx/*@>aa55c*/[/*@>ae59a*/1]/*@>aa55b*/ = /*@>ae593*/0.0;
+}
+/* {E!d550}End of Derivatives for Integrator: '<S26>/Integrator' */
+
+/* {S!d552}Derivatives for Integrator: '<S59>/Integrator' */
+/*@>c6af8*/localXdot->/*@>cc3dd*/Integrator_CSTATE_i/*@>4fd73*/ = /*@>c6541*/localB->/*@>cc389*/Divide;
+/* {S!d554}Derivatives for Integrator: '<S94>/Integrator3' */
+/*@>c6aff*/localXdot->/*@>cc3e0*/Integrator3_CSTATE/*@>4fd7f*/ = /*@>c6548*/localB->/*@>cc38c*/VectorConcatenate7/*@>c5151*/[/*@>c514e*/0];
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[7].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Derivative", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Derivative"))
+%<SLibCG_AccessArg(7, 6, 0)>
+%endif
+%if SLibCG_ArgAccessed(7, 6, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Derivative", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Derivative"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(7, 6, 0)>
+%endif
+%<LibSetSystemField(system, "CachedDerivativeLocalVars", localVarDecl)>
+%endfunction
+%function DerivativesFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void DrivetrainEv_Deriv(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(7, 6, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("DrivetrainEv_Deriv", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%<comma>B_DrivetrainEv_c_T *localB\
+%assign comma = ", "
+%if SLibCG_ArgAccessed(7, 6, 2)
+%<comma>DW_DrivetrainEv_f_T *localDW\
+%assign comma = ", "
+%endif
+%<comma>X_DrivetrainEv_n_T *localX\
+%assign comma = ", "
+%<comma>XDot_DrivetrainEv_n_T *localXdot\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(7, 6, fcnProtoType)>
+%endfunction

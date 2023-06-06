@@ -1,0 +1,126 @@
+%implements s24_b0_ilroe_7_ForcingFunction "C"
+
+%function ForcingFunction(block, system) Output
+%<SLibCGIRAccessLocalDWork(23, 0)> %% ForEach_itr_h
+%<SLibCGIRAccessLocalDWork(22, 0)> %% ForEach_itr
+%<SLibCGIRAccessLocalVar(97, 0, "")> %% rtb_ImpSel_InsertedFor_Tout_a_f
+%<SLibCGIRAccessLocalVar(98, 0, "")> %% rtb_ImpSel_InsertedFor_Tfmaxs_p
+%<SLibCGIRAccessLocalVar(99, 0, "")> %% rtb_ImpSel_InsertedFor_Tfmaxk_j
+%<SLibCGIRAccessLocalVar(86, 0, "")> %% rtb_ImpSel_InsertedFor_Tout_at_
+%<SLibCGIRAccessLocalVar(87, 0, "")> %% rtb_ImpSel_InsertedFor_Tfmaxs_a
+%<SLibCGIRAccessLocalVar(88, 0, "")> %% rtb_ImpSel_InsertedFor_Tfmaxk_a
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+boolean_T lsat;
+boolean_T usat;
+%closefile localVarDecl
+/* {S!d560}ForcingFunction for Integrator: '<S72>/Theta' */
+/*@>c6b06*/localXdot->/*@>cc70f*/Theta_CSTATE/*@>4fe2a*/ = /*@>c654f*/localB->/*@>cc6af*/q;
+/* {S!d562}ForcingFunction for Integrator: '<S72>/Position' */
+/*@>c6b0d*/localXdot->/*@>cc712*/Position_CSTATE/*@>aa688*/[/*@>ae6b0*/0]/*@>aa687*/ = /*@>c6556*/localB->/*@>cc6b2*/TmpSignalConversionAtPositionIn/*@>c5156*/[/*@>c5153*/0];
+/* {S!d564}ForcingFunction for Integrator: '<S4>/Integrator' */
+/*@>c6b14*/localXdot->/*@>cc715*/Integrator_CSTATE/*@>aa693*/[/*@>ae6b2*/0]/*@>aa692*/ = /*@>c655d*/localB->/*@>cc6b5*/TmpSignalConversionAtIntegrator/*@>c515b*/[/*@>c5158*/0];
+/* {S!d566}ForcingFunction for Integrator: '<S72>/U,w' */
+/*@>c6b1b*/localXdot->/*@>cc718*/Uw_CSTATE/*@>aa69e*/[/*@>ae6b4*/0]/*@>aa69d*/ = /*@>c6564*/localB->/*@>cc6b8*/Sum1/*@>c5160*/[/*@>c515d*/0];
+/* {S!d568}ForcingFunction for Integrator: '<S72>/Position' */
+/*@>c6b22*/localXdot->/*@>cc71b*/Position_CSTATE/*@>aa6b0*/[/*@>ae6c2*/1]/*@>aa6af*/ = /*@>c656b*/localB->/*@>cc6bb*/TmpSignalConversionAtPositionIn/*@>c5165*/[/*@>c5162*/1];
+/* {S!d570}ForcingFunction for Integrator: '<S4>/Integrator' */
+/*@>c6b29*/localXdot->/*@>cc71e*/Integrator_CSTATE/*@>aa6bb*/[/*@>ae6c4*/1]/*@>aa6ba*/ = /*@>c6572*/localB->/*@>cc6be*/TmpSignalConversionAtIntegrator/*@>c516a*/[/*@>c5167*/1];
+/* {S!d572}ForcingFunction for Integrator: '<S72>/U,w' */
+/*@>c6b30*/localXdot->/*@>cc721*/Uw_CSTATE/*@>aa6c6*/[/*@>ae6c6*/1]/*@>aa6c5*/ = /*@>c6579*/localB->/*@>cc6c1*/Sum1/*@>c516f*/[/*@>c516c*/1];
+/* {S!d574}ForcingFunction for Integrator: '<S72>/q' */
+/*@>c6b37*/localXdot->/*@>cc724*/q_CSTATE/*@>4fe4e*/ = /*@>c6580*/localB->/*@>cc6c4*/Product2;
+/* {S!d576}ForcingFunction for Integrator: '<S15>/Integrator' */
+/*@>c6b3e*/localXdot->/*@>cc727*/Integrator_CSTATE_n/*@>4fe5a*/ = /*@>c6587*/localB->/*@>cc6c7*/Product;
+/* {S!d578}ForcingFunction for Integrator: '<S14>/Integrator' */
+/*@>c6b45*/localXdot->/*@>cc72a*/Integrator_CSTATE_f/*@>4fe66*/ = /*@>c658e*/localB->/*@>cc6ca*/Subtract;
+/* {S!d580}ForcingFunction for Integrator: '<S170>/Integrator' */
+/*@>c6b4c*/localXdot->/*@>cc72d*/Integrator_CSTATE_e/*@>4fe72*/ = /*@>c6595*/localB->/*@>cc6cd*/Product_l;
+/* {S!d555}ForcingFunction for Iterator SubSystem: '<S141>/Clutch' */
+/*@>cc528*/for (/*@>cc524*/ForEach_itr_h/*@>cc523*/ = /*@>cc525*/0; /*@>cc51b*/ForEach_itr_h/*@>cc519*/ < /*@>cc51c*/1; /*@>cc51e*/ForEach_itr_h/*@>cc53b*/++) {
+    /* {S!d582}ForcingFunction for ForEachSliceSelector generated from: '<S152>/Tout' */
+    /*@>ae62e*/rtb_ImpSel_InsertedFor_Tout_a_f/*@>4fe8e*/ = /*@>c65a3*/localB->/*@>cc6d3*/Signconvention;
+    /* {S!d584}ForcingFunction for ForEachSliceSelector generated from: '<S152>/Tfmaxs' */
+    /*@>ae632*/rtb_ImpSel_InsertedFor_Tfmaxs_p/*@>4fe96*/ = /*@>c65aa*/localB->/*@>cc6d6*/Ratioofstatictokinetic;
+    /* {S!d586}ForcingFunction for ForEachSliceSelector generated from: '<S152>/Tfmaxk' */
+    /*@>ae636*/rtb_ImpSel_InsertedFor_Tfmaxk_j/*@>4fe9e*/ = /*@>c65b1*/localB->/*@>cc6d9*/TorqueConversion;
+}
+/* {E!d555}End of ForcingFunction for SubSystem: '<S141>/Clutch' */
+
+/* {S!d588}ForcingFunction for Integrator: '<S212>/Integrator' */
+/*@>c6b53*/localXdot->/*@>cc730*/Integrator_CSTATE_b/*@>4fe7e*/ = /*@>c659c*/localB->/*@>cc6d0*/Product_o;
+/* {S!d557}ForcingFunction for Iterator SubSystem: '<S183>/Clutch' */
+/*@>cc506*/for (/*@>cc502*/ForEach_itr/*@>cc501*/ = /*@>cc503*/0; /*@>cc4f9*/ForEach_itr/*@>cc4f7*/ < /*@>cc4fa*/1; /*@>cc4fc*/ForEach_itr/*@>cc53c*/++) {
+    /* {S!d590}ForcingFunction for ForEachSliceSelector generated from: '<S194>/Tout' */
+    /*@>ae642*/rtb_ImpSel_InsertedFor_Tout_at_/*@>4ff43*/ = /*@>c65bf*/localB->/*@>cc6df*/Signconvention_g;
+    /* {S!d592}ForcingFunction for ForEachSliceSelector generated from: '<S194>/Tfmaxs' */
+    /*@>ae646*/rtb_ImpSel_InsertedFor_Tfmaxs_a/*@>4ff4b*/ = /*@>c65cd*/localB->/*@>cc6e5*/Ratioofstatictokinetic_l;
+    /* {S!d594}ForcingFunction for ForEachSliceSelector generated from: '<S194>/Tfmaxk' */
+    /*@>ae64a*/rtb_ImpSel_InsertedFor_Tfmaxk_a/*@>4ff53*/ = /*@>c65d4*/localB->/*@>cc6e8*/TorqueConversion_b;
+}
+/* {E!d557}End of ForcingFunction for SubSystem: '<S183>/Clutch' */
+
+/* {S!d596}ForcingFunction for Integrator: '<S51>/Integrator' */
+/*@>c6b5a*/localXdot->/*@>cc733*/Integrator_CSTATE_g/*@>4fec4*/ = /*@>c65b8*/localB->/*@>cc6dc*/Product_j;
+/* {S!d598}ForcingFunction for Integrator: '<S50>/Integrator' */
+/*@>c6b61*/localXdot->/*@>cc736*/Integrator_CSTATE_bn/*@>4fed0*/ = /*@>c65c6*/localB->/*@>cc6e2*/Subtract_l;
+/* {S!d600}ForcingFunction for Integrator: '<S26>/Integrator' */
+/*@>ae655*/lsat/*@>aa5e6*/ = (/*@>c6a3a*/localX->/*@>cc703*/Integrator_CSTATE_gx/*@>c5174*/[/*@>c5171*/0]/*@>aa5e8*/ <= /*@>ae659*/-5000.0);
+/*@>ae65a*/usat/*@>aa5f0*/ = (/*@>c6a41*/localX->/*@>cc706*/Integrator_CSTATE_gx/*@>c5179*/[/*@>c5176*/0]/*@>aa5f2*/ >= /*@>ae65e*/5000.0);
+/*@>aa5f9*/if (((!/*@<aa5fd*//*@>ae65f*/lsat)/*@>aa5fc*/ && (!/*@<aa600*//*@>ae661*/usat))/*@>aa5fb*/ || (/*@>ae663*/lsat/*@>aa603*/ && (/*@>c65db*/localB->/*@>cc6eb*/xdot/*@>c517e*/[/*@>c517b*/0]/*@>aa606*/ > /*@>ae667*/0.0))/*@>aa5fa*/ || (/*@>ae668*/usat/*@>aa60d*/ && (/*@>c65e2*/localB->/*@>cc6ee*/xdot/*@>c5183*/[/*@>c5180*/0]/*@>aa610*/ < /*@>ae66c*/0.0))) {
+    /*@>c6b68*/localXdot->/*@>cc739*/Integrator_CSTATE_gx/*@>aa61a*/[/*@>ae678*/0]/*@>aa619*/ = /*@>c65e9*/localB->/*@>cc6f1*/xdot/*@>c5188*/[/*@>c5185*/0];
+} else {
+    /* in saturation */
+    /*@>c6b6f*/localXdot->/*@>cc73c*/Integrator_CSTATE_gx/*@>aa625*/[/*@>ae67a*/0]/*@>aa624*/ = /*@>ae673*/0.0;
+}
+/*@>ae67b*/lsat/*@>aa634*/ = (/*@>c6a48*/localX->/*@>cc709*/Integrator_CSTATE_gx/*@>c518d*/[/*@>c518a*/1]/*@>aa636*/ <= /*@>ae67f*/-5000.0);
+/*@>ae680*/usat/*@>aa63e*/ = (/*@>c6a4f*/localX->/*@>cc70c*/Integrator_CSTATE_gx/*@>c5192*/[/*@>c518f*/1]/*@>aa640*/ >= /*@>ae684*/5000.0);
+/*@>aa647*/if (((!/*@<aa64b*//*@>ae685*/lsat)/*@>aa64a*/ && (!/*@<aa64e*//*@>ae687*/usat))/*@>aa649*/ || (/*@>ae689*/lsat/*@>aa651*/ && (/*@>c65f0*/localB->/*@>cc6f4*/xdot/*@>c5197*/[/*@>c5194*/1]/*@>aa654*/ > /*@>ae68d*/0.0))/*@>aa648*/ || (/*@>ae68e*/usat/*@>aa65b*/ && (/*@>c65f7*/localB->/*@>cc6f7*/xdot/*@>c519c*/[/*@>c5199*/1]/*@>aa65e*/ < /*@>ae692*/0.0))) {
+    /*@>c6b76*/localXdot->/*@>cc73f*/Integrator_CSTATE_gx/*@>aa668*/[/*@>ae69e*/1]/*@>aa667*/ = /*@>c65fe*/localB->/*@>cc6fa*/xdot/*@>c51a1*/[/*@>c519e*/1];
+} else {
+    /* in saturation */
+    /*@>c6b7d*/localXdot->/*@>cc742*/Integrator_CSTATE_gx/*@>aa673*/[/*@>ae6a0*/1]/*@>aa672*/ = /*@>ae699*/0.0;
+}
+/* {E!d600}End of ForcingFunction for Integrator: '<S26>/Integrator' */
+
+/* {S!d602}ForcingFunction for Integrator: '<S59>/Integrator' */
+/*@>c6b84*/localXdot->/*@>cc745*/Integrator_CSTATE_i/*@>4ff79*/ = /*@>c6605*/localB->/*@>cc6fd*/Divide;
+/* {S!d604}ForcingFunction for Integrator: '<S94>/Integrator3' */
+/*@>c6b8b*/localXdot->/*@>cc748*/Integrator3_CSTATE/*@>4ff85*/ = /*@>c660c*/localB->/*@>cc700*/VectorConcatenate7/*@>c51a6*/[/*@>c51a3*/0];
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[7].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("ForcingFunction", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "ForcingFunction"))
+%<SLibCG_AccessArg(7, 7, 0)>
+%endif
+%if SLibCG_ArgAccessed(7, 7, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "ForcingFunction", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "ForcingFunction"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(7, 7, 0)>
+%endif
+%<LibSetSystemField(system, "CachedForcingFunctionLocalVars", localVarDecl)>
+%endfunction
+%function ForcingFunctionFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void DrivetrainEv_ForcingFunction(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(7, 7, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("DrivetrainEv_ForcingFunction", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%<comma>B_DrivetrainEv_c_T *localB\
+%assign comma = ", "
+%<comma>X_DrivetrainEv_n_T *localX\
+%assign comma = ", "
+%<comma>XDot_DrivetrainEv_n_T *localXdot\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(7, 7, fcnProtoType)>
+%endfunction

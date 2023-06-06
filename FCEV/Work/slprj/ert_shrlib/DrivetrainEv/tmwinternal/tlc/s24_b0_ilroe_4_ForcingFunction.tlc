@@ -1,0 +1,39 @@
+%implements s24_b0_ilroe_4_ForcingFunction "C"
+
+%function ForcingFunction(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* ForcingFunction for Integrator: '<S159>/omega wheel' */
+/*@>7ffa6*/localXdot->/*@>8024a*/omegaWheel/*@>4e3e3*/ = /*@>7fe57*/localB->/*@>80247*/OutputInertia;
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[4].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("ForcingFunction", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "ForcingFunction"))
+%<SLibCG_AccessArg(4, 3, 0)>
+%endif
+%if SLibCG_ArgAccessed(4, 3, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "ForcingFunction", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "ForcingFunction"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(4, 3, 0)>
+%endif
+%endfunction
+%function ForcingFunctionFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void DrivetrainEv_Slipping_ForcingFunction(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(4, 3, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("DrivetrainEv_Slipping_ForcingFunction", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%<comma>B_Slipping_DrivetrainEv_T *localB\
+%assign comma = ", "
+%<comma>XDot_Slipping_DrivetrainEv_T *localXdot\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 3, fcnProtoType)>
+%endfunction

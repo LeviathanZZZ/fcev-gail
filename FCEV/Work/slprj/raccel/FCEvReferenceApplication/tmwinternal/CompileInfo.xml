@@ -1,0 +1,3651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/ci/19700101 http://schema.mathworks.com/mf0/sl_modelref_info/R2022b http://schema.mathworks.com/mf0/slexec_mm_sto/R2022b_202202091112 http://schema.mathworks.com/mf0/sltp_mm/R2022b_202203181029">
+  <ModelRefInfoRepo.ModelRefInfoRoot type="ModelRefInfoRepo.ModelRefInfoRoot" uuid="ae1cc608-5c0c-4049-9a56-c89eb3e30b1e">
+    <JITEngines>sVYKMJhTKffNOHlXSWQV47F</JITEngines>
+    <JITEngines>sbv4q5gDUpSK8np7bhu6eHF</JITEngines>
+    <JITEngines>syl6JX0L78XShT2EjXM4kbD</JITEngines>
+    <childModelRefInfo type="ModelRefInfoRepo.ChildModelRefInfo" uuid="a039eedd-ca6a-4851-8135-1bb628e642c4">
+      <hasAccelReference>true</hasAccelReference>
+      <modelName>DrivetrainEv</modelName>
+      <modelPath>FCEvReferenceApplication:DrivetrainEv</modelPath>
+    </childModelRefInfo>
+    <childModelRefInfo type="ModelRefInfoRepo.ChildModelRefInfo" uuid="8aa98fa6-238e-4e64-812e-2b3015be6804">
+      <hasAccelReference>true</hasAccelReference>
+      <modelName>FCElectricPlant</modelName>
+      <modelPath>FCEvReferenceApplication:FCElectricPlant</modelPath>
+    </childModelRefInfo>
+    <childModelRefInfo type="ModelRefInfoRepo.ChildModelRefInfo" uuid="b2ec37de-6db2-4b76-9cad-34ce10a0d145">
+      <hasAccelReference>true</hasAccelReference>
+      <modelName>FCEvPowertrainController</modelName>
+      <modelPath>FCEvReferenceApplication:FCEvPowertrainController</modelPath>
+    </childModelRefInfo>
+    <childModelRefInfo type="ModelRefInfoRepo.ChildModelRefInfo" uuid="7aaff3ae-9959-41cc-92cb-9c08f52c30ec">
+      <modelName>FCEvReferenceApplication</modelName>
+      <modelPath>FCEvReferenceApplication</modelPath>
+    </childModelRefInfo>
+    <dataDictionary>VehicleConfig.sldd</dataDictionary>
+    <dataDictionarySet>DrivetrainEv.sldd</dataDictionarySet>
+    <dataDictionarySet>FCElectricPlant.sldd</dataDictionarySet>
+    <dataDictionarySet>FCEvPowertrainController.sldd</dataDictionarySet>
+    <dataDictionarySet>VehicleConfig.sldd</dataDictionarySet>
+    <dataDictionarySetForDataTypeCheck>VehicleConfig.sldd</dataDictionarySetForDataTypeCheck>
+    <dataTransferInfos>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAAAAAAABAAAAAQAAAAAAAAAFAAQAAQAAAAEAAAAAAAAA</dataTransferInfos>
+    <defaultsCMapping>{&quot;Inports&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;\&quot;}&quot;,&quot;Outports&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;\&quot;}&quot;,&quot;ParameterArguments&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;LocalParameters&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;\&quot;}&quot;,&quot;GlobalParameters&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;\&quot;}&quot;,&quot;InternalData&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;\&quot;}&quot;,&quot;SharedLocalDataStores&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;GlobalDataStores&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;Constants&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;\&quot;}&quot;,&quot;DataTransfers&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;ModelData&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;InitializeTerminate&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;\&quot;}&quot;,&quot;Execution&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;\&quot;}&quot;,&quot;SharedUtility&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;\&quot;}&quot;}</defaultsCMapping>
+    <hasBlockUsingZOHContinuousSampleTime>true</hasBlockUsingZOHContinuousSampleTime>
+    <hasBlockWithPeriodicDiscreteSampleTime>true</hasBlockWithPeriodicDiscreteSampleTime>
+    <hasBwsAccessed>true</hasBwsAccessed>
+    <hasBwsAccessedByAnyModel>true</hasBwsAccessedByAnyModel>
+    <hasContinuousSampleTime>true</hasContinuousSampleTime>
+    <hasInlineVariantBlock>true</hasInlineVariantBlock>
+    <hasNonVirtualConstantTs>true</hasNonVirtualConstantTs>
+    <hasNonVirtualParameterChangeEvents>true</hasNonVirtualParameterChangeEvents>
+    <hasNoncontSigFeedingDerivPorts>true</hasNoncontSigFeedingDerivPorts>
+    <hasSignalLogging>true</hasSignalLogging>
+    <hasStateInsideForEachSubsystem>true</hasStateInsideForEachSubsystem>
+    <hasStatesModifiedInOutputUpdate>true</hasStatesModifiedInOutputUpdate>
+    <hasVariantModelOrSubsystem>true</hasVariantModelOrSubsystem>
+    <loggingSaveFormat>2</loggingSaveFormat>
+    <massMatrixIr>0</massMatrixIr>
+    <massMatrixIr>1</massMatrixIr>
+    <massMatrixIr>2</massMatrixIr>
+    <massMatrixIr>3</massMatrixIr>
+    <massMatrixIr>4</massMatrixIr>
+    <massMatrixIr>5</massMatrixIr>
+    <massMatrixIr>6</massMatrixIr>
+    <massMatrixIr>7</massMatrixIr>
+    <massMatrixIr>8</massMatrixIr>
+    <massMatrixIr>9</massMatrixIr>
+    <massMatrixIr>10</massMatrixIr>
+    <massMatrixIr>11</massMatrixIr>
+    <massMatrixIr>12</massMatrixIr>
+    <massMatrixIr>13</massMatrixIr>
+    <massMatrixIr>14</massMatrixIr>
+    <massMatrixIr>15</massMatrixIr>
+    <massMatrixIr>16</massMatrixIr>
+    <massMatrixIr>17</massMatrixIr>
+    <massMatrixIr>18</massMatrixIr>
+    <massMatrixIr>19</massMatrixIr>
+    <massMatrixIr>20</massMatrixIr>
+    <massMatrixIr>21</massMatrixIr>
+    <massMatrixIr>22</massMatrixIr>
+    <massMatrixIr>23</massMatrixIr>
+    <massMatrixIr>24</massMatrixIr>
+    <massMatrixIr>25</massMatrixIr>
+    <massMatrixIr>26</massMatrixIr>
+    <massMatrixIr>27</massMatrixIr>
+    <massMatrixIr>28</massMatrixIr>
+    <massMatrixIr>29</massMatrixIr>
+    <massMatrixIr>30</massMatrixIr>
+    <massMatrixIr>31</massMatrixIr>
+    <massMatrixIr>32</massMatrixIr>
+    <massMatrixIr>33</massMatrixIr>
+    <massMatrixIr>34</massMatrixIr>
+    <massMatrixIr>35</massMatrixIr>
+    <massMatrixIr>36</massMatrixIr>
+    <massMatrixIr>37</massMatrixIr>
+    <massMatrixIr>38</massMatrixIr>
+    <massMatrixIr>39</massMatrixIr>
+    <massMatrixIr>40</massMatrixIr>
+    <massMatrixIr>41</massMatrixIr>
+    <massMatrixIr>42</massMatrixIr>
+    <massMatrixIr>44</massMatrixIr>
+    <massMatrixIr>84</massMatrixIr>
+    <massMatrixIr>85</massMatrixIr>
+    <massMatrixIr>87</massMatrixIr>
+    <massMatrixIr>86</massMatrixIr>
+    <massMatrixIr>88</massMatrixIr>
+    <massMatrixIr>89</massMatrixIr>
+    <massMatrixIr>91</massMatrixIr>
+    <massMatrixIr>90</massMatrixIr>
+    <massMatrixIr>49</massMatrixIr>
+    <massMatrixIr>50</massMatrixIr>
+    <massMatrixIr>52</massMatrixIr>
+    <massMatrixIr>51</massMatrixIr>
+    <massMatrixIr>53</massMatrixIr>
+    <massMatrixIr>54</massMatrixIr>
+    <massMatrixIr>56</massMatrixIr>
+    <massMatrixIr>55</massMatrixIr>
+    <massMatrixIr>43</massMatrixIr>
+    <massMatrixIr>45</massMatrixIr>
+    <massMatrixIr>46</massMatrixIr>
+    <massMatrixIr>45</massMatrixIr>
+    <massMatrixIr>47</massMatrixIr>
+    <massMatrixIr>48</massMatrixIr>
+    <massMatrixIr>49</massMatrixIr>
+    <massMatrixIr>53</massMatrixIr>
+    <massMatrixIr>57</massMatrixIr>
+    <massMatrixIr>58</massMatrixIr>
+    <massMatrixIr>59</massMatrixIr>
+    <massMatrixIr>60</massMatrixIr>
+    <massMatrixIr>59</massMatrixIr>
+    <massMatrixIr>60</massMatrixIr>
+    <massMatrixIr>61</massMatrixIr>
+    <massMatrixIr>62</massMatrixIr>
+    <massMatrixIr>61</massMatrixIr>
+    <massMatrixIr>62</massMatrixIr>
+    <massMatrixIr>63</massMatrixIr>
+    <massMatrixIr>64</massMatrixIr>
+    <massMatrixIr>65</massMatrixIr>
+    <massMatrixIr>64</massMatrixIr>
+    <massMatrixIr>67</massMatrixIr>
+    <massMatrixIr>66</massMatrixIr>
+    <massMatrixIr>68</massMatrixIr>
+    <massMatrixIr>69</massMatrixIr>
+    <massMatrixIr>68</massMatrixIr>
+    <massMatrixIr>71</massMatrixIr>
+    <massMatrixIr>70</massMatrixIr>
+    <massMatrixIr>72</massMatrixIr>
+    <massMatrixIr>73</massMatrixIr>
+    <massMatrixIr>72</massMatrixIr>
+    <massMatrixIr>74</massMatrixIr>
+    <massMatrixIr>75</massMatrixIr>
+    <massMatrixIr>76</massMatrixIr>
+    <massMatrixIr>76</massMatrixIr>
+    <massMatrixIr>77</massMatrixIr>
+    <massMatrixIr>79</massMatrixIr>
+    <massMatrixIr>78</massMatrixIr>
+    <massMatrixIr>80</massMatrixIr>
+    <massMatrixIr>81</massMatrixIr>
+    <massMatrixIr>83</massMatrixIr>
+    <massMatrixIr>82</massMatrixIr>
+    <massMatrixIr>80</massMatrixIr>
+    <massMatrixIr>84</massMatrixIr>
+    <massMatrixIr>88</massMatrixIr>
+    <massMatrixIr>92</massMatrixIr>
+    <massMatrixIr>93</massMatrixIr>
+    <massMatrixIr>95</massMatrixIr>
+    <massMatrixIr>94</massMatrixIr>
+    <massMatrixIr>92</massMatrixIr>
+    <massMatrixIr>96</massMatrixIr>
+    <massMatrixIr>97</massMatrixIr>
+    <massMatrixIr>96</massMatrixIr>
+    <massMatrixIr>98</massMatrixIr>
+    <massMatrixIr>99</massMatrixIr>
+    <massMatrixIr>101</massMatrixIr>
+    <massMatrixIr>517</massMatrixIr>
+    <massMatrixIr>100</massMatrixIr>
+    <massMatrixIr>518</massMatrixIr>
+    <massMatrixIr>519</massMatrixIr>
+    <massMatrixIr>520</massMatrixIr>
+    <massMatrixIr>521</massMatrixIr>
+    <massMatrixIr>522</massMatrixIr>
+    <massMatrixIr>523</massMatrixIr>
+    <massMatrixIr>524</massMatrixIr>
+    <massMatrixIr>525</massMatrixIr>
+    <massMatrixIr>526</massMatrixIr>
+    <massMatrixIr>527</massMatrixIr>
+    <massMatrixJc>0</massMatrixJc>
+    <massMatrixJc>1</massMatrixJc>
+    <massMatrixJc>2</massMatrixJc>
+    <massMatrixJc>3</massMatrixJc>
+    <massMatrixJc>4</massMatrixJc>
+    <massMatrixJc>5</massMatrixJc>
+    <massMatrixJc>6</massMatrixJc>
+    <massMatrixJc>7</massMatrixJc>
+    <massMatrixJc>8</massMatrixJc>
+    <massMatrixJc>9</massMatrixJc>
+    <massMatrixJc>10</massMatrixJc>
+    <massMatrixJc>11</massMatrixJc>
+    <massMatrixJc>12</massMatrixJc>
+    <massMatrixJc>13</massMatrixJc>
+    <massMatrixJc>14</massMatrixJc>
+    <massMatrixJc>15</massMatrixJc>
+    <massMatrixJc>16</massMatrixJc>
+    <massMatrixJc>17</massMatrixJc>
+    <massMatrixJc>18</massMatrixJc>
+    <massMatrixJc>19</massMatrixJc>
+    <massMatrixJc>20</massMatrixJc>
+    <massMatrixJc>21</massMatrixJc>
+    <massMatrixJc>22</massMatrixJc>
+    <massMatrixJc>23</massMatrixJc>
+    <massMatrixJc>24</massMatrixJc>
+    <massMatrixJc>25</massMatrixJc>
+    <massMatrixJc>26</massMatrixJc>
+    <massMatrixJc>27</massMatrixJc>
+    <massMatrixJc>28</massMatrixJc>
+    <massMatrixJc>29</massMatrixJc>
+    <massMatrixJc>30</massMatrixJc>
+    <massMatrixJc>31</massMatrixJc>
+    <massMatrixJc>32</massMatrixJc>
+    <massMatrixJc>33</massMatrixJc>
+    <massMatrixJc>34</massMatrixJc>
+    <massMatrixJc>35</massMatrixJc>
+    <massMatrixJc>36</massMatrixJc>
+    <massMatrixJc>37</massMatrixJc>
+    <massMatrixJc>38</massMatrixJc>
+    <massMatrixJc>39</massMatrixJc>
+    <massMatrixJc>40</massMatrixJc>
+    <massMatrixJc>41</massMatrixJc>
+    <massMatrixJc>42</massMatrixJc>
+    <massMatrixJc>43</massMatrixJc>
+    <massMatrixJc>44</massMatrixJc>
+    <massMatrixJc>46</massMatrixJc>
+    <massMatrixJc>47</massMatrixJc>
+    <massMatrixJc>48</massMatrixJc>
+    <massMatrixJc>50</massMatrixJc>
+    <massMatrixJc>51</massMatrixJc>
+    <massMatrixJc>52</massMatrixJc>
+    <massMatrixJc>54</massMatrixJc>
+    <massMatrixJc>55</massMatrixJc>
+    <massMatrixJc>56</massMatrixJc>
+    <massMatrixJc>58</massMatrixJc>
+    <massMatrixJc>59</massMatrixJc>
+    <massMatrixJc>60</massMatrixJc>
+    <massMatrixJc>61</massMatrixJc>
+    <massMatrixJc>63</massMatrixJc>
+    <massMatrixJc>64</massMatrixJc>
+    <massMatrixJc>65</massMatrixJc>
+    <massMatrixJc>66</massMatrixJc>
+    <massMatrixJc>67</massMatrixJc>
+    <massMatrixJc>68</massMatrixJc>
+    <massMatrixJc>69</massMatrixJc>
+    <massMatrixJc>70</massMatrixJc>
+    <massMatrixJc>72</massMatrixJc>
+    <massMatrixJc>74</massMatrixJc>
+    <massMatrixJc>76</massMatrixJc>
+    <massMatrixJc>78</massMatrixJc>
+    <massMatrixJc>79</massMatrixJc>
+    <massMatrixJc>81</massMatrixJc>
+    <massMatrixJc>82</massMatrixJc>
+    <massMatrixJc>83</massMatrixJc>
+    <massMatrixJc>84</massMatrixJc>
+    <massMatrixJc>86</massMatrixJc>
+    <massMatrixJc>87</massMatrixJc>
+    <massMatrixJc>88</massMatrixJc>
+    <massMatrixJc>89</massMatrixJc>
+    <massMatrixJc>91</massMatrixJc>
+    <massMatrixJc>92</massMatrixJc>
+    <massMatrixJc>93</massMatrixJc>
+    <massMatrixJc>94</massMatrixJc>
+    <massMatrixJc>95</massMatrixJc>
+    <massMatrixJc>97</massMatrixJc>
+    <massMatrixJc>98</massMatrixJc>
+    <massMatrixJc>99</massMatrixJc>
+    <massMatrixJc>101</massMatrixJc>
+    <massMatrixJc>102</massMatrixJc>
+    <massMatrixJc>103</massMatrixJc>
+    <massMatrixJc>104</massMatrixJc>
+    <massMatrixJc>105</massMatrixJc>
+    <massMatrixJc>106</massMatrixJc>
+    <massMatrixJc>108</massMatrixJc>
+    <massMatrixJc>109</massMatrixJc>
+    <massMatrixJc>110</massMatrixJc>
+    <massMatrixJc>111</massMatrixJc>
+    <massMatrixJc>113</massMatrixJc>
+    <massMatrixJc>114</massMatrixJc>
+    <massMatrixJc>115</massMatrixJc>
+    <massMatrixJc>116</massMatrixJc>
+    <massMatrixJc>118</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>119</massMatrixJc>
+    <massMatrixJc>120</massMatrixJc>
+    <massMatrixJc>121</massMatrixJc>
+    <massMatrixJc>122</massMatrixJc>
+    <massMatrixJc>123</massMatrixJc>
+    <massMatrixJc>124</massMatrixJc>
+    <massMatrixJc>125</massMatrixJc>
+    <massMatrixJc>126</massMatrixJc>
+    <massMatrixJc>127</massMatrixJc>
+    <massMatrixJc>128</massMatrixJc>
+    <massMatrixJc>129</massMatrixJc>
+    <massMatrixNzMax>129</massMatrixNzMax>
+    <massMatrixType>3</massMatrixType>
+    <maxFreqHz>-1.0</maxFreqHz>
+    <needAbsoluteTimeDisallowInitPort>true</needAbsoluteTimeDisallowInitPort>
+    <numCStateRecs>522</numCStateRecs>
+    <numContinuousStates>528</numContinuousStates>
+    <numDStateRecs>19</numDStateRecs>
+    <numDataInputPorts>0</numDataInputPorts>
+    <numLoggableCStateRecs>522</numLoggableCStateRecs>
+    <numLoggableDStateRecs>19</numLoggableDStateRecs>
+    <numLoggableJacobianDStates>32</numLoggableJacobianDStates>
+    <periodicStateInfo type="ModelRefInfoRepo.PeriodicStateInfo" uuid="520b967d-8a49-4c3c-abcd-060ffd43b9e4">
+      <continuousStateIndex>7</continuousStateIndex>
+      <stateLowerValue>-3.141592653589793</stateLowerValue>
+      <stateUpperValue>3.141592653589793</stateUpperValue>
+    </periodicStateInfo>
+    <runtimeNonFcnCallRateInfos type="ModelRefInfoRepo.RateInfo">
+      <compiled>true</compiled>
+      <needAbsoluteTime>true</needAbsoluteTime>
+      <period>0.0</period>
+      <priority>40</priority>
+      <rateIdx>0</rateIdx>
+    </runtimeNonFcnCallRateInfos>
+    <runtimeNonFcnCallRateInfos type="ModelRefInfoRepo.RateInfo">
+      <compiled>true</compiled>
+      <needAbsoluteTime>true</needAbsoluteTime>
+      <offset>1.0</offset>
+      <period>0.0</period>
+      <priority>40</priority>
+      <rateIdx>1</rateIdx>
+    </runtimeNonFcnCallRateInfos>
+    <runtimeNonFcnCallRateInfos type="ModelRefInfoRepo.RateInfo">
+      <compiled>true</compiled>
+      <needAbsoluteTime>true</needAbsoluteTime>
+      <nonFcnCallPartitionName>Cont</nonFcnCallPartitionName>
+      <period>.01</period>
+      <priority>40</priority>
+      <rateIdx>2</rateIdx>
+    </runtimeNonFcnCallRateInfos>
+    <runtimeNonFcnCallRateInfos type="ModelRefInfoRepo.RateInfo">
+      <compiled>true</compiled>
+      <needAbsoluteTime>true</needAbsoluteTime>
+      <nonFcnCallPartitionName>Cont</nonFcnCallPartitionName>
+      <period>.1</period>
+      <priority>40</priority>
+      <rateIdx>3</rateIdx>
+    </runtimeNonFcnCallRateInfos>
+    <runtimeNonFcnCallRateInfos type="ModelRefInfoRepo.RateInfo">
+      <compiled>true</compiled>
+      <needAbsoluteTime>true</needAbsoluteTime>
+      <nonFcnCallPartitionName>Cont</nonFcnCallPartitionName>
+      <period>.5</period>
+      <priority>40</priority>
+      <rateIdx>4</rateIdx>
+    </runtimeNonFcnCallRateInfos>
+    <runtimeNonFcnCallRateInfos type="ModelRefInfoRepo.RateInfo">
+      <compiled>true</compiled>
+      <needAbsoluteTime>true</needAbsoluteTime>
+      <nonFcnCallPartitionName>Cont</nonFcnCallPartitionName>
+      <period>1.0</period>
+      <priority>40</priority>
+      <rateIdx>5</rateIdx>
+    </runtimeNonFcnCallRateInfos>
+    <sampleTimeInheritanceRule>2</sampleTimeInheritanceRule>
+    <solverStatusFlags>33097</solverStatusFlags>
+    <solverUpdateJacobianAtReset>true</solverUpdateJacobianAtReset>
+    <timingAndTaskingRegistry>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;slexec_sto version=&quot;1.1&quot; packageUris=&quot;http://schema.mathworks.com/mf0/slexec_mm_sto/R2022b_202202091112&quot;&gt;
+  &lt;sto.Registry type=&quot;sto.Registry&quot; uuid=&quot;6c8e5eb3-51b2-4426-9037-18ae7dbd5686&quot;&gt;
+    &lt;executionSpec&gt;Undetermined&lt;/executionSpec&gt;
+    &lt;clockRegistry type=&quot;sto.ClockRegistry&quot; uuid=&quot;1c6257bf-faf4-4d27-8e33-9dd61c8fa4d3&quot;&gt;
+      &lt;clocks type=&quot;sto.Timer&quot; uuid=&quot;27606299-1a18-401b-9069-41a1ffa04031&quot;&gt;
+        &lt;computedFundamentalDiscretePeriod&gt;.01&lt;/computedFundamentalDiscretePeriod&gt;
+        &lt;rates type=&quot;sto.ContinuousRate&quot; uuid=&quot;c08e8958-6709-4823-afff-4af9148a6ea6&quot;&gt;
+          &lt;annotation&gt;Cont&lt;/annotation&gt;
+          &lt;description&gt;连续&lt;/description&gt;
+          &lt;taskId&gt;_task0&lt;/taskId&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;8ee17053-1273-4ea8-9c82-37130929d668&quot;/&gt;
+        &lt;/rates&gt;
+        &lt;rates type=&quot;sto.ZOHContinuousRate&quot; uuid=&quot;31c8ede0-04cd-439f-b855-2b68806c55ef&quot;&gt;
+          &lt;annotation&gt;FiM&lt;/annotation&gt;
+          &lt;colorIndex&gt;8&lt;/colorIndex&gt;
+          &lt;description&gt;子步中不变&lt;/description&gt;
+          &lt;rateIdx&gt;1&lt;/rateIdx&gt;
+          &lt;taskId&gt;_task0&lt;/taskId&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;660639cd-0a7f-4348-ad24-a4ea1269fdb3&quot;&gt;
+            &lt;offset&gt;1.0&lt;/offset&gt;
+            &lt;rateType&gt;ZOHContinuous&lt;/rateType&gt;
+          &lt;/rateSpec&gt;
+        &lt;/rates&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;57ac5701-e2ce-4d27-9f07-47ec77ef6d75&quot;&gt;
+          &lt;annotation&gt;D1&lt;/annotation&gt;
+          &lt;colorIndex&gt;2&lt;/colorIndex&gt;
+          &lt;description&gt;离散 1&lt;/description&gt;
+          &lt;rateIdx&gt;2&lt;/rateIdx&gt;
+          &lt;taskId&gt;_task0&lt;/taskId&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;e57cef60-bffb-43f6-89ca-66d0e3cd0062&quot;&gt;
+            &lt;period&gt;.01&lt;/period&gt;
+            &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
+          &lt;/rateSpec&gt;
+        &lt;/rates&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;471e1dd4-fe22-4364-83c9-689a2fc503ae&quot;&gt;
+          &lt;annotation&gt;D2&lt;/annotation&gt;
+          &lt;colorIndex&gt;3&lt;/colorIndex&gt;
+          &lt;description&gt;离散 2&lt;/description&gt;
+          &lt;rateIdx&gt;3&lt;/rateIdx&gt;
+          &lt;taskId&gt;_task0&lt;/taskId&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;24d1698f-8b1e-436f-83f0-3b5a5fdbd2e4&quot;&gt;
+            &lt;period&gt;.1&lt;/period&gt;
+            &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
+          &lt;/rateSpec&gt;
+        &lt;/rates&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;2641dd7b-85c4-410a-9b2d-d9f12fec396f&quot;&gt;
+          &lt;annotation&gt;D3&lt;/annotation&gt;
+          &lt;colorIndex&gt;4&lt;/colorIndex&gt;
+          &lt;description&gt;离散 3&lt;/description&gt;
+          &lt;rateIdx&gt;4&lt;/rateIdx&gt;
+          &lt;taskId&gt;_task0&lt;/taskId&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;791eb108-ed81-4a5b-a8ac-3cf0eca02f0a&quot;&gt;
+            &lt;period&gt;.5&lt;/period&gt;
+            &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
+          &lt;/rateSpec&gt;
+        &lt;/rates&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;e612faa1-c97a-437f-a31c-0dac9415c340&quot;&gt;
+          &lt;annotation&gt;D4&lt;/annotation&gt;
+          &lt;colorIndex&gt;10&lt;/colorIndex&gt;
+          &lt;description&gt;离散 4&lt;/description&gt;
+          &lt;rateIdx&gt;5&lt;/rateIdx&gt;
+          &lt;taskId&gt;_task0&lt;/taskId&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;94f250e9-04fe-4b9e-9bb1-78ea0566f344&quot;&gt;
+            &lt;period&gt;1.0&lt;/period&gt;
+            &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
+          &lt;/rateSpec&gt;
+        &lt;/rates&gt;
+        &lt;baseRate type=&quot;sto.ContinuousRate&quot; uuid=&quot;2cc18518-2c7b-446c-94a4-5d900f655137&quot;&gt;
+          &lt;annotation&gt;Cont&lt;/annotation&gt;
+          &lt;description&gt;连续&lt;/description&gt;
+          &lt;taskId&gt;_task0&lt;/taskId&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;d51d5029-bd1c-478d-b434-de9489aee507&quot;/&gt;
+        &lt;/baseRate&gt;
+      &lt;/clocks&gt;
+      &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;db9d78d1-7900-4ba9-969c-9027a199172a&quot;&gt;
+        &lt;eventType&gt;PARAMETER_CHANGE_EVENT&lt;/eventType&gt;
+        &lt;cNum&gt;1&lt;/cNum&gt;
+        &lt;clockType&gt;Event&lt;/clockType&gt;
+        &lt;identifier&gt;ParameterChangeEvent&lt;/identifier&gt;
+        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;0789b4e0-6428-49a7-a794-f7dad537518e&quot;&gt;
+          &lt;annotation&gt;Inf&lt;/annotation&gt;
+          &lt;clockId&gt;ParameterChangeEvent&lt;/clockId&gt;
+          &lt;colorIndex&gt;6&lt;/colorIndex&gt;
+          &lt;description&gt;常量&lt;/description&gt;
+          &lt;rateIdx&gt;6&lt;/rateIdx&gt;
+          &lt;taskId&gt;ModelWideParameterChangeEvent&lt;/taskId&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;8d32621e-4cb7-4935-8e05-08661bc26736&quot;&gt;
+            &lt;period&gt;inf&lt;/period&gt;
+            &lt;rateType&gt;ModelWideParameterChangeEvent&lt;/rateType&gt;
+          &lt;/rateSpec&gt;
+        &lt;/rates&gt;
+      &lt;/clocks&gt;
+    &lt;/clockRegistry&gt;
+    &lt;taskRegistry type=&quot;sto.TaskRegistry&quot; uuid=&quot;61e17e94-fd31-4566-87aa-061e5adcf87a&quot;&gt;
+      &lt;hasUnknownEdges&gt;true&lt;/hasUnknownEdges&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;cd2aeab0-99b8-4a60-a7e1-dd0951d77149&quot;&gt;
+        &lt;isExecutable&gt;true&lt;/isExecutable&gt;
+        &lt;isExplicit&gt;true&lt;/isExplicit&gt;
+        &lt;rates type=&quot;sto.ModelWideEventRate&quot; uuid=&quot;935f82ba-1f33-46dd-ada8-e001bb24898a&quot;&gt;
+          &lt;annotation&gt;Inf&lt;/annotation&gt;
+          &lt;clockId&gt;ParameterChangeEvent&lt;/clockId&gt;
+          &lt;colorIndex&gt;6&lt;/colorIndex&gt;
+          &lt;description&gt;常量&lt;/description&gt;
+          &lt;rateIdx&gt;6&lt;/rateIdx&gt;
+          &lt;taskId&gt;ModelWideParameterChangeEvent&lt;/taskId&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;e1351d35-3917-4894-9a9b-1a403ebd6fe9&quot;&gt;
+            &lt;period&gt;inf&lt;/period&gt;
+            &lt;rateType&gt;ModelWideParameterChangeEvent&lt;/rateType&gt;
+          &lt;/rateSpec&gt;
+        &lt;/rates&gt;
+        &lt;schedulingClockId&gt;ParameterChangeEvent&lt;/schedulingClockId&gt;
+        &lt;tNum&gt;1&lt;/tNum&gt;
+        &lt;elementType&gt;Task&lt;/elementType&gt;
+        &lt;identifier&gt;ModelWideParameterChangeEvent&lt;/identifier&gt;
+        &lt;priority&gt;-1&lt;/priority&gt;
+      &lt;/rootTaskHierarchyElements&gt;
+      &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;29f35817-cffd-497e-8455-2a91b7c08d68&quot;&gt;
+        &lt;isExecutable&gt;true&lt;/isExecutable&gt;
+        &lt;orderIndex&gt;1&lt;/orderIndex&gt;
+        &lt;rates type=&quot;sto.ContinuousRate&quot; uuid=&quot;5ee5c541-3bda-47e5-9996-1c006ac30add&quot;&gt;
+          &lt;annotation&gt;Cont&lt;/annotation&gt;
+          &lt;description&gt;连续&lt;/description&gt;
+          &lt;taskId&gt;_task0&lt;/taskId&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;da42b862-ce13-44ec-a54b-ba98c68abe50&quot;/&gt;
+        &lt;/rates&gt;
+        &lt;rates type=&quot;sto.ZOHContinuousRate&quot; uuid=&quot;5506c0f0-fb6f-463e-8733-050970fb9848&quot;&gt;
+          &lt;annotation&gt;FiM&lt;/annotation&gt;
+          &lt;colorIndex&gt;8&lt;/colorIndex&gt;
+          &lt;description&gt;子步中不变&lt;/description&gt;
+          &lt;rateIdx&gt;1&lt;/rateIdx&gt;
+          &lt;taskId&gt;_task0&lt;/taskId&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;0d4c7de1-8bf2-42d7-8d52-4d79f295d05d&quot;&gt;
+            &lt;offset&gt;1.0&lt;/offset&gt;
+            &lt;rateType&gt;ZOHContinuous&lt;/rateType&gt;
+          &lt;/rateSpec&gt;
+        &lt;/rates&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;d85a5262-ae13-444d-9f92-0ae3718a423f&quot;&gt;
+          &lt;annotation&gt;D1&lt;/annotation&gt;
+          &lt;colorIndex&gt;2&lt;/colorIndex&gt;
+          &lt;description&gt;离散 1&lt;/description&gt;
+          &lt;rateIdx&gt;2&lt;/rateIdx&gt;
+          &lt;taskId&gt;_task0&lt;/taskId&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;51186839-ce57-41ce-99bf-659aa4b88d4a&quot;&gt;
+            &lt;period&gt;.01&lt;/period&gt;
+            &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
+          &lt;/rateSpec&gt;
+        &lt;/rates&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;23cf6458-4a3d-4170-bea8-57e7cb889d65&quot;&gt;
+          &lt;annotation&gt;D2&lt;/annotation&gt;
+          &lt;colorIndex&gt;3&lt;/colorIndex&gt;
+          &lt;description&gt;离散 2&lt;/description&gt;
+          &lt;rateIdx&gt;3&lt;/rateIdx&gt;
+          &lt;taskId&gt;_task0&lt;/taskId&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;19e9b25d-bd99-46f1-bf44-c077d4d5399c&quot;&gt;
+            &lt;period&gt;.1&lt;/period&gt;
+            &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
+          &lt;/rateSpec&gt;
+        &lt;/rates&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;3df3e19e-eb07-49a4-8a83-4f604e818df5&quot;&gt;
+          &lt;annotation&gt;D3&lt;/annotation&gt;
+          &lt;colorIndex&gt;4&lt;/colorIndex&gt;
+          &lt;description&gt;离散 3&lt;/description&gt;
+          &lt;rateIdx&gt;4&lt;/rateIdx&gt;
+          &lt;taskId&gt;_task0&lt;/taskId&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;d9f0b9e6-b066-4415-a82f-3a9d38221ff1&quot;&gt;
+            &lt;period&gt;.5&lt;/period&gt;
+            &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
+          &lt;/rateSpec&gt;
+        &lt;/rates&gt;
+        &lt;rates type=&quot;sto.ClassicPeriodicDiscreteRate&quot; uuid=&quot;11281d0d-d656-47dc-9d0b-5f1d077a03c1&quot;&gt;
+          &lt;annotation&gt;D4&lt;/annotation&gt;
+          &lt;colorIndex&gt;10&lt;/colorIndex&gt;
+          &lt;description&gt;离散 4&lt;/description&gt;
+          &lt;rateIdx&gt;5&lt;/rateIdx&gt;
+          &lt;taskId&gt;_task0&lt;/taskId&gt;
+          &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;49954473-a1ed-4af2-a70d-de682fe62551&quot;&gt;
+            &lt;period&gt;1.0&lt;/period&gt;
+            &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
+          &lt;/rateSpec&gt;
+        &lt;/rates&gt;
+        &lt;elementType&gt;Task&lt;/elementType&gt;
+        &lt;identifier&gt;_task0&lt;/identifier&gt;
+        &lt;priority&gt;40&lt;/priority&gt;
+      &lt;/rootTaskHierarchyElements&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;174c2e81-cb06-4cf3-bcb0-8e27565389cd&quot;&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;a05cf560-e9da-440a-bbb8-0cc1bc767743&quot;&gt;
+          &lt;isInternal&gt;true&lt;/isInternal&gt;
+          &lt;targetClockIdentifier&gt;ParameterChangeEvent&lt;/targetClockIdentifier&gt;
+          &lt;targetTaskIdentifier&gt;ModelWideParameterChangeEvent&lt;/targetTaskIdentifier&gt;
+        &lt;/serializedConnectionProperties&gt;
+        &lt;taskIdentifier&gt;_task0&lt;/taskIdentifier&gt;
+      &lt;/taskDependencyGraph&gt;
+      &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;04800510-da3c-46c9-ad65-61f24ec8fd3e&quot;&gt;
+        &lt;clockIdentifier&gt;ParameterChangeEvent&lt;/clockIdentifier&gt;
+        &lt;serializedConnectionProperties type=&quot;sto.SerializedConnectionProperties&quot; uuid=&quot;6ecaacdf-d6e9-4565-a547-fd3099815917&quot;&gt;
+          &lt;targetTaskIdentifier&gt;_task0&lt;/targetTaskIdentifier&gt;
+        &lt;/serializedConnectionProperties&gt;
+        &lt;taskIdentifier&gt;ModelWideParameterChangeEvent&lt;/taskIdentifier&gt;
+      &lt;/taskDependencyGraph&gt;
+      &lt;taskPriorityDirection&gt;HighNumberLast&lt;/taskPriorityDirection&gt;
+    &lt;/taskRegistry&gt;
+  &lt;/sto.Registry&gt;
+&lt;/slexec_sto&gt;</timingAndTaskingRegistry>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="053db435-bee1-402a-b1c8-9757c9927c92">
+      <direction>63</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>RelopInput</name>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="cb724db4-f19b-43b5-9994-53a511e7028c">
+      <direction>7</direction>
+      <isDiscrete>true</isDiscrete>
+      <name>Reset</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <type>1</type>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="aa2d80ab-de04-4067-98d6-c4a5536d0bb4">
+      <direction>7</direction>
+      <isDiscrete>true</isDiscrete>
+      <name>Reset</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <type>1</type>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="2368fe89-f905-410b-9443-e3923f2f9907">
+      <direction>56</direction>
+      <isDiscrete>true</isDiscrete>
+      <name>Reset</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <type>1</type>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="cfbcd740-2cbe-4792-9ebf-fc3320b64386">
+      <direction>56</direction>
+      <isDiscrete>true</isDiscrete>
+      <name>Reset</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <type>1</type>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="08ed32c0-f4e3-4d18-ad51-da0394045c73">
+      <direction>63</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>UprLim</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="d76cbfa9-fff6-4a44-ba8d-8964339feec2">
+      <direction>63</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>LwrLim</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="50caacae-1afd-4bd7-8d49-427df372b96c">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Battery_System.Battery_Table_Based1.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="2c9ea633-e4c3-425b-8423-81c5107c6d67">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Battery_System.Battery_Table_Based1.xxR0.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="8ca3640f-c265-45e9-8fef-ce07309b16fa">
+      <direction>29</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Battery_System.Battery_Table_Based1.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="d4ab219f-1bd9-4aa3-b44e-40fc45b66720">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Battery_System.Battery_Table_Based1.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="153301a9-3a69-41e0-a9d1-231f8b011a39">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Battery_System.DC_DC_Converter.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="802955c1-deb0-44a1-ab89-33b7c69e5102">
+      <direction>29</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Boost_Converter.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="3152b8b1-782f-45b1-b596-fcde0c1b833f">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Boost_Converter.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="3a1ea0ea-557e-4b69-ac59-c8668c0a8272">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA1.delta_vel_pos_AI.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="0ada83a2-7664-4b64-9988-0afbddc4c7f8">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA1.mdot_A_choked.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="eebd8bf7-48fd-4377-a494-887ac3fe1549">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA1.delta_vel_pos_BI.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="1165cbeb-2be9-45a7-8328-72264371495c">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA1.mdot_B_choked.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f3cdf738-b7aa-4d7e-ac21-9d891232d2c8">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA1.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="d320a96c-672d-456a-ba7f-cb25f578cf33">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA1.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="867ab1e0-b955-4c6c-8fad-da5427c71bce">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="d3926430-5b49-4db4-9043-8fed8c805032">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="64de848c-c537-475e-a966-3f7760dacb71">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="4d95cda7-3c2b-4142-ab98-49e546b90c99">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="9d447bea-bd2b-4cd8-9c3f-c606ead810d6">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Controlled_Mass_Flow_Rate_Source_MA.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="844166cb-061a-4b99-9b96-3c8f0a859586">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Controlled_Mass_Flow_Rate_Source_MA.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="8f8bac28-d55a-445f-bc03-b579b04cf6a9">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Controlled_Mass_Flow_Rate_Source_MA.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f3e7af6f-b22a-4726-8e2b-befec879657f">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Controlled_Mass_Flow_Rate_Source_MA.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f597b6d2-ece8-41d2-b64e-aa4edaffdcdd">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA1.zc_7</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="3c99adc4-9459-4a0f-8567-d1edf4877bc0">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA1.zc_8</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="ee76e845-612d-4332-b349-6b54f5d765ba">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA1.zc_9</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="3803ab96-b94c-4f33-8cbb-b9427f64bb66">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA1.zc_10</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="fe0462d8-de06-4c7e-8b35-7d18a8eec0b5">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA1.zc_11</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="e8dd2fb0-6411-4589-b9af-24c14dac6f5d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA1.delta_vel_pos_AI.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="8fd441da-0a71-47ae-8b54-dfe725ede00f">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA1.mdot_A_choked.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="e3be4128-23c7-4708-9258-748bad44a8eb">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA1.delta_vel_pos_BI.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="aaa378d5-28b9-44b3-af46-465145ba6cdd">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA1.mdot_B_choked.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="ca063ae2-d4c7-4f26-ac01-720dd2ec7a22">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA1.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="153381ec-74dc-4fd1-9d0a-b740c16c8f51">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA1.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="c784fdf9-b0cd-4e74-9d49-3c3db9dc732a">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="dc561f5c-bffc-4faf-8d29-49691b24c076">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="a61f592c-5f53-4790-b2f1-3c377a875665">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="342f5328-cd81-43ed-b3c5-4b9adf26ef31">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="4c5ca140-4d1f-4125-b4ed-d6753347b9aa">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pipe_MA.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="3d76d4bd-5b50-406b-bad7-71382be1cb12">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pipe_MA.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="4e5ab29f-2b6a-44a6-96af-739c493fff97">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pipe_MA.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="d46f5903-f9b1-4d59-ac70-eecae008c3b7">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pipe_MA.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="1a2de8ee-50c3-4733-9c63-3f941a8b57f5">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA1.zc_7</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="cf310136-0811-4707-8ee8-a0688ff8ed84">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA1.zc_8</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="9268e4cf-1555-4546-b175-4d9cfb939538">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA1.zc_9</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="31b722a0-f819-4480-8e57-9e1ae28f1fff">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA1.zc_10</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="b7fc9763-2926-414a-aa7d-24437a07c89d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA1.zc_11</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="eaa610d5-d022-4ed0-9b47-573f46685ea4">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.delta_vel_pos_AI.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="5322ac99-db57-4bff-a920-b72010f86bb2">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.mdot_A_choked.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="a3f4791d-7405-4c39-ae82-f7d52d6fb4c3">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.delta_vel_pos_BI.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="cff80160-8d3a-42a1-a852-66d3fe9ab3f0">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.mdot_B_choked.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="78d2bb75-d579-4990-9714-286af11cbcdf">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="fd22e05e-8f46-49b9-b7ff-b69871a84eff">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="79cd416f-348b-4a7d-9423-20a937c098e1">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="7ce4ed9b-bfea-44cb-92de-4df3c1284026">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="27f09369-b16a-459d-b717-72c5d63ce175">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="0402beba-b56b-4688-9c4b-00744a8c701d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="da4209cf-fcc3-4252-8234-1160839d8053">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_7</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="61790664-6e98-4420-8218-e1c75555c1d8">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_8</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="a9c34ef9-6155-4831-8be4-a99f27c32c46">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_9</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="9de2dc98-1535-48b8-8133-421715bae581">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_10</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="b8244986-b9d4-4d9d-970b-760238773a12">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_11</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="69c8ab8a-155d-4c0f-9b6c-33d6e5a20ffc">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA.delta_vel_pos_AI.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="91571ffd-7bb4-4d57-a3ea-f1d32a267be4">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA.mdot_A_choked.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="a4f10b40-2b86-419c-9e4e-6c6d9a6c305c">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA.delta_vel_pos_BI.zc_7</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="af18f8d1-3a24-44a3-a811-5d6cf340600c">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA.mdot_B_choked.zc_8</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="febf45f6-af3c-4d2d-85d1-20fb5b24c0fa">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA.zc_9</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="1fdce962-8902-482b-9504-74afe928f8f4">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA.zc_10</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="c105cd7a-b1dd-42ab-88e1-5b4dea8d2738">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="e1d49dad-90e3-484e-8e15-374f7717743d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="432c8452-aa7c-4260-9f52-28875c2371d0">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="2a77bb50-3524-41fa-a7f1-4e9a49d87b42">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="e13ac598-7cfe-4dfc-813a-fea2ea52b804">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA.zc_11</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="c45d28d8-d7b9-4604-8d26-321637e29b7a">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA.zc_12</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="5e6fb368-63e1-40ba-98a8-39313e6b9fac">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA.zc_13</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f8a940fd-9696-4392-968e-9902c213af37">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA.zc_14</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="8baf4818-7471-4913-be0c-7039906324bd">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA.zc_15</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f28fe7d6-f215-4a52-acf1-9ca6ddb1d372">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.delta_vel_pos_AI.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="4ba5de8a-a35b-43c8-aba3-c1c5f5ddb39d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.mdot_A_choked.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="38fd95ac-726d-4287-a351-34172bacbf86">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.delta_vel_pos_BI.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="46b7d1ac-c9cd-4558-b031-c0cace23e506">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.mdot_B_choked.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="aff08281-2b5c-45e9-b4cd-eb0956c84be4">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="afad7d31-35b4-4e90-96ae-fe14d70a96a9">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="4569888a-9d85-4dc0-a994-ed3cfe6fda3d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pressure_Reducing_Valve.Valve.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="5c0500bf-7301-4fae-aacf-b4b89fd0fb6e">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pressure_Reducing_Valve.Valve.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="b0f99830-7a40-461a-8107-cf2694f1f106">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pressure_Reducing_Valve.Valve.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f80ed028-2148-4b64-b31e-8390827c8a2c">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pressure_Reducing_Valve.Valve.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="ddd1a0c1-68be-4457-a7d4-307527a58e3d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Controlled_Mass_Flow_Rate_Source_MA.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="07d715bc-26b1-4a49-8e30-f886df6ed461">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Controlled_Mass_Flow_Rate_Source_MA.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="7e380536-1b37-492c-9cc2-9b175cb20e2e">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_7</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="aa6c38d3-fbaf-4f1a-961b-7b39a6656a25">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_8</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="94bdb925-c989-4bbc-b57f-b49ff14597c8">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_9</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="b1f1e4e6-e71d-4f8a-b3f9-913c5434798e">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_10</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="8bda74ca-3d53-4c14-b27d-841049b42cf7">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_11</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="2048bc23-fd06-4b9f-bb0b-af141a2d5b72">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_12</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="ac1b52a7-4041-4457-8f66-a2b0d8e19ba2">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_13</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="70d2f330-570a-4f8b-a0e1-40e0b56bf54e">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.delta_vel_pos_AI.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="29ed71e2-0b8a-4d67-bf31-97a23019baff">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.mdot_A_choked.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="6cdd6d3a-0576-48e2-a600-95e76ea4a99d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.delta_vel_pos_BI.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="0c5200de-6715-47fd-87b7-f06951e2663a">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.mdot_B_choked.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="75031984-de4e-4a32-933d-03acfa6e1daf">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="aee0c16c-d360-4051-8054-a332ff22581c">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="1320d47d-25e5-4146-b144-b6c3e741b2a2">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_7</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="a8a8802b-9b79-4296-8e88-eedb38222b63">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_8</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="6e4feb85-2855-43c6-a35f-0c4211867bc3">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="871a1543-e8cc-47ce-97b3-b48feac9920f">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="3234cec3-a639-43b0-b98c-ebcefe691b94">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_7</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="1ee8997b-5c1f-4df9-b32d-c9ea4228354b">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_8</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="9dec74c3-5883-4b33-9b4f-032d9146e671">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_9</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="9cc61881-62a4-48fc-910d-94987f43084d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_10</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f71c2ba8-9694-4145-b637-632d82d970eb">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_11</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="4dba6dcb-5c33-44fd-a934-c2a1d322da7b">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_12</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="597fdc0a-f4c5-446c-b4fc-92254d9e1881">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_13</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="27854c1c-856e-4003-8089-e304b9cd0e6a">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.delta_vel_pos_AI.zc_9</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="868df451-241a-4f86-a2a6-bdd35eeece9f">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.mdot_A_choked.zc_10</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="0ebc4852-37b1-414c-94f7-1140bfc2a01f">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.delta_vel_pos_BI.zc_11</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="bf5813ce-14e7-4303-8ccc-ec2a9048d08d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.mdot_B_choked.zc_12</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="e246a48c-0f4f-47c1-8c09-6fffd9489c85">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_13</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="222a94de-30d7-4909-9b8e-7ea8438dca3f">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_14</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="6428a3ed-118f-4db7-8ce2-9d57adb4b0bd">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_15</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="1656a095-eafa-4cfb-975b-13552e448430">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_16</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="4f17c88e-ca06-44d8-8546-e2e2b031c365">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_17</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f775ac2a-1aa1-429d-a1b0-93c8a8704242">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_18</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="faa94b30-b266-453d-90b1-90b9f8a2b103">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_19</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="94fbf699-a952-4dea-bdfb-0326fd84c1fd">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.delta_vel_pos_AI.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="28e7fbfa-c838-4579-962d-5d0371b4c653">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.mdot_A_choked.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="7286dacd-1fc2-4b57-91c3-2c001c225246">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.delta_vel_pos_BI.zc_7</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="8a4ac302-90cf-40cd-b625-3369e651e636">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.mdot_B_choked.zc_8</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="ae54c208-06ba-4fd0-8a4b-b36727607afe">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_9</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="3e6d8425-37e0-41ef-8aab-af146f418361">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_10</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="37bd8ef7-317b-4c09-b7c9-7bde3a543c3d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Compressor.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="486c72cf-3063-43c7-841c-656b2b4ebd98">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Compressor.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="aef84e25-09f8-471d-9ab0-a73ba1315046">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_11</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="d9ec2047-7650-4833-8012-82e92cdfd9c9">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_12</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="e6fc6cf1-a4bf-4211-86a8-3d74c4ac6506">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_13</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="15c9a402-3b94-4266-894e-8722dbb12d1d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_14</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="627176f0-fcb7-40cc-986f-e322d9d3f326">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_15</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="4bbe0581-cb9e-419d-b450-e54af7d46a96">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_16</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="dc8a46e4-03a0-4ae4-8f52-961a591290a7">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_17</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="3e6152a7-0680-46a8-84cf-e3e7b7c6a9f8">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pipe_MA.delta_vel_pos_AI.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="ece72561-f3c6-4c69-87d7-65bbbfec8c64">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pipe_MA.mdot_A_choked.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="4c8ff4cb-5f6f-426f-a6d4-6da21f110b32">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pipe_MA.delta_vel_pos_BI.zc_7</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="1f4552aa-4d20-44ca-9079-6b9d767ea4d7">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pipe_MA.mdot_B_choked.zc_8</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="2ac82671-e2fa-4c92-9941-87e8839a5e78">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pipe_MA.zc_9</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="ddc18dc4-c4ee-43ba-b2b5-fcfa8d9c8d75">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pipe_MA.zc_10</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="cf3b8bd4-d00c-4238-a755-e7d52134c763">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pressure_Relief_Valve.Valve.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="c451fc59-8fa9-4585-b66a-b0eade3c4030">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pressure_Relief_Valve.Valve.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="58c2e45d-349a-4828-9fb0-f1902879b11b">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pressure_Relief_Valve.Valve.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="0649fac8-6f76-4d41-92e7-2eb79424bbf8">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pressure_Relief_Valve.Valve.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f535e934-78c4-423f-afd5-59236a36732e">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pipe_MA.zc_11</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="30b04495-63ac-4604-b0f6-170b2ab26783">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pipe_MA.zc_12</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="6e391e8c-d9d4-4836-a98e-35a9a9e13fe9">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pipe_MA.zc_13</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="aa000169-791e-45ff-b8c0-732d31d6c670">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pipe_MA.zc_14</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="3017deae-e602-4339-b286-b5f2e2ff72b2">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pipe_MA.zc_15</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="a8bf90f7-0a29-4b7c-85e1-24f9845260b2">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Environment.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="adafe71d-f197-4e46-adfc-197778b8b4a0">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Environment.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="b33b531a-4b26-42ea-ad4b-7499c1061cb2">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Air_Intake.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="7d2397d2-a91e-484e-aa8c-d4f964d97f3b">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Air_Intake.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="618fd0c9-b6d9-4b57-b7c8-b1df1064418d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Environment.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="44b383e9-fa5f-419e-b1ef-0975fa4abdad">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Environment.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="abe85eab-f303-4aa7-9129-65d5fc275c20">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.mdot_choked.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="17daa06d-9f64-45f0-a1f9-ea7fa3d8854a">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.mdot_unchoked.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="ddd2cd20-adc3-4450-b6f3-a8d70a75bbe8">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.zc_7</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="42083647-f695-466e-b641-ff34f7281057">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.zc_8</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="d4acdf0f-c213-42c6-9387-57f4941db273">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.zc_9</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="c65293e1-6093-4a9d-a39c-8fa8e08d707e">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.zc_10</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="c8a45a86-8839-4665-9921-aec0f0c1b990">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.zc_11</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="563bc275-413f-44cd-b099-4b25d4597f71">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pressure_Reducing_Valve.Valve.mdot_choked.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="9164b6dc-ef25-42a5-897d-01a917b03136">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pressure_Reducing_Valve.Valve.mdot_unchoked.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="fd37e676-1ff3-4501-9b30-6b4f2d49a93d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pressure_Reducing_Valve.Valve.zc_7</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="28c7cdaa-ec67-4311-81c2-48eaa1356d19">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pressure_Reducing_Valve.Valve.zc_8</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="cf20be4f-473e-4156-8729-ba910abfabdf">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pressure_Reducing_Valve.Valve.zc_9</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="30ddf3ea-211a-4122-95e1-cb227aa0091e">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Fuel_Tank.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="0a3b4981-f764-440f-8200-afeee343e686">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Fuel_Tank.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="73e1ed74-7ce8-4d67-91d3-fc40dbdad898">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pressure_Reducing_Valve.Valve.zc_10</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="e4badbef-c924-428b-9e7b-357072100019">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pressure_Reducing_Valve.Valve.zc_11</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="4ff45a0a-22cd-4c62-8bf7-fe99839e6869">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pressure_Relief_Valve.Valve.mdot_choked.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="9c135fc2-cbdb-4b5e-90e1-397155b2103d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pressure_Relief_Valve.Valve.mdot_unchoked.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="15275c11-899e-4c7e-930f-2cddfa809ecc">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pressure_Relief_Valve.Valve.zc_7</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="078554b4-c461-4022-9c6f-df67f2c6c62d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pressure_Relief_Valve.Valve.zc_8</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="a228c212-878e-4c5c-a2b8-af8053f71a54">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pressure_Relief_Valve.Valve.zc_9</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="3af07df2-74d6-4925-9c20-9fb6241bfbf7">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pressure_Relief_Valve.Valve.zc_10</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="7b19c448-ac07-443f-bc1e-a3ac7e960737">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pressure_Relief_Valve.Valve.zc_11</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="e746e2d3-d93b-41f3-bb09-b1df158b6624">
+      <direction>29</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Coolant_Tank.Coolant_Volume.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="580bf65a-d0ce-4330-88f5-ad540a8d8460">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Coolant_Tank.Coolant_Volume.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="78e856b5-7a6a-42d1-a1fd-213066cf8348">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Coolant_Tank.Coolant_Volume.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="27e77cf4-db56-4a1a-b630-7005d75170e1">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Radiator.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="240ce011-7c0d-41fa-a690-7c052aa70c48">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Radiator.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="5ad4ada1-a8cb-44bf-a0e0-9999e118e9ca">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Radiator.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="10e479a8-d7ff-47ac-aaee-98179626f19f">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Radiator.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="cc0cc494-e0cc-4da5-a387-6559242e4b7c">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Fuel_Cell_Coolant_Channels.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="2d3ee647-28a5-497a-8472-a812c411189d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Fuel_Cell_Coolant_Channels.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="39910133-3e05-4efa-a0f9-b638d1a88aa8">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Fuel_Cell_Coolant_Channels.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="e92ca336-172a-41b4-90e8-4ccc518036c3">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Fuel_Cell_Coolant_Channels.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="ae922961-aa4a-4b6d-a5d8-ff32614581a6">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pump.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="3557395b-7aaf-4551-9292-8a4ccd5d2197">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pump.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="83e73bda-f065-49c6-ad22-7488a547ba9b">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Fuel_Cell_Coolant_Channels.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="117a75cc-b647-409f-81c3-a59d5f88fc7f">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Fuel_Cell_Coolant_Channels.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="ae0b69bc-bcc5-4bd4-829b-5b552d28c29c">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Fuel_Cell_Coolant_Channels.zc_7</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="b51d8b68-4705-4179-a7b4-5ed41a559107">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Fuel_Cell_Coolant_Channels.zc_8</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="9875b51c-17ec-454e-a2f4-87c34a281a09">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pump.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="7d5f25c9-dfa7-4dc3-9cfb-7ca8b35f4e1e">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pump.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="64ab33b3-1600-42eb-9515-895bb1040b27">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pump.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="cb6370f5-0007-4d52-8325-ea047fb877f3">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pump.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="649e55fe-0bf7-47df-b452-12f2cbfad7a4">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Radiator.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="088cd352-3f29-4dbc-9121-c7249bfa749d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Radiator.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f4cc934a-80b1-43e8-9ca6-77882ba7bb7a">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Radiator.zc_7</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="98ad53b5-064a-4750-89f6-0fe0c70539fd">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Radiator.zc_8</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="aec1d9ce-e603-4695-a5f2-37536eacd238">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Constant_Volume_Chamber_MA.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="bc364618-25f1-4fe2-9309-541c00fce042">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Constant_Volume_Chamber_MA.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="a1773c4f-29b2-4151-beea-476d41afe58b">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Constant_Volume_Chamber_MA.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="5ad9623f-1a34-424e-b120-7ffed37773cc">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Fuel_Tank.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="fcfc3895-9af5-4cc5-852a-186d06c5b543">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Fuel_Tank.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="a33087bb-e7f8-413f-96d1-62c2dd42b6cd">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Fuel_Tank.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="eafd5df9-f8fa-4ccb-9ba4-59445ffcb6ea">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Compressor_Volume.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="01e0107f-421e-4fc8-a9df-7bc61f759919">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Compressor_Volume.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="7f8274a2-2be4-4f2d-af15-e26c8b451beb">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Compressor_Volume.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="a1a02821-6c1b-432b-a33c-2151cf32cfa8">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Controlled_Mass_Flow_Rate_Source_MA.zc_7</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="9c05ae70-64fa-486a-b19f-dafe7aa705c6">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Controlled_Mass_Flow_Rate_Source_MA.zc_8</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="1af30ee3-b68e-4a66-9f03-24a54bac20fc">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Compressor.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="cec791a9-50fc-4a71-be54-4eb5a12b4ca3">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Compressor.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="8ffd8885-bdf8-4d96-a037-b74c8f635fce">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Compressor.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="24d2ffba-906d-46da-b636-cf091767a17c">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Compressor.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="a28695a8-c730-4d0f-a5e9-47a486ce2bf8">
+      <direction>29</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Motor.Motor.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="2a230897-ca55-46ad-bac9-d38889ea85cf">
+      <direction>29</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Motor.Motor.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f517a3f8-9743-4c72-891e-590f2e7849f6">
+      <direction>29</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Motor.Motor.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="55189638-e6d1-431b-96a0-35c3ea594270">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.Fuel_Cell_Stack.Membrane_Electrode_Assembly.transport_H2O_A.T_out.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="0bbba2b2-78ef-426a-ae24-6991c4b831de">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.Fuel_Cell_Stack.Membrane_Electrode_Assembly.transport_H2O_A.T_out.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="b8c5751d-6ae2-48c4-878b-498807b990c4">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Controlled_Moisture_Source_MA.T_out.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="077d80ee-4273-4b69-918c-b14247fbe9d0">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Controlled_Moisture_Source_MA.T_out.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="107ca0be-5a31-4907-adeb-84ad96105f0b">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Controlled_Moisture_Source_MA.T_out.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f8dfb8a7-b0dd-464b-bc25-57fd82f1d9de">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Controlled_Moisture_Source_MA.T_out.zc_2</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="ff04f89b-442d-470c-9677-ea03fbc37fe3">
+      <direction>29</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.MEA_Thermal_Mass.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f5d863af-c264-4d33-8e6f-b009b68f67e1">
+      <direction>29</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Thermal_Mass.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="af704aea-1452-472a-842a-e94973ae647c">
+      <direction>29</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.Sensors.Diode.zc_1</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="ce752aff-1879-409a-99c7-8c292f748e01">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA1.convection_A.ht_in.zc_12</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="813a4329-b8ee-4d74-b9e1-ae85fd9bd58f">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA1.convection_B.ht_in.zc_13</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="0396537c-6884-4b5a-b676-66d2bc2311d4">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA1.convection_A.ht_in.zc_12</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="9e01c1eb-e61c-4807-a4f1-c37011ba6a8c">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA1.convection_B.ht_in.zc_13</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="c600b0e4-5b68-48cf-b216-d1c169c4e4a4">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Environment.convection_A.ht_in.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="dfcf37f8-4988-4b12-a876-f132c099d5f0">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.convection_A.ht_in.zc_12</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="c02b37fb-db66-41de-9688-6270c33bad7c">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.convection_B.ht_in.zc_13</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="fb9beb5e-a4e5-4e35-b9ca-e021a400cc54">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.convection_A.ht_in.zc_12</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="78baef0e-7a7d-4f21-8028-01ef514213af">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.convection_B.ht_in.zc_13</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="6d33a81a-ac4a-419b-88b7-92a11b3e2081">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA.convection_A.ht_in.zc_16</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f054a124-3927-4bfe-a3d4-8ef82befe3be">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x10.Pipe_MA.convection_B.ht_in.zc_17</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="d11f40b8-c1c6-4f01-9291-97ba1a7c5e64">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Constant_Volume_Chamber_MA.convection_A.ht_in.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="eaca9aea-936b-4212-8038-f704865802f8">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Constant_Volume_Chamber_MA.convection_B.ht_in.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="a0ca358d-be19-47d9-a619-80e70950b9da">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Constant_Volume_Chamber_MA.convection_C.ht_in.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="fd9a6c29-0468-4c7b-910d-c5658c7f0d78">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Controlled_Mass_Flow_Rate_Source_MA.convection_A.ht_in.zc_9</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="d767d7a4-905b-42e4-8617-bf82d640d623">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Controlled_Mass_Flow_Rate_Source_MA.convection_B.ht_in.zc_10</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="26313553-616a-4270-8eab-28d6cc0dc34f">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Fuel_Tank.convection_A.ht_in.zc_6</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="dfa13c9a-5996-4e61-9b5e-93cc1723c318">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.convection_A.ht_in.zc_14</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="2f85501c-5260-426c-8480-b33c9856419a">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.convection_B.ht_in.zc_15</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="61310a1c-5a2e-442f-bf8e-9c1459f653cf">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pressure_Reducing_Valve.Valve.convection_A.ht_in.zc_12</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="1085298c-8b55-4e30-b128-eca195dbd205">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pressure_Reducing_Valve.Valve.convection_B.ht_in.zc_13</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="a3179d9a-f1ce-4337-8cdc-a9cb6e9fa893">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Air_Intake.convection_A.ht_in.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="2b43d0d6-79e1-43b5-8ba4-b73dc7ed0114">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Compressor.convection_A.ht_in.zc_7</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="c3ae0bdb-ac03-4163-9736-3445f9e5b48b">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Compressor.convection_B.ht_in.zc_8</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="b0b458f8-d897-44f5-96a0-036348529b6d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Compressor_Volume.convection_A.ht_in.zc_4</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="d4687383-4152-416a-a769-76edd94643fe">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Compressor_Volume.convection_B.ht_in.zc_5</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="c178d781-2687-40e4-be96-c1fbfa7e0349">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.convection_A.ht_in.zc_14</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="22d30978-a6ef-4083-b235-bcd26eec7942">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.convection_B.ht_in.zc_15</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="00b9e5d6-de66-49a8-8f14-ab8d611a7e9a">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.convection_A.ht_in.zc_20</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="9f24f98b-d5f3-434b-a034-e2b0e144a660">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.convection_B.ht_in.zc_21</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="de39af8b-f1ec-464a-951d-3526b27334ab">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.convection_A.ht_in.zc_18</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="e88a835f-5727-43c9-b62d-82be61a97b8d">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.convection_B.ht_in.zc_19</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="d81bf707-fd93-4f1b-960a-dc19f1a1d300">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Environment.convection_A.ht_in.zc_3</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="361dea38-6afb-4531-9b38-1cc029e0733c">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pipe_MA.convection_A.ht_in.zc_16</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="71a0db9a-d86b-4cc4-b283-c7871408e72c">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pipe_MA.convection_B.ht_in.zc_17</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="35b12bcf-8854-4b7a-b816-702b427ea1ea">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pressure_Relief_Valve.Valve.convection_A.ht_in.zc_12</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="79d2438e-4f3b-45c0-b7c5-b4e786f319ac">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x9.Pressure_Relief_Valve.Valve.convection_B.ht_in.zc_13</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="8af5d65a-efe7-479a-97fc-061ceb4ffc64">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Controlled_Mass_Flow_Rate_Source_MA.Ds_AB.zc_11</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="78a41fc3-c8d2-458b-a922-e52de5d490a5">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Controlled_Mass_Flow_Rate_Source_MA.Ds_AB.zc_12</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="c829a166-8545-4088-b675-a52273c9a40b">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Controlled_Mass_Flow_Rate_Source_MA.Ds_BA.zc_13</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f033a730-7d5d-4e4d-9c01-9b4d83961f99">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Controlled_Mass_Flow_Rate_Source_MA.Ds_BA.zc_14</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="0f91bf8b-d376-4e95-a255-9dbbed8b81b8">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Compressor.Ds_AB.zc_9</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="f9b64aa6-e3c4-441c-96bb-76e30e29acb1">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Compressor.Ds_AB.zc_10</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="e7d50984-d782-4cb3-8a37-433d9a765781">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Compressor.Ds_BA.zc_11</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="3f48b1b1-ed0a-471e-b75a-d04a009aac90">
+      <direction>43</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Compressor.Ds_BA.zc_12</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="be74c6b9-dea7-4826-ae1d-1860c211c993">
+      <direction>63</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>UprLim</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="2cfbd996-d762-4820-ad34-9cdeff4d2d07">
+      <direction>63</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>LwrLim</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="e79985b5-8fa8-4cd3-ae90-3c6bfb650034">
+      <direction>63</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>UprLim</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="4227da75-7185-4379-9a0c-34a84425996a">
+      <direction>63</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>LwrLim</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="59f406e7-b257-4c10-b7de-75acfa5d7566">
+      <direction>63</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>UprLim</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="b6dfd8a4-79ad-43fd-a27a-f8d22378ad8a">
+      <direction>63</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>LwrLim</name>
+      <needsSolverReset>true</needsSolverReset>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="97e22cef-0c8d-4a7a-bc4c-4b7b4f4d930c">
+      <direction>63</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>UprLim</name>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="43f63219-b2a2-4bad-8eaa-d3fa4aa6d4d8">
+      <direction>63</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>LwrLim</name>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="81f3538f-78d2-48ac-892c-abac63bfea89">
+      <direction>63</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>UprLim</name>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="366860f6-610c-4f0c-a6d0-476496009061">
+      <direction>63</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>LwrLim</name>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="9658d8ac-5577-4afd-b85b-70eead2f1ade">
+      <direction>63</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>UprLim</name>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="c3e1519a-1e41-40d4-bde7-89023fa820b8">
+      <direction>63</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>LwrLim</name>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="9a0e18f9-ca55-42d4-8b50-392c5ae96564">
+      <direction>63</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>RelopInput</name>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="a95d0d95-56fd-484f-a688-75bea8c94638">
+      <direction>56</direction>
+      <isDiscrete>false</isDiscrete>
+      <name>HitNoOutput</name>
+      <tolerance>-1.0</tolerance>
+      <width>1</width>
+    </zeroCrossingInfo>
+    <FMUBlockMap type="ModelRefInfoRepo.FMUBlockInfo" uuid="5177c21d-eba5-4386-ae51-05e57da781a1"/>
+    <codeGenInfo type="ModelRefInfoRepo.CodeGenInformation" uuid="8324156e-9e79-422c-8608-da32ef7eff55"/>
+    <compiledVariantInfos type="ModelRefInfoRepo.CompiledVariantInfoMap" uuid="671f8a0e-dd40-4341-8723-7476242385f2">
+      <entries type="ModelRefInfoRepo.CompiledVariantInfo" uuid="07d43e66-00ee-4827-8c89-aa2ba4055a3c">
+        <IsActive>true</IsActive>
+        <IsInCodegen>true</IsInCodegen>
+        <modelBlockPath>FCEvReferenceApplication/Controllers/Powertrain Control Module (PCM)</modelBlockPath>
+      </entries>
+      <entries type="ModelRefInfoRepo.CompiledVariantInfo" uuid="c4e43b40-f0d0-46d2-a389-917aaa75163e">
+        <IsActive>true</IsActive>
+        <IsInCodegen>true</IsInCodegen>
+        <modelBlockPath>FCEvReferenceApplication/Passenger Car/Drivetrain</modelBlockPath>
+      </entries>
+      <entries type="ModelRefInfoRepo.CompiledVariantInfo" uuid="59848295-af36-4fbf-8a46-f9e2d912f961">
+        <IsActive>true</IsActive>
+        <IsInCodegen>true</IsInCodegen>
+        <modelBlockPath>FCEvReferenceApplication/Passenger Car/Electric Plant</modelBlockPath>
+      </entries>
+    </compiledVariantInfos>
+    <configSettingsForConsistencyChecks type="ModelRefInfoRepo.ConfigSettingsForConsistencyChecks" uuid="f40bac18-6e27-4f70-8190-e322e4ef4f61">
+      <frameDiagnosticSetting>2</frameDiagnosticSetting>
+      <signalLoggingSaveFormat>2</signalLoggingSaveFormat>
+      <simSIMDOptimization>1</simSIMDOptimization>
+      <solverName>ode23t</solverName>
+      <hardwareSettings type="ModelRefInfoRepo.HardwareSettings" uuid="23a23705-a38d-48f4-a87e-95280a9216ad">
+        <prodBitPerChar>8</prodBitPerChar>
+        <prodBitPerDouble>64</prodBitPerDouble>
+        <prodBitPerFloat>32</prodBitPerFloat>
+        <prodBitPerInt>32</prodBitPerInt>
+        <prodBitPerLong>32</prodBitPerLong>
+        <prodBitPerLongLong>64</prodBitPerLongLong>
+        <prodBitPerPointer>64</prodBitPerPointer>
+        <prodBitPerPtrDiffT>64</prodBitPerPtrDiffT>
+        <prodBitPerShort>16</prodBitPerShort>
+        <prodBitPerSizeT>64</prodBitPerSizeT>
+        <prodEndianess>1</prodEndianess>
+        <prodShiftRight>true</prodShiftRight>
+        <prodWordSize>64</prodWordSize>
+      </hardwareSettings>
+    </configSettingsForConsistencyChecks>
+    <controllableInputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="d142ba12-7999-4d1e-a83b-3ce9a1d615b0"/>
+    <controllableOutputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="73c15deb-d46e-4739-88e8-336cf9079f1b"/>
+    <dataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="e351d187-c89d-454e-8f88-e57f41257dff"/>
+    <expFcnUnconnectedDataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="830b95eb-3f51-47bb-8c27-0c0029384da1"/>
+    <interfaceParameterInfo type="ModelRefInfoRepo.InterfaceParameterInfo" uuid="694cfa76-f530-48a3-addb-66014806fa53"/>
+    <messageInfo type="ModelRefInfoRepo.MessageInformation" uuid="691929c3-357c-4bbe-a505-b5fc95147227"/>
+    <methodInfo type="ModelRefInfoRepo.MethodExistenceInfo" uuid="9e951bd7-75c0-4d51-a7e0-8eb9e07d32f2">
+      <hasDerivMethod>true</hasDerivMethod>
+      <hasDisableMethod>true</hasDisableMethod>
+      <hasEnableMethod>true</hasEnableMethod>
+      <hasForcingFunctionMethod>true</hasForcingFunctionMethod>
+      <hasMassMatrixMethod>true</hasMassMatrixMethod>
+      <hasProjectionMethod>true</hasProjectionMethod>
+      <hasSystemInitializeMethod>true</hasSystemInitializeMethod>
+      <hasSystemResetMethod>true</hasSystemResetMethod>
+      <hasTerminateMethod>true</hasTerminateMethod>
+      <hasUpdateMethod>true</hasUpdateMethod>
+    </methodInfo>
+    <periodicEventPortUnsupportedBlockInfo type="ModelRefInfoRepo.PeriodicEventPortUnsupportedBlockInfo" uuid="7e720999-6591-4f66-b7b0-fa9ad23a4f18">
+      <multiRateBlocks>FCEvReferenceApplication/Passenger Car/Drivetrain Plant Input/First Order Hold</multiRateBlocks>
+      <multiRateBlocks>FCEvReferenceApplication/Passenger Car/Electric Plant Input/First Order Hold</multiRateBlocks>
+      <multiRateBlocks>FCEvReferenceApplication/Passenger Car/Electric Plant Input/First Order Hold1</multiRateBlocks>
+      <multiRateBlocks>FCEvReferenceApplication/Passenger Car/Electric Plant Input/First Order Hold2</multiRateBlocks>
+      <multiRateModelBlocks>FCEvReferenceApplication/Passenger Car/Drivetrain</multiRateModelBlocks>
+      <multiRateModelBlocks>FCEvReferenceApplication/Passenger Car/Electric Plant</multiRateModelBlocks>
+      <multiRateSubsystems>DrivetrainEv/Wheels and Brakes/Longitudinal Wheel - Front 1/Wheel Module/Clutch</multiRateSubsystems>
+      <multiRateSubsystems>DrivetrainEv/Wheels and Brakes/Longitudinal Wheel - Rear 1/Wheel Module/Clutch</multiRateSubsystems>
+      <multiRateSubsystems>FCEvReferenceApplication/Longitudinal Driver/Longitudinal Driver/Longitudinal Driver Model/Longitudinal Driver/Control/Predictive/Accel Override/Signal Hold/Pass Through</multiRateSubsystems>
+      <multiRateSubsystems>FCEvReferenceApplication/Longitudinal Driver/Longitudinal Driver/Longitudinal Driver Model/Longitudinal Driver/Control/Predictive/Deccel Override/Signal Hold/Pass Through</multiRateSubsystems>
+    </periodicEventPortUnsupportedBlockInfo>
+    <portGroupsRequireSameRate type="ModelRefInfoRepo.PortGroupsRequireSameRate" uuid="8e6de3d5-13ed-429b-88a5-81ce6c5218f4">
+      <DSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="601f7806-b54c-4103-b62c-f7a6bc1bc690"/>
+      <GlobalDSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="15567447-9ae6-415e-8ffb-d8812db40372"/>
+      <mergedPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="0c30f7a6-ef9d-4e0a-ae99-3a3ff8c427a9"/>
+    </portGroupsRequireSameRate>
+    <rateBasedMdlGlobalDSMRateSpec type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="418d78e5-652f-492f-9d19-da64b8bfd523"/>
+    <rateSpecOfGlobalDSMAccessedByDescExpFcnMdlMap type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="8710a704-92c3-4ad9-9403-a308bbe62584"/>
+    <rootBlockDiagramInterface type="ci.Model" uuid="67ba1e40-d224-4459-8d75-c1f1e51bcec6">
+      <p_RootComponentInterface type="ci.ComponentInterface" uuid="4adf5671-300e-436c-9f36-a2051232dd6d">
+        <p_Name>FCEvReferenceApplication</p_Name>
+        <p_Type>ROOT</p_Type>
+      </p_RootComponentInterface>
+    </rootBlockDiagramInterface>
+    <simulinkFunctions type="ModelRefInfoRepo.SimulinkFunctions" uuid="c0ba2a28-9a6d-4b5f-917c-056aac8adf95">
+      <compSimulinkFunctionCatalog></compSimulinkFunctionCatalog>
+    </simulinkFunctions>
+    <sltpContext type="sltp.mm.core.Context" uuid="4fa29df2-95fd-46a5-b51d-bbb343171542">
+      <priorityDirection>HighNumberLast</priorityDirection>
+      <editorState type="sltp.mm.core.EditorState" uuid="d2442601-11e7-47d1-b527-7695d7db8298">
+        <isSynchronized>true</isSynchronized>
+        <panelState type="sltp.mm.core.EditorPanelState" uuid="fe85da29-9667-4534-9ec2-71c9ce5c951b"/>
+      </editorState>
+      <rootTask type="sltp.mm.core.Task" uuid="a620653f-bc18-4921-99fb-a5540f7cd3f1">
+        <context type="sltp.mm.core.Context" uuid="4fa29df2-95fd-46a5-b51d-bbb343171542"/>
+        <explicit>false</explicit>
+        <name>Default</name>
+        <priority>-2147483648</priority>
+        <subgraph type="sltp.mm.core.Graph" uuid="319a1194-ad2e-4932-9840-73983b502aa0">
+          <tasks type="sltp.mm.core.Task" uuid="c59d5125-796b-4bb5-986a-8619dcfb5973">
+            <baseTask>true</baseTask>
+            <context type="sltp.mm.core.Context" uuid="4fa29df2-95fd-46a5-b51d-bbb343171542"/>
+            <explicit>false</explicit>
+            <id>1</id>
+            <isTimed>true</isTimed>
+            <name>Cont</name>
+            <priority>40</priority>
+            <rates type="sltp.mm.core.Rate" uuid="7db3aadf-b909-4ab3-a2bd-7f278753e0f3">
+              <annotation>Cont</annotation>
+              <color>255</color>
+              <hasBlocks>true</hasBlocks>
+              <rateSpec type="sltp.mm.core.RateSpec">
+                <period>0.0</period>
+              </rateSpec>
+              <sti>0</sti>
+            </rates>
+            <rates type="sltp.mm.core.Rate" uuid="37f47f46-84cc-4331-a234-4eea844131c9">
+              <annotation>FiM</annotation>
+              <color>-2139062017</color>
+              <hasBlocks>true</hasBlocks>
+              <rateSpec type="sltp.mm.core.RateSpec">
+                <offset>1.0</offset>
+                <period>0.0</period>
+              </rateSpec>
+              <sti>1</sti>
+            </rates>
+            <rates type="sltp.mm.core.Rate" uuid="3973d595-aea9-4bf3-925b-4018dd170910">
+              <annotation>D1</annotation>
+              <color>-436207361</color>
+              <hasBlocks>true</hasBlocks>
+              <rateSpec type="sltp.mm.core.RateSpec">
+                <period>.01</period>
+              </rateSpec>
+              <sti>2</sti>
+            </rates>
+            <rates type="sltp.mm.core.Rate" uuid="d3fa70fd-3ba6-461c-a003-36b0843daa33">
+              <annotation>D2</annotation>
+              <color>13697279</color>
+              <hasBlocks>true</hasBlocks>
+              <rateSpec type="sltp.mm.core.RateSpec">
+                <period>.1</period>
+              </rateSpec>
+              <sti>3</sti>
+            </rates>
+            <rates type="sltp.mm.core.Rate" uuid="6a53392c-660b-462c-b08b-d8594c78da4c">
+              <annotation>D3</annotation>
+              <color>52479</color>
+              <hasBlocks>true</hasBlocks>
+              <rateSpec type="sltp.mm.core.RateSpec">
+                <period>.5</period>
+              </rateSpec>
+              <sti>4</sti>
+            </rates>
+            <rates type="sltp.mm.core.Rate" uuid="c21f148e-58a6-4996-a127-f67fa71c64fa">
+              <annotation>D4</annotation>
+              <color>1639841023</color>
+              <rateSpec type="sltp.mm.core.RateSpec">
+                <period>1.0</period>
+              </rateSpec>
+              <sti>5</sti>
+            </rates>
+          </tasks>
+        </subgraph>
+      </rootTask>
+    </sltpContext>
+    <stateWriterToOwnerMap type="ModelRefInfoRepo.StateWriterInfo" uuid="e768a844-88ce-4b6c-b04e-38ab2f1db922"/>
+    <stoClientDataRegistry type="sto.ClientDataRegistry" uuid="4e431719-ef73-474b-b2c9-954834334b9c">
+      <dataSets type="sto.ClientClockNamedDataSet" uuid="e14f5983-cf8f-4503-a88b-684327eeb0f8">
+        <tag>sltpEvents</tag>
+      </dataSets>
+      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="e326b1ee-bfcc-4271-8e01-b62825709400">
+        <tag>sltpTaskGroups</tag>
+      </dataSets>
+      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="a5ce3db8-890b-405c-ae47-556bb45cbe8b">
+        <dSet type="ModelRefInfoRepo.SltpTaskData" uuid="b02cfe0c-8e55-488e-85a9-6fde105fb1bf"/>
+        <tSet type="ModelRefInfoRepo.SltpTaskData" uuid="b02cfe0c-8e55-488e-85a9-6fde105fb1bf">
+          <dataName>Cont</dataName>
+          <linkedSet type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="a5ce3db8-890b-405c-ae47-556bb45cbe8b"/>
+          <id type="sto.TaskHierarchyElementId">
+            <id>_task0</id>
+          </id>
+        </tSet>
+        <tag>sltpTasks</tag>
+      </dataSets>
+    </stoClientDataRegistry>
+    <typeTable type="type_info.TypeTable" uuid="469620bf-07a0-4733-839c-2b5242d7009f">
+      <Types type="type_info.Type" uuid="271e3ac1-b1c8-4684-96db-50166cac93d5">
+        <Name>action</Name>
+      </Types>
+      <Types type="type_info.NumericType" uuid="5e0c0a1d-b356-44e9-be32-dfdfceb5395c">
+        <MxClassId>3</MxClassId>
+        <Size>1</Size>
+        <typeEnum>NUMERIC</typeEnum>
+        <Name>boolean</Name>
+      </Types>
+      <Types type="type_info.Type" uuid="46b525c2-e2c8-40b9-8bec-ab96e65cf076">
+        <DataTypeId>17</DataTypeId>
+        <Size>352</Size>
+        <Name>dif03hcjvgl</Name>
+      </Types>
+      <Types type="type_info.NumericType" uuid="a98dc32e-a532-4e82-8790-77c7566a8aeb">
+        <DataTypeId>1</DataTypeId>
+        <MxClassId>6</MxClassId>
+        <Size>8</Size>
+        <typeEnum>NUMERIC</typeEnum>
+        <Name>double</Name>
+      </Types>
+      <Types type="type_info.Type" uuid="42591ad0-6ee5-47fa-903c-645aec0eb7e3">
+        <Name>fcn_call</Name>
+      </Types>
+      <Types type="type_info.Type" uuid="da49a274-07ba-467c-8476-d929dbe3e592">
+        <DataTypeId>19</DataTypeId>
+        <Size>27624</Size>
+        <Name>g5h05g3u4wx</Name>
+      </Types>
+      <Types type="type_info.Type" uuid="35d748f9-9d7f-4a26-873e-722b6c3ce919">
+        <DataTypeId>18</DataTypeId>
+        <Size>2832</Size>
+        <Name>hmke5fx3tcj</Name>
+      </Types>
+      <Types type="type_info.NumericType" uuid="1d59864e-4e52-4135-8e5d-04ae875a27dc">
+        <MxClassId>10</MxClassId>
+        <Size>2</Size>
+        <typeEnum>NUMERIC</typeEnum>
+        <Name>int16</Name>
+      </Types>
+      <Types type="type_info.NumericType" uuid="09529b6e-9570-4105-863d-0f64528a0b5a">
+        <MxClassId>12</MxClassId>
+        <Size>4</Size>
+        <Name>int32</Name>
+      </Types>
+      <Types type="type_info.FixedPointType" uuid="585e8823-d2b8-490e-b154-a595f0a2dd2b">
+        <DataTypeId>15</DataTypeId>
+        <Size>8</Size>
+        <typeEnum>FIXPOINT</typeEnum>
+        <Name>int64</Name>
+      </Types>
+      <Types type="type_info.NumericType" uuid="49772fd8-77a9-4a47-8663-418afb3400cf">
+        <MxClassId>8</MxClassId>
+        <Size>1</Size>
+        <typeEnum>NUMERIC</typeEnum>
+        <Name>int8</Name>
+      </Types>
+      <Types type="type_info.Type" uuid="4d812aee-fe39-4a03-8ce0-b7485c386d50">
+        <Name>integer</Name>
+      </Types>
+      <Types type="type_info.Type" uuid="5a96afbf-a66b-4ea1-b98d-d384f74fc30f">
+        <Name>physical_connection</Name>
+      </Types>
+      <Types type="type_info.Type" uuid="958e5f1a-cf53-4f3f-b4e5-c7a8ef7d29e5">
+        <Name>pointer</Name>
+      </Types>
+      <Types type="type_info.NumericType" uuid="4c42a0f8-ec08-4830-a628-dfd76c4d820f">
+        <MxClassId>7</MxClassId>
+        <Size>4</Size>
+        <typeEnum>NUMERIC</typeEnum>
+        <Name>single</Name>
+      </Types>
+      <Types type="type_info.Type" uuid="cf6ab32a-ff21-41c2-aa70-a29ab5751760">
+        <Name>timer_uint32_pair</Name>
+      </Types>
+      <Types type="type_info.NumericType" uuid="39e93be2-4c97-4472-9965-7924f659571a">
+        <MxClassId>11</MxClassId>
+        <Size>2</Size>
+        <typeEnum>NUMERIC</typeEnum>
+        <Name>uint16</Name>
+      </Types>
+      <Types type="type_info.NumericType" uuid="d91dac56-0956-46de-91ca-298bc7d05bda">
+        <MxClassId>13</MxClassId>
+        <Size>4</Size>
+        <typeEnum>NUMERIC</typeEnum>
+        <Name>uint32</Name>
+      </Types>
+      <Types type="type_info.FixedPointType" uuid="6b38cc39-1310-4bdb-ae17-e9d39f64297a">
+        <DataTypeId>16</DataTypeId>
+        <Size>8</Size>
+        <typeEnum>FIXPOINT</typeEnum>
+        <Name>uint64</Name>
+      </Types>
+      <Types type="type_info.NumericType" uuid="db002972-2e8c-436e-bfce-f3c6fc6eca33">
+        <MxClassId>9</MxClassId>
+        <Size>1</Size>
+        <typeEnum>NUMERIC</typeEnum>
+        <Name>uint8</Name>
+      </Types>
+      <isInitialized>true</isInitialized>
+    </typeTable>
+    <varTsUIDMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="81a50270-f68d-48b7-b7f0-af5298ee1537"/>
+  </ModelRefInfoRepo.ModelRefInfoRoot>
+</MF0>

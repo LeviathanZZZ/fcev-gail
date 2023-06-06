@@ -1,0 +1,179 @@
+%implements s24_b0_ilroe_7_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%<SLibCGIRAccessLocalDWork(23, 0)> %% ForEach_itr_h
+%<SLibCGIRAccessLocalDWork(22, 0)> %% ForEach_itr
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real_T Myb;
+real_T Omegadot;
+real_T ReactionTorque;
+%closefile localVarDecl
+%assign _modelSS = ""
+
+%<SLibWriteMachineInitialize()>
+/* {S!d82}InitializeConditions for Integrator: '<S72>/Theta' */
+/*@>c67f7*/localX->/*@>ca59f*/Theta_CSTATE/*@>4e495*/ = /*@>ad68d*/0.0;
+/* {S!d84}InitializeConditions for Integrator: '<S72>/Position' */
+/*@>c67fe*/localX->/*@>ca5a2*/Position_CSTATE/*@>a9a96*/[/*@>ad69c*/0]/*@>a9a95*/ = /*@>ad6a5*/0.0;
+/* {S!d86}InitializeConditions for Integrator: '<S4>/Integrator' */
+/*@>c6805*/localX->/*@>ca5a5*/Integrator_CSTATE/*@>a9aa1*/[/*@>ad69d*/0]/*@>a9aa0*/ = /*@>ad69b*/0.0;
+/* {S!d88}InitializeConditions for Integrator: '<S72>/Position' */
+/*@>c680c*/localX->/*@>ca5a8*/Position_CSTATE/*@>a9aac*/[/*@>ad6a3*/1]/*@>a9aab*/ = /*@>ad6a6*/-0.35;
+/* {S!d90}InitializeConditions for Integrator: '<S4>/Integrator' */
+/*@>c6813*/localX->/*@>ca5ab*/Integrator_CSTATE/*@>a9ab7*/[/*@>ad6a4*/1]/*@>a9ab6*/ = /*@>ad6a2*/0.0;
+/* {S!d92}InitializeConditions for Integrator: '<S72>/U,w' incorporates:
+ *  Integrator: '<S15>/Integrator'
+ */
+/*@>4e4bb*/if (%<SLibCG_DumpSSCode("/*@[c901f*/",(LibIsFirstInitCond()),"/*@]*/")>) {
+    /*@>c681a*/localX->/*@>ca5ae*/Uw_CSTATE/*@>4e4b0*/[/*@>ad625*/0]/*@>4e4b3*/ = /*@>ad624*/0.0;
+    /*@>c6821*/localX->/*@>ca5b1*/Uw_CSTATE/*@>4e4b6*/[/*@>ad627*/1]/*@>4e4b9*/ = /*@>ad626*/0.0;
+    /*@>c682f*/localX->/*@>ca5b7*/Integrator_CSTATE_n/*@>4e4de*/ = /*@>ad62e*/0.0;
+}
+/*@>c6bde*/localDW->/*@>ca5e1*/Uw_IWORK/*@>4e4c3*/ = /*@>ca451*/1;
+/* {E!d92}End of InitializeConditions for Integrator: '<S72>/U,w' */
+
+/* {S!d94}InitializeConditions for Integrator: '<S72>/q' */
+/*@>c6828*/localX->/*@>ca5b4*/q_CSTATE/*@>4e4d0*/ = /*@>ad68e*/0.0;
+/* {S!d96}InitializeConditions for Integrator: '<S15>/Integrator' */
+/*@>c6be5*/localDW->/*@>ca5e4*/Integrator_IWORK/*@>4e4e8*/ = /*@>ca454*/1;
+/* {S!d98}InitializeConditions for Integrator: '<S14>/Integrator' */
+/*@>c6836*/localX->/*@>ca5ba*/Integrator_CSTATE_f/*@>4e4f5*/ = /*@>ad68f*/0.0;
+/* {S!d100}InitializeConditions for Integrator: '<S170>/Integrator' */
+/*@>c683d*/localX->/*@>ca5bd*/Integrator_CSTATE_e/*@>4e502*/ = /*@>ad690*/0.0;
+/* {S!d102}InitializeConditions for Integrator: '<S212>/Integrator' */
+/*@>c6844*/localX->/*@>ca5c0*/Integrator_CSTATE_b/*@>4e50f*/ = /*@>ad691*/0.0;
+/* {S!d104}InitializeConditions for Integrator: '<S51>/Integrator' incorporates:
+ *  Integrator: '<S26>/Integrator'
+ */
+/*@>4e51f*/if (%<SLibCG_DumpSSCode("/*@[c9022*/",(LibIsFirstInitCond()),"/*@]*/")>) {
+    /*@>c684b*/localX->/*@>ca5c3*/Integrator_CSTATE_g/*@>4e51d*/ = /*@>ad63b*/0.0;
+    /*@>c6852*/localX->/*@>ca5c6*/Integrator_CSTATE_gx/*@>4e541*/[/*@>ad645*/0]/*@>4e544*/ = /*@>ad644*/0.0;
+    /*@>c6860*/localX->/*@>ca5cc*/Integrator_CSTATE_gx/*@>4e547*/[/*@>ad647*/1]/*@>4e54a*/ = /*@>ad646*/0.0;
+}
+/*@>c6bec*/localDW->/*@>ca5e7*/Integrator_IWORK_g/*@>4e527*/ = /*@>ca457*/1;
+/* {E!d104}End of InitializeConditions for Integrator: '<S51>/Integrator' */
+
+/* {S!d106}InitializeConditions for Integrator: '<S50>/Integrator' */
+/*@>c6859*/localX->/*@>ca5c9*/Integrator_CSTATE_bn/*@>4e534*/ = /*@>ad692*/0.0;
+/* {S!d108}InitializeConditions for Integrator: '<S26>/Integrator' */
+/*@>c6bf3*/localDW->/*@>ca5ea*/Integrator_IWORK_i/*@>4e554*/ = /*@>ca45a*/1;
+/* {S!d110}InitializeConditions for Integrator: '<S59>/Integrator' */
+/*@>c6867*/localX->/*@>ca5cf*/Integrator_CSTATE_i/*@>4e561*/ = /*@>ad693*/0.0;
+/* {S!d112}InitializeConditions for Integrator: '<S94>/Integrator3' */
+/*@>c686e*/localX->/*@>ca5d2*/Integrator3_CSTATE/*@>4e56e*/ = /*@>ad694*/0.0;
+%openfile locBufForEachIteration_18_0
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[8], "SystemInitialize",0)
+/* {S!d73}SystemInitialize for Iterator SubSystem: '<S141>/Clutch' */
+/* {S!d114}SystemInitialize for Chart: '<S152>/Clutch' */
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Clutch_Init",8,0)
+%<SLibCG_AccessArg(7 ,3, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Clutch_Init",8,1)
+%<SLibCG_AccessArg(7 ,3, 1)>
+%<SLibCGIRAccessLocalDWork(23, 0)> %% ForEach_itr_h
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Clutch_Init",8,6)
+%<SLibCG_AccessArg(7 ,3, 1)>
+%<SLibCGIRAccessLocalDWork(23, 0)> %% ForEach_itr_h
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Clutch_Init",8,7)
+%<SLibCG_AccessArg(7 ,3, 3)>
+%<SLibCGIRAccessLocalDWork(23, 0)> %% ForEach_itr_h
+%endif
+
+%<SLibCG_DumpSSCode("/*@[c9025*/",SLibCGIRGenReusableSysCall("DrivetrainEv_Clutch_Init", ["/*@>ca64b*/%<::tSimStruct>", "&/*@>ca659*/localB->/*@>ca658*/CoreSubsys_c/*@>ca657*/[/*@>ca65b*/ForEach_itr_h]./*@>ca656*/Omega", "&/*@>ca667*/Omegadot", "&/*@>ca672*/Myb", "&/*@>ca67d*/ReactionTorque", "/*@>ca687*/0.0", "&/*@>ca695*/localB->/*@>ca694*/CoreSubsys_c/*@>ca693*/[/*@>ca697*/ForEach_itr_h]./*@>ca692*/sf_Clutch", "&/*@>ca6a6*/localX->/*@>ca6a5*/CoreSubsys_c/*@>ca6a4*/[/*@>ca6a8*/ForEach_itr_h]./*@>ca6a3*/sf_Clutch"], 8, 0, 4, 0, 4, 18),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[8]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d73}End of SystemInitialize for SubSystem: '<S141>/Clutch' */
+%endif
+%closefile locBufForEachIteration_18_0
+%if !ISEMPTY(locBufForEachIteration_18_0) && !WHITE_SPACE(locBufForEachIteration_18_0)
+/* {S!d75}SystemInitialize for Iterator SubSystem: '<S141>/Clutch' */
+/*@>ca496*/for (/*@>ca492*/ForEach_itr_h/*@>ca491*/ = /*@>ca493*/0; /*@>ca489*/ForEach_itr_h/*@>ca487*/ < /*@>ca48a*/1; /*@>ca48c*/ForEach_itr_h/*@>ca4a9*/++) {
+%<locBufForEachIteration_18_0>
+}
+/* {E!d75}End of SystemInitialize for SubSystem: '<S141>/Clutch' */
+%endif
+%openfile locBufForEachIteration_18_1
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[13], "SystemInitialize",0)
+/* {S!d77}SystemInitialize for Iterator SubSystem: '<S183>/Clutch' */
+/* {S!d116}SystemInitialize for Chart: '<S194>/Clutch' */
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Clutch_o_Init",13,0)
+%<SLibCG_AccessArg(7 ,3, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Clutch_o_Init",13,1)
+%<SLibCG_AccessArg(7 ,3, 1)>
+%<SLibCGIRAccessLocalDWork(22, 0)> %% ForEach_itr
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Clutch_o_Init",13,6)
+%<SLibCG_AccessArg(7 ,3, 1)>
+%<SLibCGIRAccessLocalDWork(22, 0)> %% ForEach_itr
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Clutch_o_Init",13,7)
+%<SLibCG_AccessArg(7 ,3, 3)>
+%<SLibCGIRAccessLocalDWork(22, 0)> %% ForEach_itr
+%endif
+
+%<SLibCG_DumpSSCode("/*@[c9026*/",SLibCGIRGenReusableSysCall("DrivetrainEv_Clutch_o_Init", ["/*@>ca6ed*/%<::tSimStruct>", "&/*@>ca6fb*/localB->/*@>ca6fa*/CoreSubsys_k/*@>ca6f9*/[/*@>ca6fd*/ForEach_itr]./*@>ca6f8*/Omega", "&/*@>ca709*/Omegadot", "&/*@>ca714*/Myb", "&/*@>ca71f*/ReactionTorque", "/*@>ca729*/0.0", "&/*@>ca737*/localB->/*@>ca736*/CoreSubsys_k/*@>ca735*/[/*@>ca739*/ForEach_itr]./*@>ca734*/sf_Clutch", "&/*@>ca748*/localX->/*@>ca747*/CoreSubsys_k/*@>ca746*/[/*@>ca74a*/ForEach_itr]./*@>ca745*/sf_Clutch"], 13, 0, 4, 0, 4, 18),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[13]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d77}End of SystemInitialize for SubSystem: '<S183>/Clutch' */
+%endif
+%closefile locBufForEachIteration_18_1
+%if !ISEMPTY(locBufForEachIteration_18_1) && !WHITE_SPACE(locBufForEachIteration_18_1)
+/* {S!d79}SystemInitialize for Iterator SubSystem: '<S183>/Clutch' */
+/*@>ca474*/for (/*@>ca470*/ForEach_itr/*@>ca46f*/ = /*@>ca471*/0; /*@>ca467*/ForEach_itr/*@>ca465*/ < /*@>ca468*/1; /*@>ca46a*/ForEach_itr/*@>ca4aa*/++) {
+%<locBufForEachIteration_18_1>
+}
+/* {E!d79}End of SystemInitialize for SubSystem: '<S183>/Clutch' */
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[7].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("SystemInitialize", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "SystemInitialize"))
+%<SLibCG_AccessArg(7, 3, 0)>
+%endif
+%if SLibCG_ArgAccessed(7, 3, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "SystemInitialize", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "SystemInitialize"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(7, 3, 0)>
+%endif
+%<LibSetSystemField(system, "CachedSystemInitializeLocalVars", localVarDecl)>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void DrivetrainEv_Init(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(7, 3, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("DrivetrainEv_Init", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%if SLibCG_ArgAccessed(7, 3, 1)
+%<comma>B_DrivetrainEv_c_T *localB\
+%assign comma = ", "
+%endif
+%<comma>DW_DrivetrainEv_f_T *localDW\
+%assign comma = ", "
+%<comma>X_DrivetrainEv_n_T *localX\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(7, 3, fcnProtoType)>
+%endfunction

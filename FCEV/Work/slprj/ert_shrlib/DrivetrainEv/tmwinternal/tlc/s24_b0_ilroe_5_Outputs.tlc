@@ -1,0 +1,335 @@
+%implements s24_b0_ilroe_5_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+%if SLibCG_FcnCallArgAccessed(5,3,1,0)
+%<SLibCG_AccessArg(5 ,3, 1)>
+%endif
+%if SLibCG_FcnCallArgAccessed(5,3,1,1)
+%<SLibCG_AccessArg(5 ,3, 2)>
+%endif
+%if SLibCG_FcnCallArgAccessed(5,3,1,2)
+%<SLibCG_AccessArg(5 ,3, 9)>
+%endif
+%if SLibCG_FcnCallArgAccessed(5,3,1,3)
+%<SLibCG_AccessArg(5 ,3, 0)>
+%endif
+%if SLibCG_FcnCallArgAccessed(5,3,1,4)
+%<SLibCG_AccessArg(5 ,3, 12)>
+%endif
+%if SLibCG_FcnCallArgAccessed(5,3,1,5)
+%<SLibCG_AccessArg(5 ,3, 13)>
+%endif
+
+%if SLibCG_FcnCallArgAccessed(5,3,0,0)
+%<SLibCG_AccessArg(5 ,3, 1)>
+%endif
+%if SLibCG_FcnCallArgAccessed(5,3,0,1)
+%<SLibCG_AccessArg(5 ,3, 2)>
+%endif
+%if SLibCG_FcnCallArgAccessed(5,3,0,2)
+%<SLibCG_AccessArg(5 ,3, 0)>
+%endif
+%if SLibCG_FcnCallArgAccessed(5,3,0,3)
+%<SLibCG_AccessArg(5 ,3, 12)>
+%endif
+
+/*@>4d666*/if (%<SLibCG_DumpSSCode("/*@[8496d*/",(RTMGetIsModeUpdateTimeStep()),"/*@]*/")>) {
+    /*@>84242*/localDW->/*@>84f07*/lastMajorTime/*@>4d668*/ = /*@>81de4*/%<RTMGetTaskTimeForTID(0)>;
+    /* {S!d54}Chart: '<S152>/Clutch' */
+    /*@>4d69a*/if (/*@>84250*/localDW->/*@>84f0d*/is_active_c8_autolibshared/*@>4d698*/ == /*@>81df9*/0U) {
+        /*@>84265*/localDW->/*@>84f16*/is_active_c8_autolibshared/*@>4d6a2*/ = /*@>84dd2*/1U;
+        /*@>84209*/localX->/*@>84ef5*/Slipping./*@>84ef2*/omegaWheel/*@>4d6cb*/ = /*@>81e50*/rtp_omegao;
+        /*@>84281*/localDW->/*@>84f22*/is_c8_autolibshared/*@>4d6c8*/ = /*@>81e12*/DrivetrainEv_IN_Slipping;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[7], "Output",0)
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,0)
+%<SLibCG_AccessArg(5 ,3, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,1)
+%<SLibCG_AccessArg(5 ,3, 3)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,2)
+%<SLibCG_AccessArg(5 ,3, 1)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,3)
+%<SLibCG_AccessArg(5 ,3, 4)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,4)
+%<SLibCG_AccessArg(5 ,3, 5)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,5)
+%<SLibCG_AccessArg(5 ,3, 7)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,6)
+%<SLibCG_AccessArg(5 ,3, 6)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,7)
+%<SLibCG_AccessArg(5 ,3, 9)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,8)
+%<SLibCG_AccessArg(5 ,3, 10)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,9)
+%<SLibCG_AccessArg(5 ,3, 12)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,10)
+%<SLibCG_AccessArg(5 ,3, 14)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[84975*/",SLibCGIRGenReusableSysCall("DrivetrainEv_Slipping", ["/*@>84f7b*/%<::tSimStruct>", "/*@>84f85*/rtu_Tfmaxk", "/*@>84f8f*/rtu_Tout", "rty_Omega", "rty_Omegadot", "rty_ReactionTorque", "rty_Myb", "/*@>84fc1*/rtp_br", "/*@>84fcb*/rtp_Iyy", "&/*@>84fd7*/localB->/*@>84fd6*/Slipping", "&/*@>84fe4*/localX->/*@>84fe3*/Slipping"], 7, 0, 6, 0, 6, 8),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[7]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+        /*@>8429d*/localDW->/*@>84f2e*/Slipping_entered/*@>4d6bd*/ = /*@>81e0f*/true;
+        %<SLibCG_DumpSSCode("/*@[84970*/",(RTMSetBlockStateForSolverChangedAtMajorStep()),"/*@]*/")>;
+    } else /*@>81ac9*/if (/*@>8425e*/localDW->/*@>84f13*/is_c8_autolibshared/*@>81ac8*/ == /*@>8430f*/DrivetrainEv_IN_Locked) {
+        /*@>4d6a4*/if (%<SLibCG_DumpSSCode("/*@[84a5a*/",(SLibCGCallSubFcn("DrivetrainEv_detectSlip_a", ["/*@>84fef*/rtu_Tout", "/*@>84ff9*/rtu_Tfmaxs", "/*@>85003*/%<::tSimStruct>", "/*@>8500d*/localB"], 5, 3, 0)),"/*@]*/")>) {
+            /*@>8421c*/localX->/*@>84efe*/Slipping./*@>84efb*/omegaWheel/*@>4d6ba*/ = /*@>81e21*/0.0;
+            /*@>84288*/localDW->/*@>84f25*/Locked_entered/*@>4d6a5*/ = /*@>81dfe*/false;
+            /*@>84296*/localDW->/*@>84f2b*/is_c8_autolibshared/*@>4d6b4*/ = /*@>81e07*/DrivetrainEv_IN_Slipping;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[7], "Output",0)
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,0)
+%<SLibCG_AccessArg(5 ,3, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,1)
+%<SLibCG_AccessArg(5 ,3, 3)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,2)
+%<SLibCG_AccessArg(5 ,3, 1)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,3)
+%<SLibCG_AccessArg(5 ,3, 4)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,4)
+%<SLibCG_AccessArg(5 ,3, 5)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,5)
+%<SLibCG_AccessArg(5 ,3, 7)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,6)
+%<SLibCG_AccessArg(5 ,3, 6)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,7)
+%<SLibCG_AccessArg(5 ,3, 9)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,8)
+%<SLibCG_AccessArg(5 ,3, 10)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,9)
+%<SLibCG_AccessArg(5 ,3, 12)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,10)
+%<SLibCG_AccessArg(5 ,3, 14)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[84976*/",SLibCGIRGenReusableSysCall("DrivetrainEv_Slipping", ["/*@>85045*/%<::tSimStruct>", "/*@>8504f*/rtu_Tfmaxk", "/*@>85059*/rtu_Tout", "rty_Omega", "rty_Omegadot", "rty_ReactionTorque", "rty_Myb", "/*@>8508b*/rtp_br", "/*@>85095*/rtp_Iyy", "&/*@>850a1*/localB->/*@>850a0*/Slipping", "&/*@>850ae*/localX->/*@>850ad*/Slipping"], 7, 0, 6, 0, 6, 8),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[7]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+            /*@>842ab*/localDW->/*@>84f34*/Slipping_entered/*@>4d6a9*/ = /*@>81e04*/true;
+            %<SLibCG_DumpSSCode("/*@[84dde*/",(RTMSetBlockStateForSolverChangedAtMajorStep()),"/*@]*/")>;
+        }
+
+        /* case IN_Slipping: */
+    } else /*@>4d6cf*/if (%<SLibCG_DumpSSCode("/*@[84a76*/",(SLibCGCallSubFcn("DrivetrainEv_detectLockup_o", ["/*@>850b9*/rtu_Tout", "/*@>850c3*/rtu_Tfmaxs", "/*@>850cd*/rtp_br", "/*@>850d7*/%<::tSimStruct>", "/*@>850e1*/localB", "/*@>850eb*/localDW"], 5, 3, 1)),"/*@]*/")>/*@>849af*/ && (/*@>8377a*/fabs(*/*@<84e0a*/rty_Omega)/*@>4d6e5*/ <= /*@>81e5a*/rtp_OmegaTol)) {
+        /*@>8428f*/localDW->/*@>84f28*/Slipping_entered/*@>4d6d0*/ = /*@>81e17*/false;
+        /*@>842a4*/localDW->/*@>84f31*/is_c8_autolibshared/*@>4d6df*/ = /*@>81e20*/DrivetrainEv_IN_Locked;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[6], "Output",0)
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Locked",6,0)
+%<SLibCG_AccessArg(5 ,3, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Locked",6,1)
+%<SLibCG_AccessArg(5 ,3, 1)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Locked",6,2)
+%<SLibCG_AccessArg(5 ,3, 7)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Locked",6,3)
+%<SLibCG_AccessArg(5 ,3, 4)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Locked",6,4)
+%<SLibCG_AccessArg(5 ,3, 5)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Locked",6,5)
+%<SLibCG_AccessArg(5 ,3, 6)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[84977*/",SLibCGIRGenReusableSysCall("DrivetrainEv_Locked", ["/*@>85113*/%<::tSimStruct>", "/*@>8511d*/rtu_Tout", "rty_ReactionTorque", "rty_Omega", "rty_Omegadot", "rty_Myb"], 6, 0, 6, 0, 6, 8),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[6]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+        /*@>842b2*/localDW->/*@>84f37*/Locked_entered/*@>4d6d4*/ = /*@>81e1d*/true;
+        %<SLibCG_DumpSSCode("/*@[84de3*/",(RTMSetBlockStateForSolverChangedAtMajorStep()),"/*@]*/")>;
+    }
+    /* {E!d54}End of Chart: '<S152>/Clutch' */
+}
+/*@>81ac4*/if (/*@>84249*/localDW->/*@>84f0a*/is_c8_autolibshared/*@>81ac3*/ == /*@>8430c*/DrivetrainEv_IN_Locked) {
+    /*@>4d688*/if (!/*@<4d686*//*@>84257*/localDW->/*@>84f10*/Locked_entered) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[6], "Output",0)
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Locked",6,0)
+%<SLibCG_AccessArg(5 ,3, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Locked",6,1)
+%<SLibCG_AccessArg(5 ,3, 1)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Locked",6,2)
+%<SLibCG_AccessArg(5 ,3, 7)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Locked",6,3)
+%<SLibCG_AccessArg(5 ,3, 4)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Locked",6,4)
+%<SLibCG_AccessArg(5 ,3, 5)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Locked",6,5)
+%<SLibCG_AccessArg(5 ,3, 6)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[84973*/",SLibCGIRGenReusableSysCall("DrivetrainEv_Locked", ["/*@>8516d*/%<::tSimStruct>", "/*@>85177*/rtu_Tout", "rty_ReactionTorque", "rty_Omega", "rty_Omegadot", "rty_Myb"], 6, 0, 6, 0, 6, 8),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[6]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+    } else {
+        /*@>84273*/localDW->/*@>84f1c*/Locked_entered/*@>4d685*/ = /*@>81df1*/false;
+    }
+
+    /* case IN_Slipping: */
+} else /*@>4d691*/if (!/*@<4d68f*//*@>8426c*/localDW->/*@>84f19*/Slipping_entered) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[7], "Output",0)
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,0)
+%<SLibCG_AccessArg(5 ,3, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,1)
+%<SLibCG_AccessArg(5 ,3, 3)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,2)
+%<SLibCG_AccessArg(5 ,3, 1)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,3)
+%<SLibCG_AccessArg(5 ,3, 4)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,4)
+%<SLibCG_AccessArg(5 ,3, 5)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,5)
+%<SLibCG_AccessArg(5 ,3, 7)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,6)
+%<SLibCG_AccessArg(5 ,3, 6)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,7)
+%<SLibCG_AccessArg(5 ,3, 9)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,8)
+%<SLibCG_AccessArg(5 ,3, 10)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,9)
+%<SLibCG_AccessArg(5 ,3, 12)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("DrivetrainEv_Slipping",7,10)
+%<SLibCG_AccessArg(5 ,3, 14)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[84974*/",SLibCGIRGenReusableSysCall("DrivetrainEv_Slipping", ["/*@>851d7*/%<::tSimStruct>", "/*@>851e1*/rtu_Tfmaxk", "/*@>851eb*/rtu_Tout", "rty_Omega", "rty_Omegadot", "rty_ReactionTorque", "rty_Myb", "/*@>8521d*/rtp_br", "/*@>85227*/rtp_Iyy", "&/*@>85233*/localB->/*@>85232*/Slipping", "&/*@>85240*/localX->/*@>8523f*/Slipping"], 7, 0, 6, 0, 6, 8),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[7]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+} else {
+    /*@>8427a*/localDW->/*@>84f1f*/Slipping_entered/*@>4d68e*/ = /*@>81df6*/false;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[5].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(5, 3, 0)>
+%endif
+%if SLibCG_ArgAccessed(5, 3, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(5, 3, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void DrivetrainEv_Clutch(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(5, 3, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("DrivetrainEv_Clutch", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%if SLibCG_ArgAccessed(5, 3, 1)
+%<comma>real_T rtu_Tout\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(5, 3, 2)
+%<comma>real_T rtu_Tfmaxs\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(5, 3, 3)
+%<comma>real_T rtu_Tfmaxk\
+%assign comma = ", "
+%endif
+%<comma>real_T *rty_Omega\
+%assign comma = ", "
+%if SLibCG_ArgAccessed(5, 3, 5)
+%<comma>real_T *rty_Omegadot\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(5, 3, 6)
+%<comma>real_T *rty_Myb\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(5, 3, 7)
+%<comma>real_T *rty_ReactionTorque\
+%assign comma = ", "
+%endif
+%<comma>real_T rtp_omegao\
+%assign comma = ", "
+%if SLibCG_ArgAccessed(5, 3, 9)
+%<comma>real_T rtp_br\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(5, 3, 10)
+%<comma>real_T rtp_Iyy\
+%assign comma = ", "
+%endif
+%<comma>real_T rtp_OmegaTol\
+%assign comma = ", "
+%<comma>B_Clutch_DrivetrainEv_T *localB\
+%assign comma = ", "
+%<comma>DW_Clutch_DrivetrainEv_T *localDW\
+%assign comma = ", "
+%<comma>X_Clutch_DrivetrainEv_T *localX\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 3, fcnProtoType)>
+%endfunction

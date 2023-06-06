@@ -1,0 +1,65 @@
+%implements s24_b0_ilroe_2_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real_T rtb_Abs_g;
+%closefile localVarDecl
+/* Gain: '<S166>/Output Damping' incorporates:
+ *  Constant: '<S160>/Constant'
+ */
+/*@>7d825*/rtb_Abs_g/*@>4d4c4*/ = /*@>7d82d*/rtp_br/*@>7d87e*/ * /*@>7d844*/0.0;
+/* CombinatorialLogic: '<S165>/Combinatorial  Logic' incorporates:
+ *  Abs: '<S163>/Abs'
+ *  Abs: '<S168>/Abs'
+ *  RelationalOperator: '<S163>/Relational Operator'
+ *  RelationalOperator: '<S168>/Relational Operator'
+ *  Sum: '<S166>/Sum1'
+ *  Sum: '<S166>/Sum2'
+ *  UnaryMinus: '<S167>/Unary Minus'
+ *  UnitDelay: '<S165>/Unit Delay'
+ */
+*rty_yn/*@>4d56a*/ = /*@>7de82*/rtCP_CombinatorialLogic_table/*@>7de84*/[((/*@>7de63*/(uint32_T)(/*@>7de66*/fabs(((/*@>7de6a*/0.0/*@>7de69*/ - /*@>7de6c*/rtu_Tout)/*@>7de68*/ - /*@>7de6e*/rtb_Abs_g)/*@>7de67*/ + /*@>7de70*/rtb_Abs_g)/*@>7de64*/ >= /*@>7de72*/rtu_Tfmaxs)/*@>7de62*/ + (/*@>7de74*/(uint32_T)(/*@>7de77*/fabs(-/*@<7de78*//*@>7de7a*/rtu_Tout)/*@>7de75*/ <= /*@>7de7c*/rtu_Tfmaxs)/*@>7de73*/ << /*@>7de7d*/1))/*@>7de61*/ << /*@>7de7e*/1)/*@>7de60*/ + /*@>7dff3*/localDW->/*@>7e0e7*/UnitDelay_DSTATE];
+/* Update for UnitDelay: '<S165>/Unit Delay' */
+/*@>7dffa*/localDW->/*@>7e0ea*/UnitDelay_DSTATE/*@>4d581*/ = */*@<7e0c2*/rty_yn;
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[2].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(2, 1, 0)>
+%endif
+%if SLibCG_ArgAccessed(2, 1, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(2, 1, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void DrivetrainEv_detectLockup(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(2, 1, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("DrivetrainEv_detectLockup", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%<comma>real_T rtu_Tout\
+%assign comma = ", "
+%<comma>real_T rtu_Tfmaxs\
+%assign comma = ", "
+%<comma>boolean_T *rty_yn\
+%assign comma = ", "
+%<comma>real_T rtp_br\
+%assign comma = ", "
+%<comma>DW_detectLockup_DrivetrainEv_T *localDW\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 1, fcnProtoType)>
+%endfunction
