@@ -222,21 +222,24 @@ class DDPG(object):
         self.critic_optimizer.step()
 
     def learn_gail(self,expert_s,expert_a):
-        # softly update the target networks
+        # 软更新
         for x in self.actor_target.state_dict().keys():
             eval('self.actor_target.' + x + '.data.mul_((1-TAU))')
             eval('self.actor_target.' + x + '.data.add_(TAU*self.actor_eval.' + x + '.data)')
         for x in self.critic_target.state_dict().keys():
             eval('self.critic_target.' + x + '.data.mul_((1-TAU))')
             eval('self.critic_target.' + x + '.data.add_(TAU*self.critic_eval.' + x + '.data)')
-            # sample from buffer a mini-batch data
+
+        # 随机在replaybuffer采取batch_size的数据集到minibatch
         indices = np.random.choice(MEMORY_CAPACITY, size=BATCH_SIZE)
         batch_trans = self.memory[indices, :]
-        # extract data from mini-batch of transitions including s, a, r, s_
+        # 从minibatch读取数据集
         batch_s = torch.FloatTensor(batch_trans[:, :self.s_dim])
         batch_a = torch.FloatTensor(batch_trans[:, self.s_dim:self.s_dim + self.a_dim])
         # batch_r = torch.FloatTensor(batch_trans[:, -self.s_dim - 1: -self.s_dim])
         batch_s_ = torch.FloatTensor(batch_trans[:, -self.s_dim:])
+
+        #鉴别器训练
         expert_states = torch.tensor(expert_s, dtype=torch.float)
         expert_actions = torch.tensor(expert_a, dtype=torch.float)
         expert_prob = self.discriminator(expert_states, expert_actions)
