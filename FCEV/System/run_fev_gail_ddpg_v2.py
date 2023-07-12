@@ -29,94 +29,82 @@ torch.manual_seed(548)
 RENDER = False
 EP_MAX = 1000
 EP_LEN = 1369
-# GAMMA = 0.9
-# actor_lr = 2e-4
-# critic_lr = 1e-4
-# num_episodes = 10000
-# hidden_dim = 256
-# gamma = 0.995
-# lambda_ = 0.995
-# epochs = 10
-# eps = 0.2
-##########Swith=0:训练PPO2，1：测试PPO2，2：训练GAIL，3：测试GAIL
+EPISODES = 200
+EP_STEPS = 200
+LR_ACTOR = 0.0003
+LR_CRITIC = 0.0003
+GAMMA = 0.9
+TAU = 0.01
+MEMORY_CAPACITY = 10000
+BATCH_SIZE = 256
 Switch = 0
 
 Writer = SummaryWriter()
 
-class Actor(nn.Module):
-    def __init__(self, state_dim, action_dim):
-        super(Actor, self).__init__()
-        # self.action_bound = torch.FloatTensor(action_bound)
+class ActorNet(nn.Module):  # define the network structure for actor and critic
+    def __init__(self, s_dim, a_dim):
+        super(ActorNet, self).__init__()
+        self.fc1 = nn.Linear(s_dim, 256)
+        self.fc1.weight.data.normal_(0, 0.1)  # initialization of FC1
+        self.fc2 = nn.Linear(256, 128)
+        self.fc2.weight.data.normal_(0, 0.1)  # initialization of FC1
+        self.fc3 = nn.Linear(128,128)
+        self.fc3.weight.data.normal_(0, 0.1)  # initialization of FC1
+        self.out = nn.Linear(128, a_dim)
+        self.out.weight.data.normal_(0, 0.1)  # initilizaiton of OUT
 
-        # layer
-        self.layer_1 = nn.Linear(state_dim, 256)
-        # nn.init.normal_(self.layer_1.weight, 0., 0.3)
-        # nn.init.constant_(self.layer_1.bias, 0.1)
-        self.layer_2 = nn.Linear(256, 128)
-        # nn.init.normal_(self.layer_2.weight, 0., 0.3)
-        # nn.init.constant_(self.layer_2.bias, 0.1)
-        self.layer_3 = nn.Linear(128, 128)
-        # nn.init.normal_(self.layer_3.weight, 0., 0.3)
-        # nn.init.constant_(self.layer_3.bias, 0.1)
-        # self.layer_3 = nn.Linear(100, 50)
-        # self.layer_4 = nn.Linear(128, 128)
-        # nn.init.normal_(self.layer_3.weight, 0., 0.3)
-        # nn.init.constant_(self.layer_3.bias, 0.1)]
-
-        # self.layer_1.weight.data.normal_(0.,0.3)
-        # self.layer_1.bias.data.fill_(0.1)
-        self.output = nn.Linear(128, action_dim)
-        self.output.weight.data.uniform_(-3e-3, 3e-3)
-        self.output.bias.data.uniform_(-3e-3, 3e-3)
-        # self.output.weight.data.normal_(0., 0.3)
-        # self.output.bias.data.fill_(0.1)
-
-    def forward(self, s):
-        a = torch.relu(self.layer_1(s))
-        a = torch.relu(self.layer_2(a))
-        a = torch.relu(self.layer_3(a))
-        # a = torch.relu(self.layer_4(a))
-        a = torch.sigmoid(self.output(a))
-        # 对action进行放缩，实际上a in [-1,1]
-        scaled_a = a *3.5
-        return scaled_a
+    def forward(self, x):
+        x = self.fc1(x)
+        x = F.relu(x)
+        x = self.fc2(x)
+        x = F.relu(x)
+        x = self.fc3(x)
+        x = F.relu(x)
+        x = self.out(x)
+        x = torch.sigmoid(x)
+        actions = x * 3.5  # for the game "Pendulum-v0", action range is [-2, 2]
+        return actions
 
 
 # Critic Net
 # Critic输入的是当前的state以及Actor输出的action,输出的是Q-value
-class Critic(nn.Module):
-    def __init__(self, n_states, n_actions):
-        super(Critic, self).__init__()
-        #
-        self.fc1 = nn.Linear(n_states + n_actions, 256)
-        # nn.init.normal_(self.fc1.weight, 0., 0.3)
-        # nn.init.constant_(self.fc1.bias, 0.1)
-        self.fc2 = nn.Linear(256, 128)
-        # nn.init.normal_(self.fc2.weight, 0., 0.3)
-        # nn.init.constant_(self.fc2.bias, 0.1)
-        self.fc3 = nn.Linear(128, 128)
-        # nn.init.normal_(self.fc3.weight, 0., 0.3)
-        # nn.init.constant_(self.fc3.bias, 0.1)
-        self.fc5 = nn.Linear(128, 1)
-        # self.fc5.weight.data.normal_(0., 0.3)
-        # self.fc5.bias.data.fill_(0.1)
-        # 前向传播
+class CriticNet(nn.Module):
+    def __init__(self, s_dim, a_dim):
+        super(CriticNet, self).__init__()
+        self.fcs = nn.Linear(s_dim, 256)
+        self.fcs.weight.data.normal_(0, 0.1)
+        self.fca = nn.Linear(a_dim, 256)
+        self.fca.weight.data.normal_(0, 0.1)
+        self.fc1 = nn.Linear(256, 128)
+        self.fc1.weight.data.normal_(0, 0.1)
+        self.fc2 = nn.Linear(128, 128)
+        self.fc2.weight.data.normal_(0, 0.1)
+        self.out = nn.Linear(128, 1)
+        self.out.weight.data.normal_(0, 0.1)
 
-    def forward(self, x, a):
-        # 拼接状态和动作
-        cat = torch.cat([x, a], dim=1)  # [b, n_states + n_actions]
-        x = self.fc1(cat)  # -->[b, n_hiddens]
-        x = torch.relu(x)
-        x = self.fc2(x)  # -->[b, n_hiddens]
-        x = torch.relu(x)
-        x = self.fc3(x)  # -->[b, 1]
-        x = torch.relu(x)
-        # x = self.fc4(x)
-        # x = torch.relu(x)
-        x = self.fc5(x)
+    def forward(self, s, a):
+        x = self.fcs(s)
+        y = self.fca(a)
+        actions_value = self.fc1(F.relu(x + y))
+        actions_value = self.fc2(F.relu(actions_value))
+        actions_value = self.out(F.relu(actions_value))
+        return actions_value
+class Discriminator(nn.Module):
+    def __init__(self, state_dim, action_dim):
+        super(Discriminator, self).__init__()
+        self.layer1 = nn.Linear(state_dim + action_dim, 128)
+        self.layer1.weight.data.normal_(0, 0.1)
+        self.layer2 = nn.Linear(128, 128)
+        self.layer2.weight.data.normal_(0, 0.1)
+        self.layer3 = nn.Linear(128, 1)
+        self.layer3.weight.data.normal_(0, 0.1)
+
+    def forward(self, state, action):
+        x = torch.cat([state, action], 1)
+        x = torch.relu(self.layer1(x))
+        x = torch.relu(self.layer2(x))
+        x = torch.sigmoid(self.layer3(x))
         return x
-
-
 class OUNoise(object):
     def __init__(self, action_dim, mu=0.0, theta=0.15, max_sigma=0.3, min_sigma=0, decay_period=100000):
         self.mu = mu
@@ -146,117 +134,132 @@ class OUNoise(object):
 
 # Deep Deterministic Policy Gradient
 class DDPG(object):
-    def __init__(self, state_dim, action_dim, replacement, memory_capacity=1000, gamma=0.99, lr_a=1e-4,
-                 lr_c=1e-3, batch_size=256):
-        super(DDPG, self).__init__()
-        self.state_dim = state_dim
-        self.action_dim = action_dim
-        self.memory_capacity = memory_capacity
-        self.replacement = replacement
-        self.t_replace_counter = 0
-        self.gamma = gamma
-        self.lr_a = lr_a
-        self.lr_c = lr_c
-        self.batch_size = batch_size
+    def __init__(self, a_dim, s_dim, a_bound):
+        self.a_dim, self.s_dim, self.a_bound = a_dim, s_dim, a_bound
+        self.memory = np.zeros((MEMORY_CAPACITY, s_dim * 2 + a_dim + 1), dtype=np.float32)
+        self.pointer = 0  # serves as updating the memory data
+        # Create the 4 network objects
+        self.actor_eval = ActorNet(s_dim, a_dim)
+        self.actor_target = ActorNet(s_dim, a_dim)
+        self.critic_eval = CriticNet(s_dim, a_dim)
+        self.critic_target = CriticNet(s_dim, a_dim)
+        # create 2 optimizers for actor and critic
+        self.actor_optimizer = torch.optim.Adam(self.actor_eval.parameters(), lr=LR_ACTOR)
+        self.critic_optimizer = torch.optim.Adam(self.critic_eval.parameters(), lr=LR_CRITIC)
+        # Define the loss function for critic network update
+        self.loss_func = nn.MSELoss()
+        self.discriminator = Discriminator(s_dim, a_dim)
+        self.discriminator_optimizer = torch.optim.Adam(self.discriminator.parameters(), lr=7e-4)
 
-        # 记忆库
-        self.memory = np.zeros((memory_capacity, state_dim * 2 + action_dim + 1))
-        self.pointer = 0
-        # 定义 Actor 网络
-        self.actor = Actor(state_dim, action_dim)
-        self.actor_target = Actor(state_dim, action_dim)
-        # 定义 Critic 网络
-        self.critic = Critic(state_dim, action_dim)
-        self.critic_target = Critic(state_dim, action_dim)
-        # 定义优化器
-        self.aopt = torch.optim.Adam(self.actor.parameters(), lr=lr_a)
-        self.copt = torch.optim.Adam(self.critic.parameters(), lr=lr_c,weight_decay=0.0001)
-        # 选取损失函数
-        self.mse_loss = nn.MSELoss()
-
-    def sample(self):
-        indices = np.random.choice(self.memory_capacity, size=self.batch_size)
-        return self.memory[indices, :]
-
-    def choose_action(self, s):
-        s = torch.FloatTensor(s)
-        action = self.actor(s)
-        return action.detach().numpy()
-
-    def learn(self):
-
-        # soft replacement and hard replacement
-        # 用于更新target网络的参数
-        if self.replacement['name'] == 'soft':
-            # soft的意思是每次learn的时候更新部分参数
-            tau = self.replacement['tau']
-            a_layers = self.actor_target.named_children()
-            c_layers = self.critic_target.named_children()
-            for al in a_layers:
-                a = self.actor.state_dict()[al[0] + '.weight']
-                al[1].weight.data.mul_((1 - tau))
-                al[1].weight.data.add_(tau * self.actor.state_dict()[al[0] + '.weight'])
-                al[1].bias.data.mul_((1 - tau))
-                al[1].bias.data.add_(tau * self.actor.state_dict()[al[0] + '.bias'])
-            for cl in c_layers:
-                cl[1].weight.data.mul_((1 - tau))
-                cl[1].weight.data.add_(tau * self.critic.state_dict()[cl[0] + '.weight'])
-                cl[1].bias.data.mul_((1 - tau))
-                cl[1].bias.data.add_(tau * self.critic.state_dict()[cl[0] + '.bias'])
-
-        else:
-            # hard的意思是每隔一定的步数才更新全部参数
-            if self.t_replace_counter % self.replacement['rep_iter'] == 0:
-                self.t_replace_counter = 0
-                a_layers = self.actor_target.named_children()
-                c_layers = self.critic_target.named_children()
-                for al in a_layers:
-                    al[1].weight.data = self.actor.state_dict()[al[0] + '.weight']
-                    al[1].bias.data = self.actor.state_dict()[al[0] + '.bias']
-                for cl in c_layers:
-                    cl[1].weight.data = self.critic.state_dict()[cl[0] + '.weight']
-                    cl[1].bias.data = self.critic.state_dict()[cl[0] + '.bias']
-
-            self.t_replace_counter += 1
-
-        # 从记忆库中采样bacth data
-        bm = self.sample()
-        bs = torch.FloatTensor(bm[:, :self.state_dim])
-        ba = torch.FloatTensor(bm[:, self.state_dim:self.state_dim + self.action_dim])
-        br = torch.FloatTensor(bm[:, -self.state_dim - 1: -self.state_dim])
-        bs_ = torch.FloatTensor(bm[:, -self.state_dim:])
-
-        # 训练Actor
-        a = self.actor(bs)
-        q = self.critic(bs, a)
-        a_loss = -torch.mean(q)
-        self.aopt.zero_grad()
-        a_loss.backward(retain_graph=True)
-        self.aopt.step()
-
-        # 训练critic
-        a_ = self.actor_target(bs_)
-        q_ = self.critic_target(bs_, a_)
-        q_target = br + self.gamma * q_
-        q_eval = self.critic(bs, ba)
-        td_error = self.mse_loss(q_target, q_eval)
-        self.copt.zero_grad()
-        td_error.backward()
-        self.copt.step()
-
-    def store_transition(self, s, a, r, s_):
+    def store_transition(self, s, a, r, s_):  # how to store the episodic data to buffer
         transition = np.hstack((s, a, r, s_))
-
-
-        index = self.pointer % self.memory_capacity
+        index = self.pointer % MEMORY_CAPACITY  # replace the old data with new data
         self.memory[index, :] = transition
         self.pointer += 1
         return self.memory,self.pointer
 
+    def choose_action(self, s):
+        # print(s)
+        s = torch.FloatTensor(s)
+        action = self.actor_eval(s)
+        return action.detach().numpy()
+
+    def learn(self):
+        # softly update the target networks
+        for x in self.actor_target.state_dict().keys():
+            eval('self.actor_target.' + x + '.data.mul_((1-TAU))')
+            eval('self.actor_target.' + x + '.data.add_(TAU*self.actor_eval.' + x + '.data)')
+        for x in self.critic_target.state_dict().keys():
+            eval('self.critic_target.' + x + '.data.mul_((1-TAU))')
+            eval('self.critic_target.' + x + '.data.add_(TAU*self.critic_eval.' + x + '.data)')
+            # sample from buffer a mini-batch data
+        indices = np.random.choice(MEMORY_CAPACITY, size=BATCH_SIZE)
+        batch_trans = self.memory[indices, :]
+        # extract data from mini-batch of transitions including s, a, r, s_
+        batch_s = torch.FloatTensor(batch_trans[:, :self.s_dim])
+        batch_a = torch.FloatTensor(batch_trans[:, self.s_dim:self.s_dim + self.a_dim])
+        batch_r = torch.FloatTensor(batch_trans[:, -self.s_dim - 1: -self.s_dim])
+        batch_s_ = torch.FloatTensor(batch_trans[:, -self.s_dim:])
+        # make action and evaluate its action values
+        a = self.actor_eval(batch_s)
+        q = self.critic_eval(batch_s, a)
+        actor_loss = -torch.mean(q)
+        # optimize the loss of actor network
+        self.actor_optimizer.zero_grad()
+        actor_loss.backward()
+        self.actor_optimizer.step()
+
+        # compute the target Q value using the information of next state
+        a_target = self.actor_target(batch_s_)
+        q_tmp = self.critic_target(batch_s_, a_target)
+        q_target = batch_r + GAMMA * q_tmp
+        # compute the current q value and the loss
+        q_eval = self.critic_eval(batch_s, batch_a)
+        td_error = self.loss_func(q_target, q_eval)
+        # optimize the loss of critic network
+        self.critic_optimizer.zero_grad()
+        td_error.backward()
+        self.critic_optimizer.step()
+
+    def learn_gail(self,expert_s,expert_a):
+        # 软更新
+        for x in self.actor_target.state_dict().keys():
+            eval('self.actor_target.' + x + '.data.mul_((1-TAU))')
+            eval('self.actor_target.' + x + '.data.add_(TAU*self.actor_eval.' + x + '.data)')
+        for x in self.critic_target.state_dict().keys():
+            eval('self.critic_target.' + x + '.data.mul_((1-TAU))')
+            eval('self.critic_target.' + x + '.data.add_(TAU*self.critic_eval.' + x + '.data)')
+
+        # 随机在replaybuffer采取batch_size的数据集到minibatch
+        indices = np.random.choice(MEMORY_CAPACITY, size=BATCH_SIZE)
+        batch_trans = self.memory[indices, :]
+        # 从minibatch读取数据集
+        batch_s = torch.FloatTensor(batch_trans[:, :self.s_dim])
+        batch_a = torch.FloatTensor(batch_trans[:, self.s_dim:self.s_dim + self.a_dim])
+        # batch_r = torch.FloatTensor(batch_trans[:, -self.s_dim - 1: -self.s_dim])
+        batch_s_ = torch.FloatTensor(batch_trans[:, -self.s_dim:])
+
+        #鉴别器训练
+        expert_states = torch.tensor(expert_s, dtype=torch.float)
+        expert_actions = torch.tensor(expert_a, dtype=torch.float)
+        expert_prob = self.discriminator(expert_states, expert_actions)
+        # expert_prob = torch.clamp(expert_prob, 1e-10, 1)
+        agent_prob = self.discriminator(batch_s, batch_a)
+        # agent_prob = torch.clamp(agent_prob, 1e-10, 1)
+        discriminator_loss = nn.BCELoss()(agent_prob, torch.ones_like(agent_prob)) + nn.BCELoss()(expert_prob,
+                                                                                                  torch.zeros_like(
+                                                                                                      expert_prob))
+        self.discriminator_optimizer.zero_grad()
+        discriminator_loss.backward()
+        # U.clip_grad_norm_(self.discriminator.parameters(), 5.)
+        self.discriminator_optimizer.step()
+        # make action and evaluate its action values
+        batch_r = -torch.log(agent_prob).detach().numpy()
+        batch_r = torch.FloatTensor(batch_r)
+        a = self.actor_eval(batch_s)
+        q = self.critic_eval(batch_s, a)
+        actor_loss = -torch.mean(q)
+        # optimize the loss of actor network
+        self.actor_optimizer.zero_grad()
+        actor_loss.backward()
+        self.actor_optimizer.step()
+
+        # compute the target Q value using the information of next state
+        a_target = self.actor_target(batch_s_)
+        q_tmp = self.critic_target(batch_s_, a_target)
+        q_target = batch_r + GAMMA * q_tmp
+        # compute the current q value and the loss
+        q_eval = self.critic_eval(batch_s, batch_a)
+        td_error = self.loss_func(q_target, q_eval)
+        # optimize the loss of critic network
+        self.critic_optimizer.zero_grad()
+        td_error.backward()
+        self.critic_optimizer.step()
+
 
 
 class Config:
-    num_episode = 1
+    num_episode = 1000
     num_episode_gail = 10000
     state_dim = 2
     hidden_layers_dim = 256
@@ -375,38 +378,31 @@ def train_agent(cfg):
         dict(name='soft', tau=0.005),
         dict(name='hard', rep_iter=600)
     ][0]  # you can try different target replacement strategies
-    VAR = 0.1
+    VAR = 3
     MEMORY_CAPACITY = 100000
-    ac_agent = DDPG(state_dim=cfg.state_dim,
-                action_dim=cfg.action_dim,
-                replacement=REPLACEMENT,
-                memory_capacity=MEMORY_CAPACITY)
+    # ac_agent = DDPG(state_dim=cfg.state_dim,
+    #             action_dim=cfg.action_dim,
+    #             replacement=REPLACEMENT,
+    #             memory_capacity=MEMORY_CAPACITY)
     episode = 0
+    expert_s, expert_a = np.load("./state.npy"),np.load("./action.npy")
+
 
     engine = matlab.engine.start_matlab()
     env_name = 'FCEvReferenceApplication'
     engine.load_system(env_name)
     tq_bar = tqdm(range(cfg.num_episode))
+    ddpg_gail = DDPG(1, 2, 3.5)
     bf_reward = -np.inf
-    reward_memory=[]
     checkpoint = torch.load('checkpoint.pth.tar')
-    epoch = checkpoint['epoch']
-    episode = epoch
-    ac_agent.actor.load_state_dict(checkpoint['actor_state_dict'])  # 加载模型的参数
-    ac_agent.actor_target.load_state_dict(checkpoint['actor_target_state_dict'])
-    ac_agent.critic_target.load_state_dict(checkpoint['critic_target_state_dict'])
-    ac_agent.aopt.load_state_dict(checkpoint['acotr_optimizer'])  # 加载优化器的[参数
-    ac_agent.critic.load_state_dict(checkpoint['critic_state_dict'])  # 加载模[型的参数
-    ac_agent.copt.load_state_dict(checkpoint['critic_optimizer'])  # 加载优化[器的参数
-    print(epoch)
-    ac_agent.pointer=np.load('pointer.npy')
-    index = ac_agent.pointer % ac_agent.memory_capacity
-    ac_agent.memory =np.load('data.npy')
+    ddpg_gail.actor_eval.load_state_dict(checkpoint['actor_state_dict'])  # 加载模型的参数
+    ddpg_gail.actor_target.load_state_dict(checkpoint['actor_target_state_dict'])
+    ddpg_gail.critic_target.load_state_dict(checkpoint['critic_target_state_dict'])
+    ddpg_gail.actor_optimizer.load_state_dict(checkpoint['acotr_optimizer'])  # 加载优化器的[参数
+    ddpg_gail.critic_eval.load_state_dict(checkpoint['critic_state_dict'])  # 加载模[型的参数
+    ddpg_gail.critic_optimizer.load_state_dict(checkpoint['critic_optimizer'])  # 加载优化[器的参数
     VAR = np.load('VAR.npy')
-    ddpg.pointer = np.load('data.npy')
-    steps = 0
-    steps=np.load("steps.npy")
-    ou_noise = OUNoise(1)
+    ddpg_gail.pointer = np.load('pointer.npy')
     for i in tq_bar:
 
         tq_bar.set_description(f'Episode [ {i + 1} / {cfg.num_episode} ]')
@@ -431,7 +427,7 @@ def train_agent(cfg):
         count = 0
         pause_time = 21
         action_pre = 0
-        # steps = 0
+        steps = 0
         # for timestep in range(0, 1369, 1):
         noise = OUNoise(1, 154)
 
@@ -456,9 +452,10 @@ def train_agent(cfg):
                 # next_state = get_state(soc, v, a)
             if Clock - count >= 1:
                 # Clock, soc, P_de = engine.run(float(action), pause_time,nargout=3)
-                action = ac_agent.choose_action(state)
-                print("噪声前",action)
-                action = ou_noise.get_action(action, steps)
+                action = ddpg_gail.choose_action(state)
+                print("噪声前", action)
+                action = np.clip(np.random.normal(action, VAR), 0, 3.5)
+                # action = ou_noise.get_action(action, steps)
                 # action = (action + np.random.normal(0, VAR, 1)).clip(0.0, 3.5)
                 Clock, soc, v, a,h2,p_de = engine.run(float(action), pause_time, nargout=6)
                 pause_time = pause_time + 1
@@ -474,6 +471,7 @@ def train_agent(cfg):
                 action_pre = action
                 reward = get_reward(soc,h2,delta_pfc ,Clock)
                 episode_rewards += reward
+
                 print(state, action, next_state, Clock, reward,steps,VAR)
                 # reward = reward_scaling(reward)
                 # next_state = state_norm(next_state)
@@ -531,37 +529,37 @@ def train_agent(cfg):
                 # PPO 更新
                 # if Clock>=20:
                 if Clock>=22:
-                    memory,pointer = ac_agent.store_transition(state, action, 10*reward , next_state)
+                    memory,pointer = ddpg_gail.store_transition(state, action, reward, next_state)
                 steps += 1
                 np.save('steps.npy',steps)
                 # if (episode_rewards >= cfg.max_episode_rewards) or (steps >= cfg.max_episode_steps):
                 #     break
                 state = next_state
                 # if steps == 2048:
-                # if ac_agent.pointer > 10000:
-                    # print("train!!")
-                # VAR *= .999995  # decay the action randomness
-                #     ac_agent.learn()
-                #     VAR *= 0.99995
+                if ddpg_gail.pointer > 10000:
+                    print("train!!")
+                    ddpg_gail.learn_gail(expert_s,expert_a)
+                    VAR *= 0.99995
                 # np.save('VAR.npy',VAR)
                 # torch.save(ac_agent.actor.state_dict(), cfg.save_path)
                 # torch.save(ac_agent.critic.state_dict(),cfg.save_path_critic)
                 # if episode%1==0:
-        # check = {
-        #     'epoch': episode,  # 保存当前的迭代次数
-        #     'actor_state_dict': ac_agent.actor.state_dict(),  # 保存模型参数
-        #     'actor_target_state_dict':ac_agent.actor_target.state_dict(),
-        #     'critic_state_dict': ac_agent.critic.state_dict(),  # 保存模型参数
-        #     'critic_target_state_dict': ac_agent.critic_target.state_dict(),
-        #
-        #     'acotr_optimizer': ac_agent.aopt.state_dict(),  # 保存优化器参数
-        #     'critic_optimizer': ac_agent.copt.state_dict(),  # 保存优化器参数
-        #
-        # }
-        # torch.save(check, 'checkpoint.pth.tar')
-        # np.save('data.npy',memory)
-        # np.save('pointer.npy',pointer)
-        # np.save('VAR.npy',VAR)
+        check = {
+            'epoch': episode,  # 保存当前的迭代次数
+            'actor_state_dict': ddpg_gail.actor_eval.state_dict(),  # 保存模型参数
+            'actor_target_state_dict':ddpg_gail.actor_target.state_dict(),
+            'critic_state_dict': ddpg_gail.critic_eval.state_dict(),  # 保存模型参数
+            'critic_target_state_dict': ddpg_gail.critic_target.state_dict(),
+            'dis_state_dict' : ddpg_gail.discriminator.state_dict(),
+            'dis_optimizer' : ddpg_gail.discriminator_optimizer.state_dict(),
+            'acotr_optimizer': ddpg_gail.actor_optimizer.state_dict(),  # 保存优化器参数
+            'critic_optimizer': ddpg_gail.critic_optimizer.state_dict(),  # 保存优化器参数
+
+        }
+        torch.save(check, 'checkpoint.pth.tar')
+        np.save('data.npy',memory)
+        np.save('pointer.npy',pointer)
+        np.save('VAR.npy',VAR)
                     # break
         # print("train!!")
         # ac_agent.update(buffer_.buffer)
@@ -600,13 +598,12 @@ def train_agent(cfg):
         Writer.add_scalar(tag="ppo_return",scalar_value=now_reward,global_step=i)
         tq_bar.set_postfix({'lastMeanRewards': f'{now_reward:.2f}', 'BEST': f'{bf_reward:.2f}'})
         data_write('./reward.xls', rewards_list)
-        np.save("state.npy", state_list)
-        np.save("action.npy", action_list)
-        # engine.set_param(env_name, 'SimulationCommand', 'stop', nargout=0)
+        data_write('./action.xls', action_list)
+        data_write('./state.xls',state_list)
+        engine.set_param(env_name, 'SimulationCommand', 'stop', nargout=0)
         print("结束")
         episode+=1
 
-    return ac_agent
 
 
 if __name__ == '__main__':
@@ -615,7 +612,7 @@ if __name__ == '__main__':
     # env = gym.make('Pendulum-v1')/
     cfg = Config()
     # ac_agent = train_bc(cfg)
-    ac_agent = train_agent(cfg)
+    train_agent(cfg)
     # ac_agent = train_agent_gail(cfg)
     # ac_agent = PPO(
     #     state_dim=cfg.state_dim,
