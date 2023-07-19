@@ -123,117 +123,120 @@ MDL_INFO_MODEL_FILENAME , 0 , - 1 , ( NULL ) } , {
 335.0 , 335.0 , 335.0 , 335.0 , 269.7676 , 215.8141 , 179.8451 , 154.1529 ,
 134.8838 , 119.8967 , 107.9071 } , { 0.0 , 1000.0 , 2000.0 , 3000.0 , 3221.0
 , 4000.0 , 5000.0 , 6000.0 , 7000.0 , 8000.0 , 9000.0 , 10000.0 } ,
-0.12594458438287154 , - 1.0 , 0.0 , 0.0 , 0.0 , 0.0 , 200.0 , 350.0 , 0.0 ,
-80.0 , 1.0 , 0.0 , 1.0 , 0.1 , 0.1 , 9.5492965855137211 , { 335.0 , 335.0 ,
-335.0 , 335.0 , 335.0 , 269.7676 , 215.8141 , 179.8451 , 154.1529 , 134.8838
-, 119.8967 , 107.9071 } , { 0.0 , 1000.0 , 2000.0 , 3000.0 , 3221.0 , 4000.0
-, 5000.0 , 6000.0 , 7000.0 , 8000.0 , 9000.0 , 10000.0 } , 9.5492965855137211
-, { 335.0 , 335.0 , 335.0 , 335.0 , 335.0 , 269.7676 , 215.8141 , 179.8451 ,
-154.1529 , 134.8838 , 119.8967 , 107.9071 } , { 0.0 , 1000.0 , 2000.0 ,
-3000.0 , 3221.0 , 4000.0 , 5000.0 , 6000.0 , 7000.0 , 8000.0 , 9000.0 ,
-10000.0 } , 7.94 , { 0.0 , 1.0 } , { 5.0 , 9.0 } , { 1.0 , 1.0 , 1.0 , 1.0 ,
-1.0 , 1.0 , 1.0 , 1.0 , 0.7 , 0.35 , 0.0 } , { 0.0 , 10.0 , 20.0 , 30.0 ,
-40.0 , 50.0 , 60.0 , 70.0 , 80.0 , 90.0 , 100.0 } , 0.0 , 1.0 , - 0.001 , 0.0
-, 0.0 , - 110000.0 , 110000.0 , 5.0E+6 , 1.0 , 0.0 , 60.0 , 1.0 , 1.0 ,
-6500.0 , 1.0 , 0.00082466807156732073 , 0.00082466807156732073 , { 11U , 14U
-} } ; void dyjn3zzpfq ( real_T * bjusnx4whz , kfczeuvxuu * localDW ) { *
-bjusnx4whz = gdngfg3ibw . P_35 ; localDW -> g1odrjfioq = gdngfg3ibw . P_2 ;
-localDW -> bg3lclywzp = gdngfg3ibw . P_3 ; } void edcpavqjru ( real_T *
-bjusnx4whz , kfczeuvxuu * localDW ) { * bjusnx4whz = gdngfg3ibw . P_35 ;
-localDW -> g1odrjfioq = gdngfg3ibw . P_2 ; localDW -> bg3lclywzp = gdngfg3ibw
-. P_3 ; } void hjsbdkg1ln ( real_T * bjusnx4whz ) { * bjusnx4whz = gdngfg3ibw
-. P_35 ; } void FCEvPowertrainController ( ezkw1qrycv * const jxp0bqrs0w ,
-const real_T * pmuomho0oz , const real_T * alvykbvthg , const real_T *
-n1wp1ou1xw , const real_T * bdqo4ar2hz , const real_T * lry4q2lo1i , const
-real_T * o12aszhwfy , const real_T * e1yxn5qh1z , real_T * hz5ahzp5ly ,
-real_T * pwb5wjytv1 , real_T * pmexk5h2x0 , real_T * bjusnx4whz , real_T *
-o4yccpoxk1 , real_T * czblpe5kjp , izbd5cj1yx * localB , kfczeuvxuu * localDW
-) { real_T c3qci12jwl ; real_T epaudbxea0 ; real_T felptuhmla ; real_T
-fhmuixpuyr ; real_T flx1slgozo ; real_T gllwqukroy ; real_T gnas53r2id ;
-real_T hbm3cdzw32 ; real_T jvunm55ipg ; real_T pi5mlnmfps ; boolean_T
-g4gkplaarz ; boolean_T homkortknc ; if ( gdngfg3ibw . P_61 > gdngfg3ibw .
-P_30 ) { hbm3cdzw32 = gdngfg3ibw . P_60 ; } else { hbm3cdzw32 = * alvykbvthg
-; } jvunm55ipg = * o12aszhwfy ; if ( jvunm55ipg > gdngfg3ibw . P_31 ) {
-jvunm55ipg = gdngfg3ibw . P_31 ; } else if ( jvunm55ipg < gdngfg3ibw . P_32 )
-{ jvunm55ipg = gdngfg3ibw . P_32 ; } pi5mlnmfps = * e1yxn5qh1z / jvunm55ipg ;
-if ( pi5mlnmfps > gdngfg3ibw . P_33 ) { * pmexk5h2x0 = gdngfg3ibw . P_33 ; }
-else if ( pi5mlnmfps < gdngfg3ibw . P_34 ) { * pmexk5h2x0 = gdngfg3ibw . P_34
-; } else { * pmexk5h2x0 = pi5mlnmfps ; } * bjusnx4whz = gdngfg3ibw . P_35 ;
-pi5mlnmfps = * bdqo4ar2hz - gdngfg3ibw . P_62 ; if ( rtmGetTaskTime (
-jxp0bqrs0w , 0 ) < gdngfg3ibw . P_36 ) { gllwqukroy = gdngfg3ibw . P_37 ; }
-else { gllwqukroy = gdngfg3ibw . P_38 ; } pi5mlnmfps *= gllwqukroy ; localB
--> ahntzafefg = gdngfg3ibw . P_1 * pi5mlnmfps ; localB -> lb1f33xvgn = (
-gdngfg3ibw . P_0 * pi5mlnmfps - localDW -> g1odrjfioq ) * gdngfg3ibw . P_4 ;
-gllwqukroy = gdngfg3ibw . P_41 * * lry4q2lo1i ; jvunm55ipg = look1_binlcapw (
-gllwqukroy , gdngfg3ibw . P_43 , gdngfg3ibw . P_42 , 11U ) ; g4gkplaarz = ( *
-pmuomho0oz > gdngfg3ibw . P_6 ) ; hbm3cdzw32 = hbm3cdzw32 * gdngfg3ibw . P_59
-* gdngfg3ibw . P_67 ; gllwqukroy = gdngfg3ibw . P_44 * * lry4q2lo1i ;
-gnas53r2id = look1_binlcapw ( * n1wp1ou1xw , gdngfg3ibw . P_49 , gdngfg3ibw .
-P_48 , 1U ) ; fhmuixpuyr = look1_binlcapw ( * bdqo4ar2hz , gdngfg3ibw . P_51
-, gdngfg3ibw . P_50 , 10U ) ; gllwqukroy = muDoubleScalarMin ( hbm3cdzw32 ,
-gdngfg3ibw . P_47 * look1_binlcapw ( gllwqukroy , gdngfg3ibw . P_46 ,
-gdngfg3ibw . P_45 , 11U ) ) * ( gnas53r2id * fhmuixpuyr ) ; if ( g4gkplaarz )
-{ gnas53r2id = gdngfg3ibw . P_23 * * lry4q2lo1i ; gnas53r2id = * pmuomho0oz *
-look1_binlcapw ( gnas53r2id , gdngfg3ibw . P_25 , gdngfg3ibw . P_24 , 11U ) ;
-} else { gnas53r2id = gdngfg3ibw . P_26 * gllwqukroy * gdngfg3ibw . P_27 ; }
-fhmuixpuyr = muDoubleScalarAbs ( * lry4q2lo1i ) ; if ( ! ( fhmuixpuyr <
-gdngfg3ibw . P_7 ) ) { fhmuixpuyr = look1_binlcapw ( * bdqo4ar2hz ,
-gdngfg3ibw . P_13 , gdngfg3ibw . P_12 , 10U ) ; fhmuixpuyr *= gdngfg3ibw .
-P_58 ; epaudbxea0 = look1_binlcapw ( * bdqo4ar2hz , gdngfg3ibw . P_15 ,
-gdngfg3ibw . P_14 , 10U ) ; epaudbxea0 *= gdngfg3ibw . P_57 ; flx1slgozo = *
-lry4q2lo1i * gnas53r2id ; if ( flx1slgozo >= gdngfg3ibw . P_16 ) { felptuhmla
-= gdngfg3ibw . P_9 ; } else { felptuhmla = gdngfg3ibw . P_10 ; } c3qci12jwl =
-gdngfg3ibw . P_17 * * lry4q2lo1i ; c3qci12jwl = gdngfg3ibw . P_21 *
-look2_binlcapw ( muDoubleScalarAbs ( c3qci12jwl ) , muDoubleScalarAbs (
-gnas53r2id ) , gdngfg3ibw . P_19 , gdngfg3ibw . P_20 , gdngfg3ibw . P_18 ,
-gdngfg3ibw . P_69 , 12U ) ; if ( ( c3qci12jwl < 0.0 ) && ( felptuhmla >
-muDoubleScalarFloor ( felptuhmla ) ) ) { felptuhmla = - muDoubleScalarPower (
-- c3qci12jwl , felptuhmla ) ; } else { felptuhmla = muDoubleScalarPower (
-c3qci12jwl , felptuhmla ) ; } c3qci12jwl = flx1slgozo * felptuhmla ; if ( ( !
-( fhmuixpuyr - c3qci12jwl >= gdngfg3ibw . P_28 ) ) || ( ! ( epaudbxea0 -
-c3qci12jwl <= gdngfg3ibw . P_29 ) ) ) { g4gkplaarz = ( * lry4q2lo1i <=
-gdngfg3ibw . P_8 ) ; homkortknc = ( * lry4q2lo1i >= - gdngfg3ibw . P_8 ) ; if
-( homkortknc && g4gkplaarz ) { gnas53r2id = * lry4q2lo1i / 2.0 ; if ( *
-lry4q2lo1i >= gdngfg3ibw . P_11 ) { flx1slgozo = gdngfg3ibw . P_66 ; } else {
-flx1slgozo = localB -> lb1f33xvgn_mbvzarwird ; } gnas53r2id = 4.0 / ( 3.0 -
-muDoubleScalarPower ( gnas53r2id , 2.0 ) ) * flx1slgozo ; } else { gnas53r2id
-= * lry4q2lo1i ; } if ( ! ( c3qci12jwl > fhmuixpuyr ) ) { if ( c3qci12jwl <
-epaudbxea0 ) { fhmuixpuyr = epaudbxea0 ; } else { fhmuixpuyr = c3qci12jwl ; }
-} gnas53r2id = fhmuixpuyr / felptuhmla / gnas53r2id ; } } if ( gnas53r2id >
-jvunm55ipg ) { * hz5ahzp5ly = jvunm55ipg ; } else { jvunm55ipg *= gdngfg3ibw
-. P_22 ; if ( gnas53r2id < jvunm55ipg ) { * hz5ahzp5ly = jvunm55ipg ; } else
-{ * hz5ahzp5ly = gnas53r2id ; } } jvunm55ipg = * lry4q2lo1i ; if ( jvunm55ipg
-> gdngfg3ibw . P_52 ) { jvunm55ipg = gdngfg3ibw . P_52 ; } else if (
-jvunm55ipg < gdngfg3ibw . P_53 ) { jvunm55ipg = gdngfg3ibw . P_53 ; } *
-o4yccpoxk1 = * hz5ahzp5ly * jvunm55ipg ; pi5mlnmfps = * o4yccpoxk1 - ( (
-gdngfg3ibw . P_5 * pi5mlnmfps + localDW -> bg3lclywzp ) + localB ->
-lb1f33xvgn ) ; * czblpe5kjp = gdngfg3ibw . P_63 / ( muDoubleScalarExp ( (
-pi5mlnmfps - gdngfg3ibw . P_65 ) * gdngfg3ibw . P_54 ) + gdngfg3ibw . P_64 )
-* pi5mlnmfps ; jvunm55ipg = hbm3cdzw32 - gllwqukroy ; if ( jvunm55ipg >
-gdngfg3ibw . P_55 ) { jvunm55ipg = gdngfg3ibw . P_55 ; } else if ( jvunm55ipg
-< gdngfg3ibw . P_56 ) { jvunm55ipg = gdngfg3ibw . P_56 ; } * pwb5wjytv1 =
-jvunm55ipg / gdngfg3ibw . P_68 ; } void FCEvPowertrainControllerTID1 (
-izbd5cj1yx * localB ) { localB -> lb1f33xvgn_mbvzarwird = - gdngfg3ibw . P_66
-; } void otjhyqv5ki ( izbd5cj1yx * localB , kfczeuvxuu * localDW ) { localDW
--> g1odrjfioq += gdngfg3ibw . P_39 * localB -> lb1f33xvgn ; localDW ->
-bg3lclywzp += gdngfg3ibw . P_40 * localB -> ahntzafefg ; } void bsdghwadnz (
-ezkw1qrycv * const jxp0bqrs0w ) { if ( ! slIsRapidAcceleratorSimulating ( ) )
-{ slmrRunPluginEvent ( jxp0bqrs0w -> _mdlRefSfcnS ,
-"FCEvPowertrainController" , "SIMSTATUS_TERMINATING_MODELREF_ACCEL_EVENT" ) ;
-} } void k2oudzyk03 ( SimStruct * _mdlRefSfcnS , int_T mdlref_TID0 , int_T
-mdlref_TID1 , ezkw1qrycv * const jxp0bqrs0w , izbd5cj1yx * localB ,
-kfczeuvxuu * localDW , void * sysRanPtr , int contextTid ,
-rtwCAPI_ModelMappingInfo * rt_ParentMMI , const char_T * rt_ChildPath , int_T
-rt_ChildMMIIdx , int_T rt_CSTATEIdx ) { rt_InitInfAndNaN ( sizeof ( real_T )
-) ; gdngfg3ibw . P_31 = rtInf ; gdngfg3ibw . P_52 = rtInf ; gdngfg3ibw . P_55
-= rtInf ; ( void ) memset ( ( void * ) jxp0bqrs0w , 0 , sizeof ( ezkw1qrycv )
-) ; jxp0bqrs0w -> Timing . mdlref_GlobalTID [ 0 ] = mdlref_TID0 ; jxp0bqrs0w
--> Timing . mdlref_GlobalTID [ 1 ] = mdlref_TID1 ; jxp0bqrs0w -> _mdlRefSfcnS
-= ( _mdlRefSfcnS ) ; if ( ! slIsRapidAcceleratorSimulating ( ) ) {
+0.12594458438287154 , - 1.0 , 0.0 , 0.0 , 0.0 , 9.5492965855137211 , { 335.0
+, 335.0 , 335.0 , 335.0 , 335.0 , 269.7676 , 215.8141 , 179.8451 , 154.1529 ,
+134.8838 , 119.8967 , 107.9071 } , { 0.0 , 1000.0 , 2000.0 , 3000.0 , 3221.0
+, 4000.0 , 5000.0 , 6000.0 , 7000.0 , 8000.0 , 9000.0 , 10000.0 } ,
+9.5492965855137211 , { 335.0 , 335.0 , 335.0 , 335.0 , 335.0 , 269.7676 ,
+215.8141 , 179.8451 , 154.1529 , 134.8838 , 119.8967 , 107.9071 } , { 0.0 ,
+1000.0 , 2000.0 , 3000.0 , 3221.0 , 4000.0 , 5000.0 , 6000.0 , 7000.0 ,
+8000.0 , 9000.0 , 10000.0 } , 7.94 , { 0.0 , 1.0 } , { 5.0 , 9.0 } , { 1.0 ,
+1.0 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , 0.7 , 0.35 , 0.0 } , { 0.0 , 10.0 ,
+20.0 , 30.0 , 40.0 , 50.0 , 60.0 , 70.0 , 80.0 , 90.0 , 100.0 } , 0.0 , 1.0 ,
+1.0 , 0.0 , 1.0 , 0.1 , 0.1 , - 0.001 , 0.0 , 0.0 , 0.0 , 200.0 , 350.0 , 0.0
+, 80.0 , 0.0 , 0.0 , - 110000.0 , 110000.0 , 5.0E+6 , 1.0 , 0.0 , 60.0 , 1.0
+, 1.0 , 6500.0 , 1.0 , 0.00082466807156732073 , 0.00082466807156732073 , {
+11U , 14U } } ; void dyjn3zzpfq ( real_T * bjusnx4whz , kfczeuvxuu * localDW
+) { localDW -> bg3lclywzp = gdngfg3ibw . P_3 ; localDW -> g1odrjfioq =
+gdngfg3ibw . P_2 ; * bjusnx4whz = gdngfg3ibw . P_56 ; } void edcpavqjru (
+real_T * bjusnx4whz , kfczeuvxuu * localDW ) { localDW -> bg3lclywzp =
+gdngfg3ibw . P_3 ; localDW -> g1odrjfioq = gdngfg3ibw . P_2 ; * bjusnx4whz =
+gdngfg3ibw . P_56 ; } void hjsbdkg1ln ( real_T * bjusnx4whz ) { * bjusnx4whz
+= gdngfg3ibw . P_56 ; } void FCEvPowertrainController ( ezkw1qrycv * const
+jxp0bqrs0w , const real_T * pmuomho0oz , const real_T * alvykbvthg , const
+real_T * n1wp1ou1xw , const real_T * bdqo4ar2hz , const real_T * lry4q2lo1i ,
+const real_T * o12aszhwfy , real_T * hz5ahzp5ly , real_T * pwb5wjytv1 ,
+real_T * pmexk5h2x0 , real_T * bjusnx4whz , real_T * o4yccpoxk1 , real_T *
+czblpe5kjp , izbd5cj1yx * localB , kfczeuvxuu * localDW ) { real_T c3qci12jwl
+; real_T epaudbxea0 ; real_T felptuhmla ; real_T fhmuixpuyr ; real_T
+flx1slgozo ; real_T gllwqukroy ; real_T gnas53r2id ; real_T hbm3cdzw32 ;
+real_T jvunm55ipg ; boolean_T g4gkplaarz ; boolean_T homkortknc ; if (
+gdngfg3ibw . P_63 > gdngfg3ibw . P_30 ) { hbm3cdzw32 = gdngfg3ibw . P_62 ; }
+else { hbm3cdzw32 = * alvykbvthg ; } gllwqukroy = gdngfg3ibw . P_31 * *
+lry4q2lo1i ; jvunm55ipg = look1_binlcapw ( gllwqukroy , gdngfg3ibw . P_33 ,
+gdngfg3ibw . P_32 , 11U ) ; g4gkplaarz = ( * pmuomho0oz > gdngfg3ibw . P_6 )
+; hbm3cdzw32 = hbm3cdzw32 * gdngfg3ibw . P_61 * gdngfg3ibw . P_69 ;
+gllwqukroy = gdngfg3ibw . P_34 * * lry4q2lo1i ; gnas53r2id = look1_binlcapw (
+* n1wp1ou1xw , gdngfg3ibw . P_39 , gdngfg3ibw . P_38 , 1U ) ; fhmuixpuyr =
+look1_binlcapw ( * bdqo4ar2hz , gdngfg3ibw . P_41 , gdngfg3ibw . P_40 , 10U )
+; gllwqukroy = muDoubleScalarMin ( hbm3cdzw32 , gdngfg3ibw . P_37 *
+look1_binlcapw ( gllwqukroy , gdngfg3ibw . P_36 , gdngfg3ibw . P_35 , 11U ) )
+* ( gnas53r2id * fhmuixpuyr ) ; if ( g4gkplaarz ) { gnas53r2id = gdngfg3ibw .
+P_23 * * lry4q2lo1i ; gnas53r2id = * pmuomho0oz * look1_binlcapw ( gnas53r2id
+, gdngfg3ibw . P_25 , gdngfg3ibw . P_24 , 11U ) ; } else { gnas53r2id =
+gdngfg3ibw . P_26 * gllwqukroy * gdngfg3ibw . P_27 ; } fhmuixpuyr =
+muDoubleScalarAbs ( * lry4q2lo1i ) ; if ( ! ( fhmuixpuyr < gdngfg3ibw . P_7 )
+) { fhmuixpuyr = look1_binlcapw ( * bdqo4ar2hz , gdngfg3ibw . P_13 ,
+gdngfg3ibw . P_12 , 10U ) ; fhmuixpuyr *= gdngfg3ibw . P_60 ; epaudbxea0 =
+look1_binlcapw ( * bdqo4ar2hz , gdngfg3ibw . P_15 , gdngfg3ibw . P_14 , 10U )
+; epaudbxea0 *= gdngfg3ibw . P_59 ; flx1slgozo = * lry4q2lo1i * gnas53r2id ;
+if ( flx1slgozo >= gdngfg3ibw . P_16 ) { felptuhmla = gdngfg3ibw . P_9 ; }
+else { felptuhmla = gdngfg3ibw . P_10 ; } c3qci12jwl = gdngfg3ibw . P_17 * *
+lry4q2lo1i ; c3qci12jwl = gdngfg3ibw . P_21 * look2_binlcapw (
+muDoubleScalarAbs ( c3qci12jwl ) , muDoubleScalarAbs ( gnas53r2id ) ,
+gdngfg3ibw . P_19 , gdngfg3ibw . P_20 , gdngfg3ibw . P_18 , gdngfg3ibw . P_71
+, 12U ) ; if ( ( c3qci12jwl < 0.0 ) && ( felptuhmla > muDoubleScalarFloor (
+felptuhmla ) ) ) { felptuhmla = - muDoubleScalarPower ( - c3qci12jwl ,
+felptuhmla ) ; } else { felptuhmla = muDoubleScalarPower ( c3qci12jwl ,
+felptuhmla ) ; } c3qci12jwl = flx1slgozo * felptuhmla ; if ( ( ! ( fhmuixpuyr
+- c3qci12jwl >= gdngfg3ibw . P_28 ) ) || ( ! ( epaudbxea0 - c3qci12jwl <=
+gdngfg3ibw . P_29 ) ) ) { g4gkplaarz = ( * lry4q2lo1i <= gdngfg3ibw . P_8 ) ;
+homkortknc = ( * lry4q2lo1i >= - gdngfg3ibw . P_8 ) ; if ( homkortknc &&
+g4gkplaarz ) { gnas53r2id = * lry4q2lo1i / 2.0 ; if ( * lry4q2lo1i >=
+gdngfg3ibw . P_11 ) { flx1slgozo = gdngfg3ibw . P_68 ; } else { flx1slgozo =
+localB -> fqz0pqpsux ; } gnas53r2id = 4.0 / ( 3.0 - muDoubleScalarPower (
+gnas53r2id , 2.0 ) ) * flx1slgozo ; } else { gnas53r2id = * lry4q2lo1i ; } if
+( ! ( c3qci12jwl > fhmuixpuyr ) ) { if ( c3qci12jwl < epaudbxea0 ) {
+fhmuixpuyr = epaudbxea0 ; } else { fhmuixpuyr = c3qci12jwl ; } } gnas53r2id =
+fhmuixpuyr / felptuhmla / gnas53r2id ; } } if ( gnas53r2id > jvunm55ipg ) { *
+hz5ahzp5ly = jvunm55ipg ; } else { jvunm55ipg *= gdngfg3ibw . P_22 ; if (
+gnas53r2id < jvunm55ipg ) { * hz5ahzp5ly = jvunm55ipg ; } else { * hz5ahzp5ly
+= gnas53r2id ; } } gnas53r2id = * lry4q2lo1i ; if ( gnas53r2id > gdngfg3ibw .
+P_42 ) { gnas53r2id = gdngfg3ibw . P_42 ; } else if ( gnas53r2id < gdngfg3ibw
+. P_43 ) { gnas53r2id = gdngfg3ibw . P_43 ; } * o4yccpoxk1 = * hz5ahzp5ly *
+gnas53r2id ; jvunm55ipg = * bdqo4ar2hz - gdngfg3ibw . P_64 ; if (
+rtmGetTaskTime ( jxp0bqrs0w , 0 ) < gdngfg3ibw . P_44 ) { fhmuixpuyr =
+gdngfg3ibw . P_45 ; } else { fhmuixpuyr = gdngfg3ibw . P_46 ; } jvunm55ipg *=
+fhmuixpuyr ; localB -> hr4pejxjlj = ( gdngfg3ibw . P_0 * jvunm55ipg - localDW
+-> g1odrjfioq ) * gdngfg3ibw . P_4 ; gnas53r2id = * o4yccpoxk1 - ( (
+gdngfg3ibw . P_5 * jvunm55ipg + localDW -> bg3lclywzp ) + localB ->
+hr4pejxjlj ) ; * czblpe5kjp = gdngfg3ibw . P_65 / ( muDoubleScalarExp ( (
+gnas53r2id - gdngfg3ibw . P_67 ) * gdngfg3ibw . P_49 ) + gdngfg3ibw . P_66 )
+* gnas53r2id ; gnas53r2id = * o12aszhwfy ; localB -> mg3f3gvtge = gdngfg3ibw
+. P_1 * jvunm55ipg ; if ( * czblpe5kjp > gdngfg3ibw . P_50 ) { fhmuixpuyr =
+gdngfg3ibw . P_50 ; } else if ( * czblpe5kjp < gdngfg3ibw . P_51 ) {
+fhmuixpuyr = gdngfg3ibw . P_51 ; } else { fhmuixpuyr = * czblpe5kjp ; } if (
+gnas53r2id > gdngfg3ibw . P_52 ) { gnas53r2id = gdngfg3ibw . P_52 ; } else if
+( gnas53r2id < gdngfg3ibw . P_53 ) { gnas53r2id = gdngfg3ibw . P_53 ; }
+gnas53r2id = fhmuixpuyr / gnas53r2id ; if ( gnas53r2id > gdngfg3ibw . P_54 )
+{ * pmexk5h2x0 = gdngfg3ibw . P_54 ; } else if ( gnas53r2id < gdngfg3ibw .
+P_55 ) { * pmexk5h2x0 = gdngfg3ibw . P_55 ; } else { * pmexk5h2x0 =
+gnas53r2id ; } * bjusnx4whz = gdngfg3ibw . P_56 ; gnas53r2id = hbm3cdzw32 -
+gllwqukroy ; if ( gnas53r2id > gdngfg3ibw . P_57 ) { gnas53r2id = gdngfg3ibw
+. P_57 ; } else if ( gnas53r2id < gdngfg3ibw . P_58 ) { gnas53r2id =
+gdngfg3ibw . P_58 ; } * pwb5wjytv1 = gnas53r2id / gdngfg3ibw . P_70 ; } void
+FCEvPowertrainControllerTID1 ( izbd5cj1yx * localB ) { localB -> fqz0pqpsux =
+- gdngfg3ibw . P_68 ; } void otjhyqv5ki ( izbd5cj1yx * localB , kfczeuvxuu *
+localDW ) { localDW -> bg3lclywzp += gdngfg3ibw . P_47 * localB -> mg3f3gvtge
+; localDW -> g1odrjfioq += gdngfg3ibw . P_48 * localB -> hr4pejxjlj ; } void
+bsdghwadnz ( ezkw1qrycv * const jxp0bqrs0w ) { if ( !
+slIsRapidAcceleratorSimulating ( ) ) { slmrRunPluginEvent ( jxp0bqrs0w ->
+_mdlRefSfcnS , "FCEvPowertrainController" ,
+"SIMSTATUS_TERMINATING_MODELREF_ACCEL_EVENT" ) ; } } void k2oudzyk03 (
+SimStruct * _mdlRefSfcnS , int_T mdlref_TID0 , int_T mdlref_TID1 , ezkw1qrycv
+* const jxp0bqrs0w , izbd5cj1yx * localB , kfczeuvxuu * localDW , void *
+sysRanPtr , int contextTid , rtwCAPI_ModelMappingInfo * rt_ParentMMI , const
+char_T * rt_ChildPath , int_T rt_ChildMMIIdx , int_T rt_CSTATEIdx ) {
+rt_InitInfAndNaN ( sizeof ( real_T ) ) ; gdngfg3ibw . P_42 = rtInf ;
+gdngfg3ibw . P_50 = rtInf ; gdngfg3ibw . P_52 = rtInf ; gdngfg3ibw . P_57 =
+rtInf ; ( void ) memset ( ( void * ) jxp0bqrs0w , 0 , sizeof ( ezkw1qrycv ) )
+; jxp0bqrs0w -> Timing . mdlref_GlobalTID [ 0 ] = mdlref_TID0 ; jxp0bqrs0w ->
+Timing . mdlref_GlobalTID [ 1 ] = mdlref_TID1 ; jxp0bqrs0w -> _mdlRefSfcnS =
+( _mdlRefSfcnS ) ; if ( ! slIsRapidAcceleratorSimulating ( ) ) {
 slmrRunPluginEvent ( jxp0bqrs0w -> _mdlRefSfcnS , "FCEvPowertrainController"
-, "START_OF_SIM_MODEL_MODELREF_ACCEL_EVENT" ) ; } { localB -> ahntzafefg =
-0.0 ; localB -> lb1f33xvgn = 0.0 ; localB -> lb1f33xvgn_mbvzarwird = 0.0 ; }
-localDW -> g1odrjfioq = 0.0 ; localDW -> bg3lclywzp = 0.0 ;
+, "START_OF_SIM_MODEL_MODELREF_ACCEL_EVENT" ) ; } { localB -> hr4pejxjlj =
+0.0 ; localB -> mg3f3gvtge = 0.0 ; localB -> fqz0pqpsux = 0.0 ; } localDW ->
+bg3lclywzp = 0.0 ; localDW -> g1odrjfioq = 0.0 ;
 FCEvPowertrainController_InitializeDataMapInfo ( jxp0bqrs0w , localDW ,
 sysRanPtr , contextTid ) ; if ( ( rt_ParentMMI != ( NULL ) ) && (
 rt_ChildPath != ( NULL ) ) ) { rtwCAPI_SetChildMMI ( * rt_ParentMMI ,
@@ -264,7 +267,7 @@ mr_FCEvPowertrainController_cacheBitFieldToMxArray ( mxArray * destArray ,
 mwIndex i , int j , uint_T bitVal ) ; static void
 mr_FCEvPowertrainController_cacheBitFieldToMxArray ( mxArray * destArray ,
 mwIndex i , int j , uint_T bitVal ) { mxSetFieldByNumber ( destArray , i , j
-, mxCreateDoubleScalar ( ( double ) bitVal ) ) ; } static uint_T
+, mxCreateDoubleScalar ( ( real_T ) bitVal ) ) ; } static uint_T
 mr_FCEvPowertrainController_extractBitFieldFromMxArray ( const mxArray *
 srcArray , mwIndex i , int j , uint_T numBits ) ; static uint_T
 mr_FCEvPowertrainController_extractBitFieldFromMxArray ( const mxArray *
@@ -292,7 +295,7 @@ void mr_FCEvPowertrainController_cacheBitFieldToCellArrayWithOffset ( mxArray
 void mr_FCEvPowertrainController_cacheBitFieldToCellArrayWithOffset ( mxArray
 * destArray , mwIndex i , int j , mwIndex offset , uint_T fieldVal ) {
 mxSetCell ( mxGetFieldByNumber ( destArray , i , j ) , offset ,
-mxCreateDoubleScalar ( ( double ) fieldVal ) ) ; } static uint_T
+mxCreateDoubleScalar ( ( real_T ) fieldVal ) ) ; } static uint_T
 mr_FCEvPowertrainController_extractBitFieldFromCellArrayWithOffset ( const
 mxArray * srcArray , mwIndex i , int j , mwIndex offset , uint_T numBits ) ;
 static uint_T
@@ -301,18 +304,19 @@ mxArray * srcArray , mwIndex i , int j , mwIndex offset , uint_T numBits ) {
 const uint_T fieldVal = ( uint_T ) mxGetScalar ( mxGetCell (
 mxGetFieldByNumber ( srcArray , i , j ) , offset ) ) ; return fieldVal & ( (
 1u << numBits ) - 1u ) ; } mxArray * mr_FCEvPowertrainController_GetDWork (
-const dif03hcjvgl * mdlrefDW ) { static const char * ssDWFieldNames [ 3 ] = {
-"rtb" , "rtdw" , "NULL->rtzce" , } ; mxArray * ssDW = mxCreateStructMatrix (
-1 , 1 , 3 , ssDWFieldNames ) ; mr_FCEvPowertrainController_cacheDataAsMxArray
-( ssDW , 0 , 0 , ( const void * ) & ( mdlrefDW -> rtb ) , sizeof ( mdlrefDW
--> rtb ) ) ; { static const char * rtdwDataFieldNames [ 2 ] = {
-"mdlrefDW->rtdw.g1odrjfioq" , "mdlrefDW->rtdw.bg3lclywzp" , } ; mxArray *
-rtdwData = mxCreateStructMatrix ( 1 , 1 , 2 , rtdwDataFieldNames ) ;
+const dif03hcjvgl * mdlrefDW ) { static const char_T * ssDWFieldNames [ 3 ] =
+{ "rtb" , "rtdw" , "NULL->rtzce" , } ; mxArray * ssDW = mxCreateStructMatrix
+( 1 , 1 , 3 , ssDWFieldNames ) ;
+mr_FCEvPowertrainController_cacheDataAsMxArray ( ssDW , 0 , 0 , ( const void
+* ) & ( mdlrefDW -> rtb ) , sizeof ( mdlrefDW -> rtb ) ) ; { static const
+char_T * rtdwDataFieldNames [ 2 ] = { "mdlrefDW->rtdw.bg3lclywzp" ,
+"mdlrefDW->rtdw.g1odrjfioq" , } ; mxArray * rtdwData = mxCreateStructMatrix (
+1 , 1 , 2 , rtdwDataFieldNames ) ;
 mr_FCEvPowertrainController_cacheDataAsMxArray ( rtdwData , 0 , 0 , ( const
-void * ) & ( mdlrefDW -> rtdw . g1odrjfioq ) , sizeof ( mdlrefDW -> rtdw .
-g1odrjfioq ) ) ; mr_FCEvPowertrainController_cacheDataAsMxArray ( rtdwData ,
-0 , 1 , ( const void * ) & ( mdlrefDW -> rtdw . bg3lclywzp ) , sizeof (
-mdlrefDW -> rtdw . bg3lclywzp ) ) ; mxSetFieldByNumber ( ssDW , 0 , 1 ,
+void * ) & ( mdlrefDW -> rtdw . bg3lclywzp ) , sizeof ( mdlrefDW -> rtdw .
+bg3lclywzp ) ) ; mr_FCEvPowertrainController_cacheDataAsMxArray ( rtdwData ,
+0 , 1 , ( const void * ) & ( mdlrefDW -> rtdw . g1odrjfioq ) , sizeof (
+mdlrefDW -> rtdw . g1odrjfioq ) ) ; mxSetFieldByNumber ( ssDW , 0 , 1 ,
 rtdwData ) ; } ( void ) mdlrefDW ; return ssDW ; } void
 mr_FCEvPowertrainController_SetDWork ( dif03hcjvgl * mdlrefDW , const mxArray
 * ssDW ) { ( void ) ssDW ; ( void ) mdlrefDW ;
@@ -320,13 +324,13 @@ mr_FCEvPowertrainController_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW
 -> rtb ) , ssDW , 0 , 0 , sizeof ( mdlrefDW -> rtb ) ) ; { const mxArray *
 rtdwData = mxGetFieldByNumber ( ssDW , 0 , 1 ) ;
 mr_FCEvPowertrainController_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW
--> rtdw . g1odrjfioq ) , rtdwData , 0 , 0 , sizeof ( mdlrefDW -> rtdw .
-g1odrjfioq ) ) ; mr_FCEvPowertrainController_restoreDataFromMxArray ( ( void
-* ) & ( mdlrefDW -> rtdw . bg3lclywzp ) , rtdwData , 0 , 1 , sizeof (
-mdlrefDW -> rtdw . bg3lclywzp ) ) ; } } void
+-> rtdw . bg3lclywzp ) , rtdwData , 0 , 0 , sizeof ( mdlrefDW -> rtdw .
+bg3lclywzp ) ) ; mr_FCEvPowertrainController_restoreDataFromMxArray ( ( void
+* ) & ( mdlrefDW -> rtdw . g1odrjfioq ) , rtdwData , 0 , 1 , sizeof (
+mdlrefDW -> rtdw . g1odrjfioq ) ) ; } } void
 mr_FCEvPowertrainController_RegisterSimStateChecksum ( SimStruct * S ) {
-const uint32_T chksum [ 4 ] = { 3222612314U , 1477837613U , 18563187U ,
-2416224406U , } ; slmrModelRefRegisterSimStateChecksum ( S ,
+const uint32_T chksum [ 4 ] = { 88546123U , 3175153755U , 803149227U ,
+2735067031U , } ; slmrModelRefRegisterSimStateChecksum ( S ,
 "FCEvPowertrainController" , & chksum [ 0 ] ) ; } mxArray *
 mr_FCEvPowertrainController_GetSimStateDisallowedBlocks ( ) { return ( NULL )
 ; }

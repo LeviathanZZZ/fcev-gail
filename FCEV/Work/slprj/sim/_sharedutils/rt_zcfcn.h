@@ -2,7 +2,6 @@
 #define RTW_HEADER_rt_zcfcn_h_
 #include "zero_crossing_types.h"
 #include "rtwtypes.h"
-#include "solver_zc.h"
 #ifndef slZcHadEvent
 #define slZcHadEvent(ev, zcsDir)       (((ev) & (zcsDir)) != 0x00 )
 #endif

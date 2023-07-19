@@ -35,7 +35,7 @@ static rtwCAPI_Signals rtBlockSignals [ ] = { { 0 , 0 , ( NULL ) , ( NULL ) ,
  "FCEvPowertrainController/Fuel Cell Control/PID Controller1/Integrator/Discrete/Integrator"
 ) , TARGET_STRING ( "DSTATE" ) , "" , 0 , 0 , 0 , 0 , 0 , 0 , - 1 , 0 } , { 0
 , - 1 , ( NULL ) , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 , 0 , - 1 , 0 } }
-; static int_T rt_LoggedStateIdxList [ ] = { 0 , 1 } ;
+; static int_T rt_LoggedStateIdxList [ ] = { 1 , 0 } ;
 #ifndef HOST_CAPI_BUILD
 static void FCEvPowertrainController_InitializeDataAddr ( void * dataAddr [ ]
 , kfczeuvxuu * localDW ) { dataAddr [ 0 ] = ( void * ) ( & localDW ->
@@ -72,7 +72,7 @@ rtContextSystems , loggingMetaInfo , 0 , ( NULL ) , { 0 , ( NULL ) , ( NULL )
 rtBlockSignals , 0 , ( NULL ) , 0 , ( NULL ) , 0 } , { ( NULL ) , 0 , ( NULL
 ) , 0 } , { rtBlockStates , 2 } , { rtDataTypeMap , rtDimensionMap ,
 rtFixPtMap , rtElementMap , rtSampleTimeMap , rtDimensionArray } , "float" ,
-{ 3584253831U , 1904947037U , 2250884539U , 134667796U } , &
+{ 1319162474U , 3783056568U , 2093301137U , 3540852179U } , &
 mmiStaticInfoLogging , 0 , ( boolean_T ) 0 , rt_LoggedStateIdxList } ; const
 rtwCAPI_ModelMappingStaticInfo * FCEvPowertrainController_GetCAPIStaticMap (
 void ) { return & mmiStatic ; }

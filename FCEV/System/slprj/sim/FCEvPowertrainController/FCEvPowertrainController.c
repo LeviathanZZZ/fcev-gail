@@ -264,7 +264,7 @@ mr_FCEvPowertrainController_cacheBitFieldToMxArray ( mxArray * destArray ,
 mwIndex i , int j , uint_T bitVal ) ; static void
 mr_FCEvPowertrainController_cacheBitFieldToMxArray ( mxArray * destArray ,
 mwIndex i , int j , uint_T bitVal ) { mxSetFieldByNumber ( destArray , i , j
-, mxCreateDoubleScalar ( ( double ) bitVal ) ) ; } static uint_T
+, mxCreateDoubleScalar ( ( real_T ) bitVal ) ) ; } static uint_T
 mr_FCEvPowertrainController_extractBitFieldFromMxArray ( const mxArray *
 srcArray , mwIndex i , int j , uint_T numBits ) ; static uint_T
 mr_FCEvPowertrainController_extractBitFieldFromMxArray ( const mxArray *
@@ -292,7 +292,7 @@ void mr_FCEvPowertrainController_cacheBitFieldToCellArrayWithOffset ( mxArray
 void mr_FCEvPowertrainController_cacheBitFieldToCellArrayWithOffset ( mxArray
 * destArray , mwIndex i , int j , mwIndex offset , uint_T fieldVal ) {
 mxSetCell ( mxGetFieldByNumber ( destArray , i , j ) , offset ,
-mxCreateDoubleScalar ( ( double ) fieldVal ) ) ; } static uint_T
+mxCreateDoubleScalar ( ( real_T ) fieldVal ) ) ; } static uint_T
 mr_FCEvPowertrainController_extractBitFieldFromCellArrayWithOffset ( const
 mxArray * srcArray , mwIndex i , int j , mwIndex offset , uint_T numBits ) ;
 static uint_T
@@ -301,13 +301,14 @@ mxArray * srcArray , mwIndex i , int j , mwIndex offset , uint_T numBits ) {
 const uint_T fieldVal = ( uint_T ) mxGetScalar ( mxGetCell (
 mxGetFieldByNumber ( srcArray , i , j ) , offset ) ) ; return fieldVal & ( (
 1u << numBits ) - 1u ) ; } mxArray * mr_FCEvPowertrainController_GetDWork (
-const dif03hcjvgl * mdlrefDW ) { static const char * ssDWFieldNames [ 3 ] = {
-"rtb" , "rtdw" , "NULL->rtzce" , } ; mxArray * ssDW = mxCreateStructMatrix (
-1 , 1 , 3 , ssDWFieldNames ) ; mr_FCEvPowertrainController_cacheDataAsMxArray
-( ssDW , 0 , 0 , ( const void * ) & ( mdlrefDW -> rtb ) , sizeof ( mdlrefDW
--> rtb ) ) ; { static const char * rtdwDataFieldNames [ 2 ] = {
-"mdlrefDW->rtdw.g1odrjfioq" , "mdlrefDW->rtdw.bg3lclywzp" , } ; mxArray *
-rtdwData = mxCreateStructMatrix ( 1 , 1 , 2 , rtdwDataFieldNames ) ;
+const dif03hcjvgl * mdlrefDW ) { static const char_T * ssDWFieldNames [ 3 ] =
+{ "rtb" , "rtdw" , "NULL->rtzce" , } ; mxArray * ssDW = mxCreateStructMatrix
+( 1 , 1 , 3 , ssDWFieldNames ) ;
+mr_FCEvPowertrainController_cacheDataAsMxArray ( ssDW , 0 , 0 , ( const void
+* ) & ( mdlrefDW -> rtb ) , sizeof ( mdlrefDW -> rtb ) ) ; { static const
+char_T * rtdwDataFieldNames [ 2 ] = { "mdlrefDW->rtdw.g1odrjfioq" ,
+"mdlrefDW->rtdw.bg3lclywzp" , } ; mxArray * rtdwData = mxCreateStructMatrix (
+1 , 1 , 2 , rtdwDataFieldNames ) ;
 mr_FCEvPowertrainController_cacheDataAsMxArray ( rtdwData , 0 , 0 , ( const
 void * ) & ( mdlrefDW -> rtdw . g1odrjfioq ) , sizeof ( mdlrefDW -> rtdw .
 g1odrjfioq ) ) ; mr_FCEvPowertrainController_cacheDataAsMxArray ( rtdwData ,
@@ -325,8 +326,8 @@ g1odrjfioq ) ) ; mr_FCEvPowertrainController_restoreDataFromMxArray ( ( void
 * ) & ( mdlrefDW -> rtdw . bg3lclywzp ) , rtdwData , 0 , 1 , sizeof (
 mdlrefDW -> rtdw . bg3lclywzp ) ) ; } } void
 mr_FCEvPowertrainController_RegisterSimStateChecksum ( SimStruct * S ) {
-const uint32_T chksum [ 4 ] = { 3222612314U , 1477837613U , 18563187U ,
-2416224406U , } ; slmrModelRefRegisterSimStateChecksum ( S ,
+const uint32_T chksum [ 4 ] = { 1454959282U , 2723888751U , 3195676658U ,
+2557300750U , } ; slmrModelRefRegisterSimStateChecksum ( S ,
 "FCEvPowertrainController" , & chksum [ 0 ] ) ; } mxArray *
 mr_FCEvPowertrainController_GetSimStateDisallowedBlocks ( ) { return ( NULL )
 ; }

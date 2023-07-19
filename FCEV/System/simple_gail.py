@@ -11,8 +11,8 @@ Writer = SummaryWriter()
 #####################  hyper parameters  ####################
 EPISODES = 200
 EP_STEPS = 200
-LR_ACTOR = 0.001
-LR_CRITIC = 0.002
+LR_ACTOR = 0.003
+LR_CRITIC = 0.003
 GAMMA = 0.9
 TAU = 0.01
 MEMORY_CAPACITY = 10000
@@ -177,6 +177,7 @@ class DDPG(object):
         index = self.pointer % MEMORY_CAPACITY  # replace the old data with new data
         self.memory[index, :] = transition
         self.pointer += 1
+        return self.memory, self.pointer
 
     def choose_action(self, s):
         # print(s)
@@ -276,7 +277,32 @@ class DDPG(object):
         td_error.backward()
         self.critic_optimizer.step()
 
+class OUNoise(object):
+    def __init__(self, action_dim, mu=0.0, theta=0.15, max_sigma=0.3, min_sigma=0, decay_period=100000):
+        self.mu = mu
+        self.theta = theta
+        self.sigma = max_sigma
+        self.max_sigma = max_sigma
+        self.min_sigma = min_sigma
+        self.decay_period = decay_period
+        self.action_dim = action_dim
+        # self.low = action_space.low
+        # self.high = action_space.high
+        self.reset()
 
+    def reset(self):
+        self.state = np.ones(self.action_dim) * self.mu
+
+    def evolve_state(self):
+        x = self.state
+        dx = self.theta * (self.mu - x) + self.sigma * np.random.randn(self.action_dim)
+        self.state = x + dx
+        return self.state
+
+    def get_action(self, action, t=0):
+        ou_state = self.evolve_state()
+        self.sigma = self.max_sigma - (self.max_sigma - self.min_sigma) * min(1.0, t / self.decay_period)
+        return np.clip(action + ou_state, -2.0,2.0)
 ############################### Training ######################################
 # Define the env in gym
 
@@ -288,10 +314,11 @@ def run_ddpg():
     a_dim = env.action_space.shape[0]
     a_bound = env.action_space.high
     a_low_bound = env.action_space.low
-
+    ou_noise = OUNoise(1)
     ddpg = DDPG(a_dim, s_dim, a_bound)
-    var = 3  # the controller of exploration which will decay during training process
+    var = 1  # the controller of exploration which will decay during training process
     t1 = time.time()
+    steps = 0
     for i in range(EPISODES):
         s = env.reset()
         ep_r = 0
@@ -299,12 +326,16 @@ def run_ddpg():
             if RENDER: env.render()
             # add explorative noise to action
             a = ddpg.choose_action(s)
-            a = np.clip(np.random.normal(a, var), a_low_bound, a_bound)
+            # a = np.clip(np.random.normal(a, var), a_low_bound, a_bound)
+            a = ou_noise.get_action(a, steps)
             s_, r, done, info = env.step(a)
             ddpg.store_transition(s, a, r , s_)  # store the transition to memory
+            steps+=1
+            if ddpg.pointer < MEMORY_CAPACITY:
+                var *= 0.9995
 
             if ddpg.pointer > MEMORY_CAPACITY:
-                var *= 0.9995  # decay the exploration controller factor
+                # var *= 0.9995  # decay the exploration controller factor
                 ddpg.learn()
                 torch.save(ddpg.actor_eval.state_dict(), r'.\ddpg_actor.ckpt')
 
@@ -325,13 +356,14 @@ def run_gail():
     a_dim = env.action_space.shape[0]
     a_bound = env.action_space.high
     a_low_bound = env.action_space.low
-
+    ou_noise = OUNoise(1)
     ddpg = DDPG(a_dim, s_dim, a_bound)
     ddpg.actor_eval.load_state_dict(torch.load(r'.\ddpg_actor.ckpt'))
     expert_s,expert_a = sample_expert_data(ddpg,1)
     ddpg_gail = DDPG(a_dim, s_dim, a_bound)
     var = 3  # the controller of exploration which will decay during training process
     t1 = time.time()
+    steps=0
     for i in range(EPISODES):
         s = env.reset()
         ep_r = 0
@@ -339,15 +371,21 @@ def run_gail():
             if RENDER: env.render()
             # add explorative noise to action
             a = ddpg_gail.choose_action(s)
+            # if ddpg.pointer < MEMORY_CAPACITY:
+                # var *= 0.9995
             a = np.clip(np.random.normal(a, var), a_low_bound, a_bound)
+            # a = ou_noise.get_action(a, steps)
+            # print(a,"前")
+            # print(a,"后")
             s_, r, done, info = env.step(a)
             ddpg_gail.store_transition(s, a, r , s_)  # store the transition to memory
 
-            if ddpg_gail.pointer > MEMORY_CAPACITY:
+
+            if ddpg_gail.pointer > 10000:
                 var *= 0.9995  # decay the exploration controller factor
                 ddpg_gail.learn_gail(expert_s,expert_a)
-                torch.save(ddpg_gail.actor_eval.state_dict(), r'.\gail_actor.ckpt')
-
+                # torch.save(ddpg_gail.actor_eval.state_dict(), r'.\gail_actor.ckpt')
+            steps+=1
             s = s_
             ep_r += r
             if j == EP_STEPS - 1:
@@ -469,8 +507,8 @@ def test_GAIL():
 
 if __name__ == '__main__':
     # run_ddpg()
-    # run_gail()
+    run_gail()
     # run_bc()
     # test_DDPG()
     # test_GAIL()
-    test_bc()
+    # test_bc()

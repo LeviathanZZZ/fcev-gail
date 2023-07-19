@@ -35,7 +35,7 @@ LR_ACTOR = 0.0003
 LR_CRITIC = 0.0003
 GAMMA = 0.9
 TAU = 0.01
-MEMORY_CAPACITY = 10000
+# MEMORY_CAPACITY = 20000
 BATCH_SIZE = 256
 Switch = 0
 
@@ -264,8 +264,8 @@ class Config:
     state_dim = 2
     hidden_layers_dim = 256
     action_dim = 1
-    actor_lr = 3e-4
-    critic_lr = 3e-4
+    actor_lr = 1e-3
+    critic_lr = 3e-3
     PPO_kwargs = {
         'lmbda': 0.95,
         'eps': 0.2,
@@ -371,6 +371,7 @@ p = 0
 
 # if Switch == 0:
 episode =0
+MEMORY_CAPACITY = 100000
 def train_agent(cfg):
     print('PPO2训练中...')
     return_list = []
@@ -378,7 +379,7 @@ def train_agent(cfg):
         dict(name='soft', tau=0.005),
         dict(name='hard', rep_iter=600)
     ][0]  # you can try different target replacement strategies
-    VAR = 3
+    VAR = 1
     MEMORY_CAPACITY = 100000
     # ac_agent = DDPG(state_dim=cfg.state_dim,
     #             action_dim=cfg.action_dim,
@@ -401,8 +402,23 @@ def train_agent(cfg):
     ddpg_gail.actor_optimizer.load_state_dict(checkpoint['acotr_optimizer'])  # 加载优化器的[参数
     ddpg_gail.critic_eval.load_state_dict(checkpoint['critic_state_dict'])  # 加载模[型的参数
     ddpg_gail.critic_optimizer.load_state_dict(checkpoint['critic_optimizer'])  # 加载优化[器的参数
-    VAR = np.load('VAR.npy')
-    ddpg_gail.pointer = np.load('pointer.npy')
+    ddpg_gail.discriminator.load_state_dict(checkpoint['dis_state_dict'])
+    ddpg_gail.discriminator_optimizer.load_state_dict(checkpoint['dis_optimizer'])
+    ddpg_gail.memory = np.load('data.npy')
+    # # VAR = np.load('VAR.npy')
+    # ddpg_gail.pointer = np.load('pointer.npy')
+    # checkpoint = torch.load('checkpoint_best.pth.tar')
+    # ddpg_gail.actor_eval.load_state_dict(checkpoint['actor_state_dict'])  # 加载模型的参数
+    # ddpg_gail.actor_target.load_state_dict(checkpoint['actor_target_state_dict'])
+    # ddpg_gail.critic_target.load_state_dict(checkpoint['critic_target_state_dict'])
+    # ddpg_gail.actor_optimizer.load_state_dict(checkpoint['acotr_optimizer'])  # 加载优化器的[参数
+    # ddpg_gail.critic_eval.load_state_dict(checkpoint['critic_state_dict'])  # 加载模[型的参数
+    # ddpg_gail.critic_optimizer.load_state_dict(checkpoint['critic_optimizer'])  # 加载优化[器的参数
+    # ddpg_gail.discriminator.load_state_dict(checkpoint['dis_state_dict'])
+    # ddpg_gail.discriminator_optimizer.load_state_dict(checkpoint['dis_optimizer'])
+    # ddpg_gail.memory = np.load('data_best.npy')
+    # VAR = np.load('VAR_best.npy')
+    # ddpg_gail.pointer = np.load('pointer_best.npy')
     for i in tq_bar:
 
         tq_bar.set_description(f'Episode [ {i + 1} / {cfg.num_episode} ]')
@@ -453,8 +469,8 @@ def train_agent(cfg):
             if Clock - count >= 1:
                 # Clock, soc, P_de = engine.run(float(action), pause_time,nargout=3)
                 action = ddpg_gail.choose_action(state)
-                print("噪声前", action)
-                action = np.clip(np.random.normal(action, VAR), 0, 3.5)
+                # print("噪声前", action)
+                # action = np.clip(np.random.normal(action, VAR), 0, 3.5)
                 # action = ou_noise.get_action(action, steps)
                 # action = (action + np.random.normal(0, VAR, 1)).clip(0.0, 3.5)
                 Clock, soc, v, a,h2,p_de = engine.run(float(action), pause_time, nargout=6)
@@ -535,11 +551,11 @@ def train_agent(cfg):
                 # if (episode_rewards >= cfg.max_episode_rewards) or (steps >= cfg.max_episode_steps):
                 #     break
                 state = next_state
-                # if steps == 2048:
-                if ddpg_gail.pointer > 10000:
-                    print("train!!")
-                    ddpg_gail.learn_gail(expert_s,expert_a)
-                    VAR *= 0.99995
+                # # if steps == 2048:
+                # if ddpg_gail.pointer > 1000:
+                #     print("train!!")
+                #     ddpg_gail.learn_gail(expert_s,expert_a)
+                    # VAR *= 0.99995
                 # np.save('VAR.npy',VAR)
                 # torch.save(ac_agent.actor.state_dict(), cfg.save_path)
                 # torch.save(ac_agent.critic.state_dict(),cfg.save_path_critic)
@@ -591,15 +607,35 @@ def train_agent(cfg):
         #
         # }
         # torch.save(check, 'checkpoint.pth.tar')
+        #################################################################
         if bf_reward < now_reward: #存下reward最好的网络
             bf_reward = now_reward
         #     torch.save(ac_agent.actor.state_dict(), cfg.save_path_best_actor)
         #     torch.save(ac_agent.critic.state_dict(), cfg.save_path_best_critic)
+            check = {
+                'epoch': episode,  # 保存当前的迭代次数
+                'actor_state_dict': ddpg_gail.actor_eval.state_dict(),  # 保存模型参数
+                'actor_target_state_dict': ddpg_gail.actor_target.state_dict(),
+                'critic_state_dict': ddpg_gail.critic_eval.state_dict(),  # 保存模型参数
+                'critic_target_state_dict': ddpg_gail.critic_target.state_dict(),
+                'dis_state_dict': ddpg_gail.discriminator.state_dict(),
+                'dis_optimizer': ddpg_gail.discriminator_optimizer.state_dict(),
+                'acotr_optimizer': ddpg_gail.actor_optimizer.state_dict(),  # 保存优化器参数
+                'critic_optimizer': ddpg_gail.critic_optimizer.state_dict(),  # 保存优化器参数
+
+            }
+            torch.save(check, 'checkpoint_best.pth.tar')
+            np.save('data_best.npy', memory)
+            np.save('pointer_best.npy', pointer)
+            np.save('VAR_best.npy', VAR)
+            np.save('reward_best.npy',bf_reward)
+        ################################################################
+
         Writer.add_scalar(tag="ppo_return",scalar_value=now_reward,global_step=i)
         tq_bar.set_postfix({'lastMeanRewards': f'{now_reward:.2f}', 'BEST': f'{bf_reward:.2f}'})
         data_write('./reward.xls', rewards_list)
-        data_write('./action.xls', action_list)
-        data_write('./state.xls',state_list)
+        # data_write('./action.xls', action_list)
+        # data_write('./state.xls',state_list)
         engine.set_param(env_name, 'SimulationCommand', 'stop', nargout=0)
         print("结束")
         episode+=1

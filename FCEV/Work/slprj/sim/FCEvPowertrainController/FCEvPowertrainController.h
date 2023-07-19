@@ -9,30 +9,29 @@
 #include "fixedpoint.h"
 #endif
 #include "FCEvPowertrainController_types.h"
-#include "rtGetInf.h"
 #include "rtw_modelmap_simtarget.h"
 #include <string.h>
 #include "rt_nonfinite.h"
 #include <stddef.h>
-typedef struct { real_T ahntzafefg ; real_T lb1f33xvgn ; real_T
-lb1f33xvgn_mbvzarwird ; } izbd5cj1yx ; typedef struct { real_T g1odrjfioq ;
-real_T bg3lclywzp ; } kfczeuvxuu ; struct gdngfg3ibwc_ { real_T P_0 ; real_T
-P_1 ; real_T P_2 ; real_T P_3 ; real_T P_4 ; real_T P_5 ; real_T P_6 ; real_T
-P_7 ; real_T P_8 ; real_T P_9 ; real_T P_10 ; real_T P_11 ; real_T P_12 [ 11
-] ; real_T P_13 [ 11 ] ; real_T P_14 [ 11 ] ; real_T P_15 [ 11 ] ; real_T
-P_16 ; real_T P_17 ; real_T P_18 [ 180 ] ; real_T P_19 [ 12 ] ; real_T P_20 [
-15 ] ; real_T P_21 ; real_T P_22 ; real_T P_23 ; real_T P_24 [ 12 ] ; real_T
-P_25 [ 12 ] ; real_T P_26 ; real_T P_27 ; real_T P_28 ; real_T P_29 ; real_T
-P_30 ; real_T P_31 ; real_T P_32 ; real_T P_33 ; real_T P_34 ; real_T P_35 ;
-real_T P_36 ; real_T P_37 ; real_T P_38 ; real_T P_39 ; real_T P_40 ; real_T
-P_41 ; real_T P_42 [ 12 ] ; real_T P_43 [ 12 ] ; real_T P_44 ; real_T P_45 [
-12 ] ; real_T P_46 [ 12 ] ; real_T P_47 ; real_T P_48 [ 2 ] ; real_T P_49 [ 2
-] ; real_T P_50 [ 11 ] ; real_T P_51 [ 11 ] ; real_T P_52 ; real_T P_53 ;
-real_T P_54 ; real_T P_55 ; real_T P_56 ; real_T P_57 ; real_T P_58 ; real_T
-P_59 ; real_T P_60 ; real_T P_61 ; real_T P_62 ; real_T P_63 ; real_T P_64 ;
-real_T P_65 ; real_T P_66 ; real_T P_67 ; real_T P_68 ; uint32_T P_69 [ 2 ] ;
-} ; struct ax55bwwar2 { struct SimStruct_tag * _mdlRefSfcnS ; struct {
-rtwCAPI_ModelMappingInfo mmi ; rtwCAPI_ModelMapLoggingInstanceInfo
+typedef struct { real_T hr4pejxjlj ; real_T mg3f3gvtge ; real_T fqz0pqpsux ;
+} izbd5cj1yx ; typedef struct { real_T bg3lclywzp ; real_T g1odrjfioq ; }
+kfczeuvxuu ; struct gdngfg3ibwc_ { real_T P_0 ; real_T P_1 ; real_T P_2 ;
+real_T P_3 ; real_T P_4 ; real_T P_5 ; real_T P_6 ; real_T P_7 ; real_T P_8 ;
+real_T P_9 ; real_T P_10 ; real_T P_11 ; real_T P_12 [ 11 ] ; real_T P_13 [
+11 ] ; real_T P_14 [ 11 ] ; real_T P_15 [ 11 ] ; real_T P_16 ; real_T P_17 ;
+real_T P_18 [ 180 ] ; real_T P_19 [ 12 ] ; real_T P_20 [ 15 ] ; real_T P_21 ;
+real_T P_22 ; real_T P_23 ; real_T P_24 [ 12 ] ; real_T P_25 [ 12 ] ; real_T
+P_26 ; real_T P_27 ; real_T P_28 ; real_T P_29 ; real_T P_30 ; real_T P_31 ;
+real_T P_32 [ 12 ] ; real_T P_33 [ 12 ] ; real_T P_34 ; real_T P_35 [ 12 ] ;
+real_T P_36 [ 12 ] ; real_T P_37 ; real_T P_38 [ 2 ] ; real_T P_39 [ 2 ] ;
+real_T P_40 [ 11 ] ; real_T P_41 [ 11 ] ; real_T P_42 ; real_T P_43 ; real_T
+P_44 ; real_T P_45 ; real_T P_46 ; real_T P_47 ; real_T P_48 ; real_T P_49 ;
+real_T P_50 ; real_T P_51 ; real_T P_52 ; real_T P_53 ; real_T P_54 ; real_T
+P_55 ; real_T P_56 ; real_T P_57 ; real_T P_58 ; real_T P_59 ; real_T P_60 ;
+real_T P_61 ; real_T P_62 ; real_T P_63 ; real_T P_64 ; real_T P_65 ; real_T
+P_66 ; real_T P_67 ; real_T P_68 ; real_T P_69 ; real_T P_70 ; uint32_T P_71
+[ 2 ] ; } ; struct ax55bwwar2 { struct SimStruct_tag * _mdlRefSfcnS ; struct
+{ rtwCAPI_ModelMappingInfo mmi ; rtwCAPI_ModelMapLoggingInstanceInfo
 mmiLogInstanceInfo ; void * dataAddress [ 2 ] ; int32_T * vardimsAddress [ 2
 ] ; RTWLoggingFcnPtr loggingPtrs [ 2 ] ; sysRanDType * systemRan [ 11 ] ;
 int_T systemTid [ 11 ] ; } DataMapInfo ; struct { int_T mdlref_GlobalTID [ 2
@@ -57,10 +56,9 @@ real_T * bjusnx4whz ) ; extern void otjhyqv5ki ( izbd5cj1yx * localB ,
 kfczeuvxuu * localDW ) ; extern void FCEvPowertrainController ( ezkw1qrycv *
 const jxp0bqrs0w , const real_T * pmuomho0oz , const real_T * alvykbvthg ,
 const real_T * n1wp1ou1xw , const real_T * bdqo4ar2hz , const real_T *
-lry4q2lo1i , const real_T * o12aszhwfy , const real_T * e1yxn5qh1z , real_T *
-hz5ahzp5ly , real_T * pwb5wjytv1 , real_T * pmexk5h2x0 , real_T * bjusnx4whz
-, real_T * o4yccpoxk1 , real_T * czblpe5kjp , izbd5cj1yx * localB ,
-kfczeuvxuu * localDW ) ; extern void FCEvPowertrainControllerTID1 (
-izbd5cj1yx * localB ) ; extern void bsdghwadnz ( ezkw1qrycv * const
-jxp0bqrs0w ) ;
+lry4q2lo1i , const real_T * o12aszhwfy , real_T * hz5ahzp5ly , real_T *
+pwb5wjytv1 , real_T * pmexk5h2x0 , real_T * bjusnx4whz , real_T * o4yccpoxk1
+, real_T * czblpe5kjp , izbd5cj1yx * localB , kfczeuvxuu * localDW ) ; extern
+void FCEvPowertrainControllerTID1 ( izbd5cj1yx * localB ) ; extern void
+bsdghwadnz ( ezkw1qrycv * const jxp0bqrs0w ) ;
 #endif

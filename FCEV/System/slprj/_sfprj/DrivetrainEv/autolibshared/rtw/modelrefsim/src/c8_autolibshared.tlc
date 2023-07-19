@@ -14,13 +14,6 @@
       IsTestPoint  0\
     }\
     ChartData {\
-      Name         "is_c8_autolibshared"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         ""\
-      SrcLocation  ""\
-    }\
-    ChartData {\
       Name         "lastMajorTime"\
       Description  "LastMajorTime"\
       SFName       ""\
@@ -30,6 +23,13 @@
     ChartData {\
       Name         "is_active_c8_autolibshared"\
       Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c8_autolibshared"\
+      Description  "StateActiveChild"\
       SFName       ""\
       Path         ""\
       SrcLocation  ""\

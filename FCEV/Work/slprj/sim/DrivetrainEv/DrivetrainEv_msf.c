@@ -35,7 +35,8 @@ rt_CreateFullPathToTop ( const char * toppath , const char * subpath ) { char
 return false ; } void rt_RAccelReplaceFromFilename ( const char * blockpath ,
 char * fileName ) { ( void ) blockpath ; ( void ) fileName ; } void
 rt_RAccelReplaceToFilename ( const char * blockpath , char * fileName ) { (
-void ) blockpath ; ( void ) fileName ; } void
+void ) blockpath ; ( void ) fileName ; } void * slsa_malloc ( size_t s ) {
+return malloc ( s ) ; } void slsa_free ( void * ptr ) { free ( ptr ) ; } void
 slsaCacheDWorkPointerForSimTargetOP ( void * ss , void * * ptr ) { ( void )
 ss ; ( void ) ptr ; } void slsaCacheDWorkDataForSimTargetOP ( void * ss ,
 void * ptr , unsigned int sizeInBytes ) { ( void ) ss ; ( void ) ptr ; ( void
@@ -215,7 +216,7 @@ if ( ! ssSetNumDWork ( S , 1 ) ) { return ; }
 slmrRegisterSystemInitializeMethod ( S , mdlInitializeConditions ) ;
 slmrRegisterSystemResetMethod ( S , mdlReset ) ;
 slmrRegisterPeriodicOutputUpdateMethod ( S , mdlPeriodicOutputUpdate ) ;
-ssSetSimulinkVersionGeneratedIn ( S , "10.6" ) ; ssSetNeedAbsoluteTime ( S ,
+ssSetSimulinkVersionGeneratedIn ( S , "10.7" ) ; ssSetNeedAbsoluteTime ( S ,
 1 ) ; } static void mdlInitializeSampleTimes ( SimStruct * S ) {
 ssSetSampleTime ( S , 0 , 0 ) ; ssSetOffsetTime ( S , 0 , 0 ) ;
 ssSetSampleTime ( S , 1 , 0 ) ; ssSetOffsetTime ( S , 1 , 1 ) ;

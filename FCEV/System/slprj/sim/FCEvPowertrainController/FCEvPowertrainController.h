@@ -9,7 +9,6 @@
 #include "fixedpoint.h"
 #endif
 #include "FCEvPowertrainController_types.h"
-#include "rtGetInf.h"
 #include "rtw_modelmap_simtarget.h"
 #include <string.h>
 #include "rt_nonfinite.h"

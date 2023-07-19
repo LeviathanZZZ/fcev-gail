@@ -1,0 +1,1 @@
+plot(out.Power,out.eff)

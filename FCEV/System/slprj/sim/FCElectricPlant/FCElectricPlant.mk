@@ -1,666 +1,356 @@
-###########################################################################
-## Makefile generated for component 'FCElectricPlant'. 
-## 
-## Makefile     : FCElectricPlant.mk
-## Generated on : Mon Apr 10 12:19:31 2023
-## Final product: ./FCElectricPlantlib.lib
-## Product type : static library
-## 
-###########################################################################
+﻿# Copyright 1994-2022 The MathWorks, Inc.
+#
+#
+# Abstract:
+#       Template makefile for building a Windows-based stand-alone embedded
+#       real-time version of Simulink model using generated C code and the
+#          Microsoft Visual C/C++ compiler for x64.
+#
+#       Note that this template is automatically customized by the build 
+#       procedure to create "<model>.mk"
+#
+#       The following defines can be used to modify the behavior of the
+#       build:
+#         OPT_OPTS       - Optimization option. See DEFAULT_OPT_OPTS in
+#                          vctools.mak for default.
+#         OPTS           - User specific options.
+#         CPP_OPTS       - C++ compiler options.
+#         USER_SRCS      - Additional user sources, such as files needed by
+#                          S-functions.
+#         USER_INCLUDES  - Additional include paths
+#                          (i.e. USER_INCLUDES="-Iwhere-ever -Iwhere-ever2")
+#
+#       To enable debugging:
+#         set DEBUG_BUILD = 1, which will trigger OPTS=-Zi (may vary with
+#                               compiler version, see compiler doc) 
+#
+#       This template makefile is designed to be used with a system target
+#       file that contains 'rtwgensettings.BuildDirSuffix' see ert.tlc
 
-###########################################################################
-## MACROS
-###########################################################################
 
-# Macro Descriptions:
-# PRODUCT_NAME            Name of the system to build
-# MAKEFILE                Name of this makefile
-# COMPILER_COMMAND_FILE   Compiler command listing model reference header paths
-# CMD_FILE                Command file
-# MODELLIB                Static library target
+#------------------------ Macros read by make_rtw -----------------------------
+#
+# The following macros are read by the build procedure:
+#
+#  MAKECMD         - This is the command used to invoke the make utility
+#  HOST            - What platform this template makefile is targeted for
+#                    (i.e. PC or UNIX)
+#  BUILD           - Invoke make from the build procedure (yes/no)?
+#  SYS_TARGET_FILE - Name of system target file.
 
-PRODUCT_NAME              = FCElectricPlant
-MAKEFILE                  = FCElectricPlant.mk
-MATLAB_ROOT               = E:/MATLAB_R2022b
-MATLAB_BIN                = E:/MATLAB_R2022b/bin
-MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
-START_DIR                 = D:/FCEV_GAIl/FCEV/System
-SOLVER                    = 
-SOLVER_OBJ                = 
-CLASSIC_INTERFACE         = 0
-TGT_FCN_LIB               = ISO_C
+MAKECMD         = nmake
+HOST            = PC
+BUILD           = yes
+SYS_TARGET_FILE = any
+BUILD_SUCCESS	= ^#^#^# Created
+
+# Opt in to simplified format by specifying compatible Toolchain
+TOOLCHAIN_NAME = [\
+    "Microsoft Visual C++ 2022 v17.0 | nmake (64-bit Windows)", \
+    "Microsoft Visual C++ 2019 v16.0 | nmake (64-bit Windows)", \
+    "Microsoft Visual C++ 2017 v15.0 | nmake (64-bit Windows)"]
+
+#---------------------- Tokens expanded by make_rtw ---------------------------
+#
+# The following tokens, when wrapped with "|>" and "<|" are expanded by the
+# build procedure.
+#
+#  MODEL_NAME          - Name of the Simulink block diagram
+#  MODEL_MODULES       - Any additional generated source modules
+#  MAKEFILE_NAME       - Name of makefile created from template makefile <model>.mk
+#  MATLAB_ROOT         - Path to where MATLAB is installed.
+#  S_FUNCTIONS_LIB     - List of S-functions libraries to link.
+#  NUMST               - Number of sample times
+#  NCSTATES            - Number of continuous states
+#  BUILDARGS           - Options passed in at the command line.
+#  MULTITASKING        - yes (1) or no (0): Is solver mode multitasking
+#  INTEGER_CODE        - yes (1) or no (0): Is generated code purely integer
+#  MAT_FILE            - yes (1) or no (0): Should mat file logging be done,
+#                        if 0, the generated code runs indefinitely
+#  MULTI_INSTANCE_CODE - Is the generated code multi instantiable (1/0)?
+#  MODELREFS           - List of referenced models
+#  SHRLIBTARGET        - Is this build intended for generation of a shared library instead 
+#                        of executable (1/0)?
+#  MAKEFILEBUILDER_TGT - Is this build performed by the MakefileBuilder class
+#                        e.g. to create a PIL executable?
+#  STANDALONE_SUPPRESS_EXE - Build the standalone target but only create object code modules 
+#                            and do not build an executable
+
+MODEL                   = FCElectricPlant
+MODULES                 = FCElectricPlant_f9151c4e_1_ds.c FCElectricPlant_f9151c4e_1_ds_zc.c FCElectricPlant_f9151c4e_1_ds_tdxy_p.c FCElectricPlant_f9151c4e_1_ds_dxy_p.c FCElectricPlant_f9151c4e_1_ds_y.c FCElectricPlant_f9151c4e_1_ds_obs_all.c FCElectricPlant_f9151c4e_1_ds_obs_act.c FCElectricPlant_f9151c4e_1_ds_obs_exp.c FCElectricPlant_f9151c4e_1_ds_mode.c FCElectricPlant_f9151c4e_1_ds_vmm.c FCElectricPlant_f9151c4e_1_ds_dxm_p.c FCElectricPlant_f9151c4e_1_ds_m_p.c FCElectricPlant_f9151c4e_1_ds_log.c FCElectricPlant_f9151c4e_1_ds_dxicr_p.c FCElectricPlant_f9151c4e_1_ds_obs_il.c FCElectricPlant_f9151c4e_1_ds_nldv.c FCElectricPlant_f9151c4e_1_ds_dpm_p.c FCElectricPlant_f9151c4e_1_ds_icr.c FCElectricPlant_f9151c4e_1_ds_dnf_v_x.c FCElectricPlant_f9151c4e_1_ds_dnf_p.c FCElectricPlant_f9151c4e_1_ds_lv.c FCElectricPlant_f9151c4e_1_ds_dxm.c FCElectricPlant_f9151c4e_1_ds_tdxf_p.c FCElectricPlant_f9151c4e_1_ds_a.c FCElectricPlant_f9151c4e_1_ds_dxy.c FCElectricPlant_f9151c4e_1_ds_tduf_p.c FCElectricPlant_f9151c4e_1_ds_duf_p.c FCElectricPlant_f9151c4e_1_ds_ic.c FCElectricPlant_f9151c4e_1_ds_slv.c FCElectricPlant_f9151c4e_1_ds_vmf.c FCElectricPlant_f9151c4e_1_ds_dxf_p.c FCElectricPlant_f9151c4e_1_ds_dnf.c FCElectricPlant_f9151c4e_1_ds_dxf.c FCElectricPlant_f9151c4e_1_ds_f.c FCElectricPlant_f9151c4e_1_ds_a_p.c FCElectricPlant_f9151c4e_1_ds_iassert.c FCElectricPlant_f9151c4e_1_ds_m.c FCElectricPlant_f9151c4e_1_ds_assert.c FCElectricPlant_f9151c4e_1_ds_dpdxf_p.c FCElectricPlant_f9151c4e_1_ds_duf.c FCElectricPlant_f9151c4e_1.c FCElectricPlant_f9151c4e_1_gateway.c FCElectricPlant.c FCElectricPlant_capi.c
+PRODUCT                 = FCElectricPlantlib.lib
+MAKEFILE                = FCElectricPlant.mk
+MATLAB_ROOT             = D:\MATLAB2023a
+ALT_MATLAB_ROOT         = D:\MATLAB2023a
+START_DIR               = D:\FCEV_GAIl\FCEV\System
+S_FUNCTIONS_LIB         = 
+NUMST                   = 2
+NCSTATES                = 419
+BUILDARGS               =  GENERATE_ERT_S_FUNCTION=0 GENERATE_ASAP2=0 EXTMODE_STATIC_ALLOC=0 EXTMODE_STATIC_ALLOC_SIZE=1000000 EXTMODE_TRANSPORT=0 TMW_EXTMODE_TESTING=0 OPTS="-DIS_SIM_TARGET -DMATLAB_MEX_FILE -DTID01EQ=0"
+MULTITASKING            = 0
+INTEGER_CODE            = 0
+MAT_FILE                = 0
+ALLOCATIONFCN           = 0
+ONESTEPFCN              = 0
+TERMFCN                 = 1
+ENABLE_SLEXEC_SSBRIDGE  = 1
+MULTI_INSTANCE_CODE     = 0
+CLASSIC_INTERFACE       = 0
+MODELREFS               = 
+TARGET_LANG_EXT         = c
+SHRLIBTARGET            = 0
+MAKEFILEBUILDER_TGT     = 0
+STANDALONE_SUPPRESS_EXE = 0
+OPTIMIZATION_FLAGS      = /DNDEBUG /Od /Oy-
+ADDITIONAL_LDFLAGS      = 
+INTERLEAVED_COMPLEX_FLAGS = -R2018a
+DEFINES_CUSTOM          = 
+DEFINES_OTHER           = -DHAVESTDIO -DMDL_REF_SIM_TGT=1
+COMPILE_FLAGS_OTHER     = 
+SYSTEM_LIBS             = /LIBPATH:"D:\MATLAB2023a\extern\lib\win64\microsoft" libmwipp.lib libfixedpoint.lib libmwmathutil.lib libmwsl_AsyncioQueue.lib sf_runtime.lib libmwslexec_simlog.lib libmwcoder_ToAsyncQueueTgtAppSvc.lib libmwsl_simtarget_instrumentation.lib libmwsl_simtarget_core.lib libmwstringutil.lib
 MODEL_HAS_DYNAMICALLY_LOADED_SFCNS = 0
-RELATIVE_PATH_TO_ANCHOR   = ../../..
-COMPILER_COMMAND_FILE     = FCElectricPlant_comp.rsp
-CMD_FILE                  = FCElectricPlant.rsp
-C_STANDARD_OPTS           = -fwrapv
-CPP_STANDARD_OPTS         = -fwrapv
+
+# To enable debugging:
+# set DEBUG_BUILD = 1
+DEBUG_BUILD             = 0
+
+#--------------------------- Model and reference models -----------------------
 MODELLIB                  = FCElectricPlantlib.lib
-LIBSSC_SLI_RTWSFCN_MINGW64_OBJS = 
-LIBSSC_CORE_RTWSFCN_MINGW64_OBJS = 
-LIBSSC_ST_RTWSFCN_MINGW64_OBJS = 
-LIBMC_RTWSFCN_MINGW64_OBJS = 
-LIBEX_RTWSFCN_MINGW64_OBJS = 
-LIBPM_RTWSFCN_MINGW64_OBJS = 
-
-###########################################################################
-## TOOLCHAIN SPECIFICATIONS
-###########################################################################
-
-# Toolchain Name:          MinGW64 | gmake (64-bit Windows)
-# Supported Version(s):    6.x
-# ToolchainInfo Version:   2022b
-# Specification Revision:  1.0
-# 
-#-------------------------------------------
-# Macros assumed to be defined elsewhere
-#-------------------------------------------
-
-# C_STANDARD_OPTS
-# CPP_STANDARD_OPTS
-# MINGW_ROOT
-# MINGW_C_STANDARD_OPTS
-
-#-----------
-# MACROS
-#-----------
-
-WARN_FLAGS            = -Wall -W -Wwrite-strings -Winline -Wstrict-prototypes -Wnested-externs -Wpointer-arith -Wcast-align
-WARN_FLAGS_MAX        = $(WARN_FLAGS) -Wcast-qual -Wshadow
-CPP_WARN_FLAGS        = -Wall -W -Wwrite-strings -Winline -Wpointer-arith -Wcast-align
-CPP_WARN_FLAGS_MAX    = $(CPP_WARN_FLAGS) -Wcast-qual -Wshadow
-MW_EXTERNLIB_DIR      = $(MATLAB_ROOT)/extern/lib/win64/mingw64
-SHELL                 = %SystemRoot%/system32/cmd.exe
-
-TOOLCHAIN_SRCS = 
-TOOLCHAIN_INCS = 
-TOOLCHAIN_LIBS = -lws2_32
-
-#------------------------
-# BUILD TOOL COMMANDS
-#------------------------
-
-# C Compiler: GNU C Compiler
-CC_PATH = $(MINGW_ROOT)
-CC = "$(CC_PATH)/gcc"
-
-# Linker: GNU Linker
-LD_PATH = $(MINGW_ROOT)
-LD = "$(LD_PATH)/g++"
-
-# C++ Compiler: GNU C++ Compiler
-CPP_PATH = $(MINGW_ROOT)
-CPP = "$(CPP_PATH)/g++"
-
-# C++ Linker: GNU C++ Linker
-CPP_LD_PATH = $(MINGW_ROOT)
-CPP_LD = "$(CPP_LD_PATH)/g++"
-
-# Archiver: GNU Archiver
-AR_PATH = $(MINGW_ROOT)
-AR = "$(AR_PATH)/ar"
-
-# MEX Tool: MEX Tool
-MEX_PATH = $(MATLAB_ARCH_BIN)
-MEX = "$(MEX_PATH)/mex"
-
-# Download: Download
-DOWNLOAD =
-
-# Execute: Execute
-EXECUTE = $(PRODUCT)
-
-# Builder: GMAKE Utility
-MAKE_PATH = %MATLAB%/bin/win64
-MAKE = "$(MAKE_PATH)/gmake"
-
-
-#-------------------------
-# Directives/Utilities
-#-------------------------
-
-CDEBUG              = -g
-C_OUTPUT_FLAG       = -o
-LDDEBUG             = -g
-OUTPUT_FLAG         = -o
-CPPDEBUG            = -g
-CPP_OUTPUT_FLAG     = -o
-CPPLDDEBUG          = -g
-OUTPUT_FLAG         = -o
-ARDEBUG             =
-STATICLIB_OUTPUT_FLAG =
-MEX_DEBUG           = -g
-RM                  = @del
-ECHO                = @echo
-MV                  = @move
-RUN                 =
-
-#----------------------------------------
-# "Faster Builds" Build Configuration
-#----------------------------------------
+MODELREF_LINK_LIBS        = 
+MODELREF_LINK_RSPFILE     = FCElectricPlant_ref.rsp
+COMPILER_COMMAND_FILE     = FCElectricPlant_comp.rsp
+RELATIVE_PATH_TO_ANCHOR   = ..\..\..
+MODELREF_TARGET_TYPE      = SIM
 
-ARFLAGS              = ruvs
-CFLAGS               = -c $(MINGW_C_STANDARD_OPTS) -m64 \
-                       -O0
-CPPFLAGS             = -c $(CPP_STANDARD_OPTS) -m64 \
-                       -O0
-CPP_LDFLAGS          =  -static -m64
-CPP_SHAREDLIB_LDFLAGS  = -shared -Wl,--no-undefined \
-                         -Wl,--out-implib,$(notdir $(basename $(PRODUCT))).lib
-DOWNLOAD_FLAGS       =
-EXECUTE_FLAGS        =
-LDFLAGS              =  -static -m64
-MEX_CPPFLAGS         =
-MEX_CPPLDFLAGS       =
-MEX_CFLAGS           =
-MEX_LDFLAGS          =
-MAKE_FLAGS           = -f $(MAKEFILE)
-SHAREDLIB_LDFLAGS    = -shared -Wl,--no-undefined \
-                       -Wl,--out-implib,$(notdir $(basename $(PRODUCT))).lib
+!if "$(MATLAB_ROOT)" != "$(ALT_MATLAB_ROOT)"
+MATLAB_ROOT = $(ALT_MATLAB_ROOT)
+!endif
 
+#--------------------------- Tool Specifications ------------------------------
+!include $(MATLAB_ROOT)\rtw\c\tools\vctools.mak
 
+CMD_FILE             = $(MODEL).rsp
+
+#------------------------------ Include/Lib Path ------------------------------
+
+INCLUDE = .;$(RELATIVE_PATH_TO_ANCHOR);$(INCLUDE)
+
+#----------------- Compiler and Linker Options --------------------------------
+
+# Optimization Options
+OPT_OPTS = $(DEFAULT_OPT_OPTS)
+
+# General User Options
+!if "$(DEBUG_BUILD)" == "0"
+DBG_FLAG =
+!else
+#   Set OPT_OPTS=-Zi and any additional flags for debugging
+DBG_FLAG = -Zi
+!endif
+
+!if "$(OPTIMIZATION_FLAGS)" != ""
+CC_OPTS = $(OPTS) $(COMPILE_FLAGS_OTHER) $(OPTIMIZATION_FLAGS)
+!else
+CC_OPTS = $(OPTS) $(COMPILE_FLAGS_OTHER) $(OPT_OPTS) 
+!endif
+
+# Defines
+CPP_REQ_DEFINES = -DMODEL=$(MODEL) -DNUMST=$(NUMST) -DNCSTATES=$(NCSTATES) \
+		  -DMAT_FILE=$(MAT_FILE) -DINTEGER_CODE=$(INTEGER_CODE) \
+		  -DONESTEPFCN=$(ONESTEPFCN) -DTERMFCN=$(TERMFCN) \
+		  -DHAVESTDIO -DMULTI_INSTANCE_CODE=$(MULTI_INSTANCE_CODE) \
+		  -DCLASSIC_INTERFACE=$(CLASSIC_INTERFACE) \
+		  -DALLOCATIONFCN=$(ALLOCATIONFCN) \
+		  $(DEFINES_CUSTOM) $(DEFINES_OTHER)
+
+!if "$(MODELREF_TARGET_TYPE)" == "SIM"
+!if "$(ENABLE_SLEXEC_SSBRIDGE)" != "0"
+CPP_REQ_DEFINES = $(CPP_REQ_DEFINES) -DENABLE_SLEXEC_SSBRIDGE=$(ENABLE_SLEXEC_SSBRIDGE)
+!endif
+!else
+CPP_REQ_DEFINES = $(CPP_REQ_DEFINES) -DMT=$(MULTITASKING)
+!endif
+
+CPP_REQ_DEFINES = $(CPP_REQ_DEFINES) -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=$(MODEL_HAS_DYNAMICALLY_LOADED_SFCNS)
+
+CVARSFLAG = $(cvarsdll)
+
+CFLAGS = $(cflags) @$(COMPILER_COMMAND_FILE) $(CVARSFLAG) \
+	 -D_CRT_SECURE_NO_WARNINGS $(DBG_FLAG) $(CC_OPTS) $(CPP_REQ_DEFINES) \
+	 $(USER_INCLUDES)
+
+CPPFLAGS = $(cflags) @$(COMPILER_COMMAND_FILE) $(CVARSFLAG) \
+	   -EHs -D_CRT_SECURE_NO_WARNINGS $(DBG_FLAG) $(CPP_OPTS) $(CC_OPTS) \
+	   $(CPP_REQ_DEFINES) $(USER_INCLUDES)
+
+LDFLAGS = $(ldebug) $(conflags) $(conlibs) $(ADDITIONAL_LDFLAGS)
+
+#----------------------------- Source Files -----------------------------------
+
+ADD_SRCS =
+
+SRCS = $(ADD_SRCS) $(MODULES) $(USER_SRCS)
+
+USER_SRCS =
+
+
+OBJS_CPP_UPPER = $(SRCS:.CPP=.obj)
+OBJS_CPP_LOWER = $(OBJS_CPP_UPPER:.cpp=.obj)
+OBJS_C_UPPER = $(OBJS_CPP_LOWER:.C=.obj)
+OBJS = $(OBJS_C_UPPER:.c=.obj)
+
+#-------------------------- Additional Libraries -------------------------------
+
+LIBS = 
+
+
+LIBS = $(LIBS) $(S_FUNCTIONS_LIB)
+
+#--------------------------------- Rules --------------------------------------
+all: set_environment_variables $(PRODUCT)
+
+!if "$(MODELREF_TARGET_TYPE)" == "NONE"
+#--- Shared library target (.dll) ---
+!if $(SHRLIBTARGET)==1
+$(PRODUCT) : $(OBJS) $(LIBS) $(MODELREF_LINK_LIBS)
+	@cmd /C "echo ### Linking ..."
+	$(LD) $(LDFLAGS) $(LIBS) $(SYSTEM_LIBS) \
+    @$(CMD_FILE) @$(MODELREF_LINK_RSPFILE) -dll -def:$(MODEL).def -out:$@
+	@cmd /C "echo $(BUILD_SUCCESS) dynamically linked library  $(PRODUCT)"
+!else
+!if $(MAKEFILEBUILDER_TGT)==1
+PREBUILT_SRCS  = $(MODULES)
+PREBUILT_OBJS_CPP_UPPER = $(PREBUILT_SRCS:.CPP=.obj)
+PREBUILT_OBJS_CPP_LOWER = $(PREBUILT_OBJS_CPP_UPPER:.cpp=.obj)
+PREBUILT_OBJS_C_UPPER = $(PREBUILT_OBJS_CPP_LOWER:.C=.obj)
+PREBUILT_OBJS = $(PREBUILT_OBJS_C_UPPER:.c=.obj)
+$(PRODUCT) : $(PREBUILT_OBJS) $(OBJS) $(MODELLIB) $(LIBS) $(MODELREF_LINK_LIBS)
+	@cmd /C "echo ### Linking ..."
+	$(LD) $(LDFLAGS) $(MODELLIB) $(LIBS) $(PREBUILT_OBJS) @$(CMD_FILE) @$(MODELREF_LINK_RSPFILE) -out:$@
+	@cmd /C "echo $(BUILD_SUCCESS) executable $(PRODUCT)"
+!else
+!if $(STANDALONE_SUPPRESS_EXE)==1
+#  Build object code only for top level model
+.PHONY: $(PRODUCT)
+$(PRODUCT) : $(OBJS) $(LIBS)
+	@cmd /C "echo $(BUILD_SUCCESS) object modules $(PRODUCT)"
+!else
+#--- Stand-alone model (.exe) ---
+$(PRODUCT) : $(OBJS) $(LIBS) $(MODELREF_LINK_LIBS)
+	@cmd /C "echo ### Linking ..."
+	$(LD) $(LDFLAGS) $(LIBS) @$(CMD_FILE) @$(MODELREF_LINK_RSPFILE) $(SYSTEM_LIBS) -out:$@
+	@cmd /C "echo $(BUILD_SUCCESS) executable $(PRODUCT)"
+!endif
+!endif
+!endif
+!else
+#--- Library target ---
+$(PRODUCT) : $(OBJS) 
+	@cmd /C "echo ### Linking ..."
+	$(LD) -lib /OUT:$(MODELLIB) @$(CMD_FILE)
+	@cmd /C "echo  $(BUILD_SUCCESS) static library $(MODELLIB)"
+!endif	
 
-###########################################################################
-## OUTPUT INFO
-###########################################################################
 
-PRODUCT = ./FCElectricPlantlib.lib
-PRODUCT_TYPE = "static library"
-BUILD_TYPE = "Model Reference Library"
+#-------------------------- Support for building modules ----------------------
+{$(MATLAB_ROOT)\extern\physmod\win64\ex\src}.c.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CFLAGS) $<
 
-###########################################################################
-## INCLUDE PATHS
-###########################################################################
+{$(MATLAB_ROOT)\extern\physmod\win64\mc\src}.c.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CFLAGS) $<
 
-INCLUDES_BUILDINFO = 
+{$(MATLAB_ROOT)\extern\physmod\win64\pm\src}.c.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CFLAGS) $<
 
-INCLUDES = $(INCLUDES_BUILDINFO)
+{$(MATLAB_ROOT)\extern\physmod\win64\ssc_core\src}.c.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CFLAGS) $<
 
-###########################################################################
-## DEFINES
-###########################################################################
+{$(MATLAB_ROOT)\extern\physmod\win64\ssc_sli\src}.c.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CFLAGS) $<
 
-DEFINES_BUILD_ARGS = -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTERMFCN=1 -DONESTEPFCN=0 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0
-DEFINES_CUSTOM = 
-DEFINES_OPTS = -DIS_SIM_TARGET -DMATLAB_MEX_FILE -DTID01EQ=0
-DEFINES_STANDARD = -DMODEL=FCElectricPlant -DNUMST=2 -DNCSTATES=461 -DHAVESTDIO -DMDL_REF_SIM_TGT=1 -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0
+{$(MATLAB_ROOT)\extern\physmod\win64\ssc_st\src}.c.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CFLAGS) $<
 
-DEFINES = $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(DEFINES_STANDARD)
+{$(MATLAB_ROOT)\rtw\c\src}.c.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CFLAGS) $<
 
-###########################################################################
-## SOURCE FILES
-###########################################################################
+{$(MATLAB_ROOT)\simulink\src}.c.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CFLAGS) $<
 
-SRCS = $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_zc.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_tdxy_p.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dxy_p.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_y.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_obs_all.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_obs_act.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_obs_exp.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_mode.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_vmm.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dxm_p.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_m_p.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_log.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dxicr_p.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_obs_il.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_nldv.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dpm_p.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dnf_v_x.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dnf_p.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_lv.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dxm.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_tdxf_p.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_a.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dxy.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_tduf_p.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_duf_p.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_vmf.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dxf_p.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_slv.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_ic.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dnf.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dxf.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_f.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_a_p.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_iassert.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_m.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_assert.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dpdxf_p.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_duf.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_gateway.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_capi.c $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_data.c
 
-ALL_SRCS = $(SRCS)
 
-###########################################################################
-## OBJECTS
-###########################################################################
+{$(MATLAB_ROOT)\extern\physmod\win64\ex\src}.cpp.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CPPFLAGS) $<
 
-OBJS = FCElectricPlant_f9151c4e_1_ds.obj FCElectricPlant_f9151c4e_1_ds_zc.obj FCElectricPlant_f9151c4e_1_ds_tdxy_p.obj FCElectricPlant_f9151c4e_1_ds_dxy_p.obj FCElectricPlant_f9151c4e_1_ds_y.obj FCElectricPlant_f9151c4e_1_ds_obs_all.obj FCElectricPlant_f9151c4e_1_ds_obs_act.obj FCElectricPlant_f9151c4e_1_ds_obs_exp.obj FCElectricPlant_f9151c4e_1_ds_mode.obj FCElectricPlant_f9151c4e_1_ds_vmm.obj FCElectricPlant_f9151c4e_1_ds_dxm_p.obj FCElectricPlant_f9151c4e_1_ds_m_p.obj FCElectricPlant_f9151c4e_1_ds_log.obj FCElectricPlant_f9151c4e_1_ds_dxicr_p.obj FCElectricPlant_f9151c4e_1_ds_obs_il.obj FCElectricPlant_f9151c4e_1_ds_nldv.obj FCElectricPlant_f9151c4e_1_ds_dpm_p.obj FCElectricPlant_f9151c4e_1_ds_dnf_v_x.obj FCElectricPlant_f9151c4e_1_ds_dnf_p.obj FCElectricPlant_f9151c4e_1_ds_lv.obj FCElectricPlant_f9151c4e_1_ds_dxm.obj FCElectricPlant_f9151c4e_1_ds_tdxf_p.obj FCElectricPlant_f9151c4e_1_ds_a.obj FCElectricPlant_f9151c4e_1_ds_dxy.obj FCElectricPlant_f9151c4e_1_ds_tduf_p.obj FCElectricPlant_f9151c4e_1_ds_duf_p.obj FCElectricPlant_f9151c4e_1_ds_vmf.obj FCElectricPlant_f9151c4e_1_ds_dxf_p.obj FCElectricPlant_f9151c4e_1_ds_slv.obj FCElectricPlant_f9151c4e_1_ds_ic.obj FCElectricPlant_f9151c4e_1_ds_dnf.obj FCElectricPlant_f9151c4e_1_ds_dxf.obj FCElectricPlant_f9151c4e_1_ds_f.obj FCElectricPlant_f9151c4e_1_ds_a_p.obj FCElectricPlant_f9151c4e_1_ds_iassert.obj FCElectricPlant_f9151c4e_1_ds_m.obj FCElectricPlant_f9151c4e_1_ds_assert.obj FCElectricPlant_f9151c4e_1_ds_dpdxf_p.obj FCElectricPlant_f9151c4e_1_ds_duf.obj FCElectricPlant_f9151c4e_1.obj FCElectricPlant_f9151c4e_1_gateway.obj FCElectricPlant.obj FCElectricPlant_capi.obj FCElectricPlant_data.obj
+{$(MATLAB_ROOT)\extern\physmod\win64\mc\src}.cpp.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CPPFLAGS) $<
 
-ALL_OBJS = $(OBJS)
+{$(MATLAB_ROOT)\extern\physmod\win64\pm\src}.cpp.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CPPFLAGS) $<
 
-###########################################################################
-## PREBUILT OBJECT FILES
-###########################################################################
+{$(MATLAB_ROOT)\extern\physmod\win64\ssc_core\src}.cpp.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CPPFLAGS) $<
 
-PREBUILT_OBJS = 
+{$(MATLAB_ROOT)\extern\physmod\win64\ssc_sli\src}.cpp.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CPPFLAGS) $<
 
-###########################################################################
-## LIBRARIES
-###########################################################################
+{$(MATLAB_ROOT)\extern\physmod\win64\ssc_st\src}.cpp.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CPPFLAGS) $<
 
-LIBS = $(MATLAB_ROOT)/extern/physmod/win64/ssc_sli/lib/ssc_sli_rtwsfcn_mingw64.lib $(MATLAB_ROOT)/extern/physmod/win64/ssc_core/lib/ssc_core_rtwsfcn_mingw64.lib $(MATLAB_ROOT)/extern/physmod/win64/ssc_st/lib/ssc_st_rtwsfcn_mingw64.lib $(MATLAB_ROOT)/extern/physmod/win64/mc/lib/mc_rtwsfcn_mingw64.lib $(MATLAB_ROOT)/extern/physmod/win64/ex/lib/ex_rtwsfcn_mingw64.lib $(MATLAB_ROOT)/extern/physmod/win64/pm/lib/pm_rtwsfcn_mingw64.lib $(START_DIR)/slprj/sim/_sharedutils/rtwshared.lib
+{$(MATLAB_ROOT)\rtw\c\src}.cpp.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CPPFLAGS) $<
 
-###########################################################################
-## SYSTEM LIBRARIES
-###########################################################################
+{$(MATLAB_ROOT)\simulink\src}.cpp.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CPPFLAGS) $<
 
-SYSTEM_LIBS =  -L"$(MATLAB_ROOT)/extern/lib/win64/mingw64" -llibfixedpoint -llibmwmathutil -llibmwipp -llibmwsl_AsyncioQueue -lsf_runtime -llibmwslexec_simlog -llibmwcoder_ToAsyncQueueTgtAppSvc -llibmwsl_simtarget_instrumentation -llibmwsl_simtarget_core -llibmwstringutil
 
-###########################################################################
-## ADDITIONAL TOOLCHAIN FLAGS
-###########################################################################
 
-#---------------
-# C Compiler
-#---------------
 
-CFLAGS_TFL = -msse2
-CFLAGS_BASIC = $(DEFINES) $(INCLUDES) @$(COMPILER_COMMAND_FILE)
+# Put these rules last, otherwise nmake will check toolboxes first
 
-CFLAGS += $(CFLAGS_TFL) $(CFLAGS_BASIC)
+{$(RELATIVE_PATH_TO_ANCHOR)}.c.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CFLAGS) $<
 
-#-----------------
-# C++ Compiler
-#-----------------
+{$(RELATIVE_PATH_TO_ANCHOR)}.cpp.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CPPFLAGS) $<
 
-CPPFLAGS_TFL = -msse2
-CPPFLAGS_BASIC = $(DEFINES) $(INCLUDES) @$(COMPILER_COMMAND_FILE)
+.c.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CFLAGS) $<
 
-CPPFLAGS += $(CPPFLAGS_TFL) $(CPPFLAGS_BASIC)
+.cpp.obj :
+	@cmd /C "echo ### Compiling $<"
+	$(CC) $(CPPFLAGS) $<
 
-#---------------------
-# MEX C++ Compiler
-#---------------------
+set_environment_variables:
+	@set INCLUDE=$(INCLUDE)
+	@set LIB=$(LIB)
 
-MEX_CPP_Compiler_BASIC =  @$(COMPILER_COMMAND_FILE)
+# Libraries:
 
-MEX_CPPFLAGS += $(MEX_CPP_Compiler_BASIC)
 
-#-----------------
-# MEX Compiler
-#-----------------
 
-MEX_Compiler_BASIC =  @$(COMPILER_COMMAND_FILE)
 
-MEX_CFLAGS += $(MEX_Compiler_BASIC)
 
-###########################################################################
-## INLINED COMMANDS
-###########################################################################
 
+#----------------------------- Dependencies -----------------------------------
 
-MINGW_C_STANDARD_OPTS = $(C_STANDARD_OPTS)
-
-
-###########################################################################
-## PHONY TARGETS
-###########################################################################
-
-.PHONY : all build clean info prebuild download execute
-
-
-all : build
-	@echo "### Successfully generated all binary outputs."
-
-
-build : prebuild $(PRODUCT)
-
-
-prebuild : 
-
-
-download : $(PRODUCT)
-
-
-execute : download
-
-
-###########################################################################
-## FINAL TARGET
-###########################################################################
-
-#---------------------------------
-# Create a static library         
-#---------------------------------
-
-$(PRODUCT) : $(OBJS) $(PREBUILT_OBJS)
-	@echo "### Creating static library "$(PRODUCT)" ..."
-	$(AR) $(ARFLAGS)  $(PRODUCT) @$(CMD_FILE)
-	@echo "### Created: $(PRODUCT)"
-
-
-###########################################################################
-## INTERMEDIATE TARGETS
-###########################################################################
-
-#---------------------
-# SOURCE-TO-OBJECT
-#---------------------
-
-%.obj : %.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.obj : %.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.obj : $(RELATIVE_PATH_TO_ANCHOR)/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.obj : $(RELATIVE_PATH_TO_ANCHOR)/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.obj : $(MATLAB_ROOT)/extern/physmod/win64/ex/src/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.obj : $(MATLAB_ROOT)/extern/physmod/win64/ex/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.obj : $(MATLAB_ROOT)/extern/physmod/win64/mc/src/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.obj : $(MATLAB_ROOT)/extern/physmod/win64/mc/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.obj : $(MATLAB_ROOT)/extern/physmod/win64/pm/src/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.obj : $(MATLAB_ROOT)/extern/physmod/win64/pm/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.obj : $(MATLAB_ROOT)/extern/physmod/win64/ssc_core/src/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.obj : $(MATLAB_ROOT)/extern/physmod/win64/ssc_core/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.obj : $(MATLAB_ROOT)/extern/physmod/win64/ssc_sli/src/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.obj : $(MATLAB_ROOT)/extern/physmod/win64/ssc_sli/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.obj : $(MATLAB_ROOT)/extern/physmod/win64/ssc_st/src/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.obj : $(MATLAB_ROOT)/extern/physmod/win64/ssc_st/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.obj : $(START_DIR)/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.obj : $(START_DIR)/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.obj : $(START_DIR)/slprj/sim/FCElectricPlant/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.obj : $(START_DIR)/slprj/sim/FCElectricPlant/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.obj : $(MATLAB_ROOT)/rtw/c/src/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.obj : $(MATLAB_ROOT)/rtw/c/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.obj : $(MATLAB_ROOT)/simulink/src/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.obj : $(MATLAB_ROOT)/simulink/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_zc.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_zc.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_tdxy_p.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_tdxy_p.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_dxy_p.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dxy_p.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_y.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_y.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_obs_all.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_obs_all.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_obs_act.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_obs_act.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_obs_exp.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_obs_exp.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_mode.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_mode.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_vmm.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_vmm.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_dxm_p.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dxm_p.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_m_p.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_m_p.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_log.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_log.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_dxicr_p.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dxicr_p.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_obs_il.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_obs_il.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_nldv.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_nldv.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_dpm_p.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dpm_p.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_dnf_v_x.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dnf_v_x.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_dnf_p.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dnf_p.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_lv.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_lv.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_dxm.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dxm.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_tdxf_p.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_tdxf_p.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_a.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_a.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_dxy.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dxy.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_tduf_p.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_tduf_p.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_duf_p.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_duf_p.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_vmf.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_vmf.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_dxf_p.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dxf_p.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_slv.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_slv.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_ic.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_ic.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_dnf.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dnf.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_dxf.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dxf.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_f.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_f.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_a_p.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_a_p.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_iassert.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_iassert.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_m.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_m.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_assert.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_assert.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_dpdxf_p.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_dpdxf_p.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_ds_duf.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_ds_duf.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_f9151c4e_1_gateway.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_f9151c4e_1_gateway.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_capi.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_capi.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-FCElectricPlant_data.obj : $(START_DIR)/slprj/sim/FCElectricPlant/FCElectricPlant_data.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-#------------------------
-# BUILDABLE LIBRARIES
-#------------------------
-
-$(MATLAB_ROOT)/extern/physmod/win64/ssc_sli/lib/ssc_sli_rtwsfcn_mingw64.lib : $(LIBSSC_SLI_RTWSFCN_MINGW64_OBJS)
-	@echo "### Creating static library $@ ..."
-	$(AR) $(ARFLAGS)  $@ $(LIBSSC_SLI_RTWSFCN_MINGW64_OBJS)
-
-
-$(MATLAB_ROOT)/extern/physmod/win64/ssc_core/lib/ssc_core_rtwsfcn_mingw64.lib : $(LIBSSC_CORE_RTWSFCN_MINGW64_OBJS)
-	@echo "### Creating static library $@ ..."
-	$(AR) $(ARFLAGS)  $@ $(LIBSSC_CORE_RTWSFCN_MINGW64_OBJS)
-
-
-$(MATLAB_ROOT)/extern/physmod/win64/ssc_st/lib/ssc_st_rtwsfcn_mingw64.lib : $(LIBSSC_ST_RTWSFCN_MINGW64_OBJS)
-	@echo "### Creating static library $@ ..."
-	$(AR) $(ARFLAGS)  $@ $(LIBSSC_ST_RTWSFCN_MINGW64_OBJS)
-
-
-$(MATLAB_ROOT)/extern/physmod/win64/mc/lib/mc_rtwsfcn_mingw64.lib : $(LIBMC_RTWSFCN_MINGW64_OBJS)
-	@echo "### Creating static library $@ ..."
-	$(AR) $(ARFLAGS)  $@ $(LIBMC_RTWSFCN_MINGW64_OBJS)
-
-
-$(MATLAB_ROOT)/extern/physmod/win64/ex/lib/ex_rtwsfcn_mingw64.lib : $(LIBEX_RTWSFCN_MINGW64_OBJS)
-	@echo "### Creating static library $@ ..."
-	$(AR) $(ARFLAGS)  $@ $(LIBEX_RTWSFCN_MINGW64_OBJS)
-
-
-$(MATLAB_ROOT)/extern/physmod/win64/pm/lib/pm_rtwsfcn_mingw64.lib : $(LIBPM_RTWSFCN_MINGW64_OBJS)
-	@echo "### Creating static library $@ ..."
-	$(AR) $(ARFLAGS)  $@ $(LIBPM_RTWSFCN_MINGW64_OBJS)
-
-
-###########################################################################
-## DEPENDENCIES
-###########################################################################
-
-$(ALL_OBJS) : rtw_proj.tmw $(COMPILER_COMMAND_FILE) $(MAKEFILE)
-
-
-###########################################################################
-## MISCELLANEOUS TARGETS
-###########################################################################
-
-info : 
-	@echo "### PRODUCT = $(PRODUCT)"
-	@echo "### PRODUCT_TYPE = $(PRODUCT_TYPE)"
-	@echo "### BUILD_TYPE = $(BUILD_TYPE)"
-	@echo "### INCLUDES = $(INCLUDES)"
-	@echo "### DEFINES = $(DEFINES)"
-	@echo "### ALL_SRCS = $(ALL_SRCS)"
-	@echo "### ALL_OBJS = $(ALL_OBJS)"
-	@echo "### LIBS = $(LIBS)"
-	@echo "### MODELREF_LIBS = $(MODELREF_LIBS)"
-	@echo "### SYSTEM_LIBS = $(SYSTEM_LIBS)"
-	@echo "### TOOLCHAIN_LIBS = $(TOOLCHAIN_LIBS)"
-	@echo "### CFLAGS = $(CFLAGS)"
-	@echo "### LDFLAGS = $(LDFLAGS)"
-	@echo "### SHAREDLIB_LDFLAGS = $(SHAREDLIB_LDFLAGS)"
-	@echo "### CPPFLAGS = $(CPPFLAGS)"
-	@echo "### CPP_LDFLAGS = $(CPP_LDFLAGS)"
-	@echo "### CPP_SHAREDLIB_LDFLAGS = $(CPP_SHAREDLIB_LDFLAGS)"
-	@echo "### ARFLAGS = $(ARFLAGS)"
-	@echo "### MEX_CFLAGS = $(MEX_CFLAGS)"
-	@echo "### MEX_CPPFLAGS = $(MEX_CPPFLAGS)"
-	@echo "### MEX_LDFLAGS = $(MEX_LDFLAGS)"
-	@echo "### MEX_CPPLDFLAGS = $(MEX_CPPLDFLAGS)"
-	@echo "### DOWNLOAD_FLAGS = $(DOWNLOAD_FLAGS)"
-	@echo "### EXECUTE_FLAGS = $(EXECUTE_FLAGS)"
-	@echo "### MAKE_FLAGS = $(MAKE_FLAGS)"
-
-
-clean : 
-	$(ECHO) "### Deleting all derived files..."
-	$(RM) $(subst /,\,$(PRODUCT))
-	$(RM) $(subst /,\,$(ALL_OBJS))
-	$(ECHO) "### Deleted all derived files."
-
-
+$(OBJS) : $(MAKEFILE) rtw_proj.tmw

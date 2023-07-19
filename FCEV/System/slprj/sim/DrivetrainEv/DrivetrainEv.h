@@ -10,12 +10,11 @@
 #include "sf_runtime/sfc_sdi.h"
 #endif
 #include "DrivetrainEv_types.h"
-#include "rtGetNaN.h"
 #include "rt_nonfinite.h"
 #include <string.h>
 #include "rt_zcfcn.h"
+#include "rtGetNaN.h"
 #include "model_reference_types.h"
-#include "rtGetInf.h"
 #include "rtw_modelmap_simtarget.h"
 #include <stddef.h>
 #include "zero_crossing_types.h"
@@ -33,9 +32,9 @@ struct { boolean_T cxk3fsuqri ; } kyr1rhkn5p ; typedef struct { real_T
 cxk3fsuqri ; } asw3ocj4en ; typedef struct { real_T cxk3fsuqri ; } lps5fweizp
 ; typedef struct { real_T cxk3fsuqri ; } amel0smx4y ; typedef struct {
 boolean_T ba0brbanq5 ; boolean_T czgarjscn0 ; ejajaq4sjj ndg43gdj2cy ;
-fqp5ibbznb jkqilwbv4li ; } dmpx2jc2pu ; typedef struct { real_T il1k1v3adw ;
-int8_T azoxgesvxj ; int8_T dufw0vwv3o ; uint8_T flehlwltws ; uint8_T
-hvnu2ozezg ; boolean_T ikmpdntrw1 ; boolean_T f4leq45rjn ; ibb22rhdhi
+fqp5ibbznb jkqilwbv4li ; } dmpx2jc2pu ; typedef struct { real_T bsjj0oya40 ;
+int8_T azoxgesvxj ; int8_T dufw0vwv3o ; uint8_T kzmq5ayuhp ; uint8_T
+jp5trqmghp ; boolean_T ikmpdntrw1 ; boolean_T f4leq45rjn ; ibb22rhdhi
 ndg43gdj2cy ; benvcf5o21 hpjac0modfc ; oizox0twh0 jkqilwbv4li ; oecdflrzti
 lx5pzbjgnjw ; } fmdhv4fck3 ; typedef struct { ezr503rgsr ndg43gdj2cy ; }
 bobjql0acy ; typedef struct { ocyn02au15 ndg43gdj2cy ; } pjvirltsck ; typedef
@@ -50,8 +49,8 @@ struct { jsyfghzlbs fate2u2iog ; } aufkcqjofk ; typedef struct { kckfzckqe5
 fate2u2iog ; } fgqtupspgf ; typedef struct { kgdb5tut5v fate2u2iog ; }
 iyfebu03dj ; typedef struct { boolean_T iwpgh2gzqh ; boolean_T d3ulkktm5a ;
 ejajaq4sjj fkdt002bwx ; fqp5ibbznb i5fcczml0p ; } gzahetipq4 ; typedef struct
-{ real_T kldfuelvbc ; int8_T cog0zpqeoa ; int8_T d4ugeviqji ; uint8_T
-eevc2cersy ; uint8_T nwijlmanjr ; boolean_T kevuk2jdkp ; boolean_T hgortb0uau
+{ real_T jg0v2cyy4k ; int8_T cog0zpqeoa ; int8_T d4ugeviqji ; uint8_T
+dstnpi0fei ; uint8_T ia5mclwmd4 ; boolean_T kevuk2jdkp ; boolean_T hgortb0uau
 ; ibb22rhdhi fkdt002bwx ; benvcf5o21 fsjpudim4x ; oizox0twh0 i5fcczml0p ;
 oecdflrzti aqualkdqvn ; } epqdxq1edn ; typedef struct { ezr503rgsr fkdt002bwx
 ; } jipem2r5u4 ; typedef struct { ocyn02au15 fkdt002bwx ; } fvwoypcxq5 ;

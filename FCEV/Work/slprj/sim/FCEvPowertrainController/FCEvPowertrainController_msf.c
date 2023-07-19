@@ -35,7 +35,8 @@ rt_CreateFullPathToTop ( const char * toppath , const char * subpath ) { char
 return false ; } void rt_RAccelReplaceFromFilename ( const char * blockpath ,
 char * fileName ) { ( void ) blockpath ; ( void ) fileName ; } void
 rt_RAccelReplaceToFilename ( const char * blockpath , char * fileName ) { (
-void ) blockpath ; ( void ) fileName ; } void
+void ) blockpath ; ( void ) fileName ; } void * slsa_malloc ( size_t s ) {
+return malloc ( s ) ; } void slsa_free ( void * ptr ) { free ( ptr ) ; } void
 slsaCacheDWorkPointerForSimTargetOP ( void * ss , void * * ptr ) { ( void )
 ss ; ( void ) ptr ; } void slsaCacheDWorkDataForSimTargetOP ( void * ss ,
 void * ptr , unsigned int sizeInBytes ) { ( void ) ss ; ( void ) ptr ; ( void
@@ -63,8 +64,7 @@ i_k1ohiw2gvp = ( real_T * ) ssGetInputPortSignal ( S , 1 ) ; real_T const *
 i_ciqdgq4b0i = ( real_T * ) ssGetInputPortSignal ( S , 2 ) ; real_T const *
 i_ns1o4lrbm3 = ( real_T * ) ssGetInputPortSignal ( S , 3 ) ; real_T const *
 i_kdkeml5b1q = ( real_T * ) ssGetInputPortSignal ( S , 6 ) ; real_T const *
-i_nxugnicp45 = ( real_T * ) ssGetInputPortSignal ( S , 7 ) ; real_T const *
-i_kfplj5pjit = ( real_T * ) ssGetInputPortSignal ( S , 8 ) ; real_T *
+i_nxugnicp45 = ( real_T * ) ssGetInputPortSignal ( S , 7 ) ; real_T *
 o_B_10_1 = ( real_T * ) ssGetOutputPortSignal ( S , 0 ) ; real_T * o_B_10_2 =
 ( real_T * ) ssGetOutputPortSignal ( S , 1 ) ; real_T * o_B_10_3 = ( real_T *
 ) ssGetOutputPortSignal ( S , 2 ) ; real_T * o_o_o_o_B_10_4 = ( real_T * )
@@ -72,9 +72,9 @@ ssGetOutputPortSignal ( S , 3 ) ; real_T * o_B_10_5 = ( real_T * )
 ssGetOutputPortSignal ( S , 4 ) ; real_T * o_B_10_6 = ( real_T * )
 ssGetOutputPortSignal ( S , 5 ) ; if ( tid == 0 ) { FCEvPowertrainController
 ( & ( dw -> rtm ) , i_bokzjcafmy , i_k1ohiw2gvp , i_ciqdgq4b0i , i_ns1o4lrbm3
-, i_kdkeml5b1q , i_nxugnicp45 , i_kfplj5pjit , o_B_10_1 , o_B_10_2 , o_B_10_3
-, o_o_o_o_B_10_4 , o_B_10_5 , o_B_10_6 , & ( dw -> rtb ) , & ( dw -> rtdw ) )
-; otjhyqv5ki ( & ( dw -> rtb ) , & ( dw -> rtdw ) ) ; } } static void
+, i_kdkeml5b1q , i_nxugnicp45 , o_B_10_1 , o_B_10_2 , o_B_10_3 ,
+o_o_o_o_B_10_4 , o_B_10_5 , o_B_10_6 , & ( dw -> rtb ) , & ( dw -> rtdw ) ) ;
+otjhyqv5ki ( & ( dw -> rtb ) , & ( dw -> rtdw ) ) ; } } static void
 mdlInitializeSizes ( SimStruct * S ) { if ( ( S -> mdlInfo -> genericFcn != (
 NULL ) ) && ( ! ( S -> mdlInfo -> genericFcn ) ( S ,
 GEN_FCN_CHK_MODELREF_SFUN_HAS_MODEL_BLOCK , - 1 , ( NULL ) ) ) ) { return ; }
@@ -206,7 +206,7 @@ UnitId unitIdReg ; ssRegisterUnitFromExpr ( S , "" , & unitIdReg ) ; if (
 unitIdReg == INVALID_UNIT_ID ) return ; ssSetInputPortUnit ( S , 8 ,
 unitIdReg ) ;
 #endif
-} ssSetInputPortDirectFeedThrough ( S , 8 , 1 ) ;
+} ssSetInputPortDirectFeedThrough ( S , 8 , 0 ) ;
 ssSetInputPortRequiredContiguous ( S , 8 , 1 ) ; ssSetInputPortOptimOpts ( S
 , 8 , SS_NOT_REUSABLE_AND_LOCAL ) ; ssSetInputPortOverWritable ( S , 8 ,
 false ) ; ssSetInputPortSampleTime ( S , 8 , 0.1 ) ; ssSetInputPortOffsetTime
@@ -298,7 +298,7 @@ unitIdReg ) ;
 #endif
 } ssSetOutputPortSampleTime ( S , 5 , 0.1 ) ; ssSetOutputPortOffsetTime ( S ,
 5 , 0.0 ) ; ssSetOutputPortDiscreteValuedOutput ( S , 5 , 0 ) ;
-ssSetOutputPortOkToMerge ( S , 5 , SS_OK_TO_MERGE_CONDITIONAL ) ;
+ssSetOutputPortOkToMerge ( S , 5 , SS_NOT_OK_TO_MERGE ) ;
 ssSetOutputPortICAttributes ( S , 5 , false , false , false ) ;
 ssSetOutputPortOptimOpts ( S , 5 , SS_NOT_REUSABLE_AND_LOCAL ) ;
 ssSetSimStateCompliance ( S , USE_CUSTOM_SIM_STATE ) ;
@@ -352,7 +352,7 @@ if ( ! ssSetNumDWork ( S , 1 ) ) { return ; }
 slmrRegisterSystemInitializeMethod ( S , mdlInitializeConditions ) ;
 slmrRegisterSystemResetMethod ( S , mdlReset ) ;
 slmrRegisterPeriodicOutputUpdateMethod ( S , mdlPeriodicOutputUpdate ) ;
-ssSetSimulinkVersionGeneratedIn ( S , "10.6" ) ; ssSetNeedAbsoluteTime ( S ,
+ssSetSimulinkVersionGeneratedIn ( S , "10.7" ) ; ssSetNeedAbsoluteTime ( S ,
 1 ) ; } static void mdlInitializeSampleTimes ( SimStruct * S ) {
 ssSetSampleTime ( S , 0 , 0.1 ) ; ssSetOffsetTime ( S , 0 , 0 ) ;
 ssSetSampleTime ( S , 1 , mxGetInf ( ) ) ; ssSetOffsetTime ( S , 1 , 0 ) ;
@@ -388,8 +388,7 @@ dif03hcjvgl * ) ssGetDWork ( S , 0 ) ; real_T const * i_bokzjcafmy = ( real_T
 ssGetInputPortSignal ( S , 2 ) ; real_T const * i_ns1o4lrbm3 = ( real_T * )
 ssGetInputPortSignal ( S , 3 ) ; real_T const * i_kdkeml5b1q = ( real_T * )
 ssGetInputPortSignal ( S , 6 ) ; real_T const * i_nxugnicp45 = ( real_T * )
-ssGetInputPortSignal ( S , 7 ) ; real_T const * i_kfplj5pjit = ( real_T * )
-ssGetInputPortSignal ( S , 8 ) ; real_T * o_B_10_1 = ( real_T * )
+ssGetInputPortSignal ( S , 7 ) ; real_T * o_B_10_1 = ( real_T * )
 ssGetOutputPortSignal ( S , 0 ) ; real_T * o_B_10_2 = ( real_T * )
 ssGetOutputPortSignal ( S , 1 ) ; real_T * o_B_10_3 = ( real_T * )
 ssGetOutputPortSignal ( S , 2 ) ; real_T * o_o_o_o_B_10_4 = ( real_T * )
@@ -399,8 +398,8 @@ ssGetOutputPortSignal ( S , 5 ) ; if ( tid == PARAMETER_TUNING_TID ) {
 FCEvPowertrainControllerTID1 ( & ( dw -> rtb ) ) ; } if ( tid != CONSTANT_TID
 && tid != PARAMETER_TUNING_TID ) { FCEvPowertrainController ( & ( dw -> rtm )
 , i_bokzjcafmy , i_k1ohiw2gvp , i_ciqdgq4b0i , i_ns1o4lrbm3 , i_kdkeml5b1q ,
-i_nxugnicp45 , i_kfplj5pjit , o_B_10_1 , o_B_10_2 , o_B_10_3 , o_o_o_o_B_10_4
-, o_B_10_5 , o_B_10_6 , & ( dw -> rtb ) , & ( dw -> rtdw ) ) ; } }
+i_nxugnicp45 , o_B_10_1 , o_B_10_2 , o_B_10_3 , o_o_o_o_B_10_4 , o_B_10_5 ,
+o_B_10_6 , & ( dw -> rtb ) , & ( dw -> rtdw ) ) ; } }
 #define MDL_UPDATE
 static void mdlUpdate ( SimStruct * S , int_T tid ) { dif03hcjvgl * dw = (
 dif03hcjvgl * ) ssGetDWork ( S , 0 ) ; otjhyqv5ki ( & ( dw -> rtb ) , & ( dw
