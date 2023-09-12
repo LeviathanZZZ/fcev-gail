@@ -6,237 +6,196 @@
 #include "FCElectricPlant_f9151c4e_1_ds_external_struct.h"
 #include "ssc_ml_fun.h"
 int32_T FCElectricPlant_f9151c4e_1_ds_zc ( const NeDynamicSystem * LC , const
-NeDynamicSystemInput * t336 , NeDsMethodOutput * t337 ) { PmRealVector out ;
-real_T X [ 399 ] ; real_T t4 [ 234 ] ; real_T t5 [ 1 ] ; real_T
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r ; real_T
+NeDynamicSystemInput * t329 , NeDsMethodOutput * t330 ) { PmRealVector out ;
+real_T X [ 394 ] ; real_T t4 [ 230 ] ; real_T
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ; real_T
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ; real_T
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA_gamma_AI ; real_T
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ; real_T
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p ; real_T
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_AI ; real_T
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_BI ; real_T
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 ; real_T
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 ; real_T
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI ; real_T
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_AI ; real_T
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI ; real_T U_idx_1 ;
-real_T U_idx_2 ; real_T U_idx_5 ; real_T U_idx_7 ; real_T U_idx_8 ; real_T
-U_idx_9 ; real_T intrm_sf_mf_1021 ; real_T intrm_sf_mf_1160 ; real_T
-intrm_sf_mf_1161 ; real_T intrm_sf_mf_1250 ; real_T intrm_sf_mf_1252 ; real_T
-intrm_sf_mf_1455 ; real_T intrm_sf_mf_1502 ; real_T intrm_sf_mf_170 ; real_T
-intrm_sf_mf_201 ; real_T intrm_sf_mf_221 ; real_T intrm_sf_mf_240 ; real_T
-intrm_sf_mf_281 ; real_T intrm_sf_mf_357 ; real_T intrm_sf_mf_478 ; real_T
-t100 ; real_T t102 ; real_T t103 ; real_T t107 ; real_T t108 ; real_T t110 ;
-real_T t112 ; real_T t113 ; real_T t114 ; real_T t117 ; real_T t119 ; real_T
-t127 ; real_T t128 ; real_T t133 ; real_T t155 ; real_T t263 ; real_T t279 ;
-real_T t280 ; real_T t281 ; real_T t282 ; real_T t311 ; real_T t32 ; real_T
-t320 ; real_T t323 ; real_T t35 ; real_T t38 ; real_T t44 ; real_T t50 ;
-real_T t56 ; real_T t62 ; real_T t71 ; real_T t74 ; real_T t76 ; real_T t78 ;
-real_T t84 ; real_T t88 ; real_T t91 ; real_T t93 ; real_T t96 ; size_t t6 ;
-size_t t7 ; int32_T M [ 218 ] ; int32_T b ; for ( b = 0 ; b < 218 ; b ++ ) {
-M [ b ] = t336 -> mM . mX [ b ] ; } U_idx_1 = t336 -> mU . mX [ 1 ] ; U_idx_2
-= t336 -> mU . mX [ 2 ] ; U_idx_5 = t336 -> mU . mX [ 5 ] ; U_idx_7 = t336 ->
-mU . mX [ 7 ] ; U_idx_8 = t336 -> mU . mX [ 8 ] ; U_idx_9 = t336 -> mU . mX [
-9 ] ; for ( b = 0 ; b < 399 ; b ++ ) { X [ b ] = t336 -> mX . mX [ b ] ; }
-out = t337 -> mZC ; if ( X [ 127ULL ] <= 0.0 ) { t263 = 0.0 ; } else { t263 =
-X [ 127ULL ] >= 1.0 ? 1.0 : X [ 127ULL ] ; } if ( X [ 128ULL ] <= 0.0 ) {
-t320 = 0.0 ; } else { t320 = X [ 128ULL ] >= 1.0 ? 1.0 : X [ 128ULL ] ; }
-t323 = ( ( ( 1.0 - t263 ) - t320 ) * 296.802103844292 + t263 * 461.523 ) +
-t320 * 4124.48151675695 ; if ( X [ 21ULL ] <= 0.0 ) { t320 = 0.0 ; } else {
-t320 = X [ 21ULL ] >= 1.0 ? 1.0 : X [ 21ULL ] ; } if ( X [ 22ULL ] <= 0.0 ) {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r = 0.0 ; }
-else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r = X [
-22ULL ] >= 1.0 ? 1.0 : X [ 22ULL ] ; } t279 = ( ( ( 1.0 - t320 ) -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r ) *
-296.802103844292 + t320 * 461.523 ) +
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r *
-4124.48151675695 ; if ( X [ 135ULL ] <= 216.59999999999997 ) { t280 =
-216.59999999999997 ; } else { t280 = X [ 135ULL ] >= 623.15 ? 623.15 : X [
-135ULL ] ; } t311 = t280 * t280 ; t281 = ( ( ( 1074.1165326382641 + t280 * -
-0.2214565261064495 ) + t311 * 0.00037212980109014541 ) * ( ( 1.0 - t320 ) -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r ) + ( (
-1479.6504774711011 + t280 * 1.2002114337048222 ) + t311 * -
-0.00038614513167823636 ) * t320 ) + ( ( 12825.281119789837 + t280 *
-6.9647057412840034 ) + t311 * - 0.0070524868246844051 ) *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r ; t282 = t281
-- t279 ; t280 = t281 / ( t282 == 0.0 ? 1.0E-16 : t282 ) ; if ( X [ 139ULL ]
-<= 216.59999999999997 ) { t281 = 216.59999999999997 ; } else { t281 = X [
-139ULL ] >= 623.15 ? 623.15 : X [ 139ULL ] ; } t282 = t281 * t281 ; t311 = (
-( ( 1074.1165326382641 + t281 * - 0.2214565261064495 ) + t282 *
-0.00037212980109014541 ) * ( ( 1.0 - t320 ) -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r ) + ( (
-1479.6504774711011 + t281 * 1.2002114337048222 ) + t282 * -
-0.00038614513167823636 ) * t320 ) + ( ( 12825.281119789837 + t281 *
-6.9647057412840034 ) + t282 * - 0.0070524868246844051 ) *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r ; t76 = t311
-- t279 ; t320 = t311 / ( t76 == 0.0 ? 1.0E-16 : t76 ) ; if ( X [ 133ULL ] <=
-0.0 ) { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r = 0.0
-; } else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r =
-X [ 133ULL ] >= 1.0 ? 1.0 : X [ 133ULL ] ; } if ( X [ 132ULL ] <= 0.0 ) {
-t281 = 0.0 ; } else { t281 = X [ 132ULL ] >= 1.0 ? 1.0 : X [ 132ULL ] ; }
-t311 = ( ( ( 1.0 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r ) - t281 ) *
-296.802103844292 +
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r * 461.523 ) +
-t281 * 4124.48151675695 ; if ( X [ 114ULL ] <= 0.0 ) {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r = 0.0 ; }
-else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r = X [
-114ULL ] >= 1.0 ? 1.0 : X [ 114ULL ] ; } if ( X [ 113ULL ] <= 0.0 ) { t281 =
-0.0 ; } else { t281 = X [ 113ULL ] >= 1.0 ? 1.0 : X [ 113ULL ] ; } t282 = ( (
-( 1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r ) -
-t281 ) * 296.802103844292 +
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r * 461.523 ) +
-t281 * 4124.48151675695 ;
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r = U_idx_1 *
-0.031415926535897927 ; if (
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r * 0.0001 <=
-7.8539816339744857E-13 ) { t281 = 7.8539816339744857E-13 ; } else if (
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r * 0.0001 >=
-3.1415926535897929E-6 ) { t281 = 3.1415926535897929E-6 ; } else { t281 =
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r * 0.0001 ; }
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r = t281 /
-7.8539816339744827E-5 ; if ( X [ 154ULL ] <= 0.0 ) { t281 = 0.0 ; } else {
-t281 = X [ 154ULL ] >= 1.0 ? 1.0 : X [ 154ULL ] ; } if ( X [ 155ULL ] <= 0.0
-) { t76 = 0.0 ; } else { t76 = X [ 155ULL ] >= 1.0 ? 1.0 : X [ 155ULL ] ; }
-intrm_sf_mf_170 = ( ( ( 1.0 - t281 ) - t76 ) * 296.802103844292 + t281 *
-461.523 ) + t76 * 4124.48151675695 ; t78 = X [ 152ULL ] * intrm_sf_mf_170 ;
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = X [ 153ULL
-] / ( X [ 131ULL ] == 0.0 ? 1.0E-16 : X [ 131ULL ] ) * ( X [ 156ULL ] / ( X [
-152ULL ] == 0.0 ? 1.0E-16 : X [ 152ULL ] ) ) ; intrm_sf_mf_201 = X [ 153ULL ]
-/ 1.01325 * ( X [ 157ULL ] / ( X [ 152ULL ] == 0.0 ? 1.0E-16 : X [ 152ULL ] )
-) ; intrm_sf_mf_221 = ( X [ 131ULL ] + 1.01325 ) / 2.0 *
-0.0010000000000000009 ; t84 = ( 1.0 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r ) * ( 1.0 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r ) ;
-intrm_sf_mf_357 = intrm_sf_mf_221 * t84 ; intrm_sf_mf_240 = (
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r + 1.0 ) * (
-1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r *
+real_T U_idx_10 ; real_T U_idx_2 ; real_T U_idx_3 ; real_T U_idx_6 ; real_T
+U_idx_8 ; real_T U_idx_9 ; real_T intrm_sf_mf_1021 ; real_T intrm_sf_mf_1160
+; real_T intrm_sf_mf_1161 ; real_T intrm_sf_mf_1252 ; real_T intrm_sf_mf_1455
+; real_T intrm_sf_mf_1502 ; real_T intrm_sf_mf_170 ; real_T intrm_sf_mf_240 ;
+real_T intrm_sf_mf_281 ; real_T intrm_sf_mf_357 ; real_T intrm_sf_mf_369 ;
+real_T intrm_sf_mf_410 ; real_T intrm_sf_mf_478 ; real_T intrm_sf_mf_92 ;
+real_T t100 ; real_T t103 ; real_T t105 ; real_T t106 ; real_T t107 ; real_T
+t108 ; real_T t109 ; real_T t112 ; real_T t114 ; real_T t117 ; real_T t123 ;
+real_T t124 ; real_T t128 ; real_T t150 ; real_T t152 ; real_T t268 ; real_T
+t273 ; real_T t274 ; real_T t275 ; real_T t289 ; real_T t30 ; real_T t318 ;
+real_T t33 ; real_T t39 ; real_T t45 ; real_T t51 ; real_T t57 ; real_T t60 ;
+real_T t69 ; real_T t70 ; real_T t71 ; real_T t73 ; real_T t76 ; real_T t79 ;
+real_T t81 ; real_T t83 ; real_T t88 ; real_T t91 ; real_T t97 ; real_T t98 ;
+int32_T M [ 214 ] ; int32_T b ; ( void ) LC ; for ( b = 0 ; b < 214 ; b ++ )
+{ M [ b ] = t329 -> mM . mX [ b ] ; } U_idx_1 = t329 -> mU . mX [ 1 ] ;
+U_idx_2 = t329 -> mU . mX [ 2 ] ; U_idx_3 = t329 -> mU . mX [ 3 ] ; U_idx_6 =
+t329 -> mU . mX [ 6 ] ; U_idx_8 = t329 -> mU . mX [ 8 ] ; U_idx_9 = t329 ->
+mU . mX [ 9 ] ; U_idx_10 = t329 -> mU . mX [ 10 ] ; for ( b = 0 ; b < 394 ; b
+++ ) { X [ b ] = t329 -> mX . mX [ b ] ; } out = t330 -> mZC ; if ( X [
+122ULL ] <= 0.0 ) { t268 = 0.0 ; } else { t268 = X [ 122ULL ] >= 1.0 ? 1.0 :
+X [ 122ULL ] ; } if ( X [ 123ULL ] <= 0.0 ) { t318 = 0.0 ; } else { t318 = X
+[ 123ULL ] >= 1.0 ? 1.0 : X [ 123ULL ] ; } t273 = ( ( ( 1.0 - t268 ) - t318 )
+* 296.802103844292 + t268 * 461.523 ) + t318 * 4124.48151675695 ; if ( X [
+19ULL ] <= 0.0 ) { t318 = 0.0 ; } else { t318 = X [ 19ULL ] >= 1.0 ? 1.0 : X
+[ 19ULL ] ; } if ( X [ 20ULL ] <= 0.0 ) { t274 = 0.0 ; } else { t274 = X [
+20ULL ] >= 1.0 ? 1.0 : X [ 20ULL ] ; } t275 = ( ( ( 1.0 - t318 ) - t274 ) *
+296.802103844292 + t318 * 461.523 ) + t274 * 4124.48151675695 ; if ( X [
+130ULL ] <= 216.59999999999997 ) { t152 = 216.59999999999997 ; } else { t152
+= X [ 130ULL ] >= 623.15 ? 623.15 : X [ 130ULL ] ; } intrm_sf_mf_92 = t152 *
+t152 ; t289 = ( ( ( 1074.1165326382641 + t152 * - 0.2214565261064495 ) +
+intrm_sf_mf_92 * 0.00037212980109014541 ) * ( ( 1.0 - t318 ) - t274 ) + ( (
+1479.6504774711011 + t152 * 1.2002114337048222 ) + intrm_sf_mf_92 * -
+0.00038614513167823636 ) * t318 ) + ( ( 12825.281119789837 + t152 *
+6.9647057412840034 ) + intrm_sf_mf_92 * - 0.0070524868246844051 ) * t274 ;
+t70 = t289 - t275 ; t152 = t289 / ( t70 == 0.0 ? 1.0E-16 : t70 ) ; if ( X [
+134ULL ] <= 216.59999999999997 ) { t289 = 216.59999999999997 ; } else { t289
+= X [ 134ULL ] >= 623.15 ? 623.15 : X [ 134ULL ] ; } t70 = t289 * t289 ;
+intrm_sf_mf_92 = ( ( ( 1074.1165326382641 + t289 * - 0.2214565261064495 ) +
+t70 * 0.00037212980109014541 ) * ( ( 1.0 - t318 ) - t274 ) + ( (
+1479.6504774711011 + t289 * 1.2002114337048222 ) + t70 * -
+0.00038614513167823636 ) * t318 ) + ( ( 12825.281119789837 + t289 *
+6.9647057412840034 ) + t70 * - 0.0070524868246844051 ) * t274 ; t71 =
+intrm_sf_mf_92 - t275 ; t318 = intrm_sf_mf_92 / ( t71 == 0.0 ? 1.0E-16 : t71
+) ; if ( X [ 128ULL ] <= 0.0 ) { t274 = 0.0 ; } else { t274 = X [ 128ULL ] >=
+1.0 ? 1.0 : X [ 128ULL ] ; } if ( X [ 127ULL ] <= 0.0 ) { t289 = 0.0 ; } else
+{ t289 = X [ 127ULL ] >= 1.0 ? 1.0 : X [ 127ULL ] ; } intrm_sf_mf_92 = ( ( (
+1.0 - t274 ) - t289 ) * 296.802103844292 + t274 * 461.523 ) + t289 *
+4124.48151675695 ; if ( X [ 109ULL ] <= 0.0 ) { t274 = 0.0 ; } else { t274 =
+X [ 109ULL ] >= 1.0 ? 1.0 : X [ 109ULL ] ; } if ( X [ 108ULL ] <= 0.0 ) {
+t289 = 0.0 ; } else { t289 = X [ 108ULL ] >= 1.0 ? 1.0 : X [ 108ULL ] ; } t70
+= ( ( ( 1.0 - t274 ) - t289 ) * 296.802103844292 + t274 * 461.523 ) + t289 *
+4124.48151675695 ; t274 = U_idx_2 * 0.031415926535897927 ; if ( t274 * 0.0001
+<= 7.8539816339744857E-13 ) { t289 = 7.8539816339744857E-13 ; } else if (
+t274 * 0.0001 >= 3.1415926535897929E-6 ) { t289 = 3.1415926535897929E-6 ; }
+else { t289 = t274 * 0.0001 ; } t274 = t289 / 7.8539816339744827E-5 ; if ( X
+[ 149ULL ] <= 0.0 ) { t289 = 0.0 ; } else { t289 = X [ 149ULL ] >= 1.0 ? 1.0
+: X [ 149ULL ] ; } if ( X [ 150ULL ] <= 0.0 ) { t71 = 0.0 ; } else { t71 = X
+[ 150ULL ] >= 1.0 ? 1.0 : X [ 150ULL ] ; } intrm_sf_mf_170 = ( ( ( 1.0 - t289
+) - t71 ) * 296.802103844292 + t289 * 461.523 ) + t71 * 4124.48151675695 ;
+t73 = X [ 147ULL ] * intrm_sf_mf_170 ;
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = X [ 148ULL
+] / ( X [ 126ULL ] == 0.0 ? 1.0E-16 : X [ 126ULL ] ) * ( X [ 151ULL ] / ( X [
+147ULL ] == 0.0 ? 1.0E-16 : X [ 147ULL ] ) ) ; t76 = X [ 148ULL ] / 1.01325 *
+( X [ 152ULL ] / ( X [ 147ULL ] == 0.0 ? 1.0E-16 : X [ 147ULL ] ) ) ; t81 = (
+X [ 126ULL ] + 1.01325 ) / 2.0 * 0.0010000000000000009 ; t79 = ( 1.0 - t274 )
+* ( 1.0 - t274 ) ; intrm_sf_mf_357 = t81 * t79 ; intrm_sf_mf_240 = ( t274 +
+1.0 ) * ( 1.0 - t274 *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ) - ( 1.0 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r *
-intrm_sf_mf_201 ) *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r * 2.0 ;
-intrm_sf_mf_281 = ( X [ 131ULL ] - 1.01325 ) * ( intrm_sf_mf_240 >= t84 ?
-intrm_sf_mf_240 : t84 ) ; intrm_sf_mf_240 = ( X [ 131ULL ] - 1.01325 ) / (
-intrm_sf_mf_221 == 0.0 ? 1.0E-16 : intrm_sf_mf_221 ) ; t263 = intrm_sf_mf_240
-* intrm_sf_mf_240 * 3.0 - intrm_sf_mf_240 * intrm_sf_mf_240 * intrm_sf_mf_240
-* 2.0 ; if ( X [ 131ULL ] - 1.01325 <= 0.0 ) { intrm_sf_mf_240 =
-intrm_sf_mf_357 ; } else if ( X [ 131ULL ] - 1.01325 >= intrm_sf_mf_221 ) {
-intrm_sf_mf_240 = intrm_sf_mf_281 ; } else { intrm_sf_mf_240 = ( 1.0 - t263 )
-* intrm_sf_mf_357 + intrm_sf_mf_281 * t263 ; } intrm_sf_mf_281 = (
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r + 1.0 ) * (
-1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r *
-intrm_sf_mf_201 ) - ( 1.0 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ) *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r * 2.0 ;
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r = ( 1.01325 -
-X [ 131ULL ] ) * ( intrm_sf_mf_281 >= t84 ? intrm_sf_mf_281 : t84 ) ;
+t274 * t76 ) * t274 * 2.0 ; intrm_sf_mf_281 = ( X [ 126ULL ] - 1.01325 ) * (
+intrm_sf_mf_240 >= t79 ? intrm_sf_mf_240 : t79 ) ; intrm_sf_mf_240 = ( X [
+126ULL ] - 1.01325 ) / ( t81 == 0.0 ? 1.0E-16 : t81 ) ; t268 =
+intrm_sf_mf_240 * intrm_sf_mf_240 * 3.0 - intrm_sf_mf_240 * intrm_sf_mf_240 *
+intrm_sf_mf_240 * 2.0 ; if ( X [ 126ULL ] - 1.01325 <= 0.0 ) {
+intrm_sf_mf_240 = intrm_sf_mf_357 ; } else if ( X [ 126ULL ] - 1.01325 >= t81
+) { intrm_sf_mf_240 = intrm_sf_mf_281 ; } else { intrm_sf_mf_240 = ( 1.0 -
+t268 ) * intrm_sf_mf_357 + intrm_sf_mf_281 * t268 ; } intrm_sf_mf_281 = (
+t274 + 1.0 ) * ( 1.0 - t274 * t76 ) - ( 1.0 - t274 *
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ) * t274 *
+2.0 ; t274 = ( 1.01325 - X [ 126ULL ] ) * ( intrm_sf_mf_281 >= t79 ?
+intrm_sf_mf_281 : t79 ) ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = ( 1.01325 -
-X [ 131ULL ] ) / ( intrm_sf_mf_221 == 0.0 ? 1.0E-16 : intrm_sf_mf_221 ) ;
-intrm_sf_mf_201 =
+X [ 126ULL ] ) / ( t81 == 0.0 ? 1.0E-16 : t81 ) ; t76 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 * 3.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 * 2.0 ; if (
-1.01325 - X [ 131ULL ] <= 0.0 ) {
+1.01325 - X [ 126ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 =
-intrm_sf_mf_357 ; } else if ( 1.01325 - X [ 131ULL ] >= intrm_sf_mf_221 ) {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 =
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = ( 1.0 -
-intrm_sf_mf_201 ) * intrm_sf_mf_357 +
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r *
-intrm_sf_mf_201 ; } if ( X [ 131ULL ] > 1.01325 ) {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r =
-intrm_sf_mf_240 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r = X [ 131ULL
-] < 1.01325 ? Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13
-: intrm_sf_mf_357 ; } if ( X [ 152ULL ] <= 216.59999999999997 ) {
+intrm_sf_mf_357 ; } else if ( 1.01325 - X [ 126ULL ] >= t81 ) {
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = t274 ; }
+else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = (
+1.0 - t76 ) * intrm_sf_mf_357 + t274 * t76 ; } if ( X [ 126ULL ] > 1.01325 )
+{ t274 = intrm_sf_mf_240 ; } else { t274 = X [ 126ULL ] < 1.01325 ?
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 :
+intrm_sf_mf_357 ; } if ( X [ 147ULL ] <= 216.59999999999997 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 =
 216.59999999999997 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = X [ 152ULL
-] >= 623.15 ? 623.15 : X [ 152ULL ] ; } t88 =
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = X [ 147ULL
+] >= 623.15 ? 623.15 : X [ 147ULL ] ; } t83 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ;
-intrm_sf_mf_201 = ( ( ( 1074.1165326382641 +
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ; t76 = ( ( (
+1074.1165326382641 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 * -
-0.2214565261064495 ) + t88 * 0.00037212980109014541 ) * ( ( 1.0 - t281 ) -
-t76 ) + ( ( 1479.6504774711011 +
+0.2214565261064495 ) + t83 * 0.00037212980109014541 ) * ( ( 1.0 - t289 ) -
+t71 ) + ( ( 1479.6504774711011 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
-1.2002114337048222 ) + t88 * - 0.00038614513167823636 ) * t281 ) + ( (
+1.2002114337048222 ) + t83 * - 0.00038614513167823636 ) * t289 ) + ( (
 12825.281119789837 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
-6.9647057412840034 ) + t88 * - 0.0070524868246844051 ) * t76 ; t263 =
-intrm_sf_mf_201 - intrm_sf_mf_170 ; t281 = intrm_sf_mf_201 / ( t263 == 0.0 ?
-1.0E-16 : t263 ) ; if ( X [ 26ULL ] <= 0.0 ) { t76 = 0.0 ; } else { t76 = X [
-26ULL ] >= 1.0 ? 1.0 : X [ 26ULL ] ; } if ( X [ 25ULL ] <= 0.0 ) {
+6.9647057412840034 ) + t83 * - 0.0070524868246844051 ) * t71 ; t268 = t76 -
+intrm_sf_mf_170 ; t289 = t76 / ( t268 == 0.0 ? 1.0E-16 : t268 ) ; if ( X [
+24ULL ] <= 0.0 ) { t71 = 0.0 ; } else { t71 = X [ 24ULL ] >= 1.0 ? 1.0 : X [
+24ULL ] ; } if ( X [ 23ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = 0.0 ; }
 else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = X [
-25ULL ] >= 1.0 ? 1.0 : X [ 25ULL ] ; } intrm_sf_mf_201 = ( ( ( 1.0 - t76 ) -
+23ULL ] >= 1.0 ? 1.0 : X [ 23ULL ] ; } t76 = ( ( ( 1.0 - t71 ) -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ) *
-296.802103844292 + t76 * 461.523 ) +
+296.802103844292 + t71 * 461.523 ) +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
-4124.48151675695 ; if ( X [ 29ULL ] <= 0.0 ) { t76 = 0.0 ; } else { t76 = X [
-29ULL ] >= 1.0 ? 1.0 : X [ 29ULL ] ; } if ( X [ 30ULL ] <= 0.0 ) {
+4124.48151675695 ; if ( X [ 27ULL ] <= 0.0 ) { t71 = 0.0 ; } else { t71 = X [
+27ULL ] >= 1.0 ? 1.0 : X [ 27ULL ] ; } if ( X [ 28ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = 0.0 ; }
 else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = X [
-30ULL ] >= 1.0 ? 1.0 : X [ 30ULL ] ; } t84 = ( ( ( 1.0 - t76 ) -
+28ULL ] >= 1.0 ? 1.0 : X [ 28ULL ] ; } t79 = ( ( ( 1.0 - t71 ) -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ) *
-296.802103844292 + t76 * 461.523 ) +
+296.802103844292 + t71 * 461.523 ) +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
-4124.48151675695 ; if ( X [ 182ULL ] <= 216.59999999999997 ) {
-intrm_sf_mf_221 = 216.59999999999997 ; } else { intrm_sf_mf_221 = X [ 182ULL
-] >= 623.15 ? 623.15 : X [ 182ULL ] ; } t263 = intrm_sf_mf_221 *
-intrm_sf_mf_221 ; intrm_sf_mf_357 = ( ( ( 1074.1165326382641 +
-intrm_sf_mf_221 * - 0.2214565261064495 ) + t263 * 0.00037212980109014541 ) *
-( ( 1.0 - t76 ) -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ) + ( (
-1479.6504774711011 + intrm_sf_mf_221 * 1.2002114337048222 ) + t263 * -
-0.00038614513167823636 ) * t76 ) + ( ( 12825.281119789837 + intrm_sf_mf_221 *
-6.9647057412840034 ) + t263 * - 0.0070524868246844051 ) *
+4124.48151675695 ; if ( X [ 177ULL ] <= 216.59999999999997 ) { t81 =
+216.59999999999997 ; } else { t81 = X [ 177ULL ] >= 623.15 ? 623.15 : X [
+177ULL ] ; } t268 = t81 * t81 ; intrm_sf_mf_357 = ( ( ( 1074.1165326382641 +
+t81 * - 0.2214565261064495 ) + t268 * 0.00037212980109014541 ) * ( ( 1.0 -
+t71 ) - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ) + (
+( 1479.6504774711011 + t81 * 1.2002114337048222 ) + t268 * -
+0.00038614513167823636 ) * t71 ) + ( ( 12825.281119789837 + t81 *
+6.9647057412840034 ) + t268 * - 0.0070524868246844051 ) *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = intrm_sf_mf_357
-- t84 ; intrm_sf_mf_221 = intrm_sf_mf_357 / (
+- t79 ; t81 = intrm_sf_mf_357 / (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI == 0.0 ? 1.0E-16 :
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) ; if ( X [
-187ULL ] <= 216.59999999999997 ) { intrm_sf_mf_357 = 216.59999999999997 ; }
-else { intrm_sf_mf_357 = X [ 187ULL ] >= 623.15 ? 623.15 : X [ 187ULL ] ; }
+182ULL ] <= 216.59999999999997 ) { intrm_sf_mf_357 = 216.59999999999997 ; }
+else { intrm_sf_mf_357 = X [ 182ULL ] >= 623.15 ? 623.15 : X [ 182ULL ] ; }
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = intrm_sf_mf_357
 * intrm_sf_mf_357 ; intrm_sf_mf_240 = ( ( ( 1074.1165326382641 +
 intrm_sf_mf_357 * - 0.2214565261064495 ) +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI *
-0.00037212980109014541 ) * ( ( 1.0 - t76 ) -
+0.00037212980109014541 ) * ( ( 1.0 - t71 ) -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ) + ( (
 1479.6504774711011 + intrm_sf_mf_357 * 1.2002114337048222 ) +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI * -
-0.00038614513167823636 ) * t76 ) + ( ( 12825.281119789837 + intrm_sf_mf_357 *
+0.00038614513167823636 ) * t71 ) + ( ( 12825.281119789837 + intrm_sf_mf_357 *
 6.9647057412840034 ) +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI * -
 0.0070524868246844051 ) *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ; t91 =
-intrm_sf_mf_240 - t84 ; t76 = intrm_sf_mf_240 / ( t91 == 0.0 ? 1.0E-16 : t91
-) ; if ( X [ 181ULL ] <= 0.0 ) {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = 0.0 ; }
-else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = X [
-181ULL ] >= 1.0 ? 1.0 : X [ 181ULL ] ; } if ( X [ 180ULL ] <= 0.0 ) {
-intrm_sf_mf_357 = 0.0 ; } else { intrm_sf_mf_357 = X [ 180ULL ] >= 1.0 ? 1.0
-: X [ 180ULL ] ; } intrm_sf_mf_240 = ( ( ( 1.0 -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ;
+intrm_sf_mf_369 = intrm_sf_mf_240 - t79 ; t71 = intrm_sf_mf_240 / (
+intrm_sf_mf_369 == 0.0 ? 1.0E-16 : intrm_sf_mf_369 ) ; if ( X [ 176ULL ] <=
+0.0 ) { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = 0.0
+; } else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 =
+X [ 176ULL ] >= 1.0 ? 1.0 : X [ 176ULL ] ; } if ( X [ 175ULL ] <= 0.0 ) {
+intrm_sf_mf_357 = 0.0 ; } else { intrm_sf_mf_357 = X [ 175ULL ] >= 1.0 ? 1.0
+: X [ 175ULL ] ; } intrm_sf_mf_240 = ( ( ( 1.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ) -
 intrm_sf_mf_357 ) * 296.802103844292 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 * 461.523 ) +
-intrm_sf_mf_357 * 4124.48151675695 ; if ( X [ 162ULL ] <= 0.0 ) {
+intrm_sf_mf_357 * 4124.48151675695 ; if ( X [ 157ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = 0.0 ; }
 else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = X [
-162ULL ] >= 1.0 ? 1.0 : X [ 162ULL ] ; } if ( X [ 161ULL ] <= 0.0 ) {
-intrm_sf_mf_357 = 0.0 ; } else { intrm_sf_mf_357 = X [ 161ULL ] >= 1.0 ? 1.0
-: X [ 161ULL ] ; } intrm_sf_mf_281 = ( ( ( 1.0 -
+157ULL ] >= 1.0 ? 1.0 : X [ 157ULL ] ; } if ( X [ 156ULL ] <= 0.0 ) {
+intrm_sf_mf_357 = 0.0 ; } else { intrm_sf_mf_357 = X [ 156ULL ] >= 1.0 ? 1.0
+: X [ 156ULL ] ; } intrm_sf_mf_281 = ( ( ( 1.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ) -
 intrm_sf_mf_357 ) * 296.802103844292 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 * 461.523 ) +
 intrm_sf_mf_357 * 4124.48151675695 ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = ( X [
-179ULL ] * - 0.7999998 + U_idx_2 * 7.9999980000000006 ) +
+174ULL ] * - 0.7999998 + U_idx_3 * 7.9999980000000006 ) +
 9.9999999947364415E-9 ; if (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
 7.8539816339744827E-5 <= 7.8539816339744857E-13 ) { intrm_sf_mf_357 =
@@ -247,797 +206,744 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
 7.8539816339744827E-5 ; }
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 =
-intrm_sf_mf_357 / 7.8539816339744827E-5 ; if ( X [ 202ULL ] <= 0.0 ) {
-intrm_sf_mf_357 = 0.0 ; } else { intrm_sf_mf_357 = X [ 202ULL ] >= 1.0 ? 1.0
-: X [ 202ULL ] ; } if ( X [ 203ULL ] <= 0.0 ) { t263 = 0.0 ; } else { t263 =
-X [ 203ULL ] >= 1.0 ? 1.0 : X [ 203ULL ] ; } t88 = ( ( ( 1.0 -
-intrm_sf_mf_357 ) - t263 ) * 296.802103844292 + intrm_sf_mf_357 * 461.523 ) +
-t263 * 4124.48151675695 ; t93 = X [ 200ULL ] * t88 ;
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = X [ 201ULL ] / (
-X [ 24ULL ] == 0.0 ? 1.0E-16 : X [ 24ULL ] ) * ( X [ 204ULL ] / ( X [ 200ULL
-] == 0.0 ? 1.0E-16 : X [ 200ULL ] ) ) ; t91 = X [ 201ULL ] / ( X [ 179ULL ]
-== 0.0 ? 1.0E-16 : X [ 179ULL ] ) * ( X [ 205ULL ] / ( X [ 200ULL ] == 0.0 ?
-1.0E-16 : X [ 200ULL ] ) ) ; t100 = ( X [ 24ULL ] + X [ 179ULL ] ) / 2.0 *
-0.0010000000000000009 ; t96 = ( 1.0 -
+intrm_sf_mf_357 / 7.8539816339744827E-5 ; if ( X [ 197ULL ] <= 0.0 ) {
+intrm_sf_mf_357 = 0.0 ; } else { intrm_sf_mf_357 = X [ 197ULL ] >= 1.0 ? 1.0
+: X [ 197ULL ] ; } if ( X [ 198ULL ] <= 0.0 ) { t268 = 0.0 ; } else { t268 =
+X [ 198ULL ] >= 1.0 ? 1.0 : X [ 198ULL ] ; } t83 = ( ( ( 1.0 -
+intrm_sf_mf_357 ) - t268 ) * 296.802103844292 + intrm_sf_mf_357 * 461.523 ) +
+t268 * 4124.48151675695 ; t88 = X [ 195ULL ] * t83 ;
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = X [ 196ULL ] / (
+X [ 22ULL ] == 0.0 ? 1.0E-16 : X [ 22ULL ] ) * ( X [ 199ULL ] / ( X [ 195ULL
+] == 0.0 ? 1.0E-16 : X [ 195ULL ] ) ) ; intrm_sf_mf_369 = X [ 196ULL ] / ( X
+[ 174ULL ] == 0.0 ? 1.0E-16 : X [ 174ULL ] ) * ( X [ 200ULL ] / ( X [ 195ULL
+] == 0.0 ? 1.0E-16 : X [ 195ULL ] ) ) ; intrm_sf_mf_410 = ( X [ 22ULL ] + X [
+174ULL ] ) / 2.0 * 0.0010000000000000009 ; t91 = ( 1.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ) * ( 1.0 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ) ; t102 =
-t100 * t96 ; intrm_sf_mf_1502 = (
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ) ; t97 =
+intrm_sf_mf_410 * t91 ; intrm_sf_mf_1502 = (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 + 1.0 ) * (
 1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) - ( 1.0 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 * t91 ) *
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
+intrm_sf_mf_369 ) *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 * 2.0 ;
-intrm_sf_mf_478 = ( X [ 24ULL ] - X [ 179ULL ] ) * ( intrm_sf_mf_1502 >= t96
-? intrm_sf_mf_1502 : t96 ) ; intrm_sf_mf_1502 = ( X [ 24ULL ] - X [ 179ULL ]
-) / ( t100 == 0.0 ? 1.0E-16 : t100 ) ; t103 = intrm_sf_mf_1502 *
-intrm_sf_mf_1502 * 3.0 - intrm_sf_mf_1502 * intrm_sf_mf_1502 *
-intrm_sf_mf_1502 * 2.0 ; if ( X [ 24ULL ] - X [ 179ULL ] <= 0.0 ) {
-intrm_sf_mf_1502 = t102 ; } else if ( X [ 24ULL ] - X [ 179ULL ] >= t100 ) {
-intrm_sf_mf_1502 = intrm_sf_mf_478 ; } else { intrm_sf_mf_1502 = ( 1.0 - t103
-) * t102 + intrm_sf_mf_478 * t103 ; } intrm_sf_mf_478 = (
+intrm_sf_mf_478 = ( X [ 22ULL ] - X [ 174ULL ] ) * ( intrm_sf_mf_1502 >= t91
+? intrm_sf_mf_1502 : t91 ) ; intrm_sf_mf_1502 = ( X [ 22ULL ] - X [ 174ULL ]
+) / ( intrm_sf_mf_410 == 0.0 ? 1.0E-16 : intrm_sf_mf_410 ) ; t98 =
+intrm_sf_mf_1502 * intrm_sf_mf_1502 * 3.0 - intrm_sf_mf_1502 *
+intrm_sf_mf_1502 * intrm_sf_mf_1502 * 2.0 ; if ( X [ 22ULL ] - X [ 174ULL ]
+<= 0.0 ) { intrm_sf_mf_1502 = t97 ; } else if ( X [ 22ULL ] - X [ 174ULL ] >=
+intrm_sf_mf_410 ) { intrm_sf_mf_1502 = intrm_sf_mf_478 ; } else {
+intrm_sf_mf_1502 = ( 1.0 - t98 ) * t97 + intrm_sf_mf_478 * t98 ; }
+intrm_sf_mf_478 = (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 + 1.0 ) * (
-1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 * t91 )
-- ( 1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
+1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
+intrm_sf_mf_369 ) - ( 1.0 -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 * 2.0 ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = ( X [
-179ULL ] - X [ 24ULL ] ) * ( intrm_sf_mf_478 >= t96 ? intrm_sf_mf_478 : t96 )
-; Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = ( X [ 179ULL ]
-- X [ 24ULL ] ) / ( t100 == 0.0 ? 1.0E-16 : t100 ) ; t91 =
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI * 3.0 -
+174ULL ] - X [ 22ULL ] ) * ( intrm_sf_mf_478 >= t91 ? intrm_sf_mf_478 : t91 )
+; Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = ( X [ 174ULL ]
+- X [ 22ULL ] ) / ( intrm_sf_mf_410 == 0.0 ? 1.0E-16 : intrm_sf_mf_410 ) ;
+intrm_sf_mf_369 = Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI
+* Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI * 3.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI * 2.0 ; if ( X [
-179ULL ] - X [ 24ULL ] <= 0.0 ) {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = t102 ; } else if
-( X [ 179ULL ] - X [ 24ULL ] >= t100 ) {
+174ULL ] - X [ 22ULL ] <= 0.0 ) {
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = t97 ; } else if
+( X [ 174ULL ] - X [ 22ULL ] >= intrm_sf_mf_410 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = ( 1.0 - t91 ) *
-t102 + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 * t91
-; } if ( X [ 24ULL ] > X [ 179ULL ] ) {
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = ( 1.0 -
+intrm_sf_mf_369 ) * t97 +
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
+intrm_sf_mf_369 ; } if ( X [ 22ULL ] > X [ 174ULL ] ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 =
 intrm_sf_mf_1502 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = X [ 24ULL ]
-< X [ 179ULL ] ? Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI :
-t102 ; } if ( X [ 200ULL ] <= 216.59999999999997 ) {
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 = X [ 22ULL ]
+< X [ 174ULL ] ? Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI :
+t97 ; } if ( X [ 195ULL ] <= 216.59999999999997 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI =
 216.59999999999997 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = X [ 200ULL ] >=
-623.15 ? 623.15 : X [ 200ULL ] ; } t155 =
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = X [ 195ULL ] >=
+623.15 ? 623.15 : X [ 195ULL ] ; } t150 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ; t91 = ( ( (
-1074.1165326382641 +
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ; intrm_sf_mf_369
+= ( ( ( 1074.1165326382641 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI * -
-0.2214565261064495 ) + t155 * 0.00037212980109014541 ) * ( ( 1.0 -
-intrm_sf_mf_357 ) - t263 ) + ( ( 1479.6504774711011 +
+0.2214565261064495 ) + t150 * 0.00037212980109014541 ) * ( ( 1.0 -
+intrm_sf_mf_357 ) - t268 ) + ( ( 1479.6504774711011 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI *
-1.2002114337048222 ) + t155 * - 0.00038614513167823636 ) * intrm_sf_mf_357 )
+1.2002114337048222 ) + t150 * - 0.00038614513167823636 ) * intrm_sf_mf_357 )
 + ( ( 12825.281119789837 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI *
-6.9647057412840034 ) + t155 * - 0.0070524868246844051 ) * t263 ; t32 = t91 -
-t88 ; intrm_sf_mf_357 = t91 / ( t32 == 0.0 ? 1.0E-16 : t32 ) ; if ( X [
-218ULL ] <= 0.0 ) { t263 = 0.0 ; } else { t263 = X [ 218ULL ] >= 1.0 ? 1.0 :
-X [ 218ULL ] ; } if ( X [ 219ULL ] <= 0.0 ) {
+6.9647057412840034 ) + t150 * - 0.0070524868246844051 ) * t268 ; t100 =
+intrm_sf_mf_369 - t83 ; intrm_sf_mf_357 = intrm_sf_mf_369 / ( t100 == 0.0 ?
+1.0E-16 : t100 ) ; if ( X [ 213ULL ] <= 0.0 ) { t268 = 0.0 ; } else { t268 =
+X [ 213ULL ] >= 1.0 ? 1.0 : X [ 213ULL ] ; } if ( X [ 214ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = 0.0 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = X [ 219ULL ] >=
-1.0 ? 1.0 : X [ 219ULL ] ; } t91 = ( ( ( 1.0 - t263 ) -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = X [ 214ULL ] >=
+1.0 ? 1.0 : X [ 214ULL ] ; } intrm_sf_mf_369 = ( ( ( 1.0 - t268 ) -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) *
-296.802103844292 + t263 * 461.523 ) +
+296.802103844292 + t268 * 461.523 ) +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI * 259.836612622973
-; if ( X [ 231ULL ] <= 0.0 ) {
+; if ( X [ 226ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = 0.0 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = X [ 231ULL ] >=
-1.0 ? 1.0 : X [ 231ULL ] ; } if ( X [ 230ULL ] <= 0.0 ) { t96 = 0.0 ; } else
-{ t96 = X [ 230ULL ] >= 1.0 ? 1.0 : X [ 230ULL ] ; } t100 = ( ( ( 1.0 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) - t96 ) *
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = X [ 226ULL ] >=
+1.0 ? 1.0 : X [ 226ULL ] ; } if ( X [ 225ULL ] <= 0.0 ) { t91 = 0.0 ; } else
+{ t91 = X [ 225ULL ] >= 1.0 ? 1.0 : X [ 225ULL ] ; } intrm_sf_mf_410 = ( ( (
+1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) - t91 ) *
 296.802103844292 + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI
-* 461.523 ) + t96 * 259.836612622973 ; if ( X [ 34ULL ] <= 0.0 ) {
+* 461.523 ) + t91 * 259.836612622973 ; if ( X [ 32ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = 0.0 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = X [ 34ULL ] >=
-1.0 ? 1.0 : X [ 34ULL ] ; } if ( X [ 33ULL ] <= 0.0 ) { t96 = 0.0 ; } else {
-t96 = X [ 33ULL ] >= 1.0 ? 1.0 : X [ 33ULL ] ; } t102 = ( ( ( 1.0 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) - t96 ) *
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = X [ 32ULL ] >=
+1.0 ? 1.0 : X [ 32ULL ] ; } if ( X [ 31ULL ] <= 0.0 ) { t91 = 0.0 ; } else {
+t91 = X [ 31ULL ] >= 1.0 ? 1.0 : X [ 31ULL ] ; } t97 = ( ( ( 1.0 -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) - t91 ) *
 296.802103844292 + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI
-* 461.523 ) + t96 * 259.836612622973 ; if ( X [ 223ULL ] <= 0.0 ) {
+* 461.523 ) + t91 * 259.836612622973 ; if ( X [ 218ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = 0.0 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = X [ 223ULL ] >=
-1.0 ? 1.0 : X [ 223ULL ] ; } if ( X [ 222ULL ] <= 0.0 ) { t96 = 0.0 ; } else
-{ t96 = X [ 222ULL ] >= 1.0 ? 1.0 : X [ 222ULL ] ; } intrm_sf_mf_1502 = ( ( (
-1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) - t96 ) *
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = X [ 218ULL ] >=
+1.0 ? 1.0 : X [ 218ULL ] ; } if ( X [ 217ULL ] <= 0.0 ) { t91 = 0.0 ; } else
+{ t91 = X [ 217ULL ] >= 1.0 ? 1.0 : X [ 217ULL ] ; } intrm_sf_mf_1502 = ( ( (
+1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) - t91 ) *
 296.802103844292 + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI
-* 461.523 ) + t96 * 259.836612622973 ; if ( X [ 37ULL ] <= 0.0 ) {
+* 461.523 ) + t91 * 259.836612622973 ; if ( X [ 35ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = 0.0 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = X [ 37ULL ] >=
-1.0 ? 1.0 : X [ 37ULL ] ; } if ( X [ 36ULL ] <= 0.0 ) { t96 = 0.0 ; } else {
-t96 = X [ 36ULL ] >= 1.0 ? 1.0 : X [ 36ULL ] ; } intrm_sf_mf_478 = ( ( ( 1.0
-- Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) - t96 ) *
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = X [ 35ULL ] >=
+1.0 ? 1.0 : X [ 35ULL ] ; } if ( X [ 34ULL ] <= 0.0 ) { t91 = 0.0 ; } else {
+t91 = X [ 34ULL ] >= 1.0 ? 1.0 : X [ 34ULL ] ; } intrm_sf_mf_478 = ( ( ( 1.0
+- Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) - t91 ) *
 296.802103844292 + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI
-* 461.523 ) + t96 * 4124.48151675695 ; if ( X [ 261ULL ] <=
-216.59999999999997 ) { t103 = 216.59999999999997 ; } else { t103 = X [ 261ULL
-] >= 623.15 ? 623.15 : X [ 261ULL ] ; } t32 = t103 * t103 ; t155 = ( ( (
-1074.1165326382641 + t103 * - 0.2214565261064495 ) + t32 *
+* 461.523 ) + t91 * 4124.48151675695 ; if ( X [ 256ULL ] <=
+216.59999999999997 ) { t98 = 216.59999999999997 ; } else { t98 = X [ 256ULL ]
+>= 623.15 ? 623.15 : X [ 256ULL ] ; } t100 = t98 * t98 ; t150 = ( ( (
+1074.1165326382641 + t98 * - 0.2214565261064495 ) + t100 *
 0.00037212980109014541 ) * ( ( 1.0 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) - t96 ) + ( (
-1479.6504774711011 + t103 * 1.2002114337048222 ) + t32 * -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) - t91 ) + ( (
+1479.6504774711011 + t98 * 1.2002114337048222 ) + t100 * -
 0.00038614513167823636 ) *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) + ( (
-12825.281119789837 + t103 * 6.9647057412840034 ) + t32 * -
-0.0070524868246844051 ) * t96 ; t35 = t155 - intrm_sf_mf_478 ; t103 = t155 /
-( t35 == 0.0 ? 1.0E-16 : t35 ) ; if ( X [ 264ULL ] <= 216.59999999999997 ) {
-t155 = 216.59999999999997 ; } else { t155 = X [ 264ULL ] >= 623.15 ? 623.15 :
-X [ 264ULL ] ; } t35 = t155 * t155 ; t32 = ( ( ( 1074.1165326382641 + t155 *
-- 0.2214565261064495 ) + t35 * 0.00037212980109014541 ) * ( ( 1.0 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) - t96 ) + ( (
-1479.6504774711011 + t155 * 1.2002114337048222 ) + t35 * -
+12825.281119789837 + t98 * 6.9647057412840034 ) + t100 * -
+0.0070524868246844051 ) * t91 ; t30 = t150 - intrm_sf_mf_478 ; t98 = t150 / (
+t30 == 0.0 ? 1.0E-16 : t30 ) ; if ( X [ 259ULL ] <= 216.59999999999997 ) {
+t150 = 216.59999999999997 ; } else { t150 = X [ 259ULL ] >= 623.15 ? 623.15 :
+X [ 259ULL ] ; } t30 = t150 * t150 ; t100 = ( ( ( 1074.1165326382641 + t150 *
+- 0.2214565261064495 ) + t30 * 0.00037212980109014541 ) * ( ( 1.0 -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) - t91 ) + ( (
+1479.6504774711011 + t150 * 1.2002114337048222 ) + t30 * -
 0.00038614513167823636 ) *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI ) + ( (
-12825.281119789837 + t155 * 6.9647057412840034 ) + t35 * -
-0.0070524868246844051 ) * t96 ; t107 = t32 - intrm_sf_mf_478 ;
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI = t32 / ( t107 ==
-0.0 ? 1.0E-16 : t107 ) ; if ( X [ 253ULL ] <= 0.0 ) { t96 = 0.0 ; } else {
-t96 = X [ 253ULL ] >= 1.0 ? 1.0 : X [ 253ULL ] ; } if ( X [ 252ULL ] <= 0.0 )
-{ t155 = 0.0 ; } else { t155 = X [ 252ULL ] >= 1.0 ? 1.0 : X [ 252ULL ] ; }
-t32 = ( ( ( 1.0 - t96 ) - t155 ) * 296.802103844292 + t96 * 461.523 ) + t155
-* 4124.48151675695 ; if ( X [ 8ULL ] <= 0.0 ) { t96 = 0.0 ; } else { t96 = X
-[ 8ULL ] >= 1.0 ? 1.0 : X [ 8ULL ] ; } if ( X [ 7ULL ] <= 0.0 ) { t155 = 0.0
-; } else { t155 = X [ 7ULL ] >= 1.0 ? 1.0 : X [ 7ULL ] ; } t35 = ( ( ( 1.0 -
-t96 ) - t155 ) * 296.802103844292 + t96 * 461.523 ) + t155 * 4124.48151675695
-; if ( X [ 275ULL ] <= 216.59999999999997 ) { t107 = 216.59999999999997 ; }
-else { t107 = X [ 275ULL ] >= 623.15 ? 623.15 : X [ 275ULL ] ; } t38 = t107 *
-t107 ; Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI = ( ( (
-1074.1165326382641 + t107 * - 0.2214565261064495 ) + t38 *
-0.00037212980109014541 ) * ( ( 1.0 - t96 ) - t155 ) + ( ( 1479.6504774711011
-+ t107 * 1.2002114337048222 ) + t38 * - 0.00038614513167823636 ) * t96 ) + (
-( 12825.281119789837 + t107 * 6.9647057412840034 ) + t38 * -
-0.0070524868246844051 ) * t155 ; t108 =
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI - t35 ; t107 =
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI / ( t108 == 0.0 ?
-1.0E-16 : t108 ) ; if ( X [ 278ULL ] <= 216.59999999999997 ) {
+12825.281119789837 + t150 * 6.9647057412840034 ) + t30 * -
+0.0070524868246844051 ) * t91 ;
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA_gamma_AI = t100 -
+intrm_sf_mf_478 ; Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI
+= t100 / ( Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA_gamma_AI == 0.0
+? 1.0E-16 : Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA_gamma_AI ) ; if
+( X [ 248ULL ] <= 0.0 ) { t91 = 0.0 ; } else { t91 = X [ 248ULL ] >= 1.0 ?
+1.0 : X [ 248ULL ] ; } if ( X [ 247ULL ] <= 0.0 ) { t150 = 0.0 ; } else {
+t150 = X [ 247ULL ] >= 1.0 ? 1.0 : X [ 247ULL ] ; } t100 = ( ( ( 1.0 - t91 )
+- t150 ) * 296.802103844292 + t91 * 461.523 ) + t150 * 4124.48151675695 ; if
+( X [ 6ULL ] <= 0.0 ) { t91 = 0.0 ; } else { t91 = X [ 6ULL ] >= 1.0 ? 1.0 :
+X [ 6ULL ] ; } if ( X [ 5ULL ] <= 0.0 ) { t150 = 0.0 ; } else { t150 = X [
+5ULL ] >= 1.0 ? 1.0 : X [ 5ULL ] ; } t30 = ( ( ( 1.0 - t91 ) - t150 ) *
+296.802103844292 + t91 * 461.523 ) + t150 * 4124.48151675695 ; if ( X [
+270ULL ] <= 216.59999999999997 ) {
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA_gamma_AI =
+216.59999999999997 ; } else {
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA_gamma_AI = X [ 270ULL ] >=
+623.15 ? 623.15 : X [ 270ULL ] ; } t33 =
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA_gamma_AI *
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA_gamma_AI ;
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI = ( ( (
+1074.1165326382641 +
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA_gamma_AI * -
+0.2214565261064495 ) + t33 * 0.00037212980109014541 ) * ( ( 1.0 - t91 ) -
+t150 ) + ( ( 1479.6504774711011 +
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA_gamma_AI *
+1.2002114337048222 ) + t33 * - 0.00038614513167823636 ) * t91 ) + ( (
+12825.281119789837 +
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA_gamma_AI *
+6.9647057412840034 ) + t33 * - 0.0070524868246844051 ) * t150 ; t103 =
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI - t30 ;
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA_gamma_AI =
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI / ( t103 == 0.0 ?
+1.0E-16 : t103 ) ; if ( X [ 273ULL ] <= 216.59999999999997 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI =
 216.59999999999997 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI = X [ 278ULL ] >=
-623.15 ? 623.15 : X [ 278ULL ] ; } t108 =
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI = X [ 273ULL ] >=
+623.15 ? 623.15 : X [ 273ULL ] ; } t103 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ; t38 = ( ( (
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ; t33 = ( ( (
 1074.1165326382641 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI * -
-0.2214565261064495 ) + t108 * 0.00037212980109014541 ) * ( ( 1.0 - t96 ) -
-t155 ) + ( ( 1479.6504774711011 +
+0.2214565261064495 ) + t103 * 0.00037212980109014541 ) * ( ( 1.0 - t91 ) -
+t150 ) + ( ( 1479.6504774711011 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI *
-1.2002114337048222 ) + t108 * - 0.00038614513167823636 ) * t96 ) + ( (
+1.2002114337048222 ) + t103 * - 0.00038614513167823636 ) * t91 ) + ( (
 12825.281119789837 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI *
-6.9647057412840034 ) + t108 * - 0.0070524868246844051 ) * t155 ; t133 = t38 -
-t35 ; t96 = t38 / ( t133 == 0.0 ? 1.0E-16 : t133 ) ; if ( X [ 67ULL ] <= 0.0
-) { t155 = 0.0 ; } else { t155 = X [ 67ULL ] >= 1.0 ? 1.0 : X [ 67ULL ] ; }
-if ( X [ 66ULL ] <= 0.0 ) {
+6.9647057412840034 ) + t103 * - 0.0070524868246844051 ) * t150 ; t128 = t33 -
+t30 ; t91 = t33 / ( t128 == 0.0 ? 1.0E-16 : t128 ) ; if ( X [ 62ULL ] <= 0.0
+) { t150 = 0.0 ; } else { t150 = X [ 62ULL ] >= 1.0 ? 1.0 : X [ 62ULL ] ; }
+if ( X [ 61ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI = 0.0 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI = X [ 66ULL ] >=
-1.0 ? 1.0 : X [ 66ULL ] ; } t38 = ( ( ( 1.0 - t155 ) -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI = X [ 61ULL ] >=
+1.0 ? 1.0 : X [ 61ULL ] ; } t33 = ( ( ( 1.0 - t150 ) -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ) *
-296.802103844292 + t155 * 461.523 ) +
+296.802103844292 + t150 * 461.523 ) +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI * 4124.48151675695
-; if ( X [ 11ULL ] <= 0.0 ) { t155 = 0.0 ; } else { t155 = X [ 11ULL ] >= 1.0
-? 1.0 : X [ 11ULL ] ; } if ( X [ 10ULL ] <= 0.0 ) {
+; if ( X [ 9ULL ] <= 0.0 ) { t150 = 0.0 ; } else { t150 = X [ 9ULL ] >= 1.0 ?
+1.0 : X [ 9ULL ] ; } if ( X [ 8ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI = 0.0 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI = X [ 10ULL ] >=
-1.0 ? 1.0 : X [ 10ULL ] ; } t108 = ( ( ( 1.0 - t155 ) -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI = X [ 8ULL ] >=
+1.0 ? 1.0 : X [ 8ULL ] ; } t103 = ( ( ( 1.0 - t150 ) -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ) *
-296.802103844292 + t155 * 461.523 ) +
+296.802103844292 + t150 * 461.523 ) +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI * 4124.48151675695
-; if ( X [ 289ULL ] <= 216.59999999999997 ) { t133 = 216.59999999999997 ; }
-else { t133 = X [ 289ULL ] >= 623.15 ? 623.15 : X [ 289ULL ] ; } t44 = t133 *
-t133 ; t263 = ( ( ( 1074.1165326382641 + t133 * - 0.2214565261064495 ) + t44
-* 0.00037212980109014541 ) * ( ( 1.0 - t155 ) -
+; if ( X [ 284ULL ] <= 216.59999999999997 ) { t128 = 216.59999999999997 ; }
+else { t128 = X [ 284ULL ] >= 623.15 ? 623.15 : X [ 284ULL ] ; } t39 = t128 *
+t128 ; t268 = ( ( ( 1074.1165326382641 + t128 * - 0.2214565261064495 ) + t39
+* 0.00037212980109014541 ) * ( ( 1.0 - t150 ) -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ) + ( (
-1479.6504774711011 + t133 * 1.2002114337048222 ) + t44 * -
-0.00038614513167823636 ) * t155 ) + ( ( 12825.281119789837 + t133 *
-6.9647057412840034 ) + t44 * - 0.0070524868246844051 ) *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ; t110 = t263 -
-t108 ; t133 = t263 / ( t110 == 0.0 ? 1.0E-16 : t110 ) ; if ( X [ 291ULL ] <=
-216.59999999999997 ) { t263 = 216.59999999999997 ; } else { t263 = X [ 291ULL
-] >= 623.15 ? 623.15 : X [ 291ULL ] ; } t110 = t263 * t263 ; t44 = ( ( (
-1074.1165326382641 + t263 * - 0.2214565261064495 ) + t110 *
-0.00037212980109014541 ) * ( ( 1.0 - t155 ) -
+1479.6504774711011 + t128 * 1.2002114337048222 ) + t39 * -
+0.00038614513167823636 ) * t150 ) + ( ( 12825.281119789837 + t128 *
+6.9647057412840034 ) + t39 * - 0.0070524868246844051 ) *
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ; t105 = t268 -
+t103 ; t128 = t268 / ( t105 == 0.0 ? 1.0E-16 : t105 ) ; if ( X [ 286ULL ] <=
+216.59999999999997 ) { t268 = 216.59999999999997 ; } else { t268 = X [ 286ULL
+] >= 623.15 ? 623.15 : X [ 286ULL ] ; } t105 = t268 * t268 ; t39 = ( ( (
+1074.1165326382641 + t268 * - 0.2214565261064495 ) + t105 *
+0.00037212980109014541 ) * ( ( 1.0 - t150 ) -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ) + ( (
-1479.6504774711011 + t263 * 1.2002114337048222 ) + t110 * -
-0.00038614513167823636 ) * t155 ) + ( ( 12825.281119789837 + t263 *
-6.9647057412840034 ) + t110 * - 0.0070524868246844051 ) *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ;
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p = t44 - t108 ; t155 =
-t44 / ( Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p == 0.0 ?
-1.0E-16 : Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p ) ; if ( X [
-43ULL ] <= 0.0 ) { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI
-= 0.0 ; } else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI =
-X [ 43ULL ] >= 1.0 ? 1.0 : X [ 43ULL ] ; } if ( X [ 42ULL ] <= 0.0 ) { t263 =
-0.0 ; } else { t263 = X [ 42ULL ] >= 1.0 ? 1.0 : X [ 42ULL ] ; } t44 = ( ( (
-1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ) - t263 ) *
+1479.6504774711011 + t268 * 1.2002114337048222 ) + t105 * -
+0.00038614513167823636 ) * t150 ) + ( ( 12825.281119789837 + t268 *
+6.9647057412840034 ) + t105 * - 0.0070524868246844051 ) *
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ; t106 = t39 -
+t103 ; t150 = t39 / ( t106 == 0.0 ? 1.0E-16 : t106 ) ; if ( X [ 41ULL ] <=
+0.0 ) { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI = 0.0 ; }
+else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI = X [ 41ULL
+] >= 1.0 ? 1.0 : X [ 41ULL ] ; } if ( X [ 40ULL ] <= 0.0 ) { t268 = 0.0 ; }
+else { t268 = X [ 40ULL ] >= 1.0 ? 1.0 : X [ 40ULL ] ; } t39 = ( ( ( 1.0 -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ) - t268 ) *
 296.802103844292 + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI
-* 461.523 ) + t263 * 259.836612622973 ; if ( X [ 310ULL ] <=
-216.59999999999997 ) { t110 = 216.59999999999997 ; } else { t110 = X [ 310ULL
-] >= 623.15 ? 623.15 : X [ 310ULL ] ; } t50 = t110 * t110 ;
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p = ( ( (
-1074.1165326382641 + t110 * - 0.2214565261064495 ) + t50 *
+* 461.523 ) + t268 * 259.836612622973 ; if ( X [ 305ULL ] <=
+216.59999999999997 ) { t105 = 216.59999999999997 ; } else { t105 = X [ 305ULL
+] >= 623.15 ? 623.15 : X [ 305ULL ] ; } t45 = t105 * t105 ; t106 = ( ( (
+1074.1165326382641 + t105 * - 0.2214565261064495 ) + t45 *
 0.00037212980109014541 ) * ( ( 1.0 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ) - t263 ) + ( (
-1479.6504774711011 + t110 * 1.2002114337048222 ) + t50 * -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ) - t268 ) + ( (
+1479.6504774711011 + t105 * 1.2002114337048222 ) + t45 * -
 0.00038614513167823636 ) *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ) + ( (
-900.63941224838356 + t110 * - 0.044484923911382625 ) + t50 *
-0.00036936011832044979 ) * t263 ; t112 =
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p - t44 ; t110 =
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p / ( t112 == 0.0 ?
-1.0E-16 : t112 ) ; if ( X [ 313ULL ] <= 216.59999999999997 ) {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p = 216.59999999999997 ;
-} else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p = X [ 313ULL ]
->= 623.15 ? 623.15 : X [ 313ULL ] ; } t112 =
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p ; t50 = ( ( (
-1074.1165326382641 + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p *
-- 0.2214565261064495 ) + t112 * 0.00037212980109014541 ) * ( ( 1.0 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ) - t263 ) + ( (
-1479.6504774711011 + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p *
-1.2002114337048222 ) + t112 * - 0.00038614513167823636 ) *
+900.63941224838356 + t105 * - 0.044484923911382625 ) + t45 *
+0.00036936011832044979 ) * t268 ; t107 = t106 - t39 ; t105 = t106 / ( t107 ==
+0.0 ? 1.0E-16 : t107 ) ; if ( X [ 308ULL ] <= 216.59999999999997 ) { t106 =
+216.59999999999997 ; } else { t106 = X [ 308ULL ] >= 623.15 ? 623.15 : X [
+308ULL ] ; } t107 = t106 * t106 ; t45 = ( ( ( 1074.1165326382641 + t106 * -
+0.2214565261064495 ) + t107 * 0.00037212980109014541 ) * ( ( 1.0 -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ) - t268 ) + ( (
+1479.6504774711011 + t106 * 1.2002114337048222 ) + t107 * -
+0.00038614513167823636 ) *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI ) + ( (
-900.63941224838356 + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p *
-- 0.044484923911382625 ) + t112 * 0.00036936011832044979 ) * t263 ; t113 =
-t50 - t44 ; Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI = t50
-/ ( t113 == 0.0 ? 1.0E-16 : t113 ) ; if ( X [ 234ULL ] <= 0.0 ) { t263 = 0.0
-; } else { t263 = X [ 234ULL ] >= 1.0 ? 1.0 : X [ 234ULL ] ; } if ( X [
-233ULL ] <= 0.0 ) { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p =
-0.0 ; } else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p = X [
-233ULL ] >= 1.0 ? 1.0 : X [ 233ULL ] ; } t50 = ( ( ( 1.0 - t263 ) -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p ) * 296.802103844292 +
-t263 * 461.523 ) + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p *
-259.836612622973 ; if ( X [ 302ULL ] <= 0.0 ) { t263 = 0.0 ; } else { t263 =
-X [ 302ULL ] >= 1.0 ? 1.0 : X [ 302ULL ] ; } if ( X [ 301ULL ] <= 0.0 ) {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p = 0.0 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p = X [ 301ULL ] >= 1.0 ?
-1.0 : X [ 301ULL ] ; } t112 = ( ( ( 1.0 - t263 ) -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p ) * 296.802103844292 +
-t263 * 461.523 ) + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p *
-259.836612622973 ; if ( X [ 340ULL ] <= 0.0 ) { t263 = 0.0 ; } else { t263 =
-X [ 340ULL ] >= 1.0 ? 1.0 : X [ 340ULL ] ; } if ( X [ 341ULL ] <= 0.0 ) {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p = 0.0 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p = X [ 341ULL ] >= 1.0 ?
-1.0 : X [ 341ULL ] ; } t113 = ( ( ( 1.0 - t263 ) -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p ) * 296.802103844292 +
-t263 * 461.523 ) + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p *
-259.836612622973 ; Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p = (
-X [ 344ULL ] * 0.07812500122070315 + U_idx_8 * 10.0 ) -
-7.8125001220703152E-10 ; if ( X [ 47ULL ] <= 0.0 ) {
+900.63941224838356 + t106 * - 0.044484923911382625 ) + t107 *
+0.00036936011832044979 ) * t268 ; t108 = t45 - t39 ;
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI = t45 / ( t108 ==
+0.0 ? 1.0E-16 : t108 ) ; if ( X [ 229ULL ] <= 0.0 ) { t268 = 0.0 ; } else {
+t268 = X [ 229ULL ] >= 1.0 ? 1.0 : X [ 229ULL ] ; } if ( X [ 228ULL ] <= 0.0
+) { t106 = 0.0 ; } else { t106 = X [ 228ULL ] >= 1.0 ? 1.0 : X [ 228ULL ] ; }
+t45 = ( ( ( 1.0 - t268 ) - t106 ) * 296.802103844292 + t268 * 461.523 ) +
+t106 * 259.836612622973 ; if ( X [ 297ULL ] <= 0.0 ) { t268 = 0.0 ; } else {
+t268 = X [ 297ULL ] >= 1.0 ? 1.0 : X [ 297ULL ] ; } if ( X [ 296ULL ] <= 0.0
+) { t106 = 0.0 ; } else { t106 = X [ 296ULL ] >= 1.0 ? 1.0 : X [ 296ULL ] ; }
+t107 = ( ( ( 1.0 - t268 ) - t106 ) * 296.802103844292 + t268 * 461.523 ) +
+t106 * 259.836612622973 ; if ( X [ 335ULL ] <= 0.0 ) { t268 = 0.0 ; } else {
+t268 = X [ 335ULL ] >= 1.0 ? 1.0 : X [ 335ULL ] ; } if ( X [ 336ULL ] <= 0.0
+) { t106 = 0.0 ; } else { t106 = X [ 336ULL ] >= 1.0 ? 1.0 : X [ 336ULL ] ; }
+t108 = ( ( ( 1.0 - t268 ) - t106 ) * 296.802103844292 + t268 * 461.523 ) +
+t106 * 259.836612622973 ; t106 = ( X [ 339ULL ] * 0.07812500122070315 +
+U_idx_9 * 10.0 ) - 7.8125001220703152E-10 ; if ( X [ 45ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_BI = 0.0 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_BI = X [ 47ULL ] >=
-1.0 ? 1.0 : X [ 47ULL ] ; } if ( X [ 48ULL ] <= 0.0 ) {
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_BI = X [ 45ULL ] >=
+1.0 ? 1.0 : X [ 45ULL ] ; } if ( X [ 46ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 = 0.0 ; }
 else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 = X [
-48ULL ] >= 1.0 ? 1.0 : X [ 48ULL ] ; } intrm_sf_mf_1021 = ( ( ( 1.0 -
+46ULL ] >= 1.0 ? 1.0 : X [ 46ULL ] ; } intrm_sf_mf_1021 = ( ( ( 1.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_BI ) -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 ) *
 296.802103844292 + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_BI
 * 461.523 ) + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19
-* 259.836612622973 ; if ( X [ 348ULL ] <= 216.59999999999997 ) {
+* 259.836612622973 ; if ( X [ 343ULL ] <= 216.59999999999997 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_AI =
 216.59999999999997 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_AI = X [ 348ULL ] >=
-623.15 ? 623.15 : X [ 348ULL ] ; } t56 =
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_AI = X [ 343ULL ] >=
+623.15 ? 623.15 : X [ 343ULL ] ; } t51 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_AI *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_AI ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 = ( ( (
 1074.1165326382641 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_AI * -
-0.2214565261064495 ) + t56 * 0.00037212980109014541 ) * ( ( 1.0 -
+0.2214565261064495 ) + t51 * 0.00037212980109014541 ) * ( ( 1.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_BI ) -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 ) + ( (
 1479.6504774711011 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_AI *
-1.2002114337048222 ) + t56 * - 0.00038614513167823636 ) *
+1.2002114337048222 ) + t51 * - 0.00038614513167823636 ) *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_BI ) + ( (
 900.63941224838356 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_AI * -
-0.044484923911382625 ) + t56 * 0.00036936011832044979 ) *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 ; t114 =
+0.044484923911382625 ) + t51 * 0.00036936011832044979 ) *
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 ; t109 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 -
 intrm_sf_mf_1021 ; Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_AI
-= Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 / ( t114 ==
-0.0 ? 1.0E-16 : t114 ) ; if ( X [ 352ULL ] <= 216.59999999999997 ) {
+= Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 / ( t109 ==
+0.0 ? 1.0E-16 : t109 ) ; if ( X [ 347ULL ] <= 216.59999999999997 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 =
 216.59999999999997 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 = X [ 352ULL ]
->= 623.15 ? 623.15 : X [ 352ULL ] ; } t114 =
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 = X [ 347ULL ]
+>= 623.15 ? 623.15 : X [ 347ULL ] ; } t109 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 ; t56 = ( ( (
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 ; t51 = ( ( (
 1074.1165326382641 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 * -
-0.2214565261064495 ) + t114 * 0.00037212980109014541 ) * ( ( 1.0 -
+0.2214565261064495 ) + t109 * 0.00037212980109014541 ) * ( ( 1.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_BI ) -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 ) + ( (
 1479.6504774711011 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 *
-1.2002114337048222 ) + t114 * - 0.00038614513167823636 ) *
+1.2002114337048222 ) + t109 * - 0.00038614513167823636 ) *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_BI ) + ( (
 900.63941224838356 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 * -
-0.044484923911382625 ) + t114 * 0.00036936011832044979 ) *
+0.044484923911382625 ) + t109 * 0.00036936011832044979 ) *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 ;
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI = t56 -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI = t51 -
 intrm_sf_mf_1021 ; Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_BI
-= t56 / ( Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI == 0.0 ?
+= t51 / ( Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI == 0.0 ?
 1.0E-16 : Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI ) ; if (
-X [ 327ULL ] <= 0.0 ) {
+X [ 322ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 = 0.0 ; }
 else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 = X [
-327ULL ] >= 1.0 ? 1.0 : X [ 327ULL ] ; } if ( X [ 326ULL ] <= 0.0 ) {
+322ULL ] >= 1.0 ? 1.0 : X [ 322ULL ] ; } if ( X [ 321ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 = 0.0 ; } else
-{ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 = X [ 326ULL
-] >= 1.0 ? 1.0 : X [ 326ULL ] ; } t56 = ( ( ( 1.0 -
+{ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 = X [ 321ULL
+] >= 1.0 ? 1.0 : X [ 321ULL ] ; } t51 = ( ( ( 1.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 ) -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 ) *
 296.802103844292 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 * 461.523 ) +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 *
-259.836612622973 ; if ( X [ 346ULL ] <= 0.0 ) {
+259.836612622973 ; if ( X [ 341ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 = 0.0 ; }
 else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 = X [
-346ULL ] >= 1.0 ? 1.0 : X [ 346ULL ] ; } if ( X [ 345ULL ] <= 0.0 ) {
+341ULL ] >= 1.0 ? 1.0 : X [ 341ULL ] ; } if ( X [ 340ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 = 0.0 ; } else
-{ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 = X [ 345ULL
-] >= 1.0 ? 1.0 : X [ 345ULL ] ; } t114 = ( ( ( 1.0 -
+{ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 = X [ 340ULL
+] >= 1.0 ? 1.0 : X [ 340ULL ] ; } t109 = ( ( ( 1.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 ) -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 ) *
 296.802103844292 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 * 461.523 ) +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 *
-259.836612622973 ; if ( X [ 344ULL ] * 0.0019634954084936209 <=
+259.836612622973 ; if ( X [ 339ULL ] * 0.0019634954084936209 <=
 1.9634954084936209E-11 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 =
-1.9634954084936209E-11 ; } else if ( X [ 344ULL ] * 0.0019634954084936209 >=
+1.9634954084936209E-11 ; } else if ( X [ 339ULL ] * 0.0019634954084936209 >=
 0.0012566370614359179 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 =
 0.0012566370614359179 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 = X [ 344ULL
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 = X [ 339ULL
 ] * 0.0019634954084936209 ; }
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 /
-0.0019634954084936209 ; if ( X [ 367ULL ] <= 0.0 ) {
+0.0019634954084936209 ; if ( X [ 362ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 = 0.0 ; }
 else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 = X [
-367ULL ] >= 1.0 ? 1.0 : X [ 367ULL ] ; } if ( X [ 368ULL ] <= 0.0 ) {
+362ULL ] >= 1.0 ? 1.0 : X [ 362ULL ] ; } if ( X [ 363ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI = 0.0 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI = X [ 368ULL ] >=
-1.0 ? 1.0 : X [ 368ULL ] ; } intrm_sf_mf_1160 = ( ( ( 1.0 -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI = X [ 363ULL ] >=
+1.0 ? 1.0 : X [ 363ULL ] ; } intrm_sf_mf_1160 = ( ( ( 1.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 ) -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI ) *
 296.802103844292 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 * 461.523 ) +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI * 259.836612622973
-; t117 = X [ 365ULL ] * intrm_sf_mf_1160 ; intrm_sf_mf_1250 = X [ 366ULL ] /
-( Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p == 0.0 ? 1.0E-16 :
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p ) * ( X [ 369ULL ] / (
-X [ 365ULL ] == 0.0 ? 1.0E-16 : X [ 365ULL ] ) ) ; t119 = X [ 366ULL ] /
-1.01325 * ( X [ 370ULL ] / ( X [ 365ULL ] == 0.0 ? 1.0E-16 : X [ 365ULL ] ) )
-; intrm_sf_mf_1455 = ( Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p
-+ 1.01325 ) / 2.0 * 0.0010000000000000009 ;
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_AI = ( 1.0 -
+; t112 = X [ 360ULL ] * intrm_sf_mf_1160 ; U_idx_9 = X [ 361ULL ] / ( t106 ==
+0.0 ? 1.0E-16 : t106 ) * ( X [ 364ULL ] / ( X [ 360ULL ] == 0.0 ? 1.0E-16 : X
+[ 360ULL ] ) ) ; t114 = X [ 361ULL ] / 1.01325 * ( X [ 365ULL ] / ( X [
+360ULL ] == 0.0 ? 1.0E-16 : X [ 360ULL ] ) ) ; intrm_sf_mf_1455 = ( t106 +
+1.01325 ) / 2.0 * 0.0010000000000000009 ; t117 = ( 1.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 ) * ( 1.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 ) ;
-intrm_sf_mf_1252 = intrm_sf_mf_1455 *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_AI ; intrm_sf_mf_1161
-= ( Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 + 1.0 ) *
-( 1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 *
-intrm_sf_mf_1250 ) - ( 1.0 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 * t119 ) *
+intrm_sf_mf_1252 = intrm_sf_mf_1455 * t117 ; intrm_sf_mf_1161 = (
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 + 1.0 ) * (
+1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 *
+U_idx_9 ) - ( 1.0 -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 * t114 ) *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 * 2.0 ;
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI = (
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p - 1.01325 ) * (
-intrm_sf_mf_1161 >=
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_AI ? intrm_sf_mf_1161
-: Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_AI ) ;
-intrm_sf_mf_1161 = ( Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p -
-1.01325 ) / ( intrm_sf_mf_1455 == 0.0 ? 1.0E-16 : intrm_sf_mf_1455 ) ; t263 =
-intrm_sf_mf_1161 * intrm_sf_mf_1161 * 3.0 - intrm_sf_mf_1161 *
-intrm_sf_mf_1161 * intrm_sf_mf_1161 * 2.0 ; if (
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p - 1.01325 <= 0.0 ) {
-intrm_sf_mf_1161 = intrm_sf_mf_1252 ; } else if (
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p - 1.01325 >=
-intrm_sf_mf_1455 ) { intrm_sf_mf_1161 =
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI = ( t106 -
+1.01325 ) * ( intrm_sf_mf_1161 >= t117 ? intrm_sf_mf_1161 : t117 ) ;
+intrm_sf_mf_1161 = ( t106 - 1.01325 ) / ( intrm_sf_mf_1455 == 0.0 ? 1.0E-16 :
+intrm_sf_mf_1455 ) ; t268 = intrm_sf_mf_1161 * intrm_sf_mf_1161 * 3.0 -
+intrm_sf_mf_1161 * intrm_sf_mf_1161 * intrm_sf_mf_1161 * 2.0 ; if ( t106 -
+1.01325 <= 0.0 ) { intrm_sf_mf_1161 = intrm_sf_mf_1252 ; } else if ( t106 -
+1.01325 >= intrm_sf_mf_1455 ) { intrm_sf_mf_1161 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI ; } else {
-intrm_sf_mf_1161 = ( 1.0 - t263 ) * intrm_sf_mf_1252 +
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI * t263 ; }
+intrm_sf_mf_1161 = ( 1.0 - t268 ) * intrm_sf_mf_1252 +
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI * t268 ; }
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI = (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 + 1.0 ) * (
-1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 * t119 )
+1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 * t114 )
 - ( 1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 *
-intrm_sf_mf_1250 ) *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 * 2.0 ;
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 = ( 1.01325 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p ) * (
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI >=
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_AI ?
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI :
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_AI ) ;
-intrm_sf_mf_1250 = ( 1.01325 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p ) / ( intrm_sf_mf_1455
-== 0.0 ? 1.0E-16 : intrm_sf_mf_1455 ) ; t119 = intrm_sf_mf_1250 *
-intrm_sf_mf_1250 * 3.0 - intrm_sf_mf_1250 * intrm_sf_mf_1250 *
-intrm_sf_mf_1250 * 2.0 ; if ( 1.01325 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p <= 0.0 ) {
-intrm_sf_mf_1250 = intrm_sf_mf_1252 ; } else if ( 1.01325 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p >= intrm_sf_mf_1455 ) {
-intrm_sf_mf_1250 =
+U_idx_9 ) * Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 *
+2.0 ; Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 = (
+1.01325 - t106 ) * (
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI >= t117 ?
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI : t117 ) ;
+U_idx_9 = ( 1.01325 - t106 ) / ( intrm_sf_mf_1455 == 0.0 ? 1.0E-16 :
+intrm_sf_mf_1455 ) ; t114 = U_idx_9 * U_idx_9 * 3.0 - U_idx_9 * U_idx_9 *
+U_idx_9 * 2.0 ; if ( 1.01325 - t106 <= 0.0 ) { U_idx_9 = intrm_sf_mf_1252 ; }
+else if ( 1.01325 - t106 >= intrm_sf_mf_1455 ) { U_idx_9 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 ; } else {
-intrm_sf_mf_1250 = ( 1.0 - t119 ) * intrm_sf_mf_1252 +
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 * t119 ; } if
-( Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p > 1.01325 ) {
+U_idx_9 = ( 1.0 - t114 ) * intrm_sf_mf_1252 +
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 * t114 ; } if
+( t106 > 1.01325 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 =
 intrm_sf_mf_1161 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 =
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p < 1.01325 ?
-intrm_sf_mf_1250 : intrm_sf_mf_1252 ; } if ( X [ 365ULL ] <=
-216.59999999999997 ) { intrm_sf_mf_1250 = 216.59999999999997 ; } else {
-intrm_sf_mf_1250 = X [ 365ULL ] >= 623.15 ? 623.15 : X [ 365ULL ] ; } t62 =
-intrm_sf_mf_1250 * intrm_sf_mf_1250 ; t119 = ( ( ( 1074.1165326382641 +
-intrm_sf_mf_1250 * - 0.2214565261064495 ) + t62 * 0.00037212980109014541 ) *
-( ( 1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 ) -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 = t106 <
+1.01325 ? U_idx_9 : intrm_sf_mf_1252 ; } if ( X [ 360ULL ] <=
+216.59999999999997 ) { U_idx_9 = 216.59999999999997 ; } else { U_idx_9 = X [
+360ULL ] >= 623.15 ? 623.15 : X [ 360ULL ] ; } t57 = U_idx_9 * U_idx_9 ; t114
+= ( ( ( 1074.1165326382641 + U_idx_9 * - 0.2214565261064495 ) + t57 *
+0.00037212980109014541 ) * ( ( 1.0 -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 ) -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI ) + ( (
-1479.6504774711011 + intrm_sf_mf_1250 * 1.2002114337048222 ) + t62 * -
+1479.6504774711011 + U_idx_9 * 1.2002114337048222 ) + t57 * -
 0.00038614513167823636 ) *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 ) + ( (
-900.63941224838356 + intrm_sf_mf_1250 * - 0.044484923911382625 ) + t62 *
+900.63941224838356 + U_idx_9 * - 0.044484923911382625 ) + t57 *
 0.00036936011832044979 ) *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI ; t127 = t119 -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI ; t60 = t114 -
 intrm_sf_mf_1160 ;
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 = t119 / (
-t127 == 0.0 ? 1.0E-16 : t127 ) ; if ( X [ 14ULL ] <= 0.0 ) {
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 = t114 / (
+t60 == 0.0 ? 1.0E-16 : t60 ) ; if ( X [ 12ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI = 0.0 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI = X [ 14ULL ] >=
-1.0 ? 1.0 : X [ 14ULL ] ; } if ( X [ 13ULL ] <= 0.0 ) { intrm_sf_mf_1250 =
-0.0 ; } else { intrm_sf_mf_1250 = X [ 13ULL ] >= 1.0 ? 1.0 : X [ 13ULL ] ; }
-t119 = ( ( ( 1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI
-) - intrm_sf_mf_1250 ) * 296.802103844292 +
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI * 461.523 ) +
-intrm_sf_mf_1250 * 259.836612622973 ; if ( X [ 372ULL ] <= 216.59999999999997
-) { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_AI =
-216.59999999999997 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_AI = X [ 372ULL ] >=
-623.15 ? 623.15 : X [ 372ULL ] ; } t127 =
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_AI *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_AI ; intrm_sf_mf_1455
-= ( ( ( 1074.1165326382641 +
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_AI * -
-0.2214565261064495 ) + t127 * 0.00037212980109014541 ) * ( ( 1.0 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI ) -
-intrm_sf_mf_1250 ) + ( ( 1479.6504774711011 +
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_AI *
-1.2002114337048222 ) + t127 * - 0.00038614513167823636 ) *
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI = X [ 12ULL ] >=
+1.0 ? 1.0 : X [ 12ULL ] ; } if ( X [ 11ULL ] <= 0.0 ) { U_idx_9 = 0.0 ; }
+else { U_idx_9 = X [ 11ULL ] >= 1.0 ? 1.0 : X [ 11ULL ] ; } t114 = ( ( ( 1.0
+- Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI ) - U_idx_9 ) *
+296.802103844292 + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI
+* 461.523 ) + U_idx_9 * 259.836612622973 ; if ( X [ 367ULL ] <=
+216.59999999999997 ) { t117 = 216.59999999999997 ; } else { t117 = X [ 367ULL
+] >= 623.15 ? 623.15 : X [ 367ULL ] ; } t60 = t117 * t117 ; intrm_sf_mf_1455
+= ( ( ( 1074.1165326382641 + t117 * - 0.2214565261064495 ) + t60 *
+0.00037212980109014541 ) * ( ( 1.0 -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI ) - U_idx_9 ) + (
+( 1479.6504774711011 + t117 * 1.2002114337048222 ) + t60 * -
+0.00038614513167823636 ) *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI ) + ( (
-900.63941224838356 +
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_AI * -
-0.044484923911382625 ) + t127 * 0.00036936011832044979 ) * intrm_sf_mf_1250 ;
-t128 = intrm_sf_mf_1455 - t119 ;
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_AI = intrm_sf_mf_1455
-/ ( t128 == 0.0 ? 1.0E-16 : t128 ) ; if ( X [ 375ULL ] <= 216.59999999999997
-) { intrm_sf_mf_1455 = 216.59999999999997 ; } else { intrm_sf_mf_1455 = X [
-375ULL ] >= 623.15 ? 623.15 : X [ 375ULL ] ; } t128 = intrm_sf_mf_1455 *
-intrm_sf_mf_1455 ; intrm_sf_mf_1252 = ( ( ( 1074.1165326382641 +
-intrm_sf_mf_1455 * - 0.2214565261064495 ) + t128 * 0.00037212980109014541 ) *
-( ( 1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI ) -
-intrm_sf_mf_1250 ) + ( ( 1479.6504774711011 + intrm_sf_mf_1455 *
-1.2002114337048222 ) + t128 * - 0.00038614513167823636 ) *
+900.63941224838356 + t117 * - 0.044484923911382625 ) + t60 *
+0.00036936011832044979 ) * U_idx_9 ; t123 = intrm_sf_mf_1455 - t114 ; t117 =
+intrm_sf_mf_1455 / ( t123 == 0.0 ? 1.0E-16 : t123 ) ; if ( X [ 370ULL ] <=
+216.59999999999997 ) { intrm_sf_mf_1455 = 216.59999999999997 ; } else {
+intrm_sf_mf_1455 = X [ 370ULL ] >= 623.15 ? 623.15 : X [ 370ULL ] ; } t123 =
+intrm_sf_mf_1455 * intrm_sf_mf_1455 ; intrm_sf_mf_1252 = ( ( (
+1074.1165326382641 + intrm_sf_mf_1455 * - 0.2214565261064495 ) + t123 *
+0.00037212980109014541 ) * ( ( 1.0 -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI ) - U_idx_9 ) + (
+( 1479.6504774711011 + intrm_sf_mf_1455 * 1.2002114337048222 ) + t123 * -
+0.00038614513167823636 ) *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI ) + ( (
-900.63941224838356 + intrm_sf_mf_1455 * - 0.044484923911382625 ) + t128 *
-0.00036936011832044979 ) * intrm_sf_mf_1250 ; t71 = intrm_sf_mf_1252 - t119 ;
+900.63941224838356 + intrm_sf_mf_1455 * - 0.044484923911382625 ) + t123 *
+0.00036936011832044979 ) * U_idx_9 ; t124 = intrm_sf_mf_1252 - t114 ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI = intrm_sf_mf_1252
-/ ( t71 == 0.0 ? 1.0E-16 : t71 ) ; if ( X [ 71ULL ] <= 0.0 ) {
-intrm_sf_mf_1250 = 0.0 ; } else { intrm_sf_mf_1250 = X [ 71ULL ] >= 1.0 ? 1.0
-: X [ 71ULL ] ; } if ( X [ 70ULL ] <= 0.0 ) { intrm_sf_mf_1455 = 0.0 ; } else
-{ intrm_sf_mf_1455 = X [ 70ULL ] >= 1.0 ? 1.0 : X [ 70ULL ] ; }
-intrm_sf_mf_1252 = ( ( ( 1.0 - intrm_sf_mf_1250 ) - intrm_sf_mf_1455 ) *
-296.802103844292 + intrm_sf_mf_1250 * 461.523 ) + intrm_sf_mf_1455 *
-259.836612622973 ; if ( X [ 17ULL ] <= 0.0 ) { intrm_sf_mf_1250 = 0.0 ; }
-else { intrm_sf_mf_1250 = X [ 17ULL ] >= 1.0 ? 1.0 : X [ 17ULL ] ; } if ( X [
-16ULL ] <= 0.0 ) { intrm_sf_mf_1455 = 0.0 ; } else { intrm_sf_mf_1455 = X [
-16ULL ] >= 1.0 ? 1.0 : X [ 16ULL ] ; } intrm_sf_mf_1161 = ( ( ( 1.0 -
-intrm_sf_mf_1250 ) - intrm_sf_mf_1455 ) * 296.802103844292 + intrm_sf_mf_1250
-* 461.523 ) + intrm_sf_mf_1455 * 259.836612622973 ; if ( X [ 386ULL ] <=
-216.59999999999997 ) {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI =
+/ ( t124 == 0.0 ? 1.0E-16 : t124 ) ; if ( X [ 66ULL ] <= 0.0 ) { U_idx_9 =
+0.0 ; } else { U_idx_9 = X [ 66ULL ] >= 1.0 ? 1.0 : X [ 66ULL ] ; } if ( X [
+65ULL ] <= 0.0 ) { intrm_sf_mf_1455 = 0.0 ; } else { intrm_sf_mf_1455 = X [
+65ULL ] >= 1.0 ? 1.0 : X [ 65ULL ] ; } intrm_sf_mf_1252 = ( ( ( 1.0 - U_idx_9
+) - intrm_sf_mf_1455 ) * 296.802103844292 + U_idx_9 * 461.523 ) +
+intrm_sf_mf_1455 * 259.836612622973 ; if ( X [ 15ULL ] <= 0.0 ) { U_idx_9 =
+0.0 ; } else { U_idx_9 = X [ 15ULL ] >= 1.0 ? 1.0 : X [ 15ULL ] ; } if ( X [
+14ULL ] <= 0.0 ) { intrm_sf_mf_1455 = 0.0 ; } else { intrm_sf_mf_1455 = X [
+14ULL ] >= 1.0 ? 1.0 : X [ 14ULL ] ; } intrm_sf_mf_1161 = ( ( ( 1.0 - U_idx_9
+) - intrm_sf_mf_1455 ) * 296.802103844292 + U_idx_9 * 461.523 ) +
+intrm_sf_mf_1455 * 259.836612622973 ; if ( X [ 381ULL ] <= 216.59999999999997
+) { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI =
 216.59999999999997 ; } else {
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI = X [ 386ULL ] >=
-623.15 ? 623.15 : X [ 386ULL ] ; } t71 =
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI = X [ 381ULL ] >=
+623.15 ? 623.15 : X [ 381ULL ] ; } t124 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI ; t263 = ( ( (
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI ; t268 = ( ( (
 1074.1165326382641 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI * -
-0.2214565261064495 ) + t71 * 0.00037212980109014541 ) * ( ( 1.0 -
-intrm_sf_mf_1250 ) - intrm_sf_mf_1455 ) + ( ( 1479.6504774711011 +
+0.2214565261064495 ) + t124 * 0.00037212980109014541 ) * ( ( 1.0 - U_idx_9 )
+- intrm_sf_mf_1455 ) + ( ( 1479.6504774711011 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI *
-1.2002114337048222 ) + t71 * - 0.00038614513167823636 ) * intrm_sf_mf_1250 )
-+ ( ( 900.63941224838356 +
+1.2002114337048222 ) + t124 * - 0.00038614513167823636 ) * U_idx_9 ) + ( (
+900.63941224838356 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI * -
-0.044484923911382625 ) + t71 * 0.00036936011832044979 ) * intrm_sf_mf_1455 ;
-t74 = t263 - intrm_sf_mf_1161 ;
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI = t263 / ( t74 ==
-0.0 ? 1.0E-16 : t74 ) ; if ( X [ 388ULL ] <= 216.59999999999997 ) { t263 =
-216.59999999999997 ; } else { t263 = X [ 388ULL ] >= 623.15 ? 623.15 : X [
-388ULL ] ; } t74 = t263 * t263 ; t62 = ( ( ( 1074.1165326382641 + t263 * -
-0.2214565261064495 ) + t74 * 0.00037212980109014541 ) * ( ( 1.0 -
-intrm_sf_mf_1250 ) - intrm_sf_mf_1455 ) + ( ( 1479.6504774711011 + t263 *
-1.2002114337048222 ) + t74 * - 0.00038614513167823636 ) * intrm_sf_mf_1250 )
-+ ( ( 900.63941224838356 + t263 * - 0.044484923911382625 ) + t74 *
-0.00036936011832044979 ) * intrm_sf_mf_1455 ; U_idx_2 = t62 -
-intrm_sf_mf_1161 ; intrm_sf_mf_1250 = t62 / ( U_idx_2 == 0.0 ? 1.0E-16 :
-U_idx_2 ) ; if ( X [ 331ULL ] <= 0.0 ) { intrm_sf_mf_1455 = 0.0 ; } else {
-intrm_sf_mf_1455 = X [ 331ULL ] >= 1.0 ? 1.0 : X [ 331ULL ] ; } if ( X [
-330ULL ] <= 0.0 ) { t263 = 0.0 ; } else { t263 = X [ 330ULL ] >= 1.0 ? 1.0 :
-X [ 330ULL ] ; } t62 = ( ( ( 1.0 - intrm_sf_mf_1455 ) - t263 ) *
-296.802103844292 + intrm_sf_mf_1455 * 461.523 ) + t263 * 259.836612622973 ;
-if ( U_idx_9 >= 1.0 ) { intrm_sf_mf_1455 = 1.0 ; } else { intrm_sf_mf_1455 =
-U_idx_9 <= 0.0 ? 0.0 : U_idx_9 ; } if ( X [ 118ULL ] <= 0.0 ) { t263 = 0.0 ;
-} else { t263 = X [ 118ULL ] >= 1.0 ? 1.0 : X [ 118ULL ] ; } if ( X [ 117ULL
-] <= 0.0 ) { U_idx_8 = 0.0 ; } else { U_idx_8 = X [ 117ULL ] >= 1.0 ? 1.0 : X
-[ 117ULL ] ; } t127 = ( ( ( 1.0 - t263 ) - U_idx_8 ) * 296.802103844292 +
-t263 * 461.523 ) + U_idx_8 * 4124.48151675695 ; if ( X [ 165ULL ] <= 0.0 ) {
-t263 = 0.0 ; } else { t263 = X [ 165ULL ] >= 1.0 ? 1.0 : X [ 165ULL ] ; } if
-( X [ 164ULL ] <= 0.0 ) { U_idx_8 = 0.0 ; } else { U_idx_8 = X [ 164ULL ] >=
-1.0 ? 1.0 : X [ 164ULL ] ; } t128 = ( ( ( 1.0 - t263 ) - U_idx_8 ) *
-296.802103844292 + t263 * 461.523 ) + U_idx_8 * 4124.48151675695 ; if ( X [
-209ULL ] <= 0.0 ) { t263 = 0.0 ; } else { t263 = X [ 209ULL ] >= 1.0 ? 1.0 :
-X [ 209ULL ] ; } if ( X [ 208ULL ] <= 0.0 ) { U_idx_8 = 0.0 ; } else {
-U_idx_8 = X [ 208ULL ] >= 1.0 ? 1.0 : X [ 208ULL ] ; } t71 = ( ( ( 1.0 - t263
-) - U_idx_8 ) * 296.802103844292 + t263 * 461.523 ) + U_idx_8 *
-259.836612622973 ; if ( M [ 33ULL ] == 0 ) { U_idx_8 = - X [ 398ULL ] - X [
-52ULL ] ; } else { U_idx_8 = 0.0 ; } if ( M [ 178ULL ] == 0 ) { t74 = U_idx_5
-- 623.15 ; } else { t74 = 0.0 ; } if ( M [ 205ULL ] == 0 ) { U_idx_2 =
-U_idx_7 - 623.15 ; } else { U_idx_2 = 0.0 ; } t5 [ 0ULL ] = pmf_get_inf ( ) ;
-for ( t6 = 0ULL ; t6 < 42ULL ; t6 ++ ) { t7 = t6 / 42ULL ; t263 = t5 [ t7 >
-0ULL ? 0ULL : t7 ] ; U_idx_1 = ( ( _NeDynamicSystem * ) ( LC ) ) -> mField0 [
-t6 ] * 1.0E-5 ; t5 [ t7 > 0ULL ? 0ULL : t7 ] = t263 > U_idx_1 ? U_idx_1 :
-t263 ; } t4 [ 0ULL ] = t5 [ 0ULL ] - X [ 54ULL ] ; t4 [ 1ULL ] = 4.03416E-7 -
-X [ 56ULL ] ; t4 [ 2ULL ] = X [ 56ULL ] ; t4 [ 3ULL ] = X [ 54ULL ] ; t4 [
-4ULL ] = X [ 55ULL ] - 0.9 ; t4 [ 5ULL ] = ( ( ( X [ 4ULL ] * - 1.0E-6 + X [
-61ULL ] * - 1.0000000000000011 ) + X [ 62ULL ] * - 1.0E-6 ) + X [ 5ULL ] ) -
-( X [ 60ULL ] + 0.8 ) ; t4 [ 6ULL ] = intrm_sf_mf_1455 - 1.0 > 1.0 -
-intrm_sf_mf_1455 ? 1.0 - intrm_sf_mf_1455 : intrm_sf_mf_1455 - 1.0 ; t4 [
-7ULL ] = X [ 289ULL ] * t133 * t108 ; t133 = X [ 290ULL ] * X [ 290ULL ] *
-t133 / ( t108 == 0.0 ? 1.0E-16 : t108 ) ; t4 [ 8ULL ] = t133 / ( X [ 289ULL ]
-== 0.0 ? 1.0E-16 : X [ 289ULL ] ) ; t4 [ 9ULL ] = X [ 291ULL ] * t155 * t108
-; t155 = X [ 292ULL ] * X [ 292ULL ] * t155 / ( t108 == 0.0 ? 1.0E-16 : t108
-) ; t4 [ 10ULL ] = t155 / ( X [ 291ULL ] == 0.0 ? 1.0E-16 : X [ 291ULL ] ) ;
-t4 [ 11ULL ] = X [ 289ULL ] * t108 / ( X [ 290ULL ] == 0.0 ? 1.0E-16 : X [
-290ULL ] ) ; t4 [ 12ULL ] = X [ 291ULL ] * t108 / ( X [ 292ULL ] == 0.0 ?
-1.0E-16 : X [ 292ULL ] ) ; t4 [ 13ULL ] = X [ 65ULL ] - 0.01 ; t4 [ 14ULL ] =
-pmf_get_inf ( ) - X [ 65ULL ] ; t4 [ 15ULL ] = X [ 64ULL ] -
-216.59999999999997 ; t4 [ 16ULL ] = 623.15 - X [ 64ULL ] ; t4 [ 17ULL ] = X [
-112ULL ] - 0.01 ; t4 [ 18ULL ] = pmf_get_inf ( ) - X [ 112ULL ] ; t4 [ 19ULL
-] = X [ 111ULL ] - 216.59999999999997 ; t4 [ 20ULL ] = 623.15 - X [ 111ULL ]
-; t4 [ 21ULL ] = X [ 40ULL ] - 0.01 ; t4 [ 22ULL ] = pmf_get_inf ( ) - X [
-40ULL ] ; t4 [ 23ULL ] = X [ 9ULL ] - 216.59999999999997 ; t4 [ 24ULL ] =
-623.15 - X [ 9ULL ] ; t4 [ 25ULL ] = X [ 9ULL ] * t108 / ( X [ 40ULL ] == 0.0
-? 1.0E-16 : X [ 40ULL ] ) ; t4 [ 26ULL ] = X [ 386ULL ] *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI *
-intrm_sf_mf_1161 ; t4 [ 27ULL ] = X [ 387ULL ] * X [ 387ULL ] *
+0.044484923911382625 ) + t124 * 0.00036936011832044979 ) * intrm_sf_mf_1455 ;
+t69 = t268 - intrm_sf_mf_1161 ;
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI = t268 / ( t69 ==
+0.0 ? 1.0E-16 : t69 ) ; if ( X [ 383ULL ] <= 216.59999999999997 ) { t268 =
+216.59999999999997 ; } else { t268 = X [ 383ULL ] >= 623.15 ? 623.15 : X [
+383ULL ] ; } t69 = t268 * t268 ; t57 = ( ( ( 1074.1165326382641 + t268 * -
+0.2214565261064495 ) + t69 * 0.00037212980109014541 ) * ( ( 1.0 - U_idx_9 ) -
+intrm_sf_mf_1455 ) + ( ( 1479.6504774711011 + t268 * 1.2002114337048222 ) +
+t69 * - 0.00038614513167823636 ) * U_idx_9 ) + ( ( 900.63941224838356 + t268
+* - 0.044484923911382625 ) + t69 * 0.00036936011832044979 ) *
+intrm_sf_mf_1455 ; t268 = t57 - intrm_sf_mf_1161 ; U_idx_9 = t57 / ( t268 ==
+0.0 ? 1.0E-16 : t268 ) ; if ( X [ 326ULL ] <= 0.0 ) { intrm_sf_mf_1455 = 0.0
+; } else { intrm_sf_mf_1455 = X [ 326ULL ] >= 1.0 ? 1.0 : X [ 326ULL ] ; } if
+( X [ 325ULL ] <= 0.0 ) { t268 = 0.0 ; } else { t268 = X [ 325ULL ] >= 1.0 ?
+1.0 : X [ 325ULL ] ; } t57 = ( ( ( 1.0 - intrm_sf_mf_1455 ) - t268 ) *
+296.802103844292 + intrm_sf_mf_1455 * 461.523 ) + t268 * 259.836612622973 ;
+if ( U_idx_10 >= 1.0 ) { intrm_sf_mf_1455 = 1.0 ; } else { intrm_sf_mf_1455 =
+U_idx_10 <= 0.0 ? 0.0 : U_idx_10 ; } if ( X [ 113ULL ] <= 0.0 ) { t268 = 0.0
+; } else { t268 = X [ 113ULL ] >= 1.0 ? 1.0 : X [ 113ULL ] ; } if ( X [
+112ULL ] <= 0.0 ) { U_idx_2 = 0.0 ; } else { U_idx_2 = X [ 112ULL ] >= 1.0 ?
+1.0 : X [ 112ULL ] ; } t60 = ( ( ( 1.0 - t268 ) - U_idx_2 ) *
+296.802103844292 + t268 * 461.523 ) + U_idx_2 * 4124.48151675695 ; if ( X [
+160ULL ] <= 0.0 ) { t268 = 0.0 ; } else { t268 = X [ 160ULL ] >= 1.0 ? 1.0 :
+X [ 160ULL ] ; } if ( X [ 159ULL ] <= 0.0 ) { U_idx_2 = 0.0 ; } else {
+U_idx_2 = X [ 159ULL ] >= 1.0 ? 1.0 : X [ 159ULL ] ; } t123 = ( ( ( 1.0 -
+t268 ) - U_idx_2 ) * 296.802103844292 + t268 * 461.523 ) + U_idx_2 *
+4124.48151675695 ; if ( X [ 204ULL ] <= 0.0 ) { t268 = 0.0 ; } else { t268 =
+X [ 204ULL ] >= 1.0 ? 1.0 : X [ 204ULL ] ; } if ( X [ 203ULL ] <= 0.0 ) {
+U_idx_2 = 0.0 ; } else { U_idx_2 = X [ 203ULL ] >= 1.0 ? 1.0 : X [ 203ULL ] ;
+} t124 = ( ( ( 1.0 - t268 ) - U_idx_2 ) * 296.802103844292 + t268 * 461.523 )
++ U_idx_2 * 259.836612622973 ; if ( M [ 31ULL ] == 0 ) { U_idx_3 = - X [
+393ULL ] - X [ 50ULL ] ; } else { U_idx_3 = 0.0 ; } if ( M [ 171ULL ] == 0 )
+{ U_idx_2 = U_idx_6 - 623.15 ; } else { U_idx_2 = 0.0 ; } if ( M [ 198ULL ]
+== 0 ) { t69 = U_idx_8 - 623.15 ; } else { t69 = 0.0 ; } t4 [ 0ULL ] =
+U_idx_1 - 0.9 ; t4 [ 1ULL ] = ( ( ( X [ 2ULL ] * - 1.0E-6 + X [ 56ULL ] * -
+1.0000000000000011 ) + X [ 57ULL ] * - 1.0E-6 ) + X [ 3ULL ] ) - ( X [ 55ULL
+] + 0.8 ) ; t4 [ 2ULL ] = intrm_sf_mf_1455 - 1.0 > 1.0 - intrm_sf_mf_1455 ?
+1.0 - intrm_sf_mf_1455 : intrm_sf_mf_1455 - 1.0 ; t4 [ 3ULL ] = X [ 284ULL ]
+* t128 * t103 ; t128 = X [ 285ULL ] * X [ 285ULL ] * t128 / ( t103 == 0.0 ?
+1.0E-16 : t103 ) ; t4 [ 4ULL ] = t128 / ( X [ 284ULL ] == 0.0 ? 1.0E-16 : X [
+284ULL ] ) ; t4 [ 5ULL ] = X [ 286ULL ] * t150 * t103 ; t150 = X [ 287ULL ] *
+X [ 287ULL ] * t150 / ( t103 == 0.0 ? 1.0E-16 : t103 ) ; t4 [ 6ULL ] = t150 /
+( X [ 286ULL ] == 0.0 ? 1.0E-16 : X [ 286ULL ] ) ; t4 [ 7ULL ] = X [ 284ULL ]
+* t103 / ( X [ 285ULL ] == 0.0 ? 1.0E-16 : X [ 285ULL ] ) ; t4 [ 8ULL ] = X [
+286ULL ] * t103 / ( X [ 287ULL ] == 0.0 ? 1.0E-16 : X [ 287ULL ] ) ; t4 [
+9ULL ] = X [ 60ULL ] - 0.01 ; t4 [ 10ULL ] = pmf_get_inf ( ) - X [ 60ULL ] ;
+t4 [ 11ULL ] = X [ 59ULL ] - 216.59999999999997 ; t4 [ 12ULL ] = 623.15 - X [
+59ULL ] ; t4 [ 13ULL ] = X [ 107ULL ] - 0.01 ; t4 [ 14ULL ] = pmf_get_inf ( )
+- X [ 107ULL ] ; t4 [ 15ULL ] = X [ 106ULL ] - 216.59999999999997 ; t4 [
+16ULL ] = 623.15 - X [ 106ULL ] ; t4 [ 17ULL ] = X [ 38ULL ] - 0.01 ; t4 [
+18ULL ] = pmf_get_inf ( ) - X [ 38ULL ] ; t4 [ 19ULL ] = X [ 7ULL ] -
+216.59999999999997 ; t4 [ 20ULL ] = 623.15 - X [ 7ULL ] ; t4 [ 21ULL ] = X [
+7ULL ] * t103 / ( X [ 38ULL ] == 0.0 ? 1.0E-16 : X [ 38ULL ] ) ; t4 [ 22ULL ]
+= X [ 381ULL ] * Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI
+* intrm_sf_mf_1161 ; t4 [ 23ULL ] = X [ 382ULL ] * X [ 382ULL ] *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_gamma_AI / (
-intrm_sf_mf_1161 == 0.0 ? 1.0E-16 : intrm_sf_mf_1161 ) / ( X [ 386ULL ] ==
-0.0 ? 1.0E-16 : X [ 386ULL ] ) ; t4 [ 28ULL ] = X [ 388ULL ] *
-intrm_sf_mf_1250 * intrm_sf_mf_1161 ; t4 [ 29ULL ] = X [ 389ULL ] * X [
-389ULL ] * intrm_sf_mf_1250 / ( intrm_sf_mf_1161 == 0.0 ? 1.0E-16 :
-intrm_sf_mf_1161 ) / ( X [ 388ULL ] == 0.0 ? 1.0E-16 : X [ 388ULL ] ) ; t4 [
-30ULL ] = X [ 386ULL ] * intrm_sf_mf_1161 / ( X [ 387ULL ] == 0.0 ? 1.0E-16 :
-X [ 387ULL ] ) ; t4 [ 31ULL ] = X [ 388ULL ] * intrm_sf_mf_1161 / ( X [
-389ULL ] == 0.0 ? 1.0E-16 : X [ 389ULL ] ) ; t4 [ 32ULL ] = X [ 69ULL ] -
-0.01 ; t4 [ 33ULL ] = pmf_get_inf ( ) - X [ 69ULL ] ; t4 [ 34ULL ] = X [
-68ULL ] - 216.59999999999997 ; t4 [ 35ULL ] = 623.15 - X [ 68ULL ] ; t4 [
-36ULL ] = X [ 325ULL ] - 0.01 ; t4 [ 37ULL ] = pmf_get_inf ( ) - X [ 325ULL ]
-; t4 [ 38ULL ] = X [ 324ULL ] - 216.59999999999997 ; t4 [ 39ULL ] = 623.15 -
-X [ 324ULL ] ; t4 [ 40ULL ] = X [ 50ULL ] - 0.01 ; t4 [ 41ULL ] = pmf_get_inf
-( ) - X [ 50ULL ] ; t4 [ 42ULL ] = X [ 15ULL ] - 216.59999999999997 ; t4 [
-43ULL ] = 623.15 - X [ 15ULL ] ; t4 [ 44ULL ] = X [ 15ULL ] *
-intrm_sf_mf_1161 / ( X [ 50ULL ] == 0.0 ? 1.0E-16 : X [ 50ULL ] ) ; t4 [
-45ULL ] = X [ 135ULL ] * t280 * t279 ; t280 = X [ 136ULL ] * X [ 136ULL ] *
-t280 / ( t279 == 0.0 ? 1.0E-16 : t279 ) ; t4 [ 46ULL ] = t280 / ( X [ 135ULL
-] == 0.0 ? 1.0E-16 : X [ 135ULL ] ) ; t4 [ 47ULL ] = X [ 139ULL ] * t320 *
-t279 ; t320 = X [ 140ULL ] * X [ 140ULL ] * t320 / ( t279 == 0.0 ? 1.0E-16 :
-t279 ) ; t4 [ 48ULL ] = t320 / ( X [ 139ULL ] == 0.0 ? 1.0E-16 : X [ 139ULL ]
-) ; t4 [ 49ULL ] = X [ 135ULL ] * t279 / ( X [ 136ULL ] == 0.0 ? 1.0E-16 : X
-[ 136ULL ] ) ; t4 [ 50ULL ] = X [ 139ULL ] * t279 / ( X [ 140ULL ] == 0.0 ?
-1.0E-16 : X [ 140ULL ] ) ; t4 [ 51ULL ] = X [ 131ULL ] - 0.01 ; t4 [ 52ULL ]
-= pmf_get_inf ( ) - X [ 131ULL ] ; t4 [ 53ULL ] = X [ 130ULL ] -
-216.59999999999997 ; t4 [ 54ULL ] = 623.15 - X [ 130ULL ] ; t4 [ 55ULL ] = X
-[ 20ULL ] - 0.01 ; t4 [ 56ULL ] = pmf_get_inf ( ) - X [ 20ULL ] ; t4 [ 57ULL
-] = X [ 19ULL ] - 216.59999999999997 ; t4 [ 58ULL ] = 623.15 - X [ 19ULL ] ;
-t4 [ 59ULL ] = X [ 19ULL ] * t279 / ( X [ 20ULL ] == 0.0 ? 1.0E-16 : X [
-20ULL ] ) ; t4 [ 60ULL ] = X [ 182ULL ] * intrm_sf_mf_221 * t84 ; t4 [ 61ULL
-] = X [ 183ULL ] * X [ 183ULL ] * intrm_sf_mf_221 / ( t84 == 0.0 ? 1.0E-16 :
-t84 ) / ( X [ 182ULL ] == 0.0 ? 1.0E-16 : X [ 182ULL ] ) ; t4 [ 62ULL ] = X [
-187ULL ] * t76 * t84 ; t4 [ 63ULL ] = X [ 188ULL ] * X [ 188ULL ] * t76 / (
-t84 == 0.0 ? 1.0E-16 : t84 ) / ( X [ 187ULL ] == 0.0 ? 1.0E-16 : X [ 187ULL ]
-) ; t4 [ 64ULL ] = X [ 182ULL ] * t84 / ( X [ 183ULL ] == 0.0 ? 1.0E-16 : X [
-183ULL ] ) ; t4 [ 65ULL ] = X [ 187ULL ] * t84 / ( X [ 188ULL ] == 0.0 ?
-1.0E-16 : X [ 188ULL ] ) ; t4 [ 66ULL ] = X [ 179ULL ] - 0.01 ; t4 [ 67ULL ]
-= pmf_get_inf ( ) - X [ 179ULL ] ; t4 [ 68ULL ] = X [ 178ULL ] -
-216.59999999999997 ; t4 [ 69ULL ] = 623.15 - X [ 178ULL ] ; t4 [ 70ULL ] = X
-[ 160ULL ] - 0.01 ; t4 [ 71ULL ] = pmf_get_inf ( ) - X [ 160ULL ] ; t4 [
-72ULL ] = X [ 159ULL ] - 216.59999999999997 ; t4 [ 73ULL ] = 623.15 - X [
-159ULL ] ; t4 [ 74ULL ] = X [ 28ULL ] - 0.01 ; t4 [ 75ULL ] = pmf_get_inf ( )
-- X [ 28ULL ] ; t4 [ 76ULL ] = X [ 27ULL ] - 216.59999999999997 ; t4 [ 77ULL
-] = 623.15 - X [ 27ULL ] ; t4 [ 78ULL ] = X [ 27ULL ] * t84 / ( X [ 28ULL ]
-== 0.0 ? 1.0E-16 : X [ 28ULL ] ) ; t4 [ 79ULL ] = X [ 261ULL ] * t103 *
-intrm_sf_mf_478 ; t4 [ 80ULL ] = X [ 262ULL ] * X [ 262ULL ] * t103 / (
-intrm_sf_mf_478 == 0.0 ? 1.0E-16 : intrm_sf_mf_478 ) / ( X [ 261ULL ] == 0.0
-? 1.0E-16 : X [ 261ULL ] ) ; t4 [ 81ULL ] = X [ 264ULL ] *
+intrm_sf_mf_1161 == 0.0 ? 1.0E-16 : intrm_sf_mf_1161 ) / ( X [ 381ULL ] ==
+0.0 ? 1.0E-16 : X [ 381ULL ] ) ; t4 [ 24ULL ] = X [ 383ULL ] * U_idx_9 *
+intrm_sf_mf_1161 ; t4 [ 25ULL ] = X [ 384ULL ] * X [ 384ULL ] * U_idx_9 / (
+intrm_sf_mf_1161 == 0.0 ? 1.0E-16 : intrm_sf_mf_1161 ) / ( X [ 383ULL ] ==
+0.0 ? 1.0E-16 : X [ 383ULL ] ) ; t4 [ 26ULL ] = X [ 381ULL ] *
+intrm_sf_mf_1161 / ( X [ 382ULL ] == 0.0 ? 1.0E-16 : X [ 382ULL ] ) ; t4 [
+27ULL ] = X [ 383ULL ] * intrm_sf_mf_1161 / ( X [ 384ULL ] == 0.0 ? 1.0E-16 :
+X [ 384ULL ] ) ; t4 [ 28ULL ] = X [ 64ULL ] - 0.01 ; t4 [ 29ULL ] =
+pmf_get_inf ( ) - X [ 64ULL ] ; t4 [ 30ULL ] = X [ 63ULL ] -
+216.59999999999997 ; t4 [ 31ULL ] = 623.15 - X [ 63ULL ] ; t4 [ 32ULL ] = X [
+320ULL ] - 0.01 ; t4 [ 33ULL ] = pmf_get_inf ( ) - X [ 320ULL ] ; t4 [ 34ULL
+] = X [ 319ULL ] - 216.59999999999997 ; t4 [ 35ULL ] = 623.15 - X [ 319ULL ]
+; t4 [ 36ULL ] = X [ 48ULL ] - 0.01 ; t4 [ 37ULL ] = pmf_get_inf ( ) - X [
+48ULL ] ; t4 [ 38ULL ] = X [ 13ULL ] - 216.59999999999997 ; t4 [ 39ULL ] =
+623.15 - X [ 13ULL ] ; t4 [ 40ULL ] = X [ 13ULL ] * intrm_sf_mf_1161 / ( X [
+48ULL ] == 0.0 ? 1.0E-16 : X [ 48ULL ] ) ; t4 [ 41ULL ] = X [ 130ULL ] * t152
+* t275 ; t152 = X [ 131ULL ] * X [ 131ULL ] * t152 / ( t275 == 0.0 ? 1.0E-16
+: t275 ) ; t4 [ 42ULL ] = t152 / ( X [ 130ULL ] == 0.0 ? 1.0E-16 : X [ 130ULL
+] ) ; t4 [ 43ULL ] = X [ 134ULL ] * t318 * t275 ; t318 = X [ 135ULL ] * X [
+135ULL ] * t318 / ( t275 == 0.0 ? 1.0E-16 : t275 ) ; t4 [ 44ULL ] = t318 / (
+X [ 134ULL ] == 0.0 ? 1.0E-16 : X [ 134ULL ] ) ; t4 [ 45ULL ] = X [ 130ULL ]
+* t275 / ( X [ 131ULL ] == 0.0 ? 1.0E-16 : X [ 131ULL ] ) ; t4 [ 46ULL ] = X
+[ 134ULL ] * t275 / ( X [ 135ULL ] == 0.0 ? 1.0E-16 : X [ 135ULL ] ) ; t4 [
+47ULL ] = X [ 126ULL ] - 0.01 ; t4 [ 48ULL ] = pmf_get_inf ( ) - X [ 126ULL ]
+; t4 [ 49ULL ] = X [ 125ULL ] - 216.59999999999997 ; t4 [ 50ULL ] = 623.15 -
+X [ 125ULL ] ; t4 [ 51ULL ] = X [ 18ULL ] - 0.01 ; t4 [ 52ULL ] = pmf_get_inf
+( ) - X [ 18ULL ] ; t4 [ 53ULL ] = X [ 17ULL ] - 216.59999999999997 ; t4 [
+54ULL ] = 623.15 - X [ 17ULL ] ; t4 [ 55ULL ] = X [ 17ULL ] * t275 / ( X [
+18ULL ] == 0.0 ? 1.0E-16 : X [ 18ULL ] ) ; t4 [ 56ULL ] = X [ 177ULL ] * t81
+* t79 ; t4 [ 57ULL ] = X [ 178ULL ] * X [ 178ULL ] * t81 / ( t79 == 0.0 ?
+1.0E-16 : t79 ) / ( X [ 177ULL ] == 0.0 ? 1.0E-16 : X [ 177ULL ] ) ; t4 [
+58ULL ] = X [ 182ULL ] * t71 * t79 ; t4 [ 59ULL ] = X [ 183ULL ] * X [ 183ULL
+] * t71 / ( t79 == 0.0 ? 1.0E-16 : t79 ) / ( X [ 182ULL ] == 0.0 ? 1.0E-16 :
+X [ 182ULL ] ) ; t4 [ 60ULL ] = X [ 177ULL ] * t79 / ( X [ 178ULL ] == 0.0 ?
+1.0E-16 : X [ 178ULL ] ) ; t4 [ 61ULL ] = X [ 182ULL ] * t79 / ( X [ 183ULL ]
+== 0.0 ? 1.0E-16 : X [ 183ULL ] ) ; t4 [ 62ULL ] = X [ 174ULL ] - 0.01 ; t4 [
+63ULL ] = pmf_get_inf ( ) - X [ 174ULL ] ; t4 [ 64ULL ] = X [ 173ULL ] -
+216.59999999999997 ; t4 [ 65ULL ] = 623.15 - X [ 173ULL ] ; t4 [ 66ULL ] = X
+[ 155ULL ] - 0.01 ; t4 [ 67ULL ] = pmf_get_inf ( ) - X [ 155ULL ] ; t4 [
+68ULL ] = X [ 154ULL ] - 216.59999999999997 ; t4 [ 69ULL ] = 623.15 - X [
+154ULL ] ; t4 [ 70ULL ] = X [ 26ULL ] - 0.01 ; t4 [ 71ULL ] = pmf_get_inf ( )
+- X [ 26ULL ] ; t4 [ 72ULL ] = X [ 25ULL ] - 216.59999999999997 ; t4 [ 73ULL
+] = 623.15 - X [ 25ULL ] ; t4 [ 74ULL ] = X [ 25ULL ] * t79 / ( X [ 26ULL ]
+== 0.0 ? 1.0E-16 : X [ 26ULL ] ) ; t4 [ 75ULL ] = X [ 256ULL ] * t98 *
+intrm_sf_mf_478 ; t4 [ 76ULL ] = X [ 257ULL ] * X [ 257ULL ] * t98 / (
+intrm_sf_mf_478 == 0.0 ? 1.0E-16 : intrm_sf_mf_478 ) / ( X [ 256ULL ] == 0.0
+? 1.0E-16 : X [ 256ULL ] ) ; t4 [ 77ULL ] = X [ 259ULL ] *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI * intrm_sf_mf_478
-; t4 [ 82ULL ] = X [ 265ULL ] * X [ 265ULL ] *
+; t4 [ 78ULL ] = X [ 260ULL ] * X [ 260ULL ] *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_gamma_BI / (
-intrm_sf_mf_478 == 0.0 ? 1.0E-16 : intrm_sf_mf_478 ) / ( X [ 264ULL ] == 0.0
-? 1.0E-16 : X [ 264ULL ] ) ; t4 [ 83ULL ] = X [ 261ULL ] * intrm_sf_mf_478 /
-( X [ 262ULL ] == 0.0 ? 1.0E-16 : X [ 262ULL ] ) ; t4 [ 84ULL ] = X [ 264ULL
-] * intrm_sf_mf_478 / ( X [ 265ULL ] == 0.0 ? 1.0E-16 : X [ 265ULL ] ) ; t4 [
-85ULL ] = X [ 251ULL ] - 0.01 ; t4 [ 86ULL ] = pmf_get_inf ( ) - X [ 251ULL ]
-; t4 [ 87ULL ] = X [ 250ULL ] - 216.59999999999997 ; t4 [ 88ULL ] = 623.15 -
-X [ 250ULL ] ; t4 [ 89ULL ] = X [ 38ULL ] - 0.01 ; t4 [ 90ULL ] = pmf_get_inf
-( ) - X [ 38ULL ] ; t4 [ 91ULL ] = X [ 35ULL ] - 216.59999999999997 ; t4 [
-92ULL ] = 623.15 - X [ 35ULL ] ; t4 [ 93ULL ] = X [ 35ULL ] * intrm_sf_mf_478
-/ ( X [ 38ULL ] == 0.0 ? 1.0E-16 : X [ 38ULL ] ) ; t4 [ 94ULL ] = X [ 275ULL
-] * t107 * t35 ; t4 [ 95ULL ] = X [ 276ULL ] * X [ 276ULL ] * t107 / ( t35 ==
-0.0 ? 1.0E-16 : t35 ) / ( X [ 275ULL ] == 0.0 ? 1.0E-16 : X [ 275ULL ] ) ; t4
-[ 96ULL ] = X [ 278ULL ] * t96 * t35 ; t4 [ 97ULL ] = X [ 279ULL ] * X [
-279ULL ] * t96 / ( t35 == 0.0 ? 1.0E-16 : t35 ) / ( X [ 278ULL ] == 0.0 ?
-1.0E-16 : X [ 278ULL ] ) ; t4 [ 98ULL ] = X [ 275ULL ] * t35 / ( X [ 276ULL ]
-== 0.0 ? 1.0E-16 : X [ 276ULL ] ) ; t4 [ 99ULL ] = X [ 278ULL ] * t35 / ( X [
-279ULL ] == 0.0 ? 1.0E-16 : X [ 279ULL ] ) ; t4 [ 100ULL ] = X [ 39ULL ] -
-0.01 ; t4 [ 101ULL ] = pmf_get_inf ( ) - X [ 39ULL ] ; t4 [ 102ULL ] = X [
-6ULL ] - 216.59999999999997 ; t4 [ 103ULL ] = 623.15 - X [ 6ULL ] ; t4 [
-104ULL ] = X [ 6ULL ] * t35 / ( X [ 39ULL ] == 0.0 ? 1.0E-16 : X [ 39ULL ] )
-; t4 [ 105ULL ] = X [ 310ULL ] * t110 * t44 ; t4 [ 106ULL ] = X [ 311ULL ] *
-X [ 311ULL ] * t110 / ( t44 == 0.0 ? 1.0E-16 : t44 ) / ( X [ 310ULL ] == 0.0
-? 1.0E-16 : X [ 310ULL ] ) ; t4 [ 107ULL ] = X [ 313ULL ] *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI * t44 ; t4 [
-108ULL ] = X [ 314ULL ] * X [ 314ULL ] *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI / ( t44 == 0.0 ?
-1.0E-16 : t44 ) / ( X [ 313ULL ] == 0.0 ? 1.0E-16 : X [ 313ULL ] ) ; t4 [
-109ULL ] = X [ 310ULL ] * t44 / ( X [ 311ULL ] == 0.0 ? 1.0E-16 : X [ 311ULL
-] ) ; t4 [ 110ULL ] = X [ 313ULL ] * t44 / ( X [ 314ULL ] == 0.0 ? 1.0E-16 :
-X [ 314ULL ] ) ; t4 [ 111ULL ] = X [ 31ULL ] - 0.01 ; t4 [ 112ULL ] =
-pmf_get_inf ( ) - X [ 31ULL ] ; t4 [ 113ULL ] = X [ 232ULL ] -
-216.59999999999997 ; t4 [ 114ULL ] = 623.15 - X [ 232ULL ] ; t4 [ 115ULL ] =
-X [ 300ULL ] - 0.01 ; t4 [ 116ULL ] = pmf_get_inf ( ) - X [ 300ULL ] ; t4 [
-117ULL ] = X [ 299ULL ] - 216.59999999999997 ; t4 [ 118ULL ] = 623.15 - X [
-299ULL ] ; t4 [ 119ULL ] = X [ 44ULL ] - 0.01 ; t4 [ 120ULL ] = pmf_get_inf (
-) - X [ 44ULL ] ; t4 [ 121ULL ] = X [ 41ULL ] - 216.59999999999997 ; t4 [
-122ULL ] = 623.15 - X [ 41ULL ] ; t4 [ 123ULL ] = X [ 41ULL ] * t44 / ( X [
-44ULL ] == 0.0 ? 1.0E-16 : X [ 44ULL ] ) ; t4 [ 124ULL ] = X [ 348ULL ] *
+intrm_sf_mf_478 == 0.0 ? 1.0E-16 : intrm_sf_mf_478 ) / ( X [ 259ULL ] == 0.0
+? 1.0E-16 : X [ 259ULL ] ) ; t4 [ 79ULL ] = X [ 256ULL ] * intrm_sf_mf_478 /
+( X [ 257ULL ] == 0.0 ? 1.0E-16 : X [ 257ULL ] ) ; t4 [ 80ULL ] = X [ 259ULL
+] * intrm_sf_mf_478 / ( X [ 260ULL ] == 0.0 ? 1.0E-16 : X [ 260ULL ] ) ; t4 [
+81ULL ] = X [ 246ULL ] - 0.01 ; t4 [ 82ULL ] = pmf_get_inf ( ) - X [ 246ULL ]
+; t4 [ 83ULL ] = X [ 245ULL ] - 216.59999999999997 ; t4 [ 84ULL ] = 623.15 -
+X [ 245ULL ] ; t4 [ 85ULL ] = X [ 36ULL ] - 0.01 ; t4 [ 86ULL ] = pmf_get_inf
+( ) - X [ 36ULL ] ; t4 [ 87ULL ] = X [ 33ULL ] - 216.59999999999997 ; t4 [
+88ULL ] = 623.15 - X [ 33ULL ] ; t4 [ 89ULL ] = X [ 33ULL ] * intrm_sf_mf_478
+/ ( X [ 36ULL ] == 0.0 ? 1.0E-16 : X [ 36ULL ] ) ; t4 [ 90ULL ] = X [ 270ULL
+] * Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA_gamma_AI * t30 ; t4 [
+91ULL ] = X [ 271ULL ] * X [ 271ULL ] *
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA_gamma_AI / ( t30 == 0.0 ?
+1.0E-16 : t30 ) / ( X [ 270ULL ] == 0.0 ? 1.0E-16 : X [ 270ULL ] ) ; t4 [
+92ULL ] = X [ 273ULL ] * t91 * t30 ; t4 [ 93ULL ] = X [ 274ULL ] * X [ 274ULL
+] * t91 / ( t30 == 0.0 ? 1.0E-16 : t30 ) / ( X [ 273ULL ] == 0.0 ? 1.0E-16 :
+X [ 273ULL ] ) ; t4 [ 94ULL ] = X [ 270ULL ] * t30 / ( X [ 271ULL ] == 0.0 ?
+1.0E-16 : X [ 271ULL ] ) ; t4 [ 95ULL ] = X [ 273ULL ] * t30 / ( X [ 274ULL ]
+== 0.0 ? 1.0E-16 : X [ 274ULL ] ) ; t4 [ 96ULL ] = X [ 37ULL ] - 0.01 ; t4 [
+97ULL ] = pmf_get_inf ( ) - X [ 37ULL ] ; t4 [ 98ULL ] = X [ 4ULL ] -
+216.59999999999997 ; t4 [ 99ULL ] = 623.15 - X [ 4ULL ] ; t4 [ 100ULL ] = X [
+4ULL ] * t30 / ( X [ 37ULL ] == 0.0 ? 1.0E-16 : X [ 37ULL ] ) ; t4 [ 101ULL ]
+= X [ 305ULL ] * t105 * t39 ; t4 [ 102ULL ] = X [ 306ULL ] * X [ 306ULL ] *
+t105 / ( t39 == 0.0 ? 1.0E-16 : t39 ) / ( X [ 305ULL ] == 0.0 ? 1.0E-16 : X [
+305ULL ] ) ; t4 [ 103ULL ] = X [ 308ULL ] *
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI * t39 ; t4 [
+104ULL ] = X [ 309ULL ] * X [ 309ULL ] *
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_gamma_BI / ( t39 == 0.0 ?
+1.0E-16 : t39 ) / ( X [ 308ULL ] == 0.0 ? 1.0E-16 : X [ 308ULL ] ) ; t4 [
+105ULL ] = X [ 305ULL ] * t39 / ( X [ 306ULL ] == 0.0 ? 1.0E-16 : X [ 306ULL
+] ) ; t4 [ 106ULL ] = X [ 308ULL ] * t39 / ( X [ 309ULL ] == 0.0 ? 1.0E-16 :
+X [ 309ULL ] ) ; t4 [ 107ULL ] = X [ 29ULL ] - 0.01 ; t4 [ 108ULL ] =
+pmf_get_inf ( ) - X [ 29ULL ] ; t4 [ 109ULL ] = X [ 227ULL ] -
+216.59999999999997 ; t4 [ 110ULL ] = 623.15 - X [ 227ULL ] ; t4 [ 111ULL ] =
+X [ 295ULL ] - 0.01 ; t4 [ 112ULL ] = pmf_get_inf ( ) - X [ 295ULL ] ; t4 [
+113ULL ] = X [ 294ULL ] - 216.59999999999997 ; t4 [ 114ULL ] = 623.15 - X [
+294ULL ] ; t4 [ 115ULL ] = X [ 42ULL ] - 0.01 ; t4 [ 116ULL ] = pmf_get_inf (
+) - X [ 42ULL ] ; t4 [ 117ULL ] = X [ 39ULL ] - 216.59999999999997 ; t4 [
+118ULL ] = 623.15 - X [ 39ULL ] ; t4 [ 119ULL ] = X [ 39ULL ] * t39 / ( X [
+42ULL ] == 0.0 ? 1.0E-16 : X [ 42ULL ] ) ; t4 [ 120ULL ] = X [ 343ULL ] *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_AI * intrm_sf_mf_1021
-; t4 [ 125ULL ] = X [ 349ULL ] * X [ 349ULL ] *
+; t4 [ 121ULL ] = X [ 344ULL ] * X [ 344ULL ] *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_AI / (
-intrm_sf_mf_1021 == 0.0 ? 1.0E-16 : intrm_sf_mf_1021 ) / ( X [ 348ULL ] ==
-0.0 ? 1.0E-16 : X [ 348ULL ] ) ; t4 [ 126ULL ] = X [ 352ULL ] *
+intrm_sf_mf_1021 == 0.0 ? 1.0E-16 : intrm_sf_mf_1021 ) / ( X [ 343ULL ] ==
+0.0 ? 1.0E-16 : X [ 343ULL ] ) ; t4 [ 122ULL ] = X [ 347ULL ] *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_BI * intrm_sf_mf_1021
-; t4 [ 127ULL ] = X [ 353ULL ] * X [ 353ULL ] *
+; t4 [ 123ULL ] = X [ 348ULL ] * X [ 348ULL ] *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_gamma_BI / (
-intrm_sf_mf_1021 == 0.0 ? 1.0E-16 : intrm_sf_mf_1021 ) / ( X [ 352ULL ] ==
-0.0 ? 1.0E-16 : X [ 352ULL ] ) ; t4 [ 128ULL ] = X [ 348ULL ] *
-intrm_sf_mf_1021 / ( X [ 349ULL ] == 0.0 ? 1.0E-16 : X [ 349ULL ] ) ; t4 [
-129ULL ] = X [ 352ULL ] * intrm_sf_mf_1021 / ( X [ 353ULL ] == 0.0 ? 1.0E-16
-: X [ 353ULL ] ) ; t4 [ 130ULL ] =
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p - 0.01 ; t4 [ 131ULL ]
-= pmf_get_inf ( ) - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p ;
-t4 [ 132ULL ] = X [ 343ULL ] - 216.59999999999997 ; t4 [ 133ULL ] = 623.15 -
-X [ 343ULL ] ; t4 [ 134ULL ] = X [ 46ULL ] - 0.01 ; t4 [ 135ULL ] =
-pmf_get_inf ( ) - X [ 46ULL ] ; t4 [ 136ULL ] = X [ 45ULL ] -
-216.59999999999997 ; t4 [ 137ULL ] = 623.15 - X [ 45ULL ] ; t4 [ 138ULL ] = X
-[ 45ULL ] * intrm_sf_mf_1021 / ( X [ 46ULL ] == 0.0 ? 1.0E-16 : X [ 46ULL ] )
-; t4 [ 139ULL ] = X [ 372ULL ] *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_AI * t119 ; t4 [
-140ULL ] = X [ 373ULL ] * X [ 373ULL ] *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_AI / ( t119 == 0.0 ?
-1.0E-16 : t119 ) / ( X [ 372ULL ] == 0.0 ? 1.0E-16 : X [ 372ULL ] ) ; t4 [
-141ULL ] = X [ 375ULL ] *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI * t119 ; t4 [
-142ULL ] = X [ 376ULL ] * X [ 376ULL ] *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI / ( t119 == 0.0 ?
-1.0E-16 : t119 ) / ( X [ 375ULL ] == 0.0 ? 1.0E-16 : X [ 375ULL ] ) ; t4 [
-143ULL ] = X [ 372ULL ] * t119 / ( X [ 373ULL ] == 0.0 ? 1.0E-16 : X [ 373ULL
-] ) ; t4 [ 144ULL ] = X [ 375ULL ] * t119 / ( X [ 376ULL ] == 0.0 ? 1.0E-16 :
-X [ 376ULL ] ) ; t4 [ 145ULL ] = X [ 49ULL ] - 0.01 ; t4 [ 146ULL ] =
-pmf_get_inf ( ) - X [ 49ULL ] ; t4 [ 147ULL ] = X [ 12ULL ] -
-216.59999999999997 ; t4 [ 148ULL ] = 623.15 - X [ 12ULL ] ; t4 [ 149ULL ] = X
-[ 12ULL ] * t119 / ( X [ 49ULL ] == 0.0 ? 1.0E-16 : X [ 49ULL ] ) ; t4 [
-150ULL ] = X [ 18ULL ] ; t4 [ 151ULL ] = ( 1.0 - X [ 127ULL ] ) - X [ 128ULL
-] ; t4 [ 152ULL ] = t323 * 293.15 / 1.01325 ; t4 [ 153ULL ] = ( 1.0 - X [
-218ULL ] ) - X [ 219ULL ] ; t4 [ 154ULL ] = t91 * 293.15 / 1.01325 ; t4 [
-155ULL ] = ( 1.0 - X [ 340ULL ] ) - X [ 341ULL ] ; t4 [ 156ULL ] = t113 *
-293.15 / 1.01325 ; t4 [ 157ULL ] = X [ 153ULL ] * X [ 153ULL ] * t281 / (
-intrm_sf_mf_170 == 0.0 ? 1.0E-16 : intrm_sf_mf_170 ) / ( X [ 152ULL ] == 0.0
-? 1.0E-16 : X [ 152ULL ] ) ; t4 [ 158ULL ] = X [ 153ULL ] / ( t78 == 0.0 ?
-1.0E-16 : t78 ) * 2.0 / (
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r == 0.0 ?
-1.0E-16 : Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r ) ;
-t4 [ 159ULL ] = X [ 156ULL ] * intrm_sf_mf_170 / ( X [ 131ULL ] == 0.0 ?
-1.0E-16 : X [ 131ULL ] ) ; t4 [ 160ULL ] = X [ 157ULL ] * intrm_sf_mf_170 /
-1.01325 ; t4 [ 161ULL ] = t78 / ( X [ 153ULL ] == 0.0 ? 1.0E-16 : X [ 153ULL
-] ) ; t4 [ 162ULL ] = X [ 116ULL ] - 216.59999999999997 ; t4 [ 163ULL ] =
-623.15 - X [ 116ULL ] ; t4 [ 164ULL ] = X [ 201ULL ] * X [ 201ULL ] *
-intrm_sf_mf_357 / ( t88 == 0.0 ? 1.0E-16 : t88 ) / ( X [ 200ULL ] == 0.0 ?
-1.0E-16 : X [ 200ULL ] ) ; t4 [ 165ULL ] = X [ 201ULL ] / ( t93 == 0.0 ?
-1.0E-16 : t93 ) * 2.0 / (
+intrm_sf_mf_1021 == 0.0 ? 1.0E-16 : intrm_sf_mf_1021 ) / ( X [ 347ULL ] ==
+0.0 ? 1.0E-16 : X [ 347ULL ] ) ; t4 [ 124ULL ] = X [ 343ULL ] *
+intrm_sf_mf_1021 / ( X [ 344ULL ] == 0.0 ? 1.0E-16 : X [ 344ULL ] ) ; t4 [
+125ULL ] = X [ 347ULL ] * intrm_sf_mf_1021 / ( X [ 348ULL ] == 0.0 ? 1.0E-16
+: X [ 348ULL ] ) ; t4 [ 126ULL ] = t106 - 0.01 ; t4 [ 127ULL ] = pmf_get_inf
+( ) - t106 ; t4 [ 128ULL ] = X [ 338ULL ] - 216.59999999999997 ; t4 [ 129ULL
+] = 623.15 - X [ 338ULL ] ; t4 [ 130ULL ] = X [ 44ULL ] - 0.01 ; t4 [ 131ULL
+] = pmf_get_inf ( ) - X [ 44ULL ] ; t4 [ 132ULL ] = X [ 43ULL ] -
+216.59999999999997 ; t4 [ 133ULL ] = 623.15 - X [ 43ULL ] ; t4 [ 134ULL ] = X
+[ 43ULL ] * intrm_sf_mf_1021 / ( X [ 44ULL ] == 0.0 ? 1.0E-16 : X [ 44ULL ] )
+; t4 [ 135ULL ] = X [ 367ULL ] * t117 * t114 ; t4 [ 136ULL ] = X [ 368ULL ] *
+X [ 368ULL ] * t117 / ( t114 == 0.0 ? 1.0E-16 : t114 ) / ( X [ 367ULL ] ==
+0.0 ? 1.0E-16 : X [ 367ULL ] ) ; t4 [ 137ULL ] = X [ 370ULL ] *
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI * t114 ; t4 [
+138ULL ] = X [ 371ULL ] * X [ 371ULL ] *
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_gamma_BI / ( t114 == 0.0 ?
+1.0E-16 : t114 ) / ( X [ 370ULL ] == 0.0 ? 1.0E-16 : X [ 370ULL ] ) ; t4 [
+139ULL ] = X [ 367ULL ] * t114 / ( X [ 368ULL ] == 0.0 ? 1.0E-16 : X [ 368ULL
+] ) ; t4 [ 140ULL ] = X [ 370ULL ] * t114 / ( X [ 371ULL ] == 0.0 ? 1.0E-16 :
+X [ 371ULL ] ) ; t4 [ 141ULL ] = X [ 47ULL ] - 0.01 ; t4 [ 142ULL ] =
+pmf_get_inf ( ) - X [ 47ULL ] ; t4 [ 143ULL ] = X [ 10ULL ] -
+216.59999999999997 ; t4 [ 144ULL ] = 623.15 - X [ 10ULL ] ; t4 [ 145ULL ] = X
+[ 10ULL ] * t114 / ( X [ 47ULL ] == 0.0 ? 1.0E-16 : X [ 47ULL ] ) ; t4 [
+146ULL ] = X [ 16ULL ] ; t4 [ 147ULL ] = ( 1.0 - X [ 122ULL ] ) - X [ 123ULL
+] ; t4 [ 148ULL ] = t273 * 293.15 / 1.01325 ; t4 [ 149ULL ] = ( 1.0 - X [
+213ULL ] ) - X [ 214ULL ] ; t4 [ 150ULL ] = intrm_sf_mf_369 * 293.15 /
+1.01325 ; t4 [ 151ULL ] = ( 1.0 - X [ 335ULL ] ) - X [ 336ULL ] ; t4 [ 152ULL
+] = t108 * 293.15 / 1.01325 ; t4 [ 153ULL ] = X [ 148ULL ] * X [ 148ULL ] *
+t289 / ( intrm_sf_mf_170 == 0.0 ? 1.0E-16 : intrm_sf_mf_170 ) / ( X [ 147ULL
+] == 0.0 ? 1.0E-16 : X [ 147ULL ] ) ; t4 [ 154ULL ] = X [ 148ULL ] / ( t73 ==
+0.0 ? 1.0E-16 : t73 ) * 2.0 / ( t274 == 0.0 ? 1.0E-16 : t274 ) ; t4 [ 155ULL
+] = X [ 151ULL ] * intrm_sf_mf_170 / ( X [ 126ULL ] == 0.0 ? 1.0E-16 : X [
+126ULL ] ) ; t4 [ 156ULL ] = X [ 152ULL ] * intrm_sf_mf_170 / 1.01325 ; t4 [
+157ULL ] = t73 / ( X [ 148ULL ] == 0.0 ? 1.0E-16 : X [ 148ULL ] ) ; t4 [
+158ULL ] = X [ 111ULL ] - 216.59999999999997 ; t4 [ 159ULL ] = 623.15 - X [
+111ULL ] ; t4 [ 160ULL ] = X [ 196ULL ] * X [ 196ULL ] * intrm_sf_mf_357 / (
+t83 == 0.0 ? 1.0E-16 : t83 ) / ( X [ 195ULL ] == 0.0 ? 1.0E-16 : X [ 195ULL ]
+) ; t4 [ 161ULL ] = X [ 196ULL ] / ( t88 == 0.0 ? 1.0E-16 : t88 ) * 2.0 / (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 == 0.0 ?
 1.0E-16 : Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ) ;
-t4 [ 166ULL ] = X [ 204ULL ] * t88 / ( X [ 24ULL ] == 0.0 ? 1.0E-16 : X [
-24ULL ] ) ; t4 [ 167ULL ] = X [ 205ULL ] * t88 / ( X [ 179ULL ] == 0.0 ?
-1.0E-16 : X [ 179ULL ] ) ; t4 [ 168ULL ] = t93 / ( X [ 201ULL ] == 0.0 ?
-1.0E-16 : X [ 201ULL ] ) ; t4 [ 169ULL ] = X [ 24ULL ] - 0.01 ; t4 [ 170ULL ]
-= pmf_get_inf ( ) - X [ 24ULL ] ; t4 [ 171ULL ] = X [ 163ULL ] -
-216.59999999999997 ; t4 [ 172ULL ] = 623.15 - X [ 163ULL ] ; t4 [ 173ULL ] =
-X [ 366ULL ] * X [ 366ULL ] *
+t4 [ 162ULL ] = X [ 199ULL ] * t83 / ( X [ 22ULL ] == 0.0 ? 1.0E-16 : X [
+22ULL ] ) ; t4 [ 163ULL ] = X [ 200ULL ] * t83 / ( X [ 174ULL ] == 0.0 ?
+1.0E-16 : X [ 174ULL ] ) ; t4 [ 164ULL ] = t88 / ( X [ 196ULL ] == 0.0 ?
+1.0E-16 : X [ 196ULL ] ) ; t4 [ 165ULL ] = X [ 22ULL ] - 0.01 ; t4 [ 166ULL ]
+= pmf_get_inf ( ) - X [ 22ULL ] ; t4 [ 167ULL ] = X [ 158ULL ] -
+216.59999999999997 ; t4 [ 168ULL ] = 623.15 - X [ 158ULL ] ; t4 [ 169ULL ] =
+X [ 361ULL ] * X [ 361ULL ] *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val19 / (
-intrm_sf_mf_1160 == 0.0 ? 1.0E-16 : intrm_sf_mf_1160 ) / ( X [ 365ULL ] ==
-0.0 ? 1.0E-16 : X [ 365ULL ] ) ; t4 [ 174ULL ] = X [ 366ULL ] / ( t117 == 0.0
-? 1.0E-16 : t117 ) * 2.0 / (
+intrm_sf_mf_1160 == 0.0 ? 1.0E-16 : intrm_sf_mf_1160 ) / ( X [ 360ULL ] ==
+0.0 ? 1.0E-16 : X [ 360ULL ] ) ; t4 [ 170ULL ] = X [ 361ULL ] / ( t112 == 0.0
+? 1.0E-16 : t112 ) * 2.0 / (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 == 0.0 ?
 1.0E-16 : Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 ) ;
-t4 [ 175ULL ] = X [ 369ULL ] * intrm_sf_mf_1160 / (
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p == 0.0 ? 1.0E-16 :
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p ) ; t4 [ 176ULL ] = X [
-370ULL ] * intrm_sf_mf_1160 / 1.01325 ; t4 [ 177ULL ] = t117 / ( X [ 366ULL ]
-== 0.0 ? 1.0E-16 : X [ 366ULL ] ) ; t4 [ 178ULL ] = X [ 329ULL ] -
-216.59999999999997 ; t4 [ 179ULL ] = 623.15 - X [ 329ULL ] ; t4 [ 180ULL ] =
-X [ 23ULL ] - 216.59999999999997 ; t4 [ 181ULL ] = 623.15 - X [ 23ULL ] ; t4
-[ 182ULL ] = X [ 23ULL ] * intrm_sf_mf_201 / ( X [ 24ULL ] == 0.0 ? 1.0E-16 :
-X [ 24ULL ] ) ; t4 [ 183ULL ] = X [ 32ULL ] - 216.59999999999997 ; t4 [
-184ULL ] = 623.15 - X [ 32ULL ] ; t4 [ 185ULL ] = X [ 32ULL ] * t102 / ( X [
-31ULL ] == 0.0 ? 1.0E-16 : X [ 31ULL ] ) ; t4 [ 186ULL ] = X [ 207ULL ] -
-216.59999999999997 ; t4 [ 187ULL ] = 623.15 - X [ 207ULL ] ; t4 [ 188ULL ] =
-X [ 221ULL ] - 216.59999999999997 ; t4 [ 189ULL ] = 623.15 - X [ 221ULL ] ;
-t4 [ 190ULL ] = ( real_T ) ( X [ 58ULL ] > 0.0 ) ; t4 [ 191ULL ] = X [ 52ULL
-] - X [ 398ULL ] ; t4 [ 192ULL ] = U_idx_8 ; t4 [ 193ULL ] =
-216.59999999999997 - U_idx_5 ; t4 [ 194ULL ] = t74 ; t4 [ 195ULL ] =
-216.59999999999997 - U_idx_7 ; t4 [ 196ULL ] = U_idx_2 ; t4 [ 197ULL ] = X [
-95ULL ] - 0.6 ; t263 = X [ 64ULL ] * t38 ; t4 [ 198ULL ] = t263 / ( X [ 65ULL
-] == 0.0 ? 1.0E-16 : X [ 65ULL ] ) ; t320 = X [ 111ULL ] * t282 ; t4 [ 199ULL
-] = t320 / ( X [ 112ULL ] == 0.0 ? 1.0E-16 : X [ 112ULL ] ) ;
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r = X [ 68ULL ]
-* intrm_sf_mf_1252 ; t4 [ 200ULL ] =
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r / ( X [ 69ULL
-] == 0.0 ? 1.0E-16 : X [ 69ULL ] ) ; t280 = X [ 324ULL ] * t56 ; t4 [ 201ULL
-] = t280 / ( X [ 325ULL ] == 0.0 ? 1.0E-16 : X [ 325ULL ] ) ; t282 = X [
-116ULL ] * t127 ; t4 [ 202ULL ] = t282 / 1.01325 ; t4 [ 203ULL ] = t320 / ( X
-[ 112ULL ] == 0.0 ? 1.0E-16 : X [ 112ULL ] ) ; t320 = X [ 130ULL ] * t311 ;
-t4 [ 204ULL ] = t320 / ( X [ 131ULL ] == 0.0 ? 1.0E-16 : X [ 131ULL ] ) ; t4
-[ 205ULL ] = t320 / ( X [ 131ULL ] == 0.0 ? 1.0E-16 : X [ 131ULL ] ) ; t4 [
-206ULL ] = t282 / 1.01325 ; t320 = X [ 163ULL ] * t128 ; t4 [ 207ULL ] = t320
-/ ( X [ 24ULL ] == 0.0 ? 1.0E-16 : X [ 24ULL ] ) ; t323 = X [ 178ULL ] *
-intrm_sf_mf_240 ; t4 [ 208ULL ] = t323 / ( X [ 179ULL ] == 0.0 ? 1.0E-16 : X
-[ 179ULL ] ) ; t311 = X [ 159ULL ] * intrm_sf_mf_281 ; t4 [ 209ULL ] = t311 /
-( X [ 160ULL ] == 0.0 ? 1.0E-16 : X [ 160ULL ] ) ; t4 [ 210ULL ] = t320 / ( X
-[ 24ULL ] == 0.0 ? 1.0E-16 : X [ 24ULL ] ) ; t4 [ 211ULL ] = t323 / ( X [
-179ULL ] == 0.0 ? 1.0E-16 : X [ 179ULL ] ) ; t320 = X [ 207ULL ] * t71 ; t4 [
-212ULL ] = t320 / 1.01325 ; t4 [ 213ULL ] = t320 / 1.01325 ; t320 = X [
-221ULL ] * intrm_sf_mf_1502 ; t4 [ 214ULL ] = t320 / ( X [ 31ULL ] == 0.0 ?
-1.0E-16 : X [ 31ULL ] ) ; t4 [ 215ULL ] = t320 / ( X [ 31ULL ] == 0.0 ?
-1.0E-16 : X [ 31ULL ] ) ; t320 = X [ 232ULL ] * t50 ; t4 [ 216ULL ] = t320 /
-( X [ 31ULL ] == 0.0 ? 1.0E-16 : X [ 31ULL ] ) ; t4 [ 217ULL ] = t311 / ( X [
-160ULL ] == 0.0 ? 1.0E-16 : X [ 160ULL ] ) ; t323 = X [ 250ULL ] * t32 ; t4 [
-218ULL ] = t323 / ( X [ 251ULL ] == 0.0 ? 1.0E-16 : X [ 251ULL ] ) ; t4 [
-219ULL ] = t323 / ( X [ 251ULL ] == 0.0 ? 1.0E-16 : X [ 251ULL ] ) ; t4 [
-220ULL ] = t263 / ( X [ 65ULL ] == 0.0 ? 1.0E-16 : X [ 65ULL ] ) ; t4 [
-221ULL ] = t320 / ( X [ 31ULL ] == 0.0 ? 1.0E-16 : X [ 31ULL ] ) ; t263 = X [
-299ULL ] * t112 ; t4 [ 222ULL ] = t263 / ( X [ 300ULL ] == 0.0 ? 1.0E-16 : X
-[ 300ULL ] ) ; t320 = X [ 329ULL ] * t62 ; t4 [ 223ULL ] = t320 / 1.01325 ;
-t4 [ 224ULL ] = t280 / ( X [ 325ULL ] == 0.0 ? 1.0E-16 : X [ 325ULL ] ) ;
-t323 = X [ 343ULL ] * t114 ; t4 [ 225ULL ] = t323 / (
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p == 0.0 ? 1.0E-16 :
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p ) ; t4 [ 226ULL ] =
-t323 / ( Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p == 0.0 ?
-1.0E-16 : Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p ) ; t4 [
-227ULL ] = t320 / 1.01325 ; t4 [ 228ULL ] = t263 / ( X [ 300ULL ] == 0.0 ?
-1.0E-16 : X [ 300ULL ] ) ; t4 [ 229ULL ] =
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_area_r / ( X [ 69ULL
-] == 0.0 ? 1.0E-16 : X [ 69ULL ] ) ; t4 [ 230ULL ] = X [ 225ULL ] * t100 /
-1.01325 ; t4 [ 231ULL ] = X [ 228ULL ] * t100 / ( X [ 31ULL ] == 0.0 ?
-1.0E-16 : X [ 31ULL ] ) ; t4 [ 232ULL ] = X [ 226ULL ] * t100 / ( X [ 31ULL ]
-== 0.0 ? 1.0E-16 : X [ 31ULL ] ) ; t4 [ 233ULL ] = X [ 227ULL ] * t100 /
-1.01325 ; for ( b = 0 ; b < 234 ; b ++ ) { out . mX [ b ] = t4 [ b ] ; } (
-void ) LC ; ( void ) t337 ; return 0 ; }
+t4 [ 171ULL ] = X [ 364ULL ] * intrm_sf_mf_1160 / ( t106 == 0.0 ? 1.0E-16 :
+t106 ) ; t4 [ 172ULL ] = X [ 365ULL ] * intrm_sf_mf_1160 / 1.01325 ; t4 [
+173ULL ] = t112 / ( X [ 361ULL ] == 0.0 ? 1.0E-16 : X [ 361ULL ] ) ; t4 [
+174ULL ] = X [ 324ULL ] - 216.59999999999997 ; t4 [ 175ULL ] = 623.15 - X [
+324ULL ] ; t4 [ 176ULL ] = X [ 21ULL ] - 216.59999999999997 ; t4 [ 177ULL ] =
+623.15 - X [ 21ULL ] ; t4 [ 178ULL ] = X [ 21ULL ] * t76 / ( X [ 22ULL ] ==
+0.0 ? 1.0E-16 : X [ 22ULL ] ) ; t4 [ 179ULL ] = X [ 30ULL ] -
+216.59999999999997 ; t4 [ 180ULL ] = 623.15 - X [ 30ULL ] ; t4 [ 181ULL ] = X
+[ 30ULL ] * t97 / ( X [ 29ULL ] == 0.0 ? 1.0E-16 : X [ 29ULL ] ) ; t4 [
+182ULL ] = X [ 202ULL ] - 216.59999999999997 ; t4 [ 183ULL ] = 623.15 - X [
+202ULL ] ; t4 [ 184ULL ] = X [ 216ULL ] - 216.59999999999997 ; t4 [ 185ULL ]
+= 623.15 - X [ 216ULL ] ; t4 [ 186ULL ] = ( real_T ) ( X [ 53ULL ] > 0.0 ) ;
+t4 [ 187ULL ] = X [ 50ULL ] - X [ 393ULL ] ; t4 [ 188ULL ] = U_idx_3 ; t4 [
+189ULL ] = 216.59999999999997 - U_idx_6 ; t4 [ 190ULL ] = U_idx_2 ; t4 [
+191ULL ] = 216.59999999999997 - U_idx_8 ; t4 [ 192ULL ] = t69 ; t4 [ 193ULL ]
+= X [ 90ULL ] - 0.6 ; U_idx_3 = X [ 59ULL ] * t33 ; t4 [ 194ULL ] = U_idx_3 /
+( X [ 60ULL ] == 0.0 ? 1.0E-16 : X [ 60ULL ] ) ; t268 = X [ 106ULL ] * t70 ;
+t4 [ 195ULL ] = t268 / ( X [ 107ULL ] == 0.0 ? 1.0E-16 : X [ 107ULL ] ) ;
+t273 = X [ 63ULL ] * intrm_sf_mf_1252 ; t4 [ 196ULL ] = t273 / ( X [ 64ULL ]
+== 0.0 ? 1.0E-16 : X [ 64ULL ] ) ; t275 = X [ 319ULL ] * t51 ; t4 [ 197ULL ]
+= t275 / ( X [ 320ULL ] == 0.0 ? 1.0E-16 : X [ 320ULL ] ) ; t289 = X [ 111ULL
+] * t60 ; t4 [ 198ULL ] = t289 / 1.01325 ; t4 [ 199ULL ] = t268 / ( X [
+107ULL ] == 0.0 ? 1.0E-16 : X [ 107ULL ] ) ; t268 = X [ 125ULL ] *
+intrm_sf_mf_92 ; t4 [ 200ULL ] = t268 / ( X [ 126ULL ] == 0.0 ? 1.0E-16 : X [
+126ULL ] ) ; t4 [ 201ULL ] = t268 / ( X [ 126ULL ] == 0.0 ? 1.0E-16 : X [
+126ULL ] ) ; t4 [ 202ULL ] = t289 / 1.01325 ; t268 = X [ 158ULL ] * t123 ; t4
+[ 203ULL ] = t268 / ( X [ 22ULL ] == 0.0 ? 1.0E-16 : X [ 22ULL ] ) ; t318 = X
+[ 173ULL ] * intrm_sf_mf_240 ; t4 [ 204ULL ] = t318 / ( X [ 174ULL ] == 0.0 ?
+1.0E-16 : X [ 174ULL ] ) ; t289 = X [ 154ULL ] * intrm_sf_mf_281 ; t4 [
+205ULL ] = t289 / ( X [ 155ULL ] == 0.0 ? 1.0E-16 : X [ 155ULL ] ) ; t4 [
+206ULL ] = t268 / ( X [ 22ULL ] == 0.0 ? 1.0E-16 : X [ 22ULL ] ) ; t4 [
+207ULL ] = t318 / ( X [ 174ULL ] == 0.0 ? 1.0E-16 : X [ 174ULL ] ) ; t268 = X
+[ 202ULL ] * t124 ; t4 [ 208ULL ] = t268 / 1.01325 ; t4 [ 209ULL ] = t268 /
+1.01325 ; t268 = X [ 216ULL ] * intrm_sf_mf_1502 ; t4 [ 210ULL ] = t268 / ( X
+[ 29ULL ] == 0.0 ? 1.0E-16 : X [ 29ULL ] ) ; t4 [ 211ULL ] = t268 / ( X [
+29ULL ] == 0.0 ? 1.0E-16 : X [ 29ULL ] ) ; t268 = X [ 227ULL ] * t45 ; t4 [
+212ULL ] = t268 / ( X [ 29ULL ] == 0.0 ? 1.0E-16 : X [ 29ULL ] ) ; t4 [
+213ULL ] = t289 / ( X [ 155ULL ] == 0.0 ? 1.0E-16 : X [ 155ULL ] ) ; t318 = X
+[ 245ULL ] * t100 ; t4 [ 214ULL ] = t318 / ( X [ 246ULL ] == 0.0 ? 1.0E-16 :
+X [ 246ULL ] ) ; t4 [ 215ULL ] = t318 / ( X [ 246ULL ] == 0.0 ? 1.0E-16 : X [
+246ULL ] ) ; t4 [ 216ULL ] = U_idx_3 / ( X [ 60ULL ] == 0.0 ? 1.0E-16 : X [
+60ULL ] ) ; t4 [ 217ULL ] = t268 / ( X [ 29ULL ] == 0.0 ? 1.0E-16 : X [ 29ULL
+] ) ; U_idx_3 = X [ 294ULL ] * t107 ; t4 [ 218ULL ] = U_idx_3 / ( X [ 295ULL
+] == 0.0 ? 1.0E-16 : X [ 295ULL ] ) ; t268 = X [ 324ULL ] * t57 ; t4 [ 219ULL
+] = t268 / 1.01325 ; t4 [ 220ULL ] = t275 / ( X [ 320ULL ] == 0.0 ? 1.0E-16 :
+X [ 320ULL ] ) ; t318 = X [ 338ULL ] * t109 ; t4 [ 221ULL ] = t318 / ( t106
+== 0.0 ? 1.0E-16 : t106 ) ; t4 [ 222ULL ] = t318 / ( t106 == 0.0 ? 1.0E-16 :
+t106 ) ; t4 [ 223ULL ] = t268 / 1.01325 ; t4 [ 224ULL ] = U_idx_3 / ( X [
+295ULL ] == 0.0 ? 1.0E-16 : X [ 295ULL ] ) ; t4 [ 225ULL ] = t273 / ( X [
+64ULL ] == 0.0 ? 1.0E-16 : X [ 64ULL ] ) ; t4 [ 226ULL ] = X [ 220ULL ] *
+intrm_sf_mf_410 / 1.01325 ; t4 [ 227ULL ] = X [ 223ULL ] * intrm_sf_mf_410 /
+( X [ 29ULL ] == 0.0 ? 1.0E-16 : X [ 29ULL ] ) ; t4 [ 228ULL ] = X [ 221ULL ]
+* intrm_sf_mf_410 / ( X [ 29ULL ] == 0.0 ? 1.0E-16 : X [ 29ULL ] ) ; t4 [
+229ULL ] = X [ 222ULL ] * intrm_sf_mf_410 / 1.01325 ; for ( b = 0 ; b < 230 ;
+b ++ ) { out . mX [ b ] = t4 [ b ] ; } ( void ) LC ; ( void ) t330 ; return 0
+; }

@@ -16,57 +16,56 @@
 #include "FCElectricPlant_private.h"
 #define MDL_INIT_SYSTEM_MATRICES
 static void mdlInitSystemMatrices ( SimStruct * S ) { static int_T
-modelMassMatrixIr [ 86 ] = { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11
-, 12 , 13 , 14 , 15 , 16 , 17 , 18 , 19 , 21 , 42 , 43 , 45 , 44 , 46 , 47 ,
-49 , 48 , 58 , 59 , 61 , 60 , 62 , 63 , 65 , 64 , 20 , 91 , 22 , 23 , 22 , 24
-, 25 , 26 , 27 , 26 , 29 , 28 , 30 , 31 , 30 , 32 , 33 , 34 , 34 , 35 , 37 ,
-36 , 38 , 39 , 41 , 40 , 38 , 42 , 46 , 50 , 51 , 53 , 52 , 50 , 54 , 55 , 54
-, 56 , 57 , 58 , 62 , 67 , 413 , 66 , 414 , 415 , 416 , 417 , 418 } ; static
-int_T modelMassMatrixJc [ 420 ] = { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 ,
-10 , 11 , 12 , 13 , 14 , 15 , 16 , 17 , 18 , 19 , 20 , 21 , 23 , 24 , 25 , 27
-, 28 , 29 , 31 , 32 , 33 , 35 , 36 , 37 , 39 , 41 , 42 , 43 , 44 , 46 , 47 ,
-48 , 49 , 51 , 52 , 53 , 54 , 55 , 57 , 58 , 59 , 61 , 62 , 63 , 64 , 65 , 66
-, 68 , 69 , 70 , 71 , 73 , 74 , 75 , 76 , 77 , 78 , 80 , 81 , 81 , 81 , 81 ,
-81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81
-, 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 ,
-81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81
-, 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 ,
-81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81
-, 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 ,
-81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81
-, 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 ,
-81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81
-, 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 ,
-81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81
-, 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 ,
-81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81
-, 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 ,
-81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81
-, 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 ,
-81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81
-, 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 ,
-81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81
-, 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 ,
-81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81
-, 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 , 81 ,
-81 , 81 , 82 , 83 , 84 , 85 , 86 } ; static real_T modelMassMatrixPr [ 86 ] =
-{ 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 ,
+modelMassMatrixIr [ 83 ] = { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11
+, 12 , 13 , 14 , 15 , 16 , 17 , 18 , 20 , 41 , 42 , 44 , 43 , 45 , 46 , 48 ,
+47 , 57 , 58 , 60 , 59 , 61 , 62 , 64 , 63 , 19 , 90 , 21 , 22 , 21 , 23 , 24
+, 25 , 26 , 25 , 28 , 27 , 29 , 30 , 29 , 31 , 32 , 33 , 33 , 34 , 36 , 35 ,
+37 , 38 , 40 , 39 , 37 , 41 , 45 , 49 , 50 , 52 , 51 , 49 , 53 , 54 , 53 , 55
+, 56 , 57 , 61 , 66 , 412 , 65 , 413 , 414 , 415 } ; static int_T
+modelMassMatrixJc [ 417 ] = { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11
+, 12 , 13 , 14 , 15 , 16 , 17 , 18 , 19 , 20 , 22 , 23 , 24 , 26 , 27 , 28 ,
+30 , 31 , 32 , 34 , 35 , 36 , 38 , 40 , 41 , 42 , 43 , 45 , 46 , 47 , 48 , 50
+, 51 , 52 , 53 , 54 , 56 , 57 , 58 , 60 , 61 , 62 , 63 , 64 , 65 , 67 , 68 ,
+69 , 70 , 72 , 73 , 74 , 75 , 76 , 77 , 79 , 80 , 80 , 80 , 80 , 80 , 80 , 80
+, 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 ,
+80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80
+, 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 ,
+80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80
+, 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 ,
+80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80
+, 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 ,
+80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80
+, 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 ,
+80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80
+, 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 ,
+80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80
+, 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 ,
+80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80
+, 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 ,
+80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80
+, 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 ,
+80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80
+, 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 ,
+80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80
+, 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 ,
+80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 81
+, 82 , 83 } ; static real_T modelMassMatrixPr [ 83 ] = { 1 , 1 , 1 , 1 , 1 ,
 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1
 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 ,
 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1
-, 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 } ; int_T * massMatrixIr = ssGetMassMatrixIr
-( S ) ; int_T * massMatrixJc = ssGetMassMatrixJc ( S ) ; real_T *
-massMatrixPr = ssGetMassMatrixPr ( S ) ; ( void ) memcpy ( massMatrixIr ,
-modelMassMatrixIr , 86 * sizeof ( int_T ) ) ; ( void ) memcpy ( massMatrixJc
-, modelMassMatrixJc , 420 * sizeof ( int_T ) ) ; ( void ) memcpy (
-massMatrixPr , modelMassMatrixPr , 86 * sizeof ( real_T ) ) ; } const char *
-rt_GetMatSignalLoggingFileName ( void ) { return NULL ; } const char *
-rt_GetMatSigLogSelectorFileName ( void ) { return NULL ; } void *
-rt_GetOSigstreamManager ( void ) { return NULL ; } void * rt_slioCatalogue (
-void ) { return NULL ; } void * rtwGetPointerFromUniquePtr ( void * uniquePtr
-) { return NULL ; } void * CreateDiagnosticAsVoidPtr ( const char * id , int
-nargs , ... ) { void * voidPtrDiagnostic = NULL ; va_list args ; va_start (
-args , nargs ) ; slmrCreateDiagnostic ( id , nargs , args , &
+, 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 }
+; int_T * massMatrixIr = ssGetMassMatrixIr ( S ) ; int_T * massMatrixJc =
+ssGetMassMatrixJc ( S ) ; real_T * massMatrixPr = ssGetMassMatrixPr ( S ) ; (
+void ) memcpy ( massMatrixIr , modelMassMatrixIr , 83 * sizeof ( int_T ) ) ;
+( void ) memcpy ( massMatrixJc , modelMassMatrixJc , 417 * sizeof ( int_T ) )
+; ( void ) memcpy ( massMatrixPr , modelMassMatrixPr , 83 * sizeof ( real_T )
+) ; } const char * rt_GetMatSignalLoggingFileName ( void ) { return NULL ; }
+const char * rt_GetMatSigLogSelectorFileName ( void ) { return NULL ; } void
+* rt_GetOSigstreamManager ( void ) { return NULL ; } void * rt_slioCatalogue
+( void ) { return NULL ; } void * rtwGetPointerFromUniquePtr ( void *
+uniquePtr ) { return NULL ; } void * CreateDiagnosticAsVoidPtr ( const char *
+id , int nargs , ... ) { void * voidPtrDiagnostic = NULL ; va_list args ;
+va_start ( args , nargs ) ; slmrCreateDiagnostic ( id , nargs , args , &
 voidPtrDiagnostic ) ; va_end ( args ) ; return voidPtrDiagnostic ; } void
 rt_ssSet_slErrMsg ( void * S , void * diag ) { SimStruct * simStrcut = (
 SimStruct * ) S ; if ( ! _ssIsErrorStatusAslErrMsg ( simStrcut ) ) {
@@ -118,24 +117,23 @@ ssGetOutputPortSignal ( S , 3 ) ; real_T * o_B_1_5 = ( real_T * )
 ssGetOutputPortSignal ( S , 4 ) ; real_T * o_B_1_6 = ( real_T * )
 ssGetOutputPortSignal ( S , 5 ) ; real_T * o_B_1_7 = ( real_T * )
 ssGetOutputPortSignal ( S , 6 ) ; real_T * o_B_1_8 = ( real_T * )
-ssGetOutputPortSignal ( S , 7 ) ; real_T * o_B_1_9 = ( real_T * )
-ssGetOutputPortSignal ( S , 8 ) ; fw3fcrujzt * localX = ( fw3fcrujzt * )
+ssGetOutputPortSignal ( S , 7 ) ; fw3fcrujzt * localX = ( fw3fcrujzt * )
 ssGetContStates ( S ) ; if ( tid == 0 ) { FCElectricPlant ( & ( dw -> rtm ) ,
 i_alps4cqvbe , i_i_i_broznjvo0f , i_bav2fyyxpd , o_B_1_1 , o_B_1_2 , o_B_1_3
-, o_B_1_4 , o_B_1_5 , o_B_1_6 , o_B_1_7 , o_B_1_8 , o_B_1_9 , & ( dw -> rtb )
-, & ( dw -> rtdw ) , localX , & ( dw -> rtzce ) ) ; czx1gq31fm ( & ( dw ->
-rtm ) , & ( dw -> rtb ) , & ( dw -> rtdw ) , localX ) ; } } static void
+, o_B_1_4 , o_B_1_5 , o_B_1_6 , o_B_1_7 , o_B_1_8 , & ( dw -> rtb ) , & ( dw
+-> rtdw ) , localX , & ( dw -> rtzce ) ) ; czx1gq31fm ( & ( dw -> rtm ) , & (
+dw -> rtb ) , & ( dw -> rtdw ) , localX ) ; } } static void
 mdlInitializeSizes ( SimStruct * S ) { if ( ( S -> mdlInfo -> genericFcn != (
 NULL ) ) && ( ! ( S -> mdlInfo -> genericFcn ) ( S ,
 GEN_FCN_CHK_MODELREF_SFUN_HAS_MODEL_BLOCK , - 1 , ( NULL ) ) ) ) { return ; }
 ssSetNumSFcnParams ( S , 0 ) ; ssFxpSetU32BitRegionCompliant ( S , 1 ) ;
 rt_InitInfAndNaN ( sizeof ( real_T ) ) ; if ( S -> mdlInfo -> genericFcn != (
 NULL ) ) { _GenericFcn fcn = S -> mdlInfo -> genericFcn ; }
-ssSetRTWGeneratedSFcn ( S , 2 ) ; ssSetNumContStates ( S , 419 ) ;
+ssSetRTWGeneratedSFcn ( S , 2 ) ; ssSetNumContStates ( S , 416 ) ;
 ssSetNumDiscStates ( S , 0 ) ; ssSetNumPeriodicContStates ( S , 0 ) ;
-ssSetMassMatrixType ( S , 3 ) ; ssSetMassMatrixNzMax ( S , 86 ) ;
+ssSetMassMatrixType ( S , 3 ) ; ssSetMassMatrixNzMax ( S , 83 ) ;
 ssSetSymbolicDimsSupport ( S , true ) ; slmrInitializeIOPortDataVectors ( S ,
-3 , 9 ) ; if ( ! ssSetNumInputPorts ( S , 3 ) ) return ; if ( !
+3 , 8 ) ; if ( ! ssSetNumInputPorts ( S , 3 ) ) return ; if ( !
 ssSetInputPortVectorDimension ( S , 0 , 1 ) ) return ;
 ssSetInputPortDimensionsMode ( S , 0 , FIXED_DIMS_MODE ) ;
 ssSetInputPortFrameData ( S , 0 , FRAME_NO ) ; if ( ssGetSimMode ( S ) !=
@@ -178,8 +176,8 @@ unitIdReg ) ;
 ssSetInputPortRequiredContiguous ( S , 2 , 1 ) ; ssSetInputPortOptimOpts ( S
 , 2 , SS_NOT_REUSABLE_AND_LOCAL ) ; ssSetInputPortOverWritable ( S , 2 ,
 false ) ; ssSetInputPortSampleTime ( S , 2 , 0.0 ) ; ssSetInputPortOffsetTime
-( S , 2 , 0.0 ) ; if ( ! ssSetNumOutputPorts ( S , 9 ) ) return ; if ( !
-ssSetOutputPortVectorDimension ( S , 0 , 1 ) ) return ;
+( S , 2 , 0.0 ) ; if ( ! ssSetNumOutputPorts ( S , 8 ) ) return ; if ( !
+ssSetOutputPortMatrixDimensions ( S , 0 , 1 , 1 ) ) return ;
 ssSetOutputPortDimensionsMode ( S , 0 , FIXED_DIMS_MODE ) ;
 ssSetOutputPortFrameData ( S , 0 , FRAME_NO ) ; if ( ssGetSimMode ( S ) !=
 SS_SIMMODE_SIZES_CALL_ONLY ) { ssSetOutputPortDataType ( S , 0 , SS_DOUBLE )
@@ -298,34 +296,27 @@ unitIdReg ) ;
 7 , 0.0 ) ; ssSetOutputPortDiscreteValuedOutput ( S , 7 , 0 ) ;
 ssSetOutputPortOkToMerge ( S , 7 , SS_OK_TO_MERGE_CONDITIONAL ) ;
 ssSetOutputPortICAttributes ( S , 7 , false , false , false ) ;
-ssSetOutputPortOptimOpts ( S , 7 , SS_NOT_REUSABLE_AND_GLOBAL ) ; if ( !
-ssSetOutputPortVectorDimension ( S , 8 , 1 ) ) return ;
-ssSetOutputPortDimensionsMode ( S , 8 , FIXED_DIMS_MODE ) ;
-ssSetOutputPortFrameData ( S , 8 , FRAME_NO ) ; if ( ssGetSimMode ( S ) !=
-SS_SIMMODE_SIZES_CALL_ONLY ) { ssSetOutputPortDataType ( S , 8 , SS_DOUBLE )
-; } if ( ssGetSimMode ( S ) != SS_SIMMODE_SIZES_CALL_ONLY ) {
-#if defined (MATLAB_MEX_FILE)
-UnitId unitIdReg ; ssRegisterUnitFromExpr ( S , "degC" , & unitIdReg ) ; if (
-unitIdReg == INVALID_UNIT_ID ) return ; ssSetOutputPortUnit ( S , 8 ,
-unitIdReg ) ;
-#endif
-} ssSetOutputPortSampleTime ( S , 8 , 0.0 ) ; ssSetOutputPortOffsetTime ( S ,
-8 , 0.0 ) ; ssSetOutputPortDiscreteValuedOutput ( S , 8 , 0 ) ;
-ssSetOutputPortOkToMerge ( S , 8 , SS_OK_TO_MERGE_CONDITIONAL ) ;
-ssSetOutputPortICAttributes ( S , 8 , false , false , false ) ;
-ssSetOutputPortOptimOpts ( S , 8 , SS_NOT_REUSABLE_AND_GLOBAL ) ;
+ssSetOutputPortOptimOpts ( S , 7 , SS_NOT_REUSABLE_AND_GLOBAL ) ;
 ssSetSimStateCompliance ( S , USE_CUSTOM_SIM_STATE ) ;
 mr_FCElectricPlant_RegisterSimStateChecksum ( S ) ; ssSetNumSampleTimes ( S ,
 3 ) ; ssSetParameterTuningCompliance ( S , true ) ; ssSetNumRWork ( S , 0 ) ;
 ssSetNumIWork ( S , 0 ) ; ssSetNumPWork ( S , 0 ) ; ssSetNumModes ( S , 0 ) ;
 { int_T zcsIdx = 0 ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Reset" ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_DISC ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_ALL_DN ) ;
+"UprLim" ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_ALL ) ;
 ssSetZcSignalNeedsEventNotification ( S , zcsIdx , 0 ) ; zcsIdx =
 ssCreateAndAddZcSignalInfo ( S ) ; ssSetZcSignalWidth ( S , zcsIdx , 1 ) ;
-ssSetZcSignalName ( S , zcsIdx , "Reset" ) ; ssSetZcSignalType ( S , zcsIdx ,
-SL_ZCS_TYPE_DISC ) ; ssSetZcSignalZcEventType ( S , zcsIdx ,
+ssSetZcSignalName ( S , zcsIdx , "LwrLim" ) ; ssSetZcSignalType ( S , zcsIdx
+, SL_ZCS_TYPE_CONT ) ; ssSetZcSignalZcEventType ( S , zcsIdx ,
+SL_ZCS_EVENT_ALL ) ; ssSetZcSignalNeedsEventNotification ( S , zcsIdx , 0 ) ;
+zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ; ssSetZcSignalWidth ( S , zcsIdx ,
+1 ) ; ssSetZcSignalName ( S , zcsIdx , "Reset" ) ; ssSetZcSignalType ( S ,
+zcsIdx , SL_ZCS_TYPE_DISC ) ; ssSetZcSignalZcEventType ( S , zcsIdx ,
+SL_ZCS_EVENT_ALL_DN ) ; ssSetZcSignalNeedsEventNotification ( S , zcsIdx , 0
+) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ; ssSetZcSignalWidth ( S ,
+zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx , "Reset" ) ; ssSetZcSignalType
+( S , zcsIdx , SL_ZCS_TYPE_DISC ) ; ssSetZcSignalZcEventType ( S , zcsIdx ,
 SL_ZCS_EVENT_ALL_DN ) ; ssSetZcSignalNeedsEventNotification ( S , zcsIdx , 0
 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ; ssSetZcSignalWidth ( S ,
 zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx , "UprLim" ) ;
@@ -1759,8 +1750,6 @@ ssSetOutputPortIsNonContinuous ( S , 6 , 0 ) ;
 ssSetOutputPortIsFedByBlockWithModesNoZCs ( S , 6 , 0 ) ;
 ssSetOutputPortIsNonContinuous ( S , 7 , 0 ) ;
 ssSetOutputPortIsFedByBlockWithModesNoZCs ( S , 7 , 0 ) ;
-ssSetOutputPortIsNonContinuous ( S , 8 , 0 ) ;
-ssSetOutputPortIsFedByBlockWithModesNoZCs ( S , 8 , 0 ) ;
 ssSetInputPortIsNotDerivPort ( S , 0 , 0 ) ; ssSetInputPortIsNotDerivPort ( S
 , 1 , 0 ) ; ssSetInputPortIsNotDerivPort ( S , 2 , 0 ) ;
 ssSetModelReferenceSampleTimeInheritanceRule ( S ,
@@ -1841,16 +1830,14 @@ ssGetOutputPortSignal ( S , 3 ) ; real_T * o_B_1_5 = ( real_T * )
 ssGetOutputPortSignal ( S , 4 ) ; real_T * o_B_1_6 = ( real_T * )
 ssGetOutputPortSignal ( S , 5 ) ; real_T * o_B_1_7 = ( real_T * )
 ssGetOutputPortSignal ( S , 6 ) ; real_T * o_B_1_8 = ( real_T * )
-ssGetOutputPortSignal ( S , 7 ) ; real_T * o_B_1_9 = ( real_T * )
-ssGetOutputPortSignal ( S , 8 ) ; fw3fcrujzt * localX = ( fw3fcrujzt * )
+ssGetOutputPortSignal ( S , 7 ) ; fw3fcrujzt * localX = ( fw3fcrujzt * )
 ssGetContStates ( S ) ; if ( tid == PARAMETER_TUNING_TID ) {
 FCElectricPlantTID2 ( & ( dw -> rtm ) , & ( dw -> rtb ) , & ( dw -> rtdw ) )
 ; } if ( tid != CONSTANT_TID && tid != PARAMETER_TUNING_TID ) { if (
 ssIsSampleHit ( S , 0 , tid ) || ssIsMinorTimeStep ( S ) ) { FCElectricPlant
 ( & ( dw -> rtm ) , i_alps4cqvbe , i_i_i_broznjvo0f , i_bav2fyyxpd , o_B_1_1
-, o_B_1_2 , o_B_1_3 , o_B_1_4 , o_B_1_5 , o_B_1_6 , o_B_1_7 , o_B_1_8 ,
-o_B_1_9 , & ( dw -> rtb ) , & ( dw -> rtdw ) , localX , & ( dw -> rtzce ) ) ;
-} } }
+, o_B_1_2 , o_B_1_3 , o_B_1_4 , o_B_1_5 , o_B_1_6 , o_B_1_7 , o_B_1_8 , & (
+dw -> rtb ) , & ( dw -> rtdw ) , localX , & ( dw -> rtzce ) ) ; } } }
 #define MDL_UPDATE
 static void mdlUpdate ( SimStruct * S , int_T tid ) { g5h05g3u4wx * dw = (
 g5h05g3u4wx * ) ssGetDWork ( S , 0 ) ; fw3fcrujzt * localX = ( fw3fcrujzt * )

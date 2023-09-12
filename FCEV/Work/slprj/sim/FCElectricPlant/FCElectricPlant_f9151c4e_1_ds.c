@@ -3427,10 +3427,10 @@ NE_FREQTIME_TYPE_TIME , FALSE , TRUE , "Cell capacity fading factor" , } , {
 "A*hr" , 1.0 , "C" , NE_NOMINAL_SOURCE_DERIVED , NE_INIT_MODE_NONE , TRUE ,
 FALSE , NE_FREQTIME_TYPE_TIME , FALSE , TRUE , "Faded cell capacity" , } , {
 "Battery_System.Battery_Table_Based1_soc0" ,
-"FCElectricPlant/Battery System/PS-Simulink\nConverter4" , { { 1 , 1 } } ,
-"1" , 1.0 , "1" , NE_NOMINAL_SOURCE_DERIVED , NE_INIT_MODE_NONE , FALSE ,
-FALSE , NE_FREQTIME_TYPE_TIME , FALSE , TRUE , "Battery_Table_Based1_soc0" ,
-} , { "Battery_System.DC_DC_Converter.i1" ,
+"FCElectricPlant/Battery System/PS-Simulink\nConverter" , { { 1 , 1 } } , "1"
+, 1.0 , "1" , NE_NOMINAL_SOURCE_DERIVED , NE_INIT_MODE_NONE , FALSE , FALSE ,
+NE_FREQTIME_TYPE_TIME , FALSE , TRUE , "Battery_Table_Based1_soc0" , } , {
+"Battery_System.DC_DC_Converter.i1" ,
 "FCElectricPlant/Battery System/DC-DC Converter" , { { 1 , 1 } } , "A" , 1.0
 , "A" , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE , FALSE , FALSE ,
 NE_FREQTIME_TYPE_TIME , TRUE , TRUE , "Input current" , } , {
@@ -3498,46 +3498,15 @@ NE_FREQTIME_TYPE_TIME , FALSE , TRUE , "Output voltage before ohmic drop" , }
 "FCElectricPlant/Battery System/DC-DC Converter" , { { 1 , 1 } } , "V" , 1.0
 , "V" , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE , FALSE , FALSE ,
 NE_FREQTIME_TYPE_TIME , TRUE , TRUE , "Output voltage" , } , {
+"Battery_System.Electrical_Reference.V.v" ,
+"FCElectricPlant/Battery System/Electrical Reference" , { { 1 , 1 } } , "V" ,
+1.0 , "V" , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE , TRUE , FALSE ,
+NE_FREQTIME_TYPE_TIME , TRUE , TRUE , "Voltage" , } , {
 "Battery_System.Electrical_Reference1.V.v" ,
 "FCElectricPlant/Battery System/Electrical Reference1" , { { 1 , 1 } } , "V"
 , 1.0 , "V" , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE , TRUE , FALSE ,
 NE_FREQTIME_TYPE_TIME , TRUE , TRUE , "Voltage" , } , {
-"Battery_System.Electrical_Reference2.V.v" ,
-"FCElectricPlant/Battery System/Electrical Reference2" , { { 1 , 1 } } , "V"
-, 1.0 , "V" , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE , TRUE , FALSE ,
-NE_FREQTIME_TYPE_TIME , TRUE , TRUE , "Voltage" , } , {
-"Battery_System.Power_Acc.Controlled_Current_Source.head.v" ,
-"FCElectricPlant/Battery System/Power Acc/Controlled Current Source" , { { 1
-, 1 } } , "V" , 1.0 , "V" , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE ,
-TRUE , FALSE , NE_FREQTIME_TYPE_TIME , TRUE , TRUE , "Voltage" , } , {
-"Battery_System.Power_Acc.Controlled_Current_Source.i" ,
-"FCElectricPlant/Battery System/Power Acc/Controlled Current Source" , { { 1
-, 1 } } , "A" , 1.0 , "A" , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE ,
-FALSE , FALSE , NE_FREQTIME_TYPE_TIME , TRUE , TRUE , "i" , } , {
-"Battery_System.Power_Acc.Controlled_Current_Source.iT" ,
-"FCElectricPlant/Battery System/Power Acc/Controlled Current Source" , { { 1
-, 1 } } , "A" , 1.0 , "A" , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE ,
-FALSE , FALSE , NE_FREQTIME_TYPE_TIME , TRUE , TRUE , "iT" , } , {
-"Battery_System.Power_Acc.Controlled_Current_Source.tail.v" ,
-"FCElectricPlant/Battery System/Power Acc/Controlled Current Source" , { { 1
-, 1 } } , "V" , 1.0 , "V" , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE ,
-FALSE , FALSE , NE_FREQTIME_TYPE_TIME , TRUE , TRUE , "Voltage" , } , {
-"Battery_System.Power_Acc.Controlled_Current_Source.v" ,
-"FCElectricPlant/Battery System/Power Acc/Controlled Current Source" , { { 1
-, 1 } } , "V" , 1.0 , "V" , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE ,
-FALSE , FALSE , NE_FREQTIME_TYPE_TIME , TRUE , TRUE , "v" , } , {
-"Battery_System.Power_Acc.Simulink_PS_Converter_output0" ,
-"FCElectricPlant/Battery System/Power Acc/Simulink-PS\nConverter" , { { 1 , 1
-} } , "A" , 1.0 , "A" , NE_NOMINAL_SOURCE_FIXED , NE_INIT_MODE_NONE , FALSE ,
-FALSE , NE_FREQTIME_TYPE_TIME , FALSE , TRUE ,
-"Simulink_PS_Converter_output0" , } , { "Battery_System.Power_Acc.x0.v" ,
-"FCElectricPlant/Battery System/Power Acc" , { { 1 , 1 } } , "V" , 1.0 , "V"
-, NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE , FALSE , FALSE ,
-NE_FREQTIME_TYPE_TIME , FALSE , TRUE , "Voltage" , } , {
-"Battery_System.Power_Acc.x1.v" , "FCElectricPlant/Battery System/Power Acc"
-, { { 1 , 1 } } , "V" , 1.0 , "V" , NE_NOMINAL_SOURCE_MODEL ,
-NE_INIT_MODE_NONE , TRUE , FALSE , NE_FREQTIME_TYPE_TIME , FALSE , TRUE ,
-"Voltage" , } , { "Battery_System.Sensor_VI.Current_Sensor.I" ,
+"Battery_System.Sensor_VI.Current_Sensor.I" ,
 "FCElectricPlant/Battery System/Sensor VI/Current Sensor" , { { 1 , 1 } } ,
 "A" , 1.0 , "A" , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE , FALSE , FALSE
 , NE_FREQTIME_TYPE_TIME , TRUE , TRUE , "I" , } , {
@@ -3630,7 +3599,38 @@ NE_FREQTIME_TYPE_TIME , FALSE , TRUE , "Voltage" , } , {
 "FCElectricPlant/Battery System/Sensor VI1" , { { 1 , 1 } } , "V" , 1.0 , "V"
 , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE , FALSE , FALSE ,
 NE_FREQTIME_TYPE_TIME , FALSE , TRUE , "Voltage" , } , {
-"Battery_System.Thermal.PS_Simulink_Converter_input0" ,
+"Battery_System.Subsystem.Controlled_Current_Source.head.v" ,
+"FCElectricPlant/Battery System/Subsystem/Controlled Current Source" , { { 1
+, 1 } } , "V" , 1.0 , "V" , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE ,
+TRUE , FALSE , NE_FREQTIME_TYPE_TIME , TRUE , TRUE , "Voltage" , } , {
+"Battery_System.Subsystem.Controlled_Current_Source.i" ,
+"FCElectricPlant/Battery System/Subsystem/Controlled Current Source" , { { 1
+, 1 } } , "A" , 1.0 , "A" , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE ,
+FALSE , FALSE , NE_FREQTIME_TYPE_TIME , TRUE , TRUE , "i" , } , {
+"Battery_System.Subsystem.Controlled_Current_Source.iT" ,
+"FCElectricPlant/Battery System/Subsystem/Controlled Current Source" , { { 1
+, 1 } } , "A" , 1.0 , "A" , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE ,
+FALSE , FALSE , NE_FREQTIME_TYPE_TIME , TRUE , TRUE , "iT" , } , {
+"Battery_System.Subsystem.Controlled_Current_Source.tail.v" ,
+"FCElectricPlant/Battery System/Subsystem/Controlled Current Source" , { { 1
+, 1 } } , "V" , 1.0 , "V" , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE ,
+FALSE , FALSE , NE_FREQTIME_TYPE_TIME , TRUE , TRUE , "Voltage" , } , {
+"Battery_System.Subsystem.Controlled_Current_Source.v" ,
+"FCElectricPlant/Battery System/Subsystem/Controlled Current Source" , { { 1
+, 1 } } , "V" , 1.0 , "V" , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE ,
+FALSE , FALSE , NE_FREQTIME_TYPE_TIME , TRUE , TRUE , "v" , } , {
+"Battery_System.Subsystem.Simulink_PS_Converter_output0" ,
+"FCElectricPlant/Battery System/Subsystem/Simulink-PS\nConverter" , { { 1 , 1
+} } , "1" , 1.0 , "1" , NE_NOMINAL_SOURCE_FIXED , NE_INIT_MODE_NONE , FALSE ,
+FALSE , NE_FREQTIME_TYPE_TIME , FALSE , TRUE ,
+"Simulink_PS_Converter_output0" , } , { "Battery_System.Subsystem.x0.v" ,
+"FCElectricPlant/Battery System/Subsystem" , { { 1 , 1 } } , "V" , 1.0 , "V"
+, NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE , FALSE , FALSE ,
+NE_FREQTIME_TYPE_TIME , FALSE , TRUE , "Voltage" , } , {
+"Battery_System.Subsystem.x1.v" , "FCElectricPlant/Battery System/Subsystem"
+, { { 1 , 1 } } , "V" , 1.0 , "V" , NE_NOMINAL_SOURCE_MODEL ,
+NE_INIT_MODE_NONE , TRUE , FALSE , NE_FREQTIME_TYPE_TIME , FALSE , TRUE ,
+"Voltage" , } , { "Battery_System.Thermal.PS_Simulink_Converter_input0" ,
 "FCElectricPlant/Battery System/Thermal/PS-Simulink\nConverter" , { { 1 , 1 }
 } , "A" , 1.0 , "A" , NE_NOMINAL_SOURCE_MODEL , NE_INIT_MODE_NONE , FALSE ,
 FALSE , NE_FREQTIME_TYPE_TIME , FALSE , TRUE , "PS_Simulink_Converter_input0"
@@ -31599,60 +31599,60 @@ NeRange s_assert_range [ 2861 ] = { {
 , 25U , 39U , 25U , 40U , NE_RANGE_TYPE_NORMAL , } , {
  "D:/MATLAB2023a/toolbox/physmod/simscape/library/m/+foundation/+electrical/+elements/inductor.ssc"
 , 25U , 37U , 25U , 38U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 346U ,
-39U , 346U , 40U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 345U ,
+39U , 345U , 40U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 216U ,
+33U , 216U , 42U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 345U ,
+48U , 345U , 49U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 216U ,
+33U , 216U , 42U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 345U ,
+39U , 345U , 40U , NE_RANGE_TYPE_NORMAL , } , {
 "D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 217U ,
 33U , 217U , 42U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 346U ,
-48U , 346U , 49U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 345U ,
+48U , 345U , 49U , NE_RANGE_TYPE_NORMAL , } , {
 "D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 217U ,
 33U , 217U , 42U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 346U ,
-39U , 346U , 40U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 218U ,
-33U , 218U , 42U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 346U ,
-48U , 346U , 49U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 218U ,
-33U , 218U , 42U , NE_RANGE_TYPE_NORMAL , } , {
 "D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 125U ,
 30U , 125U , 39U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 241U ,
-31U , 241U , 32U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 240U ,
+31U , 240U , 32U , NE_RANGE_TYPE_NORMAL , } , {
 "D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 1U ,
 1U , 1U , 1U , NE_RANGE_TYPE_PROTECTED , } , {
 "D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 185U ,
 34U , 185U , 37U , NE_RANGE_TYPE_NORMAL , } , {
 "D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 185U ,
 24U , 185U , 140U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 250U ,
-27U , 250U , 39U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 249U ,
+27U , 249U , 39U , NE_RANGE_TYPE_NORMAL , } , {
 "D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 186U ,
 34U , 186U , 37U , NE_RANGE_TYPE_NORMAL , } , {
 "D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 186U ,
 24U , 186U , 140U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 251U ,
-27U , 251U , 39U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 261U ,
-56U , 261U , 91U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 263U ,
-56U , 263U , 91U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 250U ,
+27U , 250U , 39U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 260U ,
+56U , 260U , 91U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 262U ,
+56U , 262U , 91U , NE_RANGE_TYPE_NORMAL , } , {
 "D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 127U ,
 26U , 127U , 31U , NE_RANGE_TYPE_NORMAL , } , {
 "D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 206U ,
 45U , 206U , 47U , NE_RANGE_TYPE_NORMAL , } , {
 "D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 206U ,
 38U , 206U , 47U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 211U ,
-28U , 211U , 30U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 211U ,
-17U , 211U , 30U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 213U ,
-17U , 213U , 26U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 213U ,
-38U , 213U , 40U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 213U ,
-51U , 213U , 60U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 210U ,
+28U , 210U , 30U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 210U ,
+17U , 210U , 30U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 212U ,
+17U , 212U , 26U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 212U ,
+38U , 212U , 40U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 212U ,
+51U , 212U , 60U , NE_RANGE_TYPE_NORMAL , } , {
 "D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 202U ,
 72U , 202U , 75U , NE_RANGE_TYPE_NORMAL , } , {
 "D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 202U ,
@@ -37723,24 +37723,24 @@ s_equation_range [ 1195 ] = { {
 , 78U , 5U , 78U , 43U , NE_RANGE_TYPE_NORMAL , } , {
  "D:/MATLAB2023a/toolbox/physmod/simscape/library/m/+foundation/+moist_air/+sources/+moisture_trace_gas/controlled_moisture_source.ssc"
 , 78U , 5U , 78U , 43U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 283U ,
-5U , 283U , 25U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 286U ,
-5U , 286U , 27U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 282U ,
+5U , 282U , 25U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 285U ,
+5U , 285U , 27U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 289U ,
+5U , 289U , 63U , NE_RANGE_TYPE_NORMAL , } , {
 "D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 290U ,
-5U , 290U , 63U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 291U ,
-5U , 291U , 78U , NE_RANGE_TYPE_NORMAL , } , {
+5U , 290U , 78U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 294U ,
+5U , 294U , 40U , NE_RANGE_TYPE_NORMAL , } , {
 "D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 295U ,
-5U , 295U , 40U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 296U ,
-5U , 296U , 39U , NE_RANGE_TYPE_NORMAL , } , {
+5U , 295U , 39U , NE_RANGE_TYPE_NORMAL , } , {
+"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 301U ,
+5U , 301U , 35U , NE_RANGE_TYPE_NORMAL , } , {
 "D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 302U ,
 5U , 302U , 35U , NE_RANGE_TYPE_NORMAL , } , {
 "D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 303U ,
 5U , 303U , 35U , NE_RANGE_TYPE_NORMAL , } , {
-"D:/MATLAB2023a/toolbox/physmod/simscape/simscapedemos/FuelCell.ssc" , 304U ,
-5U , 304U , 35U , NE_RANGE_TYPE_NORMAL , } , {
  "D:/MATLAB2023a/toolbox/physmod/simscape/library/m/+foundation/+thermal/+elements/mass.ssc"
 , 107U , 5U , 107U , 13U , NE_RANGE_TYPE_NORMAL , } , {
  "D:/MATLAB2023a/toolbox/physmod/simscape/library/m/+foundation/+electrical/+elements/pwl_diode.ssc"
@@ -39901,85 +39901,82 @@ s_index_parameter_data = NULL ; static NeParameterData s_real_parameter_data
 , "" , 0U , 1U , TRUE , } , { "RTP_E1FEEF9A_iL" ,
 "FCElectricPlant/Fuel Cell/Boost Converter" , "" , 0U , 1U , TRUE , } , {
 "RTP_E1FEEF9A_vc" , "FCElectricPlant/Fuel Cell/Boost Converter" , "" , 0U ,
-1U , TRUE , } } ; static real_T s_constant_table0 [ 42 ] = { 201.6 , 258.768
+1U , TRUE , } } ; static real_T s_constant_table0 [ 12 ] = { 201.6 , 258.768
 , 264.96 , 272.952 , 286.128 , 303.912 , 201.6 , 258.768 , 264.96 , 272.952 ,
-286.128 , 303.912 , 201.6 , 258.768 , 264.96 , 272.952 , 286.128 , 303.912 ,
-201.6 , 258.768 , 264.96 , 272.952 , 286.128 , 303.912 , 201.6 , 258.768 ,
-264.96 , 272.952 , 286.128 , 303.912 , 201.6 , 258.768 , 264.96 , 272.952 ,
-286.128 , 303.912 , 201.6 , 258.768 , 264.96 , 272.952 , 286.128 , 303.912 }
-; static real_T s_constant_table1 [ 52 ] = { 6.81365662228272e-6 ,
-7.04953750742707e-6 , 7.40970098298307e-6 , 7.7699127809390691e-6 ,
-8.13017290129507e-6 , 8.4904813440510688e-6 , 8.6706536863290687e-6 ,
-8.70668960445667e-6 , 8.74272600580827e-6 , 8.778762890383869e-6 ,
-8.81480025818347e-6 , 8.85083810920707e-6 , 8.88687644345467e-6 ,
-8.92291526092627e-6 , 8.95895456162187e-6 , 8.99499434554147e-6 ,
-9.03103461268507e-6 , 9.2112431967630687e-6 , 9.57169660671907e-6 ,
-9.9321983390750687e-6 , 1.02927483938311e-5 , 1.0653346770987101e-5 ,
-1.10139934705431e-5 , 1.13746884924991e-5 , 1.1735431836855099e-5 ,
-1.2096223503611098e-5 , 1.2457063492767099e-5 , 1.2817951804323099e-5 ,
-1.31788884382791e-5 , 1.35398733946351e-5 , 1.3900906673391099e-5 ,
-1.4261988274547099e-5 , 1.46231181981031e-5 , 1.4984296444059098e-5 ,
-1.5345523012415098e-5 , 1.57067979031711e-5 , 1.6068121116327097e-5 ,
-1.64294926518831e-5 , 1.6790912509839097e-5 , 1.7152380690195097e-5 ,
-1.7513897192951097e-5 , 1.78754620181071e-5 , 1.82370751656631e-5 ,
-1.85987366356191e-5 , 1.89604464279751e-5 , 1.93222045427311e-5 ,
-1.9684010979887098e-5 , 2.0045865739443102e-5 , 2.0407768821399098e-5 ,
-2.07697202257551e-5 , 2.11317199525111e-5 , 2.14937680016671e-5 } ; static
-real_T s_constant_table2 [ 52 ] = { 216.59999999999997 , 223.14999999999998 ,
-233.14999999999998 , 243.14999999999998 , 253.14999999999998 , 263.15 ,
-268.15 , 269.15 , 270.15 , 271.15 , 272.15 , 273.15 , 274.15 , 275.15 ,
-276.15 , 277.15 , 278.15 , 283.15 , 293.15 , 303.15 , 313.15 , 323.15 ,
-333.15 , 343.15 , 353.15 , 363.15 , 373.15 , 383.15 , 393.15 , 403.15 ,
-413.15 , 423.15 , 433.15 , 443.15 , 453.15 , 463.15 , 473.15 , 483.15 ,
-493.15 , 503.15 , 513.15 , 523.15 , 533.15 , 543.15 , 553.15 , 563.15 ,
-573.15 , 583.15 , 593.15 , 603.15 , 613.15 , 623.15 } ; static real_T
-s_constant_table3 [ 52 ] = { 0.53748091446337642 , 1.3705983252704039 ,
-2.5526565535242822 , 3.6377214002488927 , 4.6370469695571526 ,
-5.560196170114077 , 5.9958076574267531 , 6.0809734687382653 ,
-6.1655036081557117 , 6.2494049371678679 , 6.3326842177763867 ,
-6.4154449795291262 , 6.4878180264273659 , 6.5595981068908191 ,
-6.6307920619916745 , 6.7014066306349251 , 6.7714484511174264 ,
-7.1132918282316382 , 7.757570582282157 , 8.3538947441847551 ,
-8.9071286682053863 , 9.4215142059171466 , 9.9007739703338782 ,
-10.348193748463787 , 10.766688006443445 , 11.15885228699794 ,
-11.527005651478294 , 11.873225600641627 , 12.199377280207878 ,
-12.507138281807693 , 12.798019981669668 , 13.073386096000693 ,
-13.334468948492018 , 13.582383819662853 , 13.818141662383415 ,
-14.042660410016627 , 14.256775064138392 , 14.461246721668589 ,
-14.656770682592617 , 14.843983766988572 , 15.023470962686478 ,
-15.195771522404597 , 15.361384632365338 , 15.520774784998272 ,
-15.67437700976954 , 15.822602154434243 , 15.965842474846696 ,
-16.104477904942279 , 16.238883579536267 , 16.369439559122732 ,
-16.496544487752711 , 16.62063690908797 } ; static real_T s_constant_table4 [
-52 ] = { 2396.55944251649 , 2408.68643343608 , 2427.1988031141 ,
-2445.702165897 , 2464.18429108356 , 2482.62529466839 , 2491.82135326629 ,
-2493.6580151792 , 2495.49372578218 , 2497.32843835745 , 2499.16210446923 ,
-2500.99462758899 , 2502.83092214066 , 2504.6665223621 , 2506.50140563013 ,
-2508.335548891 , 2510.16892865793 , 2519.32352241995 , 2537.56068088674 ,
-2555.67742615292 , 2573.6403223998 , 2591.4109179101 , 2608.9455037701 ,
-2626.19492016262 , 2643.10444358428 , 2659.61377634497 , 2675.58278696023 ,
-2696.1846256545 , 2716.49989553741 , 2736.6235210957 , 2756.61216047011 ,
-2776.50561773853 , 2796.33378922508 , 2816.11979583049 , 2835.88181423877 ,
-2855.63430574511 , 2875.38889327595 , 2895.15500577172 , 2914.94035964689 ,
-2934.75132290228 , 2954.59319330244 , 2974.47041285505 , 2994.38673458964 ,
-3014.34535328009 , 3034.34900867103 , 3054.40006755764 , 3074.50058946898 ,
-3094.65237953784 , 3114.85703128106 , 3135.11596137801 , 3155.43043805905 ,
-3175.80160435813 } ; static real_T s_constant_table5 [ 52 ] = {
-2783.66044045879 , 2873.94181645932 , 3012.62601981068 , 3152.22537301871 ,
-3292.62486344326 , 3433.7213835968 , 3504.50184295996 , 3518.67512520997 ,
-3532.85394543712 , 3547.03822323045 , 3561.22787913325 , 3575.42283463482 ,
-3589.62301216223 , 3603.82833507219 , 3618.0387276429 , 3632.25411506595 ,
-3646.4744234383 , 3717.64725530348 , 3860.3219873489 , 4003.3828816304 ,
-4146.77354613486 , 4290.44463593559 , 4434.35318483605 , 4578.46197843019 ,
-4722.7389683309 , 4867.15672726297 , 5011.69194456718 , 5156.32496143709 ,
-5301.03934494342 , 5445.82149962224 , 5590.6603151415 , 5735.54684833147 ,
-5880.47403768083 , 6025.43644826542 , 6170.4300449914 , 6315.45199199528 ,
-6460.50047604533 , 6605.57455182556 , 6750.67400704912 , 6895.79924543541 ,
-7040.95118568927 , 7186.1311747363 , 7331.34091359044 , 7476.58239435534 ,
-7621.85784698693 , 7767.16969456766 , 7912.52051596217 , 8057.91301483815 ,
-8203.34999414341 , 8348.83433523064 , 8494.36898091475 , 8639.95692183309 } ;
-static real_T s_constant_table6 [ 52 ] = { 196.31404563523 , 202.302438242727
-, 211.445560194021 , 220.590899228792 , 229.740231593225 , 238.8953489525 ,
+286.128 , 303.912 } ; static real_T s_constant_table1 [ 52 ] = {
+6.81365662228272e-6 , 7.04953750742707e-6 , 7.40970098298307e-6 ,
+7.7699127809390691e-6 , 8.13017290129507e-6 , 8.4904813440510688e-6 ,
+8.6706536863290687e-6 , 8.70668960445667e-6 , 8.74272600580827e-6 ,
+8.778762890383869e-6 , 8.81480025818347e-6 , 8.85083810920707e-6 ,
+8.88687644345467e-6 , 8.92291526092627e-6 , 8.95895456162187e-6 ,
+8.99499434554147e-6 , 9.03103461268507e-6 , 9.2112431967630687e-6 ,
+9.57169660671907e-6 , 9.9321983390750687e-6 , 1.02927483938311e-5 ,
+1.0653346770987101e-5 , 1.10139934705431e-5 , 1.13746884924991e-5 ,
+1.1735431836855099e-5 , 1.2096223503611098e-5 , 1.2457063492767099e-5 ,
+1.2817951804323099e-5 , 1.31788884382791e-5 , 1.35398733946351e-5 ,
+1.3900906673391099e-5 , 1.4261988274547099e-5 , 1.46231181981031e-5 ,
+1.4984296444059098e-5 , 1.5345523012415098e-5 , 1.57067979031711e-5 ,
+1.6068121116327097e-5 , 1.64294926518831e-5 , 1.6790912509839097e-5 ,
+1.7152380690195097e-5 , 1.7513897192951097e-5 , 1.78754620181071e-5 ,
+1.82370751656631e-5 , 1.85987366356191e-5 , 1.89604464279751e-5 ,
+1.93222045427311e-5 , 1.9684010979887098e-5 , 2.0045865739443102e-5 ,
+2.0407768821399098e-5 , 2.07697202257551e-5 , 2.11317199525111e-5 ,
+2.14937680016671e-5 } ; static real_T s_constant_table2 [ 52 ] = {
+216.59999999999997 , 223.14999999999998 , 233.14999999999998 ,
+243.14999999999998 , 253.14999999999998 , 263.15 , 268.15 , 269.15 , 270.15 ,
+271.15 , 272.15 , 273.15 , 274.15 , 275.15 , 276.15 , 277.15 , 278.15 ,
+283.15 , 293.15 , 303.15 , 313.15 , 323.15 , 333.15 , 343.15 , 353.15 ,
+363.15 , 373.15 , 383.15 , 393.15 , 403.15 , 413.15 , 423.15 , 433.15 ,
+443.15 , 453.15 , 463.15 , 473.15 , 483.15 , 493.15 , 503.15 , 513.15 ,
+523.15 , 533.15 , 543.15 , 553.15 , 563.15 , 573.15 , 583.15 , 593.15 ,
+603.15 , 613.15 , 623.15 } ; static real_T s_constant_table3 [ 52 ] = {
+0.53748091446337642 , 1.3705983252704039 , 2.5526565535242822 ,
+3.6377214002488927 , 4.6370469695571526 , 5.560196170114077 ,
+5.9958076574267531 , 6.0809734687382653 , 6.1655036081557117 ,
+6.2494049371678679 , 6.3326842177763867 , 6.4154449795291262 ,
+6.4878180264273659 , 6.5595981068908191 , 6.6307920619916745 ,
+6.7014066306349251 , 6.7714484511174264 , 7.1132918282316382 ,
+7.757570582282157 , 8.3538947441847551 , 8.9071286682053863 ,
+9.4215142059171466 , 9.9007739703338782 , 10.348193748463787 ,
+10.766688006443445 , 11.15885228699794 , 11.527005651478294 ,
+11.873225600641627 , 12.199377280207878 , 12.507138281807693 ,
+12.798019981669668 , 13.073386096000693 , 13.334468948492018 ,
+13.582383819662853 , 13.818141662383415 , 14.042660410016627 ,
+14.256775064138392 , 14.461246721668589 , 14.656770682592617 ,
+14.843983766988572 , 15.023470962686478 , 15.195771522404597 ,
+15.361384632365338 , 15.520774784998272 , 15.67437700976954 ,
+15.822602154434243 , 15.965842474846696 , 16.104477904942279 ,
+16.238883579536267 , 16.369439559122732 , 16.496544487752711 ,
+16.62063690908797 } ; static real_T s_constant_table4 [ 52 ] = {
+2396.55944251649 , 2408.68643343608 , 2427.1988031141 , 2445.702165897 ,
+2464.18429108356 , 2482.62529466839 , 2491.82135326629 , 2493.6580151792 ,
+2495.49372578218 , 2497.32843835745 , 2499.16210446923 , 2500.99462758899 ,
+2502.83092214066 , 2504.6665223621 , 2506.50140563013 , 2508.335548891 ,
+2510.16892865793 , 2519.32352241995 , 2537.56068088674 , 2555.67742615292 ,
+2573.6403223998 , 2591.4109179101 , 2608.9455037701 , 2626.19492016262 ,
+2643.10444358428 , 2659.61377634497 , 2675.58278696023 , 2696.1846256545 ,
+2716.49989553741 , 2736.6235210957 , 2756.61216047011 , 2776.50561773853 ,
+2796.33378922508 , 2816.11979583049 , 2835.88181423877 , 2855.63430574511 ,
+2875.38889327595 , 2895.15500577172 , 2914.94035964689 , 2934.75132290228 ,
+2954.59319330244 , 2974.47041285505 , 2994.38673458964 , 3014.34535328009 ,
+3034.34900867103 , 3054.40006755764 , 3074.50058946898 , 3094.65237953784 ,
+3114.85703128106 , 3135.11596137801 , 3155.43043805905 , 3175.80160435813 } ;
+static real_T s_constant_table5 [ 52 ] = { 2783.66044045879 ,
+2873.94181645932 , 3012.62601981068 , 3152.22537301871 , 3292.62486344326 ,
+3433.7213835968 , 3504.50184295996 , 3518.67512520997 , 3532.85394543712 ,
+3547.03822323045 , 3561.22787913325 , 3575.42283463482 , 3589.62301216223 ,
+3603.82833507219 , 3618.0387276429 , 3632.25411506595 , 3646.4744234383 ,
+3717.64725530348 , 3860.3219873489 , 4003.3828816304 , 4146.77354613486 ,
+4290.44463593559 , 4434.35318483605 , 4578.46197843019 , 4722.7389683309 ,
+4867.15672726297 , 5011.69194456718 , 5156.32496143709 , 5301.03934494342 ,
+5445.82149962224 , 5590.6603151415 , 5735.54684833147 , 5880.47403768083 ,
+6025.43644826542 , 6170.4300449914 , 6315.45199199528 , 6460.50047604533 ,
+6605.57455182556 , 6750.67400704912 , 6895.79924543541 , 7040.95118568927 ,
+7186.1311747363 , 7331.34091359044 , 7476.58239435534 , 7621.85784698693 ,
+7767.16969456766 , 7912.52051596217 , 8057.91301483815 , 8203.34999414341 ,
+8348.83433523064 , 8494.36898091475 , 8639.95692183309 } ; static real_T
+s_constant_table6 [ 52 ] = { 196.31404563523 , 202.302438242727 ,
+211.445560194021 , 220.590899228792 , 229.740231593225 , 238.8953489525 ,
 243.475641264001 , 244.391947430149 , 245.308340402054 , 246.224821996439 ,
 247.141394030059 , 248.058058319568 , 248.974816681386 , 249.891670931563 ,
 250.808622885637 , 251.725674358497 , 252.642827164235 , 257.230174605453 ,
@@ -40487,21 +40484,15 @@ static real_T s_constant_table23 [ 52 ] = { 0.0 , 31.060839739787845 ,
 877.99881522197336 , 895.7455772449988 , 913.23440898563524 ,
 930.47375302972625 , 947.4715738631121 , 964.23539544413313 ,
 980.77233529831608 , 997.08913548391183 } ; static real_T s_constant_table26
-[ 42 ] = { 0.63691199999999992 , 0.6709679999999999 , 0.64994400000000008 ,
-0.60984 , 0.74303999999999992 , 0.94608 , 0.460008 , 0.471888 , 0.399816 ,
-0.39780000000000004 , 0.435096 , 0.56196 , 0.314208 , 0.295272 , 0.29232 ,
-0.24854400000000001 , 0.276912 , 0.325224 , 0.14623199999999997 , 0.184536 ,
-0.182304 , 0.17712 , 0.195552 , 0.219384 , 0.103896 , 0.1314 , 0.12924 ,
-0.12801600000000002 , 0.13852799999999998 , 0.160848 , 0.0403416 , 0.0517824
-, 0.0495864 , 0.0544104 , 0.052956 , 0.07300799999999999 , 0.074016 ,
-0.096336 , 0.072000000000000008 , 0.110592 , 0.11131200000000001 , 0.200808 }
-; static real_T s_constant_table27 [ 15 ] = { 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,
-0.2 , 0.15 , 0.1 , 0.05 , 0.0 , 0.4 , 0.3 , 0.2 , 0.1 , 0.0 } ; static real_T
-s_constant_table28 [ 23 ] = { 107.90705141630504 , 119.89672379589449 ,
-134.88381427038132 , 154.15293059472151 , 179.84508569384172 ,
-215.81410283261008 , 269.76762854076264 , 335.0 , 335.0 , 335.0 , 335.0 ,
-335.0 , 335.0 , 335.0 , 335.0 , 335.0 , 269.76762854076264 ,
-215.81410283261008 , 179.84508569384172 , 154.15293059472151 ,
+[ 12 ] = { 0.0403416 , 0.0517824 , 0.0495864 , 0.0544104 , 0.052956 ,
+0.073008 , 0.0403416 , 0.0517824 , 0.0495864 , 0.0544104 , 0.052956 ,
+0.073008 } ; static real_T s_constant_table27 [ 15 ] = { 0.0 , 0.0 , 0.0 ,
+0.0 , 0.0 , 0.2 , 0.15 , 0.1 , 0.05 , 0.0 , 0.4 , 0.3 , 0.2 , 0.1 , 0.0 } ;
+static real_T s_constant_table28 [ 23 ] = { 107.90705141630504 ,
+119.89672379589449 , 134.88381427038132 , 154.15293059472151 ,
+179.84508569384172 , 215.81410283261008 , 269.76762854076264 , 335.0 , 335.0
+, 335.0 , 335.0 , 335.0 , 335.0 , 335.0 , 335.0 , 335.0 , 269.76762854076264
+, 215.81410283261008 , 179.84508569384172 , 154.15293059472151 ,
 134.88381427038132 , 119.89672379589449 , 107.90705141630504 } ; static
 NeDsMethodOutput * ds_output_m_p ( const NeDynamicSystem * ds , PmAllocator *
 allocator ) { NeDsMethodOutput * out ; ( void ) ds ; out = ( NeDsMethodOutput
@@ -40664,13 +40655,13 @@ void ) ds ; out = ( NeDsMethodOutput * ) allocator -> mCallocFcn ( allocator
 , sizeof ( NeDsMethodOutput ) , 1 ) ; out -> mDUF_P . mNumCol = 12 ; out ->
 mDUF_P . mNumRow = 399 ; out -> mDUF_P . mJc = ( int32_T * ) allocator ->
 mCallocFcn ( allocator , sizeof ( int32_T ) , 13 ) ; out -> mDUF_P . mIr = (
-int32_T * ) allocator -> mCallocFcn ( allocator , sizeof ( int32_T ) , 28 ) ;
+int32_T * ) allocator -> mCallocFcn ( allocator , sizeof ( int32_T ) , 27 ) ;
 return out ; } static NeDsMethodOutput * ds_output_duf ( const
 NeDynamicSystem * ds , PmAllocator * allocator ) { NeDsMethodOutput * out ; (
 void ) ds ; out = ( NeDsMethodOutput * ) allocator -> mCallocFcn ( allocator
-, sizeof ( NeDsMethodOutput ) , 1 ) ; out -> mDUF . mN = 28 ; out -> mDUF .
+, sizeof ( NeDsMethodOutput ) , 1 ) ; out -> mDUF . mN = 27 ; out -> mDUF .
 mX = ( real_T * ) allocator -> mCallocFcn ( allocator , sizeof ( real_T ) ,
-28 ) ; return out ; } static NeDsMethodOutput * ds_output_dtf_p ( const
+27 ) ; return out ; } static NeDsMethodOutput * ds_output_dtf_p ( const
 NeDynamicSystem * ds , PmAllocator * allocator ) { NeDsMethodOutput * out ; (
 void ) ds ; out = ( NeDsMethodOutput * ) allocator -> mCallocFcn ( allocator
 , sizeof ( NeDsMethodOutput ) , 1 ) ; out -> mDTF_P . mNumCol = 1 ; out ->
@@ -40897,7 +40888,7 @@ allocator , sizeof ( NeDsMethodOutput ) , 1 ) ; out -> mTDUY_P . mNumCol = 12
 ; out -> mTDUY_P . mNumRow = 19 ; out -> mTDUY_P . mJc = ( int32_T * )
 allocator -> mCallocFcn ( allocator , sizeof ( int32_T ) , 13 ) ; out ->
 mTDUY_P . mIr = ( int32_T * ) allocator -> mCallocFcn ( allocator , sizeof (
-int32_T ) , 0 ) ; return out ; } static NeDsMethodOutput * ds_output_tdxy_p (
+int32_T ) , 2 ) ; return out ; } static NeDsMethodOutput * ds_output_tdxy_p (
 const NeDynamicSystem * ds , PmAllocator * allocator ) { NeDsMethodOutput *
 out ; ( void ) ds ; out = ( NeDsMethodOutput * ) allocator -> mCallocFcn (
 allocator , sizeof ( NeDsMethodOutput ) , 1 ) ; out -> mTDXY_P . mNumCol =
@@ -40927,12 +40918,12 @@ void ) ds ; out = ( NeDsMethodOutput * ) allocator -> mCallocFcn ( allocator
 , sizeof ( NeDsMethodOutput ) , 1 ) ; out -> mDUY_P . mNumCol = 12 ; out ->
 mDUY_P . mNumRow = 19 ; out -> mDUY_P . mJc = ( int32_T * ) allocator ->
 mCallocFcn ( allocator , sizeof ( int32_T ) , 13 ) ; out -> mDUY_P . mIr = (
-int32_T * ) allocator -> mCallocFcn ( allocator , sizeof ( int32_T ) , 0 ) ;
+int32_T * ) allocator -> mCallocFcn ( allocator , sizeof ( int32_T ) , 2 ) ;
 return out ; } static NeDsMethodOutput * ds_output_duy ( const
 NeDynamicSystem * ds , PmAllocator * allocator ) { NeDsMethodOutput * out ; (
 void ) ds ; out = ( NeDsMethodOutput * ) allocator -> mCallocFcn ( allocator
-, sizeof ( NeDsMethodOutput ) , 1 ) ; out -> mDUY . mN = 0 ; out -> mDUY . mX
-= ( real_T * ) allocator -> mCallocFcn ( allocator , sizeof ( real_T ) , 0 )
+, sizeof ( NeDsMethodOutput ) , 1 ) ; out -> mDUY . mN = 2 ; out -> mDUY . mX
+= ( real_T * ) allocator -> mCallocFcn ( allocator , sizeof ( real_T ) , 2 )
 ; return out ; } static NeDsMethodOutput * ds_output_dty_p ( const
 NeDynamicSystem * ds , PmAllocator * allocator ) { NeDsMethodOutput * out ; (
 void ) ds ; out = ( NeDsMethodOutput * ) allocator -> mCallocFcn ( allocator
@@ -41286,12 +41277,12 @@ mNumLogicalDerivedParameters = 0 ; ds -> mNumIntegerDerivedParameters = 0 ;
 ds -> mNumIndexDerivedParameters = 0 ; ds -> mNumRealDerivedParameters = 0 ;
 ds -> mIsOutputLinear = FALSE ; ds -> mIsOutputSwitchedLinear = FALSE ; ds ->
 mIsScalable = FALSE ; ds -> mNumIo [ SSC_INPUT_IO_TYPE ] = 12 ; input_info [
-0 ] . mIdentifier = "Battery_System.Power_Acc.Simulink_PS_Converter_output0"
+0 ] . mIdentifier = "Battery_System.Subsystem.Simulink_PS_Converter_output0"
 ; input_info [ 0 ] . mSize = ssc_make_scalar_array_size ( ) ;
 ssc_array_size_set_dim ( & input_info [ 0 ] . mSize , 0 , 1 ) ;
 ssc_array_size_set_dim ( & input_info [ 0 ] . mSize , 1 , 1 ) ; input_info [
-0 ] . mName = "Battery_System.Power_Acc.Simulink_PS_Converter_output0" ;
-input_info [ 0 ] . mUnit = "A" ; input_info [ 1 ] . mIdentifier =
+0 ] . mName = "Battery_System.Subsystem.Simulink_PS_Converter_output0" ;
+input_info [ 0 ] . mUnit = "1" ; input_info [ 1 ] . mIdentifier =
 "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Simulink_PS_Converter_output0"
 ; input_info [ 1 ] . mSize = ssc_make_scalar_array_size ( ) ;
 ssc_array_size_set_dim ( & input_info [ 1 ] . mSize , 0 , 1 ) ;
@@ -41848,7 +41839,7 @@ mNumCol = 12ULL ; out . mNumRow = 399ULL ; out . mJc [ 0 ] = 0 ; out . mJc [
 1 ] = 1 ; out . mJc [ 2 ] = 1 ; out . mJc [ 3 ] = 1 ; out . mJc [ 4 ] = 1 ;
 out . mJc [ 5 ] = 3 ; out . mJc [ 6 ] = 3 ; out . mJc [ 7 ] = 5 ; out . mJc [
 8 ] = 5 ; out . mJc [ 9 ] = 5 ; out . mJc [ 10 ] = 5 ; out . mJc [ 11 ] = 6 ;
-out . mJc [ 12 ] = 7 ; out . mIr [ 0 ] = 57 ; out . mIr [ 1 ] = 23 ; out .
+out . mJc [ 12 ] = 7 ; out . mIr [ 0 ] = 396 ; out . mIr [ 1 ] = 23 ; out .
 mIr [ 2 ] = 25 ; out . mIr [ 3 ] = 35 ; out . mIr [ 4 ] = 37 ; out . mIr [ 5
 ] = 51 ; out . mIr [ 6 ] = 398 ; ( void ) LC ; ( void ) t2 ; return 0 ; }
 static int32_T ds_c ( const NeDynamicSystem * LC , const NeDynamicSystemInput
@@ -42047,38 +42038,41 @@ int32_T b ; boolean_T t0 [ 399 ] ; ( void ) t1 ; ( void ) LC ; out = t2 ->
 mSCLV ; for ( b = 0 ; b < 399 ; b ++ ) { t0 [ b ] = false ; } for ( b = 0 ; b
 < 399 ; b ++ ) { out . mX [ b ] = t0 [ b ] ; } ( void ) LC ; ( void ) t2 ;
 return 0 ; } static int32_T ds_duy ( const NeDynamicSystem * LC , const
-NeDynamicSystemInput * t1 , NeDsMethodOutput * t2 ) { ( void ) t1 ; ( void )
-LC ; ( void ) LC ; ( void ) t2 ; return 0 ; } static int32_T ds_duy_p ( const
-NeDynamicSystem * LC , const NeDynamicSystemInput * t1 , NeDsMethodOutput *
-t2 ) { PmSparsityPattern out ; ( void ) t1 ; ( void ) LC ; out = t2 -> mDUY_P
-; out . mNumCol = 12ULL ; out . mNumRow = 19ULL ; out . mJc [ 0 ] = 0 ; out .
-mJc [ 1 ] = 0 ; out . mJc [ 2 ] = 0 ; out . mJc [ 3 ] = 0 ; out . mJc [ 4 ] =
-0 ; out . mJc [ 5 ] = 0 ; out . mJc [ 6 ] = 0 ; out . mJc [ 7 ] = 0 ; out .
-mJc [ 8 ] = 0 ; out . mJc [ 9 ] = 0 ; out . mJc [ 10 ] = 0 ; out . mJc [ 11 ]
-= 0 ; out . mJc [ 12 ] = 0 ; ( void ) LC ; ( void ) t2 ; return 0 ; } static
-int32_T ds_mduy_p ( const NeDynamicSystem * LC , const NeDynamicSystemInput *
-t1 , NeDsMethodOutput * t2 ) { PmSparsityPattern out ; ( void ) t1 ; ( void )
-LC ; out = t2 -> mMDUY_P ; out . mNumCol = 12ULL ; out . mNumRow = 19ULL ;
-out . mJc [ 0 ] = 0 ; out . mJc [ 1 ] = 0 ; out . mJc [ 2 ] = 0 ; out . mJc [
-3 ] = 0 ; out . mJc [ 4 ] = 0 ; out . mJc [ 5 ] = 0 ; out . mJc [ 6 ] = 0 ;
-out . mJc [ 7 ] = 0 ; out . mJc [ 8 ] = 0 ; out . mJc [ 9 ] = 0 ; out . mJc [
-10 ] = 0 ; out . mJc [ 11 ] = 0 ; out . mJc [ 12 ] = 0 ; ( void ) LC ; ( void
-) t2 ; return 0 ; } static int32_T ds_mdxy_p ( const NeDynamicSystem * LC ,
-const NeDynamicSystemInput * t1 , NeDsMethodOutput * t2 ) { PmSparsityPattern
-out ; int32_T b ; ( void ) t1 ; ( void ) LC ; out = t2 -> mMDXY_P ; out .
-mNumCol = 399ULL ; out . mNumRow = 19ULL ; for ( b = 0 ; b < 400 ; b ++ ) {
-out . mJc [ b ] = 0 ; } ( void ) LC ; ( void ) t2 ; return 0 ; } static
-int32_T ds_tduy_p ( const NeDynamicSystem * LC , const NeDynamicSystemInput *
-t1 , NeDsMethodOutput * t2 ) { PmSparsityPattern out ; ( void ) t1 ; ( void )
-LC ; out = t2 -> mTDUY_P ; out . mNumCol = 12ULL ; out . mNumRow = 19ULL ;
-out . mJc [ 0 ] = 0 ; out . mJc [ 1 ] = 0 ; out . mJc [ 2 ] = 0 ; out . mJc [
-3 ] = 0 ; out . mJc [ 4 ] = 0 ; out . mJc [ 5 ] = 0 ; out . mJc [ 6 ] = 0 ;
-out . mJc [ 7 ] = 0 ; out . mJc [ 8 ] = 0 ; out . mJc [ 9 ] = 0 ; out . mJc [
-10 ] = 0 ; out . mJc [ 11 ] = 0 ; out . mJc [ 12 ] = 0 ; ( void ) LC ; ( void
-) t2 ; return 0 ; } static int32_T ds_dty ( const NeDynamicSystem * LC ,
-const NeDynamicSystemInput * t1 , NeDsMethodOutput * t2 ) { ( void ) t1 ; (
-void ) LC ; ( void ) LC ; ( void ) t2 ; return 0 ; } static int32_T ds_dty_p
+NeDynamicSystemInput * t1 , NeDsMethodOutput * t2 ) { PmRealVector out ; (
+void ) t1 ; ( void ) LC ; out = t2 -> mDUY ; out . mX [ 0 ] = - 1.0 ; out .
+mX [ 1 ] = - 1.0 ; ( void ) LC ; ( void ) t2 ; return 0 ; } static int32_T
+ds_duy_p ( const NeDynamicSystem * LC , const NeDynamicSystemInput * t1 ,
+NeDsMethodOutput * t2 ) { PmSparsityPattern out ; ( void ) t1 ; ( void ) LC ;
+out = t2 -> mDUY_P ; out . mNumCol = 12ULL ; out . mNumRow = 19ULL ; out .
+mJc [ 0 ] = 0 ; out . mJc [ 1 ] = 2 ; out . mJc [ 2 ] = 2 ; out . mJc [ 3 ] =
+2 ; out . mJc [ 4 ] = 2 ; out . mJc [ 5 ] = 2 ; out . mJc [ 6 ] = 2 ; out .
+mJc [ 7 ] = 2 ; out . mJc [ 8 ] = 2 ; out . mJc [ 9 ] = 2 ; out . mJc [ 10 ]
+= 2 ; out . mJc [ 11 ] = 2 ; out . mJc [ 12 ] = 2 ; out . mIr [ 0 ] = 4 ; out
+. mIr [ 1 ] = 16 ; ( void ) LC ; ( void ) t2 ; return 0 ; } static int32_T
+ds_mduy_p ( const NeDynamicSystem * LC , const NeDynamicSystemInput * t1 ,
+NeDsMethodOutput * t2 ) { PmSparsityPattern out ; ( void ) t1 ; ( void ) LC ;
+out = t2 -> mMDUY_P ; out . mNumCol = 12ULL ; out . mNumRow = 19ULL ; out .
+mJc [ 0 ] = 0 ; out . mJc [ 1 ] = 0 ; out . mJc [ 2 ] = 0 ; out . mJc [ 3 ] =
+0 ; out . mJc [ 4 ] = 0 ; out . mJc [ 5 ] = 0 ; out . mJc [ 6 ] = 0 ; out .
+mJc [ 7 ] = 0 ; out . mJc [ 8 ] = 0 ; out . mJc [ 9 ] = 0 ; out . mJc [ 10 ]
+= 0 ; out . mJc [ 11 ] = 0 ; out . mJc [ 12 ] = 0 ; ( void ) LC ; ( void ) t2
+; return 0 ; } static int32_T ds_mdxy_p ( const NeDynamicSystem * LC , const
+NeDynamicSystemInput * t1 , NeDsMethodOutput * t2 ) { PmSparsityPattern out ;
+int32_T b ; ( void ) t1 ; ( void ) LC ; out = t2 -> mMDXY_P ; out . mNumCol =
+399ULL ; out . mNumRow = 19ULL ; for ( b = 0 ; b < 400 ; b ++ ) { out . mJc [
+b ] = 0 ; } ( void ) LC ; ( void ) t2 ; return 0 ; } static int32_T ds_tduy_p
 ( const NeDynamicSystem * LC , const NeDynamicSystemInput * t1 ,
 NeDsMethodOutput * t2 ) { PmSparsityPattern out ; ( void ) t1 ; ( void ) LC ;
-out = t2 -> mDTY_P ; out . mNumCol = 1ULL ; out . mNumRow = 19ULL ; out . mJc
-[ 0 ] = 0 ; out . mJc [ 1 ] = 0 ; ( void ) LC ; ( void ) t2 ; return 0 ; }
+out = t2 -> mTDUY_P ; out . mNumCol = 12ULL ; out . mNumRow = 19ULL ; out .
+mJc [ 0 ] = 0 ; out . mJc [ 1 ] = 2 ; out . mJc [ 2 ] = 2 ; out . mJc [ 3 ] =
+2 ; out . mJc [ 4 ] = 2 ; out . mJc [ 5 ] = 2 ; out . mJc [ 6 ] = 2 ; out .
+mJc [ 7 ] = 2 ; out . mJc [ 8 ] = 2 ; out . mJc [ 9 ] = 2 ; out . mJc [ 10 ]
+= 2 ; out . mJc [ 11 ] = 2 ; out . mJc [ 12 ] = 2 ; out . mIr [ 0 ] = 4 ; out
+. mIr [ 1 ] = 16 ; ( void ) LC ; ( void ) t2 ; return 0 ; } static int32_T
+ds_dty ( const NeDynamicSystem * LC , const NeDynamicSystemInput * t1 ,
+NeDsMethodOutput * t2 ) { ( void ) t1 ; ( void ) LC ; ( void ) LC ; ( void )
+t2 ; return 0 ; } static int32_T ds_dty_p ( const NeDynamicSystem * LC ,
+const NeDynamicSystemInput * t1 , NeDsMethodOutput * t2 ) { PmSparsityPattern
+out ; ( void ) t1 ; ( void ) LC ; out = t2 -> mDTY_P ; out . mNumCol = 1ULL ;
+out . mNumRow = 19ULL ; out . mJc [ 0 ] = 0 ; out . mJc [ 1 ] = 0 ; ( void )
+LC ; ( void ) t2 ; return 0 ; }

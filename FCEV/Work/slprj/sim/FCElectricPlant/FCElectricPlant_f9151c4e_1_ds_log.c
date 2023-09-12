@@ -51,9 +51,10 @@ real_T v_efOut [ 1 ] ; real_T vc_efOut [ 1 ] ; real_T vd_efOut [ 1 ] ; real_T
 w_efOut [ 1 ] ; real_T wb_efOut [ 1 ] ; real_T wc_efOut [ 1 ] ; real_T
 wd_efOut [ 1 ] ; real_T x_efOut [ 1 ] ; real_T xb_efOut [ 1 ] ; real_T
 xd_efOut [ 1 ] ; real_T y_efOut [ 1 ] ; real_T yb_efOut [ 1 ] ; real_T
-yc_efOut [ 1 ] ; real_T yd_efOut [ 1 ] ; real_T Fuel_Cell_Boost_Converter_L_i
-; real_T Fuel_Cell_Boost_Converter_L_n_v ; real_T
-Fuel_Cell_Boost_Converter_L_p_v ; real_T Fuel_Cell_Current_Sensor1_I ; real_T
+yc_efOut [ 1 ] ; real_T yd_efOut [ 1 ] ; real_T Fuel_Cell_Boost_Converter_C_i
+; real_T Fuel_Cell_Boost_Converter_L_i ; real_T
+Fuel_Cell_Boost_Converter_L_n_v ; real_T Fuel_Cell_Boost_Converter_L_p_v ;
+real_T Fuel_Cell_Current_Sensor1_I ; real_T
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_Membra15 ; real_T
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_Membra21 ; real_T
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_Membra24 ; real_T
@@ -83,45 +84,45 @@ U_idx_0 ; real_T U_idx_1 ; real_T U_idx_10 ; real_T U_idx_11 ; real_T U_idx_2
 ; real_T U_idx_3 ; real_T U_idx_4 ; real_T U_idx_5 ; real_T U_idx_6 ; real_T
 U_idx_7 ; real_T U_idx_8 ; real_T U_idx_9 ; real_T intrm_sf_mf_1018 ; real_T
 intrm_sf_mf_1107 ; real_T intrm_sf_mf_1150 ; real_T intrm_sf_mf_1311 ; real_T
-intrm_sf_mf_1318 ; real_T intrm_sf_mf_2 ; real_T intrm_sf_mf_401 ; real_T
-intrm_sf_mf_5 ; real_T intrm_sf_mf_8 ; real_T intrm_sf_mf_9 ; real_T piece17
-; real_T t30 ; real_T t360_idx_0 ; real_T t368_idx_0 ; real_T t372_idx_0 ;
-real_T t406 ; real_T t408 ; real_T t410 ; real_T t419 ; real_T t422 ; real_T
-t434 ; real_T t440 ; real_T t452 ; real_T t464 ; real_T t476 ; real_T t478 ;
-real_T t480 ; real_T t481 ; real_T t488 ; real_T t496 ; real_T t497 ; real_T
-t499 ; real_T t500 ; real_T t501 ; real_T t504 ; real_T t505 ; real_T t506 ;
-real_T t507 ; real_T t508 ; real_T t510 ; real_T t511 ; real_T t512 ; real_T
-t515 ; real_T t517 ; real_T t518 ; real_T t520 ; real_T t522 ; real_T t523 ;
-real_T t528 ; real_T t529 ; real_T t530 ; real_T t532 ; real_T t533 ; real_T
-t534 ; real_T t536 ; real_T t546 ; real_T t548 ; real_T t549 ; real_T t550 ;
-real_T t551 ; real_T t554 ; real_T t555 ; real_T t557 ; real_T t558 ; real_T
-t563 ; real_T t567 ; real_T t571 ; real_T t581 ; real_T t590 ; real_T t592 ;
-real_T t593 ; real_T t595 ; real_T t598 ; real_T t599 ; real_T t602 ; real_T
-t606 ; real_T t608 ; real_T t613 ; real_T t614 ; real_T t616 ; real_T t617 ;
-real_T t619 ; real_T t627 ; real_T t628 ; real_T t630 ; real_T t631 ; real_T
-t632 ; real_T t635 ; real_T t636 ; real_T t639 ; real_T t641 ; real_T t643 ;
-real_T t644 ; real_T t645 ; real_T t646 ; real_T t777 ; real_T t916 ; size_t
-t275 [ 1 ] ; size_t t278 [ 1 ] ; size_t t33 [ 1 ] ; size_t t398 ; size_t t405
-; int32_T b ; U_idx_0 = t917 -> mU . mX [ 0 ] ; U_idx_1 = t917 -> mU . mX [ 1
-] ; U_idx_2 = t917 -> mU . mX [ 2 ] ; U_idx_3 = t917 -> mU . mX [ 3 ] ;
-U_idx_4 = t917 -> mU . mX [ 4 ] ; U_idx_5 = t917 -> mU . mX [ 5 ] ; U_idx_6 =
-t917 -> mU . mX [ 6 ] ; U_idx_7 = t917 -> mU . mX [ 7 ] ; U_idx_8 = t917 ->
-mU . mX [ 8 ] ; U_idx_9 = t917 -> mU . mX [ 9 ] ; U_idx_10 = t917 -> mU . mX
-[ 10 ] ; U_idx_11 = t917 -> mU . mX [ 11 ] ; for ( b = 0 ; b < 399 ; b ++ ) {
-X [ b ] = t917 -> mX . mX [ b ] ; } out = t918 -> mLOG ; t284 [ 0ULL ] =
-pmf_get_inf ( ) ; for ( t398 = 0ULL ; t398 < 42ULL ; t398 ++ ) { t405 = t398
-/ 42ULL ; t406 = t284 [ t405 > 0ULL ? 0ULL : t405 ] ; t488 = ( (
-_NeDynamicSystem * ) ( LC ) ) -> mField0 [ t398 ] * 1.0E-5 ; t284 [ t405 >
-0ULL ? 0ULL : t405 ] = t406 > t488 ? t488 : t406 ; } t408 = t284 [ 0ULL ] ;
-t406 = t408 > X [ 54ULL ] ? t408 : X [ 54ULL ] ; t408 = X [ 0ULL ] *
-9.2592592592592591E-6 ; t410 = - X [ 53ULL ] - U_idx_0 ; intrm_sf_mf_2 = ( (
-( real_T ) ( t410 >= 0.0 ) * t410 * 1000.0 + ( real_T ) ( t410 < 0.0 ) * X [
-55ULL ] ) - 0.9 ) / 0.099999999999999978 ; if ( ( real_T ) ( t410 >= 0.0 ) *
-t410 * 1000.0 + ( real_T ) ( t410 < 0.0 ) * X [ 55ULL ] <= 0.9 ) {
-intrm_sf_mf_2 = 0.0 ; } else { intrm_sf_mf_2 = ( real_T ) ( t410 >= 0.0 ) *
-t410 * 1000.0 + ( real_T ) ( t410 < 0.0 ) * X [ 55ULL ] >= 1.0 ? 1.0 :
-intrm_sf_mf_2 * intrm_sf_mf_2 * 3.0 - intrm_sf_mf_2 * intrm_sf_mf_2 *
-intrm_sf_mf_2 * 2.0 ; } t476 = X [ 3ULL ] * - 0.1 + X [ 58ULL ] * 0.1 ;
+intrm_sf_mf_1318 ; real_T intrm_sf_mf_401 ; real_T intrm_sf_mf_5 ; real_T
+intrm_sf_mf_8 ; real_T intrm_sf_mf_9 ; real_T piece17 ; real_T t30 ; real_T
+t360_idx_0 ; real_T t368_idx_0 ; real_T t372_idx_0 ; real_T t406 ; real_T
+t408 ; real_T t410 ; real_T t419 ; real_T t422 ; real_T t434 ; real_T t440 ;
+real_T t452 ; real_T t464 ; real_T t475 ; real_T t478 ; real_T t480 ; real_T
+t481 ; real_T t488 ; real_T t496 ; real_T t497 ; real_T t499 ; real_T t500 ;
+real_T t501 ; real_T t504 ; real_T t505 ; real_T t506 ; real_T t507 ; real_T
+t508 ; real_T t510 ; real_T t511 ; real_T t512 ; real_T t515 ; real_T t517 ;
+real_T t518 ; real_T t520 ; real_T t522 ; real_T t523 ; real_T t528 ; real_T
+t529 ; real_T t530 ; real_T t532 ; real_T t533 ; real_T t534 ; real_T t536 ;
+real_T t546 ; real_T t548 ; real_T t549 ; real_T t550 ; real_T t551 ; real_T
+t554 ; real_T t555 ; real_T t557 ; real_T t558 ; real_T t563 ; real_T t567 ;
+real_T t571 ; real_T t581 ; real_T t590 ; real_T t592 ; real_T t593 ; real_T
+t595 ; real_T t598 ; real_T t599 ; real_T t602 ; real_T t606 ; real_T t608 ;
+real_T t613 ; real_T t614 ; real_T t616 ; real_T t617 ; real_T t619 ; real_T
+t627 ; real_T t628 ; real_T t630 ; real_T t631 ; real_T t632 ; real_T t635 ;
+real_T t636 ; real_T t639 ; real_T t641 ; real_T t643 ; real_T t644 ; real_T
+t645 ; real_T t646 ; real_T t777 ; real_T t916 ; size_t t275 [ 1 ] ; size_t
+t278 [ 1 ] ; size_t t33 [ 1 ] ; size_t t398 ; size_t t405 ; int32_T b ;
+U_idx_0 = t917 -> mU . mX [ 0 ] ; U_idx_1 = t917 -> mU . mX [ 1 ] ; U_idx_2 =
+t917 -> mU . mX [ 2 ] ; U_idx_3 = t917 -> mU . mX [ 3 ] ; U_idx_4 = t917 ->
+mU . mX [ 4 ] ; U_idx_5 = t917 -> mU . mX [ 5 ] ; U_idx_6 = t917 -> mU . mX [
+6 ] ; U_idx_7 = t917 -> mU . mX [ 7 ] ; U_idx_8 = t917 -> mU . mX [ 8 ] ;
+U_idx_9 = t917 -> mU . mX [ 9 ] ; U_idx_10 = t917 -> mU . mX [ 10 ] ;
+U_idx_11 = t917 -> mU . mX [ 11 ] ; for ( b = 0 ; b < 399 ; b ++ ) { X [ b ]
+= t917 -> mX . mX [ b ] ; } out = t918 -> mLOG ; t284 [ 0ULL ] = pmf_get_inf
+( ) ; for ( t398 = 0ULL ; t398 < 12ULL ; t398 ++ ) { t405 = t398 / 12ULL ;
+t406 = t284 [ t405 > 0ULL ? 0ULL : t405 ] ; t488 = ( ( _NeDynamicSystem * ) (
+LC ) ) -> mField0 [ t398 ] * 1.0E-5 ; t284 [ t405 > 0ULL ? 0ULL : t405 ] =
+t406 > t488 ? t488 : t406 ; } t408 = t284 [ 0ULL ] ; t406 = t408 > X [ 54ULL
+] ? t408 : X [ 54ULL ] ; t408 = X [ 0ULL ] * 9.2592592592592591E-6 ; t410 = (
+( ( real_T ) ( - X [ 53ULL ] >= 0.0 ) * X [ 53ULL ] * - 1000.0 + ( real_T ) (
+- X [ 53ULL ] < 0.0 ) * X [ 55ULL ] ) - 0.9 ) / 0.099999999999999978 ; if ( (
+real_T ) ( - X [ 53ULL ] >= 0.0 ) * X [ 53ULL ] * - 1000.0 + ( real_T ) ( - X
+[ 53ULL ] < 0.0 ) * X [ 55ULL ] <= 0.9 ) { t410 = 0.0 ; } else { t410 = (
+real_T ) ( - X [ 53ULL ] >= 0.0 ) * X [ 53ULL ] * - 1000.0 + ( real_T ) ( - X
+[ 53ULL ] < 0.0 ) * X [ 55ULL ] >= 1.0 ? 1.0 : t410 * t410 * 3.0 - t410 *
+t410 * t410 * 2.0 ; } t475 = - X [ 57ULL ] - U_idx_0 ;
+Fuel_Cell_Boost_Converter_C_i = X [ 3ULL ] * - 0.1 + X [ 58ULL ] * 0.1 ;
 Fuel_Cell_Boost_Converter_L_i = X [ 61ULL ] * 1.0E-9 + X [ 4ULL ] ;
 Fuel_Cell_Boost_Converter_L_n_v = ( ( X [ 4ULL ] * - 1.0E-6 + X [ 61ULL ] * -
 1.0000000000000011 ) + X [ 62ULL ] * - 1.0E-6 ) + X [ 5ULL ] ;
@@ -274,7 +275,7 @@ X [ 5ULL ] ) + X [ 95ULL ] ; if (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_Membra15 >= 1.0 ) {
 t481 = pmf_log (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_Membra15 ) *
-0.021121699350046864 ; } else { t481 = 0.0 ; } if (
+0.052804248375117158 ; } else { t481 = 0.0 ; } if (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_Membra15 <= 13986.0 )
 { t30 = pmf_log ( 1.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_Membra15 / 14000.0 ) ;
@@ -769,7 +770,7 @@ t275 [ 0ULL ] , & t33 [ 0ULL ] ) ; t372_idx_0 = ub_efOut [ 0 ] ; t533 = ( ( (
 1.0 - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_Membra6 ) - t528
 ) * t488 + t504 *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_Membra6 ) + t372_idx_0
-* t528 ; t528 = U_idx_3 * 376.99111843077515 ; if ( X [ 223ULL ] <= 0.0 ) {
+* t528 ; t528 = U_idx_3 * 837.75804095727813 ; if ( X [ 223ULL ] <= 0.0 ) {
 t532 = 0.0 ; } else { t532 = X [ 223ULL ] >= 1.0 ? 1.0 : X [ 223ULL ] ; } if
 ( X [ 222ULL ] <= 0.0 ) { t534 = 0.0 ; } else { t534 = X [ 222ULL ] >= 1.0 ?
 1.0 : X [ 222ULL ] ; } t488 = ( ( ( 1.0 - t532 ) - t534 ) * 296.802103844292
@@ -1614,9 +1615,9 @@ tlu2_1d_linear_linear_value ( & ie_efOut [ 0ULL ] , & t25 . mField0 [ 0ULL ]
 t275 [ 0ULL ] , & t33 [ 0ULL ] ) ; t372_idx_0 = ie_efOut [ 0 ] ; t636 = ( ( (
 1.0 - t616 ) - t617 ) * t434 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_Membra6 * t616 ) +
-t372_idx_0 * t617 ; t617 = ( ( ( ( X [ 3ULL ] * 0.1 - X [ 57ULL ] ) + X [
-58ULL ] * - 0.1 ) + X [ 61ULL ] * 1.0E-9 ) - X [ 63ULL ] ) + X [ 4ULL ] ;
-t284 [ 0ULL ] = X [ 51ULL ] ; t275 [ 0 ] = 23ULL ;
+t372_idx_0 * t617 ; t617 = ( ( ( ( ( X [ 3ULL ] * 0.1 - X [ 57ULL ] ) + X [
+58ULL ] * - 0.1 ) + X [ 61ULL ] * 1.0E-9 ) - X [ 63ULL ] ) - U_idx_0 ) + X [
+4ULL ] ; t284 [ 0ULL ] = X [ 51ULL ] ; t275 [ 0 ] = 23ULL ;
 tlu2_linear_nearest_prelookup ( & je_efOut . mField0 [ 0ULL ] , & je_efOut .
 mField1 [ 0ULL ] , & je_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField21 , & t284 [ 0ULL ] , & t275 [ 0ULL ] , & t33 [ 0ULL ] ) ;
@@ -1929,27 +1930,28 @@ t283 [ 1ULL ] = X [ 53ULL ] ; t283 [ 2ULL ] = X [ 1ULL ] ; t283 [ 3ULL ] = X
 ] = X [ 56ULL ] ; t283 [ 7ULL ] = X [ 53ULL ] * X [ 53ULL ] * ( X [ 56ULL ] >
 4.03416E-7 ? X [ 56ULL ] : 4.03416E-7 ) * 0.001 ; t283 [ 8ULL ] = t408 ; t283
 [ 9ULL ] = t408 ; t283 [ 10ULL ] = X [ 55ULL ] ; t283 [ 11ULL ] = t408 ; t283
-[ 12ULL ] = t410 ; t283 [ 13ULL ] = X [ 55ULL ] ; t283 [ 14ULL ] =
-intrm_sf_mf_2 ; t283 [ 15ULL ] = intrm_sf_mf_5 ; t283 [ 16ULL ] = X [ 57ULL ]
-; t283 [ 17ULL ] = X [ 55ULL ] ; t283 [ 18ULL ] = X [ 58ULL ] ; t283 [ 19ULL
-] = ( X [ 59ULL ] * intrm_sf_mf_2 + ( 1.0 - intrm_sf_mf_2 ) * t410 * t410 ) *
-1000.0 ; t283 [ 20ULL ] = X [ 59ULL ] * 1000.0 ; t283 [ 21ULL ] = X [ 2ULL ]
-; t283 [ 22ULL ] = X [ 58ULL ] ; t283 [ 23ULL ] = U_idx_0 ; t283 [ 24ULL ] =
-U_idx_0 ; t283 [ 25ULL ] = X [ 55ULL ] ; t283 [ 26ULL ] = X [ 55ULL ] ; t283
-[ 27ULL ] = U_idx_0 ; t283 [ 28ULL ] = X [ 55ULL ] ; t283 [ 29ULL ] = - X [
-53ULL ] ; t283 [ 30ULL ] = - X [ 53ULL ] ; t283 [ 31ULL ] = X [ 55ULL ] ;
-t283 [ 32ULL ] = X [ 55ULL ] ; t283 [ 33ULL ] = - X [ 53ULL ] ; t283 [ 34ULL
-] = X [ 55ULL ] ; t283 [ 35ULL ] = X [ 55ULL ] ; t283 [ 36ULL ] = X [ 55ULL ]
-; t283 [ 37ULL ] = X [ 55ULL ] ; t283 [ 38ULL ] = X [ 55ULL ] ; t283 [ 39ULL
-] = - X [ 57ULL ] ; t283 [ 40ULL ] = - X [ 57ULL ] ; t283 [ 41ULL ] = X [
-58ULL ] ; t283 [ 42ULL ] = X [ 58ULL ] ; t283 [ 43ULL ] = - X [ 57ULL ] ;
-t283 [ 44ULL ] = X [ 58ULL ] ; t283 [ 45ULL ] = X [ 58ULL ] ; t283 [ 46ULL ]
-= X [ 58ULL ] ; t283 [ 47ULL ] = X [ 58ULL ] ; t283 [ 48ULL ] = X [ 58ULL ] ;
-t283 [ 49ULL ] = - X [ 57ULL ] ; t283 [ 50ULL ] = - X [ 57ULL ] ; t283 [
-51ULL ] = X [ 58ULL ] ; t283 [ 52ULL ] = t476 ; t283 [ 53ULL ] = X [ 58ULL ]
-; t283 [ 54ULL ] = X [ 58ULL ] ; t283 [ 55ULL ] = X [ 3ULL ] ; t283 [ 56ULL ]
-= t476 * t476 * 0.01 ; t283 [ 57ULL ] = X [ 60ULL ] ; t283 [ 58ULL ] =
-U_idx_9 ; t283 [ 59ULL ] = Fuel_Cell_Boost_Converter_L_i ; t283 [ 60ULL ] =
+[ 12ULL ] = - X [ 53ULL ] ; t283 [ 13ULL ] = X [ 55ULL ] ; t283 [ 14ULL ] =
+t410 ; t283 [ 15ULL ] = intrm_sf_mf_5 ; t283 [ 16ULL ] = X [ 57ULL ] ; t283 [
+17ULL ] = X [ 55ULL ] ; t283 [ 18ULL ] = X [ 58ULL ] ; t283 [ 19ULL ] = ( X [
+59ULL ] * t410 + ( 1.0 - t410 ) * X [ 53ULL ] * X [ 53ULL ] ) * 1000.0 ; t283
+[ 20ULL ] = X [ 59ULL ] * 1000.0 ; t283 [ 21ULL ] = X [ 2ULL ] ; t283 [ 22ULL
+] = X [ 58ULL ] ; t283 [ 23ULL ] = - X [ 53ULL ] ; t283 [ 24ULL ] = - X [
+53ULL ] ; t283 [ 25ULL ] = X [ 55ULL ] ; t283 [ 26ULL ] = X [ 55ULL ] ; t283
+[ 27ULL ] = - X [ 53ULL ] ; t283 [ 28ULL ] = X [ 55ULL ] ; t283 [ 29ULL ] = X
+[ 55ULL ] ; t283 [ 30ULL ] = X [ 55ULL ] ; t283 [ 31ULL ] = X [ 55ULL ] ;
+t283 [ 32ULL ] = X [ 55ULL ] ; t283 [ 33ULL ] = t475 ; t283 [ 34ULL ] = t475
+; t283 [ 35ULL ] = X [ 58ULL ] ; t283 [ 36ULL ] = X [ 58ULL ] ; t283 [ 37ULL
+] = t475 ; t283 [ 38ULL ] = X [ 58ULL ] ; t283 [ 39ULL ] = X [ 58ULL ] ; t283
+[ 40ULL ] = X [ 58ULL ] ; t283 [ 41ULL ] = X [ 58ULL ] ; t283 [ 42ULL ] = X [
+58ULL ] ; t283 [ 43ULL ] = U_idx_0 ; t283 [ 44ULL ] = U_idx_0 ; t283 [ 45ULL
+] = X [ 58ULL ] ; t283 [ 46ULL ] = X [ 58ULL ] ; t283 [ 47ULL ] = U_idx_0 ;
+t283 [ 48ULL ] = X [ 58ULL ] ; t283 [ 49ULL ] = t475 ; t283 [ 50ULL ] = t475
+; t283 [ 51ULL ] = X [ 58ULL ] ; t283 [ 52ULL ] =
+Fuel_Cell_Boost_Converter_C_i ; t283 [ 53ULL ] = X [ 58ULL ] ; t283 [ 54ULL ]
+= X [ 58ULL ] ; t283 [ 55ULL ] = X [ 3ULL ] ; t283 [ 56ULL ] =
+Fuel_Cell_Boost_Converter_C_i * Fuel_Cell_Boost_Converter_C_i * 0.01 ; t283 [
+57ULL ] = X [ 60ULL ] ; t283 [ 58ULL ] = U_idx_9 ; t283 [ 59ULL ] =
+Fuel_Cell_Boost_Converter_L_i ; t283 [ 60ULL ] =
 Fuel_Cell_Boost_Converter_L_n_v ; t283 [ 61ULL ] =
 Fuel_Cell_Boost_Converter_L_p_v ; t283 [ 62ULL ] = X [ 61ULL ] ; t283 [ 63ULL
 ] = X [ 4ULL ] ; t283 [ 64ULL ] = X [ 61ULL ] * X [ 61ULL ] *

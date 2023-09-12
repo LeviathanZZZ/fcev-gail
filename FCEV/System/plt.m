@@ -1,1 +1,3 @@
-plot(out.Power,out.eff)
+%plot(out.soc,2./((1+sqrt(1-((4.*out.r.*out.p)/(out.v.*out.v))))));
+%plot(soc,effi)
+plot(out.p,out.eff)

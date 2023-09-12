@@ -7,8 +7,8 @@
 #include "ssc_ml_fun.h"
 int32_T FCElectricPlant_f9151c4e_1_ds_dpm_p ( const NeDynamicSystem * LC ,
 const NeDynamicSystemInput * t1 , NeDsMethodOutput * t2 ) { PmSparsityPattern
-out ; ( void ) t1 ; ( void ) LC ; out = t2 -> mDPM_P ; out . mNumCol = 54ULL
-; out . mNumRow = 64ULL ; out . mJc [ 0 ] = 0 ; out . mJc [ 1 ] = 0 ; out .
+out ; ( void ) t1 ; ( void ) LC ; out = t2 -> mDPM_P ; out . mNumCol = 53ULL
+; out . mNumRow = 62ULL ; out . mJc [ 0 ] = 0 ; out . mJc [ 1 ] = 0 ; out .
 mJc [ 2 ] = 0 ; out . mJc [ 3 ] = 0 ; out . mJc [ 4 ] = 0 ; out . mJc [ 5 ] =
 0 ; out . mJc [ 6 ] = 0 ; out . mJc [ 7 ] = 0 ; out . mJc [ 8 ] = 0 ; out .
 mJc [ 9 ] = 0 ; out . mJc [ 10 ] = 0 ; out . mJc [ 11 ] = 0 ; out . mJc [ 12
@@ -24,5 +24,4 @@ mJc [ 39 ] = 0 ; out . mJc [ 40 ] = 0 ; out . mJc [ 41 ] = 0 ; out . mJc [ 42
 ] = 0 ; out . mJc [ 43 ] = 0 ; out . mJc [ 44 ] = 0 ; out . mJc [ 45 ] = 0 ;
 out . mJc [ 46 ] = 0 ; out . mJc [ 47 ] = 0 ; out . mJc [ 48 ] = 0 ; out .
 mJc [ 49 ] = 0 ; out . mJc [ 50 ] = 0 ; out . mJc [ 51 ] = 0 ; out . mJc [ 52
-] = 0 ; out . mJc [ 53 ] = 0 ; out . mJc [ 54 ] = 0 ; ( void ) LC ; ( void )
-t2 ; return 0 ; }
+] = 0 ; out . mJc [ 53 ] = 0 ; ( void ) LC ; ( void ) t2 ; return 0 ; }

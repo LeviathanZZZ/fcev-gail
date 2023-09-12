@@ -24,14 +24,14 @@ pd_efOut ; ETTS0 pj_efOut ; ETTS0 po_efOut ; ETTS0 ps_efOut ; ETTS0 q_efOut ;
 ETTS0 qe_efOut ; ETTS0 qh_efOut ; ETTS0 qi_efOut ; ETTS0 qk_efOut ; ETTS0
 qn_efOut ; ETTS0 qr_efOut ; ETTS0 rf_efOut ; ETTS0 rm_efOut ; ETTS0 rq_efOut
 ; ETTS0 sg_efOut ; ETTS0 sp_efOut ; ETTS0 t18 ; ETTS0 t19 ; ETTS0 t31 ; ETTS0
-t32 ; ETTS0 t48 ; ETTS0 t54 ; ETTS0 t58 ; ETTS0 t60 ; ETTS0 t70 ; ETTS0 t77 ;
+t36 ; ETTS0 t42 ; ETTS0 t53 ; ETTS0 t57 ; ETTS0 t59 ; ETTS0 t69 ; ETTS0 t76 ;
 ETTS0 t86 ; ETTS0 t94 ; ETTS0 td_efOut ; ETTS0 tl_efOut ; ETTS0 to_efOut ;
 ETTS0 ts_efOut ; ETTS0 ui_efOut ; ETTS0 ul_efOut ; ETTS0 un_efOut ; ETTS0
 ur_efOut ; ETTS0 vm_efOut ; ETTS0 wl_efOut ; ETTS0 wp_efOut ; ETTS0 x_efOut ;
 ETTS0 xb_efOut ; ETTS0 xd_efOut ; ETTS0 xo_efOut ; ETTS0 xs_efOut ; ETTS0
 yn_efOut ; ETTS0 yr_efOut ; PmRealVector out ; real_T X [ 399 ] ; real_T
-t1209 [ 399 ] ; real_T nonscalar34 [ 7 ] ; real_T nonscalar33 [ 6 ] ; real_T
-nonscalar37 [ 5 ] ; real_T nonscalar38 [ 3 ] ; real_T ab_efOut [ 1 ] ; real_T
+t1209 [ 399 ] ; real_T nonscalar33 [ 6 ] ; real_T nonscalar37 [ 5 ] ; real_T
+nonscalar38 [ 3 ] ; real_T nonscalar34 [ 2 ] ; real_T ab_efOut [ 1 ] ; real_T
 ac_efOut [ 1 ] ; real_T ad_efOut [ 1 ] ; real_T ae_efOut [ 1 ] ; real_T
 af_efOut [ 1 ] ; real_T ag_efOut [ 1 ] ; real_T ah_efOut [ 1 ] ; real_T
 ai_efOut [ 1 ] ; real_T aj_efOut [ 1 ] ; real_T ak_efOut [ 1 ] ; real_T
@@ -196,42 +196,42 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_3 ; real_T
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 ; real_T
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_u_g_I ; real_T
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_Dp_AI_unchoke ; real_T
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_Q_conv ; real_T U_idx_0 ;
-real_T U_idx_1 ; real_T U_idx_2 ; real_T U_idx_3 ; real_T U_idx_4 ; real_T
-U_idx_5 ; real_T U_idx_6 ; real_T U_idx_7 ; real_T U_idx_8 ; real_T U_idx_9 ;
-real_T intrm_sf_mf_1009 ; real_T intrm_sf_mf_1010 ; real_T intrm_sf_mf_1054 ;
-real_T intrm_sf_mf_1065 ; real_T intrm_sf_mf_1188 ; real_T intrm_sf_mf_1235 ;
-real_T intrm_sf_mf_1269 ; real_T intrm_sf_mf_1284 ; real_T intrm_sf_mf_1299 ;
-real_T intrm_sf_mf_1318 ; real_T intrm_sf_mf_1402 ; real_T intrm_sf_mf_1428 ;
-real_T intrm_sf_mf_1449 ; real_T intrm_sf_mf_1452 ; real_T intrm_sf_mf_151 ;
-real_T intrm_sf_mf_173 ; real_T intrm_sf_mf_182 ; real_T intrm_sf_mf_189 ;
-real_T intrm_sf_mf_192 ; real_T intrm_sf_mf_199 ; real_T intrm_sf_mf_218 ;
-real_T intrm_sf_mf_325 ; real_T intrm_sf_mf_381 ; real_T intrm_sf_mf_384 ;
-real_T intrm_sf_mf_385 ; real_T intrm_sf_mf_413 ; real_T intrm_sf_mf_536 ;
-real_T intrm_sf_mf_538 ; real_T intrm_sf_mf_549 ; real_T intrm_sf_mf_558 ;
-real_T intrm_sf_mf_583 ; real_T intrm_sf_mf_688 ; real_T intrm_sf_mf_715 ;
-real_T intrm_sf_mf_718 ; real_T intrm_sf_mf_740 ; real_T intrm_sf_mf_758 ;
-real_T intrm_sf_mf_826 ; real_T intrm_sf_mf_871 ; real_T intrm_sf_mf_934 ;
-real_T intrm_sf_mf_992 ; real_T intrm_sf_mf_995 ; real_T piece14 ; real_T
-piece151 ; real_T piece170 ; real_T piece175 ; real_T piece20 ; real_T
-piece214 ; real_T piece218 ; real_T piece223 ; real_T piece232 ; real_T
-piece250 ; real_T piece96 ; real_T t105 ; real_T t106 ; real_T t108 ; real_T
-t111 ; real_T t112 ; real_T t115 ; real_T t116 ; real_T t122 ; real_T t123 ;
-real_T t1599_idx_0 ; real_T t1603_idx_0 ; real_T t1608_idx_0 ; real_T t1616 ;
-real_T t1623 ; real_T t1631 ; real_T t1632 ; real_T t1636 ; real_T t1639 ;
-real_T t1644 ; real_T t1647 ; real_T t1648 ; real_T t1662 ; real_T t1712 ;
-real_T t1713 ; real_T t1714 ; real_T t1715 ; real_T t1716 ; real_T t1717 ;
-real_T t1718 ; real_T t1720 ; real_T t1723 ; real_T t1725 ; real_T t1726 ;
-real_T t1730 ; real_T t1731 ; real_T t1733 ; real_T t1735 ; real_T t1736 ;
-real_T t1737 ; real_T t1739 ; real_T t1743 ; real_T t1744 ; real_T t1749 ;
-real_T t1751 ; real_T t1752 ; real_T t1754 ; real_T t1755 ; real_T t1756 ;
-real_T t1763 ; real_T t1764 ; real_T t1765 ; real_T t1766 ; real_T t1768 ;
-real_T t1770 ; real_T t1772 ; real_T t1773 ; real_T t1775 ; real_T t1776 ;
-real_T t1777 ; real_T t1778 ; real_T t1779 ; real_T t1781 ; real_T t1782 ;
-real_T t1783 ; real_T t1785 ; real_T t1786 ; real_T t1789 ; real_T t1790 ;
-real_T t1791 ; real_T t1794 ; real_T t1795 ; real_T t1796 ; real_T t1797 ;
-real_T t1798 ; real_T t1799 ; real_T t1801 ; real_T t1802 ; real_T t1803 ;
-real_T t1805 ; real_T t1806 ; real_T t1807 ; real_T t1809 ; real_T t1811 ;
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_Q_conv ; real_T U_idx_1 ;
+real_T U_idx_2 ; real_T U_idx_3 ; real_T U_idx_4 ; real_T U_idx_5 ; real_T
+U_idx_6 ; real_T U_idx_7 ; real_T U_idx_8 ; real_T U_idx_9 ; real_T
+intrm_sf_mf_1009 ; real_T intrm_sf_mf_1010 ; real_T intrm_sf_mf_1054 ; real_T
+intrm_sf_mf_1065 ; real_T intrm_sf_mf_1188 ; real_T intrm_sf_mf_1235 ; real_T
+intrm_sf_mf_1269 ; real_T intrm_sf_mf_1284 ; real_T intrm_sf_mf_1299 ; real_T
+intrm_sf_mf_1318 ; real_T intrm_sf_mf_1402 ; real_T intrm_sf_mf_1428 ; real_T
+intrm_sf_mf_1449 ; real_T intrm_sf_mf_1452 ; real_T intrm_sf_mf_151 ; real_T
+intrm_sf_mf_173 ; real_T intrm_sf_mf_182 ; real_T intrm_sf_mf_189 ; real_T
+intrm_sf_mf_192 ; real_T intrm_sf_mf_199 ; real_T intrm_sf_mf_218 ; real_T
+intrm_sf_mf_325 ; real_T intrm_sf_mf_381 ; real_T intrm_sf_mf_384 ; real_T
+intrm_sf_mf_385 ; real_T intrm_sf_mf_413 ; real_T intrm_sf_mf_536 ; real_T
+intrm_sf_mf_538 ; real_T intrm_sf_mf_549 ; real_T intrm_sf_mf_558 ; real_T
+intrm_sf_mf_583 ; real_T intrm_sf_mf_688 ; real_T intrm_sf_mf_715 ; real_T
+intrm_sf_mf_718 ; real_T intrm_sf_mf_740 ; real_T intrm_sf_mf_758 ; real_T
+intrm_sf_mf_826 ; real_T intrm_sf_mf_871 ; real_T intrm_sf_mf_934 ; real_T
+intrm_sf_mf_992 ; real_T intrm_sf_mf_995 ; real_T piece14 ; real_T piece151 ;
+real_T piece170 ; real_T piece175 ; real_T piece20 ; real_T piece214 ; real_T
+piece218 ; real_T piece223 ; real_T piece232 ; real_T piece250 ; real_T
+piece96 ; real_T t105 ; real_T t106 ; real_T t108 ; real_T t111 ; real_T t112
+; real_T t115 ; real_T t116 ; real_T t122 ; real_T t123 ; real_T t1599_idx_0
+; real_T t1603_idx_0 ; real_T t1608_idx_0 ; real_T t1616 ; real_T t1623 ;
+real_T t1631 ; real_T t1632 ; real_T t1636 ; real_T t1639 ; real_T t1644 ;
+real_T t1647 ; real_T t1648 ; real_T t1662 ; real_T t1712 ; real_T t1713 ;
+real_T t1714 ; real_T t1715 ; real_T t1716 ; real_T t1717 ; real_T t1718 ;
+real_T t1720 ; real_T t1723 ; real_T t1725 ; real_T t1726 ; real_T t1730 ;
+real_T t1731 ; real_T t1733 ; real_T t1735 ; real_T t1736 ; real_T t1737 ;
+real_T t1739 ; real_T t1743 ; real_T t1744 ; real_T t1749 ; real_T t1751 ;
+real_T t1752 ; real_T t1754 ; real_T t1755 ; real_T t1756 ; real_T t1763 ;
+real_T t1764 ; real_T t1765 ; real_T t1766 ; real_T t1768 ; real_T t1770 ;
+real_T t1772 ; real_T t1773 ; real_T t1775 ; real_T t1776 ; real_T t1777 ;
+real_T t1778 ; real_T t1779 ; real_T t1781 ; real_T t1782 ; real_T t1783 ;
+real_T t1785 ; real_T t1786 ; real_T t1789 ; real_T t1790 ; real_T t1791 ;
+real_T t1794 ; real_T t1795 ; real_T t1796 ; real_T t1797 ; real_T t1798 ;
+real_T t1799 ; real_T t1801 ; real_T t1802 ; real_T t1803 ; real_T t1805 ;
+real_T t1806 ; real_T t1807 ; real_T t1808 ; real_T t1809 ; real_T t1811 ;
 real_T t1812 ; real_T t1813 ; real_T t1814 ; real_T t1816 ; real_T t1818 ;
 real_T t1820 ; real_T t1822 ; real_T t1828 ; real_T t1829 ; real_T t1831 ;
 real_T t1832 ; real_T t1833 ; real_T t1834 ; real_T t1835 ; real_T t1836 ;
@@ -307,7 +307,7 @@ real_T t3254 ; real_T t3256 ; real_T t3267 ; real_T t3272 ; real_T t3279 ;
 real_T t3299 ; real_T t3314 ; real_T t3346 ; real_T t3379 ; real_T t3391 ;
 real_T t3393 ; real_T t3396 ; real_T t3397 ; real_T t3398 ; real_T t3403 ;
 real_T t3429 ; real_T t3655 ; real_T t3672 ; real_T t3674 ; real_T t3906 ;
-real_T t3908 ; real_T t3910 ; real_T t3992 ; real_T t4002 ; real_T t95 ;
+real_T t3910 ; real_T t3951 ; real_T t3992 ; real_T t4002 ; real_T t95 ;
 real_T zc_int103 ; real_T zc_int135 ; real_T zc_int167 ; real_T zc_int200 ;
 real_T zc_int201 ; real_T zc_int21 ; real_T zc_int218 ; real_T zc_int233 ;
 real_T zc_int251 ; real_T zc_int262 ; real_T zc_int263 ; real_T zc_int276 ;
@@ -316,37 +316,35 @@ real_T zc_int48 ; real_T zc_int82 ; real_T zc_int88 ; real_T zc_int91 ;
 real_T zc_int94 ; size_t t1184 [ 1 ] ; size_t t1187 [ 1 ] ; size_t t1193 [ 1
 ] ; size_t t126 [ 1 ] ; size_t t1604 [ 1 ] ; size_t t754 [ 1 ] ; size_t t1611
 ; size_t t1612 ; size_t t1613 ; int32_T M [ 218 ] ; int32_T b ; for ( b = 0 ;
-b < 218 ; b ++ ) { M [ b ] = t4097 -> mM . mX [ b ] ; } U_idx_0 = t4097 -> mU
-. mX [ 0 ] ; U_idx_1 = t4097 -> mU . mX [ 1 ] ; U_idx_2 = t4097 -> mU . mX [
-2 ] ; U_idx_3 = t4097 -> mU . mX [ 3 ] ; U_idx_4 = t4097 -> mU . mX [ 4 ] ;
-U_idx_5 = t4097 -> mU . mX [ 5 ] ; U_idx_6 = t4097 -> mU . mX [ 6 ] ; U_idx_7
-= t4097 -> mU . mX [ 7 ] ; U_idx_8 = t4097 -> mU . mX [ 8 ] ; U_idx_9 = t4097
--> mU . mX [ 9 ] ; for ( b = 0 ; b < 399 ; b ++ ) { X [ b ] = t4097 -> mX .
-mX [ b ] ; } out = t4098 -> mF ; nonscalar33 [ 0 ] = 0.0 ; nonscalar33 [ 1 ]
-= 0.2 ; nonscalar33 [ 2 ] = 0.4 ; nonscalar33 [ 3 ] = 0.6 ; nonscalar33 [ 4 ]
-= 0.8 ; nonscalar33 [ 5 ] = 1.0 ; nonscalar34 [ 0 ] = 243.1 ; nonscalar34 [ 1
-] = 253.1 ; nonscalar34 [ 2 ] = 263.1 ; nonscalar34 [ 3 ] = 273.1 ;
-nonscalar34 [ 4 ] = 283.1 ; nonscalar34 [ 5 ] = 298.1 ; nonscalar34 [ 6 ] =
-313.1 ; nonscalar37 [ 0 ] = 1.0 ; nonscalar37 [ 1 ] = 1.25 ; nonscalar37 [ 2
-] = 1.5 ; nonscalar37 [ 3 ] = 1.75 ; nonscalar37 [ 4 ] = 2.0 ; nonscalar38 [
-0 ] = 0.0 ; nonscalar38 [ 1 ] = 188.49555921538757 ; nonscalar38 [ 2 ] =
-376.99111843077515 ; U_idx_0 = - X [ 53ULL ] - U_idx_0 ; t3908 = ( ( ( real_T
-) ( U_idx_0 >= 0.0 ) * U_idx_0 * 1000.0 + ( real_T ) ( U_idx_0 < 0.0 ) * X [
-55ULL ] ) - 0.9 ) / 0.099999999999999978 ; if ( ( real_T ) ( U_idx_0 >= 0.0 )
-* U_idx_0 * 1000.0 + ( real_T ) ( U_idx_0 < 0.0 ) * X [ 55ULL ] <= 0.9 ) {
-t3908 = 0.0 ; } else { t3908 = ( real_T ) ( U_idx_0 >= 0.0 ) * U_idx_0 *
-1000.0 + ( real_T ) ( U_idx_0 < 0.0 ) * X [ 55ULL ] >= 1.0 ? 1.0 : t3908 *
-t3908 * 3.0 - t3908 * t3908 * t3908 * 2.0 ; } t3910 = X [ 61ULL ] * 1.0E-9 +
-X [ 4ULL ] ; t3672 = ( ( X [ 4ULL ] * - 1.0E-6 + X [ 61ULL ] * -
-1.0000000000000011 ) + X [ 62ULL ] * - 1.0E-6 ) + X [ 5ULL ] ; if ( X [ 92ULL
-] < 0.0 ) { piece214 = X [ 92ULL ] * 17.81 + 0.043 ; } else if ( X [ 92ULL ]
-<= 1.0 ) { piece214 = ( ( X [ 92ULL ] * 17.81 + 0.043 ) - X [ 92ULL ] * X [
-92ULL ] * 39.85 ) + X [ 92ULL ] * X [ 92ULL ] * X [ 92ULL ] * 36.0 ; } else {
-piece214 = ( X [ 92ULL ] - 1.0 ) * 1.4 + 14.003 ; } if ( X [ 93ULL ] < 0.0 )
-{ piece218 = X [ 93ULL ] * 17.81 + 0.043 ; } else if ( X [ 93ULL ] <= 1.0 ) {
-piece218 = ( ( X [ 93ULL ] * 17.81 + 0.043 ) - X [ 93ULL ] * X [ 93ULL ] *
-39.85 ) + X [ 93ULL ] * X [ 93ULL ] * X [ 93ULL ] * 36.0 ; } else { piece218
-= ( X [ 93ULL ] - 1.0 ) * 1.4 + 14.003 ; } if ( X [ 62ULL ] <= 0.0 ) {
+b < 218 ; b ++ ) { M [ b ] = t4097 -> mM . mX [ b ] ; } U_idx_1 = t4097 -> mU
+. mX [ 1 ] ; U_idx_2 = t4097 -> mU . mX [ 2 ] ; U_idx_3 = t4097 -> mU . mX [
+3 ] ; U_idx_4 = t4097 -> mU . mX [ 4 ] ; U_idx_5 = t4097 -> mU . mX [ 5 ] ;
+U_idx_6 = t4097 -> mU . mX [ 6 ] ; U_idx_7 = t4097 -> mU . mX [ 7 ] ; U_idx_8
+= t4097 -> mU . mX [ 8 ] ; U_idx_9 = t4097 -> mU . mX [ 9 ] ; for ( b = 0 ; b
+< 399 ; b ++ ) { X [ b ] = t4097 -> mX . mX [ b ] ; } out = t4098 -> mF ;
+nonscalar33 [ 0 ] = 0.0 ; nonscalar33 [ 1 ] = 0.2 ; nonscalar33 [ 2 ] = 0.4 ;
+nonscalar33 [ 3 ] = 0.6 ; nonscalar33 [ 4 ] = 0.8 ; nonscalar33 [ 5 ] = 1.0 ;
+nonscalar34 [ 0 ] = 298.15 ; nonscalar34 [ 1 ] = 358.15 ; nonscalar37 [ 0 ] =
+1.0 ; nonscalar37 [ 1 ] = 1.25 ; nonscalar37 [ 2 ] = 1.5 ; nonscalar37 [ 3 ]
+= 1.75 ; nonscalar37 [ 4 ] = 2.0 ; nonscalar38 [ 0 ] = 0.0 ; nonscalar38 [ 1
+] = 188.49555921538757 ; nonscalar38 [ 2 ] = 376.99111843077515 ; t3951 = ( (
+( real_T ) ( - X [ 53ULL ] >= 0.0 ) * X [ 53ULL ] * - 1000.0 + ( real_T ) ( -
+X [ 53ULL ] < 0.0 ) * X [ 55ULL ] ) - 0.9 ) / 0.099999999999999978 ; if ( (
+real_T ) ( - X [ 53ULL ] >= 0.0 ) * X [ 53ULL ] * - 1000.0 + ( real_T ) ( - X
+[ 53ULL ] < 0.0 ) * X [ 55ULL ] <= 0.9 ) { t3951 = 0.0 ; } else { t3951 = (
+real_T ) ( - X [ 53ULL ] >= 0.0 ) * X [ 53ULL ] * - 1000.0 + ( real_T ) ( - X
+[ 53ULL ] < 0.0 ) * X [ 55ULL ] >= 1.0 ? 1.0 : t3951 * t3951 * 3.0 - t3951 *
+t3951 * t3951 * 2.0 ; } t3910 = X [ 61ULL ] * 1.0E-9 + X [ 4ULL ] ; t3672 = (
+( X [ 4ULL ] * - 1.0E-6 + X [ 61ULL ] * - 1.0000000000000011 ) + X [ 62ULL ]
+* - 1.0E-6 ) + X [ 5ULL ] ; if ( X [ 92ULL ] < 0.0 ) { piece214 = X [ 92ULL ]
+* 17.81 + 0.043 ; } else if ( X [ 92ULL ] <= 1.0 ) { piece214 = ( ( X [ 92ULL
+] * 17.81 + 0.043 ) - X [ 92ULL ] * X [ 92ULL ] * 39.85 ) + X [ 92ULL ] * X [
+92ULL ] * X [ 92ULL ] * 36.0 ; } else { piece214 = ( X [ 92ULL ] - 1.0 ) *
+1.4 + 14.003 ; } if ( X [ 93ULL ] < 0.0 ) { piece218 = X [ 93ULL ] * 17.81 +
+0.043 ; } else if ( X [ 93ULL ] <= 1.0 ) { piece218 = ( ( X [ 93ULL ] * 17.81
++ 0.043 ) - X [ 93ULL ] * X [ 93ULL ] * 39.85 ) + X [ 93ULL ] * X [ 93ULL ] *
+X [ 93ULL ] * 36.0 ; } else { piece218 = ( X [ 93ULL ] - 1.0 ) * 1.4 + 14.003
+; } if ( X [ 62ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_Membra43 = - X [ 62ULL
 ] / 0.028 ; } else {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_Membra43 = 0.0 ; }
@@ -402,7 +400,7 @@ X [ 91ULL ] ) * ( t1616 * 7.0000000000000007E-6 / 2853.1078474192841 ) /
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_Membra43 >= 1.0 ) {
 piece223 = pmf_log (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_Membra43 ) *
-0.021121699350046864 ; } else { piece223 = 0.0 ; } if (
+0.052804248375117158 ; } else { piece223 = 0.0 ; } if (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_Membra43 <= 13986.0 )
 { t95 = pmf_log ( 1.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_Membra43 / 14000.0 ) ;
@@ -592,14 +590,14 @@ intrm_sf_mf_1284 ) + t1603_idx_0 * t1723 ; t1744 = ( X [ 115ULL ] - X [ 19ULL
 tlu2_linear_nearest_prelookup ( & x_efOut . mField0 [ 0ULL ] , & x_efOut .
 mField1 [ 0ULL ] , & x_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t77 = x_efOut ; tlu2_1d_linear_nearest_value ( & y_efOut [ 0ULL ] , & t77 .
-mField0 [ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t76 = x_efOut ; tlu2_1d_linear_nearest_value ( & y_efOut [ 0ULL ] , & t76 .
+mField0 [ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField7 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = y_efOut [
-0 ] ; tlu2_1d_linear_nearest_value ( & ab_efOut [ 0ULL ] , & t77 . mField0 [
-0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+0 ] ; tlu2_1d_linear_nearest_value ( & ab_efOut [ 0ULL ] , & t76 . mField0 [
+0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField1 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = ab_efOut [ 0 ]
-; tlu2_1d_linear_nearest_value ( & bb_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL
-] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField8 ,
+; tlu2_1d_linear_nearest_value ( & bb_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL
+] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField8 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = bb_efOut [ 0 ] ; t1789 =
 ( ( ( ( ( 1.0 - t1763 ) -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Q_conv ) * t1608_idx_0 +
@@ -622,14 +620,14 @@ mField14 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = db_efOut [ 0
 mField15 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = eb_efOut [ 0
 ] ; t1768 = ( ( ( 1.0 - intrm_sf_mf_1284 ) - t1723 ) * t1608_idx_0 +
 t1599_idx_0 * intrm_sf_mf_1284 ) + t1603_idx_0 * t1723 ;
-tlu2_1d_linear_nearest_value ( & fb_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ]
-, & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField13 ,
+tlu2_1d_linear_nearest_value ( & fb_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField13 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = fb_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & gb_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ]
-, & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField14 ,
+tlu2_1d_linear_nearest_value ( & gb_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField14 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = gb_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & hb_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ]
-, & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField15 ,
+tlu2_1d_linear_nearest_value ( & hb_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField15 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = hb_efOut [ 0 ] ;
 intrm_sf_mf_1284 = ( ( ( 1.0 - t1763 ) -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Q_conv ) * t1608_idx_0 +
@@ -646,24 +644,23 @@ intrm_sf_mf_1284 ) / 2.0 ) / 1.0E-6 ; } t1764 = ( zc_int167 - 2000.0 ) /
 zc_int167 <= 2000.0 ) { t1764 = 3.66 ; } else if ( zc_int167 >= 4000.0 ) {
 t1764 = t1723 ; } else { t1764 = ( 1.0 - t1766 ) * 3.66 + t1723 * t1766 ; }
 t1802 = t1791 / 2.0 ; if ( zc_int167 > t1764 * 0.031415926535897927 /
-7.8539816339744827E-5 / ( t1802 == 0.0 ? 1.0E-16 : t1802 ) / 30.0 ) { U_idx_0
-= ( t1768 + intrm_sf_mf_1284 ) / 2.0 ; t1723 = t1764 * 0.031415926535897927 /
-( zc_int167 == 0.0 ? 1.0E-16 : zc_int167 ) / 7.8539816339744827E-5 / (
-U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) ; } else { t1723 = 30.0 ; }
-intrm_sf_mf_1284 = ( X [ 115ULL ] - X [ 130ULL ] ) * ( 1.0 - pmf_exp ( -
-t1723 ) ) ; tlu2_1d_linear_nearest_value ( & ib_efOut [ 0ULL ] , & t77 .
-mField0 [ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
-) -> mField10 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = ib_efOut
-[ 0 ] ; tlu2_1d_linear_nearest_value ( & jb_efOut [ 0ULL ] , & t77 . mField0
-[ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
-mField11 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = jb_efOut [ 0
-] ; tlu2_1d_linear_nearest_value ( & kb_efOut [ 0ULL ] , & t77 . mField0 [
-0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
-mField12 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = kb_efOut [ 0
-] ; t1723 = zc_int309 * 7.8539816339744827E-5 / 0.01 * ( t1791 / 2.0 ) * ( (
-t1736 + ( ( ( ( 1.0 - t1763 ) -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Q_conv ) * t1608_idx_0 +
-t1599_idx_0 * t1763 ) + t1603_idx_0 *
+7.8539816339744827E-5 / ( t1802 == 0.0 ? 1.0E-16 : t1802 ) / 30.0 ) { t1808 =
+( t1768 + intrm_sf_mf_1284 ) / 2.0 ; t1723 = t1764 * 0.031415926535897927 / (
+zc_int167 == 0.0 ? 1.0E-16 : zc_int167 ) / 7.8539816339744827E-5 / ( t1808 ==
+0.0 ? 1.0E-16 : t1808 ) ; } else { t1723 = 30.0 ; } intrm_sf_mf_1284 = ( X [
+115ULL ] - X [ 130ULL ] ) * ( 1.0 - pmf_exp ( - t1723 ) ) ;
+tlu2_1d_linear_nearest_value ( & ib_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField10 ,
+& t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = ib_efOut [ 0 ] ;
+tlu2_1d_linear_nearest_value ( & jb_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField11 ,
+& t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = jb_efOut [ 0 ] ;
+tlu2_1d_linear_nearest_value ( & kb_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField12 ,
+& t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = kb_efOut [ 0 ] ; t1723 =
+zc_int309 * 7.8539816339744827E-5 / 0.01 * ( t1791 / 2.0 ) * ( ( t1736 + ( (
+( ( 1.0 - t1763 ) - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Q_conv
+) * t1608_idx_0 + t1599_idx_0 * t1763 ) + t1603_idx_0 *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Q_conv ) ) / 2.0 ) *
 intrm_sf_mf_1284 ; if ( X [ 114ULL ] <= 0.0 ) { intrm_sf_mf_1284 = 0.0 ; }
 else { intrm_sf_mf_1284 = X [ 114ULL ] >= 1.0 ? 1.0 : X [ 114ULL ] ; } if ( X
@@ -685,37 +682,37 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Q_conv ; } t1195 [ 0ULL ]
 = X [ 111ULL ] ; tlu2_linear_nearest_prelookup ( & lb_efOut . mField0 [ 0ULL
 ] , & lb_efOut . mField1 [ 0ULL ] , & lb_efOut . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL
-] , & t126 [ 0ULL ] ) ; t77 = lb_efOut ; tlu2_1d_linear_nearest_value ( &
-mb_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( (
+] , & t126 [ 0ULL ] ) ; t76 = lb_efOut ; tlu2_1d_linear_nearest_value ( &
+mb_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField13 , & t1184 [ 0ULL ] , & t126 [ 0ULL
 ] ) ; t1608_idx_0 = mb_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( &
-nb_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( (
+nb_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField14 , & t1184 [ 0ULL ] , & t126 [ 0ULL
 ] ) ; t1599_idx_0 = nb_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( &
-ob_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( (
+ob_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField15 , & t1184 [ 0ULL ] , & t126 [ 0ULL
 ] ) ; t1603_idx_0 = ob_efOut [ 0 ] ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Q_conv = ( ( ( 1.0 - t1763
 ) - t1764 ) * t1608_idx_0 + t1599_idx_0 * t1763 ) + t1603_idx_0 * t1764 ;
-tlu2_1d_linear_nearest_value ( & pb_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ]
-, & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField10 ,
+tlu2_1d_linear_nearest_value ( & pb_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField10 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = pb_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & qb_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ]
-, & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField11 ,
+tlu2_1d_linear_nearest_value ( & qb_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField11 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = qb_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & rb_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ]
-, & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField12 ,
+tlu2_1d_linear_nearest_value ( & rb_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField12 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = rb_efOut [ 0 ] ; t1766 =
 ( ( ( 1.0 - t1763 ) - t1764 ) * t1608_idx_0 + t1599_idx_0 * t1763 ) +
 t1603_idx_0 * t1764 ; t1770 = piece218 >= 0.0 ? piece218 : 0.0 ;
-tlu2_1d_linear_nearest_value ( & sb_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ]
-, & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField7 , &
+tlu2_1d_linear_nearest_value ( & sb_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField7 , &
 t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = sb_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & tb_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ]
-, & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField1 , &
+tlu2_1d_linear_nearest_value ( & tb_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField1 , &
 t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = tb_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & ub_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ]
-, & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField8 , &
+tlu2_1d_linear_nearest_value ( & ub_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField8 , &
 t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = ub_efOut [ 0 ] ; piece218
 = ( ( ( 1.0 - t1763 ) - t1764 ) * t1608_idx_0 + t1599_idx_0 * t1763 ) +
 t1603_idx_0 * t1764 ; t1816 = ( zc_int36 + piece218 ) / 2.0 *
@@ -811,8 +808,8 @@ zc_int48 * zc_int48 ; intrm_sf_mf_218 = ( ( ( 1074.1165326382641 + zc_int48 *
 - intrm_sf_mf_413 ) + ( ( 1479.6504774711011 + zc_int48 * 1.2002114337048222
 ) + t1796 * - 0.00038614513167823636 ) * t1783 ) + ( ( 12825.281119789837 +
 zc_int48 * 6.9647057412840034 ) + t1796 * - 0.0070524868246844051 ) *
-intrm_sf_mf_413 ; U_idx_0 = intrm_sf_mf_218 - t1785 ; t1864 = X [ 153ULL ] *
-X [ 153ULL ] * ( intrm_sf_mf_218 / ( U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) ) ;
+intrm_sf_mf_413 ; t1808 = intrm_sf_mf_218 - t1785 ; t1864 = X [ 153ULL ] * X
+[ 153ULL ] * ( intrm_sf_mf_218 / ( t1808 == 0.0 ? 1.0E-16 : t1808 ) ) ;
 zc_int48 = pmf_sqrt ( fabs ( t1864 / ( t1785 == 0.0 ? 1.0E-16 : t1785 ) / ( X
 [ 152ULL ] == 0.0 ? 1.0E-16 : X [ 152ULL ] ) ) ) * t1782 * 0.64 ; t1867 =
 t1786 * 2.0 ; t1786 = ( X [ 131ULL ] - 1.01325 ) * pmf_sqrt ( fabs ( t1867 /
@@ -820,12 +817,12 @@ t1786 * 2.0 ; t1786 = ( X [ 131ULL ] - 1.01325 ) * pmf_sqrt ( fabs ( t1867 /
 23ULL ] ; tlu2_linear_linear_prelookup ( & xb_efOut . mField0 [ 0ULL ] , &
 xb_efOut . mField1 [ 0ULL ] , & xb_efOut . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL
-] , & t126 [ 0ULL ] ) ; t70 = xb_efOut ; tlu2_1d_linear_linear_value ( &
-yb_efOut [ 0ULL ] , & t70 . mField0 [ 0ULL ] , & t70 . mField2 [ 0ULL ] , ( (
+] , & t126 [ 0ULL ] ) ; t69 = xb_efOut ; tlu2_1d_linear_linear_value ( &
+yb_efOut [ 0ULL ] , & t69 . mField0 [ 0ULL ] , & t69 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1608_idx_0 = yb_efOut [ 0 ] ; intrm_sf_mf_218 = t1608_idx_0 ;
-tlu2_1d_linear_linear_value ( & ac_efOut [ 0ULL ] , & t70 . mField0 [ 0ULL ]
-, & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField9 , &
+tlu2_1d_linear_linear_value ( & ac_efOut [ 0ULL ] , & t69 . mField0 [ 0ULL ]
+, & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField9 , &
 t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = ac_efOut [ 0 ] ; t1790 =
 t1608_idx_0 ; if ( X [ 26ULL ] <= 0.0 ) { intrm_sf_mf_199 = 0.0 ; } else {
 intrm_sf_mf_199 = X [ 26ULL ] >= 1.0 ? 1.0 : X [ 26ULL ] ; } if ( X [ 25ULL ]
@@ -837,8 +834,8 @@ X [ 26ULL ] >= 0.01 ) { t1796 = 1.0 - X [ 26ULL ] ; } else if ( 1.0 - X [
 26ULL ] >= - 0.1 ) { t1796 = pmf_exp ( ( ( 1.0 - X [ 26ULL ] ) - 0.01 ) /
 0.01 ) * 0.01 ; } else { t1796 = 1.6701700790245661E-7 ; } t1797 = X [ 25ULL
 ] / ( t1796 == 0.0 ? 1.0E-16 : t1796 ) * 3827.6794129126583 +
-296.802103844292 ; tlu2_1d_linear_linear_value ( & bc_efOut [ 0ULL ] , & t70
-. mField0 [ 0ULL ] , & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC
+296.802103844292 ; tlu2_1d_linear_linear_value ( & bc_efOut [ 0ULL ] , & t69
+. mField0 [ 0ULL ] , & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC
 ) ) -> mField3 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 =
 bc_efOut [ 0 ] ; t1798 = pmf_exp ( pmf_log ( X [ 24ULL ] * 100000.0 ) -
 t1608_idx_0 ) ; if ( t1798 >= 1.0 ) { zc_int135 = ( t1798 - 1.0 ) * 461.523 +
@@ -853,10 +850,10 @@ t1797 * t1797 * t1797 * 2.0 ) ; } t1795 = X [ 24ULL ] / ( t1869 == 0.0 ?
 1.8324100759713822E-12 ) ; t1799 = pmf_sqrt ( X [ 172ULL ] * X [ 172ULL ] +
 2.0914103314136477E-13 ) ; t1801 = pmf_sqrt ( X [ 172ULL ] * X [ 172ULL ] +
 1.4768645655431171E-13 ) ; tlu2_1d_linear_linear_value ( & cc_efOut [ 0ULL ]
-, & t70 . mField0 [ 0ULL ] , & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem
+, & t69 . mField0 [ 0ULL ] , & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem
 * ) ( LC ) ) -> mField16 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0
 = cc_efOut [ 0 ] ; t1802 = t1608_idx_0 ; tlu2_1d_linear_linear_value ( &
-dc_efOut [ 0ULL ] , & t70 . mField0 [ 0ULL ] , & t70 . mField2 [ 0ULL ] , ( (
+dc_efOut [ 0ULL ] , & t69 . mField0 [ 0ULL ] , & t69 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField5 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1608_idx_0 = dc_efOut [ 0 ] ; t1805 = X [ 172ULL ] - t1795 * 100000.0 ;
 t1806 = X [ 174ULL ] - t1795 * 100000.0 ; t1807 = ( ( ( 1.0 - intrm_sf_mf_199
@@ -890,14 +887,14 @@ else { t1816 = X [ 184ULL ] >= 1.0 ? 1.0 : X [ 184ULL ] ; } if ( X [ 185ULL ]
 tlu2_linear_nearest_prelookup ( & ec_efOut . mField0 [ 0ULL ] , & ec_efOut .
 mField1 [ 0ULL ] , & ec_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t70 = ec_efOut ; tlu2_1d_linear_nearest_value ( & fc_efOut [ 0ULL ] , & t70 .
-mField0 [ 0ULL ] , & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t69 = ec_efOut ; tlu2_1d_linear_nearest_value ( & fc_efOut [ 0ULL ] , & t69 .
+mField0 [ 0ULL ] , & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField7 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = fc_efOut
-[ 0 ] ; tlu2_1d_linear_nearest_value ( & gc_efOut [ 0ULL ] , & t70 . mField0
-[ 0ULL ] , & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_nearest_value ( & gc_efOut [ 0ULL ] , & t69 . mField0
+[ 0ULL ] , & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField1 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = gc_efOut [ 0 ]
-; tlu2_1d_linear_nearest_value ( & hc_efOut [ 0ULL ] , & t70 . mField0 [ 0ULL
-] , & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField8 ,
+; tlu2_1d_linear_nearest_value ( & hc_efOut [ 0ULL ] , & t69 . mField0 [ 0ULL
+] , & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField8 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = hc_efOut [ 0 ] ; t1818 =
 ( ( ( 1.0 - t1816 ) - intrm_sf_mf_536 ) * t1608_idx_0 + t1599_idx_0 * t1816 )
 + t1603_idx_0 * intrm_sf_mf_536 ; t1882 = X [ 183ULL ] * X [ 183ULL ] * t1814
@@ -974,14 +971,14 @@ t1835 ) / ( t1918 == 0.0 ? 1.0E-16 : t1918 ) ; if ( X [ 29ULL ] - t1835 <=
 t1832 = X [ 29ULL ] - t1835 ; } else { t1832 = ( X [ 29ULL ] - t1835 ) * (
 t1832 * t1832 * 3.0 - t1832 * t1832 * t1832 * 2.0 ) ; } t1822 = t1822 * t1832
 * 7.8539816339744827E-5 / 0.001 ; t1832 = ( zc_int94 - t1831 ) * t1822 ;
-tlu2_1d_linear_nearest_value ( & mc_efOut [ 0ULL ] , & t70 . mField0 [ 0ULL ]
-, & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField10 ,
+tlu2_1d_linear_nearest_value ( & mc_efOut [ 0ULL ] , & t69 . mField0 [ 0ULL ]
+, & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField10 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = mc_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & nc_efOut [ 0ULL ] , & t70 . mField0 [ 0ULL ]
-, & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField11 ,
+tlu2_1d_linear_nearest_value ( & nc_efOut [ 0ULL ] , & t69 . mField0 [ 0ULL ]
+, & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField11 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = nc_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & oc_efOut [ 0ULL ] , & t70 . mField0 [ 0ULL ]
-, & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField12 ,
+tlu2_1d_linear_nearest_value ( & oc_efOut [ 0ULL ] , & t69 . mField0 [ 0ULL ]
+, & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField12 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = oc_efOut [ 0 ] ; t1831 =
 ( ( ( 1.0 - t1816 ) - intrm_sf_mf_536 ) * t1608_idx_0 + t1599_idx_0 * t1816 )
 + t1603_idx_0 * intrm_sf_mf_536 ; t1835 = ( X [ 177ULL ] - X [ 27ULL ] ) * (
@@ -1009,13 +1006,13 @@ mField14 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = rc_efOut [ 0
 mField15 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = sc_efOut [ 0
 ] ; t1846 = ( ( ( 1.0 - t1848 ) - t1849 ) * t1608_idx_0 + t1599_idx_0 * t1848
 ) + t1603_idx_0 * t1849 ; tlu2_1d_linear_nearest_value ( & tc_efOut [ 0ULL ]
-, & t70 . mField0 [ 0ULL ] , & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem
+, & t69 . mField0 [ 0ULL ] , & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem
 * ) ( LC ) ) -> mField13 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0
-= tc_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & uc_efOut [ 0ULL ] , & t70
-. mField0 [ 0ULL ] , & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC
+= tc_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & uc_efOut [ 0ULL ] , & t69
+. mField0 [ 0ULL ] , & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC
 ) ) -> mField14 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 =
-uc_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & vc_efOut [ 0ULL ] , & t70 .
-mField0 [ 0ULL ] , & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+uc_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & vc_efOut [ 0ULL ] , & t69 .
+mField0 [ 0ULL ] , & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField15 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = vc_efOut
 [ 0 ] ; t1850 = ( ( ( 1.0 - t1816 ) - intrm_sf_mf_536 ) * t1608_idx_0 +
 t1599_idx_0 * t1816 ) + t1603_idx_0 * intrm_sf_mf_536 ;
@@ -1043,13 +1040,13 @@ t1818 + ( ( ( ( 1.0 - t1848 ) - t1849 ) * t1608_idx_0 + t1599_idx_0 * t1848 )
 + t1603_idx_0 * t1849 ) ) / 2.0 * 7.8539816339744827E-5 ; t1848 = (
 intrm_sf_mf_536 >= 0.0 ? intrm_sf_mf_536 : 0.0 ) * 0.01 / ( t1926 == 0.0 ?
 1.0E-16 : t1926 ) ; t1849 = t1848 >= 0.0 ? t1848 : - t1848 ; intrm_sf_mf_583
-= t1849 > 1000.0 ? t1849 : 1000.0 ; U_idx_0 = pmf_log10 ( 6.9 / (
+= t1849 > 1000.0 ? t1849 : 1000.0 ; t1808 = pmf_log10 ( 6.9 / (
 intrm_sf_mf_583 == 0.0 ? 1.0E-16 : intrm_sf_mf_583 ) + 0.00017169489553429715
 ) * pmf_log10 ( 6.9 / ( intrm_sf_mf_583 == 0.0 ? 1.0E-16 : intrm_sf_mf_583 )
 + 0.00017169489553429715 ) * 3.24 ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pipe_MA_convection_A2 = 1.0 / (
-U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) ; t1928 = t1846 + t1850 ; if ( ( pmf_pow
-( t1928 / 2.0 , 0.66666666666666663 ) - 1.0 ) * pmf_sqrt (
+t1808 == 0.0 ? 1.0E-16 : t1808 ) ; t1928 = t1846 + t1850 ; if ( ( pmf_pow (
+t1928 / 2.0 , 0.66666666666666663 ) - 1.0 ) * pmf_sqrt (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pipe_MA_convection_A2 / 8.0 ) *
 12.7 + 1.0 >= 1.0E-6 ) { t1932 = ( pmf_pow ( ( t1846 + t1850 ) / 2.0 ,
 0.66666666666666663 ) - 1.0 ) * pmf_sqrt (
@@ -1092,41 +1089,41 @@ intrm_sf_mf_583 <= 0.0 ) { t1853 = 0.0 ; } else { t1853 = intrm_sf_mf_583 >=
 tlu2_linear_nearest_prelookup ( & dd_efOut . mField0 [ 0ULL ] , & dd_efOut .
 mField1 [ 0ULL ] , & dd_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t77 = dd_efOut ; tlu2_1d_linear_nearest_value ( & ed_efOut [ 0ULL ] , & t77 .
-mField0 [ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t76 = dd_efOut ; tlu2_1d_linear_nearest_value ( & ed_efOut [ 0ULL ] , & t76 .
+mField0 [ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField13 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = ed_efOut
-[ 0 ] ; tlu2_1d_linear_nearest_value ( & fd_efOut [ 0ULL ] , & t77 . mField0
-[ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_nearest_value ( & fd_efOut [ 0ULL ] , & t76 . mField0
+[ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField14 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = fd_efOut [ 0
-] ; tlu2_1d_linear_nearest_value ( & gd_efOut [ 0ULL ] , & t77 . mField0 [
-0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+] ; tlu2_1d_linear_nearest_value ( & gd_efOut [ 0ULL ] , & t76 . mField0 [
+0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField15 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = gd_efOut [ 0
 ] ; intrm_sf_mf_583 = ( ( ( 1.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pipe_MA_convection_A2 ) - t1853 ) *
 t1608_idx_0 + t1599_idx_0 *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pipe_MA_convection_A2 ) +
 t1603_idx_0 * t1853 ; tlu2_1d_linear_nearest_value ( & hd_efOut [ 0ULL ] , &
-t77 . mField0 [ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * )
+t76 . mField0 [ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * )
 ( LC ) ) -> mField10 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 =
-hd_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & id_efOut [ 0ULL ] , & t77 .
-mField0 [ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+hd_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & id_efOut [ 0ULL ] , & t76 .
+mField0 [ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField11 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = id_efOut
-[ 0 ] ; tlu2_1d_linear_nearest_value ( & jd_efOut [ 0ULL ] , & t77 . mField0
-[ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_nearest_value ( & jd_efOut [ 0ULL ] , & t76 . mField0
+[ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField12 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = jd_efOut [ 0
 ] ; intrm_sf_mf_538 = ( ( ( 1.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pipe_MA_convection_A2 ) - t1853 ) *
 t1608_idx_0 + t1599_idx_0 *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pipe_MA_convection_A2 ) +
 t1603_idx_0 * t1853 ; t1855 = intrm_sf_mf_536 <= 0.0 ? intrm_sf_mf_536 : 0.0
-; tlu2_1d_linear_nearest_value ( & kd_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL
-] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField7 ,
+; tlu2_1d_linear_nearest_value ( & kd_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL
+] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField7 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = kd_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & ld_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ]
-, & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField1 , &
+tlu2_1d_linear_nearest_value ( & ld_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField1 , &
 t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = ld_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & md_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ]
-, & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField8 , &
+tlu2_1d_linear_nearest_value ( & md_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField8 , &
 t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = md_efOut [ 0 ] ;
 intrm_sf_mf_536 = ( ( ( 1.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pipe_MA_convection_A2 ) - t1853 ) *
@@ -1294,15 +1291,15 @@ t1895 ) * 296.802103844292 + t1894 * 461.523 ) + t1895 * 259.836612622973 ;
 t1195 [ 0ULL ] = X [ 225ULL ] ; tlu2_linear_linear_prelookup ( & pd_efOut .
 mField0 [ 0ULL ] , & pd_efOut . mField1 [ 0ULL ] , & pd_efOut . mField2 [
 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField2 , & t1195 [ 0ULL ] , &
-t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t60 = pd_efOut ;
-tlu2_1d_linear_linear_value ( & qd_efOut [ 0ULL ] , & t60 . mField0 [ 0ULL ]
-, & t60 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField16 ,
+t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t59 = pd_efOut ;
+tlu2_1d_linear_linear_value ( & qd_efOut [ 0ULL ] , & t59 . mField0 [ 0ULL ]
+, & t59 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField16 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = qd_efOut [ 0 ] ;
-tlu2_1d_linear_linear_value ( & rd_efOut [ 0ULL ] , & t60 . mField0 [ 0ULL ]
-, & t60 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField4 , &
+tlu2_1d_linear_linear_value ( & rd_efOut [ 0ULL ] , & t59 . mField0 [ 0ULL ]
+, & t59 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField4 , &
 t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = rd_efOut [ 0 ] ;
-tlu2_1d_linear_linear_value ( & sd_efOut [ 0ULL ] , & t60 . mField0 [ 0ULL ]
-, & t60 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 , &
+tlu2_1d_linear_linear_value ( & sd_efOut [ 0ULL ] , & t59 . mField0 [ 0ULL ]
+, & t59 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 , &
 t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = sd_efOut [ 0 ] ; t1901 = (
 ( ( 1.0 - t1894 ) - t1895 ) * t1608_idx_0 + t1599_idx_0 * t1894 ) +
 t1603_idx_0 * t1895 ; t1195 [ 0ULL ] = X [ 228ULL ] ;
@@ -1323,28 +1320,28 @@ t1603_idx_0 * t1895 ; t1195 [ 0ULL ] = X [ 226ULL ] ;
 tlu2_linear_linear_prelookup ( & xd_efOut . mField0 [ 0ULL ] , & xd_efOut .
 mField1 [ 0ULL ] , & xd_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t58 = xd_efOut ; tlu2_1d_linear_linear_value ( & yd_efOut [ 0ULL ] , & t58 .
-mField0 [ 0ULL ] , & t58 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t57 = xd_efOut ; tlu2_1d_linear_linear_value ( & yd_efOut [ 0ULL ] , & t57 .
+mField0 [ 0ULL ] , & t57 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField16 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = yd_efOut
-[ 0 ] ; tlu2_1d_linear_linear_value ( & ae_efOut [ 0ULL ] , & t58 . mField0 [
-0ULL ] , & t58 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_linear_value ( & ae_efOut [ 0ULL ] , & t57 . mField0 [
+0ULL ] , & t57 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = ae_efOut [ 0 ]
-; tlu2_1d_linear_linear_value ( & be_efOut [ 0ULL ] , & t58 . mField0 [ 0ULL
-] , & t58 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 ,
+; tlu2_1d_linear_linear_value ( & be_efOut [ 0ULL ] , & t57 . mField0 [ 0ULL
+] , & t57 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = be_efOut [ 0 ] ; piece20
 = ( ( ( 1.0 - t1894 ) - t1895 ) * t1608_idx_0 + t1599_idx_0 * t1894 ) +
 t1603_idx_0 * t1895 ; t1195 [ 0ULL ] = X [ 227ULL ] ;
 tlu2_linear_linear_prelookup ( & ce_efOut . mField0 [ 0ULL ] , & ce_efOut .
 mField1 [ 0ULL ] , & ce_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t54 = ce_efOut ; tlu2_1d_linear_linear_value ( & de_efOut [ 0ULL ] , & t54 .
-mField0 [ 0ULL ] , & t54 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t53 = ce_efOut ; tlu2_1d_linear_linear_value ( & de_efOut [ 0ULL ] , & t53 .
+mField0 [ 0ULL ] , & t53 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField16 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = de_efOut
-[ 0 ] ; tlu2_1d_linear_linear_value ( & ee_efOut [ 0ULL ] , & t54 . mField0 [
-0ULL ] , & t54 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_linear_value ( & ee_efOut [ 0ULL ] , & t53 . mField0 [
+0ULL ] , & t53 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = ee_efOut [ 0 ]
-; tlu2_1d_linear_linear_value ( & fe_efOut [ 0ULL ] , & t54 . mField0 [ 0ULL
-] , & t54 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 ,
+; tlu2_1d_linear_linear_value ( & fe_efOut [ 0ULL ] , & t53 . mField0 [ 0ULL
+] , & t53 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = fe_efOut [ 0 ] ; t1907 =
 ( ( ( 1.0 - t1894 ) - t1895 ) * t1608_idx_0 + t1599_idx_0 * t1894 ) +
 t1603_idx_0 * t1895 ; t1195 [ 0ULL ] = X [ 32ULL ] ;
@@ -1518,11 +1515,11 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_convection_A1 ; t123 = X [
 tlu2_linear_linear_prelookup ( & qe_efOut . mField0 [ 0ULL ] , & qe_efOut .
 mField1 [ 0ULL ] , & qe_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t70 = qe_efOut ; tlu2_1d_linear_linear_value ( & re_efOut [ 0ULL ] , & t70 .
-mField0 [ 0ULL ] , & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t69 = qe_efOut ; tlu2_1d_linear_linear_value ( & re_efOut [ 0ULL ] , & t69 .
+mField0 [ 0ULL ] , & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = re_efOut
 [ 0 ] ; t1953 = t1608_idx_0 ; tlu2_1d_linear_linear_value ( & se_efOut [ 0ULL
-] , & t70 . mField0 [ 0ULL ] , & t70 . mField2 [ 0ULL ] , ( (
+] , & t69 . mField0 [ 0ULL ] , & t69 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField9 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1608_idx_0 = se_efOut [ 0 ] ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_convection_A1 = t1608_idx_0
@@ -1531,8 +1528,8 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_convection_A1 = t1608_idx_0
 0.01 ) / 0.01 ) * 0.01 ; } else { t1956 = 1.6701700790245661E-7 ; }
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_Phi_w_condens = X [ 36ULL ]
 / ( t1956 == 0.0 ? 1.0E-16 : t1956 ) * 3827.6794129126583 + 296.802103844292
-; tlu2_1d_linear_linear_value ( & te_efOut [ 0ULL ] , & t70 . mField0 [ 0ULL
-] , & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField3 ,
+; tlu2_1d_linear_linear_value ( & te_efOut [ 0ULL ] , & t69 . mField0 [ 0ULL
+] , & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField3 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = te_efOut [ 0 ] ; t1957 =
 pmf_exp ( pmf_log ( X [ 38ULL ] * 100000.0 ) - t1608_idx_0 ) ; if ( t1957 >=
 1.0 ) { piece151 = ( t1957 - 1.0 ) * 461.523 +
@@ -1614,9 +1611,9 @@ intrm_sf_mf_715 - 1000.0 ) * ( intrm_sf_mf_549 / 8.0 ) * ( ( intrm_sf_mf_583
 - intrm_sf_mf_715 * intrm_sf_mf_715 * intrm_sf_mf_715 * 2.0 ; if ( zc_int103
 <= 2000.0 ) { intrm_sf_mf_715 = 3.66 ; } else if ( zc_int103 >= 4000.0 ) {
 intrm_sf_mf_715 = t1962 ; } else { intrm_sf_mf_715 = ( 1.0 - intrm_sf_mf_549
-) * 3.66 + t1962 * intrm_sf_mf_549 ; } U_idx_0 = t2066 / 2.0 ; if ( zc_int103
-> intrm_sf_mf_715 * 0.039269908169872414 / 0.0019634954084936209 / ( U_idx_0
-== 0.0 ? 1.0E-16 : U_idx_0 ) / 30.0 ) { t2083 = ( intrm_sf_mf_583 +
+) * 3.66 + t1962 * intrm_sf_mf_549 ; } t1808 = t2066 / 2.0 ; if ( zc_int103 >
+intrm_sf_mf_715 * 0.039269908169872414 / 0.0019634954084936209 / ( t1808 ==
+0.0 ? 1.0E-16 : t1808 ) / 30.0 ) { t2083 = ( intrm_sf_mf_583 +
 intrm_sf_mf_558 ) / 2.0 ; intrm_sf_mf_549 = intrm_sf_mf_715 *
 0.039269908169872414 / ( zc_int103 == 0.0 ? 1.0E-16 : zc_int103 ) /
 0.0019634954084936209 / ( t2083 == 0.0 ? 1.0E-16 : t2083 ) ; } else {
@@ -1639,36 +1636,36 @@ intrm_sf_mf_715 >= 1.0 ? 1.0 : intrm_sf_mf_715 ; } intrm_sf_mf_715 = X [
 tlu2_linear_nearest_prelookup ( & bf_efOut . mField0 [ 0ULL ] , & bf_efOut .
 mField1 [ 0ULL ] , & bf_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t77 = bf_efOut ; tlu2_1d_linear_nearest_value ( & cf_efOut [ 0ULL ] , & t77 .
-mField0 [ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t76 = bf_efOut ; tlu2_1d_linear_nearest_value ( & cf_efOut [ 0ULL ] , & t76 .
+mField0 [ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField13 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = cf_efOut
-[ 0 ] ; tlu2_1d_linear_nearest_value ( & df_efOut [ 0ULL ] , & t77 . mField0
-[ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_nearest_value ( & df_efOut [ 0ULL ] , & t76 . mField0
+[ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField14 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = df_efOut [ 0
-] ; tlu2_1d_linear_nearest_value ( & ef_efOut [ 0ULL ] , & t77 . mField0 [
-0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+] ; tlu2_1d_linear_nearest_value ( & ef_efOut [ 0ULL ] , & t76 . mField0 [
+0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField15 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = ef_efOut [ 0
 ] ; intrm_sf_mf_715 = ( ( ( 1.0 - intrm_sf_mf_549 ) - t1962 ) * t1608_idx_0 +
 t1599_idx_0 * intrm_sf_mf_549 ) + t1603_idx_0 * t1962 ;
-tlu2_1d_linear_nearest_value ( & ff_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ]
-, & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField10 ,
+tlu2_1d_linear_nearest_value ( & ff_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField10 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = ff_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & gf_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ]
-, & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField11 ,
+tlu2_1d_linear_nearest_value ( & gf_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField11 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = gf_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & hf_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ]
-, & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField12 ,
+tlu2_1d_linear_nearest_value ( & hf_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField12 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = hf_efOut [ 0 ] ;
 intrm_sf_mf_718 = ( ( ( 1.0 - intrm_sf_mf_549 ) - t1962 ) * t1608_idx_0 +
 t1599_idx_0 * intrm_sf_mf_549 ) + t1603_idx_0 * t1962 ; t1965 = U_idx_1 <=
 0.0 ? U_idx_1 : 0.0 ; tlu2_1d_linear_nearest_value ( & if_efOut [ 0ULL ] , &
-t77 . mField0 [ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * )
+t76 . mField0 [ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * )
 ( LC ) ) -> mField7 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 =
-if_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & jf_efOut [ 0ULL ] , & t77 .
-mField0 [ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+if_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & jf_efOut [ 0ULL ] , & t76 .
+mField0 [ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField1 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = jf_efOut
-[ 0 ] ; tlu2_1d_linear_nearest_value ( & kf_efOut [ 0ULL ] , & t77 . mField0
-[ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_nearest_value ( & kf_efOut [ 0ULL ] , & t76 . mField0
+[ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField8 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = kf_efOut [ 0 ]
 ; U_idx_1 = ( ( ( 1.0 - intrm_sf_mf_549 ) - t1962 ) * t1608_idx_0 +
 t1599_idx_0 * intrm_sf_mf_549 ) + t1603_idx_0 * t1962 ; t3396 = ( t1941 +
@@ -1705,11 +1702,11 @@ pmf_sqrt ( X [ 186ULL ] * X [ 186ULL ] + 4.1024015709531014E-13 ) ; t1962 =
 pmf_sqrt ( X [ 263ULL ] * X [ 263ULL ] + 5.0900279888093953E-12 ) ; t1965 =
 pmf_sqrt ( X [ 263ULL ] * X [ 263ULL ] + 5.8094731428156895E-13 ) ; t1966 =
 pmf_sqrt ( X [ 263ULL ] * X [ 263ULL ] + 4.1024015709531014E-13 ) ;
-tlu2_1d_linear_linear_value ( & lf_efOut [ 0ULL ] , & t70 . mField0 [ 0ULL ]
-, & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField16 ,
+tlu2_1d_linear_linear_value ( & lf_efOut [ 0ULL ] , & t69 . mField0 [ 0ULL ]
+, & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField16 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = lf_efOut [ 0 ] ; t1967 =
-t1608_idx_0 ; tlu2_1d_linear_linear_value ( & mf_efOut [ 0ULL ] , & t70 .
-mField0 [ 0ULL ] , & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t1608_idx_0 ; tlu2_1d_linear_linear_value ( & mf_efOut [ 0ULL ] , & t69 .
+mField0 [ 0ULL ] , & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField5 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = mf_efOut
 [ 0 ] ; t1969 = - X [ 196ULL ] + X [ 271ULL ] ; t1970 = ( ( - X [ 186ULL ] +
 X [ 263ULL ] ) + U_idx_4 ) - t1945 * 100000.0 ; t1971 = ( ( - X [ 197ULL ] +
@@ -1785,37 +1782,36 @@ X [ 39ULL ] ) - X [ 278ULL ] / ( X [ 279ULL ] == 0.0 ? 1.0E-16 : X [ 279ULL ]
 0.00037212980109014541 ) * ( ( 1.0 - t1953 ) - t1980 ) + ( (
 1479.6504774711011 + t1997 * 1.2002114337048222 ) + zc_int291 * -
 0.00038614513167823636 ) * t1953 ) + ( ( 12825.281119789837 + t1997 *
-6.9647057412840034 ) + zc_int291 * - 0.0070524868246844051 ) * t1980 ;
-U_idx_0 = zc_int276 - t1984 ; t1997 = zc_int276 / ( U_idx_0 == 0.0 ? 1.0E-16
-: U_idx_0 ) ; zc_int276 = pmf_sqrt ( zc_int21 * zc_int21 *
-9.999999999999999E-14 + fabs ( X [ 278ULL ] * t1997 * t1984 ) * 1.0E-9 ) ;
-t2140 = X [ 279ULL ] * X [ 279ULL ] * t1997 ; zc_int291 = - pmf_sqrt ( fabs (
-t2140 / ( t1984 == 0.0 ? 1.0E-16 : t1984 ) / ( X [ 278ULL ] == 0.0 ? 1.0E-16
-: X [ 278ULL ] ) ) ) * 0.32 ; if ( zc_int291 >= 0.0 ) { t2000 = zc_int291 *
-100000.0 ; } else { t2000 = - zc_int291 * 100000.0 ; } t2001 = t2000 * 0.01 /
-( t3037 == 0.0 ? 1.0E-16 : t3037 ) ; U_idx_0 = zc_int291 * zc_int263 *
-2.9973120849090416 / ( t3039 == 0.0 ? 1.0E-16 : t3039 ) ; intrm_sf_mf_740 =
-t2001 >= 1.0 ? t2001 : 1.0 ; t2147 = pmf_log10 ( 6.9 / ( intrm_sf_mf_740 ==
-0.0 ? 1.0E-16 : intrm_sf_mf_740 ) + 0.00017169489553429715 ) * pmf_log10 (
-6.9 / ( intrm_sf_mf_740 == 0.0 ? 1.0E-16 : intrm_sf_mf_740 ) +
-0.00017169489553429715 ) * 3.24 ; t2000 = zc_int291 * t2000 * ( 1.0 / ( t2147
-== 0.0 ? 1.0E-16 : t2147 ) ) * 0.046833001326703774 / ( t2131 == 0.0 ?
-1.0E-16 : t2131 ) ; intrm_sf_mf_740 = ( t2001 - 2000.0 ) / 2000.0 ; t2009 =
-intrm_sf_mf_740 * intrm_sf_mf_740 * 3.0 - intrm_sf_mf_740 * intrm_sf_mf_740 *
-intrm_sf_mf_740 * 2.0 ; if ( t2001 <= 2000.0 ) { intrm_sf_mf_740 = U_idx_0 *
-1.0E-5 ; } else if ( t2001 >= 4000.0 ) { intrm_sf_mf_740 = t2000 * 1.0E-5 ; }
-else { intrm_sf_mf_740 = ( ( 1.0 - t2009 ) * U_idx_0 + t2000 * t2009 ) *
-1.0E-5 ; } zc_int276 = X [ 277ULL ] * zc_int276 / 0.32 *
-0.00031622776601683789 + intrm_sf_mf_740 ; t2000 = X [ 65ULL ] - X [ 39ULL ]
-; t1195 [ 0ULL ] = X [ 6ULL ] ; tlu2_linear_linear_prelookup ( & rf_efOut .
-mField0 [ 0ULL ] , & rf_efOut . mField1 [ 0ULL ] , & rf_efOut . mField2 [
-0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField2 , & t1195 [ 0ULL ] , &
-t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t48 = rf_efOut ;
-tlu2_1d_linear_linear_value ( & sf_efOut [ 0ULL ] , & t48 . mField0 [ 0ULL ]
-, & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField4 , &
+6.9647057412840034 ) + zc_int291 * - 0.0070524868246844051 ) * t1980 ; t1808
+= zc_int276 - t1984 ; t1997 = zc_int276 / ( t1808 == 0.0 ? 1.0E-16 : t1808 )
+; zc_int276 = pmf_sqrt ( zc_int21 * zc_int21 * 9.999999999999999E-14 + fabs (
+X [ 278ULL ] * t1997 * t1984 ) * 1.0E-9 ) ; t2140 = X [ 279ULL ] * X [ 279ULL
+] * t1997 ; zc_int291 = - pmf_sqrt ( fabs ( t2140 / ( t1984 == 0.0 ? 1.0E-16
+: t1984 ) / ( X [ 278ULL ] == 0.0 ? 1.0E-16 : X [ 278ULL ] ) ) ) * 0.32 ; if
+( zc_int291 >= 0.0 ) { t2000 = zc_int291 * 100000.0 ; } else { t2000 = -
+zc_int291 * 100000.0 ; } t2001 = t2000 * 0.01 / ( t3037 == 0.0 ? 1.0E-16 :
+t3037 ) ; t1808 = zc_int291 * zc_int263 * 2.9973120849090416 / ( t3039 == 0.0
+? 1.0E-16 : t3039 ) ; intrm_sf_mf_740 = t2001 >= 1.0 ? t2001 : 1.0 ; t2147 =
+pmf_log10 ( 6.9 / ( intrm_sf_mf_740 == 0.0 ? 1.0E-16 : intrm_sf_mf_740 ) +
+0.00017169489553429715 ) * pmf_log10 ( 6.9 / ( intrm_sf_mf_740 == 0.0 ?
+1.0E-16 : intrm_sf_mf_740 ) + 0.00017169489553429715 ) * 3.24 ; t2000 =
+zc_int291 * t2000 * ( 1.0 / ( t2147 == 0.0 ? 1.0E-16 : t2147 ) ) *
+0.046833001326703774 / ( t2131 == 0.0 ? 1.0E-16 : t2131 ) ; intrm_sf_mf_740 =
+( t2001 - 2000.0 ) / 2000.0 ; t2009 = intrm_sf_mf_740 * intrm_sf_mf_740 * 3.0
+- intrm_sf_mf_740 * intrm_sf_mf_740 * intrm_sf_mf_740 * 2.0 ; if ( t2001 <=
+2000.0 ) { intrm_sf_mf_740 = t1808 * 1.0E-5 ; } else if ( t2001 >= 4000.0 ) {
+intrm_sf_mf_740 = t2000 * 1.0E-5 ; } else { intrm_sf_mf_740 = ( ( 1.0 - t2009
+) * t1808 + t2000 * t2009 ) * 1.0E-5 ; } zc_int276 = X [ 277ULL ] * zc_int276
+/ 0.32 * 0.00031622776601683789 + intrm_sf_mf_740 ; t2000 = X [ 65ULL ] - X [
+39ULL ] ; t1195 [ 0ULL ] = X [ 6ULL ] ; tlu2_linear_linear_prelookup ( &
+rf_efOut . mField0 [ 0ULL ] , & rf_efOut . mField1 [ 0ULL ] , & rf_efOut .
+mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField2 , & t1195 [
+0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t36 = rf_efOut ;
+tlu2_1d_linear_linear_value ( & sf_efOut [ 0ULL ] , & t36 . mField0 [ 0ULL ]
+, & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField4 , &
 t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = sf_efOut [ 0 ] ;
 intrm_sf_mf_740 = t1608_idx_0 ; tlu2_1d_linear_linear_value ( & tf_efOut [
-0ULL ] , & t48 . mField0 [ 0ULL ] , & t48 . mField2 [ 0ULL ] , ( (
+0ULL ] , & t36 . mField0 [ 0ULL ] , & t36 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField9 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1608_idx_0 = tf_efOut [ 0 ] ; t2009 = t1608_idx_0 ; if ( 1.0 - X [ 8ULL
 ] >= 0.01 ) { t2011 = 1.0 - X [ 8ULL ] ; } else if ( 1.0 - X [ 8ULL ] >= -
@@ -1823,8 +1819,8 @@ _NeDynamicSystem * ) ( LC ) ) -> mField9 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 else { t2011 = 1.6701700790245661E-7 ; }
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA_Phi_w_condens = X [ 7ULL ]
 / ( t2011 == 0.0 ? 1.0E-16 : t2011 ) * 3827.6794129126583 + 296.802103844292
-; tlu2_1d_linear_linear_value ( & uf_efOut [ 0ULL ] , & t48 . mField0 [ 0ULL
-] , & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField3 ,
+; tlu2_1d_linear_linear_value ( & uf_efOut [ 0ULL ] , & t36 . mField0 [ 0ULL
+] , & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField3 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = uf_efOut [ 0 ] ; t2012 =
 pmf_exp ( pmf_log ( X [ 39ULL ] * 100000.0 ) - t1608_idx_0 ) ; if ( t2012 >=
 1.0 ) { t2154 = ( t2012 - 1.0 ) * 461.523 +
@@ -1907,36 +1903,36 @@ t2016 = 0.0 ; } else { t2016 = t2015 >= 1.0 ? 1.0 : t2015 ; } t2015 = X [
 ; } t1195 [ 0ULL ] = X [ 64ULL ] ; tlu2_linear_nearest_prelookup ( & cg_efOut
 . mField0 [ 0ULL ] , & cg_efOut . mField1 [ 0ULL ] , & cg_efOut . mField2 [
 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField2 , & t1195 [ 0ULL ] , &
-t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t32 = cg_efOut ;
-tlu2_1d_linear_nearest_value ( & dg_efOut [ 0ULL ] , & t32 . mField0 [ 0ULL ]
-, & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField13 ,
+t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t42 = cg_efOut ;
+tlu2_1d_linear_nearest_value ( & dg_efOut [ 0ULL ] , & t42 . mField0 [ 0ULL ]
+, & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField13 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = dg_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & eg_efOut [ 0ULL ] , & t32 . mField0 [ 0ULL ]
-, & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField14 ,
+tlu2_1d_linear_nearest_value ( & eg_efOut [ 0ULL ] , & t42 . mField0 [ 0ULL ]
+, & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField14 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = eg_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & fg_efOut [ 0ULL ] , & t32 . mField0 [ 0ULL ]
-, & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField15 ,
+tlu2_1d_linear_nearest_value ( & fg_efOut [ 0ULL ] , & t42 . mField0 [ 0ULL ]
+, & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField15 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = fg_efOut [ 0 ] ; t2015 =
 ( ( ( 1.0 - t2016 ) - t2020 ) * t1608_idx_0 + t1599_idx_0 * t2016 ) +
 t1603_idx_0 * t2020 ; tlu2_1d_linear_nearest_value ( & gg_efOut [ 0ULL ] , &
-t32 . mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * )
+t42 . mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * )
 ( LC ) ) -> mField10 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 =
-gg_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & hg_efOut [ 0ULL ] , & t32 .
-mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+gg_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & hg_efOut [ 0ULL ] , & t42 .
+mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField11 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = hg_efOut
-[ 0 ] ; tlu2_1d_linear_nearest_value ( & ig_efOut [ 0ULL ] , & t32 . mField0
-[ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_nearest_value ( & ig_efOut [ 0ULL ] , & t42 . mField0
+[ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField12 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = ig_efOut [ 0
 ] ; t2021 = ( ( ( 1.0 - t2016 ) - t2020 ) * t1608_idx_0 + t1599_idx_0 * t2016
 ) + t1603_idx_0 * t2020 ; intrm_sf_mf_688 = t1989 <= 0.0 ? t1989 : 0.0 ;
-tlu2_1d_linear_nearest_value ( & jg_efOut [ 0ULL ] , & t32 . mField0 [ 0ULL ]
-, & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField7 , &
+tlu2_1d_linear_nearest_value ( & jg_efOut [ 0ULL ] , & t42 . mField0 [ 0ULL ]
+, & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField7 , &
 t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = jg_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & kg_efOut [ 0ULL ] , & t32 . mField0 [ 0ULL ]
-, & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField1 , &
+tlu2_1d_linear_nearest_value ( & kg_efOut [ 0ULL ] , & t42 . mField0 [ 0ULL ]
+, & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField1 , &
 t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = kg_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & lg_efOut [ 0ULL ] , & t32 . mField0 [ 0ULL ]
-, & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField8 , &
+tlu2_1d_linear_nearest_value ( & lg_efOut [ 0ULL ] , & t42 . mField0 [ 0ULL ]
+, & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField8 , &
 t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = lg_efOut [ 0 ] ; t1989 = (
 ( ( 1.0 - t2016 ) - t2020 ) * t1608_idx_0 + t1599_idx_0 * t2016 ) +
 t1603_idx_0 * t2020 ; t2189 = ( zc_int263 + t1989 ) / 2.0 * 0.32 ; t2016 = -
@@ -1977,11 +1973,11 @@ intrm_sf_mf_688 = pmf_sqrt ( X [ 277ULL ] * X [ 277ULL ] +
 4.9597684650720062E-8 ) ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA_convection_B2 = pmf_sqrt (
 X [ 277ULL ] * X [ 277ULL ] + 3.5023764535063242E-8 ) ;
-tlu2_1d_linear_linear_value ( & mg_efOut [ 0ULL ] , & t48 . mField0 [ 0ULL ]
-, & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField16 ,
+tlu2_1d_linear_linear_value ( & mg_efOut [ 0ULL ] , & t36 . mField0 [ 0ULL ]
+, & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField16 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = mg_efOut [ 0 ] ; t2031 =
-t1608_idx_0 ; tlu2_1d_linear_linear_value ( & ng_efOut [ 0ULL ] , & t48 .
-mField0 [ 0ULL ] , & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t1608_idx_0 ; tlu2_1d_linear_linear_value ( & ng_efOut [ 0ULL ] , & t36 .
+mField0 [ 0ULL ] , & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField5 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = ng_efOut
 [ 0 ] ; t2034 = - X [ 271ULL ] + X [ 285ULL ] ; t2035 = ( - X [ 263ULL ] + X
 [ 277ULL ] ) - t1995 * 100000.0 ; t2040 = ( - X [ 272ULL ] + X [ 286ULL ] ) -
@@ -2064,7 +2060,7 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Dp_BI_unchok = t2064 *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Dp_BI_unchok = - t2064 *
 100000.0 ; } t2066 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Dp_BI_unchok * 0.01 / (
-t2222 == 0.0 ? 1.0E-16 : t2222 ) ; U_idx_0 = t2064 * piece151 *
+t2222 == 0.0 ? 1.0E-16 : t2222 ) ; t1808 = t2064 * piece151 *
 2.9973120849090416 / ( t2226 == 0.0 ? 1.0E-16 : t2226 ) ; t2068 = t2066 >=
 1.0 ? t2066 : 1.0 ; t2245 = pmf_log10 ( 6.9 / ( t2068 == 0.0 ? 1.0E-16 :
 t2068 ) + 0.00017169489553429715 ) * pmf_log10 ( 6.9 / ( t2068 == 0.0 ?
@@ -2074,11 +2070,11 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Dp_BI_unchok * ( 1.0 / (
 t2245 == 0.0 ? 1.0E-16 : t2245 ) ) * 0.046833001326703774 / ( t2229 == 0.0 ?
 1.0E-16 : t2229 ) ; t2068 = ( t2066 - 2000.0 ) / 2000.0 ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_mdot_total = t2068 * t2068
-* 3.0 - t2068 * t2068 * t2068 * 2.0 ; if ( t2066 <= 2000.0 ) { t2068 =
-U_idx_0 * 1.0E-5 ; } else if ( t2066 >= 4000.0 ) { t2068 =
+* 3.0 - t2068 * t2068 * t2068 * 2.0 ; if ( t2066 <= 2000.0 ) { t2068 = t1808
+* 1.0E-5 ; } else if ( t2066 >= 4000.0 ) { t2068 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Dp_BI_unchok * 1.0E-5 ; }
 else { t2068 = ( ( 1.0 -
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_mdot_total ) * U_idx_0 +
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_mdot_total ) * t1808 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Dp_BI_unchok *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_mdot_total ) * 1.0E-5 ; }
 piece175 = - ( X [ 134ULL ] * piece175 ) / 0.32 * 0.00031622776601683789 +
@@ -2144,36 +2140,36 @@ intrm_sf_mf_1269 == 0.0 ? 1.0E-16 : intrm_sf_mf_1269 ) ; t2055 = t1989 >= 0.0
 ? t1989 : - t1989 ; t2076 = t2055 > 1000.0 ? t2055 : 1000.0 ; t2261 =
 pmf_log10 ( 6.9 / ( t2076 == 0.0 ? 1.0E-16 : t2076 ) + 0.00017169489553429715
 ) * pmf_log10 ( 6.9 / ( t2076 == 0.0 ? 1.0E-16 : t2076 ) +
-0.00017169489553429715 ) * 3.24 ; U_idx_0 = 1.0 / ( t2261 == 0.0 ? 1.0E-16 :
+0.00017169489553429715 ) * 3.24 ; t1808 = 1.0 / ( t2261 == 0.0 ? 1.0E-16 :
 t2261 ) ; t2262 = t2015 + t2074 ; if ( ( pmf_pow ( t2262 / 2.0 ,
-0.66666666666666663 ) - 1.0 ) * pmf_sqrt ( U_idx_0 / 8.0 ) * 12.7 + 1.0 >=
+0.66666666666666663 ) - 1.0 ) * pmf_sqrt ( t1808 / 8.0 ) * 12.7 + 1.0 >=
 1.0E-6 ) { t2266 = ( pmf_pow ( ( t2015 + t2074 ) / 2.0 , 0.66666666666666663
-) - 1.0 ) * pmf_sqrt ( U_idx_0 / 8.0 ) * 12.7 + 1.0 ; t2078 = ( t2076 -
-1000.0 ) * ( U_idx_0 / 8.0 ) * ( ( t2015 + t2074 ) / 2.0 ) / ( t2266 == 0.0 ?
-1.0E-16 : t2266 ) ; } else { t2078 = ( t2076 - 1000.0 ) * ( U_idx_0 / 8.0 ) *
-( ( t2015 + t2074 ) / 2.0 ) / 1.0E-6 ; } t2076 = ( t2055 - 2000.0 ) / 2000.0
-; U_idx_0 = t2076 * t2076 * 3.0 - t2076 * t2076 * t2076 * 2.0 ; if ( t2055 <=
-2000.0 ) { t2076 = 3.66 ; } else if ( t2055 >= 4000.0 ) { t2076 = t2078 ; }
-else { t2076 = ( 1.0 - U_idx_0 ) * 3.66 + t2078 * U_idx_0 ; } t2273 = t2262 /
-2.0 ; if ( t2055 > t2076 * 10.709248339636167 / 0.32 / ( t2273 == 0.0 ?
-1.0E-16 : t2273 ) / 30.0 ) { t2279 = ( t2015 + t2074 ) / 2.0 ; U_idx_0 =
-t2076 * 10.709248339636167 / ( t2055 == 0.0 ? 1.0E-16 : t2055 ) / 0.32 / (
-t2279 == 0.0 ? 1.0E-16 : t2279 ) ; } else { U_idx_0 = 30.0 ; } t2015 = (
-343.15 - X [ 64ULL ] ) * ( 1.0 - pmf_exp ( - U_idx_0 ) ) ; t1989 = t1989 *
-0.32 / 0.01 * ( t2262 / 2.0 ) * ( ( t2021 +
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_mdot_total ) / 2.0 ) *
-t2015 ; t2285 = ( piece151 + piece218 ) / 2.0 * 0.32 ; piece218 = - ( t2054
-<= 0.0 ? t2054 : 0.0 ) * 0.01 / ( t2285 == 0.0 ? 1.0E-16 : t2285 ) ; t2015 =
-piece218 >= 0.0 ? piece218 : - piece218 ; t2021 = t2015 > 1000.0 ? t2015 :
-1000.0 ; t2286 = pmf_log10 ( 6.9 / ( t2021 == 0.0 ? 1.0E-16 : t2021 ) +
-0.00017169489553429715 ) * pmf_log10 ( 6.9 / ( t2021 == 0.0 ? 1.0E-16 : t2021
-) + 0.00017169489553429715 ) * 3.24 ; t2054 = 1.0 / ( t2286 == 0.0 ? 1.0E-16
-: t2286 ) ; t2287 = Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Q_conv
-+ t2074 ; if ( ( pmf_pow ( t2287 / 2.0 , 0.66666666666666663 ) - 1.0 ) *
-pmf_sqrt ( t2054 / 8.0 ) * 12.7 + 1.0 >= 1.0E-6 ) { intrm_sf_mf_192 = (
-pmf_pow ( ( Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Q_conv + t2074
-) / 2.0 , 0.66666666666666663 ) - 1.0 ) * pmf_sqrt ( t2054 / 8.0 ) * 12.7 +
-1.0 ; t2055 = ( t2021 - 1000.0 ) * ( t2054 / 8.0 ) * ( (
+) - 1.0 ) * pmf_sqrt ( t1808 / 8.0 ) * 12.7 + 1.0 ; t2078 = ( t2076 - 1000.0
+) * ( t1808 / 8.0 ) * ( ( t2015 + t2074 ) / 2.0 ) / ( t2266 == 0.0 ? 1.0E-16
+: t2266 ) ; } else { t2078 = ( t2076 - 1000.0 ) * ( t1808 / 8.0 ) * ( ( t2015
++ t2074 ) / 2.0 ) / 1.0E-6 ; } t2076 = ( t2055 - 2000.0 ) / 2000.0 ; t1808 =
+t2076 * t2076 * 3.0 - t2076 * t2076 * t2076 * 2.0 ; if ( t2055 <= 2000.0 ) {
+t2076 = 3.66 ; } else if ( t2055 >= 4000.0 ) { t2076 = t2078 ; } else { t2076
+= ( 1.0 - t1808 ) * 3.66 + t2078 * t1808 ; } t2273 = t2262 / 2.0 ; if ( t2055
+> t2076 * 10.709248339636167 / 0.32 / ( t2273 == 0.0 ? 1.0E-16 : t2273 ) /
+30.0 ) { t2279 = ( t2015 + t2074 ) / 2.0 ; t1808 = t2076 * 10.709248339636167
+/ ( t2055 == 0.0 ? 1.0E-16 : t2055 ) / 0.32 / ( t2279 == 0.0 ? 1.0E-16 :
+t2279 ) ; } else { t1808 = 30.0 ; } t2015 = ( 343.15 - X [ 64ULL ] ) * ( 1.0
+- pmf_exp ( - t1808 ) ) ; t1989 = t1989 * 0.32 / 0.01 * ( t2262 / 2.0 ) * ( (
+t2021 + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_mdot_total ) / 2.0
+) * t2015 ; t2285 = ( piece151 + piece218 ) / 2.0 * 0.32 ; piece218 = - (
+t2054 <= 0.0 ? t2054 : 0.0 ) * 0.01 / ( t2285 == 0.0 ? 1.0E-16 : t2285 ) ;
+t2015 = piece218 >= 0.0 ? piece218 : - piece218 ; t2021 = t2015 > 1000.0 ?
+t2015 : 1000.0 ; t2286 = pmf_log10 ( 6.9 / ( t2021 == 0.0 ? 1.0E-16 : t2021 )
++ 0.00017169489553429715 ) * pmf_log10 ( 6.9 / ( t2021 == 0.0 ? 1.0E-16 :
+t2021 ) + 0.00017169489553429715 ) * 3.24 ; t2054 = 1.0 / ( t2286 == 0.0 ?
+1.0E-16 : t2286 ) ; t2287 =
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Q_conv + t2074 ; if ( (
+pmf_pow ( t2287 / 2.0 , 0.66666666666666663 ) - 1.0 ) * pmf_sqrt ( t2054 /
+8.0 ) * 12.7 + 1.0 >= 1.0E-6 ) { intrm_sf_mf_192 = ( pmf_pow ( (
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Q_conv + t2074 ) / 2.0 ,
+0.66666666666666663 ) - 1.0 ) * pmf_sqrt ( t2054 / 8.0 ) * 12.7 + 1.0 ; t2055
+= ( t2021 - 1000.0 ) * ( t2054 / 8.0 ) * ( (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x5_Pipe_MA1_Q_conv + t2074 ) / 2.0 ) /
 ( intrm_sf_mf_192 == 0.0 ? 1.0E-16 : intrm_sf_mf_192 ) ; } else { t2055 = (
 t2021 - 1000.0 ) * ( t2054 / 8.0 ) * ( (
@@ -2305,20 +2301,20 @@ t3397 ) * 1.0E-5 ; } t3075 = X [ 312ULL ] * t3075 / 0.0019634954084936209 *
 0ULL ] = X [ 41ULL ] ; tlu2_linear_linear_prelookup ( & jh_efOut . mField0 [
 0ULL ] , & jh_efOut . mField1 [ 0ULL ] , & jh_efOut . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL
-] , & t126 [ 0ULL ] ) ; t77 = jh_efOut ; tlu2_1d_linear_linear_value ( &
-kh_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( (
+] , & t126 [ 0ULL ] ) ; t76 = jh_efOut ; tlu2_1d_linear_linear_value ( &
+kh_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1608_idx_0 = kh_efOut [ 0 ] ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Environment_convecti0 = t1608_idx_0
-; tlu2_1d_linear_linear_value ( & lh_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL
-] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField9 ,
+; tlu2_1d_linear_linear_value ( & lh_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL
+] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField9 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = lh_efOut [ 0 ] ; t2099 =
 t1608_idx_0 ; if ( 1.0 - X [ 43ULL ] >= 0.01 ) { t2101 = 1.0 - X [ 43ULL ] ;
 } else if ( 1.0 - X [ 43ULL ] >= - 0.1 ) { t2101 = pmf_exp ( ( ( 1.0 - X [
 43ULL ] ) - 0.01 ) / 0.01 ) * 0.01 ; } else { t2101 = 1.6701700790245661E-7 ;
 } t3397 = X [ 42ULL ] / ( t2101 == 0.0 ? 1.0E-16 : t2101 ) * -
 36.965491221318985 + 296.802103844292 ; tlu2_1d_linear_linear_value ( &
-mh_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( (
+mh_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField3 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1608_idx_0 = mh_efOut [ 0 ] ; t2103 = pmf_exp ( pmf_log ( X [ 44ULL ] *
 100000.0 ) - t1608_idx_0 ) ; if ( t2103 >= 1.0 ) { t2348 = ( t2103 - 1.0 ) *
@@ -2355,14 +2351,14 @@ intrm_sf_mf_934 ; } t1195 [ 0ULL ] = X [ 232ULL ] ;
 tlu2_linear_nearest_prelookup ( & qh_efOut . mField0 [ 0ULL ] , & qh_efOut .
 mField1 [ 0ULL ] , & qh_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t32 = qh_efOut ; tlu2_1d_linear_nearest_value ( & rh_efOut [ 0ULL ] , & t32 .
-mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t42 = qh_efOut ; tlu2_1d_linear_nearest_value ( & rh_efOut [ 0ULL ] , & t42 .
+mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField13 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = rh_efOut
-[ 0 ] ; tlu2_1d_linear_nearest_value ( & sh_efOut [ 0ULL ] , & t32 . mField0
-[ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_nearest_value ( & sh_efOut [ 0ULL ] , & t42 . mField0
+[ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField14 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = sh_efOut [ 0
-] ; tlu2_1d_linear_nearest_value ( & th_efOut [ 0ULL ] , & t32 . mField0 [
-0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+] ; tlu2_1d_linear_nearest_value ( & th_efOut [ 0ULL ] , & t42 . mField0 [
+0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField19 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = th_efOut [ 0
 ] ; intrm_sf_mf_934 = ( ( ( 1.0 - intrm_sf_mf_1299 ) - t3200 ) * t1608_idx_0
 + t1599_idx_0 * intrm_sf_mf_1299 ) + t1603_idx_0 * t3200 ;
@@ -2377,24 +2373,24 @@ tlu2_1d_linear_nearest_value ( & wh_efOut [ 0ULL ] , & t86 . mField0 [ 0ULL ]
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = wh_efOut [ 0 ] ; t2111 =
 ( ( ( 1.0 - t2084 ) - U_idx_2 ) * t1608_idx_0 + t1599_idx_0 * t2084 ) +
 t1603_idx_0 * U_idx_2 ; tlu2_1d_linear_nearest_value ( & xh_efOut [ 0ULL ] ,
-& t32 . mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem *
+& t42 . mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem *
 ) ( LC ) ) -> mField10 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 =
-xh_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & yh_efOut [ 0ULL ] , & t32 .
-mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+xh_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & yh_efOut [ 0ULL ] , & t42 .
+mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField11 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = yh_efOut
-[ 0 ] ; tlu2_1d_linear_nearest_value ( & ai_efOut [ 0ULL ] , & t32 . mField0
-[ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_nearest_value ( & ai_efOut [ 0ULL ] , & t42 . mField0
+[ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField18 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = ai_efOut [ 0
 ] ; t2084 = ( ( ( 1.0 - intrm_sf_mf_1299 ) - t3200 ) * t1608_idx_0 +
 t1599_idx_0 * intrm_sf_mf_1299 ) + t1603_idx_0 * t3200 ; U_idx_2 = ( - X [
 244ULL ] - X [ 312ULL ] ) / 2.0 ; tlu2_1d_linear_nearest_value ( & bi_efOut [
-0ULL ] , & t32 . mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( (
+0ULL ] , & t42 . mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField7 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1608_idx_0 = bi_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & ci_efOut
-[ 0ULL ] , & t32 . mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( (
+[ 0ULL ] , & t42 . mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField1 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1599_idx_0 = ci_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & di_efOut
-[ 0ULL ] , & t32 . mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( (
+[ 0ULL ] , & t42 . mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField17 , & t1184 [ 0ULL ] , & t126 [ 0ULL
 ] ) ; t1603_idx_0 = di_efOut [ 0 ] ; t2358 = ( t2087 + ( ( ( ( 1.0 -
 intrm_sf_mf_1299 ) - t3200 ) * t1608_idx_0 + t1599_idx_0 * intrm_sf_mf_1299 )
@@ -2435,44 +2431,44 @@ t2118 = 0.0 ; } else { t2118 = t3299 >= 1.0 ? 1.0 : t3299 ; } t1195 [ 0ULL ]
 = X [ 299ULL ] ; tlu2_linear_nearest_prelookup ( & ei_efOut . mField0 [ 0ULL
 ] , & ei_efOut . mField1 [ 0ULL ] , & ei_efOut . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL
-] , & t126 [ 0ULL ] ) ; t48 = ei_efOut ; tlu2_1d_linear_nearest_value ( &
-fi_efOut [ 0ULL ] , & t48 . mField0 [ 0ULL ] , & t48 . mField2 [ 0ULL ] , ( (
+] , & t126 [ 0ULL ] ) ; t36 = ei_efOut ; tlu2_1d_linear_nearest_value ( &
+fi_efOut [ 0ULL ] , & t36 . mField0 [ 0ULL ] , & t36 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField13 , & t1184 [ 0ULL ] , & t126 [ 0ULL
 ] ) ; t1608_idx_0 = fi_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( &
-gi_efOut [ 0ULL ] , & t48 . mField0 [ 0ULL ] , & t48 . mField2 [ 0ULL ] , ( (
+gi_efOut [ 0ULL ] , & t36 . mField0 [ 0ULL ] , & t36 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField14 , & t1184 [ 0ULL ] , & t126 [ 0ULL
 ] ) ; t1599_idx_0 = gi_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( &
-hi_efOut [ 0ULL ] , & t48 . mField0 [ 0ULL ] , & t48 . mField2 [ 0ULL ] , ( (
+hi_efOut [ 0ULL ] , & t36 . mField0 [ 0ULL ] , & t36 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField19 , & t1184 [ 0ULL ] , & t126 [ 0ULL
 ] ) ; t1603_idx_0 = hi_efOut [ 0 ] ; t3299 = ( ( ( 1.0 - t2114 ) - t2118 ) *
 t1608_idx_0 + t1599_idx_0 * t2114 ) + t1603_idx_0 * t2118 ;
-tlu2_1d_linear_nearest_value ( & ii_efOut [ 0ULL ] , & t48 . mField0 [ 0ULL ]
-, & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField10 ,
+tlu2_1d_linear_nearest_value ( & ii_efOut [ 0ULL ] , & t36 . mField0 [ 0ULL ]
+, & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField10 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = ii_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & ji_efOut [ 0ULL ] , & t48 . mField0 [ 0ULL ]
-, & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField11 ,
+tlu2_1d_linear_nearest_value ( & ji_efOut [ 0ULL ] , & t36 . mField0 [ 0ULL ]
+, & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField11 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = ji_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & ki_efOut [ 0ULL ] , & t48 . mField0 [ 0ULL ]
-, & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField18 ,
+tlu2_1d_linear_nearest_value ( & ki_efOut [ 0ULL ] , & t36 . mField0 [ 0ULL ]
+, & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField18 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = ki_efOut [ 0 ] ; t2119 =
 ( ( ( 1.0 - t2114 ) - t2118 ) * t1608_idx_0 + t1599_idx_0 * t2114 ) +
 t1603_idx_0 * t2118 ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_convection_B1 = U_idx_2 <=
 0.0 ? U_idx_2 : 0.0 ; tlu2_1d_linear_nearest_value ( & li_efOut [ 0ULL ] , &
-t48 . mField0 [ 0ULL ] , & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * )
+t36 . mField0 [ 0ULL ] , & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * )
 ( LC ) ) -> mField7 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 =
-li_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & mi_efOut [ 0ULL ] , & t48 .
-mField0 [ 0ULL ] , & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+li_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & mi_efOut [ 0ULL ] , & t36 .
+mField0 [ 0ULL ] , & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField1 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = mi_efOut
-[ 0 ] ; tlu2_1d_linear_nearest_value ( & ni_efOut [ 0ULL ] , & t48 . mField0
-[ 0ULL ] , & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_nearest_value ( & ni_efOut [ 0ULL ] , & t36 . mField0
+[ 0ULL ] , & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField17 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = ni_efOut [ 0
 ] ; U_idx_2 = ( ( ( 1.0 - t2114 ) - t2118 ) * t1608_idx_0 + t1599_idx_0 *
-t2114 ) + t1603_idx_0 * t2118 ; U_idx_0 = ( t2087 + U_idx_2 ) / 2.0 *
+t2114 ) + t1603_idx_0 * t2118 ; t1808 = ( t2087 + U_idx_2 ) / 2.0 *
 0.0019634954084936209 ; t2114 = -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_convection_B1 * 0.05 / (
-U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) ; t2118 = t2114 >= 0.0 ? t2114 : - t2114
-; Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_convection_B1 = t2118 >
+t1808 == 0.0 ? 1.0E-16 : t1808 ) ; t2118 = t2114 >= 0.0 ? t2114 : - t2114 ;
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_convection_B1 = t2118 >
 1000.0 ? t2118 : 1000.0 ; t2408 = pmf_log10 ( 6.9 / (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_convection_B1 == 0.0 ?
 1.0E-16 : Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_convection_B1 ) +
@@ -2504,10 +2500,10 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_convection_B1 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_u_g_I ; } else {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_convection_B1 = ( 1.0 -
 t2123 ) * 3.66 + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_u_g_I *
-t2123 ; } U_idx_0 = t2408 / 2.0 ; if ( t2118 >
+t2123 ; } t1808 = t2408 / 2.0 ; if ( t2118 >
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_convection_B1 *
-0.039269908169872414 / 0.0019634954084936209 / ( U_idx_0 == 0.0 ? 1.0E-16 :
-U_idx_0 ) / 30.0 ) { t2418 = ( t2111 + t3299 ) / 2.0 ; t2123 =
+0.039269908169872414 / 0.0019634954084936209 / ( t1808 == 0.0 ? 1.0E-16 :
+t1808 ) / 30.0 ) { t2418 = ( t2111 + t3299 ) / 2.0 ; t2123 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_convection_B1 *
 0.039269908169872414 / ( t2118 == 0.0 ? 1.0E-16 : t2118 ) /
 0.0019634954084936209 / ( t2418 == 0.0 ? 1.0E-16 : t2418 ) ; } else { t2123 =
@@ -2521,12 +2517,12 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_convection_B1 *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_convection_B1 = pmf_sqrt (
 X [ 312ULL ] * X [ 312ULL ] + 5.8094731428156895E-13 ) ; t2123 = pmf_sqrt ( X
 [ 312ULL ] * X [ 312ULL ] + 4.1024015709531014E-13 ) ;
-tlu2_1d_linear_linear_value ( & oi_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ]
-, & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField16 ,
+tlu2_1d_linear_linear_value ( & oi_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField16 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = oi_efOut [ 0 ] ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x6_Pipe_MA_u_g_I = t1608_idx_0 ;
-tlu2_1d_linear_linear_value ( & pi_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ]
-, & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 , &
+tlu2_1d_linear_linear_value ( & pi_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ]
+, & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 , &
 t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = pi_efOut [ 0 ] ; t2130 = -
 X [ 245ULL ] + X [ 320ULL ] ; t2132 = ( ( - X [ 244ULL ] + X [ 312ULL ] ) +
 U_idx_6 ) - t3396 * 100000.0 ; t2133 = ( ( - X [ 246ULL ] + X [ 321ULL ] ) +
@@ -2588,11 +2584,11 @@ t2418 = t3150 * 0.0019634954084936209 ; t3254 = t2162 * 0.05 / ( t2418 == 0.0
 ? 1.0E-16 : t2418 ) ; t2417 = X [ 45ULL ] * t2154 ; t2164 = X [ 46ULL ] / (
 t2417 == 0.0 ? 1.0E-16 : t2417 ) ; t2422 = t2164 * 9.8174770424681068E-6 ;
 t3180 = t3165 * t3150 * 35.2 / ( t2422 == 0.0 ? 1.0E-16 : t2422 ) ; t3185 =
-t3254 >= 1.0 ? t3254 : 1.0 ; U_idx_0 = pmf_log10 ( 6.9 / ( t3185 == 0.0 ?
+t3254 >= 1.0 ? t3254 : 1.0 ; t1808 = pmf_log10 ( 6.9 / ( t3185 == 0.0 ?
 1.0E-16 : t3185 ) + 2.8767404433520813E-5 ) * pmf_log10 ( 6.9 / ( t3185 ==
 0.0 ? 1.0E-16 : t3185 ) + 2.8767404433520813E-5 ) * 3.24 ; t2425 = t2164 *
-3.855314219175531E-7 ; t2162 = t3165 * t2162 * ( 1.0 / ( U_idx_0 == 0.0 ?
-1.0E-16 : U_idx_0 ) ) * 0.55 / ( t2425 == 0.0 ? 1.0E-16 : t2425 ) ; t3185 = (
+3.855314219175531E-7 ; t2162 = t3165 * t2162 * ( 1.0 / ( t1808 == 0.0 ?
+1.0E-16 : t1808 ) ) * 0.55 / ( t2425 == 0.0 ? 1.0E-16 : t2425 ) ; t3185 = (
 t3254 - 2000.0 ) / 2000.0 ; t3193 = t3185 * t3185 * 3.0 - t3185 * t3185 *
 t3185 * 2.0 ; if ( t3254 <= 2000.0 ) { t3185 = t3180 * 1.0E-5 ; } else if (
 t3254 >= 4000.0 ) { t3185 = t2162 * 1.0E-5 ; } else { t3185 = ( ( 1.0 - t3193
@@ -2632,19 +2628,19 @@ t2169 = t2151 - X [ 46ULL ] ; t1195 [ 0ULL ] = X [ 45ULL ] ;
 tlu2_linear_linear_prelookup ( & ui_efOut . mField0 [ 0ULL ] , & ui_efOut .
 mField1 [ 0ULL ] , & ui_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t48 = ui_efOut ; tlu2_1d_linear_linear_value ( & vi_efOut [ 0ULL ] , & t48 .
-mField0 [ 0ULL ] , & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t36 = ui_efOut ; tlu2_1d_linear_linear_value ( & vi_efOut [ 0ULL ] , & t36 .
+mField0 [ 0ULL ] , & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = vi_efOut
 [ 0 ] ; t2171 = t1608_idx_0 ; tlu2_1d_linear_linear_value ( & wi_efOut [ 0ULL
-] , & t48 . mField0 [ 0ULL ] , & t48 . mField2 [ 0ULL ] , ( (
+] , & t36 . mField0 [ 0ULL ] , & t36 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField9 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1608_idx_0 = wi_efOut [ 0 ] ; intrm_sf_mf_1065 = t1608_idx_0 ; if ( 1.0
 - X [ 47ULL ] >= 0.01 ) { t2175 = 1.0 - X [ 47ULL ] ; } else if ( 1.0 - X [
 47ULL ] >= - 0.1 ) { t2175 = pmf_exp ( ( ( 1.0 - X [ 47ULL ] ) - 0.01 ) /
 0.01 ) * 0.01 ; } else { t2175 = 1.6701700790245661E-7 ; } t2174 = X [ 48ULL
 ] / ( t2175 == 0.0 ? 1.0E-16 : t2175 ) * - 36.965491221318985 +
-296.802103844292 ; tlu2_1d_linear_linear_value ( & xi_efOut [ 0ULL ] , & t48
-. mField0 [ 0ULL ] , & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC
+296.802103844292 ; tlu2_1d_linear_linear_value ( & xi_efOut [ 0ULL ] , & t36
+. mField0 [ 0ULL ] , & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC
 ) ) -> mField3 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 =
 xi_efOut [ 0 ] ; t2176 = pmf_exp ( pmf_log ( X [ 46ULL ] * 100000.0 ) -
 t1608_idx_0 ) ; if ( t2176 >= 1.0 ) { U_idx_1 = ( t2176 - 1.0 ) * 461.523 +
@@ -2757,17 +2753,17 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_convection_A2 ) / 2.0 ) /
 else if ( t2184 >= 4000.0 ) { t2186 = t2189 ; } else { t2186 = ( 1.0 - t2188
 ) * 3.66 + t2189 * t2188 ; } t2505 = U_idx_1 / 2.0 ; if ( t2184 > t2186 *
 0.15707963267948966 / 0.0019634954084936209 / ( t2505 == 0.0 ? 1.0E-16 :
-t2505 ) / 30.0 ) { U_idx_0 = ( t2181 +
+t2505 ) / 30.0 ) { t1808 = ( t2181 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_convection_A2 ) / 2.0 ;
 t2188 = t2186 * 0.15707963267948966 / ( t2184 == 0.0 ? 1.0E-16 : t2184 ) /
-0.0019634954084936209 / ( U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) ; } else {
-t2188 = 30.0 ; } t2184 = ( X [ 328ULL ] - X [ 324ULL ] ) * ( 1.0 - pmf_exp (
-- t2188 ) ) ; intrm_sf_mf_1054 = intrm_sf_mf_1054 * 0.0019634954084936209 /
-0.05 * ( U_idx_1 / 2.0 ) * ( ( piece218 + intrm_sf_mf_1065 ) / 2.0 ) * t2184
-; if ( X [ 346ULL ] <= 0.0 ) { t2184 = 0.0 ; } else { t2184 = X [ 346ULL ] >=
-1.0 ? 1.0 : X [ 346ULL ] ; } if ( X [ 345ULL ] <= 0.0 ) { t2186 = 0.0 ; }
-else { t2186 = X [ 345ULL ] >= 1.0 ? 1.0 : X [ 345ULL ] ; } t2188 = ( ( ( 1.0
-- t2184 ) - t2186 ) * 296.802103844292 + t2184 * 461.523 ) + t2186 *
+0.0019634954084936209 / ( t1808 == 0.0 ? 1.0E-16 : t1808 ) ; } else { t2188 =
+30.0 ; } t2184 = ( X [ 328ULL ] - X [ 324ULL ] ) * ( 1.0 - pmf_exp ( - t2188
+) ) ; intrm_sf_mf_1054 = intrm_sf_mf_1054 * 0.0019634954084936209 / 0.05 * (
+U_idx_1 / 2.0 ) * ( ( piece218 + intrm_sf_mf_1065 ) / 2.0 ) * t2184 ; if ( X
+[ 346ULL ] <= 0.0 ) { t2184 = 0.0 ; } else { t2184 = X [ 346ULL ] >= 1.0 ?
+1.0 : X [ 346ULL ] ; } if ( X [ 345ULL ] <= 0.0 ) { t2186 = 0.0 ; } else {
+t2186 = X [ 345ULL ] >= 1.0 ? 1.0 : X [ 345ULL ] ; } t2188 = ( ( ( 1.0 -
+t2184 ) - t2186 ) * 296.802103844292 + t2184 * 461.523 ) + t2186 *
 259.836612622973 ; t2189 = X [ 346ULL ] * 461.523 / ( t2188 == 0.0 ? 1.0E-16
 : t2188 ) ; if ( t2189 <= 0.0 ) { t2190 = 0.0 ; } else { t2190 = t2189 >= 1.0
 ? 1.0 : t2189 ; } t2189 = X [ 345ULL ] * 259.836612622973 / ( t2188 == 0.0 ?
@@ -2776,34 +2772,34 @@ t2189 >= 1.0 ? 1.0 : t2189 ; } t1195 [ 0ULL ] = X [ 343ULL ] ;
 tlu2_linear_nearest_prelookup ( & pj_efOut . mField0 [ 0ULL ] , & pj_efOut .
 mField1 [ 0ULL ] , & pj_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t32 = pj_efOut ; tlu2_1d_linear_nearest_value ( & qj_efOut [ 0ULL ] , & t32 .
-mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t42 = pj_efOut ; tlu2_1d_linear_nearest_value ( & qj_efOut [ 0ULL ] , & t42 .
+mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField13 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = qj_efOut
-[ 0 ] ; tlu2_1d_linear_nearest_value ( & rj_efOut [ 0ULL ] , & t32 . mField0
-[ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_nearest_value ( & rj_efOut [ 0ULL ] , & t42 . mField0
+[ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField14 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = rj_efOut [ 0
-] ; tlu2_1d_linear_nearest_value ( & sj_efOut [ 0ULL ] , & t32 . mField0 [
-0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+] ; tlu2_1d_linear_nearest_value ( & sj_efOut [ 0ULL ] , & t42 . mField0 [
+0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField19 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = sj_efOut [ 0
 ] ; t2189 = ( ( ( 1.0 - t2190 ) - t2191 ) * t1608_idx_0 + t1599_idx_0 * t2190
 ) + t1603_idx_0 * t2191 ; tlu2_1d_linear_nearest_value ( & tj_efOut [ 0ULL ]
-, & t32 . mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem
+, & t42 . mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem
 * ) ( LC ) ) -> mField10 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0
-= tj_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & uj_efOut [ 0ULL ] , & t32
-. mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC
+= tj_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & uj_efOut [ 0ULL ] , & t42
+. mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC
 ) ) -> mField11 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 =
-uj_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & vj_efOut [ 0ULL ] , & t32 .
-mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+uj_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & vj_efOut [ 0ULL ] , & t42 .
+mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField18 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = vj_efOut
 [ 0 ] ; t2192 = ( ( ( 1.0 - t2190 ) - t2191 ) * t1608_idx_0 + t1599_idx_0 *
 t2190 ) + t1603_idx_0 * t2191 ; tlu2_1d_linear_nearest_value ( & wj_efOut [
-0ULL ] , & t32 . mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( (
+0ULL ] , & t42 . mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField7 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1608_idx_0 = wj_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & xj_efOut
-[ 0ULL ] , & t32 . mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( (
+[ 0ULL ] , & t42 . mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField1 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1599_idx_0 = xj_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( & yj_efOut
-[ 0ULL ] , & t32 . mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( (
+[ 0ULL ] , & t42 . mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField17 , & t1184 [ 0ULL ] , & t126 [ 0ULL
 ] ) ; t1603_idx_0 = yj_efOut [ 0 ] ; t2532 = ( t3150 + ( ( ( ( 1.0 - t2190 )
 - t2191 ) * t1608_idx_0 + t1599_idx_0 * t2190 ) + t1603_idx_0 * t2191 ) ) /
@@ -2834,11 +2830,11 @@ else if ( t2190 >= 4000.0 ) { t2191 = t2194 ; } else { t2191 = ( 1.0 -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_u_w_I ) * 3.66 + t2194 *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_u_w_I ; } t2505 = U_idx_1 /
 2.0 ; if ( t2190 > t2191 * 0.15707963267948966 / 0.0019634954084936209 / (
-t2505 == 0.0 ? 1.0E-16 : t2505 ) / 30.0 ) { U_idx_0 = (
+t2505 == 0.0 ? 1.0E-16 : t2505 ) / 30.0 ) { t1808 = (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_convection_A2 + t2189 ) /
 2.0 ; Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_u_w_I = t2191 *
 0.15707963267948966 / ( t2190 == 0.0 ? 1.0E-16 : t2190 ) /
-0.0019634954084936209 / ( U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) ; } else {
+0.0019634954084936209 / ( t1808 == 0.0 ? 1.0E-16 : t1808 ) ; } else {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_u_w_I = 30.0 ; }
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_convection_A2 = ( X [
 328ULL ] - X [ 343ULL ] ) * ( 1.0 - pmf_exp ( -
@@ -2854,11 +2850,11 @@ X [ 347ULL ] * X [ 347ULL ] + 4.1024015709531014E-13 ) ; t2189 = pmf_sqrt ( X
 [ 335ULL ] * X [ 335ULL ] + 3.0116308772356542E-13 ) ; t2190 = pmf_sqrt ( X [
 335ULL ] * X [ 335ULL ] + 5.8094731428156895E-13 ) ; t2191 = pmf_sqrt ( X [
 335ULL ] * X [ 335ULL ] + 4.1024015709531014E-13 ) ;
-tlu2_1d_linear_linear_value ( & ak_efOut [ 0ULL ] , & t48 . mField0 [ 0ULL ]
-, & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField16 ,
+tlu2_1d_linear_linear_value ( & ak_efOut [ 0ULL ] , & t36 . mField0 [ 0ULL ]
+, & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField16 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = ak_efOut [ 0 ] ; t2192 =
-t1608_idx_0 ; tlu2_1d_linear_linear_value ( & bk_efOut [ 0ULL ] , & t48 .
-mField0 [ 0ULL ] , & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t1608_idx_0 ; tlu2_1d_linear_linear_value ( & bk_efOut [ 0ULL ] , & t36 .
+mField0 [ 0ULL ] , & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField6 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = bk_efOut
 [ 0 ] ; t2194 = - X [ 336ULL ] + X [ 358ULL ] ; t2195 = ( - X [ 335ULL ] + X
 [ 347ULL ] ) - t2164 * 100000.0 ; t2196 = ( - X [ 337ULL ] + X [ 359ULL ] ) -
@@ -2960,16 +2956,16 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_Dp_AI_unchoke * 0.01 / (
 t2546 == 0.0 ? 1.0E-16 : t2546 ) ; t2548 = X [ 12ULL ] * t2212 ; t2236 = X [
 49ULL ] / ( t2548 == 0.0 ? 1.0E-16 : t2548 ) ; t2550 = t2236 *
 6.4000000000000011E-5 ; t2237 = t2228 * t2227 * 2.9973120849090416 / ( t2550
-== 0.0 ? 1.0E-16 : t2550 ) ; t2239 = t2231 >= 1.0 ? t2231 : 1.0 ; U_idx_0 =
+== 0.0 ? 1.0E-16 : t2550 ) ; t2239 = t2231 >= 1.0 ? t2231 : 1.0 ; t1808 =
 pmf_log10 ( 6.9 / ( t2239 == 0.0 ? 1.0E-16 : t2239 ) + 0.00017169489553429715
 ) * pmf_log10 ( 6.9 / ( t2239 == 0.0 ? 1.0E-16 : t2239 ) +
 0.00017169489553429715 ) * 3.24 ; t2553 = t2236 * 0.0020480000000000003 ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_Dp_AI_unchoke = t2228 *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_Dp_AI_unchoke * ( 1.0 / (
-U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) ) * 0.046833001326703774 / ( t2553 ==
-0.0 ? 1.0E-16 : t2553 ) ; t2239 = ( t2231 - 2000.0 ) / 2000.0 ; t2241 = t2239
-* t2239 * 3.0 - t2239 * t2239 * t2239 * 2.0 ; if ( t2231 <= 2000.0 ) { t2239
-= t2237 * 1.0E-5 ; } else if ( t2231 >= 4000.0 ) { t2239 =
+t1808 == 0.0 ? 1.0E-16 : t1808 ) ) * 0.046833001326703774 / ( t2553 == 0.0 ?
+1.0E-16 : t2553 ) ; t2239 = ( t2231 - 2000.0 ) / 2000.0 ; t2241 = t2239 *
+t2239 * 3.0 - t2239 * t2239 * t2239 * 2.0 ; if ( t2231 <= 2000.0 ) { t2239 =
+t2237 * 1.0E-5 ; } else if ( t2231 >= 4000.0 ) { t2239 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_Dp_AI_unchoke * 1.0E-5 ; }
 else { t2239 = ( ( 1.0 - t2241 ) * t2237 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_Dp_AI_unchoke * t2241 ) *
@@ -2991,7 +2987,7 @@ t2239 * t2212 ) * 1.0E-9 ) ; t2562 = X [ 376ULL ] * X [ 376ULL ] * t2239 ;
 t2243 = - pmf_sqrt ( fabs ( t2562 / ( t2212 == 0.0 ? 1.0E-16 : t2212 ) / ( X
 [ 375ULL ] == 0.0 ? 1.0E-16 : X [ 375ULL ] ) ) ) * 0.32 ; if ( t2243 >= 0.0 )
 { t2245 = t2243 * 100000.0 ; } else { t2245 = - t2243 * 100000.0 ; } t2246 =
-t2245 * 0.01 / ( t2546 == 0.0 ? 1.0E-16 : t2546 ) ; U_idx_0 = t2243 * t2227 *
+t2245 * 0.01 / ( t2546 == 0.0 ? 1.0E-16 : t2546 ) ; t1808 = t2243 * t2227 *
 2.9973120849090416 / ( t2550 == 0.0 ? 1.0E-16 : t2550 ) ; t2249 = t2246 >=
 1.0 ? t2246 : 1.0 ; t2659 = pmf_log10 ( 6.9 / ( t2249 == 0.0 ? 1.0E-16 :
 t2249 ) + 0.00017169489553429715 ) * pmf_log10 ( 6.9 / ( t2249 == 0.0 ?
@@ -2999,14 +2995,14 @@ t2249 ) + 0.00017169489553429715 ) * pmf_log10 ( 6.9 / ( t2249 == 0.0 ?
 ( 1.0 / ( t2659 == 0.0 ? 1.0E-16 : t2659 ) ) * 0.046833001326703774 / ( t2553
 == 0.0 ? 1.0E-16 : t2553 ) ; t2249 = ( t2246 - 2000.0 ) / 2000.0 ;
 intrm_sf_mf_1235 = t2249 * t2249 * 3.0 - t2249 * t2249 * t2249 * 2.0 ; if (
-t2246 <= 2000.0 ) { t2249 = U_idx_0 * 1.0E-5 ; } else if ( t2246 >= 4000.0 )
-{ t2249 = t2245 * 1.0E-5 ; } else { t2249 = ( ( 1.0 - intrm_sf_mf_1235 ) *
-U_idx_0 + t2245 * intrm_sf_mf_1235 ) * 1.0E-5 ; } t2241 = X [ 374ULL ] *
-t2241 / 0.32 * 0.00031622776601683789 + t2249 ; t2245 = X [ 69ULL ] - X [
-49ULL ] ; t1195 [ 0ULL ] = X [ 12ULL ] ; tlu2_linear_linear_prelookup ( &
-gk_efOut . mField0 [ 0ULL ] , & gk_efOut . mField1 [ 0ULL ] , & gk_efOut .
-mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField2 , & t1195 [
-0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t86 = gk_efOut ;
+t2246 <= 2000.0 ) { t2249 = t1808 * 1.0E-5 ; } else if ( t2246 >= 4000.0 ) {
+t2249 = t2245 * 1.0E-5 ; } else { t2249 = ( ( 1.0 - intrm_sf_mf_1235 ) *
+t1808 + t2245 * intrm_sf_mf_1235 ) * 1.0E-5 ; } t2241 = X [ 374ULL ] * t2241
+/ 0.32 * 0.00031622776601683789 + t2249 ; t2245 = X [ 69ULL ] - X [ 49ULL ] ;
+t1195 [ 0ULL ] = X [ 12ULL ] ; tlu2_linear_linear_prelookup ( & gk_efOut .
+mField0 [ 0ULL ] , & gk_efOut . mField1 [ 0ULL ] , & gk_efOut . mField2 [
+0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField2 , & t1195 [ 0ULL ] , &
+t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t86 = gk_efOut ;
 tlu2_1d_linear_linear_value ( & hk_efOut [ 0ULL ] , & t86 . mField0 [ 0ULL ]
 , & t86 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField4 , &
 t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = hk_efOut [ 0 ] ; t2249 =
@@ -3023,12 +3019,12 @@ tlu2_1d_linear_linear_value ( & jk_efOut [ 0ULL ] , & t86 . mField0 [ 0ULL ]
 t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = jk_efOut [ 0 ] ; t2253 =
 pmf_exp ( pmf_log ( X [ 49ULL ] * 100000.0 ) - t1608_idx_0 ) ; if ( t2253 >=
 1.0 ) { t2659 = ( t2253 - 1.0 ) * 461.523 + t2251 ; t2254 = t2251 / ( t2659
-== 0.0 ? 1.0E-16 : t2659 ) ; } else { t2254 = 1.0 ; } U_idx_0 = t2254 * 0.01
-; t2251 = ( X [ 14ULL ] - t2254 ) / ( U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) ;
-if ( X [ 14ULL ] - t2254 <= 0.0 ) { t2251 = 0.0 ; } else if ( X [ 14ULL ] -
-t2254 >= t2254 * 0.01 ) { t2251 = X [ 14ULL ] - t2254 ; } else { t2251 = ( X
-[ 14ULL ] - t2254 ) * ( t2251 * t2251 * 3.0 - t2251 * t2251 * t2251 * 2.0 ) ;
-} t2236 = t2236 * t2251 * 0.026773120849090417 / 0.001 ; t2251 = ( t2249 -
+== 0.0 ? 1.0E-16 : t2659 ) ; } else { t2254 = 1.0 ; } t1808 = t2254 * 0.01 ;
+t2251 = ( X [ 14ULL ] - t2254 ) / ( t1808 == 0.0 ? 1.0E-16 : t1808 ) ; if ( X
+[ 14ULL ] - t2254 <= 0.0 ) { t2251 = 0.0 ; } else if ( X [ 14ULL ] - t2254 >=
+t2254 * 0.01 ) { t2251 = X [ 14ULL ] - t2254 ; } else { t2251 = ( X [ 14ULL ]
+- t2254 ) * ( t2251 * t2251 * 3.0 - t2251 * t2251 * t2251 * 2.0 ) ; } t2236 =
+t2236 * t2251 * 0.026773120849090417 / 0.001 ; t2251 = ( t2249 -
 intrm_sf_mf_1235 ) * t2236 ; tlu2_1d_linear_nearest_value ( & kk_efOut [ 0ULL
 ] , & t94 . mField0 [ 0ULL ] , & t94 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField10 , & t1184 [ 0ULL ] , & t126 [ 0ULL
@@ -3052,9 +3048,9 @@ tlu2_1d_linear_nearest_value ( & pk_efOut [ 0ULL ] , & t94 . mField0 [ 0ULL ]
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = pk_efOut [ 0 ] ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_Q_conv = ( ( ( 1.0 - t2221
 ) - t2225 ) * t1608_idx_0 + t1599_idx_0 * t2221 ) + t1603_idx_0 * t2225 ;
-t2221 = ( - X [ 312ULL ] - X [ 374ULL ] ) / 2.0 ; U_idx_0 = ( t2227 + U_idx_2
-) / 2.0 * 0.32 ; U_idx_2 = ( t2221 >= 0.0 ? t2221 : 0.0 ) * 0.01 / ( U_idx_0
-== 0.0 ? 1.0E-16 : U_idx_0 ) ; t2225 = U_idx_2 >= 0.0 ? U_idx_2 : - U_idx_2 ;
+t2221 = ( - X [ 312ULL ] - X [ 374ULL ] ) / 2.0 ; t1808 = ( t2227 + U_idx_2 )
+/ 2.0 * 0.32 ; U_idx_2 = ( t2221 >= 0.0 ? t2221 : 0.0 ) * 0.01 / ( t1808 ==
+0.0 ? 1.0E-16 : t1808 ) ; t2225 = U_idx_2 >= 0.0 ? U_idx_2 : - U_idx_2 ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 = t2225 >
 1000.0 ? t2225 : 1000.0 ; t2659 = pmf_log10 ( 6.9 / (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 == 0.0 ?
@@ -3087,9 +3083,9 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 = 3.66 ; }
 else if ( t2225 >= 4000.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 = t2258 ; }
 else { Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 = (
-1.0 - t2257 ) * 3.66 + t2258 * t2257 ; } U_idx_0 = t2659 / 2.0 ; if ( t2225 >
+1.0 - t2257 ) * 3.66 + t2258 * t2257 ; } t1808 = t2659 / 2.0 ; if ( t2225 >
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 *
-10.709248339636167 / 0.32 / ( U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) / 30.0 ) {
+10.709248339636167 / 0.32 / ( t1808 == 0.0 ? 1.0E-16 : t1808 ) / 30.0 ) {
 t2644 = ( Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_Q_conv + t3299 )
 / 2.0 ; t2257 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 *
@@ -3149,11 +3145,11 @@ _NeDynamicSystem * ) ( LC ) ) -> mField1 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 [ 0ULL ] , & t94 . mField0 [ 0ULL ] , & t94 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField17 , & t1184 [ 0ULL ] , & t126 [ 0ULL
 ] ) ; t1603_idx_0 = al_efOut [ 0 ] ; t2221 = ( ( ( 1.0 - t2257 ) - t2258 ) *
-t1608_idx_0 + t1599_idx_0 * t2257 ) + t1603_idx_0 * t2258 ; U_idx_0 = ( t2227
-+ t2221 ) / 2.0 * 0.32 ; t2257 = - intrm_sf_mf_1269 * 0.01 / ( U_idx_0 == 0.0
-? 1.0E-16 : U_idx_0 ) ; t2258 = t2257 >= 0.0 ? t2257 : - t2257 ;
-intrm_sf_mf_1269 = t2258 > 1000.0 ? t2258 : 1000.0 ; t2659 = pmf_log10 ( 6.9
-/ ( intrm_sf_mf_1269 == 0.0 ? 1.0E-16 : intrm_sf_mf_1269 ) +
+t1608_idx_0 + t1599_idx_0 * t2257 ) + t1603_idx_0 * t2258 ; t1808 = ( t2227 +
+t2221 ) / 2.0 * 0.32 ; t2257 = - intrm_sf_mf_1269 * 0.01 / ( t1808 == 0.0 ?
+1.0E-16 : t1808 ) ; t2258 = t2257 >= 0.0 ? t2257 : - t2257 ; intrm_sf_mf_1269
+= t2258 > 1000.0 ? t2258 : 1000.0 ; t2659 = pmf_log10 ( 6.9 / (
+intrm_sf_mf_1269 == 0.0 ? 1.0E-16 : intrm_sf_mf_1269 ) +
 0.00017169489553429715 ) * pmf_log10 ( 6.9 / ( intrm_sf_mf_1269 == 0.0 ?
 1.0E-16 : intrm_sf_mf_1269 ) + 0.00017169489553429715 ) * 3.24 ; t2261 = 1.0
 / ( t2659 == 0.0 ? 1.0E-16 : t2659 ) ; t2659 =
@@ -3176,8 +3172,8 @@ intrm_sf_mf_1269 * intrm_sf_mf_1269 * 3.0 - intrm_sf_mf_1269 *
 intrm_sf_mf_1269 * intrm_sf_mf_1269 * 2.0 ; if ( t2258 <= 2000.0 ) {
 intrm_sf_mf_1269 = 3.66 ; } else if ( t2258 >= 4000.0 ) { intrm_sf_mf_1269 =
 t2262 ; } else { intrm_sf_mf_1269 = ( 1.0 - t2261 ) * 3.66 + t2262 * t2261 ;
-} U_idx_0 = t2659 / 2.0 ; if ( t2258 > intrm_sf_mf_1269 * 10.709248339636167
-/ 0.32 / ( U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) / 30.0 ) { t2644 = (
+} t1808 = t2659 / 2.0 ; if ( t2258 > intrm_sf_mf_1269 * 10.709248339636167 /
+0.32 / ( t1808 == 0.0 ? 1.0E-16 : t1808 ) / 30.0 ) { t2644 = (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA_Q_conv +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 ) / 2.0 ;
 t2261 = intrm_sf_mf_1269 * 10.709248339636167 / ( t2258 == 0.0 ? 1.0E-16 :
@@ -3251,16 +3247,16 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_Dp_AI_unchok * 0.01 / (
 t2644 == 0.0 ? 1.0E-16 : t2644 ) ; t2646 = X [ 15ULL ] * t2273 ; t2284 = X [
 50ULL ] / ( t2646 == 0.0 ? 1.0E-16 : t2646 ) ; t2648 = t2284 *
 6.4000000000000011E-5 ; t2285 = t2280 * t2279 * 2.9973120849090416 / ( t2648
-== 0.0 ? 1.0E-16 : t2648 ) ; t2286 = t2283 >= 1.0 ? t2283 : 1.0 ; U_idx_0 =
+== 0.0 ? 1.0E-16 : t2648 ) ; t2286 = t2283 >= 1.0 ? t2283 : 1.0 ; t1808 =
 pmf_log10 ( 6.9 / ( t2286 == 0.0 ? 1.0E-16 : t2286 ) + 0.00017169489553429715
 ) * pmf_log10 ( 6.9 / ( t2286 == 0.0 ? 1.0E-16 : t2286 ) +
 0.00017169489553429715 ) * 3.24 ; t2651 = t2284 * 0.0020480000000000003 ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_Dp_AI_unchok = t2280 *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_Dp_AI_unchok * ( 1.0 / (
-U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) ) * 0.046833001326703774 / ( t2651 ==
-0.0 ? 1.0E-16 : t2651 ) ; t2286 = ( t2283 - 2000.0 ) / 2000.0 ; t2287 = t2286
-* t2286 * 3.0 - t2286 * t2286 * t2286 * 2.0 ; if ( t2283 <= 2000.0 ) { t2286
-= t2285 * 1.0E-5 ; } else if ( t2283 >= 4000.0 ) { t2286 =
+t1808 == 0.0 ? 1.0E-16 : t1808 ) ) * 0.046833001326703774 / ( t2651 == 0.0 ?
+1.0E-16 : t2651 ) ; t2286 = ( t2283 - 2000.0 ) / 2000.0 ; t2287 = t2286 *
+t2286 * 3.0 - t2286 * t2286 * t2286 * 2.0 ; if ( t2283 <= 2000.0 ) { t2286 =
+t2285 * 1.0E-5 ; } else if ( t2283 >= 4000.0 ) { t2286 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_Dp_AI_unchok * 1.0E-5 ; }
 else { t2286 = ( ( 1.0 - t2287 ) * t2285 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_Dp_AI_unchok * t2287 ) *
@@ -3282,7 +3278,7 @@ t2286 * t2273 ) * 1.0E-9 ) ; t2659 = X [ 389ULL ] * X [ 389ULL ] * t2286 ;
 t1648 = - pmf_sqrt ( fabs ( t2659 / ( t2273 == 0.0 ? 1.0E-16 : t2273 ) / ( X
 [ 388ULL ] == 0.0 ? 1.0E-16 : X [ 388ULL ] ) ) ) * 0.32 ; if ( t1648 >= 0.0 )
 { t2288 = t1648 * 100000.0 ; } else { t2288 = - t1648 * 100000.0 ; } t2289 =
-t2288 * 0.01 / ( t2644 == 0.0 ? 1.0E-16 : t2644 ) ; U_idx_0 = t1648 * t2279 *
+t2288 * 0.01 / ( t2644 == 0.0 ? 1.0E-16 : t2644 ) ; t1808 = t1648 * t2279 *
 2.9973120849090416 / ( t2648 == 0.0 ? 1.0E-16 : t2648 ) ; intrm_sf_mf_192 =
 t2289 >= 1.0 ? t2289 : 1.0 ; t1599_idx_0 = pmf_log10 ( 6.9 / (
 intrm_sf_mf_192 == 0.0 ? 1.0E-16 : intrm_sf_mf_192 ) + 0.00017169489553429715
@@ -3292,11 +3288,11 @@ t1599_idx_0 == 0.0 ? 1.0E-16 : t1599_idx_0 ) ) * 0.046833001326703774 / (
 t2651 == 0.0 ? 1.0E-16 : t2651 ) ; intrm_sf_mf_192 = ( t2289 - 2000.0 ) /
 2000.0 ; t2292 = intrm_sf_mf_192 * intrm_sf_mf_192 * 3.0 - intrm_sf_mf_192 *
 intrm_sf_mf_192 * intrm_sf_mf_192 * 2.0 ; if ( t2289 <= 2000.0 ) {
-intrm_sf_mf_192 = U_idx_0 * 1.0E-5 ; } else if ( t2289 >= 4000.0 ) {
+intrm_sf_mf_192 = t1808 * 1.0E-5 ; } else if ( t2289 >= 4000.0 ) {
 intrm_sf_mf_192 = t2288 * 1.0E-5 ; } else { intrm_sf_mf_192 = ( ( 1.0 - t2292
-) * U_idx_0 + t2288 * t2292 ) * 1.0E-5 ; } t2287 = - ( X [ 347ULL ] * t2287 )
-/ 0.32 * 0.00031622776601683789 + intrm_sf_mf_192 ; t2288 = X [ 325ULL ] - X
-[ 50ULL ] ; t1195 [ 0ULL ] = X [ 15ULL ] ; tlu2_linear_linear_prelookup ( &
+) * t1808 + t2288 * t2292 ) * 1.0E-5 ; } t2287 = - ( X [ 347ULL ] * t2287 ) /
+0.32 * 0.00031622776601683789 + intrm_sf_mf_192 ; t2288 = X [ 325ULL ] - X [
+50ULL ] ; t1195 [ 0ULL ] = X [ 15ULL ] ; tlu2_linear_linear_prelookup ( &
 hl_efOut . mField0 [ 0ULL ] , & hl_efOut . mField1 [ 0ULL ] , & hl_efOut .
 mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField2 , & t1195 [
 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t94 = hl_efOut ;
@@ -3316,71 +3312,70 @@ tlu2_1d_linear_linear_value ( & kl_efOut [ 0ULL ] , & t94 . mField0 [ 0ULL ]
 t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = kl_efOut [ 0 ] ; t2295 =
 pmf_exp ( pmf_log ( X [ 50ULL ] * 100000.0 ) - t1608_idx_0 ) ; if ( t2295 >=
 1.0 ) { t1599_idx_0 = ( t2295 - 1.0 ) * 461.523 + t2293 ; t2297 = t2293 / (
-t1599_idx_0 == 0.0 ? 1.0E-16 : t1599_idx_0 ) ; } else { t2297 = 1.0 ; }
-U_idx_0 = t2297 * 0.01 ; t2293 = ( X [ 17ULL ] - t2297 ) / ( U_idx_0 == 0.0 ?
-1.0E-16 : U_idx_0 ) ; if ( X [ 17ULL ] - t2297 <= 0.0 ) { t2293 = 0.0 ; }
-else if ( X [ 17ULL ] - t2297 >= t2297 * 0.01 ) { t2293 = X [ 17ULL ] - t2297
-; } else { t2293 = ( X [ 17ULL ] - t2297 ) * ( t2293 * t2293 * 3.0 - t2293 *
-t2293 * t2293 * 2.0 ) ; } t2284 = t2284 * t2293 * 0.026773120849090417 /
-0.001 ; t2293 = ( intrm_sf_mf_192 - t2292 ) * t2284 ;
-tlu2_1d_linear_nearest_value ( & ll_efOut [ 0ULL ] , & t86 . mField0 [ 0ULL ]
-, & t86 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField10 ,
-& t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = ll_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & ml_efOut [ 0ULL ] , & t86 . mField0 [ 0ULL ]
-, & t86 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField11 ,
-& t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = ml_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & nl_efOut [ 0ULL ] , & t86 . mField0 [ 0ULL ]
-, & t86 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField18 ,
-& t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = nl_efOut [ 0 ] ; t2292 =
-( ( ( 1.0 - intrm_sf_mf_1402 ) - t2278 ) * t1608_idx_0 + t1599_idx_0 *
-intrm_sf_mf_1402 ) + t1603_idx_0 * t2278 ; t2297 = ( 343.15 - X [ 15ULL ] ) *
-( t2292 * 10.709248339636167 / 0.01 ) ; tlu2_1d_linear_nearest_value ( &
-ol_efOut [ 0ULL ] , & t86 . mField0 [ 0ULL ] , & t86 . mField2 [ 0ULL ] , ( (
-_NeDynamicSystem * ) ( LC ) ) -> mField13 , & t1184 [ 0ULL ] , & t126 [ 0ULL
-] ) ; t1608_idx_0 = ol_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( &
-pl_efOut [ 0ULL ] , & t86 . mField0 [ 0ULL ] , & t86 . mField2 [ 0ULL ] , ( (
-_NeDynamicSystem * ) ( LC ) ) -> mField14 , & t1184 [ 0ULL ] , & t126 [ 0ULL
-] ) ; t1599_idx_0 = pl_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( &
-ql_efOut [ 0ULL ] , & t86 . mField0 [ 0ULL ] , & t86 . mField2 [ 0ULL ] , ( (
-_NeDynamicSystem * ) ( LC ) ) -> mField19 , & t1184 [ 0ULL ] , & t126 [ 0ULL
-] ) ; t1603_idx_0 = ql_efOut [ 0 ] ; t2298 = ( ( ( 1.0 - intrm_sf_mf_1402 ) -
+t1599_idx_0 == 0.0 ? 1.0E-16 : t1599_idx_0 ) ; } else { t2297 = 1.0 ; } t1808
+= t2297 * 0.01 ; t2293 = ( X [ 17ULL ] - t2297 ) / ( t1808 == 0.0 ? 1.0E-16 :
+t1808 ) ; if ( X [ 17ULL ] - t2297 <= 0.0 ) { t2293 = 0.0 ; } else if ( X [
+17ULL ] - t2297 >= t2297 * 0.01 ) { t2293 = X [ 17ULL ] - t2297 ; } else {
+t2293 = ( X [ 17ULL ] - t2297 ) * ( t2293 * t2293 * 3.0 - t2293 * t2293 *
+t2293 * 2.0 ) ; } t2284 = t2284 * t2293 * 0.026773120849090417 / 0.001 ;
+t2293 = ( intrm_sf_mf_192 - t2292 ) * t2284 ; tlu2_1d_linear_nearest_value (
+& ll_efOut [ 0ULL ] , & t86 . mField0 [ 0ULL ] , & t86 . mField2 [ 0ULL ] , (
+( _NeDynamicSystem * ) ( LC ) ) -> mField10 , & t1184 [ 0ULL ] , & t126 [
+0ULL ] ) ; t1608_idx_0 = ll_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( &
+ml_efOut [ 0ULL ] , & t86 . mField0 [ 0ULL ] , & t86 . mField2 [ 0ULL ] , ( (
+_NeDynamicSystem * ) ( LC ) ) -> mField11 , & t1184 [ 0ULL ] , & t126 [ 0ULL
+] ) ; t1599_idx_0 = ml_efOut [ 0 ] ; tlu2_1d_linear_nearest_value ( &
+nl_efOut [ 0ULL ] , & t86 . mField0 [ 0ULL ] , & t86 . mField2 [ 0ULL ] , ( (
+_NeDynamicSystem * ) ( LC ) ) -> mField18 , & t1184 [ 0ULL ] , & t126 [ 0ULL
+] ) ; t1603_idx_0 = nl_efOut [ 0 ] ; t2292 = ( ( ( 1.0 - intrm_sf_mf_1402 ) -
 t2278 ) * t1608_idx_0 + t1599_idx_0 * intrm_sf_mf_1402 ) + t1603_idx_0 *
-t2278 ; intrm_sf_mf_1402 = ( - X [ 374ULL ] - ( - X [ 347ULL ] ) ) / 2.0 ;
-U_idx_0 = ( t2221 + t2279 ) / 2.0 * 0.32 ; t2221 = ( intrm_sf_mf_1402 >= 0.0
-? intrm_sf_mf_1402 : 0.0 ) * 0.01 / ( U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) ;
-t2278 = t2221 >= 0.0 ? t2221 : - t2221 ; t2299 = t2278 > 1000.0 ? t2278 :
-1000.0 ; t1599_idx_0 = pmf_log10 ( 6.9 / ( t2299 == 0.0 ? 1.0E-16 : t2299 ) +
-0.00017169489553429715 ) * pmf_log10 ( 6.9 / ( t2299 == 0.0 ? 1.0E-16 : t2299
-) + 0.00017169489553429715 ) * 3.24 ; U_idx_1 = 1.0 / ( t1599_idx_0 == 0.0 ?
-1.0E-16 : t1599_idx_0 ) ; t1599_idx_0 =
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 + t2298 ; if
-( ( pmf_pow ( t1599_idx_0 / 2.0 , 0.66666666666666663 ) - 1.0 ) * pmf_sqrt (
-U_idx_1 / 8.0 ) * 12.7 + 1.0 >= 1.0E-6 ) { U_idx_0 = ( pmf_pow ( (
+t2278 ; t2297 = ( 343.15 - X [ 15ULL ] ) * ( t2292 * 10.709248339636167 /
+0.01 ) ; tlu2_1d_linear_nearest_value ( & ol_efOut [ 0ULL ] , & t86 . mField0
+[ 0ULL ] , & t86 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+mField13 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = ol_efOut [ 0
+] ; tlu2_1d_linear_nearest_value ( & pl_efOut [ 0ULL ] , & t86 . mField0 [
+0ULL ] , & t86 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+mField14 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = pl_efOut [ 0
+] ; tlu2_1d_linear_nearest_value ( & ql_efOut [ 0ULL ] , & t86 . mField0 [
+0ULL ] , & t86 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+mField19 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = ql_efOut [ 0
+] ; t2298 = ( ( ( 1.0 - intrm_sf_mf_1402 ) - t2278 ) * t1608_idx_0 +
+t1599_idx_0 * intrm_sf_mf_1402 ) + t1603_idx_0 * t2278 ; intrm_sf_mf_1402 = (
+- X [ 374ULL ] - ( - X [ 347ULL ] ) ) / 2.0 ; t1808 = ( t2221 + t2279 ) / 2.0
+* 0.32 ; t2221 = ( intrm_sf_mf_1402 >= 0.0 ? intrm_sf_mf_1402 : 0.0 ) * 0.01
+/ ( t1808 == 0.0 ? 1.0E-16 : t1808 ) ; t2278 = t2221 >= 0.0 ? t2221 : - t2221
+; t2299 = t2278 > 1000.0 ? t2278 : 1000.0 ; t1599_idx_0 = pmf_log10 ( 6.9 / (
+t2299 == 0.0 ? 1.0E-16 : t2299 ) + 0.00017169489553429715 ) * pmf_log10 ( 6.9
+/ ( t2299 == 0.0 ? 1.0E-16 : t2299 ) + 0.00017169489553429715 ) * 3.24 ;
+U_idx_1 = 1.0 / ( t1599_idx_0 == 0.0 ? 1.0E-16 : t1599_idx_0 ) ; t1599_idx_0
+= Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 + t2298 ;
+if ( ( pmf_pow ( t1599_idx_0 / 2.0 , 0.66666666666666663 ) - 1.0 ) * pmf_sqrt
+( U_idx_1 / 8.0 ) * 12.7 + 1.0 >= 1.0E-6 ) { t1808 = ( pmf_pow ( (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 + t2298 ) /
 2.0 , 0.66666666666666663 ) - 1.0 ) * pmf_sqrt ( U_idx_1 / 8.0 ) * 12.7 + 1.0
 ; t2301 = ( t2299 - 1000.0 ) * ( U_idx_1 / 8.0 ) * ( (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 + t2298 ) /
-2.0 ) / ( U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) ; } else { t2301 = ( t2299 -
+2.0 ) / ( t1808 == 0.0 ? 1.0E-16 : t1808 ) ; } else { t2301 = ( t2299 -
 1000.0 ) * ( U_idx_1 / 8.0 ) * ( (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 + t2298 ) /
 2.0 ) / 1.0E-6 ; } t2299 = ( t2278 - 2000.0 ) / 2000.0 ; U_idx_1 = t2299 *
 t2299 * 3.0 - t2299 * t2299 * t2299 * 2.0 ; if ( t2278 <= 2000.0 ) { t2299 =
 3.66 ; } else if ( t2278 >= 4000.0 ) { t2299 = t2301 ; } else { t2299 = ( 1.0
-- U_idx_1 ) * 3.66 + t2301 * U_idx_1 ; } U_idx_0 = t1599_idx_0 / 2.0 ; if (
-t2278 > t2299 * 10.709248339636167 / 0.32 / ( U_idx_0 == 0.0 ? 1.0E-16 :
-U_idx_0 ) / 30.0 ) { U_idx_0 = (
+- U_idx_1 ) * 3.66 + t2301 * U_idx_1 ; } t1808 = t1599_idx_0 / 2.0 ; if (
+t2278 > t2299 * 10.709248339636167 / 0.32 / ( t1808 == 0.0 ? 1.0E-16 : t1808
+) / 30.0 ) { t1808 = (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 + t2298 ) /
 2.0 ; U_idx_1 = t2299 * 10.709248339636167 / ( t2278 == 0.0 ? 1.0E-16 : t2278
-) / 0.32 / ( U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) ; } else { U_idx_1 = 30.0 ;
-} Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 = ( 343.15
-- X [ 68ULL ] ) * ( 1.0 - pmf_exp ( - U_idx_1 ) ) ; t2221 = t2221 * 0.32 /
-0.01 * ( t1599_idx_0 / 2.0 ) * ( (
+) / 0.32 / ( t1808 == 0.0 ? 1.0E-16 : t1808 ) ; } else { U_idx_1 = 30.0 ; }
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 = ( 343.15 -
+X [ 68ULL ] ) * ( 1.0 - pmf_exp ( - U_idx_1 ) ) ; t2221 = t2221 * 0.32 / 0.01
+* ( t1599_idx_0 / 2.0 ) * ( (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_u_g_I + t2292 ) / 2.0 ) *
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 ; U_idx_0 = (
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 ; t1808 = (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_3 + t2279 ) /
 2.0 * 0.32 ; Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_3
-= - ( intrm_sf_mf_1402 <= 0.0 ? intrm_sf_mf_1402 : 0.0 ) * 0.01 / ( U_idx_0
-== 0.0 ? 1.0E-16 : U_idx_0 ) ;
+= - ( intrm_sf_mf_1402 <= 0.0 ? intrm_sf_mf_1402 : 0.0 ) * 0.01 / ( t1808 ==
+0.0 ? 1.0E-16 : t1808 ) ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_3 >= 0.0 ?
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_3 : -
@@ -3397,12 +3392,12 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_u_g_I ) +
 0.00017169489553429715 ) * 3.24 ; intrm_sf_mf_1402 = 1.0 / ( t1599_idx_0 ==
 0.0 ? 1.0E-16 : t1599_idx_0 ) ; t1599_idx_0 = t2181 + t2298 ; if ( ( pmf_pow
 ( t1599_idx_0 / 2.0 , 0.66666666666666663 ) - 1.0 ) * pmf_sqrt (
-intrm_sf_mf_1402 / 8.0 ) * 12.7 + 1.0 >= 1.0E-6 ) { U_idx_0 = ( pmf_pow ( (
+intrm_sf_mf_1402 / 8.0 ) * 12.7 + 1.0 >= 1.0E-6 ) { t1808 = ( pmf_pow ( (
 t2181 + t2298 ) / 2.0 , 0.66666666666666663 ) - 1.0 ) * pmf_sqrt (
 intrm_sf_mf_1402 / 8.0 ) * 12.7 + 1.0 ; t2278 = (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_u_g_I - 1000.0 ) * (
-intrm_sf_mf_1402 / 8.0 ) * ( ( t2181 + t2298 ) / 2.0 ) / ( U_idx_0 == 0.0 ?
-1.0E-16 : U_idx_0 ) ; } else { t2278 = (
+intrm_sf_mf_1402 / 8.0 ) * ( ( t2181 + t2298 ) / 2.0 ) / ( t1808 == 0.0 ?
+1.0E-16 : t1808 ) ; } else { t2278 = (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_u_g_I - 1000.0 ) * (
 intrm_sf_mf_1402 / 8.0 ) * ( ( t2181 + t2298 ) / 2.0 ) / 1.0E-6 ; }
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_u_g_I = (
@@ -3418,18 +3413,17 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_u_g_I = 3.66 ; } else if (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 >= 4000.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_u_g_I = t2278 ; } else {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_u_g_I = ( 1.0 -
-intrm_sf_mf_1402 ) * 3.66 + t2278 * intrm_sf_mf_1402 ; } U_idx_0 =
-t1599_idx_0 / 2.0 ; if (
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 >
-Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_u_g_I * 10.709248339636167
-/ 0.32 / ( U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) / 30.0 ) { U_idx_0 = ( t2181
-+ t2298 ) / 2.0 ; intrm_sf_mf_1402 =
+intrm_sf_mf_1402 ) * 3.66 + t2278 * intrm_sf_mf_1402 ; } t1808 = t1599_idx_0
+/ 2.0 ; if ( Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5
+> Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_u_g_I *
+10.709248339636167 / 0.32 / ( t1808 == 0.0 ? 1.0E-16 : t1808 ) / 30.0 ) {
+t1808 = ( t2181 + t2298 ) / 2.0 ; intrm_sf_mf_1402 =
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_u_g_I * 10.709248339636167
 / ( Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 == 0.0 ?
 1.0E-16 : Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_5 ) /
-0.32 / ( U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) ; } else { intrm_sf_mf_1402 =
-30.0 ; } t2181 = ( 343.15 - X [ 324ULL ] ) * ( 1.0 - pmf_exp ( -
-intrm_sf_mf_1402 ) ) ; t2181 = t2221 +
+0.32 / ( t1808 == 0.0 ? 1.0E-16 : t1808 ) ; } else { intrm_sf_mf_1402 = 30.0
+; } t2181 = ( 343.15 - X [ 324ULL ] ) * ( 1.0 - pmf_exp ( - intrm_sf_mf_1402
+) ) ; t2181 = t2221 +
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_3 * 0.32 / 0.01
 * ( t1599_idx_0 / 2.0 ) * ( ( piece218 + t2292 ) / 2.0 ) * t2181 ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x8_Pipe_MA1_convection_3 = pmf_sqrt (
@@ -3457,12 +3451,12 @@ intrm_sf_mf_192 - X [ 15ULL ] * 0.461523 ; t1195 [ 0ULL ] = X [ 51ULL ] ;
 t754 [ 0 ] = 23ULL ; tlu2_linear_nearest_prelookup ( & tl_efOut . mField0 [
 0ULL ] , & tl_efOut . mField1 [ 0ULL ] , & tl_efOut . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField21 , & t1195 [ 0ULL ] , & t754 [ 0ULL
-] , & t126 [ 0ULL ] ) ; t70 = tl_efOut ; t1195 [ 0ULL ] = X [ 396ULL ] ;
+] , & t126 [ 0ULL ] ) ; t69 = tl_efOut ; t1195 [ 0ULL ] = X [ 396ULL ] ;
 t1187 [ 0 ] = 29ULL ; tlu2_linear_nearest_prelookup ( & ul_efOut . mField0 [
 0ULL ] , & ul_efOut . mField1 [ 0ULL ] , & ul_efOut . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField22 , & t1195 [ 0ULL ] , & t1187 [ 0ULL
 ] , & t126 [ 0ULL ] ) ; t94 = ul_efOut ; tlu2_2d_linear_nearest_value ( &
-vl_efOut [ 0ULL ] , & t70 . mField0 [ 0ULL ] , & t70 . mField2 [ 0ULL ] , &
+vl_efOut [ 0ULL ] , & t69 . mField0 [ 0ULL ] , & t69 . mField2 [ 0ULL ] , &
 t94 . mField0 [ 0ULL ] , & t94 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * )
 ( LC ) ) -> mField20 , & t754 [ 0ULL ] , & t1187 [ 0ULL ] , & t126 [ 0ULL ] )
 ; t1608_idx_0 = vl_efOut [ 0 ] ; intrm_sf_mf_192 = t1608_idx_0 ;
@@ -3519,28 +3513,28 @@ intrm_sf_mf_1010 = ( ( ( 1.0 - t3256 ) - t2179 ) * t1608_idx_0 + t1599_idx_0
 tlu2_linear_linear_prelookup ( & fm_efOut . mField0 [ 0ULL ] , & fm_efOut .
 mField1 [ 0ULL ] , & fm_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t77 = fm_efOut ; tlu2_1d_linear_linear_value ( & gm_efOut [ 0ULL ] , & t77 .
-mField0 [ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t76 = fm_efOut ; tlu2_1d_linear_linear_value ( & gm_efOut [ 0ULL ] , & t76 .
+mField0 [ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField16 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = gm_efOut
-[ 0 ] ; tlu2_1d_linear_linear_value ( & hm_efOut [ 0ULL ] , & t77 . mField0 [
-0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_linear_value ( & hm_efOut [ 0ULL ] , & t76 . mField0 [
+0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = hm_efOut [ 0 ]
-; tlu2_1d_linear_linear_value ( & im_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL
-] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 ,
+; tlu2_1d_linear_linear_value ( & im_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL
+] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = im_efOut [ 0 ] ; t3256 =
 ( ( ( 1.0 - t2184 ) - t2186 ) * t1608_idx_0 + t1599_idx_0 * t2184 ) +
 t1603_idx_0 * t2186 ; t1195 [ 0ULL ] = X [ 348ULL ] ;
 tlu2_linear_linear_prelookup ( & jm_efOut . mField0 [ 0ULL ] , & jm_efOut .
 mField1 [ 0ULL ] , & jm_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t48 = jm_efOut ; tlu2_1d_linear_linear_value ( & km_efOut [ 0ULL ] , & t48 .
-mField0 [ 0ULL ] , & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t36 = jm_efOut ; tlu2_1d_linear_linear_value ( & km_efOut [ 0ULL ] , & t36 .
+mField0 [ 0ULL ] , & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField16 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = km_efOut
-[ 0 ] ; tlu2_1d_linear_linear_value ( & lm_efOut [ 0ULL ] , & t48 . mField0 [
-0ULL ] , & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_linear_value ( & lm_efOut [ 0ULL ] , & t36 . mField0 [
+0ULL ] , & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = lm_efOut [ 0 ]
-; tlu2_1d_linear_linear_value ( & mm_efOut [ 0ULL ] , & t48 . mField0 [ 0ULL
-] , & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 ,
+; tlu2_1d_linear_linear_value ( & mm_efOut [ 0ULL ] , & t36 . mField0 [ 0ULL
+] , & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = mm_efOut [ 0 ] ; t2179 =
 ( ( ( 1.0 - t2152 ) - t2153 ) * t1608_idx_0 + t1599_idx_0 * t2152 ) +
 t1603_idx_0 * t2153 ; t1195 [ 0ULL ] = X [ 352ULL ] ;
@@ -3599,14 +3593,14 @@ intrm_sf_mf_1188 ) + t1603_idx_0 * t3272 ; t1195 [ 0ULL ] = X [ 370ULL ] ;
 tlu2_linear_linear_prelookup ( & vm_efOut . mField0 [ 0ULL ] , & vm_efOut .
 mField1 [ 0ULL ] , & vm_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t70 = vm_efOut ; tlu2_1d_linear_linear_value ( & wm_efOut [ 0ULL ] , & t70 .
-mField0 [ 0ULL ] , & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t69 = vm_efOut ; tlu2_1d_linear_linear_value ( & wm_efOut [ 0ULL ] , & t69 .
+mField0 [ 0ULL ] , & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField16 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = wm_efOut
-[ 0 ] ; tlu2_1d_linear_linear_value ( & xm_efOut [ 0ULL ] , & t70 . mField0 [
-0ULL ] , & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_linear_value ( & xm_efOut [ 0ULL ] , & t69 . mField0 [
+0ULL ] , & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = xm_efOut [ 0 ]
-; tlu2_1d_linear_linear_value ( & ym_efOut [ 0ULL ] , & t70 . mField0 [ 0ULL
-] , & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 ,
+; tlu2_1d_linear_linear_value ( & ym_efOut [ 0ULL ] , & t69 . mField0 [ 0ULL
+] , & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = ym_efOut [ 0 ] ; t2304 =
 ( ( ( 1.0 - intrm_sf_mf_1188 ) - t3272 ) * t1608_idx_0 + t1599_idx_0 *
 intrm_sf_mf_1188 ) + t1603_idx_0 * t3272 ; t1195 [ 0ULL ] = X [ 365ULL ] ;
@@ -3623,9 +3617,9 @@ mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = cn_efOut [ 0 ]
 ] , & t94 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = dn_efOut [ 0 ] ; t2315 =
 ( ( ( 1.0 - intrm_sf_mf_1188 ) - t3272 ) * t1608_idx_0 + t1599_idx_0 *
-intrm_sf_mf_1188 ) + t1603_idx_0 * t3272 ; U_idx_0 = intrm_sf_mf_1318 - ( -
+intrm_sf_mf_1188 ) + t1603_idx_0 * t3272 ; t1808 = intrm_sf_mf_1318 - ( -
 intrm_sf_mf_1318 ) ; intrm_sf_mf_1188 = ( ( t2151 - 1.01325 ) - ( -
-intrm_sf_mf_1318 ) ) / ( U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) ; t3272 =
+intrm_sf_mf_1318 ) ) / ( t1808 == 0.0 ? 1.0E-16 : t1808 ) ; t3272 =
 intrm_sf_mf_1188 * intrm_sf_mf_1188 * 3.0 - intrm_sf_mf_1188 *
 intrm_sf_mf_1188 * intrm_sf_mf_1188 * 2.0 ; if ( t2151 - 1.01325 <= -
 intrm_sf_mf_1318 ) { intrm_sf_mf_1188 = 1.01325 ; } else if ( t2151 - 1.01325
@@ -3648,14 +3642,14 @@ intrm_sf_mf_1284 ) + t1603_idx_0 * zc_int309 ; t1195 [ 0ULL ] = X [ 299ULL ]
 ; tlu2_linear_linear_prelookup ( & in_efOut . mField0 [ 0ULL ] , & in_efOut .
 mField1 [ 0ULL ] , & in_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t32 = in_efOut ; tlu2_1d_linear_linear_value ( & jn_efOut [ 0ULL ] , & t32 .
-mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t42 = in_efOut ; tlu2_1d_linear_linear_value ( & jn_efOut [ 0ULL ] , & t42 .
+mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField16 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = jn_efOut
-[ 0 ] ; tlu2_1d_linear_linear_value ( & kn_efOut [ 0ULL ] , & t32 . mField0 [
-0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_linear_value ( & kn_efOut [ 0ULL ] , & t42 . mField0 [
+0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = kn_efOut [ 0 ]
-; tlu2_1d_linear_linear_value ( & ln_efOut [ 0ULL ] , & t32 . mField0 [ 0ULL
-] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 ,
+; tlu2_1d_linear_linear_value ( & ln_efOut [ 0ULL ] , & t42 . mField0 [ 0ULL
+] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = ln_efOut [ 0 ] ;
 intrm_sf_mf_1284 = ( ( ( 1.0 - intrm_sf_mf_934 ) - intrm_sf_mf_1299 ) *
 t1608_idx_0 + t1599_idx_0 * intrm_sf_mf_934 ) + t1603_idx_0 *
@@ -3906,14 +3900,14 @@ intrm_sf_mf_182 = 1.6701700790245661E-7 ; } t1195 [ 0ULL ] = X [ 157ULL ] ;
 tlu2_linear_linear_prelookup ( & cp_efOut . mField0 [ 0ULL ] , & cp_efOut .
 mField1 [ 0ULL ] , & cp_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t70 = cp_efOut ; tlu2_1d_linear_linear_value ( & dp_efOut [ 0ULL ] , & t70 .
-mField0 [ 0ULL ] , & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t69 = cp_efOut ; tlu2_1d_linear_linear_value ( & dp_efOut [ 0ULL ] , & t69 .
+mField0 [ 0ULL ] , & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField16 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = dp_efOut
-[ 0 ] ; tlu2_1d_linear_linear_value ( & ep_efOut [ 0ULL ] , & t70 . mField0 [
-0ULL ] , & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_linear_value ( & ep_efOut [ 0ULL ] , & t69 . mField0 [
+0ULL ] , & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = ep_efOut [ 0 ]
-; tlu2_1d_linear_linear_value ( & fp_efOut [ 0ULL ] , & t70 . mField0 [ 0ULL
-] , & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField5 ,
+; tlu2_1d_linear_linear_value ( & fp_efOut [ 0ULL ] , & t69 . mField0 [ 0ULL
+] , & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField5 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = fp_efOut [ 0 ] ;
 intrm_sf_mf_192 = ( ( ( 1.0 - t1783 ) - intrm_sf_mf_413 ) * t1608_idx_0 +
 t1599_idx_0 * t1783 ) + t1603_idx_0 * intrm_sf_mf_413 ; t1195 [ 0ULL ] = X [
@@ -3931,8 +3925,8 @@ _NeDynamicSystem * ) ( LC ) ) -> mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 _NeDynamicSystem * ) ( LC ) ) -> mField5 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1603_idx_0 = jp_efOut [ 0 ] ; t2342 = ( ( ( 1.0 - t1783 ) -
 intrm_sf_mf_413 ) * t1608_idx_0 + t1599_idx_0 * t1783 ) + t1603_idx_0 *
-intrm_sf_mf_413 ; U_idx_0 = t1791 - ( - t1791 ) ; t1783 = ( ( X [ 131ULL ] -
-1.01325 ) - ( - t1791 ) ) / ( U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) ;
+intrm_sf_mf_413 ; t1808 = t1791 - ( - t1791 ) ; t1783 = ( ( X [ 131ULL ] -
+1.01325 ) - ( - t1791 ) ) / ( t1808 == 0.0 ? 1.0E-16 : t1808 ) ;
 intrm_sf_mf_413 = t1783 * t1783 * 3.0 - t1783 * t1783 * t1783 * 2.0 ; if ( X
 [ 131ULL ] - 1.01325 <= - t1791 ) { t1783 = 1.01325 ; } else if ( X [ 131ULL
 ] - 1.01325 >= t1791 ) { t1783 = X [ 131ULL ] ; } else { t1783 = ( 1.0 -
@@ -3988,28 +3982,28 @@ t1603_idx_0 * t1848 ; t1195 [ 0ULL ] = X [ 182ULL ] ;
 tlu2_linear_linear_prelookup ( & wp_efOut . mField0 [ 0ULL ] , & wp_efOut .
 mField1 [ 0ULL ] , & wp_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t48 = wp_efOut ; tlu2_1d_linear_linear_value ( & xp_efOut [ 0ULL ] , & t48 .
-mField0 [ 0ULL ] , & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t36 = wp_efOut ; tlu2_1d_linear_linear_value ( & xp_efOut [ 0ULL ] , & t36 .
+mField0 [ 0ULL ] , & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField16 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = xp_efOut
-[ 0 ] ; tlu2_1d_linear_linear_value ( & yp_efOut [ 0ULL ] , & t48 . mField0 [
-0ULL ] , & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_linear_value ( & yp_efOut [ 0ULL ] , & t36 . mField0 [
+0ULL ] , & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = yp_efOut [ 0 ]
-; tlu2_1d_linear_linear_value ( & aq_efOut [ 0ULL ] , & t48 . mField0 [ 0ULL
-] , & t48 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField5 ,
+; tlu2_1d_linear_linear_value ( & aq_efOut [ 0ULL ] , & t36 . mField0 [ 0ULL
+] , & t36 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField5 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = aq_efOut [ 0 ] ;
 intrm_sf_mf_325 = ( ( ( 1.0 - intrm_sf_mf_218 ) - t1811 ) * t1608_idx_0 +
 t1599_idx_0 * intrm_sf_mf_218 ) + t1603_idx_0 * t1811 ; t1195 [ 0ULL ] = X [
 187ULL ] ; tlu2_linear_linear_prelookup ( & bq_efOut . mField0 [ 0ULL ] , &
 bq_efOut . mField1 [ 0ULL ] , & bq_efOut . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL
-] , & t126 [ 0ULL ] ) ; t32 = bq_efOut ; tlu2_1d_linear_linear_value ( &
-cq_efOut [ 0ULL ] , & t32 . mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( (
+] , & t126 [ 0ULL ] ) ; t42 = bq_efOut ; tlu2_1d_linear_linear_value ( &
+cq_efOut [ 0ULL ] , & t42 . mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField16 , & t1184 [ 0ULL ] , & t126 [ 0ULL
 ] ) ; t1608_idx_0 = cq_efOut [ 0 ] ; tlu2_1d_linear_linear_value ( & dq_efOut
-[ 0ULL ] , & t32 . mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( (
+[ 0ULL ] , & t42 . mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1599_idx_0 = dq_efOut [ 0 ] ; tlu2_1d_linear_linear_value ( & eq_efOut [
-0ULL ] , & t32 . mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( (
+0ULL ] , & t42 . mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField5 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1603_idx_0 = eq_efOut [ 0 ] ; t1846 = ( ( ( 1.0 - intrm_sf_mf_218 ) -
 t1811 ) * t1608_idx_0 + t1599_idx_0 * intrm_sf_mf_218 ) + t1603_idx_0 * t1811
@@ -4043,14 +4037,14 @@ intrm_sf_mf_384 + t1848 * t2350 ) * 9.9999999999999991E-11 ; } t1195 [ 0ULL ]
 = X [ 204ULL ] ; tlu2_linear_linear_prelookup ( & fq_efOut . mField0 [ 0ULL ]
 , & fq_efOut . mField1 [ 0ULL ] , & fq_efOut . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL
-] , & t126 [ 0ULL ] ) ; t48 = fq_efOut ; tlu2_1d_linear_linear_value ( &
-gq_efOut [ 0ULL ] , & t48 . mField0 [ 0ULL ] , & t48 . mField2 [ 0ULL ] , ( (
+] , & t126 [ 0ULL ] ) ; t36 = fq_efOut ; tlu2_1d_linear_linear_value ( &
+gq_efOut [ 0ULL ] , & t36 . mField0 [ 0ULL ] , & t36 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField16 , & t1184 [ 0ULL ] , & t126 [ 0ULL
 ] ) ; t1608_idx_0 = gq_efOut [ 0 ] ; tlu2_1d_linear_linear_value ( & hq_efOut
-[ 0ULL ] , & t48 . mField0 [ 0ULL ] , & t48 . mField2 [ 0ULL ] , ( (
+[ 0ULL ] , & t36 . mField0 [ 0ULL ] , & t36 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1599_idx_0 = hq_efOut [ 0 ] ; tlu2_1d_linear_linear_value ( & iq_efOut [
-0ULL ] , & t48 . mField0 [ 0ULL ] , & t48 . mField2 [ 0ULL ] , ( (
+0ULL ] , & t36 . mField0 [ 0ULL ] , & t36 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField5 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1603_idx_0 = iq_efOut [ 0 ] ; t1848 = ( ( ( 1.0 - intrm_sf_mf_385 ) -
 zc_int135 ) * t1608_idx_0 + t1599_idx_0 * intrm_sf_mf_385 ) + t1603_idx_0 *
@@ -4083,9 +4077,9 @@ _NeDynamicSystem * ) ( LC ) ) -> mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 _NeDynamicSystem * ) ( LC ) ) -> mField5 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1603_idx_0 = qq_efOut [ 0 ] ; intrm_sf_mf_384 = ( ( ( 1.0 -
 intrm_sf_mf_385 ) - zc_int135 ) * t1608_idx_0 + t1599_idx_0 * intrm_sf_mf_385
-) + t1603_idx_0 * zc_int135 ; U_idx_0 = t1883 - ( - t1883 ) ; intrm_sf_mf_385
-= ( ( X [ 24ULL ] - X [ 179ULL ] ) - ( - t1883 ) ) / ( U_idx_0 == 0.0 ?
-1.0E-16 : U_idx_0 ) ; zc_int135 = intrm_sf_mf_385 * intrm_sf_mf_385 * 3.0 -
+) + t1603_idx_0 * zc_int135 ; t1808 = t1883 - ( - t1883 ) ; intrm_sf_mf_385 =
+( ( X [ 24ULL ] - X [ 179ULL ] ) - ( - t1883 ) ) / ( t1808 == 0.0 ? 1.0E-16 :
+t1808 ) ; zc_int135 = intrm_sf_mf_385 * intrm_sf_mf_385 * 3.0 -
 intrm_sf_mf_385 * intrm_sf_mf_385 * intrm_sf_mf_385 * 2.0 ; if ( X [ 24ULL ]
 - X [ 179ULL ] <= - t1883 ) { intrm_sf_mf_385 = X [ 179ULL ] ; } else if ( X
 [ 24ULL ] - X [ 179ULL ] >= t1883 ) { intrm_sf_mf_385 = X [ 24ULL ] ; } else
@@ -4113,14 +4107,14 @@ mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = tq_efOut [ 0 ]
 piece218 = ( ( ( 1.0 - zc_int135 ) - t2350 ) * t1608_idx_0 + t1599_idx_0 *
 zc_int135 ) + t1603_idx_0 * t2350 ; zc_int135 = intrm_sf_mf_413 *
 intrm_sf_mf_413 * 3.0 - intrm_sf_mf_413 * intrm_sf_mf_413 * intrm_sf_mf_413 *
-2.0 ; tlu2_1d_linear_linear_value ( & vq_efOut [ 0ULL ] , & t60 . mField0 [
-0ULL ] , & t60 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+2.0 ; tlu2_1d_linear_linear_value ( & vq_efOut [ 0ULL ] , & t59 . mField0 [
+0ULL ] , & t59 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField23 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = vq_efOut [ 0
-] ; tlu2_1d_linear_linear_value ( & wq_efOut [ 0ULL ] , & t60 . mField0 [
-0ULL ] , & t60 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+] ; tlu2_1d_linear_linear_value ( & wq_efOut [ 0ULL ] , & t59 . mField0 [
+0ULL ] , & t59 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField24 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = wq_efOut [ 0
-] ; tlu2_1d_linear_linear_value ( & xq_efOut [ 0ULL ] , & t60 . mField0 [
-0ULL ] , & t60 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+] ; tlu2_1d_linear_linear_value ( & xq_efOut [ 0ULL ] , & t59 . mField0 [
+0ULL ] , & t59 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField25 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = xq_efOut [ 0
 ] ; intrm_sf_mf_413 = ( ( ( 1.0 - t1894 ) - t1895 ) * t1608_idx_0 +
 t1599_idx_0 * t1894 ) + t1603_idx_0 * t1895 ; tlu2_1d_linear_linear_value ( &
@@ -4148,24 +4142,24 @@ _NeDynamicSystem * ) ( LC ) ) -> mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 _NeDynamicSystem * ) ( LC ) ) -> mField6 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1603_idx_0 = fr_efOut [ 0 ] ; t2353 = ( ( ( 1.0 - piece250 ) - t1930 ) *
 t1608_idx_0 + t1599_idx_0 * piece250 ) + t1603_idx_0 * t1930 ;
-tlu2_1d_linear_linear_value ( & gr_efOut [ 0ULL ] , & t58 . mField0 [ 0ULL ]
-, & t58 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField23 ,
+tlu2_1d_linear_linear_value ( & gr_efOut [ 0ULL ] , & t57 . mField0 [ 0ULL ]
+, & t57 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField23 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = gr_efOut [ 0 ] ;
-tlu2_1d_linear_linear_value ( & hr_efOut [ 0ULL ] , & t58 . mField0 [ 0ULL ]
-, & t58 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField24 ,
+tlu2_1d_linear_linear_value ( & hr_efOut [ 0ULL ] , & t57 . mField0 [ 0ULL ]
+, & t57 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField24 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = hr_efOut [ 0 ] ;
-tlu2_1d_linear_linear_value ( & ir_efOut [ 0ULL ] , & t58 . mField0 [ 0ULL ]
-, & t58 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField25 ,
+tlu2_1d_linear_linear_value ( & ir_efOut [ 0ULL ] , & t57 . mField0 [ 0ULL ]
+, & t57 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField25 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = ir_efOut [ 0 ] ;
 piece250 = ( ( ( 1.0 - t1894 ) - t1895 ) * t1608_idx_0 + t1599_idx_0 * t1894
 ) + t1603_idx_0 * t1895 ; tlu2_1d_linear_linear_value ( & jr_efOut [ 0ULL ] ,
-& t54 . mField0 [ 0ULL ] , & t54 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem *
+& t53 . mField0 [ 0ULL ] , & t53 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem *
 ) ( LC ) ) -> mField23 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 =
-jr_efOut [ 0 ] ; tlu2_1d_linear_linear_value ( & kr_efOut [ 0ULL ] , & t54 .
-mField0 [ 0ULL ] , & t54 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+jr_efOut [ 0 ] ; tlu2_1d_linear_linear_value ( & kr_efOut [ 0ULL ] , & t53 .
+mField0 [ 0ULL ] , & t53 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField24 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = kr_efOut
-[ 0 ] ; tlu2_1d_linear_linear_value ( & lr_efOut [ 0ULL ] , & t54 . mField0 [
-0ULL ] , & t54 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_linear_value ( & lr_efOut [ 0ULL ] , & t53 . mField0 [
+0ULL ] , & t53 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField25 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = lr_efOut [ 0
 ] ; t1930 = ( ( ( 1.0 - t1894 ) - t1895 ) * t1608_idx_0 + t1599_idx_0 * t1894
 ) + t1603_idx_0 * t1895 ; t1195 [ 0ULL ] = X [ 232ULL ] ;
@@ -4391,14 +4385,14 @@ t1603_idx_0 * t2079 ; t1195 [ 0ULL ] = X [ 313ULL ] ;
 tlu2_linear_linear_prelookup ( & ct_efOut . mField0 [ 0ULL ] , & ct_efOut .
 mField1 [ 0ULL ] , & ct_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t77 = ct_efOut ; tlu2_1d_linear_linear_value ( & dt_efOut [ 0ULL ] , & t77 .
-mField0 [ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t76 = ct_efOut ; tlu2_1d_linear_linear_value ( & dt_efOut [ 0ULL ] , & t76 .
+mField0 [ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField16 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = dt_efOut
-[ 0 ] ; tlu2_1d_linear_linear_value ( & et_efOut [ 0ULL ] , & t77 . mField0 [
-0ULL ] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
+[ 0 ] ; tlu2_1d_linear_linear_value ( & et_efOut [ 0ULL ] , & t76 . mField0 [
+0ULL ] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) ->
 mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = et_efOut [ 0 ]
-; tlu2_1d_linear_linear_value ( & ft_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL
-] , & t77 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 ,
+; tlu2_1d_linear_linear_value ( & ft_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL
+] , & t76 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField6 ,
 & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = ft_efOut [ 0 ] ; t2362 =
 ( ( ( 1.0 - t2068 ) - t2079 ) * t1608_idx_0 + t1599_idx_0 * t2068 ) +
 t1603_idx_0 * t2079 ; if ( - X [ 244ULL ] >= 0.0 ) { intrm_sf_mf_992 = - X [
@@ -4417,13 +4411,13 @@ intrm_sf_mf_995 * intrm_sf_mf_995 * intrm_sf_mf_995 * 2.0 ; if ( t3006 <=
 t3006 >= 4000.0 ) { intrm_sf_mf_995 = intrm_sf_mf_992 *
 9.9999999999999991E-11 ; } else { intrm_sf_mf_995 = ( ( 1.0 - t2931 ) * t2961
 + intrm_sf_mf_992 * t2931 ) * 9.9999999999999991E-11 ; } if ( M [ 0ULL ] != 0
-) { t1604 [ 0ULL ] = 0ULL ; for ( t1611 = 0ULL ; t1611 < 42ULL ; t1611 ++ ) {
-t1612 = t1611 / 42ULL ; t1613 = ( t1611 - t1611 % 42ULL ) + t1604 [ t1612 >
+) { t1604 [ 0ULL ] = 0ULL ; for ( t1611 = 0ULL ; t1611 < 12ULL ; t1611 ++ ) {
+t1612 = t1611 / 12ULL ; t1613 = ( t1611 - t1611 % 12ULL ) + t1604 [ t1612 >
 0ULL ? 0ULL : t1612 ] ; if ( ( ( _NeDynamicSystem * ) ( LC ) ) -> mField0 [
 t1611 ] * 1.0E-5 < ( ( _NeDynamicSystem * ) ( LC ) ) -> mField0 [ t1613 >
-41ULL ? 41ULL : t1613 ] * 1.0E-5 ) { t1604 [ t1612 > 0ULL ? 0ULL : t1612 ] =
-t1611 % 42ULL ; } } t1611 = t1604 [ 0ULL ] ; intrm_sf_mf_992 = ( (
-_NeDynamicSystem * ) ( LC ) ) -> mField0 [ t1611 > 41ULL ? 41ULL : t1611 ] *
+11ULL ? 11ULL : t1613 ] * 1.0E-5 ) { t1604 [ t1612 > 0ULL ? 0ULL : t1612 ] =
+t1611 % 12ULL ; } } t1611 = t1604 [ 0ULL ] ; intrm_sf_mf_992 = ( (
+_NeDynamicSystem * ) ( LC ) ) -> mField0 [ t1611 > 11ULL ? 11ULL : t1611 ] *
 1.0E-5 ; } else { intrm_sf_mf_992 = X [ 54ULL ] ; } t3006 = - pmf_sqrt ( ( (
 real_T ) ( M [ 24ULL ] != 0 ) * 2.0 - 1.0 ) * ( t2916 / ( t1718 == 0.0 ?
 1.0E-16 : t1718 ) / ( X [ 135ULL ] == 0.0 ? 1.0E-16 : X [ 135ULL ] ) ) ) *
@@ -4434,8 +4428,8 @@ else { t2961 = - t3006 * 100000.0 ; } if ( M [ 178ULL ] != 0 ) { t1725 =
 tlu2_linear_linear_prelookup ( & gt_efOut . mField0 [ 0ULL ] , & gt_efOut .
 mField1 [ 0ULL ] , & gt_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t32 = gt_efOut ; tlu2_1d_linear_linear_value ( & ht_efOut [ 0ULL ] , & t32 .
-mField0 [ 0ULL ] , & t32 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+t42 = gt_efOut ; tlu2_1d_linear_linear_value ( & ht_efOut [ 0ULL ] , & t42 .
+mField0 [ 0ULL ] , & t42 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = ht_efOut
 [ 0 ] ; t1725 = t1608_idx_0 ; t1599_idx_0 = X [ 159ULL ] * t1849 ; t1849 = (
 ( real_T ) ( M [ 153ULL ] != 0 ) * 2.0 - 1.0 ) * ( t1599_idx_0 / ( X [ 160ULL
@@ -4457,19 +4451,19 @@ t1934 == 0.0 ? 1.0E-16 : t1934 ) / ( X [ 261ULL ] == 0.0 ? 1.0E-16 : X [
 t2945 == 0.0 ? 1.0E-16 : t2945 ) ; if ( t116 >= 0.0 ) { zc_int200 = t1936 *
 100000.0 ; } else { zc_int200 = - t1936 * 100000.0 ; } t116 = zc_int200 *
 0.05 / ( t2990 == 0.0 ? 1.0E-16 : t2990 ) ; U_idx_5 = t2961 * 0.01 / ( t1749
-== 0.0 ? 1.0E-16 : t1749 ) ; t2916 = t1944 >= 1.0 ? t116 : 1.0 ; U_idx_0 =
+== 0.0 ? 1.0E-16 : t1749 ) ; t2916 = t1944 >= 1.0 ? t116 : 1.0 ; t1808 =
 pmf_log10 ( 6.9 / ( t2916 == 0.0 ? 1.0E-16 : t2916 ) + 2.8767404433520813E-5
 ) * pmf_log10 ( 6.9 / ( t2916 == 0.0 ? 1.0E-16 : t2916 ) +
-2.8767404433520813E-5 ) * 3.24 ; t1936 = t1936 * zc_int200 * ( 1.0 / (
-U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) ) * 0.175 / ( t2983 == 0.0 ? 1.0E-16 :
-t2983 ) ; t116 = ( t116 - 2000.0 ) / 2000.0 ; zc_int200 = t116 * t116 * 3.0 -
-t116 * t116 * t116 * 2.0 ; if ( t1944 <= 2000.0 ) { t116 = t1946 * 1.0E-5 ; }
-else if ( t1944 >= 4000.0 ) { t116 = t1936 * 1.0E-5 ; } else { t116 = ( ( 1.0
-- zc_int200 ) * t1946 + t1936 * zc_int200 ) * 1.0E-5 ; } t2916 = - ( X [
-186ULL ] * t2931 ) ; t1936 = t2916 / 0.0019634954084936209 *
-0.00031622776601683789 + t116 ; U_idx_0 = - t1936 - t1936 * - 0.95 ; t116 = (
-- Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_Dp_AI_unchoke - t1936 * -
-0.95 ) / ( U_idx_0 == 0.0 ? 1.0E-16 : U_idx_0 ) ; t1944 = t116 * t116 * 3.0 -
+2.8767404433520813E-5 ) * 3.24 ; t1936 = t1936 * zc_int200 * ( 1.0 / ( t1808
+== 0.0 ? 1.0E-16 : t1808 ) ) * 0.175 / ( t2983 == 0.0 ? 1.0E-16 : t2983 ) ;
+t116 = ( t116 - 2000.0 ) / 2000.0 ; zc_int200 = t116 * t116 * 3.0 - t116 *
+t116 * t116 * 2.0 ; if ( t1944 <= 2000.0 ) { t116 = t1946 * 1.0E-5 ; } else
+if ( t1944 >= 4000.0 ) { t116 = t1936 * 1.0E-5 ; } else { t116 = ( ( 1.0 -
+zc_int200 ) * t1946 + t1936 * zc_int200 ) * 1.0E-5 ; } t2916 = - ( X [ 186ULL
+] * t2931 ) ; t1936 = t2916 / 0.0019634954084936209 * 0.00031622776601683789
++ t116 ; t1808 = - t1936 - t1936 * - 0.95 ; t116 = ( -
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_Dp_AI_unchoke - t1936 * -
+0.95 ) / ( t1808 == 0.0 ? 1.0E-16 : t1808 ) ; t1944 = t116 * t116 * 3.0 -
 t116 * t116 * t116 * 2.0 ; if ( -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x4_Pipe_MA_Dp_AI_unchoke <= t115 * -
 0.95 ) { t116 =
@@ -4633,8 +4627,8 @@ zc_int200 ; } if ( M [ 205ULL ] != 0 ) { t1720 = 216.59999999999997 ; } else
 X [ 41ULL ] ; tlu2_linear_linear_prelookup ( & it_efOut . mField0 [ 0ULL ] ,
 & it_efOut . mField1 [ 0ULL ] , & it_efOut . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField2 , & t1195 [ 0ULL ] , & t1184 [ 0ULL
-] , & t126 [ 0ULL ] ) ; t77 = it_efOut ; tlu2_1d_linear_linear_value ( &
-jt_efOut [ 0ULL ] , & t77 . mField0 [ 0ULL ] , & t77 . mField2 [ 0ULL ] , ( (
+] , & t126 [ 0ULL ] ) ; t76 = it_efOut ; tlu2_1d_linear_linear_value ( &
+jt_efOut [ 0ULL ] , & t76 . mField0 [ 0ULL ] , & t76 . mField2 [ 0ULL ] , ( (
 _NeDynamicSystem * ) ( LC ) ) -> mField4 , & t1184 [ 0ULL ] , & t126 [ 0ULL ]
 ) ; t1608_idx_0 = jt_efOut [ 0 ] ; zc_int200 = t1608_idx_0 ; U_idx_9 = X [
 232ULL ] * t2107 ; t3033 = X [ 299ULL ] * t3200 ; t1952 = ( ( real_T ) ( M [
@@ -5075,29 +5069,29 @@ t1900 ) - intrm_sf_mf_413 ) + t2083 * 11.526088451496509 ; t2087 = ( ( t1930
 kt_efOut . mField0 [ 0ULL ] , & kt_efOut . mField1 [ 0ULL ] , & kt_efOut .
 mField2 [ 0ULL ] , & nonscalar33 [ 0ULL ] , & t1195 [ 0ULL ] , & t1184 [ 0ULL
 ] , & t126 [ 0ULL ] ) ; t86 = kt_efOut ; t1195 [ 0 ] = 298.15 ; t1187 [ 0 ] =
-7ULL ; tlu2_linear_linear_prelookup ( & lt_efOut . mField0 [ 0ULL ] , &
+2ULL ; tlu2_linear_linear_prelookup ( & lt_efOut . mField0 [ 0ULL ] , &
 lt_efOut . mField1 [ 0ULL ] , & lt_efOut . mField2 [ 0ULL ] , & nonscalar34 [
 0ULL ] , & t1195 [ 0ULL ] , & t1187 [ 0ULL ] , & t126 [ 0ULL ] ) ; t94 =
 lt_efOut ; t1195 [ 0ULL ] = X [ 249ULL ] ; t1604 [ 0 ] = 5ULL ;
 tlu2_linear_nearest_prelookup ( & mt_efOut . mField0 [ 0ULL ] , & mt_efOut .
 mField1 [ 0ULL ] , & mt_efOut . mField2 [ 0ULL ] , & nonscalar37 [ 0ULL ] , &
-t1195 [ 0ULL ] , & t1604 [ 0ULL ] , & t126 [ 0ULL ] ) ; t32 = mt_efOut ;
-t1195 [ 0ULL ] = U_idx_3 * 376.99111843077515 * 0.99999999999999978 /
+t1195 [ 0ULL ] , & t1604 [ 0ULL ] , & t126 [ 0ULL ] ) ; t42 = mt_efOut ;
+t1195 [ 0ULL ] = U_idx_3 * 837.75804095727813 * 0.99999999999999978 /
 0.99999999999999978 * 0.99999999999999978 / 0.99999999999999978 ; t1193 [ 0 ]
 = 3ULL ; tlu2_linear_nearest_prelookup ( & nt_efOut . mField0 [ 0ULL ] , &
 nt_efOut . mField1 [ 0ULL ] , & nt_efOut . mField2 [ 0ULL ] , & nonscalar38 [
-0ULL ] , & t1195 [ 0ULL ] , & t1193 [ 0ULL ] , & t126 [ 0ULL ] ) ; t77 =
+0ULL ] , & t1195 [ 0ULL ] , & t1193 [ 0ULL ] , & t126 [ 0ULL ] ) ; t76 =
 nt_efOut ; if ( X [ 52ULL ] != X [ 52ULL ] ) { t2164 = X [ 52ULL ] ; } else
 if ( X [ 52ULL ] > 0.0 ) { t2164 = 1.0 ; } else { t2164 = X [ 52ULL ] < 0.0 ?
 - 1.0 : 0.0 ; } t1195 [ 0ULL ] = t2164 * X [ 51ULL ] ;
 tlu2_linear_nearest_prelookup ( & ot_efOut . mField0 [ 0ULL ] , & ot_efOut .
 mField1 [ 0ULL ] , & ot_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
 LC ) ) -> mField21 , & t1195 [ 0ULL ] , & t754 [ 0ULL ] , & t126 [ 0ULL ] ) ;
-t70 = ot_efOut ; t3396 = M [ 111ULL ] != 0 ? X [ 55ULL ] : 0.9 ; U_idx_0 = -
-( ( X [ 59ULL ] - X [ 57ULL ] * X [ 58ULL ] * 0.001 ) * t3908 / ( t3396 ==
-0.0 ? 1.0E-16 : t3396 ) * 1000.0 + ( 1.0 - t3908 ) * X [ 55ULL ] / 1000.0 ) ;
-if ( M [ 156ULL ] != 0 ) { t3908 = ( ( t3672 - X [ 60ULL ] ) - 0.799999992 )
-* 1000.0 ; } else { t3908 = ( t3672 - X [ 60ULL ] ) * 1.0E-5 ; } if ( M [
+t69 = ot_efOut ; t3396 = M [ 111ULL ] != 0 ? X [ 55ULL ] : 0.9 ; t1808 = - (
+( X [ 59ULL ] - X [ 57ULL ] * X [ 58ULL ] * 0.001 ) * t3951 / ( t3396 == 0.0
+? 1.0E-16 : t3396 ) * 1000.0 + ( 1.0 - t3951 ) * X [ 55ULL ] / 1000.0 ) ; if
+( M [ 156ULL ] != 0 ) { t3951 = ( ( t3672 - X [ 60ULL ] ) - 0.799999992 ) *
+1000.0 ; } else { t3951 = ( t3672 - X [ 60ULL ] ) * 1.0E-5 ; } if ( M [
 165ULL ] != 0 ) { t1930 = t3672 - ( X [ 63ULL ] - t3910 ) * intrm_sf_mf_1449
 * 0.001 ; } else { t1930 = ( X [ 58ULL ] - X [ 60ULL ] ) - ( t3910 * 0.001 +
 X [ 58ULL ] ) * intrm_sf_mf_1449 ; } if ( M [ 175ULL ] != 0 ) { t3672 = - X [
@@ -5158,12 +5152,12 @@ tlu2_2d_linear_linear_value ( & qt_efOut [ 0ULL ] , & t86 . mField0 [ 0ULL ]
 , & t86 . mField2 [ 0ULL ] , & t94 . mField0 [ 0ULL ] , & t94 . mField2 [
 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField26 , & t1184 [ 0ULL ] , &
 t1187 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1608_idx_0 = qt_efOut [ 0 ] ;
-tlu2_2d_linear_nearest_value ( & rt_efOut [ 0ULL ] , & t32 . mField0 [ 0ULL ]
-, & t32 . mField2 [ 0ULL ] , & t77 . mField0 [ 0ULL ] , & t77 . mField2 [
+tlu2_2d_linear_nearest_value ( & rt_efOut [ 0ULL ] , & t42 . mField0 [ 0ULL ]
+, & t42 . mField2 [ 0ULL ] , & t76 . mField0 [ 0ULL ] , & t76 . mField2 [
 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField27 , & t1604 [ 0ULL ] , &
 t1193 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1599_idx_0 = rt_efOut [ 0 ] ;
-tlu2_1d_linear_nearest_value ( & st_efOut [ 0ULL ] , & t70 . mField0 [ 0ULL ]
-, & t70 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField28 ,
+tlu2_1d_linear_nearest_value ( & st_efOut [ 0ULL ] , & t69 . mField0 [ 0ULL ]
+, & t69 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField28 ,
 & t754 [ 0ULL ] , & t126 [ 0ULL ] ) ; t1603_idx_0 = st_efOut [ 0 ] ; t1209 [
 0ULL ] = - 0.0 ; t1209 [ 1ULL ] = - X [ 53ULL ] * ( real_T ) ( X [ 53ULL ] <
 0.0 ) / 108000.0 ; t1209 [ 2ULL ] = 0.0 ; t1209 [ 3ULL ] = - 0.0 ; t1209 [
@@ -5272,12 +5266,12 @@ t2292 * X [ 17ULL ] - t2066 ) ; t1209 [ 50ULL ] = - ( t2292 * X [ 16ULL ] ) ;
 t1209 [ 51ULL ] = - 0.0 ; t1209 [ 52ULL ] = - 0.0 ; U_idx_8 = - t1195 [ 0ULL
 ] ; t1209 [ 53ULL ] = U_idx_8 / 285.83999999999992 ; t1209 [ 54ULL ] = - 0.0
 - ( X [ 53ULL ] * ( M [ 1ULL ] != 0 ? 4.03416E-7 : X [ 56ULL ] ) +
-intrm_sf_mf_992 ) ; t1209 [ 55ULL ] = - t1608_idx_0 ; t1209 [ 56ULL ] = - ( (
-X [ 57ULL ] * 0.1 + 650.0 ) * t2105 + ( 1.0 - t2105 ) * X [ 57ULL ] * 1000.0
-) / 1000.0 ; t1209 [ 57ULL ] = U_idx_0 ; t1209 [ 58ULL ] = - ( X [ 57ULL ] *
-X [ 57ULL ] * 0.00010037240412334386 ) - 0.001 ; t1209 [ 59ULL ] = - t3908 ;
-t1209 [ 60ULL ] = t1930 ; t1209 [ 61ULL ] = - ( t3910 * intrm_sf_mf_1449 ) ;
-t1209 [ 62ULL ] = X [ 96ULL ] *
+intrm_sf_mf_992 ) ; t1209 [ 55ULL ] = - t1608_idx_0 ; t1209 [ 56ULL ] = - (
+t2105 * 650.0 + ( 1.0 - t2105 ) * X [ 57ULL ] * 1000.0 ) / 1000.0 ; t1209 [
+57ULL ] = t1808 ; t1209 [ 58ULL ] = - ( X [ 57ULL ] * X [ 57ULL ] *
+0.00011118419996381565 ) - 1.0E-6 ; t1209 [ 59ULL ] = - t3951 ; t1209 [ 60ULL
+] = t1930 ; t1209 [ 61ULL ] = - ( t3910 * intrm_sf_mf_1449 ) ; t1209 [ 62ULL
+] = X [ 96ULL ] *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_Membra43 /
 2626.19492016262 ; t1209 [ 63ULL ] = X [ 98ULL ] * t1713 / 4578.46197843019 ;
 t1209 [ 64ULL ] = X [ 100ULL ] * t1623 / 312.559698673577 ; t1209 [ 65ULL ] =
@@ -5462,15 +5456,15 @@ X [ 217ULL ] ) ; t3655 = X [ 213ULL ] + t1876 ; t3906 = t1876 - X [ 213ULL ]
 216ULL ] ) ; U_idx_2 = 148.401051922146 ; t1209 [ 169ULL ] = U_idx_2 /
 461.523 / 43.3158175294914 + piece232 * 0.5 / 461.523 / 43.3158175294914 ;
 t1209 [ 170ULL ] = X [ 220ULL ] * t1892 / 461.523 ; t1209 [ 171ULL ] = X [
-210ULL ] * t1883 ; U_idx_0 = 62.328441807301317 ; t1209 [ 172ULL ] = U_idx_0
-/ 259.836612622973 + piece232 * 0.21 / 259.836612622973 ; t3908 = t1892 *
+210ULL ] * t1883 ; t3951 = 62.328441807301317 ; t1209 [ 172ULL ] = t3951 /
+259.836612622973 + piece232 * 0.21 / 259.836612622973 ; t1808 = t1892 *
 293.15 ; t1209 [ 173ULL ] = - 304.06022922571 - ( ( ( real_T ) ( M [ 169ULL ]
-!= 0 ) * 2.0 - 1.0 ) * ( t3908 / 1.01325 ) * ( t3908 / 1.01325 ) * ( X [
+!= 0 ) * 2.0 - 1.0 ) * ( t1808 / 1.01325 ) * ( t1808 / 1.01325 ) * ( X [
 213ULL ] / 0.0019634954084936209 ) * ( X [ 213ULL ] / 0.0019634954084936209 )
 / 2.0 * 9.999999999999999E-14 + ( ( ( - t1889 - t1891 ) * 304.06022922571 +
 t1889 * 2537.56068088674 ) + t1891 * 266.413508632715 ) ) ; t1209 [ 174ULL ]
-= - t1889 ; t1209 [ 175ULL ] = - t1891 ; t3908 = - X [ 213ULL ] + t1885 ;
-t3910 = t1885 - ( - X [ 213ULL ] ) ; t1209 [ 176ULL ] = - ( t3908 / 2.0 *
+= - t1889 ; t1209 [ 175ULL ] = - t1891 ; t1808 = - X [ 213ULL ] + t1885 ;
+t3910 = t1885 - ( - X [ 213ULL ] ) ; t1209 [ 176ULL ] = - ( t1808 / 2.0 *
 zc_int82 - t3910 / 2.0 * X [ 229ULL ] ) / 365.59674280784293 ; t3672 = - X [
 213ULL ] + Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x3_Air_Intake_convectio1 ;
 piece214 = Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x3_Air_Intake_convectio1 -
@@ -5488,7 +5482,7 @@ t3992 / 2.0 * X [ 231ULL ] ) ; t1209 [ 181ULL ] = - ( t3655 / 2.0 * X [
 183ULL ] = 979.36765375297466 + t1895 / 3.4930368471842854 ; t1209 [ 184ULL ]
 = - 979.36765375297466 + t2087 / 3.4930368471842854 ; t1209 [ 185ULL ] =
 zc_int94 / 1.0413512978067061 ; t1209 [ 186ULL ] = t1662 ; t1209 [ 187ULL ] =
-- ( t3908 / 2.0 * ( ( ( real_T ) ( M [ 170ULL ] != 0 ) * 2.0 - 1.0 ) * (
+- ( t1808 / 2.0 * ( ( ( real_T ) ( M [ 170ULL ] != 0 ) * 2.0 - 1.0 ) * (
 t3391 / ( X [ 31ULL ] == 0.0 ? 1.0E-16 : X [ 31ULL ] ) ) * ( t3391 / ( X [
 31ULL ] == 0.0 ? 1.0E-16 : X [ 31ULL ] ) ) * ( - X [ 213ULL ] /
 0.0019634954084936209 ) * ( - X [ 213ULL ] / 0.0019634954084936209 ) / 2.0 *
@@ -5694,7 +5688,7 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Environment_convecti0 - X [ 335ULL
 338ULL ] ) ; t1209 [ 306ULL ] = U_idx_2 / 461.523 / 43.3158175294914 + t1900
 * 0.5 / 461.523 / 43.3158175294914 ; t1209 [ 307ULL ] = X [ 342ULL ] * t2150
 / 461.523 ; t1209 [ 308ULL ] = X [ 332ULL ] * intrm_sf_mf_1009 ; t1209 [
-309ULL ] = U_idx_0 / 259.836612622973 + t1900 * 0.21 / 259.836612622973 ;
+309ULL ] = t3951 / 259.836612622973 + t1900 * 0.21 / 259.836612622973 ;
 U_idx_2 = t2150 * 293.15 ; t1209 [ 310ULL ] = - 304.06022922571 - ( ( (
 real_T ) ( M [ 214ULL ] != 0 ) * 2.0 - 1.0 ) * ( U_idx_2 / 1.01325 ) * (
 U_idx_2 / 1.01325 ) * ( X [ 335ULL ] / 0.0019634954084936209 ) * ( X [ 335ULL

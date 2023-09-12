@@ -8,10 +8,10 @@
 #define TARGET_CONST
 #define TARGET_STRING(s) (s)
 #ifndef SS_UINT64
-#define SS_UINT64 18
+#define SS_UINT64 17
 #endif
 #ifndef SS_INT64
-#define SS_INT64 19
+#define SS_INT64 18
 #endif
 #else
 #include "builtin_typeid_types.h"
@@ -27,19 +27,15 @@
 #endif
 #endif
 static rtwCAPI_Signals rtBlockSignals [ ] = { { 0 , 0 , ( NULL ) , ( NULL ) ,
-0 , 0 , 0 , 0 , 0 } } ; static rtwCAPI_States rtBlockStates [ ] = { { 0 , - 1
-, TARGET_STRING (
- "FCEvPowertrainController/Fuel Cell Control/PID Controller1/Filter/Disc. Forward Euler Filter/Filter"
-) , TARGET_STRING ( "DSTATE" ) , "" , 0 , 0 , 0 , 0 , 0 , 0 , - 1 , 0 } , { 1
-, - 1 , TARGET_STRING (
- "FCEvPowertrainController/Fuel Cell Control/PID Controller1/Integrator/Discrete/Integrator"
-) , TARGET_STRING ( "DSTATE" ) , "" , 0 , 0 , 0 , 0 , 0 , 0 , - 1 , 0 } , { 0
-, - 1 , ( NULL ) , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 , 0 , - 1 , 0 } }
-; static int_T rt_LoggedStateIdxList [ ] = { 1 , 0 } ;
+0 , 0 , 0 , 0 , 0 } } ; static rtwCAPI_States rtBlockStates [ ] = { { 0 , 0 ,
+TARGET_STRING ( "FCEvPowertrainController/Transfer Fcn" ) , TARGET_STRING (
+"" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 0 , 1 , - 1 , 0 } , { 0 , - 1 ,
+( NULL ) , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 , 0 , - 1 , 0 } } ; static
+int_T rt_LoggedStateIdxList [ ] = { 0 } ;
 #ifndef HOST_CAPI_BUILD
 static void FCEvPowertrainController_InitializeDataAddr ( void * dataAddr [ ]
-, kfczeuvxuu * localDW ) { dataAddr [ 0 ] = ( void * ) ( & localDW ->
-g1odrjfioq ) ; dataAddr [ 1 ] = ( void * ) ( & localDW -> bg3lclywzp ) ; }
+, kfczeuvxuu * localDW , ax0myfw24a * localX ) { dataAddr [ 0 ] = ( void * )
+( & localX -> bzjnqqh5ry ) ; }
 #endif
 #ifndef HOST_CAPI_BUILD
 static void FCEvPowertrainController_InitializeVarDimsAddr ( int32_T *
@@ -47,8 +43,7 @@ vardimsAddr [ ] ) { vardimsAddr [ 0 ] = ( NULL ) ; }
 #endif
 #ifndef HOST_CAPI_BUILD
 static void FCEvPowertrainController_InitializeLoggingFunctions (
-RTWLoggingFcnPtr loggingPtrs [ ] ) { loggingPtrs [ 0 ] = ( NULL ) ;
-loggingPtrs [ 1 ] = ( NULL ) ; }
+RTWLoggingFcnPtr loggingPtrs [ ] ) { loggingPtrs [ 0 ] = ( NULL ) ; }
 #endif
 static TARGET_CONST rtwCAPI_DataTypeMap rtDataTypeMap [ ] = { { "double" ,
 "real_T" , 0 , 0 , sizeof ( real_T ) , ( uint8_T ) SS_DOUBLE , 0 , 0 , 0 } }
@@ -59,20 +54,20 @@ static TARGET_CONST rtwCAPI_DataTypeMap rtDataTypeMap [ ] = { { "double" ,
 static TARGET_CONST rtwCAPI_ElementMap rtElementMap [ ] = { { ( NULL ) , 0 ,
 0 , 0 , 0 } , } ; static rtwCAPI_DimensionMap rtDimensionMap [ ] = { {
 rtwCAPI_SCALAR , 0 , 2 , 0 } } ; static uint_T rtDimensionArray [ ] = { 1 , 1
-} ; static const real_T rtcapiStoredFloats [ ] = { 0.1 , 0.0 } ; static
+} ; static const real_T rtcapiStoredFloats [ ] = { 0.0 } ; static
 rtwCAPI_FixPtMap rtFixPtMap [ ] = { { ( NULL ) , ( NULL ) ,
 rtwCAPI_FIX_RESERVED , 0 , 0 , ( boolean_T ) 0 } , } ; static
 rtwCAPI_SampleTimeMap rtSampleTimeMap [ ] = { { ( const void * ) &
-rtcapiStoredFloats [ 0 ] , ( const void * ) & rtcapiStoredFloats [ 1 ] , (
-int8_T ) 0 , ( uint8_T ) 0 } } ; static int_T rtContextSystems [ 11 ] ;
-static rtwCAPI_LoggingMetaInfo loggingMetaInfo [ ] = { { 0 , 0 , "" , 0 } } ;
-static rtwCAPI_ModelMapLoggingStaticInfo mmiStaticInfoLogging = { 11 ,
+rtcapiStoredFloats [ 0 ] , ( const void * ) & rtcapiStoredFloats [ 0 ] , (
+int8_T ) 0 , ( uint8_T ) 0 } } ; static int_T rtContextSystems [ 3 ] ; static
+rtwCAPI_LoggingMetaInfo loggingMetaInfo [ ] = { { 0 , 0 , "" , 0 } } ; static
+rtwCAPI_ModelMapLoggingStaticInfo mmiStaticInfoLogging = { 3 ,
 rtContextSystems , loggingMetaInfo , 0 , ( NULL ) , { 0 , ( NULL ) , ( NULL )
 } , 0 , ( NULL ) } ; static rtwCAPI_ModelMappingStaticInfo mmiStatic = { {
 rtBlockSignals , 0 , ( NULL ) , 0 , ( NULL ) , 0 } , { ( NULL ) , 0 , ( NULL
-) , 0 } , { rtBlockStates , 2 } , { rtDataTypeMap , rtDimensionMap ,
+) , 0 } , { rtBlockStates , 1 } , { rtDataTypeMap , rtDimensionMap ,
 rtFixPtMap , rtElementMap , rtSampleTimeMap , rtDimensionArray } , "float" ,
-{ 1319162474U , 3783056568U , 2093301137U , 3540852179U } , &
+{ 925968982U , 147438718U , 1097674048U , 1192086822U } , &
 mmiStaticInfoLogging , 0 , ( boolean_T ) 0 , rt_LoggedStateIdxList } ; const
 rtwCAPI_ModelMappingStaticInfo * FCEvPowertrainController_GetCAPIStaticMap (
 void ) { return & mmiStatic ; }
@@ -82,33 +77,19 @@ jxp0bqrs0w , sysRanDType * systemRan [ ] , kfczeuvxuu * localDW , int_T
 systemTid [ ] , void * rootSysRanPtr , int rootTid ) { UNUSED_PARAMETER (
 jxp0bqrs0w ) ; UNUSED_PARAMETER ( localDW ) ; systemRan [ 0 ] = ( sysRanDType
 * ) rootSysRanPtr ; systemRan [ 1 ] = ( NULL ) ; systemRan [ 2 ] = ( NULL ) ;
-systemRan [ 3 ] = ( NULL ) ; systemRan [ 4 ] = ( NULL ) ; systemRan [ 5 ] = (
-NULL ) ; systemRan [ 6 ] = ( NULL ) ; systemRan [ 7 ] = ( NULL ) ; systemRan
-[ 8 ] = ( NULL ) ; systemRan [ 9 ] = ( NULL ) ; systemRan [ 10 ] = ( NULL ) ;
 systemTid [ 1 ] = jxp0bqrs0w -> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [
-2 ] = jxp0bqrs0w -> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [ 3 ] =
-jxp0bqrs0w -> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [ 4 ] = jxp0bqrs0w
--> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [ 5 ] = jxp0bqrs0w -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 6 ] = jxp0bqrs0w -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 7 ] = jxp0bqrs0w -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 8 ] = jxp0bqrs0w -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 9 ] = jxp0bqrs0w -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 10 ] = jxp0bqrs0w -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 0 ] = rootTid ; rtContextSystems [ 0 ] =
-0 ; rtContextSystems [ 1 ] = 0 ; rtContextSystems [ 2 ] = 0 ;
-rtContextSystems [ 3 ] = 0 ; rtContextSystems [ 4 ] = 0 ; rtContextSystems [
-5 ] = 0 ; rtContextSystems [ 6 ] = 0 ; rtContextSystems [ 7 ] = 0 ;
-rtContextSystems [ 8 ] = 0 ; rtContextSystems [ 9 ] = 0 ; rtContextSystems [
-10 ] = 0 ; }
+2 ] = jxp0bqrs0w -> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [ 0 ] =
+rootTid ; rtContextSystems [ 0 ] = 0 ; rtContextSystems [ 1 ] = 0 ;
+rtContextSystems [ 2 ] = 0 ; }
 #endif
 #ifndef HOST_CAPI_BUILD
 void FCEvPowertrainController_InitializeDataMapInfo ( ezkw1qrycv * const
-jxp0bqrs0w , kfczeuvxuu * localDW , void * sysRanPtr , int contextTid ) {
-rtwCAPI_SetVersion ( jxp0bqrs0w -> DataMapInfo . mmi , 1 ) ;
-rtwCAPI_SetStaticMap ( jxp0bqrs0w -> DataMapInfo . mmi , & mmiStatic ) ;
+jxp0bqrs0w , kfczeuvxuu * localDW , ax0myfw24a * localX , void * sysRanPtr ,
+int contextTid ) { rtwCAPI_SetVersion ( jxp0bqrs0w -> DataMapInfo . mmi , 1 )
+; rtwCAPI_SetStaticMap ( jxp0bqrs0w -> DataMapInfo . mmi , & mmiStatic ) ;
 rtwCAPI_SetLoggingStaticMap ( jxp0bqrs0w -> DataMapInfo . mmi , &
 mmiStaticInfoLogging ) ; FCEvPowertrainController_InitializeDataAddr (
-jxp0bqrs0w -> DataMapInfo . dataAddress , localDW ) ;
+jxp0bqrs0w -> DataMapInfo . dataAddress , localDW , localX ) ;
 rtwCAPI_SetDataAddressMap ( jxp0bqrs0w -> DataMapInfo . mmi , jxp0bqrs0w ->
 DataMapInfo . dataAddress ) ; FCEvPowertrainController_InitializeVarDimsAddr
 ( jxp0bqrs0w -> DataMapInfo . vardimsAddress ) ; rtwCAPI_SetVarDimsAddressMap

@@ -87,13 +87,13 @@ MDL_INFO_ID_MODEL_FCN_NAME , 0 , - 1 , ( void * ) "FCElectricPlant" } , {
 * ) "FCElectricPlant" } , { "FCElectricPlant.h" , MDL_INFO_MODEL_FILENAME , 0
 , - 1 , ( NULL ) } , { "FCElectricPlant.c" , MDL_INFO_MODEL_FILENAME , 0 , -
 1 , ( void * ) "FCElectricPlant" } } ; locdm2fqb0b locdm2fqb0 = { 0.0 , 0.01
-, 0.5 , 0.0 , 1.0 , - 1.0 , 0.0 , 100.0 , 0.006 , 5.0 , 1.0 , 1.0 , 0.01 , -
-1000.0 , 1000.0 , - 1000.0 , 1000.0 , 0.0 , 201.6 , - 1.0 , 1.0 , - 0.5 , 0.5
-, - 1.0 , 1.0 , - 1.0 , 1.0 , - 1.0 , 1.0 , - 1.0 , 1.0 , - 1000.0 , 1000.0 ,
-- 1000.0 , 1000.0 , 1.0 , 0.0 , - 1000.0 , 1000.0 , - 1.0 , - 1000.0 , 1000.0
-, - 1.0 , - 1.0 , 1.0 , - 1.0 , - 1000.0 , 1000.0 , - 1.0 , - 1.0 , 100.0 , -
-100.0 , 1.0 , 100.0 , 6.5 , - 1000.0 , 1000.0 , 0.00015830919839518998 , 0.1
-, 0.0 , 0.0 , 0.1 , 0.0 , 0.0 , 0.6 , 0.0 , 0.0 , 2.5 , 39.199999999999996 ,
+, - 1.0 , 0.0 , 100.0 , 0.006 , 50.0 , 1.0 , 1.0 , 0.01 , - 1000.0 , 1000.0 ,
+- 10000.0 , 10000.0 , 0.0 , 201.6 , - 1.0 , 1.0 , - 1000.0 , 1000.0 , - 1.0 ,
+1.0 , - 1.0 , 1.0 , - 1.0 , 1.0 , - 1.0 , 1.0 , - 1000.0 , 1000.0 , - 1000.0
+, 1000.0 , 1.0 , 0.0 , - 1000.0 , 1000.0 , - 1.0 , - 1000.0 , 1000.0 , - 1.0
+, - 1.0 , 1.0 , - 1.0 , - 1000.0 , 1000.0 , - 1.0 , - 1.0 , 100.0 , - 100.0 ,
+1.0 , 100.0 , 6.5 , 4.1457221329740373E-6 , 0.00015830919839518998 , 0.1 ,
+0.0 , 0.0 , 0.1 , 0.0 , 0.0 , 0.6 , 0.0 , 0.0 , 2.5 , 39.199999999999996 ,
 0.5 , 20.0 , 0.101325 , 0.0 , 0.21 , 454.99261510564628 , 20.0 , 0.101325 ,
 0.06 , 20.0 , 70.0 , 0.0 , 0.9997 , 20.0 , 0.101325 , 0.0 , 0.9997 , 0.8 ,
 20.0 , 0.101325 , 0.0 , 0.9997 , 0.0 , 20.0 , 0.101325 , 0.0 , 0.9997 , 20.0
@@ -1228,7 +1228,7 @@ const lmamcwn3a2 , ammy3t1awn * localDW , fw3fcrujzt * localX ) { int_T is ;
 int_T tmp_e ; int_T tmp_g ; int_T tmp_i ; int_T tmp_j ; int_T tmp_m ;
 boolean_T tmp ; boolean_T tmp_p ; void * S ; void * diag ; localX ->
 cjg15axlwj = 0.0 ; localX -> ggydzdzl02 = 0.0 ; localX -> obun43xkmt = 0.0 ;
-localX -> lqulrgwclj = 0.0 ; localX -> egyqa4syxe = 0.0 ; localX ->
+localX -> ghqrh5fgbd = 0.0 ; localX -> egyqa4syxe = 0.0 ; localX ->
 ptuc3j0waz = 0.0 ; localX -> nupwktvts5 = 0.0 ; localX -> pbkku1th1h = 0.0 ;
 localX -> ipbdkiozya = 0.0 ; localX -> czf51nn3to = 0.0 ; localDW ->
 ie3nwfalvy = 1 ; if ( rtmIsFirstInitCond ( lmamcwn3a2 ) ) { localX ->
@@ -1256,13 +1256,12 @@ boolean_T ) ( ( is != 0 ) & ( tmp_e != 0 ) & ( tmp_i != 0 ) & ( tmp_m != 0 )
  "physmod:simscape:engine:sli:SimscapeExecutionBlock:InconsistentSolversInModelRef"
 , 2 , 3 , "ode23t" , 3 , "{daessc, ode14x, ode15s, ode1be, ode23t, odeN}" ) ;
 rt_ssSet_slErrMsg ( S , diag ) ; } } localX -> ep1kvce3ls = 0.0 ; localX ->
-hehcfcd5qe = 0.0 ; localX -> hrtmiik4pa = locdm2fqb0 . P_54 ; localX ->
-cs23dlzame = 0.0 ; localX -> gr332uyzki = locdm2fqb0 . P_3 ; } void
+hehcfcd5qe = 0.0 ; localX -> hrtmiik4pa = locdm2fqb0 . P_51 ; } void
 gtrcczzcor ( m5e23pbc2h * const lmamcwn3a2 , ammy3t1awn * localDW ,
 fw3fcrujzt * localX ) { int_T is ; int_T tmp_e ; int_T tmp_g ; int_T tmp_i ;
 int_T tmp_j ; int_T tmp_m ; boolean_T tmp ; boolean_T tmp_p ; void * S ; void
 * diag ; localX -> cjg15axlwj = 0.0 ; localX -> ggydzdzl02 = 0.0 ; localX ->
-obun43xkmt = 0.0 ; localX -> lqulrgwclj = 0.0 ; localX -> egyqa4syxe = 0.0 ;
+obun43xkmt = 0.0 ; localX -> ghqrh5fgbd = 0.0 ; localX -> egyqa4syxe = 0.0 ;
 localX -> ptuc3j0waz = 0.0 ; localX -> nupwktvts5 = 0.0 ; localX ->
 pbkku1th1h = 0.0 ; localX -> ipbdkiozya = 0.0 ; localX -> czf51nn3to = 0.0 ;
 localDW -> ie3nwfalvy = 1 ; if ( rtmIsFirstInitCond ( lmamcwn3a2 ) ) { localX
@@ -1290,18 +1289,18 @@ boolean_T ) ( ( is != 0 ) & ( tmp_e != 0 ) & ( tmp_i != 0 ) & ( tmp_m != 0 )
  "physmod:simscape:engine:sli:SimscapeExecutionBlock:InconsistentSolversInModelRef"
 , 2 , 3 , "ode23t" , 3 , "{daessc, ode14x, ode15s, ode1be, ode23t, odeN}" ) ;
 rt_ssSet_slErrMsg ( S , diag ) ; } } localX -> ep1kvce3ls = 0.0 ; localX ->
-hehcfcd5qe = 0.0 ; localX -> hrtmiik4pa = locdm2fqb0 . P_54 ; localX ->
-cs23dlzame = 0.0 ; localX -> gr332uyzki = locdm2fqb0 . P_3 ; } void
+hehcfcd5qe = 0.0 ; localX -> hrtmiik4pa = locdm2fqb0 . P_51 ; } void
 alwc4n2foq ( m5e23pbc2h * const lmamcwn3a2 , o4lq13rlvq * localB , ammy3t1awn
 * localDW , fw3fcrujzt * localX , kz4c240slf * localXPerturbMin , mclj3ytwnx
 * localXPerturbMax ) { NeModelParameters modelParameters ; NeModelParameters
-modelParameters_p ; NeslRtpManager * manager ; NeslRtpManager * manager_p ;
-NeslSimulationData * simulationData ; NeslSimulator * tmp_p ;
-NeuDiagnosticManager * diagnosticManager ; NeuDiagnosticTree * diagnosticTree
-; NeuDiagnosticTree * diagnosticTree_e ; NeuDiagnosticTree * diagnosticTree_p
-; char * msg ; char * msg_e ; char * msg_p ; real_T tmp_m [ 48 ] ; real_T
-time ; real_T tmp_e ; int32_T tmp_i ; int_T tmp_g [ 13 ] ; boolean_T tmp ;
-boolean_T val ; localB -> jdyv4q3xm2 = locdm2fqb0 . P_65 ; manager_p =
+modelParameters_e ; NeModelParameters modelParameters_p ; NeslRtpManager *
+manager ; NeslRtpManager * manager_p ; NeslSimulationData * simulationData ;
+NeslSimulator * tmp_p ; NeuDiagnosticManager * diagnosticManager ;
+NeuDiagnosticTree * diagnosticTree ; NeuDiagnosticTree * diagnosticTree_e ;
+NeuDiagnosticTree * diagnosticTree_i ; NeuDiagnosticTree * diagnosticTree_p ;
+char * msg ; char * msg_e ; char * msg_i ; char * msg_p ; real_T tmp_m [ 48 ]
+; real_T time ; real_T tmp_e ; int32_T tmp_i ; int_T tmp_g [ 13 ] ; boolean_T
+tmp ; boolean_T val ; localB -> lrv2smzsir = locdm2fqb0 . P_61 ; manager_p =
 nesl_lease_rtp_manager ( "FCElectricPlant/Solver Configuration1_1" , 0 ) ;
 manager = manager_p ; tmp = pointer_is_null ( manager_p ) ; if ( tmp ) {
 FCElectricPlant_f9151c4e_1_gateway ( ) ; manager = nesl_lease_rtp_manager (
@@ -1320,11 +1319,11 @@ simulationData ; diagnosticManager = rtw_create_diagnostics ( ) ; localDW ->
 caf04x50w3 = ( void * ) diagnosticManager ; modelParameters . mSolverType =
 NE_SOLVER_TYPE_DAE ; modelParameters . mSolverAbsTol = 0.0001 ;
 modelParameters . mSolverRelTol = 0.0001 ; modelParameters .
-mSolverModifyAbsTol = NE_MODIFY_ABS_TOL_MAYBE ; modelParameters . mStartTime
-= 0.0 ; modelParameters . mLoadInitialState = false ; modelParameters .
+mSolverModifyAbsTol = NE_MODIFY_ABS_TOL_NO ; modelParameters . mStartTime =
+0.0 ; modelParameters . mLoadInitialState = false ; modelParameters .
 mUseSimState = false ; modelParameters . mLinTrimCompile = false ;
 modelParameters . mLoggingMode = SSC_LOGGING_OFF ; modelParameters .
-mRTWModifiedTimeStamp = 6.0985605E+8 ; modelParameters . mZcDisabled = false
+mRTWModifiedTimeStamp = 6.14070392E+8 ; modelParameters . mZcDisabled = false
 ; modelParameters . mUseModelRefSolver = false ; tmp_e = 0.0001 ;
 modelParameters . mSolverTolerance = tmp_e ; tmp_e = 0.0 ; modelParameters .
 mFixedStepSize = tmp_e ; tmp = true ; modelParameters . mVariableStepSolver =
@@ -1421,11 +1420,11 @@ rtw_create_diagnostics ( ) ; localDW -> ln3oq3n23r = ( void * )
 diagnosticManager ; modelParameters_p . mSolverType = NE_SOLVER_TYPE_DAE ;
 modelParameters_p . mSolverAbsTol = 0.0001 ; modelParameters_p .
 mSolverRelTol = 0.0001 ; modelParameters_p . mSolverModifyAbsTol =
-NE_MODIFY_ABS_TOL_MAYBE ; modelParameters_p . mStartTime = 0.0 ;
+NE_MODIFY_ABS_TOL_NO ; modelParameters_p . mStartTime = 0.0 ;
 modelParameters_p . mLoadInitialState = false ; modelParameters_p .
 mUseSimState = false ; modelParameters_p . mLinTrimCompile = false ;
 modelParameters_p . mLoggingMode = SSC_LOGGING_OFF ; modelParameters_p .
-mRTWModifiedTimeStamp = 6.0985605E+8 ; modelParameters_p . mZcDisabled =
+mRTWModifiedTimeStamp = 6.14070392E+8 ; modelParameters_p . mZcDisabled =
 false ; modelParameters_p . mUseModelRefSolver = false ; tmp_e = 0.0001 ;
 modelParameters_p . mSolverTolerance = tmp_e ; tmp_e = 0.0 ;
 modelParameters_p . mFixedStepSize = tmp_e ; tmp = true ; modelParameters_p .
@@ -1442,124 +1441,160 @@ nesl_initialize_simulator ( ( NeslSimulator * ) localDW -> ai5tmyvkr4 , &
 modelParameters_p , diagnosticManager ) ; if ( tmp_i != 0 ) { tmp =
 error_buffer_is_empty ( ssGetErrorStatus ( lmamcwn3a2 -> _mdlRefSfcnS ) ) ;
 if ( tmp ) { msg_e = rtw_diagnostics_msg ( diagnosticTree_e ) ;
-ssSetErrorStatus ( lmamcwn3a2 -> _mdlRefSfcnS , msg_e ) ; } } } void
+ssSetErrorStatus ( lmamcwn3a2 -> _mdlRefSfcnS , msg_e ) ; } } tmp_p =
+nesl_lease_simulator ( "FCElectricPlant/Solver Configuration1_1" , 1 , 1 ) ;
+localDW -> bcdomoeobw = ( void * ) tmp_p ; tmp = pointer_is_null ( localDW ->
+bcdomoeobw ) ; if ( tmp ) { FCElectricPlant_f9151c4e_1_gateway ( ) ; tmp_p =
+nesl_lease_simulator ( "FCElectricPlant/Solver Configuration1_1" , 1 , 1 ) ;
+localDW -> bcdomoeobw = ( void * ) tmp_p ; } slsaSaveRawMemoryForSimTargetOP
+( lmamcwn3a2 -> _mdlRefSfcnS , "FCElectricPlant/Solver Configuration1_111" ,
+( void * * ) ( & localDW -> bcdomoeobw ) , 0U * sizeof ( real_T ) ,
+nesl_save_simdata , nesl_restore_simdata ) ; simulationData =
+nesl_create_simulation_data ( ) ; localDW -> dy4oa554kf = ( void * )
+simulationData ; diagnosticManager = rtw_create_diagnostics ( ) ; localDW ->
+d1c3ioipfx = ( void * ) diagnosticManager ; modelParameters_e . mSolverType =
+NE_SOLVER_TYPE_DAE ; modelParameters_e . mSolverAbsTol = 0.0001 ;
+modelParameters_e . mSolverRelTol = 0.0001 ; modelParameters_e .
+mSolverModifyAbsTol = NE_MODIFY_ABS_TOL_NO ; modelParameters_e . mStartTime =
+0.0 ; modelParameters_e . mLoadInitialState = false ; modelParameters_e .
+mUseSimState = false ; modelParameters_e . mLinTrimCompile = false ;
+modelParameters_e . mLoggingMode = SSC_LOGGING_OFF ; modelParameters_e .
+mRTWModifiedTimeStamp = 6.14070392E+8 ; modelParameters_e . mZcDisabled =
+false ; modelParameters_e . mUseModelRefSolver = false ; tmp_e = 0.0001 ;
+modelParameters_e . mSolverTolerance = tmp_e ; tmp_e = 0.0 ;
+modelParameters_e . mFixedStepSize = tmp_e ; tmp = true ; modelParameters_e .
+mVariableStepSolver = tmp ; tmp = false ; modelParameters_e . mIsUsingODEN =
+tmp ; tmp = slIsRapidAcceleratorSimulating ( ) ; val = (
+slIsRapidAcceleratorSimulating ( ) ? ssGetGlobalInitialStatesAvailable (
+lmamcwn3a2 -> _mdlRefSfcnS ) : simTgtGlobalInitialStatesAvailable (
+lmamcwn3a2 -> _mdlRefSfcnS ) ) ; if ( tmp ) { val = ( val &&
+rtmIsFirstInitCond ( lmamcwn3a2 ) ) ; } modelParameters_e . mLoadInitialState
+= val ; modelParameters_e . mZcDisabled = false ; diagnosticManager = (
+NeuDiagnosticManager * ) localDW -> d1c3ioipfx ; diagnosticTree_i =
+neu_diagnostic_manager_get_initial_tree ( diagnosticManager ) ; tmp_i =
+nesl_initialize_simulator ( ( NeslSimulator * ) localDW -> bcdomoeobw , &
+modelParameters_e , diagnosticManager ) ; if ( tmp_i != 0 ) { tmp =
+error_buffer_is_empty ( ssGetErrorStatus ( lmamcwn3a2 -> _mdlRefSfcnS ) ) ;
+if ( tmp ) { msg_i = rtw_diagnostics_msg ( diagnosticTree_i ) ;
+ssSetErrorStatus ( lmamcwn3a2 -> _mdlRefSfcnS , msg_i ) ; } } } void
 FCElectricPlant ( m5e23pbc2h * const lmamcwn3a2 , const real_T * nhquhhxexx ,
 const real_T * crmxvln0sn , const real_T * enxvezuult , real_T * laajwttrsw ,
 real_T * l45wd5pbjh , real_T * pjtg1ua4jf , real_T * jkukrewnlm , real_T *
 lwu0tsgovp , real_T * oz3dekjw3t , real_T * ca0lva1ra5 , real_T * csbds3kgit
-, real_T * ndmmn1qxbt , o4lq13rlvq * localB , ammy3t1awn * localDW ,
-fw3fcrujzt * localX , km30avrcex * localZCE ) { NeParameterBundle expl_temp ;
-NeslSimulationData * simulationData ; NeuDiagnosticManager * diag ;
-NeuDiagnosticTree * diagTree ; NeuDiagnosticTree * diagnosticTree ;
+, o4lq13rlvq * localB , ammy3t1awn * localDW , fw3fcrujzt * localX ,
+km30avrcex * localZCE ) { NeParameterBundle expl_temp ; NeslSimulationData *
+simulationData ; NeuDiagnosticManager * diag ; NeuDiagnosticTree * diagTree ;
+NeuDiagnosticTree * diagnosticTree ; NeuDiagnosticTree * diagnosticTree_e ;
 NeuDiagnosticTree * diagnosticTree_p ; char * msg ; char * msg_e ; char *
-msg_p ; real_T tmp [ 54 ] ; real_T tmp_p [ 48 ] ; real_T csvlpmecmh_p ;
-real_T dhexwepzal_p ; real_T doghfw52dl_p ; real_T kjijsatu5c_p ; real_T
-l3aq3lzzaj_p ; real_T l3aq3lzzaj_tmp ; real_T n5zg2lo03g_p ; real_T time ;
-real_T time_e ; real_T time_i ; real_T time_p ; real_T *
-parameterBundle_mRealParameters_mX ; int_T tmp_m [ 14 ] ; int_T tmp_e [ 13 ]
-; int_T iy ; boolean_T didZcEventOccur ; boolean_T fypbxhubtb_p ; boolean_T
-tmp_i ; n5zg2lo03g_p = locdm2fqb0 . P_16 * localX -> ggydzdzl02 ; if (
-n5zg2lo03g_p > locdm2fqb0 . P_17 ) { doghfw52dl_p = locdm2fqb0 . P_17 ; }
-else if ( n5zg2lo03g_p < locdm2fqb0 . P_18 ) { doghfw52dl_p = locdm2fqb0 .
-P_18 ; } else { doghfw52dl_p = n5zg2lo03g_p ; } localB -> pkj2z4oo3u =
-locdm2fqb0 . P_14 * localX -> cjg15axlwj / doghfw52dl_p ; if ( localDW ->
-cgymtfznvh == 0.0 ) { localDW -> cgymtfznvh = 1.0 ; localX -> kgxgv1vmlq =
-localB -> pkj2z4oo3u ; } localB -> brkjgij31f [ 0 ] = localX -> kgxgv1vmlq ;
-localB -> brkjgij31f [ 1 ] = ( localB -> pkj2z4oo3u - localX -> kgxgv1vmlq )
-* 1000.0 ; localB -> brkjgij31f [ 2 ] = 0.0 ; localB -> brkjgij31f [ 3 ] =
-0.0 ; localB -> d31fe02c1j [ 0 ] = locdm2fqb0 . P_20 * localX -> obun43xkmt ;
-localB -> d31fe02c1j [ 1 ] = 0.0 ; localB -> d31fe02c1j [ 2 ] = 0.0 ; localB
--> d31fe02c1j [ 3 ] = 0.0 ; localB -> m4vtulkmjt [ 0 ] = localB ->
+msg_i ; char * msg_p ; real_T tmp [ 54 ] ; real_T tmp_p [ 48 ] ; real_T
+ic2p4qdkko [ 2 ] ; real_T csvlpmecmh_p ; real_T dhexwepzal_p ; real_T
+doghfw52dl_p ; real_T kjijsatu5c_p ; real_T l3aq3lzzaj_p ; real_T
+l3aq3lzzaj_tmp ; real_T time ; real_T time_e ; real_T time_g ; real_T time_i
+; real_T time_m ; real_T time_p ; real_T * parameterBundle_mRealParameters_mX
+; int_T tmp_g [ 14 ] ; int_T tmp_m [ 14 ] ; int_T tmp_e [ 13 ] ; int_T iy ;
+boolean_T didZcEventOccur ; boolean_T fypbxhubtb_p ; boolean_T tmp_i ; localB
+-> n5zg2lo03g = 0.0 ; localB -> n5zg2lo03g += locdm2fqb0 . P_13 * localX ->
+ggydzdzl02 ; if ( ssIsModeUpdateTimeStep ( lmamcwn3a2 -> _mdlRefSfcnS ) ) {
+localDW -> jn1hlles4f = localB -> n5zg2lo03g >= locdm2fqb0 . P_14 ? 1 :
+localB -> n5zg2lo03g > locdm2fqb0 . P_15 ? 0 : - 1 ; } localB -> brkjgij31f [
+0 ] = locdm2fqb0 . P_11 * localX -> cjg15axlwj / ( localDW -> jn1hlles4f == 1
+? locdm2fqb0 . P_14 : localDW -> jn1hlles4f == - 1 ? locdm2fqb0 . P_15 :
+localB -> n5zg2lo03g ) ; localB -> brkjgij31f [ 1 ] = 0.0 ; localB ->
+brkjgij31f [ 2 ] = 0.0 ; localB -> brkjgij31f [ 3 ] = 0.0 ; localB ->
+d31fe02c1j [ 0 ] = locdm2fqb0 . P_17 * localX -> obun43xkmt ; localB ->
+d31fe02c1j [ 1 ] = 0.0 ; localB -> d31fe02c1j [ 2 ] = 0.0 ; localB ->
+d31fe02c1j [ 3 ] = 0.0 ; localB -> m4vtulkmjt [ 0 ] = localB ->
 eartrnbzob_mbvzarwird ; localB -> m4vtulkmjt [ 1 ] = 0.0 ; localB ->
 m4vtulkmjt [ 2 ] = 0.0 ; if ( rtmIsMajorTimeStep ( lmamcwn3a2 ) ) { localDW
 -> mybfclyhka [ 0 ] = ! ( localB -> m4vtulkmjt [ 0 ] == localDW -> mybfclyhka
 [ 1 ] ) ; localDW -> mybfclyhka [ 1 ] = localB -> m4vtulkmjt [ 0 ] ; } localB
 -> m4vtulkmjt [ 0 ] = localDW -> mybfclyhka [ 1 ] ; localB -> m4vtulkmjt [ 3
-] = localDW -> mybfclyhka [ 0 ] ; localB -> ord4d0pj3d = 0.0 ; localB ->
-ord4d0pj3d += locdm2fqb0 . P_22 * localX -> lqulrgwclj ; localB -> kqzmt5kme1
-[ 0 ] = localB -> ord4d0pj3d ; localB -> kqzmt5kme1 [ 1 ] = 0.0 ; localB ->
+] = localDW -> mybfclyhka [ 0 ] ; localB -> b13j45cydo = 0.0 ; localB ->
+b13j45cydo += locdm2fqb0 . P_19 * localX -> ghqrh5fgbd ; localB -> kqzmt5kme1
+[ 0 ] = localB -> b13j45cydo ; localB -> kqzmt5kme1 [ 1 ] = 0.0 ; localB ->
 kqzmt5kme1 [ 2 ] = 0.0 ; localB -> kqzmt5kme1 [ 3 ] = 0.0 ; localB ->
-d1vyttnzih [ 0 ] = locdm2fqb0 . P_24 * localX -> egyqa4syxe ; localB ->
+d1vyttnzih [ 0 ] = locdm2fqb0 . P_21 * localX -> egyqa4syxe ; localB ->
 d1vyttnzih [ 1 ] = 0.0 ; localB -> d1vyttnzih [ 2 ] = 0.0 ; localB ->
-d1vyttnzih [ 3 ] = 0.0 ; localB -> jke0x3nf0x [ 0 ] = locdm2fqb0 . P_26 *
-localX -> ptuc3j0waz + 273.15 ; localB -> jke0x3nf0x [ 1 ] = 0.0 ; localB ->
-jke0x3nf0x [ 2 ] = 0.0 ; localB -> jke0x3nf0x [ 3 ] = 0.0 ; localB ->
-eartrnbzob [ 0 ] = locdm2fqb0 . P_28 * localX -> nupwktvts5 ; localB ->
-eartrnbzob [ 1 ] = 0.0 ; localB -> eartrnbzob [ 2 ] = 0.0 ; localB ->
-eartrnbzob [ 3 ] = 0.0 ; localB -> jbwae2aqzh [ 0 ] = locdm2fqb0 . P_30 *
-localX -> pbkku1th1h + 273.15 ; localB -> jbwae2aqzh [ 1 ] = 0.0 ; localB ->
-jbwae2aqzh [ 2 ] = 0.0 ; localB -> jbwae2aqzh [ 3 ] = 0.0 ; localB ->
-l3n4ugyftb [ 0 ] = localB -> kziv2ppkm1 ; localB -> l3n4ugyftb [ 1 ] = 0.0 ;
-localB -> l3n4ugyftb [ 2 ] = 0.0 ; if ( rtmIsMajorTimeStep ( lmamcwn3a2 ) ) {
-localDW -> jqrc2iageq [ 0 ] = ! ( localB -> l3n4ugyftb [ 0 ] == localDW ->
-jqrc2iageq [ 1 ] ) ; localDW -> jqrc2iageq [ 1 ] = localB -> l3n4ugyftb [ 0 ]
-; } localB -> l3n4ugyftb [ 0 ] = localDW -> jqrc2iageq [ 1 ] ; localB ->
-l3n4ugyftb [ 3 ] = localDW -> jqrc2iageq [ 0 ] ; * oz3dekjw3t = 0.0 ; *
-oz3dekjw3t += locdm2fqb0 . P_32 * localX -> ipbdkiozya ; doghfw52dl_p = *
-enxvezuult - * oz3dekjw3t ; csvlpmecmh_p = locdm2fqb0 . P_8 * doghfw52dl_p ;
-fypbxhubtb_p = ( * enxvezuult <= locdm2fqb0 . P_12 ) ; l3aq3lzzaj_p =
-locdm2fqb0 . P_34 * localX -> czf51nn3to ; if ( ssIsModeUpdateTimeStep (
-lmamcwn3a2 -> _mdlRefSfcnS ) ) { didZcEventOccur = ( ( ! fypbxhubtb_p ) && (
-localZCE -> eleagvs5h0 != ZERO_ZCSIG ) ) ; localZCE -> eleagvs5h0 =
-fypbxhubtb_p ; if ( didZcEventOccur || ( localDW -> ie3nwfalvy != 0 ) ) {
-didZcEventOccur = ( localX -> abtw1mwj2p != l3aq3lzzaj_p ) ; localX ->
-abtw1mwj2p = l3aq3lzzaj_p ; if ( didZcEventOccur ) {
-ssSetBlockStateForSolverChangedAtMajorStep ( lmamcwn3a2 -> _mdlRefSfcnS ) ; }
-} l3aq3lzzaj_p = localX -> abtw1mwj2p ; } else { l3aq3lzzaj_p = localX ->
-abtw1mwj2p ; } dhexwepzal_p = locdm2fqb0 . P_0 * doghfw52dl_p ; if (
-ssIsModeUpdateTimeStep ( lmamcwn3a2 -> _mdlRefSfcnS ) ) { didZcEventOccur = (
-( ! fypbxhubtb_p ) && ( localZCE -> nrrnky0p5s != ZERO_ZCSIG ) ) ; localZCE
--> nrrnky0p5s = fypbxhubtb_p ; if ( didZcEventOccur || ( localDW ->
-ei0dla2ntt != 0 ) ) { didZcEventOccur = ( localX -> ghzzlnog0w != localB ->
-jdyv4q3xm2 ) ; localX -> ghzzlnog0w = localB -> jdyv4q3xm2 ; if (
+d1vyttnzih [ 3 ] = 0.0 ; kjijsatu5c_p = locdm2fqb0 . P_23 * localX ->
+ptuc3j0waz ; localB -> jke0x3nf0x [ 0 ] = kjijsatu5c_p + 273.15 ; localB ->
+jke0x3nf0x [ 1 ] = 0.0 ; localB -> jke0x3nf0x [ 2 ] = 0.0 ; localB ->
+jke0x3nf0x [ 3 ] = 0.0 ; localB -> eartrnbzob [ 0 ] = locdm2fqb0 . P_25 *
+localX -> nupwktvts5 ; localB -> eartrnbzob [ 1 ] = 0.0 ; localB ->
+eartrnbzob [ 2 ] = 0.0 ; localB -> eartrnbzob [ 3 ] = 0.0 ; localB ->
+jbwae2aqzh [ 0 ] = locdm2fqb0 . P_27 * localX -> pbkku1th1h + 273.15 ; localB
+-> jbwae2aqzh [ 1 ] = 0.0 ; localB -> jbwae2aqzh [ 2 ] = 0.0 ; localB ->
+jbwae2aqzh [ 3 ] = 0.0 ; localB -> l3n4ugyftb [ 0 ] = localB -> goyafd53a5 ;
+localB -> l3n4ugyftb [ 1 ] = 0.0 ; localB -> l3n4ugyftb [ 2 ] = 0.0 ; if (
+rtmIsMajorTimeStep ( lmamcwn3a2 ) ) { localDW -> jqrc2iageq [ 0 ] = ! (
+localB -> l3n4ugyftb [ 0 ] == localDW -> jqrc2iageq [ 1 ] ) ; localDW ->
+jqrc2iageq [ 1 ] = localB -> l3n4ugyftb [ 0 ] ; } localB -> l3n4ugyftb [ 0 ]
+= localDW -> jqrc2iageq [ 1 ] ; localB -> l3n4ugyftb [ 3 ] = localDW ->
+jqrc2iageq [ 0 ] ; * oz3dekjw3t = 0.0 ; * oz3dekjw3t += locdm2fqb0 . P_29 *
+localX -> ipbdkiozya ; doghfw52dl_p = * enxvezuult - * oz3dekjw3t ;
+csvlpmecmh_p = locdm2fqb0 . P_5 * doghfw52dl_p ; fypbxhubtb_p = ( *
+enxvezuult <= locdm2fqb0 . P_9 ) ; l3aq3lzzaj_p = locdm2fqb0 . P_31 * localX
+-> czf51nn3to ; if ( ssIsModeUpdateTimeStep ( lmamcwn3a2 -> _mdlRefSfcnS ) )
+{ didZcEventOccur = ( ( ! fypbxhubtb_p ) && ( localZCE -> eleagvs5h0 !=
+ZERO_ZCSIG ) ) ; localZCE -> eleagvs5h0 = fypbxhubtb_p ; if ( didZcEventOccur
+|| ( localDW -> ie3nwfalvy != 0 ) ) { didZcEventOccur = ( localX ->
+abtw1mwj2p != l3aq3lzzaj_p ) ; localX -> abtw1mwj2p = l3aq3lzzaj_p ; if (
 didZcEventOccur ) { ssSetBlockStateForSolverChangedAtMajorStep ( lmamcwn3a2
--> _mdlRefSfcnS ) ; } } kjijsatu5c_p = localX -> ghzzlnog0w ; } else {
-kjijsatu5c_p = localX -> ghzzlnog0w ; } localB -> juwfq1mzri = ( dhexwepzal_p
-- kjijsatu5c_p ) * locdm2fqb0 . P_7 ; localB -> hmhvu0ftwl = ( csvlpmecmh_p +
-l3aq3lzzaj_p ) + localB -> juwfq1mzri ; if ( ssIsModeUpdateTimeStep (
-lmamcwn3a2 -> _mdlRefSfcnS ) ) { localDW -> itcp3adbb2 = localB -> hmhvu0ftwl
->= locdm2fqb0 . P_10 ? 1 : localB -> hmhvu0ftwl > locdm2fqb0 . P_5 ? 0 : - 1
-; } localB -> ogx5lh5hr4 = localDW -> itcp3adbb2 == 1 ? locdm2fqb0 . P_10 :
-localDW -> itcp3adbb2 == - 1 ? locdm2fqb0 . P_5 : localB -> hmhvu0ftwl ;
-l3aq3lzzaj_p = localB -> ogx5lh5hr4 + locdm2fqb0 . P_66 ; if ( l3aq3lzzaj_p >
-locdm2fqb0 . P_35 ) { localB -> dycp3mt3z3 [ 0 ] = locdm2fqb0 . P_35 ; } else
-if ( l3aq3lzzaj_p < locdm2fqb0 . P_36 ) { localB -> dycp3mt3z3 [ 0 ] =
-locdm2fqb0 . P_36 ; } else { localB -> dycp3mt3z3 [ 0 ] = l3aq3lzzaj_p ; }
-localB -> dycp3mt3z3 [ 1 ] = 0.0 ; localB -> dycp3mt3z3 [ 2 ] = 0.0 ; localB
--> dycp3mt3z3 [ 3 ] = 0.0 ; localB -> hiaxbfam0w [ 0 ] = * nhquhhxexx ;
-localB -> hiaxbfam0w [ 1 ] = 0.0 ; localB -> hiaxbfam0w [ 2 ] = 0.0 ; localB
--> hiaxbfam0w [ 3 ] = 0.0 ; localB -> ddehjbnx4b = 0.0 ; localB -> ddehjbnx4b
-+= locdm2fqb0 . P_38 * localX -> fpiq4t01ji ; if ( localDW -> cgodyj4yxm ==
-0.0 ) { localDW -> cgodyj4yxm = 1.0 ; localX -> n3wx255ehc = localB ->
-ddehjbnx4b ; } localB -> jw0eii0b1p [ 0 ] = localX -> n3wx255ehc ; localB ->
-jw0eii0b1p [ 1 ] = ( localB -> ddehjbnx4b - localX -> n3wx255ehc ) * 1000.0 ;
-localB -> jw0eii0b1p [ 2 ] = 0.0 ; localB -> jw0eii0b1p [ 3 ] = 0.0 ; if (
+-> _mdlRefSfcnS ) ; } } l3aq3lzzaj_p = localX -> abtw1mwj2p ; } else {
+l3aq3lzzaj_p = localX -> abtw1mwj2p ; } dhexwepzal_p = locdm2fqb0 . P_0 *
+doghfw52dl_p ; if ( ssIsModeUpdateTimeStep ( lmamcwn3a2 -> _mdlRefSfcnS ) ) {
+didZcEventOccur = ( ( ! fypbxhubtb_p ) && ( localZCE -> nrrnky0p5s !=
+ZERO_ZCSIG ) ) ; localZCE -> nrrnky0p5s = fypbxhubtb_p ; if ( didZcEventOccur
+|| ( localDW -> ei0dla2ntt != 0 ) ) { didZcEventOccur = ( localX ->
+ghzzlnog0w != localB -> lrv2smzsir ) ; localX -> ghzzlnog0w = localB ->
+lrv2smzsir ; if ( didZcEventOccur ) {
+ssSetBlockStateForSolverChangedAtMajorStep ( lmamcwn3a2 -> _mdlRefSfcnS ) ; }
+} kjijsatu5c_p = localX -> ghzzlnog0w ; } else { kjijsatu5c_p = localX ->
+ghzzlnog0w ; } localB -> juwfq1mzri = ( dhexwepzal_p - kjijsatu5c_p ) *
+locdm2fqb0 . P_4 ; localB -> hmhvu0ftwl = ( csvlpmecmh_p + l3aq3lzzaj_p ) +
+localB -> juwfq1mzri ; if ( ssIsModeUpdateTimeStep ( lmamcwn3a2 ->
+_mdlRefSfcnS ) ) { localDW -> itcp3adbb2 = localB -> hmhvu0ftwl >= locdm2fqb0
+. P_7 ? 1 : localB -> hmhvu0ftwl > locdm2fqb0 . P_2 ? 0 : - 1 ; } localB ->
+ogx5lh5hr4 = localDW -> itcp3adbb2 == 1 ? locdm2fqb0 . P_7 : localDW ->
+itcp3adbb2 == - 1 ? locdm2fqb0 . P_2 : localB -> hmhvu0ftwl ; l3aq3lzzaj_p =
+localB -> ogx5lh5hr4 + locdm2fqb0 . P_62 ; if ( l3aq3lzzaj_p > locdm2fqb0 .
+P_32 ) { localB -> dycp3mt3z3 [ 0 ] = locdm2fqb0 . P_32 ; } else if (
+l3aq3lzzaj_p < locdm2fqb0 . P_33 ) { localB -> dycp3mt3z3 [ 0 ] = locdm2fqb0
+. P_33 ; } else { localB -> dycp3mt3z3 [ 0 ] = l3aq3lzzaj_p ; } localB ->
+dycp3mt3z3 [ 1 ] = 0.0 ; localB -> dycp3mt3z3 [ 2 ] = 0.0 ; localB ->
+dycp3mt3z3 [ 3 ] = 0.0 ; localB -> hiaxbfam0w [ 0 ] = * nhquhhxexx ; localB
+-> hiaxbfam0w [ 1 ] = 0.0 ; localB -> hiaxbfam0w [ 2 ] = 0.0 ; localB ->
+hiaxbfam0w [ 3 ] = 0.0 ; localB -> ddehjbnx4b = 0.0 ; localB -> ddehjbnx4b +=
+locdm2fqb0 . P_35 * localX -> fpiq4t01ji ; if ( localDW -> cgodyj4yxm == 0.0
+) { localDW -> cgodyj4yxm = 1.0 ; localX -> n3wx255ehc = localB -> ddehjbnx4b
+; } localB -> jw0eii0b1p [ 0 ] = localX -> n3wx255ehc ; localB -> jw0eii0b1p
+[ 1 ] = ( localB -> ddehjbnx4b - localX -> n3wx255ehc ) * 1000.0 ; localB ->
+jw0eii0b1p [ 2 ] = 0.0 ; localB -> jw0eii0b1p [ 3 ] = 0.0 ; if (
 rtmIsMajorTimeStep ( lmamcwn3a2 ) && rtmIsSampleHit ( lmamcwn3a2 , 1 , 0 ) )
-{ if ( localDW -> fczbez2now ) { tmp [ 0 ] = locdm2fqb0 . P_74 ; tmp [ 1 ] =
-locdm2fqb0 . P_96 ; tmp [ 2 ] = locdm2fqb0 . P_98 ; tmp [ 3 ] = locdm2fqb0 .
-P_99 ; tmp [ 4 ] = locdm2fqb0 . P_100 ; tmp [ 5 ] = locdm2fqb0 . P_102 ; tmp
-[ 6 ] = locdm2fqb0 . P_103 ; tmp [ 7 ] = locdm2fqb0 . P_118 ; tmp [ 8 ] =
-locdm2fqb0 . P_120 ; tmp [ 9 ] = locdm2fqb0 . P_121 ; tmp [ 10 ] = locdm2fqb0
-. P_123 ; tmp [ 11 ] = locdm2fqb0 . P_125 ; tmp [ 12 ] = locdm2fqb0 . P_126 ;
-tmp [ 13 ] = locdm2fqb0 . P_75 ; tmp [ 14 ] = locdm2fqb0 . P_92 ; tmp [ 15 ]
-= locdm2fqb0 . P_93 ; tmp [ 16 ] = locdm2fqb0 . P_94 ; tmp [ 17 ] =
-locdm2fqb0 . P_95 ; tmp [ 18 ] = locdm2fqb0 . P_78 ; tmp [ 19 ] = locdm2fqb0
-. P_79 ; tmp [ 20 ] = locdm2fqb0 . P_80 ; tmp [ 21 ] = locdm2fqb0 . P_81 ;
-tmp [ 22 ] = locdm2fqb0 . P_82 ; tmp [ 23 ] = locdm2fqb0 . P_83 ; tmp [ 24 ]
-= locdm2fqb0 . P_84 ; tmp [ 25 ] = locdm2fqb0 . P_85 ; tmp [ 26 ] =
-locdm2fqb0 . P_71 ; tmp [ 27 ] = locdm2fqb0 . P_69 ; tmp [ 28 ] = locdm2fqb0
-. P_70 ; tmp [ 29 ] = locdm2fqb0 . P_72 ; tmp [ 30 ] = locdm2fqb0 . P_73 ;
-tmp [ 31 ] = locdm2fqb0 . P_87 ; tmp [ 32 ] = locdm2fqb0 . P_89 ; tmp [ 33 ]
-= locdm2fqb0 . P_90 ; tmp [ 34 ] = locdm2fqb0 . P_88 ; tmp [ 35 ] =
-locdm2fqb0 . P_97 ; tmp [ 36 ] = locdm2fqb0 . P_101 ; tmp [ 37 ] = locdm2fqb0
-. P_105 ; tmp [ 38 ] = locdm2fqb0 . P_106 ; tmp [ 39 ] = locdm2fqb0 . P_108 ;
-tmp [ 40 ] = locdm2fqb0 . P_109 ; tmp [ 41 ] = locdm2fqb0 . P_107 ; tmp [ 42
-] = locdm2fqb0 . P_113 ; tmp [ 43 ] = locdm2fqb0 . P_114 ; tmp [ 44 ] =
-locdm2fqb0 . P_115 ; tmp [ 45 ] = locdm2fqb0 . P_116 ; tmp [ 46 ] =
-locdm2fqb0 . P_112 ; tmp [ 47 ] = locdm2fqb0 . P_119 ; tmp [ 48 ] =
-locdm2fqb0 . P_124 ; tmp [ 49 ] = locdm2fqb0 . P_64 ; tmp [ 50 ] = locdm2fqb0
-. P_117 ; tmp [ 51 ] = locdm2fqb0 . P_122 ; tmp [ 52 ] = locdm2fqb0 . P_127 ;
-tmp [ 53 ] = locdm2fqb0 . P_128 ; parameterBundle_mRealParameters_mX = & tmp
+{ if ( localDW -> fczbez2now ) { tmp [ 0 ] = locdm2fqb0 . P_70 ; tmp [ 1 ] =
+locdm2fqb0 . P_92 ; tmp [ 2 ] = locdm2fqb0 . P_94 ; tmp [ 3 ] = locdm2fqb0 .
+P_95 ; tmp [ 4 ] = locdm2fqb0 . P_96 ; tmp [ 5 ] = locdm2fqb0 . P_98 ; tmp [
+6 ] = locdm2fqb0 . P_99 ; tmp [ 7 ] = locdm2fqb0 . P_114 ; tmp [ 8 ] =
+locdm2fqb0 . P_116 ; tmp [ 9 ] = locdm2fqb0 . P_117 ; tmp [ 10 ] = locdm2fqb0
+. P_119 ; tmp [ 11 ] = locdm2fqb0 . P_121 ; tmp [ 12 ] = locdm2fqb0 . P_122 ;
+tmp [ 13 ] = locdm2fqb0 . P_71 ; tmp [ 14 ] = locdm2fqb0 . P_88 ; tmp [ 15 ]
+= locdm2fqb0 . P_89 ; tmp [ 16 ] = locdm2fqb0 . P_90 ; tmp [ 17 ] =
+locdm2fqb0 . P_91 ; tmp [ 18 ] = locdm2fqb0 . P_74 ; tmp [ 19 ] = locdm2fqb0
+. P_75 ; tmp [ 20 ] = locdm2fqb0 . P_76 ; tmp [ 21 ] = locdm2fqb0 . P_77 ;
+tmp [ 22 ] = locdm2fqb0 . P_78 ; tmp [ 23 ] = locdm2fqb0 . P_79 ; tmp [ 24 ]
+= locdm2fqb0 . P_80 ; tmp [ 25 ] = locdm2fqb0 . P_81 ; tmp [ 26 ] =
+locdm2fqb0 . P_67 ; tmp [ 27 ] = locdm2fqb0 . P_65 ; tmp [ 28 ] = locdm2fqb0
+. P_66 ; tmp [ 29 ] = locdm2fqb0 . P_68 ; tmp [ 30 ] = locdm2fqb0 . P_69 ;
+tmp [ 31 ] = locdm2fqb0 . P_83 ; tmp [ 32 ] = locdm2fqb0 . P_85 ; tmp [ 33 ]
+= locdm2fqb0 . P_86 ; tmp [ 34 ] = locdm2fqb0 . P_84 ; tmp [ 35 ] =
+locdm2fqb0 . P_93 ; tmp [ 36 ] = locdm2fqb0 . P_97 ; tmp [ 37 ] = locdm2fqb0
+. P_101 ; tmp [ 38 ] = locdm2fqb0 . P_102 ; tmp [ 39 ] = locdm2fqb0 . P_104 ;
+tmp [ 40 ] = locdm2fqb0 . P_105 ; tmp [ 41 ] = locdm2fqb0 . P_103 ; tmp [ 42
+] = locdm2fqb0 . P_109 ; tmp [ 43 ] = locdm2fqb0 . P_110 ; tmp [ 44 ] =
+locdm2fqb0 . P_111 ; tmp [ 45 ] = locdm2fqb0 . P_112 ; tmp [ 46 ] =
+locdm2fqb0 . P_108 ; tmp [ 47 ] = locdm2fqb0 . P_115 ; tmp [ 48 ] =
+locdm2fqb0 . P_120 ; tmp [ 49 ] = locdm2fqb0 . P_60 ; tmp [ 50 ] = locdm2fqb0
+. P_113 ; tmp [ 51 ] = locdm2fqb0 . P_118 ; tmp [ 52 ] = locdm2fqb0 . P_123 ;
+tmp [ 53 ] = locdm2fqb0 . P_124 ; parameterBundle_mRealParameters_mX = & tmp
 [ 0 ] ; diag = rtw_create_diagnostics ( ) ; diagTree =
 neu_diagnostic_manager_get_initial_tree ( diag ) ; expl_temp .
 mRealParameters . mN = 54 ; expl_temp . mRealParameters . mX =
@@ -1707,7 +1742,7 @@ localB -> jw0eii0b1p [ 3 ] ; tmp_m [ 12 ] = 48 ; memcpy ( & localB -> dv [ 48
 = 665 ; simulationData -> mData -> mInputValues . mN = 665 ; simulationData
 -> mData -> mInputValues . mX = & localB -> dv [ 0 ] ; simulationData ->
 mData -> mInputOffsets . mN = 14 ; simulationData -> mData -> mInputOffsets .
-mX = & tmp_m [ 0 ] ; simulationData -> mData -> mOutputs . mN = 19 ;
+mX = & tmp_m [ 0 ] ; simulationData -> mData -> mOutputs . mN = 17 ;
 simulationData -> mData -> mOutputs . mX = & localB -> al53ax5qkn [ 0 ] ;
 simulationData -> mData -> mTolerances . mN = 0 ; simulationData -> mData ->
 mTolerances . mX = NULL ; simulationData -> mData -> mCstateHasChanged =
@@ -1718,125 +1753,195 @@ simulationData -> mData -> mIsFundamentalSampleHit = false ; diag = (
 NeuDiagnosticManager * ) localDW -> ln3oq3n23r ; diagnosticTree_p =
 neu_diagnostic_manager_get_initial_tree ( diag ) ; iy = ne_simulator_method (
 ( NeslSimulator * ) localDW -> ai5tmyvkr4 , NESL_SIM_OUTPUTS , simulationData
-, diag ) ; if ( iy != 0 ) { didZcEventOccur = error_buffer_is_empty (
-ssGetErrorStatus ( lmamcwn3a2 -> _mdlRefSfcnS ) ) ; if ( didZcEventOccur ) {
-msg_e = rtw_diagnostics_msg ( diagnosticTree_p ) ; ssSetErrorStatus (
-lmamcwn3a2 -> _mdlRefSfcnS , msg_e ) ; } } if ( fypbxhubtb_p &&
-simulationData -> mData -> mCstateHasChanged ) {
+, diag ) ; if ( iy != 0 ) { tmp_i = error_buffer_is_empty ( ssGetErrorStatus
+( lmamcwn3a2 -> _mdlRefSfcnS ) ) ; if ( tmp_i ) { msg_e = rtw_diagnostics_msg
+( diagnosticTree_p ) ; ssSetErrorStatus ( lmamcwn3a2 -> _mdlRefSfcnS , msg_e
+) ; } } if ( fypbxhubtb_p && simulationData -> mData -> mCstateHasChanged ) {
 ssSetBlockStateForSolverChangedAtMajorStep ( lmamcwn3a2 -> _mdlRefSfcnS ) ; }
-l3aq3lzzaj_p = localB -> al53ax5qkn [ 5 ] * localB -> al53ax5qkn [ 15 ] ;
-csvlpmecmh_p = locdm2fqb0 . P_39 * l3aq3lzzaj_p ; { if ( localDW ->
+dhexwepzal_p = localB -> al53ax5qkn [ 4 ] * localB -> al53ax5qkn [ 14 ] ;
+kjijsatu5c_p = locdm2fqb0 . P_36 * dhexwepzal_p ; { if ( localDW ->
 edo2yybvgy . AQHandles && ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) {
 sdiWriteSignal ( localDW -> edo2yybvgy . AQHandles , rtmGetTaskTime (
-lmamcwn3a2 , 0 ) , ( char * ) & csvlpmecmh_p + 0 ) ; } } * lwu0tsgovp = 0.0 ;
-* lwu0tsgovp += locdm2fqb0 . P_41 * localX -> ep1kvce3ls ; kjijsatu5c_p = *
-oz3dekjw3t * * lwu0tsgovp ; l3aq3lzzaj_p = ( kjijsatu5c_p - l3aq3lzzaj_p ) *
-locdm2fqb0 . P_42 ; { if ( localDW -> k5lhedc1qi . AQHandles &&
+lmamcwn3a2 , 0 ) , ( char * ) & kjijsatu5c_p + 0 ) ; } } * lwu0tsgovp = 0.0 ;
+* lwu0tsgovp += locdm2fqb0 . P_38 * localX -> ep1kvce3ls ; kjijsatu5c_p = *
+oz3dekjw3t * * lwu0tsgovp ; dhexwepzal_p = ( kjijsatu5c_p - dhexwepzal_p ) *
+locdm2fqb0 . P_39 ; { if ( localDW -> k5lhedc1qi . AQHandles &&
 ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW ->
 k5lhedc1qi . AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 0 ) , ( char * ) &
-l3aq3lzzaj_p + 0 ) ; } } l3aq3lzzaj_p = localB -> al53ax5qkn [ 3 ] * localB
--> al53ax5qkn [ 4 ] ; csvlpmecmh_p = locdm2fqb0 . P_43 * l3aq3lzzaj_p ; { if
-( localDW -> buyjzzgvti . AQHandles && ssGetLogOutput ( lmamcwn3a2 ->
-_mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> buyjzzgvti . AQHandles ,
-rtmGetTaskTime ( lmamcwn3a2 , 0 ) , ( char * ) & csvlpmecmh_p + 0 ) ; } }
-csvlpmecmh_p = localB -> al53ax5qkn [ 1 ] * n5zg2lo03g_p ; l3aq3lzzaj_p = (
-locdm2fqb0 . P_44 * csvlpmecmh_p - l3aq3lzzaj_p ) * locdm2fqb0 . P_45 ; { if
-( localDW -> edo2yybvgya . AQHandles && ssGetLogOutput ( lmamcwn3a2 ->
-_mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> edo2yybvgya . AQHandles ,
-rtmGetTaskTime ( lmamcwn3a2 , 0 ) , ( char * ) & l3aq3lzzaj_p + 0 ) ; } }
-l3aq3lzzaj_p = localB -> al53ax5qkn [ 3 ] * localB -> al53ax5qkn [ 4 ] ;
-csvlpmecmh_p = localB -> al53ax5qkn [ 5 ] * localB -> al53ax5qkn [ 15 ] ;
-csvlpmecmh_p += l3aq3lzzaj_p ; * jkukrewnlm = 0.0 ; * jkukrewnlm +=
-locdm2fqb0 . P_47 * localX -> hehcfcd5qe ; l3aq3lzzaj_tmp = * jkukrewnlm * *
-crmxvln0sn ; l3aq3lzzaj_p = l3aq3lzzaj_tmp ; dhexwepzal_p = csvlpmecmh_p -
-l3aq3lzzaj_p ; { if ( localDW -> jhjx45yzf4 . AQHandles && ssGetLogOutput (
-lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> jhjx45yzf4 .
-AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 0 ) , ( char * ) & dhexwepzal_p + 0
-) ; } } { if ( localDW -> gz2yikcxsb . AQHandles && ssGetLogOutput (
-lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> gz2yikcxsb .
-AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 0 ) , ( char * ) & csvlpmecmh_p + 0
-) ; } } csvlpmecmh_p = locdm2fqb0 . P_48 * dhexwepzal_p ; { if ( localDW ->
-aqh4yyrzcm . AQHandles && ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) {
-sdiWriteSignal ( localDW -> aqh4yyrzcm . AQHandles , rtmGetTaskTime (
-lmamcwn3a2 , 0 ) , ( char * ) & csvlpmecmh_p + 0 ) ; } } l3aq3lzzaj_p *=
-locdm2fqb0 . P_49 ; { if ( localDW -> dkfsbamwtk . AQHandles &&
-ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW ->
-dkfsbamwtk . AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 0 ) , ( char * ) &
-l3aq3lzzaj_p + 0 ) ; } } * laajwttrsw = locdm2fqb0 . P_50 * localB ->
-al53ax5qkn [ 0 ] ; * ca0lva1ra5 = l3aq3lzzaj_tmp ; l3aq3lzzaj_p =
-kjijsatu5c_p ; l3aq3lzzaj_p = localB -> al53ax5qkn [ 3 ] * localB ->
-al53ax5qkn [ 4 ] ; { if ( localDW -> gz3smcnpgn . AQHandles && ssGetLogOutput
-( lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> gz3smcnpgn .
-AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 0 ) , ( char * ) enxvezuult + 0 ) ;
-} } localB -> d35fz3l5re = locdm2fqb0 . P_1 * doghfw52dl_p ; * csbds3kgit =
-0.0 ; * csbds3kgit += locdm2fqb0 . P_56 * localX -> cs23dlzame ; doghfw52dl_p
-= muDoubleScalarMax ( * enxvezuult , locdm2fqb0 . P_68 ) ; localB ->
-ai5ttmjbcf = locdm2fqb0 . P_67 * doghfw52dl_p * locdm2fqb0 . P_57 ;
-doghfw52dl_p = localB -> ai5ttmjbcf - localB -> al53ax5qkn [ 11 ] ; localB ->
-mcmq1xxqdb = ( doghfw52dl_p + localX -> gr332uyzki ) * locdm2fqb0 . P_9 ; if
-( ssIsModeUpdateTimeStep ( lmamcwn3a2 -> _mdlRefSfcnS ) ) { localDW ->
-kzlwmf4i5c = localB -> mcmq1xxqdb >= locdm2fqb0 . P_11 ? 1 : localB ->
-mcmq1xxqdb > locdm2fqb0 . P_6 ? 0 : - 1 ; } localB -> ctmtdicsz3 = localDW ->
-kzlwmf4i5c == 1 ? locdm2fqb0 . P_11 : localDW -> kzlwmf4i5c == - 1 ?
-locdm2fqb0 . P_6 : localB -> mcmq1xxqdb ; localB -> ngn4sopsrz = ( localB ->
-ctmtdicsz3 - localB -> mcmq1xxqdb ) * locdm2fqb0 . P_4 + locdm2fqb0 . P_2 *
-doghfw52dl_p ; localB -> gvz4ycnxix = muDoubleScalarAbs ( localB ->
-al53ax5qkn [ 12 ] ) ; doghfw52dl_p = locdm2fqb0 . P_86 - localB -> al53ax5qkn
-[ 13 ] ; l3aq3lzzaj_p = locdm2fqb0 . P_58 * doghfw52dl_p ; if ( l3aq3lzzaj_p
-> locdm2fqb0 . P_59 ) { localB -> pldqi3izwq = locdm2fqb0 . P_59 ; } else if
-( l3aq3lzzaj_p < locdm2fqb0 . P_60 ) { localB -> pldqi3izwq = locdm2fqb0 .
-P_60 ; } else { localB -> pldqi3izwq = l3aq3lzzaj_p ; } doghfw52dl_p =
-locdm2fqb0 . P_104 - localB -> al53ax5qkn [ 14 ] ; l3aq3lzzaj_p = locdm2fqb0
-. P_61 * doghfw52dl_p ; if ( l3aq3lzzaj_p > locdm2fqb0 . P_62 ) { localB ->
-oax1hn5ti2 = locdm2fqb0 . P_62 ; } else if ( l3aq3lzzaj_p < locdm2fqb0 . P_63
-) { localB -> oax1hn5ti2 = locdm2fqb0 . P_63 ; } else { localB -> oax1hn5ti2
-= l3aq3lzzaj_p ; } * l45wd5pbjh = n5zg2lo03g_p * localB -> al53ax5qkn [ 1 ] ;
-* pjtg1ua4jf = localB -> al53ax5qkn [ 1 ] ; * ndmmn1qxbt = localB ->
-al53ax5qkn [ 9 ] ; } void FCElectricPlantTID2 ( m5e23pbc2h * const lmamcwn3a2
-, o4lq13rlvq * localB , ammy3t1awn * localDW ) { real_T hh4ezm1rfr ; localB
--> jdyv4q3xm2 = locdm2fqb0 . P_65 ; localB -> eartrnbzob_mbvzarwird =
-locdm2fqb0 . P_77 + locdm2fqb0 . P_76 ; localB -> kziv2ppkm1 = locdm2fqb0 .
-P_111 + locdm2fqb0 . P_110 ; hh4ezm1rfr = 0.0 ; { if ( localDW -> gz2yikcxsbr
-. AQHandles && ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) {
-sdiWriteSignal ( localDW -> gz2yikcxsbr . AQHandles , rtmGetTaskTime (
-lmamcwn3a2 , 2 ) , ( char * ) & hh4ezm1rfr + 0 ) ; } } { if ( localDW ->
-nwagfadtz5 . AQHandles && ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) {
-sdiWriteSignal ( localDW -> nwagfadtz5 . AQHandles , rtmGetTaskTime (
-lmamcwn3a2 , 2 ) , ( char * ) ( ( const real_T * ) & FCElectricPlant_RGND ) +
-0 ) ; } } { if ( localDW -> ir3sjqcelg . AQHandles && ssGetLogOutput (
-lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> ir3sjqcelg .
-AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 2 ) , ( char * ) ( ( const real_T *
-) & FCElectricPlant_RGND ) + 0 ) ; } } { if ( localDW -> boxtz4t1xz .
-AQHandles && ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal
-( localDW -> boxtz4t1xz . AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 2 ) , (
-char * ) ( ( const real_T * ) & FCElectricPlant_RGND ) + 0 ) ; } } { if (
-localDW -> gz2yikcxsbro . AQHandles && ssGetLogOutput ( lmamcwn3a2 ->
-_mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> gz2yikcxsbro . AQHandles ,
-rtmGetTaskTime ( lmamcwn3a2 , 2 ) , ( char * ) & hh4ezm1rfr + 0 ) ; } } { if
-( localDW -> jb5p2yd0pp . AQHandles && ssGetLogOutput ( lmamcwn3a2 ->
-_mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> jb5p2yd0pp . AQHandles ,
-rtmGetTaskTime ( lmamcwn3a2 , 2 ) , ( char * ) ( ( const real_T * ) &
-FCElectricPlant_RGND ) + 0 ) ; } } { if ( localDW -> pt2ziyjsco . AQHandles
+dhexwepzal_p + 0 ) ; } } simulationData = ( NeslSimulationData * ) localDW ->
+dy4oa554kf ; time_m = l3aq3lzzaj_p ; simulationData -> mData -> mTime . mN =
+1 ; simulationData -> mData -> mTime . mX = & time_m ; simulationData ->
+mData -> mContStates . mN = 0 ; simulationData -> mData -> mContStates . mX =
+NULL ; simulationData -> mData -> mDiscStates . mN = 0 ; simulationData ->
+mData -> mDiscStates . mX = & localDW -> lgfdzy32uf ; simulationData -> mData
+-> mModeVector . mN = 0 ; simulationData -> mData -> mModeVector . mX = &
+localDW -> iobl1pwm02 ; tmp_i = ( rtmIsMajorTimeStep ( lmamcwn3a2 ) &&
+ssGetSolverFoundContZcEvents ( lmamcwn3a2 -> _mdlRefSfcnS ) ) ;
+simulationData -> mData -> mFoundZcEvents = tmp_i ; simulationData -> mData
+-> mIsMajorTimeStep = fypbxhubtb_p ; tmp_i = _ssGetSolverAssertCheck (
+lmamcwn3a2 -> _mdlRefSfcnS ) ; simulationData -> mData ->
+mIsSolverAssertCheck = tmp_i ; tmp_i = ssIsSolverCheckingCIC ( lmamcwn3a2 ->
+_mdlRefSfcnS ) ; simulationData -> mData -> mIsSolverCheckingCIC = tmp_i ;
+simulationData -> mData -> mIsComputingJacobian = false ; simulationData ->
+mData -> mIsEvaluatingF0 = false ; tmp_i = ssIsSolverRequestingReset (
+lmamcwn3a2 -> _mdlRefSfcnS ) ; simulationData -> mData ->
+mIsSolverRequestingReset = tmp_i ; simulationData -> mData ->
+mIsModeUpdateTimeStep = didZcEventOccur ; tmp_g [ 0 ] = 0 ; localB -> dv1 [ 0
+] = localB -> brkjgij31f [ 0 ] ; localB -> dv1 [ 1 ] = localB -> brkjgij31f [
+1 ] ; localB -> dv1 [ 2 ] = localB -> brkjgij31f [ 2 ] ; localB -> dv1 [ 3 ]
+= localB -> brkjgij31f [ 3 ] ; tmp_g [ 1 ] = 4 ; localB -> dv1 [ 4 ] = localB
+-> d31fe02c1j [ 0 ] ; localB -> dv1 [ 5 ] = localB -> d31fe02c1j [ 1 ] ;
+localB -> dv1 [ 6 ] = localB -> d31fe02c1j [ 2 ] ; localB -> dv1 [ 7 ] =
+localB -> d31fe02c1j [ 3 ] ; tmp_g [ 2 ] = 8 ; localB -> dv1 [ 8 ] = localB
+-> m4vtulkmjt [ 0 ] ; localB -> dv1 [ 9 ] = localB -> m4vtulkmjt [ 1 ] ;
+localB -> dv1 [ 10 ] = localB -> m4vtulkmjt [ 2 ] ; localB -> dv1 [ 11 ] =
+localB -> m4vtulkmjt [ 3 ] ; tmp_g [ 3 ] = 12 ; localB -> dv1 [ 12 ] = localB
+-> kqzmt5kme1 [ 0 ] ; localB -> dv1 [ 13 ] = localB -> kqzmt5kme1 [ 1 ] ;
+localB -> dv1 [ 14 ] = localB -> kqzmt5kme1 [ 2 ] ; localB -> dv1 [ 15 ] =
+localB -> kqzmt5kme1 [ 3 ] ; tmp_g [ 4 ] = 16 ; localB -> dv1 [ 16 ] = localB
+-> d1vyttnzih [ 0 ] ; localB -> dv1 [ 17 ] = localB -> d1vyttnzih [ 1 ] ;
+localB -> dv1 [ 18 ] = localB -> d1vyttnzih [ 2 ] ; localB -> dv1 [ 19 ] =
+localB -> d1vyttnzih [ 3 ] ; tmp_g [ 5 ] = 20 ; localB -> dv1 [ 20 ] = localB
+-> jke0x3nf0x [ 0 ] ; localB -> dv1 [ 21 ] = localB -> jke0x3nf0x [ 1 ] ;
+localB -> dv1 [ 22 ] = localB -> jke0x3nf0x [ 2 ] ; localB -> dv1 [ 23 ] =
+localB -> jke0x3nf0x [ 3 ] ; tmp_g [ 6 ] = 24 ; localB -> dv1 [ 24 ] = localB
+-> eartrnbzob [ 0 ] ; localB -> dv1 [ 25 ] = localB -> eartrnbzob [ 1 ] ;
+localB -> dv1 [ 26 ] = localB -> eartrnbzob [ 2 ] ; localB -> dv1 [ 27 ] =
+localB -> eartrnbzob [ 3 ] ; tmp_g [ 7 ] = 28 ; localB -> dv1 [ 28 ] = localB
+-> jbwae2aqzh [ 0 ] ; localB -> dv1 [ 29 ] = localB -> jbwae2aqzh [ 1 ] ;
+localB -> dv1 [ 30 ] = localB -> jbwae2aqzh [ 2 ] ; localB -> dv1 [ 31 ] =
+localB -> jbwae2aqzh [ 3 ] ; tmp_g [ 8 ] = 32 ; localB -> dv1 [ 32 ] = localB
+-> l3n4ugyftb [ 0 ] ; localB -> dv1 [ 33 ] = localB -> l3n4ugyftb [ 1 ] ;
+localB -> dv1 [ 34 ] = localB -> l3n4ugyftb [ 2 ] ; localB -> dv1 [ 35 ] =
+localB -> l3n4ugyftb [ 3 ] ; tmp_g [ 9 ] = 36 ; localB -> dv1 [ 36 ] = localB
+-> dycp3mt3z3 [ 0 ] ; localB -> dv1 [ 37 ] = localB -> dycp3mt3z3 [ 1 ] ;
+localB -> dv1 [ 38 ] = localB -> dycp3mt3z3 [ 2 ] ; localB -> dv1 [ 39 ] =
+localB -> dycp3mt3z3 [ 3 ] ; tmp_g [ 10 ] = 40 ; localB -> dv1 [ 40 ] =
+localB -> hiaxbfam0w [ 0 ] ; localB -> dv1 [ 41 ] = localB -> hiaxbfam0w [ 1
+] ; localB -> dv1 [ 42 ] = localB -> hiaxbfam0w [ 2 ] ; localB -> dv1 [ 43 ]
+= localB -> hiaxbfam0w [ 3 ] ; tmp_g [ 11 ] = 44 ; localB -> dv1 [ 44 ] =
+localB -> jw0eii0b1p [ 0 ] ; localB -> dv1 [ 45 ] = localB -> jw0eii0b1p [ 1
+] ; localB -> dv1 [ 46 ] = localB -> jw0eii0b1p [ 2 ] ; localB -> dv1 [ 47 ]
+= localB -> jw0eii0b1p [ 3 ] ; tmp_g [ 12 ] = 48 ; memcpy ( & localB -> dv1 [
+48 ] , & localB -> i3uwmxb4ma [ 0 ] , 617U * sizeof ( real_T ) ) ; tmp_g [ 13
+] = 665 ; simulationData -> mData -> mInputValues . mN = 665 ; simulationData
+-> mData -> mInputValues . mX = & localB -> dv1 [ 0 ] ; simulationData ->
+mData -> mInputOffsets . mN = 14 ; simulationData -> mData -> mInputOffsets .
+mX = & tmp_g [ 0 ] ; simulationData -> mData -> mOutputs . mN = 2 ;
+simulationData -> mData -> mOutputs . mX = & ic2p4qdkko [ 0 ] ;
+simulationData -> mData -> mTolerances . mN = 0 ; simulationData -> mData ->
+mTolerances . mX = NULL ; simulationData -> mData -> mCstateHasChanged =
+false ; time_g = csvlpmecmh_p ; simulationData -> mData -> mTime . mN = 1 ;
+simulationData -> mData -> mTime . mX = & time_g ; simulationData -> mData ->
+mSampleHits . mN = 0 ; simulationData -> mData -> mSampleHits . mX = NULL ;
+simulationData -> mData -> mIsFundamentalSampleHit = false ; diag = (
+NeuDiagnosticManager * ) localDW -> d1c3ioipfx ; diagnosticTree_e =
+neu_diagnostic_manager_get_initial_tree ( diag ) ; iy = ne_simulator_method (
+( NeslSimulator * ) localDW -> bcdomoeobw , NESL_SIM_OUTPUTS , simulationData
+, diag ) ; if ( iy != 0 ) { didZcEventOccur = error_buffer_is_empty (
+ssGetErrorStatus ( lmamcwn3a2 -> _mdlRefSfcnS ) ) ; if ( didZcEventOccur ) {
+msg_i = rtw_diagnostics_msg ( diagnosticTree_e ) ; ssSetErrorStatus (
+lmamcwn3a2 -> _mdlRefSfcnS , msg_i ) ; } } if ( fypbxhubtb_p &&
+simulationData -> mData -> mCstateHasChanged ) {
+ssSetBlockStateForSolverChangedAtMajorStep ( lmamcwn3a2 -> _mdlRefSfcnS ) ; }
+l3aq3lzzaj_p = ic2p4qdkko [ 0 ] * localB -> al53ax5qkn [ 3 ] ; csvlpmecmh_p =
+locdm2fqb0 . P_40 * l3aq3lzzaj_p ; { if ( localDW -> buyjzzgvti . AQHandles
 && ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW
--> pt2ziyjsco . AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 2 ) , ( char * ) (
-( const real_T * ) & FCElectricPlant_RGND ) + 0 ) ; } } { if ( localDW ->
-kesjhajib2 . AQHandles && ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) {
-sdiWriteSignal ( localDW -> kesjhajib2 . AQHandles , rtmGetTaskTime (
-lmamcwn3a2 , 2 ) , ( char * ) ( ( const real_T * ) & FCElectricPlant_RGND ) +
-0 ) ; } } { if ( localDW -> gz2yikcxsbro0 . AQHandles && ssGetLogOutput (
-lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> gz2yikcxsbro0 .
-AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 2 ) , ( char * ) & hh4ezm1rfr + 0 )
-; } } { if ( localDW -> pt2ziyjsco3 . AQHandles && ssGetLogOutput (
-lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> pt2ziyjsco3 .
-AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 2 ) , ( char * ) ( ( const real_T *
-) & FCElectricPlant_RGND ) + 0 ) ; } } { if ( localDW -> nwagfadtz5a .
+-> buyjzzgvti . AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 0 ) , ( char * ) &
+csvlpmecmh_p + 0 ) ; } } csvlpmecmh_p = localB -> al53ax5qkn [ 1 ] * localB
+-> n5zg2lo03g ; l3aq3lzzaj_p = ( locdm2fqb0 . P_41 * csvlpmecmh_p -
+l3aq3lzzaj_p ) * locdm2fqb0 . P_42 ; { if ( localDW -> edo2yybvgya .
 AQHandles && ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal
-( localDW -> nwagfadtz5a . AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 2 ) , (
-char * ) ( ( const real_T * ) & FCElectricPlant_RGND ) + 0 ) ; } } { if (
-localDW -> li5lvqaaj1 . AQHandles && ssGetLogOutput ( lmamcwn3a2 ->
-_mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> li5lvqaaj1 . AQHandles ,
-rtmGetTaskTime ( lmamcwn3a2 , 2 ) , ( char * ) ( ( const real_T * ) &
-FCElectricPlant_RGND ) + 0 ) ; } } { if ( localDW -> gz2yikcxsbro0p .
+( localDW -> edo2yybvgya . AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 0 ) , (
+char * ) & l3aq3lzzaj_p + 0 ) ; } } l3aq3lzzaj_p = ic2p4qdkko [ 0 ] * localB
+-> al53ax5qkn [ 3 ] ; csvlpmecmh_p = localB -> al53ax5qkn [ 4 ] * localB ->
+al53ax5qkn [ 14 ] ; csvlpmecmh_p += l3aq3lzzaj_p ; * jkukrewnlm = 0.0 ; *
+jkukrewnlm += locdm2fqb0 . P_44 * localX -> hehcfcd5qe ; l3aq3lzzaj_tmp = *
+jkukrewnlm * * crmxvln0sn ; l3aq3lzzaj_p = l3aq3lzzaj_tmp ; dhexwepzal_p =
+csvlpmecmh_p - l3aq3lzzaj_p ; { if ( localDW -> jhjx45yzf4 . AQHandles &&
+ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW ->
+jhjx45yzf4 . AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 0 ) , ( char * ) &
+dhexwepzal_p + 0 ) ; } } { if ( localDW -> gz2yikcxsb . AQHandles &&
+ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW ->
+gz2yikcxsb . AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 0 ) , ( char * ) &
+csvlpmecmh_p + 0 ) ; } } csvlpmecmh_p = locdm2fqb0 . P_45 * dhexwepzal_p ; {
+if ( localDW -> aqh4yyrzcm . AQHandles && ssGetLogOutput ( lmamcwn3a2 ->
+_mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> aqh4yyrzcm . AQHandles ,
+rtmGetTaskTime ( lmamcwn3a2 , 0 ) , ( char * ) & csvlpmecmh_p + 0 ) ; } }
+l3aq3lzzaj_p *= locdm2fqb0 . P_46 ; { if ( localDW -> dkfsbamwtk . AQHandles
+&& ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW
+-> dkfsbamwtk . AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 0 ) , ( char * ) &
+l3aq3lzzaj_p + 0 ) ; } } * laajwttrsw = locdm2fqb0 . P_47 * localB ->
+al53ax5qkn [ 0 ] ; * ca0lva1ra5 = l3aq3lzzaj_tmp ; l3aq3lzzaj_p =
+kjijsatu5c_p ; l3aq3lzzaj_p = ic2p4qdkko [ 0 ] * localB -> al53ax5qkn [ 3 ] ;
+{ if ( localDW -> gz3smcnpgn . AQHandles && ssGetLogOutput ( lmamcwn3a2 ->
+_mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> gz3smcnpgn . AQHandles ,
+rtmGetTaskTime ( lmamcwn3a2 , 0 ) , ( char * ) enxvezuult + 0 ) ; } } localB
+-> d35fz3l5re = locdm2fqb0 . P_1 * doghfw52dl_p ; * csbds3kgit = locdm2fqb0 .
+P_52 * localB -> al53ax5qkn [ 6 ] ; doghfw52dl_p = muDoubleScalarMax ( *
+enxvezuult , locdm2fqb0 . P_64 ) ; localB -> e3vzfch03e = locdm2fqb0 . P_63 *
+doghfw52dl_p * locdm2fqb0 . P_53 ; doghfw52dl_p = localB -> e3vzfch03e -
+localB -> al53ax5qkn [ 10 ] ; localB -> hreg3iigz5 = locdm2fqb0 . P_6 *
+doghfw52dl_p ; if ( ssIsModeUpdateTimeStep ( lmamcwn3a2 -> _mdlRefSfcnS ) ) {
+localDW -> avda114tgy = localB -> hreg3iigz5 >= locdm2fqb0 . P_8 ? 1 : localB
+-> hreg3iigz5 > locdm2fqb0 . P_3 ? 0 : - 1 ; } localB -> dwtus23pzu = localDW
+-> avda114tgy == 1 ? locdm2fqb0 . P_8 : localDW -> avda114tgy == - 1 ?
+locdm2fqb0 . P_3 : localB -> hreg3iigz5 ; localB -> bzodxox54x =
+muDoubleScalarAbs ( localB -> al53ax5qkn [ 11 ] ) ; doghfw52dl_p = locdm2fqb0
+. P_82 - localB -> al53ax5qkn [ 12 ] ; l3aq3lzzaj_p = locdm2fqb0 . P_54 *
+doghfw52dl_p ; if ( l3aq3lzzaj_p > locdm2fqb0 . P_55 ) { localB -> gl1x3cqcqk
+= locdm2fqb0 . P_55 ; } else if ( l3aq3lzzaj_p < locdm2fqb0 . P_56 ) { localB
+-> gl1x3cqcqk = locdm2fqb0 . P_56 ; } else { localB -> gl1x3cqcqk =
+l3aq3lzzaj_p ; } doghfw52dl_p = locdm2fqb0 . P_100 - localB -> al53ax5qkn [
+13 ] ; l3aq3lzzaj_p = locdm2fqb0 . P_57 * doghfw52dl_p ; if ( l3aq3lzzaj_p >
+locdm2fqb0 . P_58 ) { localB -> b0gerusyrk = locdm2fqb0 . P_58 ; } else if (
+l3aq3lzzaj_p < locdm2fqb0 . P_59 ) { localB -> b0gerusyrk = locdm2fqb0 . P_59
+; } else { localB -> b0gerusyrk = l3aq3lzzaj_p ; } * l45wd5pbjh = localB ->
+n5zg2lo03g * localB -> al53ax5qkn [ 1 ] ; * pjtg1ua4jf = localB -> al53ax5qkn
+[ 1 ] ; } void FCElectricPlantTID2 ( m5e23pbc2h * const lmamcwn3a2 ,
+o4lq13rlvq * localB , ammy3t1awn * localDW ) { real_T hh4ezm1rfr ; localB ->
+lrv2smzsir = locdm2fqb0 . P_61 ; localB -> eartrnbzob_mbvzarwird = locdm2fqb0
+. P_73 + locdm2fqb0 . P_72 ; localB -> goyafd53a5 = locdm2fqb0 . P_107 +
+locdm2fqb0 . P_106 ; hh4ezm1rfr = 0.0 ; { if ( localDW -> gz2yikcxsbr .
+AQHandles && ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal
+( localDW -> gz2yikcxsbr . AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 2 ) , (
+char * ) & hh4ezm1rfr + 0 ) ; } } { if ( localDW -> nwagfadtz5 . AQHandles &&
+ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW ->
+nwagfadtz5 . AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 2 ) , ( char * ) ( (
+const real_T * ) & FCElectricPlant_RGND ) + 0 ) ; } } { if ( localDW ->
+ir3sjqcelg . AQHandles && ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) {
+sdiWriteSignal ( localDW -> ir3sjqcelg . AQHandles , rtmGetTaskTime (
+lmamcwn3a2 , 2 ) , ( char * ) ( ( const real_T * ) & FCElectricPlant_RGND ) +
+0 ) ; } } { if ( localDW -> boxtz4t1xz . AQHandles && ssGetLogOutput (
+lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> boxtz4t1xz .
+AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 2 ) , ( char * ) ( ( const real_T *
+) & FCElectricPlant_RGND ) + 0 ) ; } } { if ( localDW -> gz2yikcxsbro .
+AQHandles && ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal
+( localDW -> gz2yikcxsbro . AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 2 ) , (
+char * ) & hh4ezm1rfr + 0 ) ; } } { if ( localDW -> jb5p2yd0pp . AQHandles &&
+ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW ->
+jb5p2yd0pp . AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 2 ) , ( char * ) ( (
+const real_T * ) & FCElectricPlant_RGND ) + 0 ) ; } } { if ( localDW ->
+pt2ziyjsco . AQHandles && ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) {
+sdiWriteSignal ( localDW -> pt2ziyjsco . AQHandles , rtmGetTaskTime (
+lmamcwn3a2 , 2 ) , ( char * ) ( ( const real_T * ) & FCElectricPlant_RGND ) +
+0 ) ; } } { if ( localDW -> kesjhajib2 . AQHandles && ssGetLogOutput (
+lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> kesjhajib2 .
+AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 2 ) , ( char * ) ( ( const real_T *
+) & FCElectricPlant_RGND ) + 0 ) ; } } { if ( localDW -> gz2yikcxsbro0 .
+AQHandles && ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal
+( localDW -> gz2yikcxsbro0 . AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 2 ) ,
+( char * ) & hh4ezm1rfr + 0 ) ; } } { if ( localDW -> pt2ziyjsco3 . AQHandles
+&& ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW
+-> pt2ziyjsco3 . AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 2 ) , ( char * ) (
+( const real_T * ) & FCElectricPlant_RGND ) + 0 ) ; } } { if ( localDW ->
+nwagfadtz5a . AQHandles && ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) {
+sdiWriteSignal ( localDW -> nwagfadtz5a . AQHandles , rtmGetTaskTime (
+lmamcwn3a2 , 2 ) , ( char * ) ( ( const real_T * ) & FCElectricPlant_RGND ) +
+0 ) ; } } { if ( localDW -> li5lvqaaj1 . AQHandles && ssGetLogOutput (
+lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> li5lvqaaj1 .
+AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 2 ) , ( char * ) ( ( const real_T *
+) & FCElectricPlant_RGND ) + 0 ) ; } } { if ( localDW -> gz2yikcxsbro0p .
 AQHandles && ssGetLogOutput ( lmamcwn3a2 -> _mdlRefSfcnS ) ) { sdiWriteSignal
 ( localDW -> gz2yikcxsbro0p . AQHandles , rtmGetTaskTime ( lmamcwn3a2 , 2 ) ,
 ( char * ) & hh4ezm1rfr + 0 ) ; } } { if ( localDW -> jb5p2yd0ppu . AQHandles
@@ -1924,30 +2029,29 @@ localB , ammy3t1awn * localDW , fw3fcrujzt * localX , dmzi3aztzd * localXdot
 diagnosticManager ; NeuDiagnosticTree * diagnosticTree ; char * msg ; real_T
 tmp_p [ 48 ] ; real_T time ; int_T tmp_e [ 13 ] ; int_T is ; uint32_T ri ;
 boolean_T tmp ; localXdot -> cjg15axlwj = 0.0 ; localXdot -> cjg15axlwj +=
-locdm2fqb0 . P_13 * localX -> cjg15axlwj ; localXdot -> cjg15axlwj += localB
--> gvz4ycnxix ; localXdot -> ggydzdzl02 = 0.0 ; localXdot -> ggydzdzl02 +=
-locdm2fqb0 . P_15 * localX -> ggydzdzl02 ; localXdot -> ggydzdzl02 += localB
--> al53ax5qkn [ 2 ] ; localXdot -> kgxgv1vmlq = ( localB -> pkj2z4oo3u -
-localX -> kgxgv1vmlq ) * 1000.0 ; localXdot -> obun43xkmt = 0.0 ; localXdot
--> obun43xkmt += locdm2fqb0 . P_19 * localX -> obun43xkmt ; localXdot ->
-obun43xkmt += locdm2fqb0 . P_91 ; localXdot -> lqulrgwclj = 0.0 ; localXdot
--> lqulrgwclj += locdm2fqb0 . P_21 * localX -> lqulrgwclj ; localXdot ->
-lqulrgwclj += localB -> ctmtdicsz3 ; localXdot -> egyqa4syxe = 0.0 ;
-localXdot -> egyqa4syxe += locdm2fqb0 . P_23 * localX -> egyqa4syxe ;
-localXdot -> egyqa4syxe += localB -> pldqi3izwq ; localXdot -> ptuc3j0waz =
-0.0 ; localXdot -> ptuc3j0waz += locdm2fqb0 . P_25 * localX -> ptuc3j0waz ;
-localXdot -> ptuc3j0waz += localB -> al53ax5qkn [ 9 ] ; localXdot ->
-nupwktvts5 = 0.0 ; localXdot -> nupwktvts5 += locdm2fqb0 . P_27 * localX ->
-nupwktvts5 ; localXdot -> nupwktvts5 += localB -> oax1hn5ti2 ; localXdot ->
-pbkku1th1h = 0.0 ; localXdot -> pbkku1th1h += locdm2fqb0 . P_29 * localX ->
-pbkku1th1h ; localXdot -> pbkku1th1h += localB -> al53ax5qkn [ 9 ] ;
-localXdot -> ipbdkiozya = 0.0 ; localXdot -> ipbdkiozya += locdm2fqb0 . P_31
-* localX -> ipbdkiozya ; localXdot -> ipbdkiozya += localB -> al53ax5qkn [ 7
+locdm2fqb0 . P_10 * localX -> cjg15axlwj ; localXdot -> cjg15axlwj += localB
+-> bzodxox54x ; localXdot -> ggydzdzl02 = 0.0 ; localXdot -> ggydzdzl02 +=
+locdm2fqb0 . P_12 * localX -> ggydzdzl02 ; localXdot -> ggydzdzl02 += localB
+-> al53ax5qkn [ 2 ] ; localXdot -> obun43xkmt = 0.0 ; localXdot -> obun43xkmt
++= locdm2fqb0 . P_16 * localX -> obun43xkmt ; localXdot -> obun43xkmt +=
+locdm2fqb0 . P_87 ; localXdot -> ghqrh5fgbd = 0.0 ; localXdot -> ghqrh5fgbd
++= locdm2fqb0 . P_18 * localX -> ghqrh5fgbd ; localXdot -> ghqrh5fgbd +=
+localB -> dwtus23pzu ; localXdot -> egyqa4syxe = 0.0 ; localXdot ->
+egyqa4syxe += locdm2fqb0 . P_20 * localX -> egyqa4syxe ; localXdot ->
+egyqa4syxe += localB -> gl1x3cqcqk ; localXdot -> ptuc3j0waz = 0.0 ;
+localXdot -> ptuc3j0waz += locdm2fqb0 . P_22 * localX -> ptuc3j0waz ;
+localXdot -> ptuc3j0waz += localB -> al53ax5qkn [ 8 ] ; localXdot ->
+nupwktvts5 = 0.0 ; localXdot -> nupwktvts5 += locdm2fqb0 . P_24 * localX ->
+nupwktvts5 ; localXdot -> nupwktvts5 += localB -> b0gerusyrk ; localXdot ->
+pbkku1th1h = 0.0 ; localXdot -> pbkku1th1h += locdm2fqb0 . P_26 * localX ->
+pbkku1th1h ; localXdot -> pbkku1th1h += localB -> al53ax5qkn [ 8 ] ;
+localXdot -> ipbdkiozya = 0.0 ; localXdot -> ipbdkiozya += locdm2fqb0 . P_28
+* localX -> ipbdkiozya ; localXdot -> ipbdkiozya += localB -> al53ax5qkn [ 6
 ] ; localXdot -> czf51nn3to = 0.0 ; localXdot -> czf51nn3to += locdm2fqb0 .
-P_33 * localX -> czf51nn3to ; localXdot -> czf51nn3to += localB -> ogx5lh5hr4
+P_30 * localX -> czf51nn3to ; localXdot -> czf51nn3to += localB -> ogx5lh5hr4
 ; localXdot -> abtw1mwj2p = localB -> d35fz3l5re ; localXdot -> ghzzlnog0w =
 localB -> juwfq1mzri ; localXdot -> fpiq4t01ji = 0.0 ; localXdot ->
-fpiq4t01ji += locdm2fqb0 . P_37 * localX -> fpiq4t01ji ; localXdot ->
+fpiq4t01ji += locdm2fqb0 . P_34 * localX -> fpiq4t01ji ; localXdot ->
 fpiq4t01ji += * crmxvln0sn ; localXdot -> n3wx255ehc = ( localB -> ddehjbnx4b
 - localX -> n3wx255ehc ) * 1000.0 ; simulationData = ( NeslSimulationData * )
 localDW -> j1mjeinhrl ; time = rtmGetTaskTime ( lmamcwn3a2 , 0 ) ;
@@ -2014,18 +2118,15 @@ NESL_SIM_DERIVATIVES , simulationData , diagnosticManager ) ; if ( is != 0 )
 { tmp = error_buffer_is_empty ( ssGetErrorStatus ( lmamcwn3a2 -> _mdlRefSfcnS
 ) ) ; if ( tmp ) { msg = rtw_diagnostics_msg ( diagnosticTree ) ;
 ssSetErrorStatus ( lmamcwn3a2 -> _mdlRefSfcnS , msg ) ; } } localXdot ->
-ep1kvce3ls = 0.0 ; localXdot -> ep1kvce3ls += locdm2fqb0 . P_40 * localX ->
-ep1kvce3ls ; localXdot -> ep1kvce3ls += localB -> al53ax5qkn [ 8 ] ;
-localXdot -> hehcfcd5qe = 0.0 ; localXdot -> hehcfcd5qe += locdm2fqb0 . P_46
-* localX -> hehcfcd5qe ; localXdot -> hehcfcd5qe += localB -> al53ax5qkn [ 18
-] ; localXdot -> hrtmiik4pa = 0.0 ; for ( ri = locdm2fqb0 . P_130 [ 0U ] ; ri
-< locdm2fqb0 . P_130 [ 1U ] ; ri ++ ) { localXdot -> hrtmiik4pa += locdm2fqb0
-. P_51 * localX -> hrtmiik4pa ; } for ( ri = locdm2fqb0 . P_132 [ 0U ] ; ri <
-locdm2fqb0 . P_132 [ 1U ] ; ri ++ ) { localXdot -> hrtmiik4pa += locdm2fqb0 .
-P_52 * localB -> al53ax5qkn [ 3 ] ; } localXdot -> cs23dlzame = 0.0 ;
-localXdot -> cs23dlzame += locdm2fqb0 . P_55 * localX -> cs23dlzame ;
-localXdot -> cs23dlzame += localB -> al53ax5qkn [ 10 ] ; localXdot ->
-gr332uyzki = localB -> ngn4sopsrz ; } void mscgivy4fk ( m5e23pbc2h * const
+ep1kvce3ls = 0.0 ; localXdot -> ep1kvce3ls += locdm2fqb0 . P_37 * localX ->
+ep1kvce3ls ; localXdot -> ep1kvce3ls += localB -> al53ax5qkn [ 7 ] ;
+localXdot -> hehcfcd5qe = 0.0 ; localXdot -> hehcfcd5qe += locdm2fqb0 . P_43
+* localX -> hehcfcd5qe ; localXdot -> hehcfcd5qe += localB -> al53ax5qkn [ 16
+] ; localXdot -> hrtmiik4pa = 0.0 ; for ( ri = locdm2fqb0 . P_126 [ 0U ] ; ri
+< locdm2fqb0 . P_126 [ 1U ] ; ri ++ ) { localXdot -> hrtmiik4pa += locdm2fqb0
+. P_48 * localX -> hrtmiik4pa ; } for ( ri = locdm2fqb0 . P_128 [ 0U ] ; ri <
+locdm2fqb0 . P_128 [ 1U ] ; ri ++ ) { localXdot -> hrtmiik4pa += locdm2fqb0 .
+P_49 * localB -> al53ax5qkn [ 3 ] ; } } void mscgivy4fk ( m5e23pbc2h * const
 lmamcwn3a2 , o4lq13rlvq * localB , ammy3t1awn * localDW , fw3fcrujzt * localX
 ) { NeslSimulationData * simulationData ; NeuDiagnosticManager *
 diagnosticManager ; NeuDiagnosticTree * diagnosticTree ; char * msg ; real_T
@@ -2099,30 +2200,29 @@ o4lq13rlvq * localB , ammy3t1awn * localDW , fw3fcrujzt * localX , dmzi3aztzd
 diagnosticManager ; NeuDiagnosticTree * diagnosticTree ; char * msg ; real_T
 tmp_p [ 48 ] ; real_T time ; int_T tmp_e [ 13 ] ; int_T is ; uint32_T ri ;
 boolean_T tmp ; localXdot -> cjg15axlwj = 0.0 ; localXdot -> cjg15axlwj +=
-locdm2fqb0 . P_13 * localX -> cjg15axlwj ; localXdot -> cjg15axlwj += localB
--> gvz4ycnxix ; localXdot -> ggydzdzl02 = 0.0 ; localXdot -> ggydzdzl02 +=
-locdm2fqb0 . P_15 * localX -> ggydzdzl02 ; localXdot -> ggydzdzl02 += localB
--> al53ax5qkn [ 2 ] ; localXdot -> kgxgv1vmlq = ( localB -> pkj2z4oo3u -
-localX -> kgxgv1vmlq ) * 1000.0 ; localXdot -> obun43xkmt = 0.0 ; localXdot
--> obun43xkmt += locdm2fqb0 . P_19 * localX -> obun43xkmt ; localXdot ->
-obun43xkmt += locdm2fqb0 . P_91 ; localXdot -> lqulrgwclj = 0.0 ; localXdot
--> lqulrgwclj += locdm2fqb0 . P_21 * localX -> lqulrgwclj ; localXdot ->
-lqulrgwclj += localB -> ctmtdicsz3 ; localXdot -> egyqa4syxe = 0.0 ;
-localXdot -> egyqa4syxe += locdm2fqb0 . P_23 * localX -> egyqa4syxe ;
-localXdot -> egyqa4syxe += localB -> pldqi3izwq ; localXdot -> ptuc3j0waz =
-0.0 ; localXdot -> ptuc3j0waz += locdm2fqb0 . P_25 * localX -> ptuc3j0waz ;
-localXdot -> ptuc3j0waz += localB -> al53ax5qkn [ 9 ] ; localXdot ->
-nupwktvts5 = 0.0 ; localXdot -> nupwktvts5 += locdm2fqb0 . P_27 * localX ->
-nupwktvts5 ; localXdot -> nupwktvts5 += localB -> oax1hn5ti2 ; localXdot ->
-pbkku1th1h = 0.0 ; localXdot -> pbkku1th1h += locdm2fqb0 . P_29 * localX ->
-pbkku1th1h ; localXdot -> pbkku1th1h += localB -> al53ax5qkn [ 9 ] ;
-localXdot -> ipbdkiozya = 0.0 ; localXdot -> ipbdkiozya += locdm2fqb0 . P_31
-* localX -> ipbdkiozya ; localXdot -> ipbdkiozya += localB -> al53ax5qkn [ 7
+locdm2fqb0 . P_10 * localX -> cjg15axlwj ; localXdot -> cjg15axlwj += localB
+-> bzodxox54x ; localXdot -> ggydzdzl02 = 0.0 ; localXdot -> ggydzdzl02 +=
+locdm2fqb0 . P_12 * localX -> ggydzdzl02 ; localXdot -> ggydzdzl02 += localB
+-> al53ax5qkn [ 2 ] ; localXdot -> obun43xkmt = 0.0 ; localXdot -> obun43xkmt
++= locdm2fqb0 . P_16 * localX -> obun43xkmt ; localXdot -> obun43xkmt +=
+locdm2fqb0 . P_87 ; localXdot -> ghqrh5fgbd = 0.0 ; localXdot -> ghqrh5fgbd
++= locdm2fqb0 . P_18 * localX -> ghqrh5fgbd ; localXdot -> ghqrh5fgbd +=
+localB -> dwtus23pzu ; localXdot -> egyqa4syxe = 0.0 ; localXdot ->
+egyqa4syxe += locdm2fqb0 . P_20 * localX -> egyqa4syxe ; localXdot ->
+egyqa4syxe += localB -> gl1x3cqcqk ; localXdot -> ptuc3j0waz = 0.0 ;
+localXdot -> ptuc3j0waz += locdm2fqb0 . P_22 * localX -> ptuc3j0waz ;
+localXdot -> ptuc3j0waz += localB -> al53ax5qkn [ 8 ] ; localXdot ->
+nupwktvts5 = 0.0 ; localXdot -> nupwktvts5 += locdm2fqb0 . P_24 * localX ->
+nupwktvts5 ; localXdot -> nupwktvts5 += localB -> b0gerusyrk ; localXdot ->
+pbkku1th1h = 0.0 ; localXdot -> pbkku1th1h += locdm2fqb0 . P_26 * localX ->
+pbkku1th1h ; localXdot -> pbkku1th1h += localB -> al53ax5qkn [ 8 ] ;
+localXdot -> ipbdkiozya = 0.0 ; localXdot -> ipbdkiozya += locdm2fqb0 . P_28
+* localX -> ipbdkiozya ; localXdot -> ipbdkiozya += localB -> al53ax5qkn [ 6
 ] ; localXdot -> czf51nn3to = 0.0 ; localXdot -> czf51nn3to += locdm2fqb0 .
-P_33 * localX -> czf51nn3to ; localXdot -> czf51nn3to += localB -> ogx5lh5hr4
+P_30 * localX -> czf51nn3to ; localXdot -> czf51nn3to += localB -> ogx5lh5hr4
 ; localXdot -> abtw1mwj2p = localB -> d35fz3l5re ; localXdot -> ghzzlnog0w =
 localB -> juwfq1mzri ; localXdot -> fpiq4t01ji = 0.0 ; localXdot ->
-fpiq4t01ji += locdm2fqb0 . P_37 * localX -> fpiq4t01ji ; localXdot ->
+fpiq4t01ji += locdm2fqb0 . P_34 * localX -> fpiq4t01ji ; localXdot ->
 fpiq4t01ji += * crmxvln0sn ; localXdot -> n3wx255ehc = ( localB -> ddehjbnx4b
 - localX -> n3wx255ehc ) * 1000.0 ; simulationData = ( NeslSimulationData * )
 localDW -> j1mjeinhrl ; time = rtmGetTaskTime ( lmamcwn3a2 , 0 ) ;
@@ -2189,18 +2289,15 @@ NESL_SIM_FORCINGFUNCTION , simulationData , diagnosticManager ) ; if ( is !=
 0 ) { tmp = error_buffer_is_empty ( ssGetErrorStatus ( lmamcwn3a2 ->
 _mdlRefSfcnS ) ) ; if ( tmp ) { msg = rtw_diagnostics_msg ( diagnosticTree )
 ; ssSetErrorStatus ( lmamcwn3a2 -> _mdlRefSfcnS , msg ) ; } } localXdot ->
-ep1kvce3ls = 0.0 ; localXdot -> ep1kvce3ls += locdm2fqb0 . P_40 * localX ->
-ep1kvce3ls ; localXdot -> ep1kvce3ls += localB -> al53ax5qkn [ 8 ] ;
-localXdot -> hehcfcd5qe = 0.0 ; localXdot -> hehcfcd5qe += locdm2fqb0 . P_46
-* localX -> hehcfcd5qe ; localXdot -> hehcfcd5qe += localB -> al53ax5qkn [ 18
-] ; localXdot -> hrtmiik4pa = 0.0 ; for ( ri = locdm2fqb0 . P_130 [ 0U ] ; ri
-< locdm2fqb0 . P_130 [ 1U ] ; ri ++ ) { localXdot -> hrtmiik4pa += locdm2fqb0
-. P_51 * localX -> hrtmiik4pa ; } for ( ri = locdm2fqb0 . P_132 [ 0U ] ; ri <
-locdm2fqb0 . P_132 [ 1U ] ; ri ++ ) { localXdot -> hrtmiik4pa += locdm2fqb0 .
-P_52 * localB -> al53ax5qkn [ 3 ] ; } localXdot -> cs23dlzame = 0.0 ;
-localXdot -> cs23dlzame += locdm2fqb0 . P_55 * localX -> cs23dlzame ;
-localXdot -> cs23dlzame += localB -> al53ax5qkn [ 10 ] ; localXdot ->
-gr332uyzki = localB -> ngn4sopsrz ; } void bpia4crzhf ( m5e23pbc2h * const
+ep1kvce3ls = 0.0 ; localXdot -> ep1kvce3ls += locdm2fqb0 . P_37 * localX ->
+ep1kvce3ls ; localXdot -> ep1kvce3ls += localB -> al53ax5qkn [ 7 ] ;
+localXdot -> hehcfcd5qe = 0.0 ; localXdot -> hehcfcd5qe += locdm2fqb0 . P_43
+* localX -> hehcfcd5qe ; localXdot -> hehcfcd5qe += localB -> al53ax5qkn [ 16
+] ; localXdot -> hrtmiik4pa = 0.0 ; for ( ri = locdm2fqb0 . P_126 [ 0U ] ; ri
+< locdm2fqb0 . P_126 [ 1U ] ; ri ++ ) { localXdot -> hrtmiik4pa += locdm2fqb0
+. P_48 * localX -> hrtmiik4pa ; } for ( ri = locdm2fqb0 . P_128 [ 0U ] ; ri <
+locdm2fqb0 . P_128 [ 1U ] ; ri ++ ) { localXdot -> hrtmiik4pa += locdm2fqb0 .
+P_49 * localB -> al53ax5qkn [ 3 ] ; } } void bpia4crzhf ( m5e23pbc2h * const
 lmamcwn3a2 , o4lq13rlvq * localB , ammy3t1awn * localDW , fw3fcrujzt * localX
 ) { NeslSimulationData * simulationData ; NeuDiagnosticManager *
 diagnosticManager ; NeuDiagnosticTree * diagnosticTree ; char * msg ; real_T
@@ -2277,28 +2374,30 @@ abih3gg12y ( m5e23pbc2h * const lmamcwn3a2 , o4lq13rlvq * localB , ammy3t1awn
 NeslSimulationData * simulationData ; NeuDiagnosticManager *
 diagnosticManager ; NeuDiagnosticTree * diagnosticTree ; char * msg ; real_T
 tmp_p [ 48 ] ; real_T time ; int32_T tmp_i ; int_T tmp_e [ 13 ] ; boolean_T
-tmp ; localZCSV -> l2mwos2kg4 = localB -> hmhvu0ftwl - locdm2fqb0 . P_10 ;
-localZCSV -> p3lrsdcado = localB -> hmhvu0ftwl - locdm2fqb0 . P_5 ;
-simulationData = ( NeslSimulationData * ) localDW -> j1mjeinhrl ; time =
-rtmGetTaskTime ( lmamcwn3a2 , 0 ) ; simulationData -> mData -> mTime . mN = 1
-; simulationData -> mData -> mTime . mX = & time ; simulationData -> mData ->
-mContStates . mN = 399 ; simulationData -> mData -> mContStates . mX = &
-localX -> lq4bzlrlb1 [ 0 ] ; simulationData -> mData -> mDiscStates . mN = 0
-; simulationData -> mData -> mDiscStates . mX = & localDW -> gfu5yue0a4 ;
-simulationData -> mData -> mModeVector . mN = 218 ; simulationData -> mData
--> mModeVector . mX = & localDW -> dpbhdgg3j4 [ 0 ] ; tmp = (
-rtmIsMajorTimeStep ( lmamcwn3a2 ) && ssGetSolverFoundContZcEvents (
-lmamcwn3a2 -> _mdlRefSfcnS ) ) ; simulationData -> mData -> mFoundZcEvents =
-tmp ; simulationData -> mData -> mIsMajorTimeStep = rtmIsMajorTimeStep (
-lmamcwn3a2 ) ; tmp = _ssGetSolverAssertCheck ( lmamcwn3a2 -> _mdlRefSfcnS ) ;
-simulationData -> mData -> mIsSolverAssertCheck = tmp ; tmp =
-ssIsSolverCheckingCIC ( lmamcwn3a2 -> _mdlRefSfcnS ) ; simulationData ->
-mData -> mIsSolverCheckingCIC = tmp ; tmp = ssIsSolverComputingJacobian (
+tmp ; localZCSV -> pmxnff0i3c = localB -> n5zg2lo03g - locdm2fqb0 . P_14 ;
+localZCSV -> l1a2mui1wh = localB -> n5zg2lo03g - locdm2fqb0 . P_15 ;
+localZCSV -> l2mwos2kg4 = localB -> hmhvu0ftwl - locdm2fqb0 . P_7 ; localZCSV
+-> p3lrsdcado = localB -> hmhvu0ftwl - locdm2fqb0 . P_2 ; simulationData = (
+NeslSimulationData * ) localDW -> j1mjeinhrl ; time = rtmGetTaskTime (
+lmamcwn3a2 , 0 ) ; simulationData -> mData -> mTime . mN = 1 ; simulationData
+-> mData -> mTime . mX = & time ; simulationData -> mData -> mContStates . mN
+= 399 ; simulationData -> mData -> mContStates . mX = & localX -> lq4bzlrlb1
+[ 0 ] ; simulationData -> mData -> mDiscStates . mN = 0 ; simulationData ->
+mData -> mDiscStates . mX = & localDW -> gfu5yue0a4 ; simulationData -> mData
+-> mModeVector . mN = 218 ; simulationData -> mData -> mModeVector . mX = &
+localDW -> dpbhdgg3j4 [ 0 ] ; tmp = ( rtmIsMajorTimeStep ( lmamcwn3a2 ) &&
+ssGetSolverFoundContZcEvents ( lmamcwn3a2 -> _mdlRefSfcnS ) ) ;
+simulationData -> mData -> mFoundZcEvents = tmp ; simulationData -> mData ->
+mIsMajorTimeStep = rtmIsMajorTimeStep ( lmamcwn3a2 ) ; tmp =
+_ssGetSolverAssertCheck ( lmamcwn3a2 -> _mdlRefSfcnS ) ; simulationData ->
+mData -> mIsSolverAssertCheck = tmp ; tmp = ssIsSolverCheckingCIC (
 lmamcwn3a2 -> _mdlRefSfcnS ) ; simulationData -> mData ->
-mIsComputingJacobian = tmp ; simulationData -> mData -> mIsEvaluatingF0 = (
-ssGetEvaluatingF0ForJacobian ( lmamcwn3a2 -> _mdlRefSfcnS ) != 0 ) ; tmp =
-ssIsSolverRequestingReset ( lmamcwn3a2 -> _mdlRefSfcnS ) ; simulationData ->
-mData -> mIsSolverRequestingReset = tmp ; simulationData -> mData ->
+mIsSolverCheckingCIC = tmp ; tmp = ssIsSolverComputingJacobian ( lmamcwn3a2
+-> _mdlRefSfcnS ) ; simulationData -> mData -> mIsComputingJacobian = tmp ;
+simulationData -> mData -> mIsEvaluatingF0 = ( ssGetEvaluatingF0ForJacobian (
+lmamcwn3a2 -> _mdlRefSfcnS ) != 0 ) ; tmp = ssIsSolverRequestingReset (
+lmamcwn3a2 -> _mdlRefSfcnS ) ; simulationData -> mData ->
+mIsSolverRequestingReset = tmp ; simulationData -> mData ->
 mIsModeUpdateTimeStep = ssIsModeUpdateTimeStep ( lmamcwn3a2 -> _mdlRefSfcnS )
 ; tmp_e [ 0 ] = 0 ; tmp_p [ 0 ] = localB -> brkjgij31f [ 0 ] ; tmp_p [ 1 ] =
 localB -> brkjgij31f [ 1 ] ; tmp_p [ 2 ] = localB -> brkjgij31f [ 2 ] ; tmp_p
@@ -2344,8 +2443,8 @@ NESL_SIM_ZEROCROSSINGS , simulationData , diagnosticManager ) ; if ( tmp_i !=
 0 ) { tmp = error_buffer_is_empty ( ssGetErrorStatus ( lmamcwn3a2 ->
 _mdlRefSfcnS ) ) ; if ( tmp ) { msg = rtw_diagnostics_msg ( diagnosticTree )
 ; ssSetErrorStatus ( lmamcwn3a2 -> _mdlRefSfcnS , msg ) ; } } localZCSV ->
-dz0h1j5kaf = localB -> mcmq1xxqdb - locdm2fqb0 . P_11 ; localZCSV ->
-jynw1pxquo = localB -> mcmq1xxqdb - locdm2fqb0 . P_6 ; } void irfppkdltu (
+a0dzchsrd1 = localB -> hreg3iigz5 - locdm2fqb0 . P_8 ; localZCSV ->
+pmn5urtr1j = localB -> hreg3iigz5 - locdm2fqb0 . P_3 ; } void irfppkdltu (
 m5e23pbc2h * const lmamcwn3a2 , ammy3t1awn * localDW ) { if ( ( ssGetSimMode
 ( lmamcwn3a2 -> _mdlRefSfcnS ) != SS_SIMMODE_EXTERNAL ) && ( ( lmamcwn3a2 ->
 _mdlRefSfcnS ) -> mdlInfo -> rtwgenMode !=
@@ -2448,6 +2547,10 @@ nesl_destroy_registry ( ) ; neu_destroy_diagnostic_manager ( (
 NeuDiagnosticManager * ) localDW -> ln3oq3n23r ) ;
 nesl_destroy_simulation_data ( ( NeslSimulationData * ) localDW -> fuu3yr5t3a
 ) ; nesl_erase_simulator ( "FCElectricPlant/Solver Configuration1_1" ) ;
+nesl_destroy_registry ( ) ; neu_destroy_diagnostic_manager ( (
+NeuDiagnosticManager * ) localDW -> d1c3ioipfx ) ;
+nesl_destroy_simulation_data ( ( NeslSimulationData * ) localDW -> dy4oa554kf
+) ; nesl_erase_simulator ( "FCElectricPlant/Solver Configuration1_1" ) ;
 nesl_destroy_registry ( ) ; if ( ! slIsRapidAcceleratorSimulating ( ) ) {
 slmrRunPluginEvent ( lmamcwn3a2 -> _mdlRefSfcnS , "FCElectricPlant" ,
 "SIMSTATUS_TERMINATING_MODELREF_ACCEL_EVENT" ) ; } } void axkawtnuua (
@@ -2456,8 +2559,8 @@ mdlref_TID2 , m5e23pbc2h * const lmamcwn3a2 , o4lq13rlvq * localB ,
 ammy3t1awn * localDW , fw3fcrujzt * localX , km30avrcex * localZCE , real_T *
 localMM , void * sysRanPtr , int contextTid , rtwCAPI_ModelMappingInfo *
 rt_ParentMMI , const char_T * rt_ChildPath , int_T rt_ChildMMIIdx , int_T
-rt_CSTATEIdx ) { rt_InitInfAndNaN ( sizeof ( real_T ) ) ; locdm2fqb0 . P_17 =
-rtInf ; locdm2fqb0 . P_59 = rtInf ; locdm2fqb0 . P_62 = rtInf ; ( void )
+rt_CSTATEIdx ) { rt_InitInfAndNaN ( sizeof ( real_T ) ) ; locdm2fqb0 . P_14 =
+rtInf ; locdm2fqb0 . P_55 = rtInf ; locdm2fqb0 . P_58 = rtInf ; ( void )
 memset ( ( void * ) lmamcwn3a2 , 0 , sizeof ( m5e23pbc2h ) ) ; lmamcwn3a2 ->
 Timing . mdlref_GlobalTID [ 0 ] = mdlref_TID0 ; lmamcwn3a2 -> Timing .
 mdlref_GlobalTID [ 1 ] = mdlref_TID1 ; lmamcwn3a2 -> Timing .
@@ -2465,15 +2568,15 @@ mdlref_GlobalTID [ 2 ] = mdlref_TID2 ; lmamcwn3a2 -> _mdlRefSfcnS = (
 _mdlRefSfcnS ) ; if ( ! slIsRapidAcceleratorSimulating ( ) ) {
 slmrRunPluginEvent ( lmamcwn3a2 -> _mdlRefSfcnS , "FCElectricPlant" ,
 "START_OF_SIM_MODEL_MODELREF_ACCEL_EVENT" ) ; } { int32_T i ; for ( i = 0 ; i
-< 617 ; i ++ ) { localB -> i3uwmxb4ma [ i ] = 0.0 ; } for ( i = 0 ; i < 19 ;
-i ++ ) { localB -> al53ax5qkn [ i ] = 0.0 ; } localB -> pkj2z4oo3u = 0.0 ;
+< 617 ; i ++ ) { localB -> i3uwmxb4ma [ i ] = 0.0 ; } for ( i = 0 ; i < 17 ;
+i ++ ) { localB -> al53ax5qkn [ i ] = 0.0 ; } localB -> n5zg2lo03g = 0.0 ;
 localB -> brkjgij31f [ 0 ] = 0.0 ; localB -> brkjgij31f [ 1 ] = 0.0 ; localB
 -> brkjgij31f [ 2 ] = 0.0 ; localB -> brkjgij31f [ 3 ] = 0.0 ; localB ->
 d31fe02c1j [ 0 ] = 0.0 ; localB -> d31fe02c1j [ 1 ] = 0.0 ; localB ->
 d31fe02c1j [ 2 ] = 0.0 ; localB -> d31fe02c1j [ 3 ] = 0.0 ; localB ->
 m4vtulkmjt [ 0 ] = 0.0 ; localB -> m4vtulkmjt [ 1 ] = 0.0 ; localB ->
 m4vtulkmjt [ 2 ] = 0.0 ; localB -> m4vtulkmjt [ 3 ] = 0.0 ; localB ->
-ord4d0pj3d = 0.0 ; localB -> kqzmt5kme1 [ 0 ] = 0.0 ; localB -> kqzmt5kme1 [
+b13j45cydo = 0.0 ; localB -> kqzmt5kme1 [ 0 ] = 0.0 ; localB -> kqzmt5kme1 [
 1 ] = 0.0 ; localB -> kqzmt5kme1 [ 2 ] = 0.0 ; localB -> kqzmt5kme1 [ 3 ] =
 0.0 ; localB -> d1vyttnzih [ 0 ] = 0.0 ; localB -> d1vyttnzih [ 1 ] = 0.0 ;
 localB -> d1vyttnzih [ 2 ] = 0.0 ; localB -> d1vyttnzih [ 3 ] = 0.0 ; localB
@@ -2493,14 +2596,14 @@ hiaxbfam0w [ 2 ] = 0.0 ; localB -> hiaxbfam0w [ 3 ] = 0.0 ; localB ->
 ddehjbnx4b = 0.0 ; localB -> jw0eii0b1p [ 0 ] = 0.0 ; localB -> jw0eii0b1p [
 1 ] = 0.0 ; localB -> jw0eii0b1p [ 2 ] = 0.0 ; localB -> jw0eii0b1p [ 3 ] =
 0.0 ; localB -> l1cguzheni = 0.0 ; localB -> d35fz3l5re = 0.0 ; localB ->
-ai5ttmjbcf = 0.0 ; localB -> mcmq1xxqdb = 0.0 ; localB -> ctmtdicsz3 = 0.0 ;
-localB -> ngn4sopsrz = 0.0 ; localB -> gvz4ycnxix = 0.0 ; localB ->
-pldqi3izwq = 0.0 ; localB -> oax1hn5ti2 = 0.0 ; localB -> jdyv4q3xm2 = 0.0 ;
-localB -> eartrnbzob_mbvzarwird = 0.0 ; localB -> kziv2ppkm1 = 0.0 ; } ( void
-) memset ( ( void * ) localDW , 0 , sizeof ( ammy3t1awn ) ) ; localDW ->
-esgihri23s = 0.0 ; localDW -> cgymtfznvh = 0.0 ; localDW -> aol2pgne35 [ 0 ]
-= 0.0 ; localDW -> aol2pgne35 [ 1 ] = 0.0 ; localDW -> mybfclyhka [ 0 ] = 0.0
-; localDW -> mybfclyhka [ 1 ] = 0.0 ; localDW -> imu4ipn3nw [ 0 ] = 0.0 ;
+e3vzfch03e = 0.0 ; localB -> hreg3iigz5 = 0.0 ; localB -> dwtus23pzu = 0.0 ;
+localB -> bzodxox54x = 0.0 ; localB -> gl1x3cqcqk = 0.0 ; localB ->
+b0gerusyrk = 0.0 ; localB -> lrv2smzsir = 0.0 ; localB ->
+eartrnbzob_mbvzarwird = 0.0 ; localB -> goyafd53a5 = 0.0 ; } ( void ) memset
+( ( void * ) localDW , 0 , sizeof ( ammy3t1awn ) ) ; localDW -> esgihri23s [
+0 ] = 0.0 ; localDW -> esgihri23s [ 1 ] = 0.0 ; localDW -> aol2pgne35 [ 0 ] =
+0.0 ; localDW -> aol2pgne35 [ 1 ] = 0.0 ; localDW -> mybfclyhka [ 0 ] = 0.0 ;
+localDW -> mybfclyhka [ 1 ] = 0.0 ; localDW -> imu4ipn3nw [ 0 ] = 0.0 ;
 localDW -> imu4ipn3nw [ 1 ] = 0.0 ; localDW -> am2ldqdyyx [ 0 ] = 0.0 ;
 localDW -> am2ldqdyyx [ 1 ] = 0.0 ; localDW -> dfduxfsclz [ 0 ] = 0.0 ;
 localDW -> dfduxfsclz [ 1 ] = 0.0 ; localDW -> cr135euvis [ 0 ] = 0.0 ;
@@ -2510,19 +2613,19 @@ localDW -> jqrc2iageq [ 1 ] = 0.0 ; localDW -> nhy4fjrvev [ 0 ] = 0.0 ;
 localDW -> nhy4fjrvev [ 1 ] = 0.0 ; localDW -> do5uuitab4 [ 0 ] = 0.0 ;
 localDW -> do5uuitab4 [ 1 ] = 0.0 ; localDW -> anv3dgii23 = 0.0 ; localDW ->
 cgodyj4yxm = 0.0 ; localDW -> gfu5yue0a4 = 0.0 ; localDW -> jjwo3uvfgq = 0.0
-; FCElectricPlant_InitializeDataMapInfo ( lmamcwn3a2 , localDW , localX ,
-sysRanPtr , contextTid ) ; { lmamcwn3a2 -> massMatrixBasePr = localMM ;
-localDW -> kpvq4y4ytj = 15 ; } if ( ( rt_ParentMMI != ( NULL ) ) && (
-rt_ChildPath != ( NULL ) ) ) { rtwCAPI_SetChildMMI ( * rt_ParentMMI ,
-rt_ChildMMIIdx , & ( lmamcwn3a2 -> DataMapInfo . mmi ) ) ; rtwCAPI_SetPath (
-lmamcwn3a2 -> DataMapInfo . mmi , rt_ChildPath ) ;
-rtwCAPI_MMISetContStateStartIndex ( lmamcwn3a2 -> DataMapInfo . mmi ,
-rt_CSTATEIdx ) ; } lmamcwn3a2 -> nonContDerivSignal [ 0 ] . pPrevVal = (
-char_T * ) lmamcwn3a2 -> NonContDerivMemory . mr_nonContSig0 ; lmamcwn3a2 ->
-nonContDerivSignal [ 0 ] . sizeInBytes = ( 1 * sizeof ( real_T ) ) ;
-lmamcwn3a2 -> nonContDerivSignal [ 0 ] . pCurrVal = ( char_T * ) ( & localB
--> l1cguzheni ) ; ; localZCE -> eleagvs5h0 = UNINITIALIZED_ZCSIG ; localZCE
--> nrrnky0p5s = UNINITIALIZED_ZCSIG ; localZCE -> fmvjc00fed =
+; localDW -> lgfdzy32uf = 0.0 ; FCElectricPlant_InitializeDataMapInfo (
+lmamcwn3a2 , localDW , localX , sysRanPtr , contextTid ) ; { lmamcwn3a2 ->
+massMatrixBasePr = localMM ; localDW -> kpvq4y4ytj = 14 ; } if ( (
+rt_ParentMMI != ( NULL ) ) && ( rt_ChildPath != ( NULL ) ) ) {
+rtwCAPI_SetChildMMI ( * rt_ParentMMI , rt_ChildMMIIdx , & ( lmamcwn3a2 ->
+DataMapInfo . mmi ) ) ; rtwCAPI_SetPath ( lmamcwn3a2 -> DataMapInfo . mmi ,
+rt_ChildPath ) ; rtwCAPI_MMISetContStateStartIndex ( lmamcwn3a2 ->
+DataMapInfo . mmi , rt_CSTATEIdx ) ; } lmamcwn3a2 -> nonContDerivSignal [ 0 ]
+. pPrevVal = ( char_T * ) lmamcwn3a2 -> NonContDerivMemory . mr_nonContSig0 ;
+lmamcwn3a2 -> nonContDerivSignal [ 0 ] . sizeInBytes = ( 1 * sizeof ( real_T
+) ) ; lmamcwn3a2 -> nonContDerivSignal [ 0 ] . pCurrVal = ( char_T * ) ( &
+localB -> l1cguzheni ) ; ; localZCE -> eleagvs5h0 = UNINITIALIZED_ZCSIG ;
+localZCE -> nrrnky0p5s = UNINITIALIZED_ZCSIG ; localZCE -> fmvjc00fed =
 UNINITIALIZED_ZCSIG ; localZCE -> evkssu2rsd = UNINITIALIZED_ZCSIG ; localZCE
 -> psv0ua1aol = UNINITIALIZED_ZCSIG ; localZCE -> ia3srrk1pb =
 UNINITIALIZED_ZCSIG ; localZCE -> libeg1hv4e = UNINITIALIZED_ZCSIG ; localZCE
@@ -2739,117 +2842,125 @@ g5h05g3u4wx * mdlrefDW ) { static const char_T * ssDWFieldNames [ 3 ] = {
 "rtb" , "rtdw" , "rtzce" , } ; mxArray * ssDW = mxCreateStructMatrix ( 1 , 1
 , 3 , ssDWFieldNames ) ; mr_FCElectricPlant_cacheDataAsMxArray ( ssDW , 0 , 0
 , ( const void * ) & ( mdlrefDW -> rtb ) , sizeof ( mdlrefDW -> rtb ) ) ; {
-static const char_T * rtdwDataFieldNames [ 25 ] = {
-"mdlrefDW->rtdw.esgihri23s" , "mdlrefDW->rtdw.cgymtfznvh" ,
-"mdlrefDW->rtdw.aol2pgne35" , "mdlrefDW->rtdw.mybfclyhka" ,
-"mdlrefDW->rtdw.imu4ipn3nw" , "mdlrefDW->rtdw.am2ldqdyyx" ,
-"mdlrefDW->rtdw.dfduxfsclz" , "mdlrefDW->rtdw.cr135euvis" ,
-"mdlrefDW->rtdw.hinpofzfpa" , "mdlrefDW->rtdw.jqrc2iageq" ,
-"mdlrefDW->rtdw.nhy4fjrvev" , "mdlrefDW->rtdw.do5uuitab4" ,
-"mdlrefDW->rtdw.anv3dgii23" , "mdlrefDW->rtdw.cgodyj4yxm" ,
-"mdlrefDW->rtdw.gfu5yue0a4" , "mdlrefDW->rtdw.jjwo3uvfgq" ,
+static const char_T * rtdwDataFieldNames [ 28 ] = {
+"mdlrefDW->rtdw.esgihri23s" , "mdlrefDW->rtdw.aol2pgne35" ,
+"mdlrefDW->rtdw.mybfclyhka" , "mdlrefDW->rtdw.imu4ipn3nw" ,
+"mdlrefDW->rtdw.am2ldqdyyx" , "mdlrefDW->rtdw.dfduxfsclz" ,
+"mdlrefDW->rtdw.cr135euvis" , "mdlrefDW->rtdw.hinpofzfpa" ,
+"mdlrefDW->rtdw.jqrc2iageq" , "mdlrefDW->rtdw.nhy4fjrvev" ,
+"mdlrefDW->rtdw.do5uuitab4" , "mdlrefDW->rtdw.anv3dgii23" ,
+"mdlrefDW->rtdw.cgodyj4yxm" , "mdlrefDW->rtdw.gfu5yue0a4" ,
+"mdlrefDW->rtdw.jjwo3uvfgq" , "mdlrefDW->rtdw.lgfdzy32uf" ,
 "mdlrefDW->rtdw.ie3nwfalvy" , "mdlrefDW->rtdw.ei0dla2ntt" ,
 "mdlrefDW->rtdw.dpbhdgg3j4" , "mdlrefDW->rtdw.gl2catqxix" ,
-"mdlrefDW->rtdw.itcp3adbb2" , "mdlrefDW->rtdw.kzlwmf4i5c" ,
+"mdlrefDW->rtdw.iobl1pwm02" , "mdlrefDW->rtdw.jn1hlles4f" ,
+"mdlrefDW->rtdw.itcp3adbb2" , "mdlrefDW->rtdw.avda114tgy" ,
 "mdlrefDW->rtdw.kpvq4y4ytj" , "mdlrefDW->rtdw.f321hccueh" ,
-"mdlrefDW->rtdw.ocb0wghbme" , } ; mxArray * rtdwData = mxCreateStructMatrix (
-1 , 1 , 25 , rtdwDataFieldNames ) ; mr_FCElectricPlant_cacheDataAsMxArray (
-rtdwData , 0 , 0 , ( const void * ) & ( mdlrefDW -> rtdw . esgihri23s ) ,
-sizeof ( mdlrefDW -> rtdw . esgihri23s ) ) ;
-mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 1 , ( const void * ) &
-( mdlrefDW -> rtdw . cgymtfznvh ) , sizeof ( mdlrefDW -> rtdw . cgymtfznvh )
-) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 2 , ( const void *
+"mdlrefDW->rtdw.ocb0wghbme" , "mdlrefDW->rtdw.lzvkb5wx12" , } ; mxArray *
+rtdwData = mxCreateStructMatrix ( 1 , 1 , 28 , rtdwDataFieldNames ) ;
+mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 0 , ( const void * ) &
+( mdlrefDW -> rtdw . esgihri23s ) , sizeof ( mdlrefDW -> rtdw . esgihri23s )
+) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 1 , ( const void *
 ) & ( mdlrefDW -> rtdw . aol2pgne35 ) , sizeof ( mdlrefDW -> rtdw .
-aol2pgne35 ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 3 , (
+aol2pgne35 ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 2 , (
 const void * ) & ( mdlrefDW -> rtdw . mybfclyhka ) , sizeof ( mdlrefDW ->
 rtdw . mybfclyhka ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0
-, 4 , ( const void * ) & ( mdlrefDW -> rtdw . imu4ipn3nw ) , sizeof (
+, 3 , ( const void * ) & ( mdlrefDW -> rtdw . imu4ipn3nw ) , sizeof (
 mdlrefDW -> rtdw . imu4ipn3nw ) ) ; mr_FCElectricPlant_cacheDataAsMxArray (
-rtdwData , 0 , 5 , ( const void * ) & ( mdlrefDW -> rtdw . am2ldqdyyx ) ,
+rtdwData , 0 , 4 , ( const void * ) & ( mdlrefDW -> rtdw . am2ldqdyyx ) ,
 sizeof ( mdlrefDW -> rtdw . am2ldqdyyx ) ) ;
-mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 6 , ( const void * ) &
+mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 5 , ( const void * ) &
 ( mdlrefDW -> rtdw . dfduxfsclz ) , sizeof ( mdlrefDW -> rtdw . dfduxfsclz )
-) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 7 , ( const void *
+) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 6 , ( const void *
 ) & ( mdlrefDW -> rtdw . cr135euvis ) , sizeof ( mdlrefDW -> rtdw .
-cr135euvis ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 8 , (
+cr135euvis ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 7 , (
 const void * ) & ( mdlrefDW -> rtdw . hinpofzfpa ) , sizeof ( mdlrefDW ->
 rtdw . hinpofzfpa ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0
-, 9 , ( const void * ) & ( mdlrefDW -> rtdw . jqrc2iageq ) , sizeof (
+, 8 , ( const void * ) & ( mdlrefDW -> rtdw . jqrc2iageq ) , sizeof (
 mdlrefDW -> rtdw . jqrc2iageq ) ) ; mr_FCElectricPlant_cacheDataAsMxArray (
-rtdwData , 0 , 10 , ( const void * ) & ( mdlrefDW -> rtdw . nhy4fjrvev ) ,
+rtdwData , 0 , 9 , ( const void * ) & ( mdlrefDW -> rtdw . nhy4fjrvev ) ,
 sizeof ( mdlrefDW -> rtdw . nhy4fjrvev ) ) ;
-mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 11 , ( const void * )
+mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 10 , ( const void * )
 & ( mdlrefDW -> rtdw . do5uuitab4 ) , sizeof ( mdlrefDW -> rtdw . do5uuitab4
-) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 12 , ( const
+) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 11 , ( const
 void * ) & ( mdlrefDW -> rtdw . anv3dgii23 ) , sizeof ( mdlrefDW -> rtdw .
-anv3dgii23 ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 13 ,
+anv3dgii23 ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 12 ,
 ( const void * ) & ( mdlrefDW -> rtdw . cgodyj4yxm ) , sizeof ( mdlrefDW ->
 rtdw . cgodyj4yxm ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0
-, 14 , ( const void * ) & ( mdlrefDW -> rtdw . gfu5yue0a4 ) , sizeof (
+, 13 , ( const void * ) & ( mdlrefDW -> rtdw . gfu5yue0a4 ) , sizeof (
 mdlrefDW -> rtdw . gfu5yue0a4 ) ) ; mr_FCElectricPlant_cacheDataAsMxArray (
-rtdwData , 0 , 15 , ( const void * ) & ( mdlrefDW -> rtdw . jjwo3uvfgq ) ,
+rtdwData , 0 , 14 , ( const void * ) & ( mdlrefDW -> rtdw . jjwo3uvfgq ) ,
 sizeof ( mdlrefDW -> rtdw . jjwo3uvfgq ) ) ;
-mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 16 , ( const void * )
-& ( mdlrefDW -> rtdw . ie3nwfalvy ) , sizeof ( mdlrefDW -> rtdw . ie3nwfalvy
-) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 17 , ( const
-void * ) & ( mdlrefDW -> rtdw . ei0dla2ntt ) , sizeof ( mdlrefDW -> rtdw .
-ei0dla2ntt ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 18 ,
-( const void * ) & ( mdlrefDW -> rtdw . dpbhdgg3j4 ) , sizeof ( mdlrefDW ->
-rtdw . dpbhdgg3j4 ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0
-, 19 , ( const void * ) & ( mdlrefDW -> rtdw . gl2catqxix ) , sizeof (
-mdlrefDW -> rtdw . gl2catqxix ) ) ; mr_FCElectricPlant_cacheDataAsMxArray (
-rtdwData , 0 , 20 , ( const void * ) & ( mdlrefDW -> rtdw . itcp3adbb2 ) ,
-sizeof ( mdlrefDW -> rtdw . itcp3adbb2 ) ) ;
-mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 21 , ( const void * )
-& ( mdlrefDW -> rtdw . kzlwmf4i5c ) , sizeof ( mdlrefDW -> rtdw . kzlwmf4i5c
-) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 22 , ( const
-void * ) & ( mdlrefDW -> rtdw . kpvq4y4ytj ) , sizeof ( mdlrefDW -> rtdw .
-kpvq4y4ytj ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 23 ,
-( const void * ) & ( mdlrefDW -> rtdw . f321hccueh ) , sizeof ( mdlrefDW ->
-rtdw . f321hccueh ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0
-, 24 , ( const void * ) & ( mdlrefDW -> rtdw . ocb0wghbme ) , sizeof (
-mdlrefDW -> rtdw . ocb0wghbme ) ) ; mxSetFieldByNumber ( ssDW , 0 , 1 ,
-rtdwData ) ; } mr_FCElectricPlant_cacheDataAsMxArray ( ssDW , 0 , 2 , ( const
-void * ) & ( mdlrefDW -> rtzce ) , sizeof ( mdlrefDW -> rtzce ) ) ; ( void )
-mdlrefDW ; return ssDW ; } void mr_FCElectricPlant_SetDWork ( g5h05g3u4wx *
-mdlrefDW , const mxArray * ssDW ) { ( void ) ssDW ; ( void ) mdlrefDW ;
+mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 15 , ( const void * )
+& ( mdlrefDW -> rtdw . lgfdzy32uf ) , sizeof ( mdlrefDW -> rtdw . lgfdzy32uf
+) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 16 , ( const
+void * ) & ( mdlrefDW -> rtdw . ie3nwfalvy ) , sizeof ( mdlrefDW -> rtdw .
+ie3nwfalvy ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 17 ,
+( const void * ) & ( mdlrefDW -> rtdw . ei0dla2ntt ) , sizeof ( mdlrefDW ->
+rtdw . ei0dla2ntt ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0
+, 18 , ( const void * ) & ( mdlrefDW -> rtdw . dpbhdgg3j4 ) , sizeof (
+mdlrefDW -> rtdw . dpbhdgg3j4 ) ) ; mr_FCElectricPlant_cacheDataAsMxArray (
+rtdwData , 0 , 19 , ( const void * ) & ( mdlrefDW -> rtdw . gl2catqxix ) ,
+sizeof ( mdlrefDW -> rtdw . gl2catqxix ) ) ;
+mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 20 , ( const void * )
+& ( mdlrefDW -> rtdw . iobl1pwm02 ) , sizeof ( mdlrefDW -> rtdw . iobl1pwm02
+) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 21 , ( const
+void * ) & ( mdlrefDW -> rtdw . jn1hlles4f ) , sizeof ( mdlrefDW -> rtdw .
+jn1hlles4f ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 22 ,
+( const void * ) & ( mdlrefDW -> rtdw . itcp3adbb2 ) , sizeof ( mdlrefDW ->
+rtdw . itcp3adbb2 ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0
+, 23 , ( const void * ) & ( mdlrefDW -> rtdw . avda114tgy ) , sizeof (
+mdlrefDW -> rtdw . avda114tgy ) ) ; mr_FCElectricPlant_cacheDataAsMxArray (
+rtdwData , 0 , 24 , ( const void * ) & ( mdlrefDW -> rtdw . kpvq4y4ytj ) ,
+sizeof ( mdlrefDW -> rtdw . kpvq4y4ytj ) ) ;
+mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 25 , ( const void * )
+& ( mdlrefDW -> rtdw . f321hccueh ) , sizeof ( mdlrefDW -> rtdw . f321hccueh
+) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 26 , ( const
+void * ) & ( mdlrefDW -> rtdw . ocb0wghbme ) , sizeof ( mdlrefDW -> rtdw .
+ocb0wghbme ) ) ; mr_FCElectricPlant_cacheDataAsMxArray ( rtdwData , 0 , 27 ,
+( const void * ) & ( mdlrefDW -> rtdw . lzvkb5wx12 ) , sizeof ( mdlrefDW ->
+rtdw . lzvkb5wx12 ) ) ; mxSetFieldByNumber ( ssDW , 0 , 1 , rtdwData ) ; }
+mr_FCElectricPlant_cacheDataAsMxArray ( ssDW , 0 , 2 , ( const void * ) & (
+mdlrefDW -> rtzce ) , sizeof ( mdlrefDW -> rtzce ) ) ; ( void ) mdlrefDW ;
+return ssDW ; } void mr_FCElectricPlant_SetDWork ( g5h05g3u4wx * mdlrefDW ,
+const mxArray * ssDW ) { ( void ) ssDW ; ( void ) mdlrefDW ;
 mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtb )
 , ssDW , 0 , 0 , sizeof ( mdlrefDW -> rtb ) ) ; { const mxArray * rtdwData =
 mxGetFieldByNumber ( ssDW , 0 , 1 ) ;
 mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtdw .
 esgihri23s ) , rtdwData , 0 , 0 , sizeof ( mdlrefDW -> rtdw . esgihri23s ) )
 ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtdw
-. cgymtfznvh ) , rtdwData , 0 , 1 , sizeof ( mdlrefDW -> rtdw . cgymtfznvh )
+. aol2pgne35 ) , rtdwData , 0 , 1 , sizeof ( mdlrefDW -> rtdw . aol2pgne35 )
 ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW ->
-rtdw . aol2pgne35 ) , rtdwData , 0 , 2 , sizeof ( mdlrefDW -> rtdw .
-aol2pgne35 ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & (
-mdlrefDW -> rtdw . mybfclyhka ) , rtdwData , 0 , 3 , sizeof ( mdlrefDW ->
-rtdw . mybfclyhka ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void *
-) & ( mdlrefDW -> rtdw . imu4ipn3nw ) , rtdwData , 0 , 4 , sizeof ( mdlrefDW
--> rtdw . imu4ipn3nw ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void
-* ) & ( mdlrefDW -> rtdw . am2ldqdyyx ) , rtdwData , 0 , 5 , sizeof (
-mdlrefDW -> rtdw . am2ldqdyyx ) ) ; mr_FCElectricPlant_restoreDataFromMxArray
-( ( void * ) & ( mdlrefDW -> rtdw . dfduxfsclz ) , rtdwData , 0 , 6 , sizeof
-( mdlrefDW -> rtdw . dfduxfsclz ) ) ;
+rtdw . mybfclyhka ) , rtdwData , 0 , 2 , sizeof ( mdlrefDW -> rtdw .
+mybfclyhka ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & (
+mdlrefDW -> rtdw . imu4ipn3nw ) , rtdwData , 0 , 3 , sizeof ( mdlrefDW ->
+rtdw . imu4ipn3nw ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void *
+) & ( mdlrefDW -> rtdw . am2ldqdyyx ) , rtdwData , 0 , 4 , sizeof ( mdlrefDW
+-> rtdw . am2ldqdyyx ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void
+* ) & ( mdlrefDW -> rtdw . dfduxfsclz ) , rtdwData , 0 , 5 , sizeof (
+mdlrefDW -> rtdw . dfduxfsclz ) ) ; mr_FCElectricPlant_restoreDataFromMxArray
+( ( void * ) & ( mdlrefDW -> rtdw . cr135euvis ) , rtdwData , 0 , 6 , sizeof
+( mdlrefDW -> rtdw . cr135euvis ) ) ;
 mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtdw .
-cr135euvis ) , rtdwData , 0 , 7 , sizeof ( mdlrefDW -> rtdw . cr135euvis ) )
+hinpofzfpa ) , rtdwData , 0 , 7 , sizeof ( mdlrefDW -> rtdw . hinpofzfpa ) )
 ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtdw
-. hinpofzfpa ) , rtdwData , 0 , 8 , sizeof ( mdlrefDW -> rtdw . hinpofzfpa )
+. jqrc2iageq ) , rtdwData , 0 , 8 , sizeof ( mdlrefDW -> rtdw . jqrc2iageq )
 ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW ->
-rtdw . jqrc2iageq ) , rtdwData , 0 , 9 , sizeof ( mdlrefDW -> rtdw .
-jqrc2iageq ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & (
-mdlrefDW -> rtdw . nhy4fjrvev ) , rtdwData , 0 , 10 , sizeof ( mdlrefDW ->
-rtdw . nhy4fjrvev ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void *
-) & ( mdlrefDW -> rtdw . do5uuitab4 ) , rtdwData , 0 , 11 , sizeof ( mdlrefDW
--> rtdw . do5uuitab4 ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void
-* ) & ( mdlrefDW -> rtdw . anv3dgii23 ) , rtdwData , 0 , 12 , sizeof (
-mdlrefDW -> rtdw . anv3dgii23 ) ) ; mr_FCElectricPlant_restoreDataFromMxArray
-( ( void * ) & ( mdlrefDW -> rtdw . cgodyj4yxm ) , rtdwData , 0 , 13 , sizeof
-( mdlrefDW -> rtdw . cgodyj4yxm ) ) ;
+rtdw . nhy4fjrvev ) , rtdwData , 0 , 9 , sizeof ( mdlrefDW -> rtdw .
+nhy4fjrvev ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & (
+mdlrefDW -> rtdw . do5uuitab4 ) , rtdwData , 0 , 10 , sizeof ( mdlrefDW ->
+rtdw . do5uuitab4 ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void *
+) & ( mdlrefDW -> rtdw . anv3dgii23 ) , rtdwData , 0 , 11 , sizeof ( mdlrefDW
+-> rtdw . anv3dgii23 ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void
+* ) & ( mdlrefDW -> rtdw . cgodyj4yxm ) , rtdwData , 0 , 12 , sizeof (
+mdlrefDW -> rtdw . cgodyj4yxm ) ) ; mr_FCElectricPlant_restoreDataFromMxArray
+( ( void * ) & ( mdlrefDW -> rtdw . gfu5yue0a4 ) , rtdwData , 0 , 13 , sizeof
+( mdlrefDW -> rtdw . gfu5yue0a4 ) ) ;
 mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtdw .
-gfu5yue0a4 ) , rtdwData , 0 , 14 , sizeof ( mdlrefDW -> rtdw . gfu5yue0a4 ) )
+jjwo3uvfgq ) , rtdwData , 0 , 14 , sizeof ( mdlrefDW -> rtdw . jjwo3uvfgq ) )
 ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtdw
-. jjwo3uvfgq ) , rtdwData , 0 , 15 , sizeof ( mdlrefDW -> rtdw . jjwo3uvfgq )
+. lgfdzy32uf ) , rtdwData , 0 , 15 , sizeof ( mdlrefDW -> rtdw . lgfdzy32uf )
 ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW ->
 rtdw . ie3nwfalvy ) , rtdwData , 0 , 16 , sizeof ( mdlrefDW -> rtdw .
 ie3nwfalvy ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & (
@@ -2859,36 +2970,46 @@ rtdw . ei0dla2ntt ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void *
 -> rtdw . dpbhdgg3j4 ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void
 * ) & ( mdlrefDW -> rtdw . gl2catqxix ) , rtdwData , 0 , 19 , sizeof (
 mdlrefDW -> rtdw . gl2catqxix ) ) ; mr_FCElectricPlant_restoreDataFromMxArray
-( ( void * ) & ( mdlrefDW -> rtdw . itcp3adbb2 ) , rtdwData , 0 , 20 , sizeof
-( mdlrefDW -> rtdw . itcp3adbb2 ) ) ;
+( ( void * ) & ( mdlrefDW -> rtdw . iobl1pwm02 ) , rtdwData , 0 , 20 , sizeof
+( mdlrefDW -> rtdw . iobl1pwm02 ) ) ;
 mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtdw .
-kzlwmf4i5c ) , rtdwData , 0 , 21 , sizeof ( mdlrefDW -> rtdw . kzlwmf4i5c ) )
+jn1hlles4f ) , rtdwData , 0 , 21 , sizeof ( mdlrefDW -> rtdw . jn1hlles4f ) )
 ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtdw
-. kpvq4y4ytj ) , rtdwData , 0 , 22 , sizeof ( mdlrefDW -> rtdw . kpvq4y4ytj )
+. itcp3adbb2 ) , rtdwData , 0 , 22 , sizeof ( mdlrefDW -> rtdw . itcp3adbb2 )
 ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW ->
-rtdw . f321hccueh ) , rtdwData , 0 , 23 , sizeof ( mdlrefDW -> rtdw .
-f321hccueh ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & (
-mdlrefDW -> rtdw . ocb0wghbme ) , rtdwData , 0 , 24 , sizeof ( mdlrefDW ->
-rtdw . ocb0wghbme ) ) ; } mr_FCElectricPlant_restoreDataFromMxArray ( ( void
-* ) & ( mdlrefDW -> rtzce ) , ssDW , 0 , 2 , sizeof ( mdlrefDW -> rtzce ) ) ;
-} void mr_FCElectricPlant_RegisterSimStateChecksum ( SimStruct * S ) { const
-uint32_T chksum [ 4 ] = { 359016618U , 999398487U , 224862232U , 437901971U ,
-} ; slmrModelRefRegisterSimStateChecksum ( S , "FCElectricPlant" , & chksum [
-0 ] ) ; } mxArray * mr_FCElectricPlant_GetSimStateDisallowedBlocks ( ) {
-mxArray * data = mxCreateCellMatrix ( 3 , 3 ) ; mwIndex subs [ 2 ] , offset ;
-{ static const char_T * blockType [ 3 ] = { "SimscapeRtp" ,
-"SimscapeExecutionBlock" , "SimscapeExecutionBlock" , } ; static const char_T
-* blockPath [ 3 ] = { "FCElectricPlant/Solver Configuration1/RTP_1" ,
+rtdw . avda114tgy ) , rtdwData , 0 , 23 , sizeof ( mdlrefDW -> rtdw .
+avda114tgy ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & (
+mdlrefDW -> rtdw . kpvq4y4ytj ) , rtdwData , 0 , 24 , sizeof ( mdlrefDW ->
+rtdw . kpvq4y4ytj ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void *
+) & ( mdlrefDW -> rtdw . f321hccueh ) , rtdwData , 0 , 25 , sizeof ( mdlrefDW
+-> rtdw . f321hccueh ) ) ; mr_FCElectricPlant_restoreDataFromMxArray ( ( void
+* ) & ( mdlrefDW -> rtdw . ocb0wghbme ) , rtdwData , 0 , 26 , sizeof (
+mdlrefDW -> rtdw . ocb0wghbme ) ) ; mr_FCElectricPlant_restoreDataFromMxArray
+( ( void * ) & ( mdlrefDW -> rtdw . lzvkb5wx12 ) , rtdwData , 0 , 27 , sizeof
+( mdlrefDW -> rtdw . lzvkb5wx12 ) ) ; }
+mr_FCElectricPlant_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtzce
+) , ssDW , 0 , 2 , sizeof ( mdlrefDW -> rtzce ) ) ; } void
+mr_FCElectricPlant_RegisterSimStateChecksum ( SimStruct * S ) { const
+uint32_T chksum [ 4 ] = { 88996484U , 1924272225U , 1726155365U , 2776034940U
+, } ; slmrModelRefRegisterSimStateChecksum ( S , "FCElectricPlant" , & chksum
+[ 0 ] ) ; } mxArray * mr_FCElectricPlant_GetSimStateDisallowedBlocks ( ) {
+mxArray * data = mxCreateCellMatrix ( 4 , 3 ) ; mwIndex subs [ 2 ] , offset ;
+{ static const char_T * blockType [ 4 ] = { "SimscapeRtp" ,
+"SimscapeExecutionBlock" , "SimscapeExecutionBlock" ,
+"SimscapeExecutionBlock" , } ; static const char_T * blockPath [ 4 ] = {
+"FCElectricPlant/Solver Configuration1/RTP_1" ,
 "FCElectricPlant/Solver Configuration1/EVAL_KEY/STATE_1" ,
-"FCElectricPlant/Solver Configuration1/EVAL_KEY/OUTPUT_1_0" , } ; static
-const int reason [ 3 ] = { 0 , 0 , 0 , } ; for ( subs [ 0 ] = 0 ; subs [ 0 ]
-< 3 ; ++ ( subs [ 0 ] ) ) { subs [ 1 ] = 0 ; offset = mxCalcSingleSubscript (
-data , 2 , subs ) ; mxSetCell ( data , offset , mxCreateString ( blockType [
-subs [ 0 ] ] ) ) ; subs [ 1 ] = 1 ; offset = mxCalcSingleSubscript ( data , 2
-, subs ) ; mxSetCell ( data , offset , mxCreateString ( blockPath [ subs [ 0
-] ] ) ) ; subs [ 1 ] = 2 ; offset = mxCalcSingleSubscript ( data , 2 , subs )
-; mxSetCell ( data , offset , mxCreateDoubleScalar ( ( real_T ) reason [ subs
-[ 0 ] ] ) ) ; } } return data ; }
+"FCElectricPlant/Solver Configuration1/EVAL_KEY/OUTPUT_1_0" ,
+"FCElectricPlant/Solver Configuration1/EVAL_KEY/OUTPUT_1_1" , } ; static
+const int reason [ 4 ] = { 0 , 0 , 0 , 0 , } ; for ( subs [ 0 ] = 0 ; subs [
+0 ] < 4 ; ++ ( subs [ 0 ] ) ) { subs [ 1 ] = 0 ; offset =
+mxCalcSingleSubscript ( data , 2 , subs ) ; mxSetCell ( data , offset ,
+mxCreateString ( blockType [ subs [ 0 ] ] ) ) ; subs [ 1 ] = 1 ; offset =
+mxCalcSingleSubscript ( data , 2 , subs ) ; mxSetCell ( data , offset ,
+mxCreateString ( blockPath [ subs [ 0 ] ] ) ) ; subs [ 1 ] = 2 ; offset =
+mxCalcSingleSubscript ( data , 2 , subs ) ; mxSetCell ( data , offset ,
+mxCreateDoubleScalar ( ( real_T ) reason [ subs [ 0 ] ] ) ) ; } } return data
+; }
 #if defined(_MSC_VER)
 #pragma warning(disable: 4505) //unreferenced local function has been removed
 #endif

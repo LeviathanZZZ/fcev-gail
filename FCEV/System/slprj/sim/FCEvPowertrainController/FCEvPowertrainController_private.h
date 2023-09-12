@@ -1,6 +1,7 @@
 #ifndef RTW_HEADER_FCEvPowertrainController_private_h_
 #define RTW_HEADER_FCEvPowertrainController_private_h_
 #include "rtwtypes.h"
+#include "model_reference_types.h"
 #include "builtin_typeid_types.h"
 #include "multiword_types.h"
 #include "FCEvPowertrainController.h"
@@ -67,17 +68,29 @@ void * gblLoggingInterval ;
 #ifndef rtmSetDataMapInfo
 #define rtmSetDataMapInfo(rtm, val) ((rtm)->DataMapInfo = (val))
 #endif
+#ifndef rtmGetAbsTolControlVector
+#define rtmGetAbsTolControlVector(rtm) (ssGetAbsTolControlVector(_ssGetRootSS((rtm)->_mdlRefSfcnS)))
+#endif
+#ifndef rtmGetAbsTolVector
+#define rtmGetAbsTolVector(rtm) (ssGetAbsTolVector(_ssGetRootSS((rtm)->_mdlRefSfcnS)))
+#endif
 #ifndef rtmGetClockTick0
 #define rtmGetClockTick0(rtm) ssGetClockTick( _ssGetRootSS((rtm)->_mdlRefSfcnS), (rtm)->Timing.mdlref_GlobalTID[0])
 #endif
 #ifndef rtmGetClockTick1
 #define rtmGetClockTick1(rtm) ssGetClockTick( _ssGetRootSS((rtm)->_mdlRefSfcnS), (rtm)->Timing.mdlref_GlobalTID[1])
 #endif
+#ifndef rtmGetClockTick2
+#define rtmGetClockTick2(rtm) ssGetClockTick( _ssGetRootSS((rtm)->_mdlRefSfcnS), (rtm)->Timing.mdlref_GlobalTID[2])
+#endif
 #ifndef rtmGetClockTickH0
 #define rtmGetClockTickH0(rtm) ssGetClockTickH( _ssGetRootSS((rtm)->_mdlRefSfcnS), (rtm)->Timing.mdlref_GlobalTID[0])
 #endif
 #ifndef rtmGetClockTickH1
 #define rtmGetClockTickH1(rtm) ssGetClockTickH( _ssGetRootSS((rtm)->_mdlRefSfcnS), (rtm)->Timing.mdlref_GlobalTID[1])
+#endif
+#ifndef rtmGetClockTickH2
+#define rtmGetClockTickH2(rtm) ssGetClockTickH( _ssGetRootSS((rtm)->_mdlRefSfcnS), (rtm)->Timing.mdlref_GlobalTID[2])
 #endif
 #ifndef rtmGetLogOutput
 #define rtmGetLogOutput(rtm) ssGetLogOutput((rtm)->_mdlRefSfcnS)
@@ -110,7 +123,7 @@ void * gblLoggingInterval ;
 #define rtmGetTimeOfLastOutput(rtm) (ssGetTimeOfLastOutput((rtm)->_mdlRefSfcnS))
 #endif
 #ifndef rtmGetVarNextHitTime
-#define rtmGetVarNextHitTime(rtm, sti) (_ssGetVarNextHitTime((rtm)->_mdlRefSfcnS,  (int)(ssGetOffsetTime(_ssGetRootSS((rtm)->_mdlRefSfcnS), (rtm)->Timing.mdlref_GlobalTID[sti+1]))))
+#define rtmGetVarNextHitTime(rtm, sti) (_ssGetVarNextHitTime((rtm)->_mdlRefSfcnS,  (int)(ssGetOffsetTime(_ssGetRootSS((rtm)->_mdlRefSfcnS), (rtm)->Timing.mdlref_GlobalTID[sti+2]))))
 #endif
 #ifndef rtmSetVarNextHitTime
 #define rtmSetVarNextHitTime(rtm, sti, val) ssSetTimeOfNextVarHit((rtm)->_mdlRefSfcnS,  (rtm)->Timing.mdlref_GlobalTID[sti], val)

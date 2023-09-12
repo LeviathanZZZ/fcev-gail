@@ -24,7 +24,6 @@ real_T h_efOut [ 1 ] ; real_T j_efOut [ 1 ] ; real_T l_efOut [ 1 ] ; real_T
 n_efOut [ 1 ] ; real_T p_efOut [ 1 ] ; real_T r_efOut [ 1 ] ; real_T t69 [ 1
 ] ; real_T t_efOut [ 1 ] ; real_T v_efOut [ 1 ] ; real_T y_efOut [ 1 ] ;
 real_T Battery_System_Battery_Table_Based1_stateOfCharge ; real_T
-Battery_System_DC_DC_Converter_i1 ; real_T
 Battery_System_DC_DC_Converter_power_dissipated ; real_T
 Fuel_Cell_Boost_Converter_L_i ; real_T Fuel_Cell_Boost_Converter_L_n_v ;
 real_T Fuel_Cell_Boost_Converter_L_p_v ; real_T Fuel_Cell_Current_Sensor1_I ;
@@ -42,41 +41,39 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_W ; real_T U_idx_0 ; real_T
 U_idx_1 ; real_T U_idx_10 ; real_T U_idx_11 ; real_T U_idx_2 ; real_T U_idx_3
 ; real_T U_idx_4 ; real_T U_idx_5 ; real_T U_idx_6 ; real_T U_idx_7 ; real_T
 U_idx_8 ; real_T U_idx_9 ; real_T intrm_sf_mf_1503 ; real_T intrm_sf_mf_305 ;
-real_T intrm_sf_mf_609 ; real_T t131 ; real_T t134 ; real_T t138 ; real_T
-t139 ; real_T t140 ; real_T t144 ; real_T t153 ; real_T t159 ; real_T t165 ;
-real_T t167 ; real_T t171 ; real_T t173 ; real_T t176 ; real_T t94_idx_0 ;
-size_t t16 [ 1 ] ; size_t t70 [ 1 ] ; size_t t73 [ 1 ] ; size_t t119 ;
-int32_T b ; U_idx_0 = t252 -> mU . mX [ 0 ] ; U_idx_1 = t252 -> mU . mX [ 1 ]
-; U_idx_2 = t252 -> mU . mX [ 2 ] ; U_idx_3 = t252 -> mU . mX [ 3 ] ; U_idx_4
-= t252 -> mU . mX [ 4 ] ; U_idx_5 = t252 -> mU . mX [ 5 ] ; U_idx_6 = t252 ->
-mU . mX [ 6 ] ; U_idx_7 = t252 -> mU . mX [ 7 ] ; U_idx_8 = t252 -> mU . mX [
-8 ] ; U_idx_9 = t252 -> mU . mX [ 9 ] ; U_idx_10 = t252 -> mU . mX [ 10 ] ;
-U_idx_11 = t252 -> mU . mX [ 11 ] ; for ( b = 0 ; b < 399 ; b ++ ) { X [ b ]
-= t252 -> mX . mX [ b ] ; } out = t253 -> mOBS_ALL ;
+real_T intrm_sf_mf_609 ; real_T t127 ; real_T t131 ; real_T t134 ; real_T
+t138 ; real_T t139 ; real_T t140 ; real_T t144 ; real_T t153 ; real_T t159 ;
+real_T t165 ; real_T t167 ; real_T t171 ; real_T t173 ; real_T t176 ; real_T
+t94_idx_0 ; size_t t16 [ 1 ] ; size_t t70 [ 1 ] ; size_t t73 [ 1 ] ; size_t
+t119 ; int32_T b ; U_idx_0 = t252 -> mU . mX [ 0 ] ; U_idx_1 = t252 -> mU .
+mX [ 1 ] ; U_idx_2 = t252 -> mU . mX [ 2 ] ; U_idx_3 = t252 -> mU . mX [ 3 ]
+; U_idx_4 = t252 -> mU . mX [ 4 ] ; U_idx_5 = t252 -> mU . mX [ 5 ] ; U_idx_6
+= t252 -> mU . mX [ 6 ] ; U_idx_7 = t252 -> mU . mX [ 7 ] ; U_idx_8 = t252 ->
+mU . mX [ 8 ] ; U_idx_9 = t252 -> mU . mX [ 9 ] ; U_idx_10 = t252 -> mU . mX
+[ 10 ] ; U_idx_11 = t252 -> mU . mX [ 11 ] ; for ( b = 0 ; b < 399 ; b ++ ) {
+X [ b ] = t252 -> mX . mX [ b ] ; } out = t253 -> mOBS_ALL ;
 Battery_System_Battery_Table_Based1_stateOfCharge = X [ 0ULL ] *
-9.2592592592592591E-6 ; Battery_System_DC_DC_Converter_i1 = - X [ 53ULL ] -
-U_idx_0 ; Battery_System_DC_DC_Converter_power_dissipated = ( ( ( real_T ) (
-Battery_System_DC_DC_Converter_i1 >= 0.0 ) *
-Battery_System_DC_DC_Converter_i1 * 1000.0 + ( real_T ) (
-Battery_System_DC_DC_Converter_i1 < 0.0 ) * X [ 55ULL ] ) - 0.9 ) /
-0.099999999999999978 ; if ( ( real_T ) ( Battery_System_DC_DC_Converter_i1 >=
-0.0 ) * Battery_System_DC_DC_Converter_i1 * 1000.0 + ( real_T ) (
-Battery_System_DC_DC_Converter_i1 < 0.0 ) * X [ 55ULL ] <= 0.9 ) {
+9.2592592592592591E-6 ; Battery_System_DC_DC_Converter_power_dissipated = ( (
+( real_T ) ( - X [ 53ULL ] >= 0.0 ) * X [ 53ULL ] * - 1000.0 + ( real_T ) ( -
+X [ 53ULL ] < 0.0 ) * X [ 55ULL ] ) - 0.9 ) / 0.099999999999999978 ; if ( (
+real_T ) ( - X [ 53ULL ] >= 0.0 ) * X [ 53ULL ] * - 1000.0 + ( real_T ) ( - X
+[ 53ULL ] < 0.0 ) * X [ 55ULL ] <= 0.9 ) {
 Battery_System_DC_DC_Converter_power_dissipated = 0.0 ; } else {
-Battery_System_DC_DC_Converter_power_dissipated = ( real_T ) (
-Battery_System_DC_DC_Converter_i1 >= 0.0 ) *
-Battery_System_DC_DC_Converter_i1 * 1000.0 + ( real_T ) (
-Battery_System_DC_DC_Converter_i1 < 0.0 ) * X [ 55ULL ] >= 1.0 ? 1.0 :
-Battery_System_DC_DC_Converter_power_dissipated *
+Battery_System_DC_DC_Converter_power_dissipated = ( real_T ) ( - X [ 53ULL ]
+>= 0.0 ) * X [ 53ULL ] * - 1000.0 + ( real_T ) ( - X [ 53ULL ] < 0.0 ) * X [
+55ULL ] >= 1.0 ? 1.0 : Battery_System_DC_DC_Converter_power_dissipated *
 Battery_System_DC_DC_Converter_power_dissipated * 3.0 -
 Battery_System_DC_DC_Converter_power_dissipated *
 Battery_System_DC_DC_Converter_power_dissipated *
 Battery_System_DC_DC_Converter_power_dissipated * 2.0 ; }
-Fuel_Cell_Boost_Converter_L_i = X [ 61ULL ] * 1.0E-9 + X [ 4ULL ] ;
-Fuel_Cell_Boost_Converter_L_n_v = ( ( X [ 4ULL ] * - 1.0E-6 + X [ 61ULL ] * -
-1.0000000000000011 ) + X [ 62ULL ] * - 1.0E-6 ) + X [ 5ULL ] ;
-Fuel_Cell_Boost_Converter_L_p_v = ( ( X [ 4ULL ] * - 1.0E-6 + X [ 61ULL ] * -
-1.0E-15 ) + X [ 62ULL ] * - 1.0E-6 ) + X [ 5ULL ] ;
+Battery_System_DC_DC_Converter_power_dissipated = X [ 59ULL ] *
+Battery_System_DC_DC_Converter_power_dissipated + ( 1.0 -
+Battery_System_DC_DC_Converter_power_dissipated ) * X [ 53ULL ] * X [ 53ULL ]
+; t127 = - X [ 57ULL ] - U_idx_0 ; Fuel_Cell_Boost_Converter_L_i = X [ 61ULL
+] * 1.0E-9 + X [ 4ULL ] ; Fuel_Cell_Boost_Converter_L_n_v = ( ( X [ 4ULL ] *
+- 1.0E-6 + X [ 61ULL ] * - 1.0000000000000011 ) + X [ 62ULL ] * - 1.0E-6 ) +
+X [ 5ULL ] ; Fuel_Cell_Boost_Converter_L_p_v = ( ( X [ 4ULL ] * - 1.0E-6 + X
+[ 61ULL ] * - 1.0E-15 ) + X [ 62ULL ] * - 1.0E-6 ) + X [ 5ULL ] ;
 Fuel_Cell_Current_Sensor1_I = ( ( ( X [ 3ULL ] * 0.1 + X [ 58ULL ] * - 0.1 )
 + X [ 61ULL ] * 1.0E-9 ) - X [ 63ULL ] ) + X [ 4ULL ] ;
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_Fuel_Cell_Stack_FAi [ 0ULL ] = X [
@@ -336,7 +333,7 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_AR == 0.0 ? 1.0E-16
 34ULL ] - t140 <= 0.0 ) { t138 = 0.0 ; } else if ( X [ 34ULL ] - t140 >= t140
 * 0.01 ) { t138 = X [ 34ULL ] - t140 ; } else { t138 = ( X [ 34ULL ] - t140 )
 * ( t138 * t138 * 3.0 - t138 * t138 * t138 * 2.0 ) ; } t139 = U_idx_3 *
-376.99111843077515 ; if ( X [ 223ULL ] <= 0.0 ) { intrm_sf_mf_1503 = 0.0 ; }
+837.75804095727813 ; if ( X [ 223ULL ] <= 0.0 ) { intrm_sf_mf_1503 = 0.0 ; }
 else { intrm_sf_mf_1503 = X [ 223ULL ] >= 1.0 ? 1.0 : X [ 223ULL ] ; } if ( X
 [ 222ULL ] <= 0.0 ) {
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x3_Sensors_PS_Divide_I1 = 0.0 ; } else
@@ -658,24 +655,25 @@ X [ 17ULL ] - Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_AR ; }
 else { t140 = ( X [ 17ULL ] -
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_AR ) * ( t140 * t140
 * 3.0 - t140 * t140 * t140 * 2.0 ) ; } t176 = t176 * t140 *
-0.026773120849090417 / 0.001 ; t176 *= 100000.0 ; t94_idx_0 = ( ( ( ( X [
+0.026773120849090417 / 0.001 ; t176 *= 100000.0 ; t94_idx_0 = ( ( ( ( ( X [
 3ULL ] * 0.1 - X [ 57ULL ] ) + X [ 58ULL ] * - 0.1 ) + X [ 61ULL ] * 1.0E-9 )
-- X [ 63ULL ] ) + X [ 4ULL ] ; t69 [ 0ULL ] = X [ 51ULL ] ; t70 [ 0 ] = 23ULL
-; tlu2_linear_nearest_prelookup ( & w_efOut . mField0 [ 0ULL ] , & w_efOut .
-mField1 [ 0ULL ] , & w_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
-LC ) ) -> mField21 , & t69 [ 0ULL ] , & t70 [ 0ULL ] , & t16 [ 0ULL ] ) ; t11
-= w_efOut ; t69 [ 0ULL ] = X [ 396ULL ] ; t73 [ 0 ] = 29ULL ;
-tlu2_linear_nearest_prelookup ( & x_efOut . mField0 [ 0ULL ] , & x_efOut .
-mField1 [ 0ULL ] , & x_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
-LC ) ) -> mField22 , & t69 [ 0ULL ] , & t73 [ 0ULL ] , & t16 [ 0ULL ] ) ; t10
-= x_efOut ; tlu2_2d_linear_nearest_value ( & y_efOut [ 0ULL ] , & t11 .
-mField0 [ 0ULL ] , & t11 . mField2 [ 0ULL ] , & t10 . mField0 [ 0ULL ] , &
-t10 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField20 , &
-t70 [ 0ULL ] , & t73 [ 0ULL ] , & t16 [ 0ULL ] ) ; t69 [ 0 ] = y_efOut [ 0 ]
-; Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_AR = t69 [ 0ULL ]
-; t140 = X [ 115ULL ] * 0.00062831853071795862 ; intrm_sf_mf_609 = X [ 328ULL
-] * 0.0031415926535897937 ; t78 [ 0ULL ] = 0.0 ; t78 [ 1ULL ] = 298.15 ; t78
-[ 2ULL ] = X [ 0ULL ] * 0.00027777777777777778 ; t78 [ 3ULL ] = X [ 53ULL ] ;
+- X [ 63ULL ] ) - U_idx_0 ) + X [ 4ULL ] ; t69 [ 0ULL ] = X [ 51ULL ] ; t70 [
+0 ] = 23ULL ; tlu2_linear_nearest_prelookup ( & w_efOut . mField0 [ 0ULL ] ,
+& w_efOut . mField1 [ 0ULL ] , & w_efOut . mField2 [ 0ULL ] , ( (
+_NeDynamicSystem * ) ( LC ) ) -> mField21 , & t69 [ 0ULL ] , & t70 [ 0ULL ] ,
+& t16 [ 0ULL ] ) ; t11 = w_efOut ; t69 [ 0ULL ] = X [ 396ULL ] ; t73 [ 0 ] =
+29ULL ; tlu2_linear_nearest_prelookup ( & x_efOut . mField0 [ 0ULL ] , &
+x_efOut . mField1 [ 0ULL ] , & x_efOut . mField2 [ 0ULL ] , ( (
+_NeDynamicSystem * ) ( LC ) ) -> mField22 , & t69 [ 0ULL ] , & t73 [ 0ULL ] ,
+& t16 [ 0ULL ] ) ; t10 = x_efOut ; tlu2_2d_linear_nearest_value ( & y_efOut [
+0ULL ] , & t11 . mField0 [ 0ULL ] , & t11 . mField2 [ 0ULL ] , & t10 .
+mField0 [ 0ULL ] , & t10 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC )
+) -> mField20 , & t70 [ 0ULL ] , & t73 [ 0ULL ] , & t16 [ 0ULL ] ) ; t69 [ 0
+] = y_efOut [ 0 ] ;
+Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_purge_Purge_Valve_AR = t69 [ 0ULL ] ;
+t140 = X [ 115ULL ] * 0.00062831853071795862 ; intrm_sf_mf_609 = X [ 328ULL ]
+* 0.0031415926535897937 ; t78 [ 0ULL ] = 0.0 ; t78 [ 1ULL ] = 298.15 ; t78 [
+2ULL ] = X [ 0ULL ] * 0.00027777777777777778 ; t78 [ 3ULL ] = X [ 53ULL ] ;
 t78 [ 4ULL ] = 0.0 ; t78 [ 5ULL ] = X [ 1ULL ] ; t78 [ 6ULL ] = X [ 54ULL ] ;
 t78 [ 7ULL ] = 1.0 ; t78 [ 8ULL ] = X [ 55ULL ] ; t78 [ 9ULL ] = 0.0 ; t78 [
 10ULL ] = 0.0 ; t78 [ 11ULL ] = 0.0 ; t78 [ 12ULL ] = 0.0 ; t78 [ 13ULL ] =
@@ -685,29 +683,25 @@ t78 [ 7ULL ] = 1.0 ; t78 [ 8ULL ] = X [ 55ULL ] ; t78 [ 9ULL ] = 0.0 ; t78 [
 Battery_System_Battery_Table_Based1_stateOfCharge ; t78 [ 23ULL ] =
 Battery_System_Battery_Table_Based1_stateOfCharge ; t78 [ 24ULL ] = X [ 55ULL
 ] ; t78 [ 25ULL ] = 1.0 ; t78 [ 26ULL ] = 30.0 ; t78 [ 27ULL ] =
-Battery_System_Battery_Table_Based1_stateOfCharge ; t78 [ 28ULL ] =
-Battery_System_DC_DC_Converter_i1 ; t78 [ 29ULL ] = X [ 55ULL ] ; t78 [ 30ULL
-] = 0.0 ; t78 [ 31ULL ] = 0.0 ; t78 [ 32ULL ] = X [ 57ULL ] ; t78 [ 33ULL ] =
-0.0 ; t78 [ 34ULL ] = 0.0 ; t78 [ 35ULL ] = X [ 55ULL ] ; t78 [ 36ULL ] = X [
-58ULL ] ; t78 [ 37ULL ] = ( X [ 59ULL ] *
-Battery_System_DC_DC_Converter_power_dissipated + ( 1.0 -
-Battery_System_DC_DC_Converter_power_dissipated ) *
-Battery_System_DC_DC_Converter_i1 * Battery_System_DC_DC_Converter_i1 ) *
-1000.0 ; t78 [ 38ULL ] = X [ 59ULL ] * 1000.0 ; t78 [ 39ULL ] = X [ 2ULL ] ;
-t78 [ 40ULL ] = X [ 58ULL ] ; t78 [ 41ULL ] = 0.0 ; t78 [ 42ULL ] = 0.0 ; t78
-[ 43ULL ] = 0.0 ; t78 [ 44ULL ] = U_idx_0 ; t78 [ 45ULL ] = U_idx_0 ; t78 [
-46ULL ] = X [ 55ULL ] ; t78 [ 47ULL ] = X [ 55ULL ] ; t78 [ 48ULL ] = U_idx_0
-; t78 [ 49ULL ] = X [ 55ULL ] ; t78 [ 50ULL ] = 0.0 ; t78 [ 51ULL ] = - X [
-53ULL ] ; t78 [ 52ULL ] = - X [ 53ULL ] ; t78 [ 53ULL ] = X [ 55ULL ] ; t78 [
-54ULL ] = X [ 55ULL ] ; t78 [ 55ULL ] = - X [ 53ULL ] ; t78 [ 56ULL ] = 0.0 ;
-t78 [ 57ULL ] = X [ 55ULL ] ; t78 [ 58ULL ] = 0.0 ; t78 [ 59ULL ] = X [ 55ULL
-] ; t78 [ 60ULL ] = X [ 55ULL ] ; t78 [ 61ULL ] = X [ 55ULL ] ; t78 [ 62ULL ]
-= X [ 55ULL ] ; t78 [ 63ULL ] = - X [ 57ULL ] ; t78 [ 64ULL ] = - X [ 57ULL ]
-; t78 [ 65ULL ] = X [ 58ULL ] ; t78 [ 66ULL ] = X [ 58ULL ] ; t78 [ 67ULL ] =
-0.0 ; t78 [ 68ULL ] = - X [ 57ULL ] ; t78 [ 69ULL ] = X [ 58ULL ] ; t78 [
-70ULL ] = 0.0 ; t78 [ 71ULL ] = X [ 58ULL ] ; t78 [ 72ULL ] = X [ 58ULL ] ;
-t78 [ 73ULL ] = X [ 58ULL ] ; t78 [ 74ULL ] = X [ 58ULL ] ; t78 [ 75ULL ] = -
-X [ 57ULL ] ; t78 [ 76ULL ] = - X [ 57ULL ] ; t78 [ 77ULL ] = X [ 58ULL ] ;
+Battery_System_Battery_Table_Based1_stateOfCharge ; t78 [ 28ULL ] = - X [
+53ULL ] ; t78 [ 29ULL ] = X [ 55ULL ] ; t78 [ 30ULL ] = 0.0 ; t78 [ 31ULL ] =
+0.0 ; t78 [ 32ULL ] = X [ 57ULL ] ; t78 [ 33ULL ] = 0.0 ; t78 [ 34ULL ] = 0.0
+; t78 [ 35ULL ] = X [ 55ULL ] ; t78 [ 36ULL ] = X [ 58ULL ] ; t78 [ 37ULL ] =
+Battery_System_DC_DC_Converter_power_dissipated * 1000.0 ; t78 [ 38ULL ] = X
+[ 59ULL ] * 1000.0 ; t78 [ 39ULL ] = X [ 2ULL ] ; t78 [ 40ULL ] = X [ 58ULL ]
+; t78 [ 41ULL ] = 0.0 ; t78 [ 42ULL ] = 0.0 ; t78 [ 43ULL ] = - X [ 53ULL ] ;
+t78 [ 44ULL ] = - X [ 53ULL ] ; t78 [ 45ULL ] = X [ 55ULL ] ; t78 [ 46ULL ] =
+X [ 55ULL ] ; t78 [ 47ULL ] = - X [ 53ULL ] ; t78 [ 48ULL ] = 0.0 ; t78 [
+49ULL ] = X [ 55ULL ] ; t78 [ 50ULL ] = 0.0 ; t78 [ 51ULL ] = X [ 55ULL ] ;
+t78 [ 52ULL ] = X [ 55ULL ] ; t78 [ 53ULL ] = X [ 55ULL ] ; t78 [ 54ULL ] = X
+[ 55ULL ] ; t78 [ 55ULL ] = t127 ; t78 [ 56ULL ] = t127 ; t78 [ 57ULL ] = X [
+58ULL ] ; t78 [ 58ULL ] = X [ 58ULL ] ; t78 [ 59ULL ] = 0.0 ; t78 [ 60ULL ] =
+t127 ; t78 [ 61ULL ] = X [ 58ULL ] ; t78 [ 62ULL ] = 0.0 ; t78 [ 63ULL ] = X
+[ 58ULL ] ; t78 [ 64ULL ] = X [ 58ULL ] ; t78 [ 65ULL ] = X [ 58ULL ] ; t78 [
+66ULL ] = X [ 58ULL ] ; t78 [ 67ULL ] = 0.0 ; t78 [ 68ULL ] = U_idx_0 ; t78 [
+69ULL ] = U_idx_0 ; t78 [ 70ULL ] = X [ 58ULL ] ; t78 [ 71ULL ] = X [ 58ULL ]
+; t78 [ 72ULL ] = U_idx_0 ; t78 [ 73ULL ] = X [ 58ULL ] ; t78 [ 74ULL ] = 0.0
+; t78 [ 75ULL ] = t127 ; t78 [ 76ULL ] = t127 ; t78 [ 77ULL ] = X [ 58ULL ] ;
 t78 [ 78ULL ] = 0.0 ; t78 [ 79ULL ] = 0.0 ; t78 [ 80ULL ] = X [ 3ULL ] * -
 0.1 + X [ 58ULL ] * 0.1 ; t78 [ 81ULL ] = 0.0 ; t78 [ 82ULL ] = X [ 58ULL ] ;
 t78 [ 83ULL ] = X [ 58ULL ] ; t78 [ 84ULL ] = X [ 3ULL ] ; t78 [ 85ULL ] = X

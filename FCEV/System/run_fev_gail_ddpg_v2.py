@@ -405,8 +405,8 @@ def train_agent(cfg):
     ddpg_gail.discriminator.load_state_dict(checkpoint['dis_state_dict'])
     ddpg_gail.discriminator_optimizer.load_state_dict(checkpoint['dis_optimizer'])
     ddpg_gail.memory = np.load('data.npy')
-    # # VAR = np.load('VAR.npy')
-    # ddpg_gail.pointer = np.load('pointer.npy')
+    VAR = np.load('VAR.npy')
+    ddpg_gail.pointer = np.load('pointer.npy')
     # checkpoint = torch.load('checkpoint_best.pth.tar')
     # ddpg_gail.actor_eval.load_state_dict(checkpoint['actor_state_dict'])  # 加载模型的参数
     # ddpg_gail.actor_target.load_state_dict(checkpoint['actor_target_state_dict'])
@@ -470,7 +470,7 @@ def train_agent(cfg):
                 # Clock, soc, P_de = engine.run(float(action), pause_time,nargout=3)
                 action = ddpg_gail.choose_action(state)
                 # print("噪声前", action)
-                # action = np.clip(np.random.normal(action, VAR), 0, 3.5)
+                action = np.clip(np.random.normal(action, VAR), 0, 3.5)
                 # action = ou_noise.get_action(action, steps)
                 # action = (action + np.random.normal(0, VAR, 1)).clip(0.0, 3.5)
                 Clock, soc, v, a,h2,p_de = engine.run(float(action), pause_time, nargout=6)
@@ -552,10 +552,10 @@ def train_agent(cfg):
                 #     break
                 state = next_state
                 # # if steps == 2048:
-                # if ddpg_gail.pointer > 1000:
-                #     print("train!!")
-                #     ddpg_gail.learn_gail(expert_s,expert_a)
-                    # VAR *= 0.99995
+                if ddpg_gail.pointer > 1000:
+                    print("train!!")
+                    ddpg_gail.learn_gail(expert_s,expert_a)
+                    VAR *= 0.99995
                 # np.save('VAR.npy',VAR)
                 # torch.save(ac_agent.actor.state_dict(), cfg.save_path)
                 # torch.save(ac_agent.critic.state_dict(),cfg.save_path_critic)

@@ -726,7 +726,7 @@ t128 = 0.0 ; } else { t128 = X [ 209ULL ] >= 1.0 ? 1.0 : X [ 209ULL ] ; } if
 ( X [ 208ULL ] <= 0.0 ) { t206 = 0.0 ; } else { t206 = X [ 208ULL ] >= 1.0 ?
 1.0 : X [ 208ULL ] ; } U_idx_8 = ( ( ( 1.0 - t128 ) - t206 ) *
 296.802103844292 + t128 * 461.523 ) + t206 * 259.836612622973 ; t1 [ 0ULL ] =
-pmf_get_inf ( ) ; for ( t2 = 0ULL ; t2 < 42ULL ; t2 ++ ) { t3 = t2 / 42ULL ;
+pmf_get_inf ( ) ; for ( t2 = 0ULL ; t2 < 12ULL ; t2 ++ ) { t3 = t2 / 12ULL ;
 t128 = t1 [ t3 > 0ULL ? 0ULL : t3 ] ; t206 = ( ( _NeDynamicSystem * ) ( LC )
 ) -> mField0 [ t2 ] * 1.0E-5 ; t1 [ t3 > 0ULL ? 0ULL : t3 ] = t128 > t206 ?
 t206 : t128 ; } t0 [ 0ULL ] = ( int32_T ) ( t1 [ 0ULL ] >= X [ 54ULL ] ) ; t0
