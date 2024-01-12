@@ -11,8 +11,8 @@ Writer = SummaryWriter()
 #####################  hyper parameters  ####################
 EPISODES = 200
 EP_STEPS = 200
-LR_ACTOR = 0.003
-LR_CRITIC = 0.003
+LR_ACTOR = 0.0001
+LR_CRITIC = 0.001
 GAMMA = 0.9
 TAU = 0.01
 MEMORY_CAPACITY = 10000
@@ -101,17 +101,21 @@ class ActorNet(nn.Module):  # define the network structure for actor and critic
     def __init__(self, s_dim, a_dim):
         super(ActorNet, self).__init__()
         self.fc1 = nn.Linear(s_dim, 128)
-        self.fc1.weight.data.normal_(0, 0.1)  # initialization of FC1
+        # self.fc1.weight.data.normal_(0, 0.1)  # initialization of FC1
         self.fc2 = nn.Linear(128, 128)
-        self.fc2.weight.data.normal_(0, 0.1)  # initialization of FC1
+        # self.fc2.weight.data.normal_(0, 0.1)  # initialization of FC1
+        # self.fc3 = nn.Linear(256,256)
+        # self.fc3.weight.data.normal_(0, 0.1)  # initialization of FC1
         self.out = nn.Linear(128, a_dim)
-        self.out.weight.data.normal_(0, 0.1)  # initilizaiton of OUT
+        # self.out.weight.data.normal_(0, 0.1)  # initilizaiton of OUT
 
     def forward(self, x):
         x = self.fc1(x)
         x = F.relu(x)
         x = self.fc2(x)
         x = F.relu(x)
+        # x = self.fc3(x)
+        # x = F.tanh(x)
         x = self.out(x)
         x = torch.tanh(x)
         actions = x * 2  # for the game "Pendulum-v0", action range is [-2, 2]
@@ -122,35 +126,42 @@ class CriticNet(nn.Module):
     def __init__(self, s_dim, a_dim):
         super(CriticNet, self).__init__()
         self.fcs = nn.Linear(s_dim, 128)
-        self.fcs.weight.data.normal_(0, 0.1)
-        self.fca = nn.Linear(a_dim, 128)
-        self.fca.weight.data.normal_(0, 0.1)
+        # self.fcs.weight.data.normal_(0, 0.1)
+        self.fca = nn.Linear(a_dim+s_dim, 128)
+        # self.fca.weight.data.normal_(0, 0.1)
         self.fc1 = nn.Linear(128, 128)
-        self.fc1.weight.data.normal_(0, 0.1)
+        # self.fc1.weight.data.normal_(0, 0.1)
+        # self.fc2 = nn.Linear(256, 256)
+        # self.fc2.weight.data.normal_(0, 0.1)
         self.out = nn.Linear(128, 1)
-        self.out.weight.data.normal_(0, 0.1)
+        # self.out.weight.data.normal_(0, 0.1)
 
     def forward(self, s, a):
-        x = self.fcs(s)
-        y = self.fca(a)
-        actions_value = self.fc1(F.relu(x + y))
-        actions_value = self.out(F.relu(actions_value))
+        # x = self.fcs(s)
+        # y = self.fca(a)
+        actions_value = F.relu(self.fca(torch.cat([s, a], 1)))
+        actions_value = F.relu(self.fc1(actions_value))
+        # actions_value = F.tanh(self.fc2(actions_value))
+        actions_value = self.out(actions_value)
         return actions_value
 
 class Discriminator(nn.Module):
     def __init__(self, state_dim, action_dim):
         super(Discriminator, self).__init__()
         self.layer1 = nn.Linear(state_dim + action_dim, 128)
-        self.layer1.weight.data.normal_(0, 0.1)
+        # self.layer1.weight.data.normal_(0, 0.1)
         self.layer2 = nn.Linear(128, 128)
-        self.layer2.weight.data.normal_(0, 0.1)
+        # self.layer2.weight.data.normal_(0, 0.1)
+        self.fc3 = nn.Linear(128, 128)
+        # self.fc3.weight.data.normal_(0, 0.1)  # initialization of FC1
         self.layer3 = nn.Linear(128, 1)
-        self.layer3.weight.data.normal_(0, 0.1)
+        # self.layer3.weight.data.normal_(0, 0.1)
 
     def forward(self, state, action):
         x = torch.cat([state, action], 1)
         x = torch.relu(self.layer1(x))
         x = torch.relu(self.layer2(x))
+        x = torch.relu(self.fc3(x))
         x = torch.sigmoid(self.layer3(x))
         return x
 
@@ -331,11 +342,11 @@ def run_ddpg():
             s_, r, done, info = env.step(a)
             ddpg.store_transition(s, a, r , s_)  # store the transition to memory
             steps+=1
-            if ddpg.pointer < MEMORY_CAPACITY:
-                var *= 0.9995
+            # if ddpg.pointer < MEMORY_CAPACITY:
+            #     var *= 0.9995
 
             if ddpg.pointer > MEMORY_CAPACITY:
-                # var *= 0.9995  # decay the exploration controller factor
+                var *= 0.9995  # decay the exploration controller factor
                 ddpg.learn()
                 torch.save(ddpg.actor_eval.state_dict(), r'.\ddpg_actor.ckpt')
 
@@ -507,8 +518,8 @@ def test_GAIL():
 
 if __name__ == '__main__':
     # run_ddpg()
-    run_gail()
+    # run_gail()
     # run_bc()
     # test_DDPG()
     # test_GAIL()
-    # test_bc()
+    test_bc()

@@ -51,7 +51,7 @@ t377 ; real_T t378 ; real_T t385 ; real_T t386 ; real_T t396 ; real_T t398 ;
 real_T t414 ; real_T t415 ; real_T t423 ; real_T t73_idx_0 ; real_T t8 ;
 real_T t97 ; real_T zc_int254 ; real_T zc_int260 ; real_T zc_int265 ; size_t
 t12 [ 1 ] ; size_t t52 [ 1 ] ; size_t t55 [ 1 ] ; size_t t87 ; int32_T M [
-214 ] ; int32_T b ; for ( b = 0 ; b < 214 ; b ++ ) { M [ b ] = t424 -> mM .
+184 ] ; int32_T b ; for ( b = 0 ; b < 184 ; b ++ ) { M [ b ] = t424 -> mM .
 mX [ b ] ; } U_idx_1 = t424 -> mU . mX [ 1 ] ; U_idx_2 = t424 -> mU . mX [ 2
 ] ; U_idx_3 = t424 -> mU . mX [ 3 ] ; U_idx_4 = t424 -> mU . mX [ 4 ] ;
 U_idx_5 = t424 -> mU . mX [ 5 ] ; U_idx_6 = t424 -> mU . mX [ 6 ] ; U_idx_7 =
@@ -411,8 +411,8 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pressure_Relief_Val6 == 0.0 ?
 ) * t157 * 0.64 ; t189 = t172 - ( - t172 ) ; intrm_sf_mf_1167 = ( (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x7_Pipe_MA_B_p - 1.01325 ) - ( - t172
 ) ) / ( t189 == 0.0 ? 1.0E-16 : t189 ) ; t103 = ( U_idx_1 - 0.9 ) /
-0.099999999999999978 ; if ( M [ 198ULL ] != 0 ) { t183 = 216.59999999999997 ;
-} else { t183 = M [ 199ULL ] != 0 ? 623.15 : U_idx_8 ; } t54 [ 0ULL ] =
+0.099999999999999978 ; if ( M [ 168ULL ] != 0 ) { t183 = 216.59999999999997 ;
+} else { t183 = M [ 169ULL ] != 0 ? 623.15 : U_idx_8 ; } t54 [ 0ULL ] =
 U_idx_7 >= 0.0 ? t183 : X [ 39ULL ] ; tlu2_linear_linear_prelookup ( &
 m_efOut . mField0 [ 0ULL ] , & m_efOut . mField1 [ 0ULL ] , & m_efOut .
 mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField1 , & t54 [
@@ -421,8 +421,8 @@ tlu2_1d_linear_linear_value ( & n_efOut [ 0ULL ] , & t2 . mField0 [ 0ULL ] ,
 & t2 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField3 , &
 t52 [ 0ULL ] , & t12 [ 0ULL ] ) ; t73_idx_0 = n_efOut [ 0 ] ; t183 =
 t73_idx_0 ; U_idx_2 = pmf_sqrt ( U_idx_9 * U_idx_9 * 9.999999999999999E-14 +
-( ( real_T ) ( M [ 210ULL ] != 0 ) * 2.0 - 1.0 ) * X [ 347ULL ] * t344 *
-zc_int260 * 1.0E-9 ) ; t344 = - pmf_sqrt ( ( ( real_T ) ( M [ 212ULL ] != 0 )
+( ( real_T ) ( M [ 180ULL ] != 0 ) * 2.0 - 1.0 ) * X [ 347ULL ] * t344 *
+zc_int260 * 1.0E-9 ) ; t344 = - pmf_sqrt ( ( ( real_T ) ( M [ 182ULL ] != 0 )
 * 2.0 - 1.0 ) * ( U_idx_3 / ( zc_int260 == 0.0 ? 1.0E-16 : zc_int260 ) / ( X
 [ 347ULL ] == 0.0 ? 1.0E-16 : X [ 347ULL ] ) ) ) * 0.0019634954084936209 ;
 zc_int260 = zc_int265 * t344 * 35.2 / ( t166 == 0.0 ? 1.0E-16 : t166 ) ; if (
@@ -460,17 +460,17 @@ t166 - t166 * 0.95 ; t169 = ( t164 - t166 * 0.95 ) / ( t218 == 0.0 ? 1.0E-16
 : t218 ) ; t184 = t169 * t169 * 3.0 - t169 * t169 * t169 * 2.0 ; t188 = ( -
 t164 - t166 * 0.95 ) / ( t218 == 0.0 ? 1.0E-16 : t218 ) ; t190 = t188 * t188
 * 3.0 - t188 * t188 * t188 * 2.0 ; t192 = ( X [ 22ULL ] - X [ 174ULL ] ) *
-pmf_sqrt ( ( ( real_T ) ( M [ 156ULL ] != 0 ) * 2.0 - 1.0 ) * ( t149 / (
+pmf_sqrt ( ( ( real_T ) ( M [ 126ULL ] != 0 ) * 2.0 - 1.0 ) * ( t149 / (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 == 0.0 ?
 1.0E-16 : Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ) )
-) * intrm_sf_mf_350 * 0.64 ; t194 = pmf_sqrt ( ( ( real_T ) ( M [ 157ULL ] !=
+) * intrm_sf_mf_350 * 0.64 ; t194 = pmf_sqrt ( ( ( real_T ) ( M [ 127ULL ] !=
 0 ) * 2.0 - 1.0 ) * ( t146 / ( t385 == 0.0 ? 1.0E-16 : t385 ) / ( X [ 195ULL
 ] == 0.0 ? 1.0E-16 : X [ 195ULL ] ) ) ) * intrm_sf_mf_350 * 0.64 ; t226 =
 t194 - t194 * 0.95 ; t196 = ( t192 - t194 * 0.95 ) / ( t226 == 0.0 ? 1.0E-16
 : t226 ) ; t198 = t196 * t196 * 3.0 - t196 * t196 * t196 * 2.0 ; t199 = ( -
 t192 - t194 * 0.95 ) / ( t226 == 0.0 ? 1.0E-16 : t226 ) ; t201 = t199 * t199
-* 3.0 - t199 * t199 * t199 * 2.0 ; if ( M [ 171ULL ] != 0 ) { U_idx_6 =
-216.59999999999997 ; } else { U_idx_6 = M [ 172ULL ] != 0 ? 623.15 : U_idx_6
+* 3.0 - t199 * t199 * t199 * 2.0 ; if ( M [ 141ULL ] != 0 ) { U_idx_6 =
+216.59999999999997 ; } else { U_idx_6 = M [ 142ULL ] != 0 ? 623.15 : U_idx_6
 ; } t54 [ 0ULL ] = U_idx_5 >= 0.0 ? U_idx_6 : X [ 33ULL ] ;
 tlu2_linear_linear_prelookup ( & o_efOut . mField0 [ 0ULL ] , & o_efOut .
 mField1 [ 0ULL ] , & o_efOut . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) (
@@ -634,8 +634,8 @@ intermediate_der6439 = 10.0 ; } else { intermediate_der6439 = ( - t125 *
 intrm_sf_mf_1167 * intrm_sf_mf_1167 * 2.0 ) ; } if ( U_idx_10 >= 1.0 ) { t125
 = 0.0 ; } else { t125 = ( real_T ) ! ( U_idx_10 <= 0.0 ) ; } t8 =
 10.000000000000002 ; if ( U_idx_1 <= 0.9 ) { t8 = 0.0 ; } else { t8 = U_idx_1
->= 1.0 ? 0.0 : t8 * t103 * 6.0 - t103 * t103 * t8 * 6.0 ; } if ( M [ 198ULL ]
-!= 0 ) { t126 = 0.0 ; } else { t126 = ( real_T ) ( M [ 199ULL ] == 0 ) ; }
+>= 1.0 ? 0.0 : t8 * t103 * 6.0 - t103 * t103 * t8 * 6.0 ; } if ( M [ 168ULL ]
+!= 0 ) { t126 = 0.0 ; } else { t126 = ( real_T ) ( M [ 169ULL ] == 0 ) ; }
 tlu2_1d_linear_linear_value ( & q_efOut [ 0ULL ] , & t2 . mField1 [ 0ULL ] ,
 & t2 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField3 , &
 t52 [ 0ULL ] , & t12 [ 0ULL ] ) ; t73_idx_0 = q_efOut [ 0 ] ; t126 =
@@ -723,7 +723,7 @@ t184 ) * 100000.0 ; } t396 = ( intermediate_der9977 - intermediate_der9977 *
 100000.0 ; } else if ( - t414 >= intermediate_der9879 ) { t396 = -
 intermediate_der9977 * 100000.0 ; } else { t396 = ( ( ( - t377 * t164 + ( 1.0
 - t190 ) * intermediate_der9924 ) + - t166 * t377 ) + - intermediate_der9977
-* t190 ) * 100000.0 ; } t377 = pmf_sqrt ( ( ( real_T ) ( M [ 156ULL ] != 0 )
+* t190 ) * 100000.0 ; } t377 = pmf_sqrt ( ( ( real_T ) ( M [ 126ULL ] != 0 )
 * 2.0 - 1.0 ) * ( t149 / (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 == 0.0 ?
 1.0E-16 : Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ) )
@@ -731,13 +731,13 @@ Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 == 0.0 ?
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 *
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ;
 intermediate_der9977 = ( X [ 22ULL ] - X [ 174ULL ] ) * pmf_sqrt ( ( ( real_T
-) ( M [ 156ULL ] != 0 ) * 2.0 - 1.0 ) * ( t149 / (
+) ( M [ 126ULL ] != 0 ) * 2.0 - 1.0 ) * ( t149 / (
 Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 == 0.0 ?
 1.0E-16 : Fuel_Cell_Fuel_Cell_Simscape_Fuel_Cell_x2_Pressure_Reducing_V13 ) )
-) * t423 * 0.64 + ( X [ 22ULL ] - X [ 174ULL ] ) * ( ( real_T ) ( M [ 156ULL
+) * t423 * 0.64 + ( X [ 22ULL ] - X [ 174ULL ] ) * ( ( real_T ) ( M [ 126ULL
 ] != 0 ) * 2.0 - 1.0 ) * ( t378 / ( t386 == 0.0 ? 1.0E-16 : t386 ) ) * ( 1.0
 / ( t377 == 0.0 ? 1.0E-16 : t377 ) ) * intermediate_der9865 * intrm_sf_mf_350
-* 0.32 ; intermediate_der9865 = pmf_sqrt ( ( ( real_T ) ( M [ 157ULL ] != 0 )
+* 0.32 ; intermediate_der9865 = pmf_sqrt ( ( ( real_T ) ( M [ 127ULL ] != 0 )
 * 2.0 - 1.0 ) * ( t146 / ( t385 == 0.0 ? 1.0E-16 : t385 ) / ( X [ 195ULL ] ==
 0.0 ? 1.0E-16 : X [ 195ULL ] ) ) ) * t423 * 0.64 ; t377 = ( t194 - t194 *
 0.95 ) * ( t194 - t194 * 0.95 ) ; intermediate_der9879 = (
@@ -759,8 +759,8 @@ intermediate_der9865 * 0.95 ) * ( - ( - t192 - t194 * 0.95 ) / ( t377 == 0.0
 >= t398 ) { intermediate_der9924 = - intermediate_der9865 * 100000.0 ; } else
 { intermediate_der9924 = ( ( ( - t385 * t192 + ( 1.0 - t201 ) *
 intermediate_der9977 ) + - t194 * t385 ) + - intermediate_der9865 * t201 ) *
-100000.0 ; } if ( M [ 171ULL ] != 0 ) { intermediate_der9977 = 0.0 ; } else {
-intermediate_der9977 = ( real_T ) ( M [ 172ULL ] == 0 ) ; }
+100000.0 ; } if ( M [ 141ULL ] != 0 ) { intermediate_der9977 = 0.0 ; } else {
+intermediate_der9977 = ( real_T ) ( M [ 142ULL ] == 0 ) ; }
 tlu2_1d_linear_linear_value ( & r_efOut [ 0ULL ] , & t6 . mField1 [ 0ULL ] ,
 & t6 . mField2 [ 0ULL ] , ( ( _NeDynamicSystem * ) ( LC ) ) -> mField3 , &
 t52 [ 0ULL ] , & t12 [ 0ULL ] ) ; t73_idx_0 = r_efOut [ 0 ] ;
@@ -779,12 +779,12 @@ t54 [ 0ULL ] , & t55 [ 0ULL ] , & t12 [ 0ULL ] ) ; t6 = t_efOut ; t385 = ( M
 ( X [ 58ULL ] - Fuel_Cell_Boost_Converter_L_i ) * t125 * 0.001 ) ; } else {
 U_idx_2 = - ( ( Fuel_Cell_Boost_Converter_L_i * 0.001 + X [ 53ULL ] ) * t125
 ) ; } U_idx_3 = t414 >= 0.0 ? - t415 : - t396 ; t414 = t109 * t109 ; t398 = (
-( real_T ) ( M [ 123ULL ] != 0 ) * 2.0 - 1.0 ) * ( t116 / ( X [ 148ULL ] ==
+( real_T ) ( M [ 113ULL ] != 0 ) * 2.0 - 1.0 ) * ( t116 / ( X [ 148ULL ] ==
 0.0 ? 1.0E-16 : X [ 148ULL ] ) ) * ( t116 / ( X [ 148ULL ] == 0.0 ? 1.0E-16 :
 X [ 148ULL ] ) ) * ( X [ 117ULL ] / 0.64 / ( t109 == 0.0 ? 1.0E-16 : t109 ) )
 * ( - ( X [ 117ULL ] / 0.64 ) / ( t414 == 0.0 ? 1.0E-16 : t414 ) ) * t207 *
 2.0 ; t414 = intrm_sf_mf_350 * intrm_sf_mf_350 ; t396 = ( ( real_T ) ( M [
-160ULL ] != 0 ) * 2.0 - 1.0 ) * ( t133 / ( X [ 196ULL ] == 0.0 ? 1.0E-16 : X
+130ULL ] != 0 ) * 2.0 - 1.0 ) * ( t133 / ( X [ 196ULL ] == 0.0 ? 1.0E-16 : X
 [ 196ULL ] ) ) * ( t133 / ( X [ 196ULL ] == 0.0 ? 1.0E-16 : X [ 196ULL ] ) )
 * ( - X [ 167ULL ] / 0.64 / ( intrm_sf_mf_350 == 0.0 ? 1.0E-16 :
 intrm_sf_mf_350 ) ) * ( - ( - X [ 167ULL ] / 0.64 ) / ( t414 == 0.0 ? 1.0E-16

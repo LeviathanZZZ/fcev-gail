@@ -1,5 +1,5 @@
 ################
-#MATLAB控制#
+# MATLAB控制#
 import math
 from normalization import Normalization, RewardScaling
 
@@ -7,6 +7,7 @@ import torch
 import torch.nn as nn
 import matlab.engine
 import torch.nn.functional as F
+import torch.optim as optim
 import numpy as np
 import gym
 from tqdm import tqdm
@@ -31,26 +32,74 @@ EP_MAX = 1000
 EP_LEN = 1369
 EPISODES = 200
 EP_STEPS = 200
-LR_ACTOR = 0.0003
-LR_CRITIC = 0.0003
+LR_ACTOR = 0.0001
+LR_CRITIC = 0.001
 GAMMA = 0.9
 TAU = 0.01
 # MEMORY_CAPACITY = 20000
-BATCH_SIZE = 256
+BATCH_SIZE = 64
 Switch = 0
 
 Writer = SummaryWriter()
+
+class BehavioralCloning(nn.Module):
+    def __init__(self, n_states, n_actions, lr):
+        super(BehavioralCloning, self).__init__()
+
+        self.fc1 = nn.Linear(n_states, 256)
+        # self.dropout1 = nn.Dropout(0.5)
+        self.fc2 = nn.Linear(256, 256)
+        # self.dropout2 = nn.Dropout(0.5)
+        self.fc3 = nn.Linear(256, 256)
+        # self.dropout3 = nn.Dropout(0.5)
+        self.fc4 = nn.Linear(256, 256)
+        # self.dropout4 = nn.Dropout(0.5)
+        self.fc5 = nn.Linear(256, n_actions)
+
+
+        self.lr = lr
+
+        self.lossfn = nn.MSELoss()
+        self.optimizer = optim.Adam(self.parameters(), lr=self.lr, weight_decay=0.001)
+
+    def forward(self, x):
+        x = self.fc1(x)
+        x = F.tanh(x)
+        # x = self.dropout1(x)
+        x = self.fc2(x)
+        x = F.tanh(x)
+        # x = self.dropout2(x)
+        x = self.fc3(x)
+        x = F.relu(x)
+        # x = self.dropout3(x)
+        x = self.fc4(x)
+        x = F.relu(x)
+        # x = self.dropout4(x)
+        x = self.fc5(x)
+        # x = F.relu(x)
+        output = torch.sigmoid(x)
+
+        return 3.0*output
+
+    def choose_action(self, x):
+        x = torch.Tensor(x)
+        x = x.to(torch.float32)
+        return self.forward(x)
+
+
 
 class ActorNet(nn.Module):  # define the network structure for actor and critic
     def __init__(self, s_dim, a_dim):
         super(ActorNet, self).__init__()
         self.fc1 = nn.Linear(s_dim, 256)
         self.fc1.weight.data.normal_(0, 0.1)  # initialization of FC1
-        self.fc2 = nn.Linear(256, 128)
+        self.fc2 = nn.Linear(256, 256)
         self.fc2.weight.data.normal_(0, 0.1)  # initialization of FC1
-        self.fc3 = nn.Linear(128,128)
-        self.fc3.weight.data.normal_(0, 0.1)  # initialization of FC1
-        self.out = nn.Linear(128, a_dim)
+        # self.fc3 = nn.Linear(256, 256)
+        # self.fc3.weight.data.normal_(0, 0.1)  # initialization of FC1
+        # self.fc4 = nn.Linear(256, 256)
+        # self.fc4.weight.data.normal_(0, 0.1)  # initialization of FC1
+        self.out = nn.Linear(256, a_dim)
         self.out.weight.data.normal_(0, 0.1)  # initilizaiton of OUT
 
     def forward(self, x):
@@ -58,11 +107,14 @@ class ActorNet(nn.Module):  # define the network structure for actor and critic
         x = F.relu(x)
         x = self.fc2(x)
         x = F.relu(x)
-        x = self.fc3(x)
-        x = F.relu(x)
+        # x = self.fc3(x)
+        # x = F.relu(x)
+        # x = self.fc4(x)
+        # x = F.relu(x)
         x = self.out(x)
         x = torch.sigmoid(x)
-        actions = x * 3.5  # for the game "Pendulum-v0", action range is [-2, 2]
+        actions = x * 2.5  # for the game "Pendulum-v0", action range is [-2, 2]
+
         return actions
 
 
@@ -75,36 +127,50 @@ class CriticNet(nn.Module):
         self.fcs.weight.data.normal_(0, 0.1)
         self.fca = nn.Linear(a_dim, 256)
         self.fca.weight.data.normal_(0, 0.1)
-        self.fc1 = nn.Linear(256, 128)
+        self.fc1 = nn.Linear(256, 256)
         self.fc1.weight.data.normal_(0, 0.1)
-        self.fc2 = nn.Linear(128, 128)
-        self.fc2.weight.data.normal_(0, 0.1)
-        self.out = nn.Linear(128, 1)
+        # self.fc2 = nn.Linear(256, 256)
+        # self.fc2.weight.data.normal_(0, 0.1)
+        # self.fc3 = nn.Linear(256, 256)
+        # self.fc3.weight.data.normal_(0, 0.1)
+        self.out = nn.Linear(256, 1)
         self.out.weight.data.normal_(0, 0.1)
 
     def forward(self, s, a):
         x = self.fcs(s)
         y = self.fca(a)
+        # actions_value = F.tanh(self.fca(torch.cat([s, a], 1)))
         actions_value = self.fc1(F.relu(x + y))
-        actions_value = self.fc2(F.relu(actions_value))
+        # actions_value = self.fc2(F.relu(actions_value))
+        # actions_value = self.fc3(F.relu(actions_value))
         actions_value = self.out(F.relu(actions_value))
         return actions_value
+
+
 class Discriminator(nn.Module):
     def __init__(self, state_dim, action_dim):
         super(Discriminator, self).__init__()
-        self.layer1 = nn.Linear(state_dim + action_dim, 128)
+        self.layer1 = nn.Linear(state_dim + action_dim, 256)
         self.layer1.weight.data.normal_(0, 0.1)
-        self.layer2 = nn.Linear(128, 128)
+        self.layer2 = nn.Linear(256, 256)
         self.layer2.weight.data.normal_(0, 0.1)
-        self.layer3 = nn.Linear(128, 1)
+        self.layer3 = nn.Linear(256, 256)
         self.layer3.weight.data.normal_(0, 0.1)
+        # self.layer4 = nn.Linear(256, 256)
+        # self.layer4.weight.data.normal_(0, 0.1)
+        self.layer5 = nn.Linear(256, 1)
+        self.layer5.weight.data.normal_(0, 0.1)
 
     def forward(self, state, action):
         x = torch.cat([state, action], 1)
         x = torch.relu(self.layer1(x))
         x = torch.relu(self.layer2(x))
-        x = torch.sigmoid(self.layer3(x))
+        x = torch.relu(self.layer3(x))
+        # x = torch.relu(self.layer4(x))
+        x = torch.sigmoid(self.layer5(x))
         return x
+
+
 class OUNoise(object):
     def __init__(self, action_dim, mu=0.0, theta=0.15, max_sigma=0.3, min_sigma=0, decay_period=100000):
         self.mu = mu
@@ -130,7 +196,8 @@ class OUNoise(object):
     def get_action(self, action, t=0):
         ou_state = self.evolve_state()
         self.sigma = self.max_sigma - (self.max_sigma - self.min_sigma) * min(1.0, t / self.decay_period)
-        return np.clip(action + ou_state, 0,3.5)
+        return np.clip(action + ou_state, 0, 2.5)
+
 
 # Deep Deterministic Policy Gradient
 class DDPG(object):
@@ -156,7 +223,7 @@ class DDPG(object):
         index = self.pointer % MEMORY_CAPACITY  # replace the old data with new data
         self.memory[index, :] = transition
         self.pointer += 1
-        return self.memory,self.pointer
+        return self.memory, self.pointer
 
     def choose_action(self, s):
         # print(s)
@@ -201,7 +268,7 @@ class DDPG(object):
         td_error.backward()
         self.critic_optimizer.step()
 
-    def learn_gail(self,expert_s,expert_a):
+    def learn_gail(self, expert_s, expert_a):
         # 软更新
         for x in self.actor_target.state_dict().keys():
             eval('self.actor_target.' + x + '.data.mul_((1-TAU))')
@@ -219,7 +286,7 @@ class DDPG(object):
         # batch_r = torch.FloatTensor(batch_trans[:, -self.s_dim - 1: -self.s_dim])
         batch_s_ = torch.FloatTensor(batch_trans[:, -self.s_dim:])
 
-        #鉴别器训练
+        # 鉴别器训练
         expert_states = torch.tensor(expert_s, dtype=torch.float)
         expert_actions = torch.tensor(expert_a, dtype=torch.float)
         expert_prob = self.discriminator(expert_states, expert_actions)
@@ -257,9 +324,8 @@ class DDPG(object):
         self.critic_optimizer.step()
 
 
-
 class Config:
-    num_episode = 1000
+    num_episode = 10000
     num_episode_gail = 10000
     state_dim = 2
     hidden_layers_dim = 256
@@ -295,6 +361,7 @@ class Config:
     #         self.action_dim = env.action_space.shape[0]
     #     print(f'device={self.device} | env={str(env)}')
 
+
 # def get_state(soc, v, a):
 #     SOC = soc/100
 #     # dev_SOC = SOC - 0.6
@@ -304,14 +371,16 @@ class Config:
 # def get_state(soc, P_de,v,a):
 #     SOC = soc/100
 #     dev_SOC = SOC - 0.6
-    # state = np.array([SOC, P_de,v,a])
-    # return state
+# state = np.array([SOC, P_de,v,a])
+# return state
 #
 def get_state(soc, P_de):
-    SOC = soc/100
+    SOC = soc / 100
     # dev_SOC = SOC - 0.6
     state = np.array([SOC, P_de])
     return state
+
+
 #
 # def get_state(soc):
 #     SOC = soc
@@ -321,14 +390,15 @@ def get_state(soc, P_de):
 #     return state
 
 # 获取奖励
-def get_reward(soc,h2,delta_p,Clock):
-    SOC = soc/100
+def get_reward(soc, h2, delta_p, Clock):
+    SOC = soc / 100
     dev_SOC = abs(SOC - 0.6)
     # reward = math.exp(-(dev_SOC))
-    reward = -(50*h2 + 0.0001*delta_p +28*(dev_SOC ** 2))
+    reward = -(50 * h2 + 0.0001 * delta_p + 28 * (dev_SOC ** 2))
     # reward = -(1000 * h2 + 50 * (dev_SOC)**2)
     # normal_reward = 10 * (reward - 0.9)
     return reward
+
 
 def data_write(file_path, datas):
     ipTable = datas
@@ -341,7 +411,7 @@ def data_write(file_path, datas):
 
 transition_dict = {"states": [], "actions": [], "next_states": [], "rewards": [], "dones": []}
 
-MAX_EP_STEPS = 1369
+MAX_EP_STEPS = 1800
 episode = 0
 var = 0
 device = torch.device("cuda:0" if torch.cuda
@@ -370,8 +440,10 @@ p = 0
 # agent = PPO(2, hidden_dim, 1, actor_lr, critic_lr, lambda_, epochs, eps, gamma)
 
 # if Switch == 0:
-episode =0
+episode = 0
 MEMORY_CAPACITY = 100000
+
+
 def train_agent(cfg):
     print('PPO2训练中...')
     return_list = []
@@ -379,35 +451,25 @@ def train_agent(cfg):
         dict(name='soft', tau=0.005),
         dict(name='hard', rep_iter=600)
     ][0]  # you can try different target replacement strategies
-    VAR = 1
+    VAR = 3
     MEMORY_CAPACITY = 100000
     # ac_agent = DDPG(state_dim=cfg.state_dim,
     #             action_dim=cfg.action_dim,
-    #             replacement=REPLACEMENT,
+    #             replacement=REPLACEMENT,jn
     #             memory_capacity=MEMORY_CAPACITY)
     episode = 0
-    expert_s, expert_a = np.load("./state.npy"),np.load("./action.npy")
-
+    expert_s, expert_a = np.load("./state.npy"), np.load("./action.npy")
 
     engine = matlab.engine.start_matlab()
     env_name = 'FCEvReferenceApplication'
     engine.load_system(env_name)
     tq_bar = tqdm(range(cfg.num_episode))
-    ddpg_gail = DDPG(1, 2, 3.5)
+    ddpg_gail = DDPG(1, 2, 2.5)
     bf_reward = -np.inf
-    checkpoint = torch.load('checkpoint.pth.tar')
-    ddpg_gail.actor_eval.load_state_dict(checkpoint['actor_state_dict'])  # 加载模型的参数
-    ddpg_gail.actor_target.load_state_dict(checkpoint['actor_target_state_dict'])
-    ddpg_gail.critic_target.load_state_dict(checkpoint['critic_target_state_dict'])
-    ddpg_gail.actor_optimizer.load_state_dict(checkpoint['acotr_optimizer'])  # 加载优化器的[参数
-    ddpg_gail.critic_eval.load_state_dict(checkpoint['critic_state_dict'])  # 加载模[型的参数
-    ddpg_gail.critic_optimizer.load_state_dict(checkpoint['critic_optimizer'])  # 加载优化[器的参数
-    ddpg_gail.discriminator.load_state_dict(checkpoint['dis_state_dict'])
-    ddpg_gail.discriminator_optimizer.load_state_dict(checkpoint['dis_optimizer'])
-    ddpg_gail.memory = np.load('data.npy')
-    VAR = np.load('VAR.npy')
-    ddpg_gail.pointer = np.load('pointer.npy')
-    # checkpoint = torch.load('checkpoint_best.pth.tar')
+    model = BehavioralCloning(2, 1, 0.001)
+    model.float()
+    model.load_state_dict(torch.load('weight.pt'))
+    # checkpoint = torch.load('checkpoint.pth.tar')
     # ddpg_gail.actor_eval.load_state_dict(checkpoint['actor_state_dict'])  # 加载模型的参数
     # ddpg_gail.actor_target.load_state_dict(checkpoint['actor_target_state_dict'])
     # ddpg_gail.critic_target.load_state_dict(checkpoint['critic_target_state_dict'])
@@ -416,9 +478,21 @@ def train_agent(cfg):
     # ddpg_gail.critic_optimizer.load_state_dict(checkpoint['critic_optimizer'])  # 加载优化[器的参数
     # ddpg_gail.discriminator.load_state_dict(checkpoint['dis_state_dict'])
     # ddpg_gail.discriminator_optimizer.load_state_dict(checkpoint['dis_optimizer'])
-    # ddpg_gail.memory = np.load('data_best.npy')
-    # VAR = np.load('VAR_best.npy')
-    # ddpg_gail.pointer = np.load('pointer_best.npy')
+    # ddpg_gail.memory = np.load('data.npy')
+    # VAR = np.load('VAR.npy')
+    # ddpg_gail.pointer = np.load('pointer.npy')
+    checkpoint = torch.load('checkpoint_best.pth.tar')
+    ddpg_gail.actor_eval.load_state_dict(checkpoint['actor_state_dict'])  # 加载模型的参数
+    ddpg_gail.actor_target.load_state_dict(checkpoint['actor_target_state_dict'])
+    ddpg_gail.critic_target.load_state_dict(checkpoint['critic_target_state_dict'])
+    ddpg_gail.actor_optimizer.load_state_dict(checkpoint['acotr_optimizer'])  # 加载优化器的[参数
+    ddpg_gail.critic_eval.load_state_dict(checkpoint['critic_state_dict'])  # 加载模[型的参数
+    ddpg_gail.critic_optimizer.load_state_dict(checkpoint['critic_optimizer'])  # 加载优化[器的参数
+    ddpg_gail.discriminator.load_state_dict(checkpoint['dis_state_dict'])
+    ddpg_gail.discriminator_optimizer.load_state_dict(checkpoint['dis_optimizer'])
+    ddpg_gail.memory = np.load('data_best.npy')
+    VAR = np.load('VAR_best.npy')
+    ddpg_gail.pointer = np.load('pointer_best.npy')
     for i in tq_bar:
 
         tq_bar.set_description(f'Episode [ {i + 1} / {cfg.num_episode} ]')
@@ -435,17 +509,25 @@ def train_agent(cfg):
         next_state_list = []
         rewards_list = []
         done_list = []
+        soc_list=[]
+        pfc_list=[]
+        h2_list=[]
+        fc_loss_list =[]
+        p_bat_list = []
+        eff_list = []
+        A_bat_list = []
         episode_rewards = 0
         # steps = 0
         reward_totle = 0
         episode_return = 0
         total_reward = 0
         count = 0
-        pause_time = 21
+        pause_time = 1
         action_pre = 0
         steps = 0
         # for timestep in range(0, 1369, 1):
-        noise = OUNoise(1, 154)
+        # noise = OUNoise(1, 154)
+        ou_noise = OUNoise(1)
 
         # state = get_state(soc,v,a)
         while True:
@@ -453,42 +535,70 @@ def train_agent(cfg):
 
             Clock = Clock[-1]
 
-            if Clock == 20:
+            if Clock == 0:
                 soc = np.array(engine.eval('soc')).reshape(-1)
                 v = np.array(engine.eval('v')).reshape(-1)
                 a = np.array(engine.eval('a')).reshape(-1)
                 p_de = np.array(engine.eval('Pe')).reshape(-1)
+                P_bat = np.array(engine.eval('BatPwr')).reshape(-1)
+                Eff = np.array(engine.eval('eff')).reshape(-1)
+                A_bat = np.array(engine.eval('A_bat')).reshape(-1)
                 soc = soc[-1]
                 a = a[-1]
                 v = v[-1]
                 p_de = p_de[-1]
-                state =  get_state(soc, p_de)
+                Eff = Eff[-1]
+                A_bat = A_bat[-1]
+                P_bat = P_bat[-1]
+                state = get_state(soc, p_de)
                 # state = get_state(soc, v, a)
                 # state = get_state(soc, p_de,v,a)
                 # next_state = get_state(soc, v, a)
             if Clock - count >= 1:
                 # Clock, soc, P_de = engine.run(float(action), pause_time,nargout=3)
-                action = ddpg_gail.choose_action(state)
+                # action = ddpg_gail.choose_action(state)
+                action = model.choose_action(state)
                 # print("噪声前", action)
-                action = np.clip(np.random.normal(action, VAR), 0, 3.5)
+                # action = np.clip(np.random.normal(action, VAR), 0, 3.0)
+                # action = np.clip(action, 0, 3.0)
                 # action = ou_noise.get_action(action, steps)
-                # action = (action + np.random.normal(0, VAR, 1)).clip(0.0, 3.5)
-                Clock, soc, v, a,h2,p_de = engine.run(float(action), pause_time, nargout=6)
+                # action = (action + np.random.normal(0, VAR, 1)).clip(0.0, 3.5)3
+
                 pause_time = pause_time + 1
+                Clock, soc, v, a, h2, p_de = engine.run(float(action), pause_time, nargout=6)
+                p_fc = np.array(engine.eval('P_fc')).reshape(-1)
+                fc_loss = np.array(engine.eval('loss')).reshape(-1)
+                P_bat = np.array(engine.eval('BatPwr')).reshape(-1)
+                Eff = np.array(engine.eval('eff')).reshape(-1)
+                A_bat = np.array(engine.eval('A_bat')).reshape(-1)
+
+                p_fc=p_fc[-1]
+                P_bat = P_bat[-1]
+                fc_loss=fc_loss[-1]
+                Eff = Eff[-1]
+                A_bat =A_bat[-1]
+                soc_list.append(soc)
+                pfc_list.append(p_fc)
+                h2_list.append(h2)
+                fc_loss_list.append(fc_loss)
+                p_bat_list.append(P_bat)
+                eff_list.append(Eff)
+                A_bat_list.append(A_bat)
+
+
                 # next_state = get_state(soc, v,a)
                 next_state = get_state(soc, p_de)
-
 
                 # action = np.clip(np.random.normal(action, VAR), 0.2, 3.5)  # 在动作选择上添加随机噪声.
 
                 # action = action + 0.6* np.random.randn(1)
                 # action = np.clip(action, 2, 35)
-                delta_pfc = abs(action-action_pre)
+                delta_pfc = abs(action - action_pre)
                 action_pre = action
-                reward = get_reward(soc,h2,delta_pfc ,Clock)
+                reward = get_reward(soc, h2, delta_pfc, Clock)
                 episode_rewards += reward
 
-                print(state, action, next_state, Clock, reward,steps,VAR)
+                print(state, action, next_state, Clock, reward, steps, VAR)
                 # reward = reward_scaling(reward)
                 # next_state = state_norm(next_state)
 
@@ -522,10 +632,7 @@ def train_agent(cfg):
                     # data_write('D:/reward.xls', episode_rewards)
                     break
 
-
-
                 count = Clock
-
 
                 # done_memory.append(float(False))
                 # soc_memory.append(soc)
@@ -536,7 +643,6 @@ def train_agent(cfg):
                 next_state_list.append(next_state)
                 done_list.append(done)
 
-
                 # count = Clock
                 s_memory.append(state)
                 # ep_reward += reward
@@ -544,52 +650,56 @@ def train_agent(cfg):
                 # done = True
                 # PPO 更新
                 # if Clock>=20:
-                if Clock>=22:
-                    memory,pointer = ddpg_gail.store_transition(state, action, reward, next_state)
-                steps += 1
-                np.save('steps.npy',steps)
-                # if (episode_rewards >= cfg.max_episode_rewards) or (steps >= cfg.max_episode_steps):
-                #     break
+                # if Clock >= 1:
+                #     memory, pointer = ddpg_gail.store_transition(state, action, reward, next_state)
+                # steps += 1
+                # np.save('steps.npy', steps)
+                # # if (episode_rewards >= cfg.max_episode_rewards) or (steps >= cfg.max_episode_steps):
+                # #     break
                 state = next_state
                 # # if steps == 2048:
-                if ddpg_gail.pointer > 1000:
-                    print("train!!")
-                    ddpg_gail.learn_gail(expert_s,expert_a)
-                    VAR *= 0.99995
+                # if ddpg_gail.pointer > 1000 and ddpg_gail.pointer<MEMORY_CAPACITY:
+                #     # print("train!!")
+                #     ddpg_gail.learn_gail(expert_s, expert_a)
+                #     VAR *= 0.9995
+                # if ddpg_gail.pointer > MEMORY_CAPACITY:
+                #     # print("train!!")
+                #     ddpg_gail.learn_gail(expert_s, expert_a)
+                #     VAR = 0.2
                 # np.save('VAR.npy',VAR)
                 # torch.save(ac_agent.actor.state_dict(), cfg.save_path)
-                # torch.save(ac_agent.critic.state_dict(),cfg.save_path_critic)
+                # torch.save(ac_agent.critic.state_diwct(),cfg.save_path_critic)
                 # if episode%1==0:
-        check = {
-            'epoch': episode,  # 保存当前的迭代次数
-            'actor_state_dict': ddpg_gail.actor_eval.state_dict(),  # 保存模型参数
-            'actor_target_state_dict':ddpg_gail.actor_target.state_dict(),
-            'critic_state_dict': ddpg_gail.critic_eval.state_dict(),  # 保存模型参数
-            'critic_target_state_dict': ddpg_gail.critic_target.state_dict(),
-            'dis_state_dict' : ddpg_gail.discriminator.state_dict(),
-            'dis_optimizer' : ddpg_gail.discriminator_optimizer.state_dict(),
-            'acotr_optimizer': ddpg_gail.actor_optimizer.state_dict(),  # 保存优化器参数
-            'critic_optimizer': ddpg_gail.critic_optimizer.state_dict(),  # 保存优化器参数
-
-        }
-        torch.save(check, 'checkpoint.pth.tar')
-        np.save('data.npy',memory)
-        np.save('pointer.npy',pointer)
-        np.save('VAR.npy',VAR)
-                    # break
+                # check = {
+                #     'epoch': episode,  # 保存当前的迭代次数
+                #     'actor_state_dict': ddpg_gail.actor_eval.state_dict(),  # 保存模型参数
+                #     'actor_target_state_dict': ddpg_gail.actor_target.state_dict(),
+                #     'critic_state_dict': ddpg_gail.critic_eval.state_dict(),  # 保存模型参数
+                #     'critic_target_state_dict': ddpg_gail.critic_target.state_dict(),
+                #     'dis_state_dict': ddpg_gail.discriminator.state_dict(),
+                #     'dis_optimizer': ddpg_gail.discriminator_optimizer.state_dict(),
+                #     'acotr_optimizer': ddpg_gail.actor_optimizer.state_dict(),  # 保存优化器参数
+                #     'critic_optimizer': ddpg_gail.critic_optimizer.state_dict(),  # 保存优化器参数
+                #
+                # }
+                # torch.save(check, 'checkpoint.pth.tar')
+                # np.save('data.npy', memory)
+                # np.save('pointer.npy', pointer)
+                # np.save('VAR.npy', VAR)
+        # break
         # print("train!!")
         # ac_agent.update(buffer_.buffer)
         # buffer_ = replayBuffer(cfg.buffer_size)
         # steps = 0
         # torch.save(ac_agent.actor.state_dict(), cfg.save_path)
-    # ac_agent.update(buffer_.buffer)
+        # ac_agent.update(buffer_.buffer)
         # print("train!!")
         # ac_agent.update(buffer_.buffer)
         # buffer_ = replayBuffer(cfg.buffer_size)
         # # steps = 0
         # torch.save(ac_agent.actor.state_dict(), cfg.save_path)
-        rewards_list.append(episode_rewards)
-        now_reward = np.mean(rewards_list[-10:])
+        # rewards_list.append(episode_rewards)
+        # now_reward = np.mean(rewards_list[-10:])
 
         # print("train!!")
         # ac_agent.update(buffer_.buffer)
@@ -608,42 +718,48 @@ def train_agent(cfg):
         # }
         # torch.save(check, 'checkpoint.pth.tar')
         #################################################################
-        if bf_reward < now_reward: #存下reward最好的网络
-            bf_reward = now_reward
-        #     torch.save(ac_agent.actor.state_dict(), cfg.save_path_best_actor)
-        #     torch.save(ac_agent.critic.state_dict(), cfg.save_path_best_critic)
-            check = {
-                'epoch': episode,  # 保存当前的迭代次数
-                'actor_state_dict': ddpg_gail.actor_eval.state_dict(),  # 保存模型参数
-                'actor_target_state_dict': ddpg_gail.actor_target.state_dict(),
-                'critic_state_dict': ddpg_gail.critic_eval.state_dict(),  # 保存模型参数
-                'critic_target_state_dict': ddpg_gail.critic_target.state_dict(),
-                'dis_state_dict': ddpg_gail.discriminator.state_dict(),
-                'dis_optimizer': ddpg_gail.discriminator_optimizer.state_dict(),
-                'acotr_optimizer': ddpg_gail.actor_optimizer.state_dict(),  # 保存优化器参数
-                'critic_optimizer': ddpg_gail.critic_optimizer.state_dict(),  # 保存优化器参数
-
-            }
-            torch.save(check, 'checkpoint_best.pth.tar')
-            np.save('data_best.npy', memory)
-            np.save('pointer_best.npy', pointer)
-            np.save('VAR_best.npy', VAR)
-            np.save('reward_best.npy',bf_reward)
+        # if bf_reward < now_reward:  # 存下reward最好的网络
+        #     bf_reward = now_reward
+        #     #     torch.save(ac_agent.actor.state_dict(), cfg.save_path_best_actor)
+        #     #     torch.save(ac_agent.critic.state_dict(), cfg.save_path_best_critic)
+        #     check = {
+        #         'epoch': episode,  # 保存当前的迭代次数
+        #         'actor_state_dict': ddpg_gail.actor_eval.state_dict(),  # 保存模型参数
+        #         'actor_target_state_dict': ddpg_gail.actor_target.state_dict(),
+        #         'critic_state_dict': ddpg_gail.critic_eval.state_dict(),  # 保存模型参数
+        #         'critic_target_state_dict': ddpg_gail.critic_target.state_dict(),
+        #         'dis_state_dict': ddpg_gail.discriminator.state_dict(),
+        #         'dis_optimizer': ddpg_gail.discriminator_optimizer.state_dict(),
+        #         'acotr_optimizer': ddpg_gail.actor_optimizer.state_dict(),  # 保存优化器参数
+        #         'critic_optimizer': ddpg_gail.critic_optimizer.state_dict(),  # 保存优化器参数
+        #
+        #     }
+        #     # torch.save(check, 'checkpoint_best.pth.tar')
+        #     np.save('data_best.npy', memory)
+        #     np.save('pointer_best.npy', pointer)
+        #     np.save('VAR_best.npy', VAR)
+        #     np.save('reward_best.npy', bf_reward)
         ################################################################
 
-        Writer.add_scalar(tag="ppo_return",scalar_value=now_reward,global_step=i)
-        tq_bar.set_postfix({'lastMeanRewards': f'{now_reward:.2f}', 'BEST': f'{bf_reward:.2f}'})
+        # Writer.add_scalar(tag="ppo_return", scalar_value=now_reward, global_step=i)
+        # tq_bar.set_postfix({'lastMeanRewards': f'{now_reward:.2f}', 'BEST': f'{bf_reward:.2f}'})
         data_write('./reward.xls', rewards_list)
-        # data_write('./action.xls', action_list)
-        # data_write('./state.xls',state_list)
+        data_write("./仿真数据/soc.xls", soc_list)
+        data_write("./仿真数据/p_fc.xls", pfc_list)
+        data_write("./仿真数据/fule_co.xls", h2_list)
+        data_write("./仿真数据/fc_loss.xls", fc_loss_list)
+        data_write('./action.xls', action_list)
+        data_write('./state.xls',state_list)
+        data_write('./仿真数据/P_bat.xls', p_bat_list)
+        data_write('./仿真数据/eff.xls', eff_list)
+        data_write('./仿真数据/A_bat.xls', A_bat_list)
         engine.set_param(env_name, 'SimulationCommand', 'stop', nargout=0)
         print("结束")
-        episode+=1
-
+        episode += 1
 
 
 if __name__ == '__main__':
-    print('=='*35)
+    print('==' * 35)
     print('Training FCEV')
     # env = gym.make('Pendulum-v1')/
     cfg = Config()

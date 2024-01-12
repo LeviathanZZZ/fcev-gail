@@ -18,11 +18,11 @@
 static void mdlInitSystemMatrices ( SimStruct * S ) { static int_T
 modelMassMatrixIr [ 83 ] = { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11
 , 12 , 13 , 14 , 15 , 16 , 17 , 18 , 20 , 41 , 42 , 44 , 43 , 45 , 46 , 48 ,
-47 , 57 , 58 , 60 , 59 , 61 , 62 , 64 , 63 , 19 , 90 , 21 , 22 , 21 , 23 , 24
+47 , 57 , 58 , 60 , 59 , 61 , 62 , 64 , 63 , 19 , 87 , 21 , 22 , 21 , 23 , 24
 , 25 , 26 , 25 , 28 , 27 , 29 , 30 , 29 , 31 , 32 , 33 , 33 , 34 , 36 , 35 ,
 37 , 38 , 40 , 39 , 37 , 41 , 45 , 49 , 50 , 52 , 51 , 49 , 53 , 54 , 53 , 55
-, 56 , 57 , 61 , 66 , 412 , 65 , 413 , 414 , 415 } ; static int_T
-modelMassMatrixJc [ 417 ] = { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11
+, 56 , 57 , 61 , 66 , 409 , 65 , 410 , 411 , 412 } ; static int_T
+modelMassMatrixJc [ 414 ] = { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11
 , 12 , 13 , 14 , 15 , 16 , 17 , 18 , 19 , 20 , 22 , 23 , 24 , 26 , 27 , 28 ,
 30 , 31 , 32 , 34 , 35 , 36 , 38 , 40 , 41 , 42 , 43 , 45 , 46 , 47 , 48 , 50
 , 51 , 52 , 53 , 54 , 56 , 57 , 58 , 60 , 61 , 62 , 63 , 64 , 65 , 67 , 68 ,
@@ -48,16 +48,16 @@ modelMassMatrixJc [ 417 ] = { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11
 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 ,
 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80
 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 ,
-80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 81
-, 82 , 83 } ; static real_T modelMassMatrixPr [ 83 ] = { 1 , 1 , 1 , 1 , 1 ,
-1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1
+80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 80 , 81 , 82 , 83 } ;
+static real_T modelMassMatrixPr [ 83 ] = { 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1
 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 ,
 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1
-, 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 }
-; int_T * massMatrixIr = ssGetMassMatrixIr ( S ) ; int_T * massMatrixJc =
+, 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 ,
+1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 } ; int_T *
+massMatrixIr = ssGetMassMatrixIr ( S ) ; int_T * massMatrixJc =
 ssGetMassMatrixJc ( S ) ; real_T * massMatrixPr = ssGetMassMatrixPr ( S ) ; (
 void ) memcpy ( massMatrixIr , modelMassMatrixIr , 83 * sizeof ( int_T ) ) ;
-( void ) memcpy ( massMatrixJc , modelMassMatrixJc , 417 * sizeof ( int_T ) )
+( void ) memcpy ( massMatrixJc , modelMassMatrixJc , 414 * sizeof ( int_T ) )
 ; ( void ) memcpy ( massMatrixPr , modelMassMatrixPr , 83 * sizeof ( real_T )
 ) ; } const char * rt_GetMatSignalLoggingFileName ( void ) { return NULL ; }
 const char * rt_GetMatSigLogSelectorFileName ( void ) { return NULL ; } void
@@ -108,32 +108,32 @@ ssGetContStates ( S ) ; gtrcczzcor ( & ( dw -> rtm ) , & ( dw -> rtdw ) ,
 localX ) ; } static void mdlPeriodicOutputUpdate ( SimStruct * S , int_T tid
 ) { g5h05g3u4wx * dw = ( g5h05g3u4wx * ) ssGetDWork ( S , 0 ) ; real_T const
 * i_alps4cqvbe = ( real_T * ) ssGetInputPortSignal ( S , 0 ) ; real_T const *
-i_i_i_broznjvo0f = ( real_T * ) ssGetInputPortSignal ( S , 1 ) ; real_T const
-* i_bav2fyyxpd = ( real_T * ) ssGetInputPortSignal ( S , 2 ) ; real_T *
-o_B_1_1 = ( real_T * ) ssGetOutputPortSignal ( S , 0 ) ; real_T * o_B_1_2 = (
-real_T * ) ssGetOutputPortSignal ( S , 1 ) ; real_T * o_B_1_3 = ( real_T * )
-ssGetOutputPortSignal ( S , 2 ) ; real_T * o_B_1_4 = ( real_T * )
-ssGetOutputPortSignal ( S , 3 ) ; real_T * o_B_1_5 = ( real_T * )
-ssGetOutputPortSignal ( S , 4 ) ; real_T * o_B_1_6 = ( real_T * )
-ssGetOutputPortSignal ( S , 5 ) ; real_T * o_B_1_7 = ( real_T * )
-ssGetOutputPortSignal ( S , 6 ) ; real_T * o_B_1_8 = ( real_T * )
-ssGetOutputPortSignal ( S , 7 ) ; fw3fcrujzt * localX = ( fw3fcrujzt * )
-ssGetContStates ( S ) ; if ( tid == 0 ) { FCElectricPlant ( & ( dw -> rtm ) ,
-i_alps4cqvbe , i_i_i_broznjvo0f , i_bav2fyyxpd , o_B_1_1 , o_B_1_2 , o_B_1_3
-, o_B_1_4 , o_B_1_5 , o_B_1_6 , o_B_1_7 , o_B_1_8 , & ( dw -> rtb ) , & ( dw
--> rtdw ) , localX , & ( dw -> rtzce ) ) ; czx1gq31fm ( & ( dw -> rtm ) , & (
-dw -> rtb ) , & ( dw -> rtdw ) , localX ) ; } } static void
+i_i_i_i_i_i_bav2fyyxpd = ( real_T * ) ssGetInputPortSignal ( S , 2 ) ; real_T
+* o_B_3_1 = ( real_T * ) ssGetOutputPortSignal ( S , 0 ) ; real_T * o_B_3_2 =
+( real_T * ) ssGetOutputPortSignal ( S , 1 ) ; real_T * o_o_o_B_3_3 = (
+real_T * ) ssGetOutputPortSignal ( S , 2 ) ; real_T * o_o_o_o_o_o_B_3_4 = (
+real_T * ) ssGetOutputPortSignal ( S , 3 ) ; real_T * o_B_3_5 = ( real_T * )
+ssGetOutputPortSignal ( S , 4 ) ; real_T * o_B_3_6 = ( real_T * )
+ssGetOutputPortSignal ( S , 5 ) ; real_T * o_B_3_7 = ( real_T * )
+ssGetOutputPortSignal ( S , 6 ) ; fw3fcrujzt * localX = ( fw3fcrujzt * )
+ssGetContStates ( S ) ; real_T const * i_i_i_i_i_broznjvo0f = ( real_T * )
+ssGetInputPortSignal ( S , 1 ) ; if ( tid == 0 ) { FCElectricPlant ( & ( dw
+-> rtm ) , i_alps4cqvbe , i_i_i_i_i_i_bav2fyyxpd , o_B_3_1 , o_B_3_2 ,
+o_o_o_B_3_3 , o_o_o_o_o_o_B_3_4 , o_B_3_5 , o_B_3_6 , o_B_3_7 , & ( dw -> rtb
+) , & ( dw -> rtdw ) , localX , & ( dw -> rtzce ) ) ; czx1gq31fm ( & ( dw ->
+rtm ) , i_i_i_i_i_broznjvo0f , i_i_i_i_i_i_bav2fyyxpd , o_o_o_o_o_o_B_3_4 , &
+( dw -> rtb ) , & ( dw -> rtdw ) , localX ) ; } } static void
 mdlInitializeSizes ( SimStruct * S ) { if ( ( S -> mdlInfo -> genericFcn != (
 NULL ) ) && ( ! ( S -> mdlInfo -> genericFcn ) ( S ,
 GEN_FCN_CHK_MODELREF_SFUN_HAS_MODEL_BLOCK , - 1 , ( NULL ) ) ) ) { return ; }
 ssSetNumSFcnParams ( S , 0 ) ; ssFxpSetU32BitRegionCompliant ( S , 1 ) ;
 rt_InitInfAndNaN ( sizeof ( real_T ) ) ; if ( S -> mdlInfo -> genericFcn != (
 NULL ) ) { _GenericFcn fcn = S -> mdlInfo -> genericFcn ; }
-ssSetRTWGeneratedSFcn ( S , 2 ) ; ssSetNumContStates ( S , 416 ) ;
+ssSetRTWGeneratedSFcn ( S , 2 ) ; ssSetNumContStates ( S , 413 ) ;
 ssSetNumDiscStates ( S , 0 ) ; ssSetNumPeriodicContStates ( S , 0 ) ;
 ssSetMassMatrixType ( S , 3 ) ; ssSetMassMatrixNzMax ( S , 83 ) ;
 ssSetSymbolicDimsSupport ( S , true ) ; slmrInitializeIOPortDataVectors ( S ,
-3 , 8 ) ; if ( ! ssSetNumInputPorts ( S , 3 ) ) return ; if ( !
+3 , 7 ) ; if ( ! ssSetNumInputPorts ( S , 3 ) ) return ; if ( !
 ssSetInputPortVectorDimension ( S , 0 , 1 ) ) return ;
 ssSetInputPortDimensionsMode ( S , 0 , FIXED_DIMS_MODE ) ;
 ssSetInputPortFrameData ( S , 0 , FRAME_NO ) ; if ( ssGetSimMode ( S ) !=
@@ -158,7 +158,7 @@ UnitId unitIdReg ; ssRegisterUnitFromExpr ( S , "" , & unitIdReg ) ; if (
 unitIdReg == INVALID_UNIT_ID ) return ; ssSetInputPortUnit ( S , 1 ,
 unitIdReg ) ;
 #endif
-} ssSetInputPortDirectFeedThrough ( S , 1 , 1 ) ;
+} ssSetInputPortDirectFeedThrough ( S , 1 , 0 ) ;
 ssSetInputPortRequiredContiguous ( S , 1 , 1 ) ; ssSetInputPortOptimOpts ( S
 , 1 , SS_NOT_REUSABLE_AND_GLOBAL ) ; ssSetInputPortOverWritable ( S , 1 ,
 false ) ; ssSetInputPortSampleTime ( S , 1 , 0.0 ) ; ssSetInputPortOffsetTime
@@ -174,10 +174,10 @@ unitIdReg ) ;
 #endif
 } ssSetInputPortDirectFeedThrough ( S , 2 , 1 ) ;
 ssSetInputPortRequiredContiguous ( S , 2 , 1 ) ; ssSetInputPortOptimOpts ( S
-, 2 , SS_NOT_REUSABLE_AND_LOCAL ) ; ssSetInputPortOverWritable ( S , 2 ,
+, 2 , SS_NOT_REUSABLE_AND_GLOBAL ) ; ssSetInputPortOverWritable ( S , 2 ,
 false ) ; ssSetInputPortSampleTime ( S , 2 , 0.0 ) ; ssSetInputPortOffsetTime
-( S , 2 , 0.0 ) ; if ( ! ssSetNumOutputPorts ( S , 8 ) ) return ; if ( !
-ssSetOutputPortMatrixDimensions ( S , 0 , 1 , 1 ) ) return ;
+( S , 2 , 0.0 ) ; if ( ! ssSetNumOutputPorts ( S , 7 ) ) return ; if ( !
+ssSetOutputPortVectorDimension ( S , 0 , 1 ) ) return ;
 ssSetOutputPortDimensionsMode ( S , 0 , FIXED_DIMS_MODE ) ;
 ssSetOutputPortFrameData ( S , 0 , FRAME_NO ) ; if ( ssGetSimMode ( S ) !=
 SS_SIMMODE_SIZES_CALL_ONLY ) { ssSetOutputPortDataType ( S , 0 , SS_DOUBLE )
@@ -219,7 +219,7 @@ unitIdReg ) ;
 #endif
 } ssSetOutputPortSampleTime ( S , 2 , 0.0 ) ; ssSetOutputPortOffsetTime ( S ,
 2 , 0.0 ) ; ssSetOutputPortDiscreteValuedOutput ( S , 2 , 0 ) ;
-ssSetOutputPortOkToMerge ( S , 2 , SS_OK_TO_MERGE_CONDITIONAL ) ;
+ssSetOutputPortOkToMerge ( S , 2 , SS_NOT_OK_TO_MERGE ) ;
 ssSetOutputPortICAttributes ( S , 2 , false , false , false ) ;
 ssSetOutputPortOptimOpts ( S , 2 , SS_NOT_REUSABLE_AND_GLOBAL ) ; if ( !
 ssSetOutputPortVectorDimension ( S , 3 , 1 ) ) return ;
@@ -279,44 +279,21 @@ unitIdReg ) ;
 #endif
 } ssSetOutputPortSampleTime ( S , 6 , 0.0 ) ; ssSetOutputPortOffsetTime ( S ,
 6 , 0.0 ) ; ssSetOutputPortDiscreteValuedOutput ( S , 6 , 0 ) ;
-ssSetOutputPortOkToMerge ( S , 6 , SS_NOT_OK_TO_MERGE ) ;
+ssSetOutputPortOkToMerge ( S , 6 , SS_OK_TO_MERGE_CONDITIONAL ) ;
 ssSetOutputPortICAttributes ( S , 6 , false , false , false ) ;
-ssSetOutputPortOptimOpts ( S , 6 , SS_NOT_REUSABLE_AND_GLOBAL ) ; if ( !
-ssSetOutputPortVectorDimension ( S , 7 , 1 ) ) return ;
-ssSetOutputPortDimensionsMode ( S , 7 , FIXED_DIMS_MODE ) ;
-ssSetOutputPortFrameData ( S , 7 , FRAME_NO ) ; if ( ssGetSimMode ( S ) !=
-SS_SIMMODE_SIZES_CALL_ONLY ) { ssSetOutputPortDataType ( S , 7 , SS_DOUBLE )
-; } if ( ssGetSimMode ( S ) != SS_SIMMODE_SIZES_CALL_ONLY ) {
-#if defined (MATLAB_MEX_FILE)
-UnitId unitIdReg ; ssRegisterUnitFromExpr ( S , "" , & unitIdReg ) ; if (
-unitIdReg == INVALID_UNIT_ID ) return ; ssSetOutputPortUnit ( S , 7 ,
-unitIdReg ) ;
-#endif
-} ssSetOutputPortSampleTime ( S , 7 , 0.0 ) ; ssSetOutputPortOffsetTime ( S ,
-7 , 0.0 ) ; ssSetOutputPortDiscreteValuedOutput ( S , 7 , 0 ) ;
-ssSetOutputPortOkToMerge ( S , 7 , SS_OK_TO_MERGE_CONDITIONAL ) ;
-ssSetOutputPortICAttributes ( S , 7 , false , false , false ) ;
-ssSetOutputPortOptimOpts ( S , 7 , SS_NOT_REUSABLE_AND_GLOBAL ) ;
+ssSetOutputPortOptimOpts ( S , 6 , SS_NOT_REUSABLE_AND_GLOBAL ) ;
 ssSetSimStateCompliance ( S , USE_CUSTOM_SIM_STATE ) ;
 mr_FCElectricPlant_RegisterSimStateChecksum ( S ) ; ssSetNumSampleTimes ( S ,
 3 ) ; ssSetParameterTuningCompliance ( S , true ) ; ssSetNumRWork ( S , 0 ) ;
 ssSetNumIWork ( S , 0 ) ; ssSetNumPWork ( S , 0 ) ; ssSetNumModes ( S , 0 ) ;
 { int_T zcsIdx = 0 ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"UprLim" ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_ALL ) ;
+"Reset" ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_DISC ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_ALL_DN ) ;
 ssSetZcSignalNeedsEventNotification ( S , zcsIdx , 0 ) ; zcsIdx =
 ssCreateAndAddZcSignalInfo ( S ) ; ssSetZcSignalWidth ( S , zcsIdx , 1 ) ;
-ssSetZcSignalName ( S , zcsIdx , "LwrLim" ) ; ssSetZcSignalType ( S , zcsIdx
-, SL_ZCS_TYPE_CONT ) ; ssSetZcSignalZcEventType ( S , zcsIdx ,
-SL_ZCS_EVENT_ALL ) ; ssSetZcSignalNeedsEventNotification ( S , zcsIdx , 0 ) ;
-zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ; ssSetZcSignalWidth ( S , zcsIdx ,
-1 ) ; ssSetZcSignalName ( S , zcsIdx , "Reset" ) ; ssSetZcSignalType ( S ,
-zcsIdx , SL_ZCS_TYPE_DISC ) ; ssSetZcSignalZcEventType ( S , zcsIdx ,
-SL_ZCS_EVENT_ALL_DN ) ; ssSetZcSignalNeedsEventNotification ( S , zcsIdx , 0
-) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ; ssSetZcSignalWidth ( S ,
-zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx , "Reset" ) ; ssSetZcSignalType
-( S , zcsIdx , SL_ZCS_TYPE_DISC ) ; ssSetZcSignalZcEventType ( S , zcsIdx ,
+ssSetZcSignalName ( S , zcsIdx , "Reset" ) ; ssSetZcSignalType ( S , zcsIdx ,
+SL_ZCS_TYPE_DISC ) ; ssSetZcSignalZcEventType ( S , zcsIdx ,
 SL_ZCS_EVENT_ALL_DN ) ; ssSetZcSignalNeedsEventNotification ( S , zcsIdx , 0
 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ; ssSetZcSignalWidth ( S ,
 zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx , "UprLim" ) ;
@@ -328,31 +305,8 @@ ssSetZcSignalName ( S , zcsIdx , "LwrLim" ) ; ssSetZcSignalType ( S , zcsIdx
 , SL_ZCS_TYPE_CONT ) ; ssSetZcSignalZcEventType ( S , zcsIdx ,
 SL_ZCS_EVENT_ALL ) ; ssSetZcSignalNeedsEventNotification ( S , zcsIdx , 0 ) ;
 zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ; ssSetZcSignalWidth ( S , zcsIdx ,
-1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Battery_System.Battery_Table_Based1.zc_1" ) ; ssSetZcSignalType ( S , zcsIdx
-, SL_ZCS_TYPE_CONT ) ; ssSetZcSignalZcEventType ( S , zcsIdx ,
-SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N | SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ;
-ssSetZcSignalNeedsEventNotification ( S , zcsIdx , 0 ) ; zcsIdx =
-ssCreateAndAddZcSignalInfo ( S ) ; ssSetZcSignalWidth ( S , zcsIdx , 1 ) ;
-ssSetZcSignalName ( S , zcsIdx ,
-"Battery_System.Battery_Table_Based1.xxR0.zc_2" ) ; ssSetZcSignalType ( S ,
-zcsIdx , SL_ZCS_TYPE_CONT ) ; ssSetZcSignalZcEventType ( S , zcsIdx ,
-SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N | SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ;
-ssSetZcSignalNeedsEventNotification ( S , zcsIdx , 0 ) ; zcsIdx =
-ssCreateAndAddZcSignalInfo ( S ) ; ssSetZcSignalWidth ( S , zcsIdx , 1 ) ;
-ssSetZcSignalName ( S , zcsIdx , "Battery_System.Battery_Table_Based1.zc_3" )
-; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_P2Z | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_Z2P | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Battery_System.Battery_Table_Based1.zc_4" ) ; ssSetZcSignalType ( S , zcsIdx
-, SL_ZCS_TYPE_CONT ) ; ssSetZcSignalZcEventType ( S , zcsIdx ,
-SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N | SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ;
-ssSetZcSignalNeedsEventNotification ( S , zcsIdx , 0 ) ; zcsIdx =
-ssCreateAndAddZcSignalInfo ( S ) ; ssSetZcSignalWidth ( S , zcsIdx , 1 ) ;
-ssSetZcSignalName ( S , zcsIdx , "Battery_System.DC_DC_Converter.zc_1" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+1 ) ; ssSetZcSignalName ( S , zcsIdx , "Battery_System.DC_DC_Converter.zc_1"
+) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
@@ -399,54 +353,6 @@ SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
 "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA1.zc_6" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.zc_1" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.zc_2" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.zc_3" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.zc_4" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_1" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_2" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_3" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_4" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
@@ -518,54 +424,6 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_1" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_2" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_3" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_4" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_1" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_2" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_3" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_4" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
 "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA1.zc_7" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
@@ -596,25 +454,49 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.delta_vel_pos_AI.zc_5"
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.delta_vel_pos_AI.zc_1"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.mdot_A_choked.zc_6" ) ;
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.mdot_A_choked.zc_2" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.delta_vel_pos_BI.zc_7"
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.delta_vel_pos_BI.zc_3"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.mdot_B_choked.zc_8" ) ;
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.mdot_B_choked.zc_4" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_5" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_6" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_7" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_8" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
@@ -632,55 +514,7 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.zc_1" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.zc_2" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.zc_3" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.zc_4" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
 "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_11" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_12" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_13" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_14" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.zc_15" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
@@ -722,54 +556,6 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pressure_Reducing_Valve.Valve.zc_1"
-) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pressure_Reducing_Valve.Valve.zc_2"
-) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pressure_Reducing_Valve.Valve.zc_3"
-) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pressure_Reducing_Valve.Valve.zc_4"
-) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_1" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_2" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_3" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_4" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
 "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pipe_MA.zc_7" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
@@ -800,25 +586,49 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.delta_vel_pos_AI.zc_5" ) ;
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.delta_vel_pos_AI.zc_1" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.mdot_A_choked.zc_6" ) ;
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.mdot_A_choked.zc_2" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.delta_vel_pos_BI.zc_7" ) ;
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.delta_vel_pos_BI.zc_3" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.mdot_B_choked.zc_8" ) ;
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.mdot_B_choked.zc_4" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_5" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_6" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_7" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_8" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
@@ -831,6 +641,36 @@ SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
 "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_10" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_11" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.delta_vel_pos_AI.zc_1" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.mdot_A_choked.zc_2" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.delta_vel_pos_BI.zc_3" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.mdot_B_choked.zc_4" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
@@ -860,97 +700,19 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_11" ) ;
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.zc_9" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_12" ) ;
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.zc_10" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_13" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_14" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.zc_15" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.delta_vel_pos_AI.zc_9" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.mdot_A_choked.zc_10" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.delta_vel_pos_BI.zc_11" )
-; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.mdot_B_choked.zc_12" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.zc_13" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.zc_14" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.zc_15" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.zc_16" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.zc_17" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.zc_18" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.zc_19" ) ;
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.zc_11" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
@@ -992,18 +754,6 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor_Volume.zc_1" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor_Volume.zc_2" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
 "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_7" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
@@ -1011,6 +761,114 @@ SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
 "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_8" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_9" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_10" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_11" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.delta_vel_pos_AI.zc_1" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.mdot_A_choked.zc_2" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.delta_vel_pos_BI.zc_3" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.mdot_B_choked.zc_4" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_5" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_6" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_7" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_8" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_9" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_10" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_11" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.delta_vel_pos_AI.zc_1" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.mdot_A_choked.zc_2" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.delta_vel_pos_BI.zc_3" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.mdot_B_choked.zc_4" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
@@ -1040,187 +898,19 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_9" ) ;
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_9" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_10" ) ;
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_10" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_11" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_12" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.zc_13" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.delta_vel_pos_AI.zc_5" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.mdot_A_choked.zc_6" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.delta_vel_pos_BI.zc_7" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.mdot_B_choked.zc_8" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_9" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_10" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pressure_Relief_Valve.Valve.zc_1"
-) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pressure_Relief_Valve.Valve.zc_2"
-) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pressure_Relief_Valve.Valve.zc_3"
-) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pressure_Relief_Valve.Valve.zc_4"
-) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_11" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_12" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_13" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_14" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.zc_15" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.delta_vel_pos_AI.zc_9" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.mdot_A_choked.zc_10" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.delta_vel_pos_BI.zc_11" )
-; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.mdot_B_choked.zc_12" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_13" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_14" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_15" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_16" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_17" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_18" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_19" ) ;
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.zc_11" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
@@ -1268,14 +958,38 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.mdot_choked.zc_5" )
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.mdot_choked.zc_1" )
 ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.mdot_unchoked.zc_6"
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.mdot_unchoked.zc_2"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.zc_3" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.zc_4" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.zc_5" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Purge_Valve.zc_6" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
@@ -1310,13 +1024,49 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
- "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pressure_Reducing_Valve.Valve.mdot_choked.zc_5"
+ "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pressure_Reducing_Valve.Valve.mdot_choked.zc_1"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
- "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pressure_Reducing_Valve.Valve.mdot_unchoked.zc_6"
+ "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pressure_Reducing_Valve.Valve.mdot_unchoked.zc_2"
+) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pressure_Reducing_Valve.Valve.zc_3"
+) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pressure_Reducing_Valve.Valve.zc_4"
+) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pressure_Reducing_Valve.Valve.zc_5"
+) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Fuel_Tank.zc_1" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Fuel_Tank.zc_2" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pressure_Reducing_Valve.Valve.zc_6"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
@@ -1340,18 +1090,6 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Fuel_Tank.zc_1" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Fuel_Tank.zc_2" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
 "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x2.Pressure_Reducing_Valve.Valve.zc_10"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
@@ -1364,13 +1102,37 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
- "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pressure_Relief_Valve.Valve.mdot_choked.zc_5"
+ "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pressure_Relief_Valve.Valve.mdot_choked.zc_1"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
- "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pressure_Relief_Valve.Valve.mdot_unchoked.zc_6"
+ "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pressure_Relief_Valve.Valve.mdot_unchoked.zc_2"
+) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pressure_Relief_Valve.Valve.zc_3"
+) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pressure_Relief_Valve.Valve.zc_4"
+) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pressure_Relief_Valve.Valve.zc_5"
+) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pressure_Relief_Valve.Valve.zc_6"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
@@ -1424,24 +1186,6 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor_Volume.zc_3" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor_Volume.zc_4" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor_Volume.zc_5" ) ;
-ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
-ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
-SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
-S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
-ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
 "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor.zc_1" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
@@ -1454,6 +1198,24 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor_Volume.zc_1" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor_Volume.zc_2" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor_Volume.zc_3" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
 "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor.zc_3" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
@@ -1461,6 +1223,18 @@ SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
 "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor.zc_4" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor.zc_5" ) ;
+ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
+ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
+SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
+S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
+ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor.zc_6" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
@@ -1541,13 +1315,13 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.convection_A.ht_in.zc_16"
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.convection_A.ht_in.zc_12"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.convection_B.ht_in.zc_17"
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.purge.Pipe_MA.convection_B.ht_in.zc_13"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
@@ -1601,61 +1375,61 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor.convection_A.ht_in.zc_5"
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor.convection_A.ht_in.zc_7"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor.convection_B.ht_in.zc_6"
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor.convection_B.ht_in.zc_8"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
- "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor_Volume.convection_A.ht_in.zc_6"
+ "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor_Volume.convection_A.ht_in.zc_4"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
- "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor_Volume.convection_B.ht_in.zc_7"
+ "Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor_Volume.convection_B.ht_in.zc_5"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.convection_A.ht_in.zc_16"
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.convection_A.ht_in.zc_12"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.convection_B.ht_in.zc_17"
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x4.Pipe_MA.convection_B.ht_in.zc_13"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.convection_A.ht_in.zc_20"
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.convection_A.ht_in.zc_12"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.convection_B.ht_in.zc_21"
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x5.Pipe_MA.convection_B.ht_in.zc_13"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.convection_A.ht_in.zc_14"
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.convection_A.ht_in.zc_12"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.convection_B.ht_in.zc_15"
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x6.Pipe_MA.convection_B.ht_in.zc_13"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
@@ -1667,13 +1441,13 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.convection_A.ht_in.zc_16"
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.convection_A.ht_in.zc_12"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.convection_B.ht_in.zc_17"
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x7.Pipe_MA.convection_B.ht_in.zc_13"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
@@ -1691,37 +1465,37 @@ ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.convection_A.ht_in.zc_20"
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.convection_A.ht_in.zc_12"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.convection_B.ht_in.zc_21"
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x8.Pipe_MA.convection_B.ht_in.zc_13"
 ) ; ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor.Ds_AB.zc_7" ) ;
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor.Ds_AB.zc_9" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor.Ds_AB.zc_8" ) ;
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor.Ds_AB.zc_10" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor.Ds_BA.zc_9" ) ;
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor.Ds_BA.zc_11" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
 S , zcsIdx , 0 ) ; zcsIdx = ssCreateAndAddZcSignalInfo ( S ) ;
 ssSetZcSignalWidth ( S , zcsIdx , 1 ) ; ssSetZcSignalName ( S , zcsIdx ,
-"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor.Ds_BA.zc_10" ) ;
+"Fuel_Cell.Fuel_Cell.Simscape_Fuel_Cell.x3.Compressor.Ds_BA.zc_12" ) ;
 ssSetZcSignalType ( S , zcsIdx , SL_ZCS_TYPE_CONT ) ;
 ssSetZcSignalZcEventType ( S , zcsIdx , SL_ZCS_EVENT_Z2N | SL_ZCS_EVENT_P2N |
 SL_ZCS_EVENT_N2Z | SL_ZCS_EVENT_N2P ) ; ssSetZcSignalNeedsEventNotification (
@@ -1748,8 +1522,6 @@ ssSetOutputPortIsNonContinuous ( S , 5 , 0 ) ;
 ssSetOutputPortIsFedByBlockWithModesNoZCs ( S , 5 , 0 ) ;
 ssSetOutputPortIsNonContinuous ( S , 6 , 0 ) ;
 ssSetOutputPortIsFedByBlockWithModesNoZCs ( S , 6 , 0 ) ;
-ssSetOutputPortIsNonContinuous ( S , 7 , 0 ) ;
-ssSetOutputPortIsFedByBlockWithModesNoZCs ( S , 7 , 0 ) ;
 ssSetInputPortIsNotDerivPort ( S , 0 , 0 ) ; ssSetInputPortIsNotDerivPort ( S
 , 1 , 0 ) ; ssSetInputPortIsNotDerivPort ( S , 2 , 0 ) ;
 ssSetModelReferenceSampleTimeInheritanceRule ( S ,
@@ -1821,41 +1593,53 @@ ssGetJacobianPerturbationBoundsMinVec ( S ) ; mclj3ytwnx * localXPerturbMax =
 localXPerturbMin , localXPerturbMax ) ; } static void mdlOutputs ( SimStruct
 * S , int_T tid ) { g5h05g3u4wx * dw = ( g5h05g3u4wx * ) ssGetDWork ( S , 0 )
 ; real_T const * i_alps4cqvbe = ( real_T * ) ssGetInputPortSignal ( S , 0 ) ;
-real_T const * i_i_i_broznjvo0f = ( real_T * ) ssGetInputPortSignal ( S , 1 )
-; real_T const * i_bav2fyyxpd = ( real_T * ) ssGetInputPortSignal ( S , 2 ) ;
-real_T * o_B_1_1 = ( real_T * ) ssGetOutputPortSignal ( S , 0 ) ; real_T *
-o_B_1_2 = ( real_T * ) ssGetOutputPortSignal ( S , 1 ) ; real_T * o_B_1_3 = (
-real_T * ) ssGetOutputPortSignal ( S , 2 ) ; real_T * o_B_1_4 = ( real_T * )
-ssGetOutputPortSignal ( S , 3 ) ; real_T * o_B_1_5 = ( real_T * )
-ssGetOutputPortSignal ( S , 4 ) ; real_T * o_B_1_6 = ( real_T * )
-ssGetOutputPortSignal ( S , 5 ) ; real_T * o_B_1_7 = ( real_T * )
-ssGetOutputPortSignal ( S , 6 ) ; real_T * o_B_1_8 = ( real_T * )
-ssGetOutputPortSignal ( S , 7 ) ; fw3fcrujzt * localX = ( fw3fcrujzt * )
+real_T const * i_i_i_i_i_i_bav2fyyxpd = ( real_T * ) ssGetInputPortSignal ( S
+, 2 ) ; real_T * o_B_3_1 = ( real_T * ) ssGetOutputPortSignal ( S , 0 ) ;
+real_T * o_B_3_2 = ( real_T * ) ssGetOutputPortSignal ( S , 1 ) ; real_T *
+o_o_o_B_3_3 = ( real_T * ) ssGetOutputPortSignal ( S , 2 ) ; real_T *
+o_o_o_o_o_o_B_3_4 = ( real_T * ) ssGetOutputPortSignal ( S , 3 ) ; real_T *
+o_B_3_5 = ( real_T * ) ssGetOutputPortSignal ( S , 4 ) ; real_T * o_B_3_6 = (
+real_T * ) ssGetOutputPortSignal ( S , 5 ) ; real_T * o_B_3_7 = ( real_T * )
+ssGetOutputPortSignal ( S , 6 ) ; fw3fcrujzt * localX = ( fw3fcrujzt * )
 ssGetContStates ( S ) ; if ( tid == PARAMETER_TUNING_TID ) {
 FCElectricPlantTID2 ( & ( dw -> rtm ) , & ( dw -> rtb ) , & ( dw -> rtdw ) )
 ; } if ( tid != CONSTANT_TID && tid != PARAMETER_TUNING_TID ) { if (
 ssIsSampleHit ( S , 0 , tid ) || ssIsMinorTimeStep ( S ) ) { FCElectricPlant
-( & ( dw -> rtm ) , i_alps4cqvbe , i_i_i_broznjvo0f , i_bav2fyyxpd , o_B_1_1
-, o_B_1_2 , o_B_1_3 , o_B_1_4 , o_B_1_5 , o_B_1_6 , o_B_1_7 , o_B_1_8 , & (
-dw -> rtb ) , & ( dw -> rtdw ) , localX , & ( dw -> rtzce ) ) ; } } }
+( & ( dw -> rtm ) , i_alps4cqvbe , i_i_i_i_i_i_bav2fyyxpd , o_B_3_1 , o_B_3_2
+, o_o_o_B_3_3 , o_o_o_o_o_o_B_3_4 , o_B_3_5 , o_B_3_6 , o_B_3_7 , & ( dw ->
+rtb ) , & ( dw -> rtdw ) , localX , & ( dw -> rtzce ) ) ; } } }
 #define MDL_UPDATE
 static void mdlUpdate ( SimStruct * S , int_T tid ) { g5h05g3u4wx * dw = (
-g5h05g3u4wx * ) ssGetDWork ( S , 0 ) ; fw3fcrujzt * localX = ( fw3fcrujzt * )
-ssGetContStates ( S ) ; czx1gq31fm ( & ( dw -> rtm ) , & ( dw -> rtb ) , & (
-dw -> rtdw ) , localX ) ; return ; }
+g5h05g3u4wx * ) ssGetDWork ( S , 0 ) ; real_T const * i_i_i_i_i_broznjvo0f =
+( real_T * ) ssGetInputPortSignal ( S , 1 ) ; real_T const *
+i_i_i_i_i_i_bav2fyyxpd = ( real_T * ) ssGetInputPortSignal ( S , 2 ) ; real_T
+* o_o_o_o_o_o_B_3_4 = ( real_T * ) ssGetOutputPortSignal ( S , 3 ) ;
+fw3fcrujzt * localX = ( fw3fcrujzt * ) ssGetContStates ( S ) ; czx1gq31fm ( &
+( dw -> rtm ) , i_i_i_i_i_broznjvo0f , i_i_i_i_i_i_bav2fyyxpd ,
+o_o_o_o_o_o_B_3_4 , & ( dw -> rtb ) , & ( dw -> rtdw ) , localX ) ; return ;
+}
 #define MDL_ZERO_CROSSINGS
 static void mdlZeroCrossings ( SimStruct * S ) { g5h05g3u4wx * dw = (
-g5h05g3u4wx * ) ssGetDWork ( S , 0 ) ; fw3fcrujzt * localX = ( fw3fcrujzt * )
-ssGetContStates ( S ) ; kqptpzakik * localZCSV = ( kqptpzakik * )
-ssGetNonsampledZCs ( S ) ; abih3gg12y ( & ( dw -> rtm ) , & ( dw -> rtb ) , &
-( dw -> rtdw ) , localX , localZCSV ) ; }
+g5h05g3u4wx * ) ssGetDWork ( S , 0 ) ; real_T const * i_i_i_i_i_broznjvo0f =
+( real_T * ) ssGetInputPortSignal ( S , 1 ) ; real_T const *
+i_i_i_i_i_i_bav2fyyxpd = ( real_T * ) ssGetInputPortSignal ( S , 2 ) ; real_T
+* o_o_o_o_o_o_B_3_4 = ( real_T * ) ssGetOutputPortSignal ( S , 3 ) ;
+fw3fcrujzt * localX = ( fw3fcrujzt * ) ssGetContStates ( S ) ; kqptpzakik *
+localZCSV = ( kqptpzakik * ) ssGetNonsampledZCs ( S ) ; abih3gg12y ( & ( dw
+-> rtm ) , i_i_i_i_i_broznjvo0f , i_i_i_i_i_i_bav2fyyxpd , o_o_o_o_o_o_B_3_4
+, & ( dw -> rtb ) , & ( dw -> rtdw ) , localX , localZCSV ) ; }
 #define MDL_DERIVATIVES
 static void mdlDerivatives ( SimStruct * S ) { g5h05g3u4wx * dw = (
-g5h05g3u4wx * ) ssGetDWork ( S , 0 ) ; real_T const * i_i_i_broznjvo0f = (
-real_T * ) ssGetInputPortSignal ( S , 1 ) ; fw3fcrujzt * localX = (
-fw3fcrujzt * ) ssGetContStates ( S ) ; dmzi3aztzd * localXdot = ( dmzi3aztzd
-* ) ssGetdX ( S ) ; imv3dllygl ( & ( dw -> rtm ) , i_i_i_broznjvo0f , & ( dw
--> rtb ) , & ( dw -> rtdw ) , localX , localXdot ) ; }
+g5h05g3u4wx * ) ssGetDWork ( S , 0 ) ; real_T const * i_i_i_i_i_broznjvo0f =
+( real_T * ) ssGetInputPortSignal ( S , 1 ) ; real_T const *
+i_i_i_i_i_i_bav2fyyxpd = ( real_T * ) ssGetInputPortSignal ( S , 2 ) ; real_T
+* o_o_o_B_3_3 = ( real_T * ) ssGetOutputPortSignal ( S , 2 ) ; real_T *
+o_o_o_o_o_o_B_3_4 = ( real_T * ) ssGetOutputPortSignal ( S , 3 ) ; fw3fcrujzt
+* localX = ( fw3fcrujzt * ) ssGetContStates ( S ) ; dmzi3aztzd * localXdot =
+( dmzi3aztzd * ) ssGetdX ( S ) ; imv3dllygl ( & ( dw -> rtm ) ,
+i_i_i_i_i_broznjvo0f , i_i_i_i_i_i_bav2fyyxpd , o_o_o_B_3_3 ,
+o_o_o_o_o_o_B_3_4 , & ( dw -> rtb ) , & ( dw -> rtdw ) , localX , localXdot )
+; }
 #define MDL_PROJECTION
 static void mdlProjection ( SimStruct * S ) { g5h05g3u4wx * dw = (
 g5h05g3u4wx * ) ssGetDWork ( S , 0 ) ; fw3fcrujzt * localX = ( fw3fcrujzt * )
@@ -1863,18 +1647,28 @@ ssGetContStates ( S ) ; mscgivy4fk ( & ( dw -> rtm ) , & ( dw -> rtb ) , & (
 dw -> rtdw ) , localX ) ; }
 #define MDL_FORCINGFUNCTION
 static void mdlForcingFunction ( SimStruct * S ) { g5h05g3u4wx * dw = (
-g5h05g3u4wx * ) ssGetDWork ( S , 0 ) ; real_T const * i_i_i_broznjvo0f = (
-real_T * ) ssGetInputPortSignal ( S , 1 ) ; fw3fcrujzt * localX = (
-fw3fcrujzt * ) ssGetContStates ( S ) ; dmzi3aztzd * localXdot = ( dmzi3aztzd
-* ) ssGetdX ( S ) ; iyhavcqilr ( & ( dw -> rtm ) , i_i_i_broznjvo0f , & ( dw
--> rtb ) , & ( dw -> rtdw ) , localX , localXdot ) ; }
+g5h05g3u4wx * ) ssGetDWork ( S , 0 ) ; real_T const * i_i_i_i_i_broznjvo0f =
+( real_T * ) ssGetInputPortSignal ( S , 1 ) ; real_T const *
+i_i_i_i_i_i_bav2fyyxpd = ( real_T * ) ssGetInputPortSignal ( S , 2 ) ; real_T
+* o_o_o_B_3_3 = ( real_T * ) ssGetOutputPortSignal ( S , 2 ) ; real_T *
+o_o_o_o_o_o_B_3_4 = ( real_T * ) ssGetOutputPortSignal ( S , 3 ) ; fw3fcrujzt
+* localX = ( fw3fcrujzt * ) ssGetContStates ( S ) ; dmzi3aztzd * localXdot =
+( dmzi3aztzd * ) ssGetdX ( S ) ; iyhavcqilr ( & ( dw -> rtm ) ,
+i_i_i_i_i_broznjvo0f , i_i_i_i_i_i_bav2fyyxpd , o_o_o_B_3_3 ,
+o_o_o_o_o_o_B_3_4 , & ( dw -> rtb ) , & ( dw -> rtdw ) , localX , localXdot )
+; }
 #define MDL_MASSMATRIX
 static void mdlMassMatrix ( SimStruct * S ) { g5h05g3u4wx * dw = (
-g5h05g3u4wx * ) ssGetDWork ( S , 0 ) ; fw3fcrujzt * localX = ( fw3fcrujzt * )
-ssGetContStates ( S ) ; bpia4crzhf ( & ( dw -> rtm ) , & ( dw -> rtb ) , & (
-dw -> rtdw ) , localX ) ; } static void mdlTerminate ( SimStruct * S ) {
-g5h05g3u4wx * dw = ( g5h05g3u4wx * ) ssGetDWork ( S , 0 ) ; mt14yrnbuj ( & (
-dw -> rtdw ) , & ( dw -> rtm ) ) ; return ; }
+g5h05g3u4wx * ) ssGetDWork ( S , 0 ) ; real_T const * i_i_i_i_i_broznjvo0f =
+( real_T * ) ssGetInputPortSignal ( S , 1 ) ; real_T const *
+i_i_i_i_i_i_bav2fyyxpd = ( real_T * ) ssGetInputPortSignal ( S , 2 ) ; real_T
+* o_o_o_o_o_o_B_3_4 = ( real_T * ) ssGetOutputPortSignal ( S , 3 ) ;
+fw3fcrujzt * localX = ( fw3fcrujzt * ) ssGetContStates ( S ) ; bpia4crzhf ( &
+( dw -> rtm ) , i_i_i_i_i_broznjvo0f , i_i_i_i_i_i_bav2fyyxpd ,
+o_o_o_o_o_o_B_3_4 , & ( dw -> rtb ) , & ( dw -> rtdw ) , localX ) ; } static
+void mdlTerminate ( SimStruct * S ) { g5h05g3u4wx * dw = ( g5h05g3u4wx * )
+ssGetDWork ( S , 0 ) ; mt14yrnbuj ( & ( dw -> rtdw ) , & ( dw -> rtm ) ) ;
+return ; }
 #define MDL_CLEANUP_RUNTIME_RESOURCES
 static void mdlCleanupRuntimeResources ( SimStruct * S ) { g5h05g3u4wx * dw =
 ( g5h05g3u4wx * ) ssGetDWork ( S , 0 ) ; irfppkdltu ( & ( dw -> rtm ) , & (

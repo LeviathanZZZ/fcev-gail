@@ -1,5 +1,5 @@
-﻿-ID:\FCEV_GAIl\FCEV\Work
--ID:\FCEV_GAIl\FCEV\Work\slprj\sim\FCElectricPlant
+﻿-ID:\fcev-gail\FCEV\Work
+-ID:\fcev-gail\FCEV\Work\slprj\sim\FCElectricPlant
 -ID:\MATLAB2023a\extern\include
 -ID:\MATLAB2023a\simulink\include
 -ID:\MATLAB2023a\rtw\c\src
@@ -16,4 +16,4 @@
 -ID:\MATLAB2023a\extern\physmod\win64\ssc_ds\include
 -ID:\MATLAB2023a\extern\physmod\win64\ssc_sli\include
 -ID:\MATLAB2023a\extern\physmod\win64\ssc_st\include
--ID:\FCEV_GAIl\FCEV\Work\slprj\sim\_sharedutils
+-ID:\fcev-gail\FCEV\Work\slprj\sim\_sharedutils

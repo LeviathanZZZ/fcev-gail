@@ -82,7 +82,7 @@ PRODUCT                 = $(RELATIVE_PATH_TO_ANCHOR)\FCElectricPlant_msf.mexw64
 MAKEFILE                = FCElectricPlant.mk
 MATLAB_ROOT             = D:\MATLAB2023a
 ALT_MATLAB_ROOT         = D:\MATLAB2023a
-START_DIR               = D:\FCEV_GAIl\FCEV\System
+START_DIR               = D:\fcev-gail\FCEV\System
 S_FUNCTIONS_LIB         = $(START_DIR)\slprj\sim\_sharedutils\rtwshared.lib
 NUMST                   = 2
 NCSTATES                = 413
@@ -116,7 +116,7 @@ DEBUG_BUILD             = 0
 
 #--------------------------- Model and reference models -----------------------
 MODELLIB                  = FCElectricPlant_msf.mexw64
-MODELREF_LINK_LIBS        = D:\FCEV_GAIl\FCEV\System\slprj\sim\FCElectricPlant\FCElectricPlantlib.lib
+MODELREF_LINK_LIBS        = D:\fcev-gail\FCEV\System\slprj\sim\FCElectricPlant\FCElectricPlantlib.lib
 MODELREF_LINK_RSPFILE     = FCElectricPlant_ref.rsp
 COMPILER_COMMAND_FILE     = FCElectricPlant_comp.rsp
 RELATIVE_PATH_TO_ANCHOR   = ..\..\..\..

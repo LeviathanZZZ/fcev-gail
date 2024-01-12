@@ -82,7 +82,7 @@ PRODUCT                 = $(RELATIVE_PATH_TO_ANCHOR)\FCEvPowertrainController_ms
 MAKEFILE                = FCEvPowertrainController.mk
 MATLAB_ROOT             = D:\MATLAB2023a
 ALT_MATLAB_ROOT         = D:\MATLAB2023a
-START_DIR               = D:\FCEV_GAIl\FCEV\Work
+START_DIR               = D:\fcev-gail\FCEV\Work
 S_FUNCTIONS_LIB         = $(START_DIR)\slprj\sim\_sharedutils\rtwshared.lib
 NUMST                   = 2
 NCSTATES                = 1
@@ -116,7 +116,7 @@ DEBUG_BUILD             = 0
 
 #--------------------------- Model and reference models -----------------------
 MODELLIB                  = FCEvPowertrainController_msf.mexw64
-MODELREF_LINK_LIBS        = D:\FCEV_GAIl\FCEV\Work\slprj\sim\FCEvPowertrainController\FCEvPowertrainControllerlib.lib
+MODELREF_LINK_LIBS        = D:\fcev-gail\FCEV\Work\slprj\sim\FCEvPowertrainController\FCEvPowertrainControllerlib.lib
 MODELREF_LINK_RSPFILE     = FCEvPowertrainController_ref.rsp
 COMPILER_COMMAND_FILE     = FCEvPowertrainController_comp.rsp
 RELATIVE_PATH_TO_ANCHOR   = ..\..\..\..

@@ -256,7 +256,7 @@ class DDPG(object):
 
 
 class Config:
-    num_episode = 1
+    num_episode = 10000
     num_episode_gail = 10000
     state_dim = 2
     hidden_layers_dim = 256
@@ -403,7 +403,7 @@ def train_agent(cfg):
     index = ac_agent.pointer % ac_agent.memory_capacity
     ac_agent.memory =np.load('data.npy')
     VAR = np.load('VAR.npy')
-    ddpg.pointer = np.load('data.npy')
+    # ac_agent.pointer = np.load('data.npy')
     steps = 0
     steps=np.load("steps.npy")
     ou_noise = OUNoise(1)
@@ -423,13 +423,17 @@ def train_agent(cfg):
         next_state_list = []
         rewards_list = []
         done_list = []
+        soc_list = []
+        pfc_list = []
+        h2_list = []
+        fc_loss_list = []
         episode_rewards = 0
         # steps = 0
         reward_totle = 0
         episode_return = 0
         total_reward = 0
         count = 0
-        pause_time = 21
+        pause_time = 2
         action_pre = 0
         # steps = 0
         # for timestep in range(0, 1369, 1):
@@ -441,7 +445,7 @@ def train_agent(cfg):
 
             Clock = Clock[-1]
 
-            if Clock == 20:
+            if Clock == 0:
                 soc = np.array(engine.eval('soc')).reshape(-1)
                 v = np.array(engine.eval('v')).reshape(-1)
                 a = np.array(engine.eval('a')).reshape(-1)
@@ -458,9 +462,17 @@ def train_agent(cfg):
                 # Clock, soc, P_de = engine.run(float(action), pause_time,nargout=3)
                 action = ac_agent.choose_action(state)
                 print("噪声前",action)
-                action = ou_noise.get_action(action, steps)
+                # action = ou_noise.get_action(action, steps)
                 # action = (action + np.random.normal(0, VAR, 1)).clip(0.0, 3.5)
                 Clock, soc, v, a,h2,p_de = engine.run(float(action), pause_time, nargout=6)
+                p_fc = np.array(engine.eval('P_fc')).reshape(-1)
+                fc_loss = np.array(engine.eval('loss')).reshape(-1)
+                p_fc = p_fc[-1]
+                fc_loss=fc_loss[-1]
+                soc_list.append(soc)
+                fc_loss_list.append(fc_loss)
+                pfc_list.append(p_fc)
+                h2_list.append(h2)
                 pause_time = pause_time + 1
                 # next_state = get_state(soc, v,a)
                 next_state = get_state(soc, p_de)
@@ -530,7 +542,7 @@ def train_agent(cfg):
                 # done = True
                 # PPO 更新
                 # if Clock>=20:
-                if Clock>=22:
+                if Clock>=1:
                     memory,pointer = ac_agent.store_transition(state, action, 10*reward , next_state)
                 steps += 1
                 np.save('steps.npy',steps)
@@ -547,21 +559,21 @@ def train_agent(cfg):
                 # torch.save(ac_agent.actor.state_dict(), cfg.save_path)
                 # torch.save(ac_agent.critic.state_dict(),cfg.save_path_critic)
                 # if episode%1==0:
-        # check = {
-        #     'epoch': episode,  # 保存当前的迭代次数
-        #     'actor_state_dict': ac_agent.actor.state_dict(),  # 保存模型参数
-        #     'actor_target_state_dict':ac_agent.actor_target.state_dict(),
-        #     'critic_state_dict': ac_agent.critic.state_dict(),  # 保存模型参数
-        #     'critic_target_state_dict': ac_agent.critic_target.state_dict(),
-        #
-        #     'acotr_optimizer': ac_agent.aopt.state_dict(),  # 保存优化器参数
-        #     'critic_optimizer': ac_agent.copt.state_dict(),  # 保存优化器参数
-        #
-        # }
-        # torch.save(check, 'checkpoint.pth.tar')
-        # np.save('data.npy',memory)
-        # np.save('pointer.npy',pointer)
-        # np.save('VAR.npy',VAR)
+        check = {
+            'epoch': episode,  # 保存当前的迭代次数
+            'actor_state_dict': ac_agent.actor.state_dict(),  # 保存模型参数
+            'actor_target_state_dict':ac_agent.actor_target.state_dict(),
+            'critic_state_dict': ac_agent.critic.state_dict(),  # 保存模型参数
+            'critic_target_state_dict': ac_agent.critic_target.state_dict(),
+
+            'acotr_optimizer': ac_agent.aopt.state_dict(),  # 保存优化器参数
+            'critic_optimizer': ac_agent.copt.state_dict(),  # 保存优化器参数
+
+        }
+        torch.save(check, 'checkpoint.pth.tar')
+        np.save('data.npy',memory)
+        np.save('pointer.npy',pointer)
+        np.save('VAR.npy',VAR)
                     # break
         # print("train!!")
         # ac_agent.update(buffer_.buffer)
@@ -599,10 +611,12 @@ def train_agent(cfg):
         #     torch.save(ac_agent.critic.state_dict(), cfg.save_path_best_critic)
         Writer.add_scalar(tag="ppo_return",scalar_value=now_reward,global_step=i)
         tq_bar.set_postfix({'lastMeanRewards': f'{now_reward:.2f}', 'BEST': f'{bf_reward:.2f}'})
-        data_write('./reward.xls', rewards_list)
-        np.save("state.npy", state_list)
-        np.save("action.npy", action_list)
-        # engine.set_param(env_name, 'SimulationCommand', 'stop', nargout=0)
+        data_write('D:/reward.xls', rewards_list)
+        data_write("./仿真数据/soc.xls", soc_list)
+        data_write("./仿真数据/p_fc.xls", pfc_list)
+        data_write("./仿真数据/fule_co.xls", h2_list)
+        data_write("./仿真数据/fc_loss.xls", fc_loss_list)
+        engine.set_param(env_name, 'SimulationCommand', 'stop', nargout=0)
         print("结束")
         episode+=1
 

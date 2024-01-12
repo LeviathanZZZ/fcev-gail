@@ -77,12 +77,12 @@ TOOLCHAIN_NAME = [\
 #                            and do not build an executable
 
 MODEL                   = rtwshared
-MODULES                 = automldiffopen_fST5L1uO.c interp2_3pYtODK0.c look1_binlcpw.c look1_binlxpw.c rtGetInf.c rtGetNaN.c rt_nonfinite.c rt_zcfcn.c rt_backsubrr_dbl.c rt_forwardsubrr_dbl.c rt_lu_real.c rt_matrixlib_dbl.c look1_binlcapw.c look2_binlcapw.c look2_binlxpw.c
+MODULES                 = interp1_9GZFMMVJ.c rtGetInf.c rtGetNaN.c rt_backsubrr_dbl.c rt_forwardsubrr_dbl.c rt_lu_real.c rt_matrixlib_dbl.c rt_nonfinite.c look1_binlxpw.c BatteryChargingEfficiency_C1XpRdVx.c interp1_1jJu1mdf.c interp1_frBAHu58.c
 PRODUCT                 = rtwshared.lib
 MAKEFILE                = 
 MATLAB_ROOT             = D:\MATLAB2023a
 ALT_MATLAB_ROOT         = D:\MATLAB2023a
-START_DIR               = D:\FCEV_GAIl\FCEV\Work
+START_DIR               = D:\fcev-gail\FCEV\Work
 S_FUNCTIONS_LIB         = 
 NUMST                   = 
 NCSTATES                = 0

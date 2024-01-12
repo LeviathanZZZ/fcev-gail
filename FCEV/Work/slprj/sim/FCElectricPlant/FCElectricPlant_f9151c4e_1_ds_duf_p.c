@@ -7,18 +7,19 @@
 #include "ssc_ml_fun.h"
 int32_T FCElectricPlant_f9151c4e_1_ds_duf_p ( const NeDynamicSystem * LC ,
 const NeDynamicSystemInput * t1 , NeDsMethodOutput * t2 ) { PmSparsityPattern
-out ; ( void ) t1 ; ( void ) LC ; out = t2 -> mDUF_P ; out . mNumCol = 12ULL
-; out . mNumRow = 399ULL ; out . mJc [ 0 ] = 0 ; out . mJc [ 1 ] = 0 ; out .
-mJc [ 2 ] = 3 ; out . mJc [ 3 ] = 6 ; out . mJc [ 4 ] = 7 ; out . mJc [ 5 ] =
-12 ; out . mJc [ 6 ] = 13 ; out . mJc [ 7 ] = 18 ; out . mJc [ 8 ] = 19 ; out
-. mJc [ 9 ] = 25 ; out . mJc [ 10 ] = 27 ; out . mJc [ 11 ] = 27 ; out . mJc
-[ 12 ] = 27 ; out . mIr [ 0 ] = 117 ; out . mIr [ 1 ] = 118 ; out . mIr [ 2 ]
-= 121 ; out . mIr [ 3 ] = 161 ; out . mIr [ 4 ] = 162 ; out . mIr [ 5 ] = 165
-; out . mIr [ 6 ] = 203 ; out . mIr [ 7 ] = 23 ; out . mIr [ 8 ] = 24 ; out .
-mIr [ 9 ] = 25 ; out . mIr [ 10 ] = 26 ; out . mIr [ 11 ] = 205 ; out . mIr [
-12 ] = 205 ; out . mIr [ 13 ] = 35 ; out . mIr [ 14 ] = 36 ; out . mIr [ 15 ]
-= 37 ; out . mIr [ 16 ] = 38 ; out . mIr [ 17 ] = 278 ; out . mIr [ 18 ] =
-278 ; out . mIr [ 19 ] = 316 ; out . mIr [ 20 ] = 323 ; out . mIr [ 21 ] =
-336 ; out . mIr [ 22 ] = 342 ; out . mIr [ 23 ] = 343 ; out . mIr [ 24 ] =
-344 ; out . mIr [ 25 ] = 60 ; out . mIr [ 26 ] = 61 ; ( void ) LC ; ( void )
-t2 ; return 0 ; }
+out ; ( void ) t1 ; ( void ) LC ; out = t2 -> mDUF_P ; out . mNumCol = 13ULL
+; out . mNumRow = 394ULL ; out . mJc [ 0 ] = 0 ; out . mJc [ 1 ] = 0 ; out .
+mJc [ 2 ] = 2 ; out . mJc [ 3 ] = 5 ; out . mJc [ 4 ] = 8 ; out . mJc [ 5 ] =
+9 ; out . mJc [ 6 ] = 14 ; out . mJc [ 7 ] = 15 ; out . mJc [ 8 ] = 20 ; out
+. mJc [ 9 ] = 21 ; out . mJc [ 10 ] = 27 ; out . mJc [ 11 ] = 29 ; out . mJc
+[ 12 ] = 29 ; out . mJc [ 13 ] = 29 ; out . mIr [ 0 ] = 51 ; out . mIr [ 1 ]
+= 52 ; out . mIr [ 2 ] = 112 ; out . mIr [ 3 ] = 113 ; out . mIr [ 4 ] = 116
+; out . mIr [ 5 ] = 156 ; out . mIr [ 6 ] = 157 ; out . mIr [ 7 ] = 160 ; out
+. mIr [ 8 ] = 198 ; out . mIr [ 9 ] = 21 ; out . mIr [ 10 ] = 22 ; out . mIr
+[ 11 ] = 23 ; out . mIr [ 12 ] = 24 ; out . mIr [ 13 ] = 200 ; out . mIr [ 14
+] = 200 ; out . mIr [ 15 ] = 33 ; out . mIr [ 16 ] = 34 ; out . mIr [ 17 ] =
+35 ; out . mIr [ 18 ] = 36 ; out . mIr [ 19 ] = 273 ; out . mIr [ 20 ] = 273
+; out . mIr [ 21 ] = 311 ; out . mIr [ 22 ] = 318 ; out . mIr [ 23 ] = 331 ;
+out . mIr [ 24 ] = 337 ; out . mIr [ 25 ] = 338 ; out . mIr [ 26 ] = 339 ;
+out . mIr [ 27 ] = 55 ; out . mIr [ 28 ] = 56 ; ( void ) LC ; ( void ) t2 ;
+return 0 ; }
