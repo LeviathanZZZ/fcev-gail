@@ -115,7 +115,7 @@ class Critic(nn.Module):
 
 class DDPG_GAIL(object):
     def __init__(self, state_dim, action_dim, action_bound, replacement, memory_capacity=1000, gamma=0.99, lr_a=1e-4,
-                 lr_c=1e-4,batch_size=128):
+                 lr_c=1e-3,batch_size=128):
         super(DDPG_GAIL, self).__init__()
         self.state_dim = state_dim
         self.action_dim = action_dim
@@ -138,7 +138,7 @@ class DDPG_GAIL(object):
         self.critic = Critic(state_dim, action_dim)
         self.critic_target = Critic(state_dim, action_dim)
         self.discriminator = Discriminator(state_dim, action_dim)
-        self.discriminator_optimizer = torch.optim.Adam(self.discriminator.parameters(), lr=3e-4)
+        self.discriminator_optimizer = torch.optim.Adam(self.discriminator.parameters(), lr=1e-4)
         # 定义优化器
         self.aopt = torch.optim.Adam(self.actor.parameters(), lr=lr_a)
         self.copt = torch.optim.Adam(self.critic.parameters(), lr=lr_c)
@@ -175,20 +175,20 @@ class DDPG_GAIL(object):
         expert_s,expert_a=self.sample_expert(expert_s,expert_a)
         expert_states = torch.tensor(expert_s, dtype=torch.float)
         expert_actions = torch.tensor(expert_a, dtype=torch.float)
+        # agent_prob = self.discriminator(bs, ba)
+        # br = -torch.log(agent_prob).detach().cpu().numpy()
+        # br = torch.FloatTensor(br)
+
+        # for i in range(1):
+        expert_prob = self.discriminator(expert_states, expert_actions)
         agent_prob = self.discriminator(bs, ba)
+        discriminator_loss = nn.BCELoss()(agent_prob, torch.ones_like(agent_prob)) + nn.BCELoss()(expert_prob,torch.zeros_like(expert_prob))
+        self.discriminator_optimizer.zero_grad()
+        discriminator_loss.backward()
+        self.discriminator_optimizer.step()
+
         br = -torch.log(agent_prob).detach().cpu().numpy()
         br = torch.FloatTensor(br)
-
-        for i in range(2):
-            expert_prob = self.discriminator(expert_states, expert_actions)
-            # expert_prob = torch.clamp(expert_prob, 1e-10, 1)
-            agent_prob = self.discriminator(bs, ba)
-            # agent_prob = torch.clamp(agent_prob, 1e-10, 1)
-            discriminator_loss = nn.BCELoss()(agent_prob, torch.ones_like(agent_prob)) + nn.BCELoss()(expert_prob,torch.zeros_like(expert_prob))
-            self.discriminator_optimizer.zero_grad()
-            discriminator_loss.backward()
-            self.discriminator_optimizer.step()
-
 
         # 训练Actor
         a = self.actor(bs)
@@ -482,7 +482,7 @@ def train_ddpg_gail(expert_s,expert_a):
     MAX_EP_STEPS = 200
     MEMORY_CAPACITY = 10000
     REPLACEMENT = [
-        dict(name='soft', tau=1e-2),
+        dict(name='soft', tau=1e-3),
         dict(name='hard', rep_iter=600)
     ][0]  # you can try different target replacement strategies
 
@@ -530,10 +530,10 @@ def train_ddpg_gail(expert_s,expert_a):
 
             s = s_
             ep_reward += r
-            if ddpg.pointer >= 10000:
+            # if ddpg.pointer >= 10000:
                 # VAR *= .99995  # decay the action randomness[
             # ddpg.learn()
-                ddpg.learn(expert_s,expert_a)
+            ddpg.learn(expert_s,expert_a)
             # print("train")
             if j == MAX_EP_STEPS - 1:
                 print('Episode:', i, ' Reward: %i' % int(ep_reward), 'Explore: %.2f' % VAR, ddpg.pointer)
@@ -565,7 +565,7 @@ if __name__ == '__main__':
                 memory_capacity=MEMORY_CAPACITY)
     # ddpg=train_ddpg()
     ddpg.actor.load_state_dict(torch.load(r'D:\ddpg_actor.ckpt'))
-    expert_s, expert_a = sample_expert_data(ddpg, 5)
+    expert_s, expert_a = sample_expert_data(ddpg, 1)
     ddpg_gail=train_ddpg_gail(expert_s,expert_a)
     # ddpg.actor.load_state_dict(torch.load(r'D:\gail_actor.ckpt'))
     # expert_s, expert_a = sample_expert_data(ddpg, 10)

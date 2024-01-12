@@ -423,13 +423,17 @@ def train_agent(cfg):
         next_state_list = []
         rewards_list = []
         done_list = []
+        soc_list = []
+        pfc_list = []
+        h2_list = []
+        fc_loss_list = []
         episode_rewards = 0
         # steps = 0
         reward_totle = 0
         episode_return = 0
         total_reward = 0
         count = 0
-        pause_time = 21
+        pause_time = 2
         action_pre = 0
         # steps = 0
         # for timestep in range(0, 1369, 1):
@@ -441,7 +445,7 @@ def train_agent(cfg):
 
             Clock = Clock[-1]
 
-            if Clock == 20:
+            if Clock == 0:
                 soc = np.array(engine.eval('soc')).reshape(-1)
                 v = np.array(engine.eval('v')).reshape(-1)
                 a = np.array(engine.eval('a')).reshape(-1)
@@ -461,6 +465,14 @@ def train_agent(cfg):
                 # action = ou_noise.get_action(action, steps)
                 # action = (action + np.random.normal(0, VAR, 1)).clip(0.0, 3.5)
                 Clock, soc, v, a,h2,p_de = engine.run(float(action), pause_time, nargout=6)
+                p_fc = np.array(engine.eval('P_fc')).reshape(-1)
+                fc_loss = np.array(engine.eval('loss')).reshape(-1)
+                p_fc = p_fc[-1]
+                fc_loss=fc_loss[-1]
+                soc_list.append(soc)
+                fc_loss_list.append(fc_loss)
+                pfc_list.append(p_fc)
+                h2_list.append(h2)
                 pause_time = pause_time + 1
                 # next_state = get_state(soc, v,a)
                 next_state = get_state(soc, p_de)
@@ -530,7 +542,7 @@ def train_agent(cfg):
                 # done = True
                 # PPO 更新
                 # if Clock>=20:
-                if Clock>=22:
+                if Clock>=1:
                     memory,pointer = ac_agent.store_transition(state, action, 10*reward , next_state)
                 steps += 1
                 np.save('steps.npy',steps)
@@ -600,6 +612,10 @@ def train_agent(cfg):
         Writer.add_scalar(tag="ppo_return",scalar_value=now_reward,global_step=i)
         tq_bar.set_postfix({'lastMeanRewards': f'{now_reward:.2f}', 'BEST': f'{bf_reward:.2f}'})
         data_write('D:/reward.xls', rewards_list)
+        data_write("./仿真数据/soc.xls", soc_list)
+        data_write("./仿真数据/p_fc.xls", pfc_list)
+        data_write("./仿真数据/fule_co.xls", h2_list)
+        data_write("./仿真数据/fc_loss.xls", fc_loss_list)
         engine.set_param(env_name, 'SimulationCommand', 'stop', nargout=0)
         print("结束")
         episode+=1

@@ -75,9 +75,9 @@ class Actor(nn.Module):
 class Discriminator(nn.Module):
     def __init__(self, state_dim, action_dim):
         super(Discriminator, self).__init__()
-        self.layer1 = nn.Linear(state_dim + action_dim, 256)
-        self.layer2 = nn.Linear(256, 256)
-        self.layer3 = nn.Linear(256, 1)
+        self.layer1 = nn.Linear(state_dim + action_dim, 128)
+        self.layer2 = nn.Linear(128, 128)
+        self.layer3 = nn.Linear(128, 1)
 
     def forward(self, state, action):
         x = torch.cat([state, action], 1)
@@ -116,7 +116,7 @@ class Critic(nn.Module):
 
 class DDPG_GAIL(object):
     def __init__(self, state_dim, action_dim, action_bound, replacement, memory_capacity=1000, gamma=0.99, lr_a=1e-4,
-                 lr_c=1e-3,batch_size=128):
+                 lr_c=1e-3,batch_size=256):
         super(DDPG_GAIL, self).__init__()
         self.state_dim = state_dim
         self.action_dim = action_dim
@@ -139,7 +139,7 @@ class DDPG_GAIL(object):
         self.critic = Critic(state_dim, action_dim)
         self.critic_target = Critic(state_dim, action_dim)
         self.discriminator = Discriminator(state_dim, action_dim)
-        self.discriminator_optimizer = torch.optim.Adam(self.discriminator.parameters(), lr=1e-4)
+        self.discriminator_optimizer = torch.optim.Adam(self.discriminator.parameters(), lr=7e-4)
         # 定义优化器
         self.aopt = torch.optim.Adam(self.actor.parameters(), lr=lr_a)
         self.copt = torch.optim.Adam(self.critic.parameters(), lr=lr_c)
@@ -151,9 +151,9 @@ class DDPG_GAIL(object):
         return self.memory[indices, :]
 
     def sample_expert(self,expert_s,expert_a):
-        # indices = np.random.choice(200, size=self.batch_size)
-        random_index = random.sample(range(expert_s.shape[0]), self.batch_size)
-        return expert_s[random_index],expert_a[random_index]
+        indices = np.random.choice(200, size=self.batch_size)
+        # random_index = random.sample(range(expert_s.shape[0]), self.batch_size)
+        return expert_s[indices,:],expert_a[indices,:]
 
     def sample_recent(self, batch_size, window):
         """Sample transitions from the most recent ones
@@ -178,76 +178,6 @@ class DDPG_GAIL(object):
         return action.detach().numpy()
 
     def learn(self,expert_s,expert_a):
-
-        # soft replacement and hard replacement
-        # 用于更新target网络的参数
-        # 从记忆库中采样bacth data
-        # bm = self.sample()
-        # bs = torch.FloatTensor(bm[:, :self.state_dim])
-        # ba = torch.FloatTensor(bm[:, self.state_dim:self.state_dim + self.action_dim])
-        # # br = torch.FloatTensor(bm[:, -self.state_dim - 1: -self.state_dim])
-        # bs_ = torch.FloatTensor(bm[:, -self.state_dim:])
-
-
-        #读取专家数据集
-        # expert_s,expert_a=self.sample_expert(expert_s,expert_a)
-        # expert_states = torch.tensor(expert_s, dtype=torch.float)
-        # expert_actions = torch.tensor(expert_a, dtype=torch.float)
-        # agent_prob = self.discriminator(bs, ba)
-
-        # window = 128
-        # recent_batch = self.sample_recent(self.batch_size, window)
-        for i in range(2):
-            bm = self.sample()
-            bs = torch.FloatTensor(bm[:, :self.state_dim])
-            ba = torch.FloatTensor(bm[:, self.state_dim:self.state_dim + self.action_dim])
-            # br = torch.FloatTensor(bm[:, -self.state_dim - 1: -self.state_dim])
-            bs_ = torch.FloatTensor(bm[:, -self.state_dim:])
-
-            expert_s, expert_a = self.sample_expert(expert_s, expert_a)
-            expert_states = torch.tensor(expert_s, dtype=torch.float)
-            expert_actions = torch.tensor(expert_a, dtype=torch.float)
-            expert_prob = self.discriminator(expert_states, expert_actions)
-            # expert_prob = torch.clamp(expert_prob, 1e-10, 1)
-            agent_prob = self.discriminator(bs, ba)
-            # agent_prob = torch.clamp(agent_prob, 1e-10, 1)
-            discriminator_loss = nn.BCELoss()(agent_prob, torch.ones_like(agent_prob)) + nn.BCELoss()(expert_prob,torch.zeros_like(expert_prob))
-            self.discriminator_optimizer.zero_grad()
-            discriminator_loss.backward()
-            # U.clip_grad_norm_(self.discriminator.parameters(), 5.)
-            self.discriminator_optimizer.step()
-
-
-
-        bm = self.sample()
-        bs = torch.FloatTensor(bm[:, :self.state_dim])
-        ba = torch.FloatTensor(bm[:, self.state_dim:self.state_dim + self.action_dim])
-        # br = torch.FloatTensor(bm[:, -self.state_dim - 1: -self.state_dim])
-        bs_ = torch.FloatTensor(bm[:, -self.state_dim:])
-        agent_prob = self.discriminator(bs, ba)
-        br = -torch.log(agent_prob).detach().numpy()
-        br = torch.FloatTensor(br)
-
-        # 训练Actor
-        a = self.actor(bs)
-        q = self.critic(bs, a)
-        a_loss = -torch.mean(q)
-        self.aopt.zero_grad()
-        a_loss.backward(retain_graph=True)
-        # nn.utils.clip_grad_norm_(self.actor.parameters(), 0.5)
-        self.aopt.step()
-
-        # 训练critic
-        a_ = self.actor_target(bs_)
-        q_ = self.critic_target(bs_, a_)
-        q_target = br + self.gamma * q_
-        q_eval = self.critic(bs, ba)
-        td_error = self.mse_loss(q_target, q_eval)
-        self.copt.zero_grad()
-        td_error.backward()
-        # nn.utils.clip_grad_norm_(self.critic.parameters(), 0.5)
-        self.copt.step()
-
         if self.replacement['name'] == 'soft':
             # soft的意思是每次learn的时候更新部分参数
             tau = self.replacement['tau']
@@ -279,6 +209,76 @@ class DDPG_GAIL(object):
                     cl[1].bias.data = self.critic.state_dict()[cl[0] + '.bias']
 
             self.t_replace_counter += 1
+
+        # soft replacement and hard replacement
+        # 用于更新target网络的参数
+        # 从记忆库中采样bacth data
+        bm = self.sample()
+        bs = torch.FloatTensor(bm[:, :self.state_dim])
+        ba = torch.FloatTensor(bm[:, self.state_dim:self.state_dim + self.action_dim])
+        # br = torch.FloatTensor(bm[:, -self.state_dim - 1: -self.state_dim])
+        bs_ = torch.FloatTensor(bm[:, -self.state_dim:])
+
+
+        # 读取专家数据集
+        # expert_s,expert_a=self.sample_expert(expert_s,expert_a)
+
+        # agent_prob = self.discriminator(bs, ba)
+
+        # window = 128
+        # recent_batch = self.sample_recent(self.batch_size, window)
+        # for i in range(1):
+            # bm = self.sample()
+            # bs = torch.FloatTensor(bm[:, :self.state_dim])
+            # ba = torch.FloatTensor(bm[:, self.state_dim:self.state_dim + self.action_dim])
+            # # br = torch.FloatTensor(bm[:, -self.state_dim - 1: -self.state_dim])
+            # bs_ = torch.FloatTensor(bm[:, -self.state_dim:])
+
+
+        expert_states = torch.tensor(expert_s, dtype=torch.float)
+        expert_actions = torch.tensor(expert_a, dtype=torch.float)
+        expert_prob = self.discriminator(expert_states, expert_actions)
+        # expert_prob = torch.clamp(expert_prob, 1e-10, 1)
+        agent_prob = self.discriminator(bs, ba)
+        # agent_prob = torch.clamp(agent_prob, 1e-10, 1)
+        discriminator_loss = nn.BCELoss()(agent_prob, torch.ones_like(agent_prob)) + nn.BCELoss()(expert_prob,torch.zeros_like(expert_prob))
+        self.discriminator_optimizer.zero_grad()
+        discriminator_loss.backward()
+        # U.clip_grad_norm_(self.discriminator.parameters(), 5.)
+        self.discriminator_optimizer.step()
+
+
+
+        # bm = self.sample()
+        # bs = torch.FloatTensor(bm[:, :self.state_dim])
+        # ba = torch.FloatTensor(bm[:, self.state_dim:self.state_dim + self.action_dim])
+        # # br = torch.FloatTensor(bm[:, -self.state_dim - 1: -self.state_dim])
+        # bs_ = torch.FloatTensor(bm[:, -self.state_dim:])
+        # agent_prob = self.discriminator(bs, ba)
+        br = -torch.log(agent_prob).detach().numpy()
+        br = torch.FloatTensor(br)
+
+        # 训练Actor
+        a = self.actor(bs)
+        q = self.critic(bs, a)
+        a_loss = -torch.mean(q)
+        self.aopt.zero_grad()
+        a_loss.backward(retain_graph=True)
+        # nn.utils.clip_grad_norm_(self.actor.parameters(), 0.5)
+        self.aopt.step()
+
+        # 训练critic
+        a_ = self.actor_target(bs_)
+        q_ = self.critic_target(bs_, a_)
+        q_target = br + self.gamma * q_
+        q_eval = self.critic(bs, ba)
+        td_error = self.mse_loss(q_target, q_eval)
+        self.copt.zero_grad()
+        td_error.backward()
+        # nn.utils.clip_grad_norm_(self.critic.parameters(), 0.5)
+        self.copt.step()
+
+
 
     def store_transition(self, s, a, r, s_):
         transition = np.hstack((s, a, r, s_))
@@ -503,7 +503,7 @@ def train_ddpg():
             s = s_
             ep_reward += r
 
-            if j == MAX_EP_STEPS - 1 and ddpg.pointer>10000:
+            if j == MAX_EP_STEPS - 1 :
                 print('Episode:', i, ' Reward: %i' % int(ep_reward), 'Explore: %.2f' % VAR, ddpg.pointer)
                 Writer.add_scalar("return",ep_reward,i)
                 torch.save(ddpg.actor.state_dict(), r'.\ddpg_actor.ckpt')
@@ -514,13 +514,13 @@ def train_ddpg():
 def train_ddpg_gail(expert_s,expert_a):
 
     # hyper parameters
-    VAR = 0.4
+    VAR = 3
     # control exploration
     MAX_EPISODES = 500
     MAX_EP_STEPS = 200
     MEMORY_CAPACITY = 10000
     REPLACEMENT = [
-        dict(name='soft', tau=1e-3),
+        dict(name='soft', tau=1e-2),
         dict(name='hard', rep_iter=600)
     ][0]  # you can try different target replacement strategies
 
@@ -533,6 +533,7 @@ def train_ddpg_gail(expert_s,expert_a):
     s_dim = env.observation_space.shape[0]
     a_dim = env.action_space.shape[0]
     a_bound = env.action_space.high
+    a_low_bound = env.action_space.low
     ddpg = DDPG_GAIL(state_dim=s_dim,
                 action_dim=a_dim,
                 action_bound=a_bound,
@@ -549,10 +550,11 @@ def train_ddpg_gail(expert_s,expert_a):
                 env.render()
 
             # Add exploration noise
-            # a = np.random.uniform(-,)
+
             # a = a + 0.1 * np.random.randn(a_dim)
             # a= np.clip(a,-2,2)
             a = ddpg.choose_action(s)
+            a = np.clip(np.random.normal(a, VAR), a_low_bound, a_bound)
             a = ou_noise.get_action(a, j)
             # a+=noise.sample()
             # a = np.clip(a,-2,2)
@@ -574,7 +576,7 @@ def train_ddpg_gail(expert_s,expert_a):
                 ddpg.learn(expert_s,expert_a)
             # print("train")
             if j == MAX_EP_STEPS - 1:
-                print('Episode:', i-50, ' Reward: %i' % int(ep_reward), 'Explore: %.2f' % VAR, ddpg.pointer)
+                print('Episode:', i, ' Reward: %i' % int(ep_reward), 'Explore: %.2f' % VAR, ddpg.pointer)
                 Writer.add_scalar("return",ep_reward,i)
                 torch.save(ddpg.actor.state_dict(), r'.\gail_actor.ckpt')
                 # if ep_reward > -300: RENDER = True
@@ -591,9 +593,9 @@ if __name__ == '__main__':
     # control exploration
     MAX_EPISODES = 500
     MAX_EP_STEPS = 200
-    MEMORY_CAPACITY = 100000
+    MEMORY_CAPACITY = 10000
     REPLACEMENT = [
-        dict(name='soft', tau=1e-3),
+        dict(name='soft', tau=1e-2),
         dict(name='hard', rep_iter=600)
     ][0]  # you can try different target replacement strategies
     ddpg = DDPG(state_dim=s_dim,

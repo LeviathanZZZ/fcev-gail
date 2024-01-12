@@ -7,9 +7,9 @@
 #include "FCElectricPlant_f9151c4e_1.h"
 #include "FCElectricPlant_f9151c4e_1_gateway.h"
 void FCElectricPlant_f9151c4e_1_gateway ( void ) { NeModelParameters
-modelparams = { ( NeSolverType ) 0 , 0.001 , 0.001 , 0.001 , 1 , 0 , (
-NeModifyAbsTol ) 2 , 0.001 , 0 , 0 , 0 , 0 , ( SscLoggingSetting ) 0 ,
-603000851 , 0 , } ; NeSolverParameters solverparams = { 0 , (
+modelparams = { ( NeSolverType ) 0 , 0.0001 , 0.0001 , 0.0001 , 1 , 0 , (
+NeModifyAbsTol ) 0 , 0.001 , 0 , 0 , 0 , 0 , ( SscLoggingSetting ) 0 ,
+622703086 , 0 , 0 , } ; NeSolverParameters solverparams = { 0 , (
 NeMBLocalSolverChoice ) 0 , 0.001 , 0 , 0 , 1 , 0 , 0 , 0.001 , 1e-06 , 1e-09
 , 0 , 0 , 100 , 0 , 1 , ( NeConsistencySolver ) 0 , ( NeIndexReductionMethod
 ) 1 , 0 , 1e-09 , ( NeToleranceSource ) 1 , 0.001 , 0.001 , 0.001 , 0 , (

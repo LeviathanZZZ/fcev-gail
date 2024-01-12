@@ -365,8 +365,8 @@ class Config:
     buffer_size = 20480
     minimal_size = 1024
     batch_size = 128
-    save_path = r'D:\ac_model.ckpt'
-    save_path_gail = r'D:\ac_model_gail.ckpt'
+    save_path = r'.\ac_model.ckpt'
+    save_path_gail = r'.\ac_model_gail.ckpt'
     # 回合停止控制
     max_episode_rewards = 260
     max_episode_steps = 260

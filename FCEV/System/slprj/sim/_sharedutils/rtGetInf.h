@@ -1,5 +1,6 @@
 #ifndef RTW_HEADER_rtGetInf_h_
 #define RTW_HEADER_rtGetInf_h_
+#include "rt_nonfinite.h"
 #include "rtwtypes.h"
 
 extern real_T rtGetInf(void);

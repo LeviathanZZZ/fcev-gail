@@ -8,8 +8,7 @@ real_T * mField11 ; real_T * mField12 ; real_T * mField13 ; real_T * mField14
 ; real_T * mField15 ; real_T * mField16 ; real_T * mField17 ; real_T *
 mField18 ; real_T * mField19 ; real_T * mField20 ; real_T * mField21 ; real_T
 * mField22 ; real_T * mField23 ; real_T * mField24 ; real_T * mField25 ;
-real_T * mField26 ; real_T * mField27 ; real_T * mField28 ; real_T * mField29
-; } _NeDynamicSystem ;
+real_T * mField26 ; } _NeDynamicSystem ;
 #else
 typedef struct _NeDynamicSystemTag _NeDynamicSystem ;
 #endif

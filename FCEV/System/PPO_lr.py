@@ -21,23 +21,20 @@ torch.manual_seed(545)
 
 
 class Discriminator(nn.Module):
-    def __init__(self, state_dim: int,  hidden_layers_dim: typ.List,action_dim: int,):
+    def __init__(self, state_dim, hidden_dim, action_dim):
         super(Discriminator, self).__init__()
-        self.features = nn.ModuleList()
-        for idx, h in enumerate(hidden_layers_dim):
-            self.features.append(nn.ModuleDict({
-                'linear': nn.Linear(hidden_layers_dim[idx - 1] if idx else state_dim+action_dim, h),
-                'linear_action': nn.Tanh()
-            }))
-        self.fc_s = nn.Linear(hidden_layers_dim[-1], 1)
+        self.fc1 = th.nn.Linear(state_dim + action_dim, hidden_dim)
+        # self.fc1.weight.data.normal_(0, 0.1)
+        self.fc2 = th.nn.Linear(hidden_dim, hidden_dim)
+        self.fc3 = th.nn.Linear(hidden_dim, 1)
+        # self.fc3.weight.data.normal_(0, 0.1)
 
-    def forward(self, x,a):
+    def forward(self, x, a):
         cat = th.cat([x, a], dim=1)
-        for layer in self.features:
-            cat = layer['linear_action'](layer['linear'](cat))
-        # x = F.tanh(self.fc1(cat))
-        # x = F.tanh(self.fc2(x))
-        return th.sigmoid(self.fc_s(cat))
+        x = F.tanh(self.fc1(cat))
+        x = F.tanh(self.fc2(x))
+        return th.sigmoid(self.fc3(x))
+
 
 
 class GAIL:
@@ -405,8 +402,8 @@ class Config:
     buffer_size = 20480
     minimal_size = 1024
     batch_size = 128
-    save_path = r'D:\ac_model.ckpt'
-    save_path_gail = r'D:\ac_model_gail.ckpt'
+    save_path = r'.\ac_model.ckpt'
+    save_path_gail = r'.\ac_model_gail.ckpt'
     # 回合停止控制
     max_episode_rewards = 260
     max_episode_steps = 260
@@ -518,7 +515,7 @@ def train_agent_gail(env, cfg, expert_s, expert_a):
             steps += 1
             # if (episode_rewards >= cfg.max_episode_rewards) or (steps >= cfg.max_episode_steps):
             #     break
-            if steps == 1024:
+            if steps % 1024 ==0:
                 rewards = gail.learn(expert_s, expert_a, state_list, action_list)
                 # rewards = reward_scaling(rewards)
                 ac_agent.update_gail(buffer_.buffer, rewards)
@@ -543,21 +540,21 @@ if __name__ == '__main__':
     print('Training Pendulum-v1')
     env = gym.make('Pendulum-v1')
     cfg = Config(env)
-    ac_agent = train_agent(env, cfg)
+    # ac_agent = train_agent(env, cfg)
     # print(env.action_space.high[0])
-    # ac_agent = PPO(
-    #     state_dim=cfg.state_dim,
-    #     hidden_layers_dim=cfg.hidden_layers_dim,
-    #     action_dim=cfg.action_dim,
-    #     actor_lr=cfg.actor_lr,
-    #     critic_lr=cfg.critic_lr,
-    #     gamma=cfg.gamma,
-    #     PPO_kwargs=cfg.PPO_kwargs,
-    #     device=cfg.device
-    # )
-    # ac_agent.actor.load_state_dict(torch.load(cfg.save_path))
-    # n_episode =1
-    # expert_s, expert_a = sample_expert_data(ac_agent,n_episode,cfg)
+    ac_agent = PPO(
+        state_dim=cfg.state_dim,
+        hidden_layers_dim=cfg.hidden_layers_dim,
+        action_dim=cfg.action_dim,
+        actor_lr=cfg.actor_lr,
+        critic_lr=cfg.critic_lr,
+        gamma=cfg.gamma,
+        PPO_kwargs=cfg.PPO_kwargs,
+        device=cfg.device
+    )
+    ac_agent.actor.load_state_dict(torch.load(cfg.save_path))
+    n_episode =1
+    expert_s, expert_a = sample_expert_data(ac_agent,n_episode,cfg)
     gail_agent = train_agent_gail(env,cfg,expert_s,expert_a)
     # ac_agent.actor.load_state_dict(torch.load(cfg.save_path_gail))
     # play(gym.make('Pendulum-v1', render_mode="human"), ac_agent, cfg)

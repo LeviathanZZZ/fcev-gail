@@ -1,0 +1,42 @@
+% 假设有电机数据，分别存储在 speed、torque 和 efficiency 变量中
+
+% 示例数据
+speed = Mot.w_eff_bp;
+torque = Mot.T_eff_bp;
+efficiency = Mot.efficiency_table;
+
+
+%pkg load io
+
+%%%%%%%%%%%%%%%%%% 定义转矩、转速最大点 %%%%%%%%%%%%%%%%%%
+[M,N] = size(Eff_init);
+
+Speed_max = 3600;                            % 转速这边的需要自己手动输入
+Speed_min = 0; 
+Speed_step = (Speed_max-Speed_min)/(N-1);    % 转速步长
+
+Torque_max = max(max(Torque_init));
+Torque_min = min(min(Torque_init));
+Torque_step = (Torque_max-Torque_min)/(M-1); % 转矩步长
+
+%%%%%% 这里输出转矩外轮廓是格状的是因为刚好每个转矩落在整数上面，如果要连成曲线就不要落在整数格上
+
+[Speed,Torque]=meshgrid([Speed_min:Speed_step:Speed_max],[Torque_min:Torque_step:Torque_max]);%中间的数值用来调整间隙，防止出现全黑图像。
+
+range=[60:3:90  90:2:98];                  % 调整曲线等级
+
+%%%%%%%%%%%%%%%%%% 画Map图 %%%%%%%%%%%%%%%%%%
+figure('Position',[400, 130, 900, 500]);
+pcolor(Speed,Torque_init,Eff_init);                                                         %填充等高线之间的空隙
+shading interp;hold on;colorbar;
+
+[C,H]=contour(Speed,Torque_init,Eff_init,range,'ShowText','on','color','k','LineWidth', 1); %这里20调整线的等级
+A=xlabel('Speed, [rpm]');
+B=ylabel('Torque, [Nm]');
+title('Efficiency map');
+set(A,'Fontangle','normal','FontName','Speed','FontSize',50,'FontName','Times New Roman');  %设置坐标轴文字参数
+set(B,'Fontangle','normal','FontName','Torque','FontSize',50,'FontName','Times New Roman');
+set(findobj('FontSize',10),'FontSize',15,'FontName','Times New Roman');
+clabel(C,H,'fontsize',10,'color','k','FontName','Times New Roman');
+set(gcf,'color','w');
+cmap = colormap ('hsv');
